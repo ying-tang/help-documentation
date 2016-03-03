@@ -4,7 +4,7 @@ title:  Connecting to your OpenVPN server
 tags: [openstack, openVPN, connecting]
 featured: true
 author: Jason Kennedy
-date: January 7th, 2016
+time: January 7th, 2016
 ---
 
 Now that you've created an **OpenVPN** server on your openstack cluster, it's time to connect to it:

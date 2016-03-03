@@ -2,7 +2,7 @@
 layout: page
 title:  "When using any of the OpenStack CLIs on Windows, I get authentication failure errors"
 tags: [troubleshooting, authentication, windows]
-date: December 9th, 2015
+time: December 9th, 2015
 featured: false
 weight: 4
 ---

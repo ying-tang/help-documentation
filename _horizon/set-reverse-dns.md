@@ -2,7 +2,7 @@
 layout: page
 title:  "How do I set a reverse DNS (PTR) record for an IBM Blue Box Cloud instance?"
 tags: [horizon, reverse dns]
-date: August 6th, 2015
+time: August 6th, 2015
 featured: false
 weight: 4
 ---

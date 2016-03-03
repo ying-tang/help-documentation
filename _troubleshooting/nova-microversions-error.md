@@ -2,7 +2,7 @@
 layout: page
 title:  "Error: 'Server doesn't support microversions' When Running Nova Commands"
 tags: [troubleshooting, microversions, nova]
-date: October 20th, 2015
+time: October 20th, 2015
 featured: true
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title:  "How to deploy an instance to a specific hypervisor node"
 tags: [nova, deploy, hypervisor]
-date: May 15th, 2015
+time: May 15th, 2015
 author: Eric French
 featured: false
 weight: 4

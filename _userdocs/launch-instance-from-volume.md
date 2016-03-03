@@ -2,7 +2,7 @@
 layout: page
 title:  "How to Launch an Instance from a Volume"
 tags: [openstack, launch instance, volume]
-date: June 13th, 2015
+time: June 13th, 2015
 featured: true
 ---
 

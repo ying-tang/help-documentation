@@ -2,7 +2,7 @@
 layout: page
 title:  "Error: No valid host was found (when launching a new instance)"
 tags: [troubleshooting, no valid host]
-date: July 31st, 2015
+time: July 31st, 2015
 featured: false
 weight: 4
 ---

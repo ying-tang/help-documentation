@@ -4,7 +4,7 @@ title:  "Creating an Instance with a Specific Fixed IP"
 featured: true
 weight: 2
 tags: [instance, fixed IP, getting started]
-date: January 2016
+time: January 2016
 ---
 
 You may have a need to create an instance with a specific, private IP address (_aka Fixed IP_) from your subnet. To do this you must manually create a neutron port. This article outlines the steps that achieve this goal.

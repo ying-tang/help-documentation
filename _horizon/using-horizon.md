@@ -2,7 +2,7 @@
 layout: page
 title:  "Using Horizon"
 tags: [horizon, using horizon]
-date: April 9th, 2015
+time: April 9th, 2015
 author: Giles Frith
 featured: false
 weight: 4

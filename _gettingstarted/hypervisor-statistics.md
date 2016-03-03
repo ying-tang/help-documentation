@@ -4,7 +4,7 @@ title:  "How can I get hypervisor statistics?"
 featured: true
 weight: 8
 tags: [getting started, hypervisor, statistics]
-date: June 23rd, 2015
+time: June 23rd, 2015
 ---
 
 A hypervisor creates and runs virtual machines (VMs).  Sometimes it's useful to get statistics on the state of your hypervisors across all compute nodes.  You can do so by running the command `nova hypervisor-stats`:

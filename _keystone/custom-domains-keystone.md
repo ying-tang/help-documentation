@@ -2,7 +2,7 @@
 layout: page
 title:  "Custom Domains within Keystone V3"
 tags: [keystone, snapshot]
-date: November 24th, 2015
+time: November 24th, 2015
 featured: false
 weight: 4
 ---

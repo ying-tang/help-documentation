@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Add a Specific Fixed Private IP to an Instance"
-date: June 19th, 2015
+time: June 19th, 2015
 featured: true
 weight: 4
 tags: [openstack, fixed private IP address]

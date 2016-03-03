@@ -2,7 +2,7 @@
 layout: page
 title:  "Instance in error status: libvirt error"
 tags: [troubleshooting, libvert, error]
-date: December 3rd, 2015
+time: December 3rd, 2015
 featured: true
 ---
 

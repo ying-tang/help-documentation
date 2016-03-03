@@ -2,7 +2,7 @@
 layout: page
 title:  "Creating virtual networks on Blue Box Cloud"
 tags: [neutron, creating virtual networks]
-date: September 16th, 2015
+time: September 16th, 2015
 author: Jason Kennedy
 featured: false
 weight: 4

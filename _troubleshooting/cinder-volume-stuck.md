@@ -2,7 +2,7 @@
 layout: page
 title:  "Cinder Volume Stuck"
 tags: [troubleshooting, cinder volume stuck]
-date: November 19th, 2015
+time: November 19th, 2015
 featured: true
 ---
 

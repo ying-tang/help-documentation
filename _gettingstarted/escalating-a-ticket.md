@@ -5,7 +5,7 @@ featured: true
 weight: 3
 tags: [getting started, ticket]
 author: Leslie Lundquist
-date: January 14th, 2016
+time: January 14th, 2016
 ---
 
 First, be sure you've opened a ticket with **IBM Blue Box Support**, using one of the following methods:

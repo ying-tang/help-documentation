@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "How to Create an Instance and Make it Available Publicly Using the Command Line"
-date: June 13th, 2015
+time: June 13th, 2015
 featured: true
 weight: 4
 tags: [openstack, command line, instance]

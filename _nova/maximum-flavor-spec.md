@@ -2,7 +2,7 @@
 layout: page
 title:  "What is the maximum spec I can set for a flavor?"
 tags: [nova, flavor]
-date: January 20th, 2016
+time: January 20th, 2016
 featured: false
 weight: 4
 ---

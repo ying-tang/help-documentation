@@ -2,7 +2,7 @@
 layout: page
 title:  "How can I define flavor vCPU topology?"
 tags: [nova, compute, vCPU]
-date: December 16th, 2015
+time: December 16th, 2015
 featured: true
 weight: 4
 ---

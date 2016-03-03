@@ -2,7 +2,7 @@
 layout: page
 title:  "How do I set up DNS records pointing to OpenStack instances?"
 tags: [neutron, configuring dns, instances]
-date: November 24th, 2015
+time: November 24th, 2015
 featured: false
 weight: 4
 ---

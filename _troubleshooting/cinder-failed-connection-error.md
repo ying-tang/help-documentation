@@ -2,7 +2,7 @@
 layout: page
 title:  "What do I do if the Cinder client returns 'ERROR: Unable to establish connection' message and fails to connect?"
 tags: [troubleshooting, cinder, error]
-date: November 12th, 2015
+time: November 12th, 2015
 weight: 10
 featured: false
 ---

@@ -2,7 +2,7 @@
 layout: page
 title:  "Why does it take 4-5 seconds to SSH to my instance?"
 tags: [troubleshooting, ssh]
-date: November 17th, 2015
+time: November 17th, 2015
 featured: true
 ---
 

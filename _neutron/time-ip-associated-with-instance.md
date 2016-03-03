@@ -2,7 +2,7 @@
 layout: page
 title:  "How can I find the time a floating IP was associated or disassociated from an instance?"
 tags: [neutron, configuring ip, highly available]
-date: November 16th, 2015
+time: November 16th, 2015
 featured: false
 weight: 4
 ---

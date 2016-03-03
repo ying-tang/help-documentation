@@ -4,7 +4,7 @@ title:  "Blue Box Cloud Components"
 featured: true
 weight: 1
 tags: [blue box cloud, components, getting started]
-date: January 7th, 2016
+time: January 7th, 2016
 author: Eric French
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title:  "Why are all the floating IPs that were assigned to me not available?"
 tags: [troubleshooting, floating ip]
-date: July 22nd, 2015
+time: July 22nd, 2015
 featured: false
 weight: 4
 ---

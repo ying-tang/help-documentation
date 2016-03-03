@@ -2,7 +2,7 @@
 layout: page
 title:  "What causes read-only Cinder volumes and how can I fix them?"
 tags: [troubleshooting, read-only, cinder]
-date: November 16th, 2015
+time: November 16th, 2015
 featured: true
 ---
 

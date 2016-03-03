@@ -2,7 +2,7 @@
 layout: page
 title:  "Is creating a volume from an instance snapshot supported?"
 tags: [cinder, snapshot]
-date: September 8th, 2015
+time: September 8th, 2015
 featured: false
 weight: 4
 ---

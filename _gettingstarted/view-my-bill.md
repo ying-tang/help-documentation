@@ -5,7 +5,7 @@ featured: true
 weight: 1
 tags: [getting started, view bill]
 author: Eric French
-date: April 9th, 2015
+time: April 9th, 2015
 ---
 
 All of your **IBM Blue Box** invoices and payments can be viewed from within Box Panel at any time.

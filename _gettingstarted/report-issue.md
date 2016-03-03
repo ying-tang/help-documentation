@@ -5,7 +5,7 @@ featured: true
 weight: 2
 tags: [getting started, report issue]
 author: Giles Frith
-date: January 14th, 2016
+time: January 14th, 2016
 ---
 
 Your **IBM Blue Box Support** team is available 24 hours a day, seven days a week.  If you are experiencing an issue, please do the following things:

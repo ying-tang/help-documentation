@@ -2,7 +2,7 @@
 layout: page
 title:  "How Can I Resize a Cinder Volume?"
 tags: [cinder, resize]
-date: October 13th, 2015
+time: October 13th, 2015
 featured: false
 weight: 4
 ---

@@ -2,10 +2,10 @@
 layout: page
 title:  "Disk Capacity Constraints"
 tags: [glance, disk capacity]
-date: November 17th, 2015
+time: November 17th, 2015
 featured: false
 weight: 4
-date: July 28th, 2015
+time: July 28th, 2015
 ---
 
 **What is the default Glance image size limit?**
