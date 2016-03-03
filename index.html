@@ -1,0 +1,186 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="search">
+    <label for="search">Welcome to Blue Box Help</label>
+    <div class="full-view__search hide">
+      <a href="" class="x hide">X</a>
+      <ul id="results-container"></ul>
+      <ul class="results--container"></ul>
+
+    </div>
+    <div class="input-container">
+      <label for="search__fullview" class="hide search--label">Search Blue Box Help</label>
+      <input type="text" id="search-input" placeholder="" name="search" class="search__minview">
+      <img src="./img/search.svg" class="search-icon" />
+    </div>
+  </div>
+
+  <div class="top-level">
+
+
+
+    <ul class="top-post-list">
+      <li class="flip-container">
+        <div class="flippable">
+          <div class="side-a">
+            <a href="{{site.baseurl}}/gettingstarted">
+              <img src="{{ site.baseurl }}/img/gettingstarted.svg">
+              <p>
+                Getting <span>Started</span>
+              </p>
+            </a>
+          </div>
+          <div class="side-b">
+            <div class="content">
+              <a href="{{site.baseurl}}/gettingstarted" class="main-link">
+                <h1>Getting <span>Started</span></h1>
+              </a>
+              {% for page in site.gettingstarted limit:5 %}
+                {% if page.title %}
+                  <a href="{{page.url | prepend: site.baseurl}}">{{page.title}}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="flip-container">
+        <div class="flippable">
+          <div class="side-a">
+            <a href="{{site.baseurl}}/troubleshooting">
+              <img src="{{site.baseurl}}/img/troubleshooting.svg">
+              <p>
+                Trouble<span>shooting</span>
+              </p>
+            </a>
+          </div>
+          <div class="side-b">
+            <div class="content">
+              <a href="{{site.baseurl}}/troubleshooting" class="main-link">
+                <h1>Trouble<span>shooting</span></h1>
+              </a>
+              {% for page in site.troubleshooting limit:5 %}
+                {% if page.title %}
+                  <a href="{{ site.baseurl }}/{{page.url}}">{{page.title}}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="flip-container">
+        <div class="flippable">
+          <div class="side-a">
+            <a href="{{site.baseurl}}/openstack">
+              <img src="{{site.baseurl}}/img/openstack.svg">
+              <p>
+                Open<span>Stack</span>
+              </p>
+            </a>
+          </div>
+          <div class="side-b">
+            <div class="content">
+              <a href="{{site.baseurl}}/gettingstarted" class="main-link">
+                <h1>Open<span>Stack</span></h1>
+              </a>
+              {% for page in site.openstack %}
+                {% if page.title %}
+                  <a href="{{ site.baseurl }}/{{page.url}}">{{page.title}}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sub-level">
+    <ul class="post-list">
+      <li>
+        <a href="{{site.baseurl}}/horizon" >
+          <img src="{{site.baseurl}}/img/horizon.svg">
+          <p>
+            Horizon GUI
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/nova" >
+          <img src="{{site.baseurl}}/img/nova.svg">
+          <p>
+            Nova (Compute)
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/neutron">
+          <img src="{{site.baseurl}}/img/neutron.svg">
+          <p>
+            Neutron (Networking)
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/glance">
+          <img src="{{site.baseurl}}/img/glance.svg" />
+          <p>
+            Glance (Images)
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/cinder">
+          <img src="{{site.baseurl}}/img/cinder.svg">
+          <p>
+            Cinder (Block Storage)
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/keystone">
+          <img src="{{site.baseurl}}/img/keystone.svg">
+          <p>
+            Keystone (Identity)
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/heat" >
+          <img src="{{site.baseurl}}/img/heat.svg">
+          <p>
+            Heat (Orchestration)
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.baseurl}}/ceilometer">
+        <img src="{{site.baseurl}}/img/ceilometer.svg">
+          <p>
+            Ceilometer (Telemetry)
+          </p>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+
+  <!-- Script pointing to jekyll-search.js -->
+  <script src="{{ site.baseurl }}/node_modules/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
+
+
+  <script>
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{site.baseurl}}/search.json',
+        searchResultTemplate: '<li class="search-item"><a href="{url}" class="item-title">{title}</a><ul class="tag--list">{tags}</ul></li>'
+      });
+  </script>
+
+</div>

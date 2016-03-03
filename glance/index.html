@@ -1,0 +1,17 @@
+---
+layout: page
+title: Glance (Images)
+permalink: /glance/
+category: top-level
+top-level: glance
+---
+
+<div class="home">
+
+  {% for item in site.glance %}
+    {% if item.title %}
+    <a class="page--link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+    {% endif %}
+  {% endfor %}
+
+</div>

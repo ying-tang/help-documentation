@@ -1,0 +1,35 @@
+---
+layout: page
+title: OpenStack
+permalink: /openstack/
+category: top-level
+top-level: openstack
+---
+
+<div class="home">
+
+
+
+  {% for page in site.openstack %}
+    {% if page.title == 'API' %}
+    <ul class="page--list">
+      <li><a class="page--title" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+      {% for item in site.api %}
+        {% if item.title %}
+        <li><a class="page--link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% elsif page.title == 'User Docs' %}
+    <ul class="page--list">
+      <li><a class="page--title" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+      {% for item in site.userdocs %}
+        {% if item.title %}
+        <li><a class="page--link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+  {% endfor %}
+
+</div>

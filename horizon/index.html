@@ -1,0 +1,17 @@
+---
+layout: page
+title: Horizon (GUI)
+permalink: /horizon/
+category: top-level
+top-level: horizon
+---
+
+<div class="home">
+
+  {% for item in site.horizon %}
+    {% if item.title %}
+    <a class="page--link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+    {% endif %}
+  {% endfor %}
+
+</div>
