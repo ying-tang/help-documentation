@@ -32,9 +32,7 @@ With the exception of `_sass`, `_layouts`, and `_includes`, all of the folders w
 
 #### <a name="setting-up-an-article"></a> ![article](/readme-img/article.png)
 
-Articles require the follow content areas filled to maintain a consistent layout:  Layout, Title, Featured, Weight, Tags, Date, Author, and Content.
-
-![config](/readme-img/config.png)
+Articles require the follow content areas filled to maintain a consistent layout:  Layout, Title, Featured, Weight, Tags, DateAdded, Author, and Content.
 
 ##### Layout
 
@@ -56,7 +54,7 @@ This determines the order of items displayed in the nav. 1 will be given highest
 
 These are displayed on both the documentation page as well as the search page. The tags must be enclosed in brackets [ ], and are comma delimited.
 
-##### Date
+##### DateAdded
 
 This data attribute is added to the header-data next to the page author. There is no specific format, as it will just take whatever you type here and add it to the post.
 
