@@ -4,7 +4,7 @@ title:  "Blue Box Status Pages"
 featured: false
 weight: 4
 tags: [getting started, status page]
-time: May 5th, 2015
+dateAdded: May 5th, 2015
 ---
 
 ##Blue Box Group Network Status

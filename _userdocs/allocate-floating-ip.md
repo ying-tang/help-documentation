@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Allocating and Attaching a Public (Floating) IP to an Instance"
-time: June 16th, 2015
+dateAdded: June 16th, 2015
 featured: true
 weight: 4
 tags: [openstack, fixed private IP address]

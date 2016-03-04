@@ -4,7 +4,7 @@ title:  "Adding or removing subscribers to a ticket"
 featured: true
 weight: 1
 tags: [getting started, adding, removing]
-time: July 29th, 2015
+dateAdded: July 29th, 2015
 author: Jason Kennedy
 ---
 

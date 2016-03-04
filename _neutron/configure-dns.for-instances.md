@@ -2,7 +2,7 @@
 layout: page
 title:  "Configuring DNS for Instances"
 tags: [neutron, configuring dns, instances]
-time: December 3rd, 2015
+dateAdded: December 3rd, 2015
 author: Eric French
 featured: false
 weight: 4

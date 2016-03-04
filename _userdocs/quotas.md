@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Quotas"
-time: June 13th, 2015
+dateAdded: June 13th, 2015
 featured: true
 weight: 4
 tags: [openstack, quotas]

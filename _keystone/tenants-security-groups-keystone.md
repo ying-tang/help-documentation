@@ -2,7 +2,7 @@
 layout: page
 title:  "Tenants and Security Groups"
 tags: [keystone, tenants, security groups]
-time: July 28th, 2015
+dateAdded: July 28th, 2015
 featured: false
 weight: 4
 ---

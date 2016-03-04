@@ -2,7 +2,7 @@
 layout: page
 title:  "Why can't I delete my project/tenant from the Horizon dashboard?"
 tags: [troubleshooting, delete project]
-time: November 13th, 2015
+dateAdded: November 13th, 2015
 featured: false
 weight: 4
 ---

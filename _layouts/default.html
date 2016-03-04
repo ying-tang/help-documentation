@@ -5,15 +5,15 @@
 
   <body>
 
-  {% if page.url == '/index.html' %}
+  {% if page.url == '/' %}
     {% include header.html %}
-  {% elsif page.url != '/index.html' %}
+  {% elsif page.url != '/' %}
     {% include header--page.html %}
   {% endif %}
 
-  {% if page.url == '/index.html' %}
+  {% if page.url == '/' %}
   <div class="mainpage-content">
-  {% elsif page.url != '/index.html' %}
+  {% elsif page.url != '/' %}
   <div class="page-content">
   {% endif %}
 

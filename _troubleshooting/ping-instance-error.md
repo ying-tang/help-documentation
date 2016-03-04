@@ -2,7 +2,7 @@
 layout: page
 title:  "Why can't I SSH to an instance, or ping it?"
 tags: [troubleshooting, ssh, ping]
-time: December 10th, 2015
+dateAdded: December 10th, 2015
 featured: true
 ---
 

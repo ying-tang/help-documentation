@@ -4,7 +4,7 @@ title:  "Getting Started with the OpenStack API"
 featured: true
 tags: [api, getting started, openstack]
 author: Eric French
-time: November 16th, 2015
+dateAdded: November 16th, 2015
 ---
 
 Your **IBM Blue Box** Cloud was provisioned with API endpoints for all of the major services running underneath.  Here is how to set up your local system to access these services.

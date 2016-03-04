@@ -2,7 +2,7 @@
 layout: page
 title:  "Horizon for Administrators"
 tags: [horizon, administrator]
-time: April 9th, 2015
+dateAdded: April 9th, 2015
 author: Eric French
 featured: false
 weight: 4

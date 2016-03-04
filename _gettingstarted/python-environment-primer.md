@@ -5,7 +5,7 @@ featured: true
 weight: 8
 tags: [getting started, python, environments]
 author: Jason Kennedy
-time: November 6th, 2015
+dateAdded: November 6th, 2015
 ---
 
 One of the first things you should do before you start playing with `stackrc` files and api's with **OpenStack** is get your computer ready to do the development work. What this normally means is installing some client-side tools that let us interact with our **OpenStack** environments remotely.

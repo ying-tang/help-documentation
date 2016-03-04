@@ -5,7 +5,7 @@ featured: true
 weight: 8
 tags: [getting started, faq]
 author: Eric French
-time: April 9th, 2015
+dateAdded: April 9th, 2015
 ---
 
 ##How can I resize an existing instance?

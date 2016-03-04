@@ -2,7 +2,7 @@
 layout: page
 title:  "How do I set an initial username and password on a Windows instance in OpenStack?"
 tags: [nova, windows, initial setup]
-time: December 16th, 2015
+dateAdded: December 16th, 2015
 featured: false
 weight: 4
 ---

@@ -2,7 +2,7 @@
 layout: page
 title:  "Is there a list of official OpenStack-compatible images that I can download for use with Glance? (CentOS, Ubuntu, etc.)"
 tags: [glance, images]
-time: November 17th, 2015
+dateAdded: November 17th, 2015
 featured: false
 weight: 4
 ---

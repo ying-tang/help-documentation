@@ -2,7 +2,7 @@
 layout: page
 title:  "How to configure a highly-available IP"
 tags: [neutron, configuring ip, highly available]
-time: April 9th, 2015
+dateAdded: April 9th, 2015
 author: Eric French
 featured: false
 weight: 4

@@ -2,7 +2,7 @@
 layout: page
 title:  "Migrating an instance to a new cloud"
 tags: [nova, migrate, migration to new cloud]
-time: October 5th, 2015
+dateAdded: October 5th, 2015
 author: Jason Kennedy
 featured: false
 weight: 4

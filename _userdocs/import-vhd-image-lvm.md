@@ -3,7 +3,7 @@ layout: page
 title:  "Importing a VHD image that uses linux volume management for its root directory"
 tags: [openstack, import VHD image, linux]
 author: Jason Kennedy
-time: December 11th, 2015
+dateAdded: December 11th, 2015
 featured: true
 ---
 

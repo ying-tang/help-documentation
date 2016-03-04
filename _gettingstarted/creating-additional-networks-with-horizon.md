@@ -4,7 +4,7 @@ title:  "Creating Additional Networks in OpenStack Using the Horizon Panel"
 featured: true
 weight: 2
 tags: [getting started, additional networks]
-time: August 5th, 2015
+dateAdded: August 5th, 2015
 author: Jason Kennedy
 ---
 

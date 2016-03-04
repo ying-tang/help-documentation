@@ -3,7 +3,7 @@ layout: page
 title:  "Setting up OpenVPN server on your instance"
 tags: [openstack, setting up openVPN]
 author: Jason Kennedy
-time: January 7th, 2016
+dateAdded: January 7th, 2016
 featured: true
 ---
 

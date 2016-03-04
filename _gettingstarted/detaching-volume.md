@@ -4,7 +4,7 @@ title:  "What Should I Do Prior to Detaching a Volume?"
 featured: true
 weight: 2
 tags: [getting started, detach volume]
-time: June 18th, 2015
+dateAdded: June 18th, 2015
 ---
 
 Please take the following steps to detach a volume safely:
