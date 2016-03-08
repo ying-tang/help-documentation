@@ -3,7 +3,7 @@ layout: page
 title:  "Frequently Asked Questions"
 featured: true
 weight: 8
-tags: [getting started, faq]
+tags: [getting started, faq, resize, instance]
 author: Eric French
 dateAdded: April 9th, 2015
 ---
