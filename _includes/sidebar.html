@@ -15,10 +15,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="hidden non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="hidden non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
         <li><a href="" class="page-link view">View More ( {{ count }} )</a></li>
@@ -38,10 +44,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="hidden non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="hidden non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
         <li><a href="" class="page-link view">View More ( {{ count }} )</a></li>
@@ -62,10 +74,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="hidden non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
         <li><a href="" class="page-link view">View More ( {{ count }} )</a></li>
@@ -81,10 +99,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="hidden non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
         <li><a href="" class="page-link view">View More ( {{ count }} )</a></li>
@@ -108,10 +132,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
@@ -131,10 +161,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
@@ -154,10 +190,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
@@ -177,10 +219,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
@@ -200,10 +248,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
@@ -223,10 +277,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
@@ -246,10 +306,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
@@ -270,10 +336,16 @@
               <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
           </li>
           {% elsif node.featured == false %}
+            {% if page.url == node.url %}
+            <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+            </li>
+            {% else %}
             {% assign count = count | plus: 1 %}
-          <li class="non-featured">
-              <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-          </li>
+              <li class="non-featured">
+                  <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ul>
