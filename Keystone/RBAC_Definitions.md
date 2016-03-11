@@ -1,8 +1,13 @@
 Layout: Page
+
 Title: Role-Based Access Control
+
 Featured: FALSE
+
 Tags: [keystone, users, roles, loadbalancing]
+
 Date: 3/11/2016
+
 Author: Ulysses Kanigel
 
 ##Role-Based Access Control (RBAC) and access to OpenStack services
