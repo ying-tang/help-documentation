@@ -6,7 +6,7 @@ Featured: FALSE
 
 Weight: 1
 
-Tags: [images, glance, image-create, instance]
+Tags: [images, glance, image-create, instance, gettingstarted]
 
 Date: 3/9/2016
 
