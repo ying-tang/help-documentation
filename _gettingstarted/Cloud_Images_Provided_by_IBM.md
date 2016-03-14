@@ -8,7 +8,7 @@ date: March 9th, 2016
 author: Yanqi Dou
 ---
 
-# **Working with cloud images proivided by IBM Blue Box**
+# **Working with cloud images provided by IBM Blue Box**
 
 ## **Pre-requisites**
 
