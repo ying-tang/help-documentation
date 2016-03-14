@@ -51,8 +51,11 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 #### **2.1 Download .qcow2 & .md5sum files of the image**
 
 **Get image download URL from Box Panel**
+
 1. Log into Box Panel with Box Panel credentials and navigate to the page for **<TBD>"Cloud Images Download"**
+
 2. Click on **<TBD>"Get Download URL"** for the image of interest to you.
+
 3. The tempURLs displayed  will be valid for next 24 hours so you can download the cloud image.
 
 **Download** the `.qcow2` image file & `.md5sum` checksum file using the tempURL and put these 2 files under the same folder.
@@ -63,7 +66,7 @@ ubuntu-guest-image-14.04-20160301-x86_64.qcow2
 ubuntu-guest-image-14.04-20160301-x86_64.md5sum
 ```
 
-#### **2.2 Verify the downloaded .qcow2 image file using the .md5sum checksum file**
+#### **2.2 Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file**
 
 For example:
 ```
@@ -139,9 +142,10 @@ For large images, the web upload may time out. For those, we've recommended that
 ## **4. Create VM instances using uploaded images**
 
 #### **4.1 Create VM instance using OpenStack Dashboard**
-1. Login to IBM Blue Box Cloud OpenStack dashboard.
 
-2. Expand the Project and Compute sections in the navigation area and select Images. The dashboard shows the images that have been uploaded to OpenStack Glance repository and made available for this project.
+1. Log in to IBM Blue Box Cloud OpenStack dashboard.
+
+2. Expand the **Project** and **Compute** sections in the navigation area, and select **Images**. The dashboard shows the images that have been uploaded to OpenStack Glance repository and made available for this project.
 
 3. Select an image and click **Launch**.
 
