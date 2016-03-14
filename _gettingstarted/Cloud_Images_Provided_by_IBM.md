@@ -20,11 +20,8 @@ author: Yanqi Dou
 
 Item | Description
 ------------ | -------------
-
 Images | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. Use images to create virtual machine instances within the cloud.
-
 Instances | Instances are virtual machines (VMs) that run inside the OpenStack cloud.
-
 Flavor | The term Flavor describes an instance's size, and it defines the pre-determined resource specifications for amount of vCPU, RAM, and disk space available to an instance.
 
 ## **1. Image Catalog**
@@ -86,23 +83,14 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 Item | Description
 ------------ | -------------
 Name | Enter a name for the image.
-
 Description | Optionally, enter a brief description of the image.
-
 Image Source | Choose **Image File**.
-
 Image File | Browse to the directory of the image binary file.
-
 Format | Select the correct format (for example, `QCOW2`) for the image.
-
 Architecture | Specify the architecture (for example, i386 for a 32-bit architecture or x86-64 for a 64-bit architecture).
-
 Minimum Disk (GB) | For Linux Image, use 5; For Windows Image, use 25
-
 Minimum RAM (MB) | For Linux Image, use 512; For Windows Image, use 2048
-
 Public | Select this check box to make the image public to all users on all projects.
-
 Protected | Select this check box to ensure that only users with permissions can delete the image.	 
 
 For example:
@@ -124,8 +112,8 @@ Check the created image is in image list. The image is queued for upload. It mig
 You can upload images through the Glance client. [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html)
 
 * **Create image**  
-    For Linux Images, use "-- min-disk 5 --min-ram 512"  
-    For Windows Images, use "--min-disk 25 --min-ram 2048"
+    For Linux Images, use `-- min-disk 5 --min-ram 512`  
+    For Windows Images, use `--min-disk 25 --min-ram 2048`
     ```
     # glance --os-image-api-version 1 image-create --name <image_name> --min-disk 5 --min-ram 512 --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
     ```
@@ -160,16 +148,10 @@ Then you will see the newly created instance in your instances list. The instanc
 Field | Description
 ------------ | -------------
 Availability Zone | Select an availability zone for your instance. Currently, only one zone is available: `nova`.
-Instance Name | Assign a name to the virtual machine. 
-
-| **Note:** The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created, so you could have two instances with the same host name.
-
+Instance Name | Assign a name to the virtual machine.  **Note:** The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created, so you could have two instances with the same host name.
 Flavor | Specify the size of the instance to launch.
-
 Instance Count | To launch multiple instances, enter a value greater than 1. The default is 1.
-
 Instance Boot Source | Since you are launching an instance from an image, **Boot from Image** is chosen by default.
-
 Image Name | This field changes based on your previous selection. Since you have chosen to launch an instance using an image, the **Image Name** field displays with the name of the image you selected.	 
 
 
@@ -177,8 +159,7 @@ Image Name | This field changes based on your previous selection. Since you have
 
 Field | Description
 ------------ | -------------
-Key pair | Specify a key pair. If no key pairs are available, you can upload a new public key by clicking the + sign next to the dropdown box and pasting in your ssh-rsa public key.
-
+Key pair | Specify a key pair. If no key pairs are available, you can upload a new public key by clicking the `+` sign next to the dropdown box and pasting in your `ssh-rsa` public key.
 Security Groups | Activate the security groups that you want to assign to the instance. Security groups are a kind of cloud firewall. They define the ways that incoming network traffic is forwarded to instances. If you have not created any security groups, you can assign only the default security group to the instance. If you want your instances to be accessible by ping or SSH, you can create unlocked security groups.
 
 **Networking tab**
