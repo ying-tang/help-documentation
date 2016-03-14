@@ -6,6 +6,7 @@ weight: 13
 tags: [images, glance, image-create, instance, gettingstarted]
 date: March 9th, 2016
 author: Yanqi Dou
+editor: Leslie Lundquist
 ---
 
 # **Working with cloud images provided by IBM Blue Box**
