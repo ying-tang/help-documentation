@@ -1,6 +1,6 @@
 ---
 layout: page
-title: IBM Provided Cloud Images
+title: Cloud Images Provided by IBM Blue Box
 featured: false
 weight: 13
 tags: [images, glance, image-create, instance, gettingstarted]
@@ -8,13 +8,13 @@ date: March 9th, 2016
 author: Yanqi Dou
 ---
 
-# **Working with IBM provided cloud images**
+# **Working with cloud images proivided by IBM Blue Box**
 
 ## **Pre-requisites**
 
 1. If you are going to use the command line (CLI) tools, ensure you have OpenStack Glance Client installed. You can find installation instructions in our knowledge base: **Getting started with the OpenStack API**
 
-2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM provided cloud images.
+2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM-provided cloud images.
 
 ## **Basic concepts**
 
