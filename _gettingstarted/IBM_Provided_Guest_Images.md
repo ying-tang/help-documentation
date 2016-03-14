@@ -22,12 +22,14 @@ Item | Description
 ------------ | -------------
 
 Images | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. Use images to create virtual machine instances within the cloud.
+
 Instances | Instances are virtual machines (VMs) that run inside the OpenStack cloud.
+
 Flavor | The term Flavor describes an instance's size, and it defines the pre-determined resource specifications for amount of vCPU, RAM and disk space available to an instance.
 
 ## **1. Image Catalog**
 
-#### **1.1 IBM provided cloud images**
+#### **1.1 Alternative Cloud Images Provided by IBM Blue Box**
 
 You, the customer, may upload and install separately-acquired operating system software, or you may provision any of the following operating system images, which we make available to you, as a virtual machine instance.  You, the customer, are responsible to comply with all applicable operating system license terms and to acquire proper entitlements for each virtual machine instance.
 
@@ -74,21 +76,30 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 ## **3. Upload image to IBM BlueBox Cloud glance repository**
 
 #### **3.1 Upload image to Glance using OpenStack Dashboard**
-1. Login to IBM Blue Box Cloud OpenStack dashboard
+1. Log in to IBM Blue Box Cloud OpenStack dashboard
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
 Item | Description
 ------------ | -------------
 Name | Enter a name for the image.
-Description | Optionally, enter a brief description of the image.	   
+
+Description | Optionally, enter a brief description of the image.
+
 Image Source | Choose **Image File**.
-Image File | Browse to the directory of the image binary file.	   
-Format | Select the correct format (for example, `QCOW2`) for the image.	   
-Architecture | Specify the architecture (for example, i386 for a 32-bit architecture or x86-64 for a 64-bit architecture).	   
+
+Image File | Browse to the directory of the image binary file.
+
+Format | Select the correct format (for example, `QCOW2`) for the image.
+
+Architecture | Specify the architecture (for example, i386 for a 32-bit architecture or x86-64 for a 64-bit architecture).
+
 Minimum Disk (GB) | For Linux Image, use 5; For Windows Image, use 25
+
 Minimum RAM (MB) | For Linux Image, use 512; For Windows Image, use 2048
-Public | Select this check box to make the image public to all users on all projects.	  
+
+Public | Select this check box to make the image public to all users on all projects.
+
 Protected | Select this check box to ensure that only users with permissions can delete the image.	 
 
 For example:
@@ -128,9 +139,12 @@ For large images, the web upload may time out. For those, we've recommended that
 ## **4. Create VM instances using uploaded images**
 
 #### **4.1 Create VM instance using OpenStack Dashboard**
-1. Login to IBM Blue Box Cloud OpenStack dashboard
-2. Expand the Project and Compute sections in the navigation area and select Images. The dashboard shows the images that have been uploaded to OpenStack Glance repository and are available for this project.
+1. Login to IBM Blue Box Cloud OpenStack dashboard.
+
+2. Expand the Project and Compute sections in the navigation area and select Images. The dashboard shows the images that have been uploaded to OpenStack Glance repository and made available for this project.
+
 3. Select an image and click **Launch**.
+
 4. In the Launch Instance dialog box, specify field values in the **Details**, **Access & Security**, **Networking**, and **Post-Creation** tabs. For more details about these fields, see the following tables.
 
 5. Click **"Launch"**
@@ -148,8 +162,11 @@ Instance Name | Assign a name to the virtual machine.
 **Note:** The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created, so you could have two instances with the same host name.
 
 Flavor | Specify the size of the instance to launch.
+
 Instance Count | To launch multiple instances, enter a value greater than 1. The default is 1.
-Instance Boot Source | Since you are launching an instance from an image, **Boot from Image** is chosen by default.	   
+
+Instance Boot Source | Since you are launching an instance from an image, **Boot from Image** is chosen by default.
+
 Image Name | This field changes based on your previous selection. Since you have chosen to launch an instance using an image, the **Image Name** field displays with the name of the image you selected.	 
 
 
@@ -189,8 +206,8 @@ To set the initial username and password, use the following script data for the 
     ```
 
 #### **4.2 Connecting to your instance**
-1. Login to IBM Blue Box Cloud OpenStack dashboard
-2. Expand the Project panel, then the Compute tab in the left navigation area and click on Instances.
+1. Log in to IBM Blue Box Cloud OpenStack dashboard
+2. Expand the **Project** panel, then the **Compute** tab in the left navigation area, and click on **Instances**.
 3. Locate your instance in the list of running instances and note its IP address, such as `192.168.100.237`.
 4. Create a connection to your instance by specifying its IP address.
 
