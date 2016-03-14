@@ -1,17 +1,12 @@
-Layout: Page
-
-Title: IBM Provided Guest Images
-
-Featured: FALSE
-
-Weight: 1
-
-Tags: [images, glance, image-create, instance, gettingstarted]
-
-Date: 3/9/2016
-
-Author: Yanqi Dou
-
+---
+layout: page
+title: IBM Provided Guest Images
+featured: false
+weight: 13
+tags: [images, glance, image-create, instance, gettingstarted]
+date: March 9th, 2016
+author: Yanqi Dou
+---
 
 # **Working with IBM provided guest images**
 

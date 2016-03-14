@@ -1,17 +1,16 @@
-Layout: Page
-
-Title: Managing Users and Projects
-
-Featured: FALSE
-
-Tags: [users, roles, Keystone]
-
-Date: 2/29/2016
-
-Author: Adelia Wong
+---
+layout: page
+title: Managing Users and Projects
+featured: false
+tags: [users, roles, Keystone]
+date: February 29th, 2016
+author: Adelia Wong
+---
 
 #Managing users and projects
+
 ##Basic concepts
+
 **Users**: A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
 
 **Projects**: Projects are organizational units in the cloud, and are also known as tenants or accounts. Each user is a member of one or more projects. Within a project, a user creates and manages resources such as instances and volumes. Administrators can set limits to how many resources (instances, vCPU, volumes, and more) that a project is allowed to create.
@@ -157,7 +156,7 @@ This role structure requires Keystone API v3 to run. Using API v2.0 will result 
 Making API calls through the Horizon dashboard do not require any special action, but performing command line calls necessitates changes to the RC file. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
 
 {% highlight bash %}
-```
+
 export OS_PASSWORD=pass
 export OS_AUTH_URL=https://example.ibm.com:5000/v3
 export OS_USERNAME=cloud_admin
@@ -167,8 +166,7 @@ export OS_NO_CACHE=True
 export OS_VOLUME_API_VERSION=2
 export OS_COMPUTE_API_VERSION=2
 export OS_IDENTITY_API_VERSION=3
-```
-{% highlight bash %}
+{% endhighlight %}
 
 Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
 
