@@ -130,7 +130,7 @@ You can upload images through the Glance client. [Installing OpenStack Clients](
     # glance --os-image-api-version 1 image-create --name <image_name> --min-disk 5 --min-ram 512 --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
     ```
 
-* **Check if the image is created successfully**  
+* **Check whether the image was created successfully**  
     The image is queued for upload. It might take some time before the status changes from "Queued" to "Active".
     ```
     # glance image-show <image-id>
@@ -159,11 +159,10 @@ Then you will see the newly created instance in your instances list. The instanc
 
 Field | Description
 ------------ | -------------
-
 Availability Zone | Select an availability zone for your instance. Currently, only one zone is available: `nova`.
 Instance Name | Assign a name to the virtual machine. 
 
-**Note:** The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created, so you could have two instances with the same host name.
+| **Note:** The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created, so you could have two instances with the same host name.
 
 Flavor | Specify the size of the instance to launch.
 
@@ -175,6 +174,7 @@ Image Name | This field changes based on your previous selection. Since you have
 
 
 **Access & Security tab**
+
 Field | Description
 ------------ | -------------
 Key pair | Specify a key pair. If no key pairs are available, you can upload a new public key by clicking the + sign next to the dropdown box and pasting in your ssh-rsa public key.
@@ -214,7 +214,7 @@ To set the initial username and password, use the following script data for the 
 
 #### **4.2 Connecting to your instance**
 
-1. Log in to IBM Blue Box Cloud OpenStack dashboard.
+1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 
 2. Expand the **Project** panel, then the **Compute** tab in the left navigation area, and click on **Instances**.
 
