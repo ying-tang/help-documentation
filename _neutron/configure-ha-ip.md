@@ -13,9 +13,9 @@ This article provides a resource on how to set up HA floating IPs within an **IB
 
 NOTE: This feature works with IBM Blue Box Local Cloud ONLY. It does not apply to the IBM Blue Box Dedicated Cloud offering. The SoftLayer Network currently requires us to use L2 POP, a driver designed to support scaling to large networks. To quote one of our engineers: 
 
-```
+
 "The L2Population mechanism driver we need to use to make VXLAN work on SoftLayer is incompatible with MAC learning or ARP responses used by HA IP methods. IPs are mapped to hosts through two translation mechanisms: ARP maps IPs to MAC addresses, and switches learn which MAC is associated with each port. At failover time, any HA IP must change at least one of these two mappings." 
-```
+
 
 As a possible workaround, in the OpenStack Mitaka release, there is an option to disable half of the L2 POP responder, which could allow you to set up the gratuitous ARP type of HA. (See this article: https://review.openstack.org/278597) If you really need HA, it's best to use a Load Balancer for that, such as Neutron LBaaS v2. As another possible workaround, if your cloud is deployed within a single SoftLayer Pod, and it will never grow beyond that single Pod, you could possibly implement some type of HA IP in a custom way.
 
