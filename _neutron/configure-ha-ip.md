@@ -6,9 +6,12 @@ dateAdded: April 9th, 2015
 author: Eric French
 featured: false
 weight: 4
+note: Leslie Lundquist
 ---
 
-This article provides a resource on how to set up HA floating IPs within an **IBM Blue Box Cloud OpenStack** environment. These instructions assume that you already have the **OpenStack Python API Clients** installed.
+This article provides a resource on how to set up HA floating IPs within an **IBM Blue Box Cloud OpenStack** Local environment. These instructions assume that you already have the **OpenStack Python API Clients** installed.
+
+NOTE: This feature works with IBM Blue Box Local Cloud ONLY. It does not apply to the IBM Blue Box Dedicated Cloud offering. The SoftLayer Network currently requires us to use L2 POP, a driver designed to support scaling to large networks. As a possible workaround, in the OpenStack Mitaka release, there is an option to disable half of the L2 POP responder, which could allow you to set up HA. IF you really need HA, it's best to use a Load Balancer for that, such as Neutron LBaaS v2.
 
 **Configure your OpenStack instances**
 
