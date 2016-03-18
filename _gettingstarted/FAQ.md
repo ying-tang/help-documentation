@@ -49,15 +49,16 @@ Three additional ports are enabled if you've requested Swift (OpenStack Object S
 
 All of these ports are available via your custom Horizon URL.
 
-###How can I measure IO Operations Per Second on instance or volume's drive?
+###How can I measure IO Operations Per Second on an instance's or a volume's drive?
 
-You can use any number of tools to measure disk performance. 
 
-There is a particularly easy to use python script for measuring IOPS by Benjamin Schweizer, with instructions and example results at:
+You can use any number of tools to measure disk performance.
+
+A particularly easy to use python script for measuring IOPS by Benjamin Schweizer, with instructions and example results is available:
 
 `https://benjamin-schweizer.de/measuring-disk-io-performance.html`
 
-The latest version of this script is currently available at `https://benjamin-schweizer.de/files/iops/iops-2011-02-11`
+The latest version of this script currently [is available here.](https://benjamin-schweizer.de/files/iops/iops-2011-02-11)
 
 Usage is as follows:
    ` iops [-n|--num_threads threads] [-t|--time time] <device>`
