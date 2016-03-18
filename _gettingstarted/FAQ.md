@@ -30,28 +30,21 @@ The `admin` and `service` projects are created to support the underlying operati
 
 The ports that are open through the firewall to your IBM Blue Box Cloud are:
 
-80 - Horizon (OpenStack Web Portal)
+```
 
-443 - Horizon (OpenStack Web Portal)
+80 - horizon (OpenStack Web Portal)
+443 - horizon (OpenStack Web Portal)
+5000 - keystone (OpenStack Authentication API)
+6080 - nova-novnc (OpenStack VNC Console)
+8000 - heat (OpenStack CloudFormation API)
+8004 - heat (OpenStack Orchestration API)
+8774 - nova (OpenStack Compute API)
+8776 - cinder (OpenStack Block Storage API)
+9292 - glance (OpenStack Image API)
+9696 - neutron (OpenStack Network API)
+35357 - keystone-admin (OpenStack Authentication Admin API)
+```
 
-5000 - Keystone (OpenStack Authentication API)
-
-6080 - Nova-novnc (OpenStack VNC Console)
-
-8000 - Heat (OpenStack CloudFormation API)
-
-8004 - Heat (OpenStack Orchestration API)
-
-8774 - Nova (OpenStack Compute API)
-
-8776 - Cinder (OpenStack Block Storage API)
-
-9292 - Glance (OpenStack Image API)
-
-9696 - Neutron (OpenStack Network API)
-
-35357 - Keystone-admin (OpenStack Authentication Admin API)
-
-Three additional ports are enabled if you've requested Swift (OpenStack Object Storage) to be configured on your cluster: 6000, 6001, 6002
+Three additional ports are enabled if you've requested Swift (OpenStack Object Storage) to be configured on your cluster: `6000, 6001, 6002`
 
 All of these ports are available via your custom Horizon URL.
