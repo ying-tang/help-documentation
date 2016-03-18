@@ -48,3 +48,28 @@ The ports that are open through the firewall to your IBM Blue Box Cloud are:
 Three additional ports are enabled if you've requested Swift (OpenStack Object Storage) to be configured on your cluster: `6000, 6001, 6002`
 
 All of these ports are available via your custom Horizon URL.
+
+###How can I measure IO Operations Per Second on instance or volume's drive?
+
+You can use any number of tools to measure disk performance. 
+
+There is a particularly easy to use python script for measuring IOPS by Benjamin Schweizer, with instructions and example results at:
+
+`https://benjamin-schweizer.de/measuring-disk-io-performance.html`
+
+The latest version of this script is currently available at `https://benjamin-schweizer.de/files/iops/iops-2011-02-11`
+
+Usage is as follows:
+   ` iops [-n|--num_threads threads] [-t|--time time] <device>`
+
+    threads := number of concurrent io threads, default 1
+    time    := time in seconds, default 10
+    device  := some block device, like /dev/sda or \\\\.\\PhysicalDrive0
+
+examples:
+
+    iops /dev/sda
+    iops -n 8 -t 2 /dev/disk0
+    iops --num_threads 1 --time 2 /dev/md1
+    iops --num_threads 16 --time 2 /dev/md1
+
