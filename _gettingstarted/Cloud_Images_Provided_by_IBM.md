@@ -263,6 +263,7 @@ Connect to your instance through Remote Desktop or VNC. **You'll need to use the
 When you receive a notification from IBM Blue Box operations that the cloud images are updated, you can deactivate the existing image and re-create a new image using the download URL you obtained from Box Panel for the updated image.
 
 **Using the OpenStack Command Line Client to deactivate the existing image**
+
 1. Get the existing image id
     ```
     # glance image-list
