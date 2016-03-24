@@ -96,7 +96,7 @@ Minimum RAM(MB): 512
 Copy Data: True
 Public: True
 ```
-4. Click **"Create Image"**.  
+4. Click **"Create Image."**  
 Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 #### **3.2 Upload an image to Glance using the OpenStack Command Line Client**
