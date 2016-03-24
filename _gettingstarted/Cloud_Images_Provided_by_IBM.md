@@ -47,7 +47,7 @@ You, the customer, may upload and install separately-acquired operating system s
 For any Microsoft Windows operating system virtual computing instances, these are the specific Client provisions: the Client is required to have and maintain Client’s own Microsoft Windows License server for activating such Windows operating system virtual computing instances. Please refer to this document for more information [**How to activate Windows licenses in IBM Blue Box Cloud.**](Windows_License_Activation.md "How to activate Windows licenses in IBM BlueBox Cloud")
 
 
-## **2. Get Image Download tempURLs from Box Panel**
+## **2. Get Cloud Image Downloads from Box Panel**
 
 1. Log into Box Panel with Box Panel credentials. The Cloud Images page in Box Panel is available if you have at least one cloud, and if you are either a Primary or Technical customer contact.
 
@@ -55,12 +55,12 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 3. The Cloud Images page will appear. Each image is displayed as a card.
 
-4. Click on the card that displays the image of interest to you. A modal window will pop up that contains your tempURL.
+4. Click on the card that displays the image of interest to you. A modal window will pop up that contains your `tempURL`.
 
-5. The tempURL displayed will be valid for next 24 hours so you can download the Cloud Image.
+5. The `tempURL` displayed will be valid for next 24 hours so you can download the Cloud Image.
 
 
-## **3. Upload an image to IBM Blue Box Cloud Glance repository Using Image Download URL**
+## **3. Upload an image to IBM Blue Box Cloud Glance repository Using Your Cloud Image Download tempURL**
 
 **Note: This option cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.**
 
