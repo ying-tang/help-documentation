@@ -51,7 +51,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 1. Log into Box Panel with Box Panel credentials. The Cloud Images page in Box Panel is available if you have at least one cloud, and if you are either a Primary or Technical customer contact.
 
-2. From the Box Panel Dashboard, click on **Services** and select **"Cloud Images"**
+2. From the Box Panel Dashboard, click on **Services** and select **"Cloud Images."**
 
 3. The Cloud Images page will appear. Each image is displayed as a card.
 
@@ -65,7 +65,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 **Note: This option cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.**
 
 #### **3.1 Upload an image to Glance using the OpenStack Dashboard**
-1. Log in to the IBM Blue Box Cloud OpenStack dashboard
+1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
@@ -97,7 +97,7 @@ Copy Data: True
 Public: True
 ```
 4. Click **"Create Image"**.  
-Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active".
+Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 #### **3.2 Upload an image to Glance using the OpenStack Command Line Client**
 You can upload images through the Glance client. [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html)
@@ -110,7 +110,7 @@ You can upload images through the Glance client. [Installing OpenStack Clients](
     ```
 
 * **Check whether the image was created successfully**  
-    The image is queued for upload. It might take some time before the status changes from "Queued" to "Active".
+    The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
     ```
     # glance image-show <image-id>
     ```
@@ -137,7 +137,7 @@ ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
 If the result returns "OK", the downloaded `qcow2` image is valid.
 
 #### **4.3 Upload an image to Glance using the OpenStack Dashboard**
-1. Log in to the IBM Blue Box Cloud OpenStack dashboard
+1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
@@ -167,7 +167,7 @@ Minimum RAM(MB): 512
 Public: True
 ```
 4. Check **"Create Image"**.  
-Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active".
+Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 #### **4.4 Upload an image to Glance using the OpenStack Command Line Client**
 You can upload images through the Glance client. [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html)
@@ -180,7 +180,7 @@ You can upload images through the Glance client. [Installing OpenStack Clients](
     ```
 
 * **Check whether the image was created successfully**  
-    The image is queued for upload. It might take some time before the status changes from "Queued" to "Active".
+    The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
     ```
     # glance image-show <image-id>
     ```
@@ -203,7 +203,7 @@ You can upload images through the Glance client. [Installing OpenStack Clients](
 
 5. Click **"Launch"**
 
-Then you will see the newly created instance in your instances list. The instance is queued for creation. It might take some time before the status changes from "Build" to "Active".
+Then you will see the newly created instance in your instances list. The instance is queued for creation. It might take some time before the status changes from "Build" to "Active."
 
 **Set initial username and password in Post-Creation tab**
 
@@ -266,17 +266,17 @@ When you receive a notification from IBM Blue Box operations that the cloud imag
 
 **Using the OpenStack Command Line Client to deactivate the existing image**
 
-1. Get the existing image id
+1. Get the existing image id:
     ```
     # glance image-list
     ```
 
-2. Deactivate the image
+2. Deactivate the image:
     ```
     # glance image-deactivate <image_id>
     ```
 
-3. Show the image status
+3. Show the image status:
     ```
     # glance image-show <image_id>
     ```
