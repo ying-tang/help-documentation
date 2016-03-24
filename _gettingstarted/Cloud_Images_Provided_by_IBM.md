@@ -60,7 +60,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 5. The `tempURL` displayed will be valid for next 24 hours so you can download the Cloud Image.
 
 
-## **3. Upload an image to IBM Blue Box Cloud Glance repository Using Your Cloud Image Download tempURL**
+## **3. Upload an image to IBM Blue Box Cloud Glance repository Using Your Cloud Image `tempURL`**
 
 **Note: This option cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.**
 
