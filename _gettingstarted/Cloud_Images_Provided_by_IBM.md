@@ -51,7 +51,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 1. Log into Box Panel with Box Panel credentials. The Cloud Images page in Box Panel is available if you have at least one cloud, and if you are either a Primary or Technical customer contact.
 
-2. From the Box Panel Dashboard, click on **Services** and select **"Cloud Images."**
+2. From the Box Panel Dashboard, click on **Services** and select **Cloud Images.**
 
 3. The Cloud Images page will appear. Each image is displayed as a card.
 
