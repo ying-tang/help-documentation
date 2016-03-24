@@ -30,6 +30,8 @@ Flavor | The term Flavor describes an instance's size, and it defines the pre-de
 
 #### **1.1 Alternative Cloud Images Provided by IBM Blue Box**
 
+The IBM Blue Box Cloud in this release comes pre-populated with Cirros 0.3.3 x86_64 images. Additional cloud images are available, provided as a customer courtesy by IBM Blue Box.
+
 You, the customer, may upload and install separately-acquired operating system software, or you may provision any of the following operating system images, which we make available to you, as a virtual machine instance.  You, the customer, are responsible to comply with all applicable operating system license terms and to acquire proper entitlements for each virtual machine instance.
 
 * CentOS 6.7 x86_64
@@ -47,15 +49,15 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 ## **2. Get Image Download tempURLs from Box Panel**
 
-1. Log into Box Panel with Box Panel credentials.
+1. Log into Box Panel with Box Panel credentials. The Cloud Images page in Box Panel is available if you have at least one cloud, and if you are either a Primary or Technical customer contact.
 
-2. From the Dashboard click on Services and select **<TBD>"Cloud Images Download"**
+2. From the Box Panel Dashboard, click on **Services** and select **"Cloud Images"**
 
-3. The Cloud Images List page will appear.
+3. The Cloud Images page will appear. Each image is displayed as a card.
 
-4. Click on **<TBD>"Get Download URL"** for the image of interest to you.
+4. Click on the card that displays the image of interest to you. A modal window will pop up that contains your tempURL.
 
-5. The tempURLs displayed  will be valid for next 24 hours so you can download the cloud image.
+5. The tempURL displayed will be valid for next 24 hours so you can download the Cloud Image.
 
 
 ## **3. Upload an image to IBM Blue Box Cloud Glance repository Using Image Download URL**
