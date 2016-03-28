@@ -151,7 +151,7 @@ Delete object    | Y | Y | Y
 
 
 ##Requirements
-This role structure requires Keystone API v3 to run. Using API v2.0 will result in a loss of privileges for the `cloud_admin` and `project_admin` roles, in addition to erratic permissions behavior for `\_member\_` users.
+This role structure requires Keystone API v3 to run. Using API v2.0 will result in a loss of privileges for the `cloud_admin` and `project_admin` roles, in addition to erratic permissions behavior for `_member_` users.
 
 
 Making API calls through the Horizon dashboard does not require any special action, but performing command line calls necessitates changes to the RC file. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
@@ -174,7 +174,7 @@ Additionally, Keystone functions must be performed using the new `python-opensta
 ###Using the Keystone v3 group function 
 The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously.
 
-For example, you might have a support team that needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called **Support**, give the group the `\_member\_` role on all of your projects, and then add all of your support staff to the group.
+For example, you might have a support team that needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called **Support**, give the group the `_member_` role on all of your projects, and then add all of your support staff to the group.
 
 Another common use case would be to create a `cloud_admin` group that is given the `cloud_admin` role on every project on the environment. This arrangement lets the `cloud_admin` elevate a user’s privileges easily, by temporarily adding them to the `cloud_admin` group. It could be used in situations like vacation coverage.
 
@@ -182,7 +182,7 @@ You can see the difference in approach by these two illustrations.
 
 ![User Management With Roles](http://open.ibmcloud.com/documentation/_images/UserManagementWithRoles.gif)
 
-This figure shows an example of traditional role assignments as supported by the Keystone v2 API. The `cloud_admin` user has the `cloud_admin` role for Project 1, Project 2, and Project 3. User 1 has the `project_admin` role for Project 2. User 2 and Support User 1 have the `\_member\_` role for Project 2. Support User 1 also has the `\_member\_` role for Project 3.
+This figure shows an example of traditional role assignments as supported by the Keystone v2 API. The `cloud_admin` user has the `cloud_admin` role for Project 1, Project 2, and Project 3. User 1 has the `project_admin` role for Project 2. User 2 and Support User 1 have the `_member_` role for Project 2. Support User 1 also has the `_member_` role for Project 3.
 
 ![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
 
@@ -235,7 +235,7 @@ If you have the `cloud_admin` or `project_admin` roles, you can create new user 
 
 1. In the navigation bar, open the Identity panel and click on **Users**.
 2. Click **Create User**.
-3. In the **Create User** window, enter a user name, email, and preliminary password for the user. Confirm the password. Select a project from the Primary Project list. Choose a role for the user from the Role list. Default is `\_member\_`.
+3. In the **Create User** window, enter a user name, email, and preliminary password for the user. Confirm the password. Select a project from the Primary Project list. Choose a role for the user from the Role list. Default is `_member_`.
 4. Click **Create User** to confirm your changes.
 The dashboard assigns an ID to the user, and the user appears in the Users category.
 
