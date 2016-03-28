@@ -5,11 +5,12 @@ featured: false
 tags: [users, roles, Keystone]
 date: February 29th, 2016
 author: Adelia Wong
+editor: Leslie Lundquist
 ---
 
-#Managing users and projects
+#Managing Users and Projects
 
-##Basic concepts
+##Basic Concepts
 
 **Users**: A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
 
@@ -27,9 +28,9 @@ Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_a
 - **heat_stack_owner** allows the user to create heat stacks in the project. This role must be manually assigned, and should never be assigned to a user that is also assigned the **heat_stack_user** role.
 - **heat_stack_user** is a role automatically assigned by Heat to the users it creates. This role is restricted from all API access and should never be explicitly assigned to any user. 
 
-The cloud_admin role is restricted to cloud and project management actions. A higher set of privileges is granted exclusively to the **admin** role, which includes administrative actions for services, domains and roles, networks, and identity providers. The **admin** role is restricted to IBM and is not granted to the customer. 
+The `cloud_admin` role is restricted to cloud and project management actions. A higher set of privileges is granted exclusively to the **admin** role, which includes administrative actions for services, domains and roles, networks, and identity providers. The **admin** role is restricted to IBM, and it is not granted to the customer. 
 
-With your IBM Blue Box Cloud installation you receive one user with cloud_admin privileges who can create other projects and users. The cloud_admin can grant users cloud_admin and lower privileged roles.
+With your IBM Blue Box Cloud installation you'll receive one user with `cloud_admin` privileges who can create other projects and users. The `cloud_admin` can grant users `cloud_admin` and lower privileged roles.
 
 
 Identity Feature | cloud_admin | project_admin (within project) |  \_member\_
@@ -150,10 +151,10 @@ Delete object    | Y | Y | Y
 
 
 ##Requirements
-This role structure requires Keystone API v3 to run. Using API v2.0 will result in a loss of privileges for the cloud_admin and project_admin, in addition to erratic permissions behavior for \_member\_ users.
+This role structure requires Keystone API v3 to run. Using API v2.0 will result in a loss of privileges for the `cloud_admin` and `project_admin` roles, in addition to erratic permissions behavior for `\_member\_ users`.
 
 
-Making API calls through the Horizon dashboard do not require any special action, but performing command line calls necessitates changes to the RC file. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
+Making API calls through the Horizon dashboard does not require any special action, but performing command line calls necessitates changes to the RC file. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
 
 {% highlight bash %}
 
@@ -171,27 +172,27 @@ export OS_IDENTITY_API_VERSION=3
 Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
 
 ###Using the Keystone v3 group function 
-The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of groups. You can use groups to quickly and easily make multiple assignments simultaneously.
+The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously.
 
-For example, you might have a support team which needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called Support, give the group the \_member\_ role on all of your projects, and then add all of your support staff to the group.
+For example, you might have a support team that needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called **Support**, give the group the `\_member\_` role on all of your projects, and then add all of your support staff to the group.
 
-Another common use case would be to create a cloud_admin group that is given the cloud_admin role on every project on the environment. This allows the cloud_admin to easily elevate a user’s privileges by temporarily adding them to the cloud_admin group and could be used in situations like vacation coverage.
+Another common use case would be to create a `cloud_admin` group that is given the `cloud_admin` role on every project on the environment. This arrangement lets the `cloud_admin` elevate a user’s privileges easily, by temporarily adding them to the `cloud_admin` group. It could be used in situations like vacation coverage.
 
 You can see the difference in approach by these two illustrations.
 
 ![User Management With Roles](http://open.ibmcloud.com/documentation/_images/UserManagementWithRoles.gif)
 
-This figure shows an example of traditional role assignments as supported by Keystone v2 API. The cloud_admin User has the cloud_admin role for Project 1, Project 2, and Project 3. User 1 has the project_admin role for Project 2. User 2 and Support User 1 have the \_member\_ role for Project 2. Support User 1 also has the \_member\_ role for Project 3.
+This figure shows an example of traditional role assignments as supported by the Keystone v2 API. The `cloud_admin` user has the `cloud_admin` role for Project 1, Project 2, and Project 3. User 1 has the `project_admin` role for Project 2. User 2 and Support User 1 have the `\_member\_` role for Project 2. Support User 1 also has the `\_member\_` role for Project 3.
 
 ![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
 
 ###Consequences of disabling projects
-Users with the cloud_admin role can enable and disable projects. When you disable a project, it has these consequences:
+Users with the `cloud_admin` role can enable and disable projects. When you disable a project, it has these consequences:
 
 - In the dashboard, users can no longer access the project from the CURRENT PROJECT list on the Project tab.
 - Users who are members of only the disabled project can no longer log in.
 - You cannot launch instances for a disabled project. Instances that are already running are not automatically terminated. You must stop them manually.
-- The data for a disabled project is maintained so that you can enable the project at any time.
+- The data for a disabled project is maintained so that you can re-enable the project at any time.
 
 ##Using the dashboard
 ###Adding a project
@@ -214,7 +215,7 @@ You can update a project to change its name or description, and to enable or tem
 5. Click **Save**.
 
 ###Modifying user assignments for a project
-If you have the cloud_admin role you can assign roles on any project. If you have the project_admin role you can modify assignments on projects where you have the project_admin role applied.
+If you have the `cloud_admin` role you can assign roles on any project. If you have the `project_admin` role you can modify assignments on projects where you have the `project_admin` role applied.
 
 1. In the navigation bar, open the Identity panel and click on **Projects**.
 2. Click the **Manage Members** button for the project that you want to modify.
@@ -230,16 +231,16 @@ You can also assign groups of users in the Project Groups tab.
 3. Click **Delete Projects** to confirm the deletion.
 
 ###Creating a user account
-If you have the cloud_admin or project_admin roles you can create new user accounts. When you create a user account, you must assign the account to a primary project. You also have the option of assigning the account to additional projects. 
+If you have the `cloud_admin` or `project_admin` roles, you can create new user accounts. When you create a user account, you must assign the account to a primary project. You also have the option of assigning the account to additional projects. 
 
 1. In the navigation bar, open the Identity panel and click on **Users**.
 2. Click **Create User**.
-3. In the **Create User** window, enter a user name, email, and preliminary password for the user. Confirm the password. Select a project from the Primary Project list. Choose a role for the user from the Role list. Default is \_member\_.
+3. In the **Create User** window, enter a user name, email, and preliminary password for the user. Confirm the password. Select a project from the Primary Project list. Choose a role for the user from the Role list. Default is `\_member\_`.
 4. Click **Create User** to confirm your changes.
 The dashboard assigns an ID to the user, and the user appears in the Users category.
 
 ###Disabling or enabling a user
-If you have the cloud_admin or the project_admin role you can enable and disable user accounts. When you disable a user account, the user can no longer log in. However, the data for the user is maintained so that you can enable the user at any time.
+If you have the `cloud_admin` or the `project_admin` role you can enable and disable user accounts. When you disable a user account, the user can no longer log in. However, the data for the user is maintained so that you can re-enable the user at any time.
 
 1. In the navigation bar, open the Identity panel and click on **Users**.
 2. Locate the user that you want to disable or enable in the Users list.
