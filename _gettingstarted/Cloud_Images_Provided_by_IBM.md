@@ -28,7 +28,7 @@ Instances | Instances are virtual machines (VMs) that run inside the OpenStack c
 Flavor | The term Flavor describes an instance's size, and it defines the pre-determined resource specifications for amount of vCPU, RAM, and disk space available to an instance.
 
 
-#### 1. Select From Alternative Cloud Images Provided by IBM Blue Box
+### 1. Select From Alternative Cloud Images Provided by IBM Blue Box
 
 The IBM Blue Box Cloud in this release comes pre-populated with Cirros 0.3.3 x86_64 images. Additional cloud images are available, provided as a customer courtesy by IBM Blue Box.
 
