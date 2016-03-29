@@ -22,7 +22,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 2. [Hybrid Block Storage Cluster and Expansion Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#hybrid-block-storage-cluster-and-expansion-nodes-are-available)
 
-3. [Direct Link is available on IBM Blue Box Dedicated Cloud, in three varieties, and for hybrid cloud applications.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#direct-link-is-available-on-ibm-blue-box-dedicated-cloud)
+3. [Direct Link is available on IBM Blue Box Dedicated Cloud, in three varieties, and for hybrid cloud applications.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#direct-link-now-available-in-softlayer-data-centers)
 
 4. [SoftLayer Private Network access is available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#softlayer-private-network-access-is-available)
 
