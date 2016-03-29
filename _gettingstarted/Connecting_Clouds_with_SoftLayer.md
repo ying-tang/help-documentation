@@ -4,7 +4,7 @@ title: Connecting Clouds with SoftLayer
 featured: false
 weight: 13
 tags: [SoftLayer, network, gettingstarted]
-date: March 22nd, 2016
+dateAdded: March 22nd, 2016
 author: Shaival Choski
 editor: Leslie Lundquist
 ---
