@@ -10,7 +10,7 @@ author: Leslie Lundquist
 
 # **IBM Blue Box Cloud Customer**
 
-## Release Notes
+# Release Notes
 
 #### Release 2.1.0    created     March 31, 2016
 
