@@ -10,11 +10,9 @@ author: Leslie Lundquist
 
 # IBM Blue Box Cloud Customer
 
-## Product Release Notes
+# Product Release Notes
 
-### Release 2.1.0
-
-### March 29, 2016
+# Release 2.1.0        March 29, 2016
 
 #### Summary of New Features in Latest Release
 
