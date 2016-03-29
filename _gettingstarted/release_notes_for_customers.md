@@ -8,13 +8,14 @@ date: March 29, 2016
 author: Leslie Lundquist
 ---
 
-#IBM Blue Box Cloud Customer
-##Product Release Notes
+# IBM Blue Box Cloud Customer
 
-###Release 2.1.0
-###March 29, 2016
+## Product Release Notes
 
-####Summary of New Features in Latest Release
+### Release 2.1.0
+### March 29, 2016
+
+#### Summary of New Features in Latest Release
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the Dedicated and Local Cloud offerings.  The new capabilities of IBM Blue Box Dedicated and Local Cloud include:
 
@@ -38,7 +39,7 @@ For additional user documentation please refer to http://ibm-blue-box-help.githu
 
 A summary of features from previous releases that will affect users of this release is available [at the end of this document.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#summary-of-new-features-from-previous-releases-that-will-affect-customer-use-of-this-release)
 
-####IBM Blue Box Cloud Building Blocks
+#### IBM Blue Box Cloud Building Blocks
 
 Every IBM Blue Box Cloud 2.1.0 starts with a hyper-converged cluster of Controller and Compute nodes, along with:
 
