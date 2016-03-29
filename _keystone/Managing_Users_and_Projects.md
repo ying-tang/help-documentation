@@ -5,11 +5,12 @@ featured: false
 tags: [users, roles, Keystone]
 date: February 29th, 2016
 author: Adelia Wong
+editor: Leslie Lundquist
 ---
 
-#Managing users and projects
+#Managing Users and Projects
 
-##Basic concepts
+##Basic Concepts
 
 **Users**: A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
 
