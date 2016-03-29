@@ -18,7 +18,7 @@ editor: Niraj Patel
 
 2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM-provided cloud images.
 
-### **Basic concepts**
+#### Basic concepts
 
 Item | Description
 ------------ | -------------
