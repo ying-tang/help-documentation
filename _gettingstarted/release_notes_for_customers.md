@@ -92,7 +92,7 @@ For more information, please refer to [the main document on this topic.](https:/
 
 Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to this document:
 
-https://github.com/IBM-Blue-Box-Help/help-documentation/blob/master/_keystone/Managing_Users_and_Projects.md
+https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/Managing_Users_and_Projects.md
 
 ##### Additional Cloud Images Available
 
