@@ -85,7 +85,7 @@ Available:
 
 #### **SoftLayer Private Network Access**
 
-SoftLayer Private Network access lets you set up connectivity between two IBM Blue Box Dedicated private clouds, using the SoftLayer private network capability, when both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account.
+SoftLayer Private Network access lets you set up connectivity between two IBM Blue Box Dedicated private clouds, using the SoftLayer private network capability, when both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account. A customer would select this service to enable low-latency, un-metered, private network traffic between IBM Blue Box Dedicated clouds.
 
 For more information, please refer to [the main document on this topic.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/Connecting_Clouds_with_SoftLayer/)
 
