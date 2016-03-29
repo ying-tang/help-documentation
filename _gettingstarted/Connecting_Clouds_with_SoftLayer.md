@@ -25,7 +25,7 @@ The document assumes that both of the IBM Blue Box clouds that will be connected
 
 2. If the IBM Blue Box cloud is a new deployment (for new users), when ordering the  Blue Box cloud, request SoftLayer private network connectivity.
 
-##Establishing connectivity over a SoftLayer private network
+## Establishing connectivity over a SoftLayer private network
 
 When a user requests a SoftLayer private network, an internal shared network named `sl-private-network` is created for that user.
 
