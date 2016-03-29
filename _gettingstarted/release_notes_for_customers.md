@@ -12,9 +12,9 @@ author: Leslie Lundquist
 
 # Product Release Notes
 
-# Release 2.1.0        March 29, 2016
+#### Release 2.1.0    created     March 29, 2016
 
-#### Summary of New Features in Latest Release
+# Summary of New Features in Latest Release
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the Dedicated and Local Cloud offerings.  The new capabilities of IBM Blue Box Dedicated and Local Cloud include:
 
