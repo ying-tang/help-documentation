@@ -121,13 +121,13 @@ You can upload images through the Glance client. [Installing OpenStack Clients](
     # glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
 ```
 
-* **Check whether the image was created successfully**  
+* **Check whether the image was created successfully**
+
     The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 ```
     # glance image-show <image-id>
 ```
-
 
 ### 4. Upload an image to an IBM Blue Box Cloud Glance repository Using Downloaded Image files
 
@@ -193,16 +193,18 @@ Check that the created image appears in the image list. The image is queued for 
 
 You can upload images through the Glance client. [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html)
 
-* **Create image**  
-    For Linux Images, use `-- min-disk 5 --min-ram 512`
+* **Create image**
 
-    For Windows Images, use `--min-disk 25 --min-ram 2048`
+For Linux Images, use `-- min-disk 5 --min-ram 512`
+
+For Windows Images, use `--min-disk 25 --min-ram 2048`
 
 ```
   # glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
 ```
 
-* **Check whether the image was created successfully**  
+* **Check whether the image was created successfully**
+
     The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 ```
