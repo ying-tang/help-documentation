@@ -34,7 +34,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 7. [HIPAA-compliant options are now available for IBM Blue Box Dedicated Cloud.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#hipaa-and-ibm-blue-box-dedicated-cloud)
 
-For additional user documentation please refer to http://ibm-blue-box-help.github.io/help-documentation/. 
+For additional user documentation please refer to the [Help main page.](http://ibm-blue-box-help.github.io/help-documentation/). 
 
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/general_product_overview/).
 
@@ -92,9 +92,7 @@ For more information, please refer to [the main document on this topic.](https:/
 
 #### Role-Based Access Control (RBAC)
 
-Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to this document:
-
-https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/Managing_Users_and_Projects.md
+Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/Managing_Users_and_Projects.md).
 
 #### Additional Cloud Images Available
 
@@ -110,9 +108,7 @@ IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Ad
 	•	Windows Server 2012 R2 Datacenter
 	•	Windows Server 2012 R2 Standard
 
-To use any of these images, additional information is provided in this document:
-
-https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md
+To use any of these images, additional information is provided in [this document](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md).
 
 #### HIPAA and IBM Blue Box Dedicated Cloud
 
