@@ -29,13 +29,13 @@ The document assumes that both of the IBM Blue Box clouds that will be connected
 
 When a user requests a SoftLayer private network, an internal shared network named `sl-private-network` is created for that user.
 
-	*	This network is visible to all users across all OpenStack projects in IBM Blue Box cloud.
+	* This network is visible to all users across all OpenStack projects in IBM Blue Box cloud.
 	
-	*	The user is able to deploy its workload directly on this network.
+	* The user is able to deploy its workload directly on this network.
 	
 	* When a workload is deployed, a 10.x.x.x IP address is assigned. This IP address is routable in SoftLayer data centers. 
 	
-	*	Assuming that the remote workload is deployed in a similar fashion, these two workloads now can communicate over the SoftLayer private network. 
+	* Assuming that the remote workload is deployed in a similar fashion, these two workloads now can communicate over the SoftLayer private network. 
 	
 **Using a jump node to access the workload on a SoftLayer private network**
 
