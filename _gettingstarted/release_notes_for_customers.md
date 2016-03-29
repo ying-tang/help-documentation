@@ -18,9 +18,9 @@ author: Leslie Lundquist
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the Dedicated and Local Cloud offerings.  The new capabilities of IBM Blue Box Dedicated and Local Cloud include:
 
-1. [Additional types of Expansion Compute Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#additional-types-of-expansion-compute-nodes-now-available)
+1. [Additional types of Expansion Compute Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#optional-expansion-compute-nodes-now-available)
 
-2. [Hybrid Block Storage Cluster and Expansion Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#hybrid-block-storage-cluster-and-expansion-nodes-are-available)
+2. [Hybrid Block Storage Cluster and Expansion Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#optional-hybrid-block-storage-nodes-now-available)
 
 3. [Direct Link is available on IBM Blue Box Dedicated Cloud, in three varieties, and for hybrid cloud applications.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#direct-link-now-available-in-softlayer-data-centers)
 
