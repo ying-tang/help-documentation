@@ -49,7 +49,7 @@ Every IBM Blue Box Cloud 2.1.0 starts with a hyper-converged cluster of Controll
 
 #### **Optional Expansion Compute Nodes Now Available**
 
-Optionally, you can select from the following compute and storage node extensions to add to your standard or enterprise cloud:
+Optionally, you can select from the following compute node extensions to add to your standard or enterprise cloud:
 
 	•	You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
 	•	You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE
