@@ -28,7 +28,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 5. [Use of Role-Based Access Control (RBAC) to define permissions.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#role-based-access-control-rbac)
 
-6. [Additional cloud images are provided by IBM Blue Box.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#additionial-cloud-images-available)
+6. [Additional cloud images are provided by IBM Blue Box.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#additional-cloud-images-available)
 
 7. [HIPAA-compliant options are now available for IBM Blue Box Dedicated Cloud.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#hipaa-and-ibm-blue-box-dedicated-cloud)
 
