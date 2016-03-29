@@ -3,7 +3,7 @@ layout: page
 title: Managing Users and Projects
 featured: false
 tags: [users, roles, Keystone]
-date: February 29th, 2016
+dateAdded: February 29th, 2016
 author: Adelia Wong
 editor: Leslie Lundquist
 ---
