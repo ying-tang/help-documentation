@@ -86,11 +86,11 @@ Available:
 
 SoftLayer Private Network access lets you set up connectivity between two IBM Blue Box Dedicated private clouds, using the SoftLayer private network capability, when both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account.
 
-For more information, please refer to [the main document on this topic.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Connecting_Clouds_with_SoftLayer.md)
+For more information, please refer to [the main document on this topic.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/Connecting_Clouds_with_SoftLayer/)
 
 #### **Role-Based Access Control (RBAC)**
 
-Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/Managing_Users_and_Projects.md).
+Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](http://ibm-blue-box-help.github.io/help-documentation/keystone/RBAC_Definitions/).
 
 #### **Additional Cloud Images Available**
 
@@ -106,7 +106,7 @@ IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Ad
 	•	Windows Server 2012 R2 Datacenter
 	•	Windows Server 2012 R2 Standard
 
-To use any of these images, additional information is provided in [this document](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md).
+To use any of these images, additional information is provided in [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/Cloud_Images_Provided_by_IBM/).
 
 #### **HIPAA and IBM Blue Box Dedicated Cloud**
 
