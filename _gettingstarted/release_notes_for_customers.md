@@ -10,7 +10,7 @@ author: Leslie Lundquist
 
 # IBM Blue Box Cloud Customer
 
-# Product Release Notes
+# Release Notes
 
 #### Release 2.1.0    created     March 29, 2016
 
@@ -38,7 +38,7 @@ For additional user documentation please refer to the [Help main page.](http://i
 
 A summary of features from previous releases that will affect users of this release is available [at the end of this document.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#summary-of-new-features-from-previous-releases-that-will-affect-customer-use-of-this-release)
 
-#### IBM Blue Box Cloud Building Blocks
+#### **IBM Blue Box Cloud Building Blocks**
 
 Every IBM Blue Box Cloud 2.1.0 starts with a hyper-converged cluster of Controller and Compute nodes, along with:
 
@@ -47,7 +47,7 @@ Every IBM Blue Box Cloud 2.1.0 starts with a hyper-converged cluster of Controll
 	•	Dedicated controller nodes 
 	•	Compute nodes: Standard or Enterprise
 
-#### Optional Expansion Compute Nodes Now Available
+#### **Optional Expansion Compute Nodes Now Available**
 
 Optionally, you can select from the following compute and storage node extensions to add to your standard or enterprise cloud:
 
@@ -56,14 +56,14 @@ Optionally, you can select from the following compute and storage node extension
 
 Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Both types of expansion nodes—IO optimized and high storage capacity—allow better coverage of instance types and workloads. With this 2.1.0 release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 
-#### Optional Hybrid Block Storage Nodes Now Available
+#### **Optional Hybrid Block Storage Nodes Now Available**
 
 Hybrid Block Storage nodes provide lower cost and higher density Block Storage.  
 
 	•	You can select Block Storage: SSD or HYBRID
 	•	You can select Object Storage 
 
-#### Direct Link now Available in SoftLayer Data Centers
+#### **Direct Link now Available in SoftLayer Data Centers**
 
 For Dedicated Cloud, you have the additional network option of selecting **Direct Link** connectivity:
 
@@ -82,17 +82,17 @@ Available:
 
 **NOTE:** Direct Link can be utilized to create a hybrid cloud, if you want to link your Local cloud to a Dedicated cloud that is running in a SoftLayer data center.
 
-#### SoftLayer Private Network Access
+#### **SoftLayer Private Network Access**
 
 SoftLayer Private Network access lets you set up connectivity between two IBM Blue Box Dedicated private clouds, using the SoftLayer private network capability, when both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account.
 
 For more information, please refer to [the main document on this topic.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Connecting_Clouds_with_SoftLayer.md)
 
-#### Role-Based Access Control (RBAC)
+#### **Role-Based Access Control (RBAC)**
 
 Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/Managing_Users_and_Projects.md).
 
-#### Additional Cloud Images Available
+#### **Additional Cloud Images Available**
 
 IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Additional cloud images are available, provided as a customer courtesy by IBM Blue Box. These include:
 
@@ -108,7 +108,7 @@ IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Ad
 
 To use any of these images, additional information is provided in [this document](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md).
 
-#### HIPAA and IBM Blue Box Dedicated Cloud
+#### **HIPAA and IBM Blue Box Dedicated Cloud**
 
 	•	You can select HIPAA Enablement for your IBM Blue Box Dedicated Cloud
 
@@ -124,7 +124,7 @@ IBM Blue Box Dedicated HIPAA clouds can be deployed in any SoftLayer data center
 
 **Pre-requisite:** A BAA must be signed before a of IBM Blue Box Dedicated HIPAA cloud order can be initiated. You must initiate your cloud order using the minimum configuration for HIPAA customers. No HIPAA enablement can be done after service initiation.
 
-#### Summary of New Features from Previous Releases that will affect Customer Use of this Release
+#### **Summary of New Features from Previous Releases that will affect Customer Use of this Release**
 
 This section briefly lists features from previous IBM Blue Box Cloud releases, primarily the 2.0.1 release, that will have an effect on your experience when using this 2.1.0 release, especially if you are upgrading from a 1.x release. For more information about these features, please contact your IBM Blue Box support team.
 
