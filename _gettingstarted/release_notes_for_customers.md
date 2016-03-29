@@ -69,7 +69,9 @@ For Dedicated Cloud, you have the additional network option of selecting **Direc
 
 	•	You can select an access method  (Public, VPN, or Direct Link)
 
-Direct Link is available in SoftLayer Data centers. It lets you connect to the SoftLayer private network backbone or network, bypassing the public Internet to connect to your Dedicated cloud(s). It is available in 1Gbps and 10Gbps increments.
+Direct Link is available in SoftLayer Data centers. It lets you connect to the SoftLayer private network backbone or network, bypassing the public Internet to connect to your Dedicated cloud(s). 
+
+Direct Link can be utilized to create a hybrid cloud, if you want to link your Local cloud to a Dedicated cloud that is running in a SoftLayer data center. It is available in 1Gbps and 10Gbps increments. 
 
 Available:
 
@@ -80,7 +82,6 @@ Available:
 	•	IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 1 Gbps
 	•	IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 10 Gbps
 
-**NOTE:** Direct Link can be utilized to create a hybrid cloud, if you want to link your Local cloud to a Dedicated cloud that is running in a SoftLayer data center.
 
 #### **SoftLayer Private Network Access**
 
