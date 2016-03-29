@@ -230,9 +230,9 @@ Then you will see the newly created instance in your instances list. The instanc
 
 Field | Description
 ------|-------------
-Customization Script | Specify a customization script that runs after your instance is launched.
+**Customization Script** | Specify a customization script that runs after your instance is launched.
 
-* **For Linux instances:**
+**For Linux instances:**
 
 To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>` ):
 
@@ -240,7 +240,7 @@ To enable password authentication through console and SSH, use the following scr
     #cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
 ```
 
-* **For Windows instances:**  
+**For Windows instances:**  
 To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of `_<YOUR_USERNAME>_` and `_<YOUR_PASSWORD>_`).
 
 ```
