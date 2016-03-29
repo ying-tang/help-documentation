@@ -1,3 +1,13 @@
+++---
+++layout: page
+++title: General Product Overvoew
+++featured: false
+++weight: 10
+++tags: [release, features, gettingstarted, overview]
+++date: March 29, 2016
+++author: Leslie Lundquist
+++---
++
 #### General Product Overview
 
 Both offerings of **IBM Blue Box Cloud**, Dedicated and Local, are deployed automatically through a **Site Controller** machine, which serves as a storehouse for the **Ursula/Ansible playbooks** we use to create your cloud. You can view the [Ursula playbooks](https://github.com/blueboxgroup/ursula) on **GitHub**. They are open source documents.
