@@ -217,6 +217,7 @@ Customization Script | Specify a customization script that runs after your insta
 * **For Linux instances:**
 
 To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>` ):
+
     ```
     #cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
     ```
