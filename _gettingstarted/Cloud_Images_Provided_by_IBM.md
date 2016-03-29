@@ -232,6 +232,9 @@ Field | Description
 ------|-------------
 **Customization Script** | Specify a customization script that runs after your instance is launched.
 
+```
+```
+
 **For Linux instances:**
 
 To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>` ):
@@ -269,7 +272,8 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 ```
     # ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
 ```
-    **Note:** The default `userid` for the Linux images provided by IBM is **ibmcloud**.
+
+**Note:** The default `userid` for the Linux images provided by IBM is **ibmcloud**.
 
   * View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
 
