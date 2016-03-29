@@ -18,19 +18,19 @@ author: Leslie Lundquist
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the Dedicated and Local Cloud offerings.  The new capabilities of IBM Blue Box Dedicated and Local Cloud include:
 
-1. [Additional types of Expansion Compute Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#additional-types)
+1. [Additional types of Expansion Compute Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#additional-types-of-expansion-compute-nodes)
 
-2. [Hybrid Block Storage Cluster and Expansion Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#)
+2. [Hybrid Block Storage Cluster and Expansion Nodes are available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#hybrid-block-storage-cluster-and-expansion-nodes)
 
-3. [Direct Link is available on IBM Blue Box Dedicated Cloud, in three varieties, and for hybrid cloud applications.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#)
+3. [Direct Link is available on IBM Blue Box Dedicated Cloud, in three varieties, and for hybrid cloud applications.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#direct-link-is-available-on-ibm-blue-box-dedicated-cloud)
 
-4. [SoftLayer Private Network access is available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#)
+4. [SoftLayer Private Network access is available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#softlayer-private-network-access-is-available)
 
-5. [Use of Role-Based Access Control (RBAC) to define permissions.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#)
+5. [Use of Role-Based Access Control (RBAC) to define permissions.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#use-of-role-based-access-control-rbac)
 
-6. [Additional cloud images are provided by IBM Blue Box.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#)
+6. [Additional cloud images are provided by IBM Blue Box.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#additionial-cloud-images-are-provided-by-ibm-blue-box)
 
-7. [HIPAA-compliant options are now available for IBM Blue Box Dedicated Cloud.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#)
+7. [HIPAA-compliant options are now available for IBM Blue Box Dedicated Cloud.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/Release_notes_for_customers.md/#hipaa-compliant-options-are-now-available)
 
 For additional user documentation please refer to http://ibm-blue-box-help.github.io/help-documentation/. 
 
