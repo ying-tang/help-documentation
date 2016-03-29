@@ -21,9 +21,7 @@ editor: Niraj Patel
 #### Basic concepts
 
 Item | Description
-
------------- | -------------
-
+-----|-------------
 Images | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. Use images to create virtual machine instances within the cloud.
 Instances | Instances are virtual machines (VMs) that run inside the OpenStack cloud.
 Flavor | The term Flavor describes an instance's size, and it defines the pre-determined resource specifications for amount of vCPU, RAM, and disk space available to an instance.
@@ -74,9 +72,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
 Item | Description
-
------------- | -------------
-
+-----|-------------
 Name | Enter a name for the image.
 Description | Optionally, enter a brief description of the image.
 Image Source | Choose **Image Location**.
@@ -161,9 +157,7 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
 Item | Description
-
------------- | -------------
-
+-----|------------
 Name | Enter a name for the image.
 Description | Optionally, enter a brief description of the image.
 Image Source | Choose **Image File**.
@@ -235,9 +229,7 @@ Then you will see the newly created instance in your instances list. The instanc
 **Set initial username and password in Post-Creation tab**
 
 Field | Description
-
------------- | -------------
-
+------|-------------
 Customization Script | Specify a customization script that runs after your instance is launched.
 
 * **For Linux instances:**
