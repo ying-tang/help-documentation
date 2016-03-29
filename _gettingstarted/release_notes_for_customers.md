@@ -24,9 +24,9 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 3. [Direct Link is available on IBM Blue Box Dedicated Cloud, in three varieties, and for hybrid cloud applications.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#direct-link-now-available-in-softlayer-data-centers)
 
-4. [SoftLayer Private Network access is available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#softlayer-private-network-access-is-available)
+4. [SoftLayer Private Network access is available.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#softlayer-private-network-access)
 
-5. [Use of Role-Based Access Control (RBAC) to define permissions.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#use-of-role-based-access-control-rbac)
+5. [Use of Role-Based Access Control (RBAC) to define permissions.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#role-based-access-control-rbac)
 
 6. [Additional cloud images are provided by IBM Blue Box.](https://github.com/IBM-Blue-Box-Help/help-documentation/new/gh-pages/_gettingstarted/release_notes_for_customers.md/#additionial-cloud-images-are-provided-by-ibm-blue-box)
 
