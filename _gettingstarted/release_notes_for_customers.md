@@ -4,7 +4,7 @@ title: Release Notes 2.1
 featured: false
 weight: 5
 tags: [release, features, gettingstarted]
-date: March 29, 2016
+dateAdded: March 29, 2016
 author: Leslie Lundquist
 ---
 
