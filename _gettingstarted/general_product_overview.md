@@ -26,8 +26,8 @@ IBM Blue Box Cloud software is based on **Ubuntu 14.04** or **Cirros 0.3.3 x86_6
 
 Upon request, IBM will enable some additional enhanced features:
 
-* - Deploying an OpenStack software load balancer (LBaaS) that is managed through Neutron (it requires the Dedicated Controller feature)
-* - Integration with Urban Code Deployer (UCD) through an OpenStack Heat (Orchestration) plug-in.
+* Deploying an OpenStack software load balancer (LBaaS) that is managed through Neutron (it requires the Dedicated Controller feature)
+* Integration with Urban Code Deployer (UCD) through an OpenStack Heat (Orchestration) plug-in.
 
 **Hardware Environment and Monitoring**
 
