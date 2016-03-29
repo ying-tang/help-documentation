@@ -1,6 +1,6 @@
 ---
 layout: page
-title: General Product Overvoew
+title: General Product Overview
 featured: false
 weight: 10
 tags: [release, features, gettingstarted, overview]
