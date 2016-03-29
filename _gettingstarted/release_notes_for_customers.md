@@ -4,15 +4,15 @@ title: Release Notes 2.1
 featured: false
 weight: 5
 tags: [release, features, gettingstarted]
-dateAdded: March 29, 2016
+dateAdded: March 31, 2016
 author: Leslie Lundquist
 ---
 
 # **IBM Blue Box Cloud Customer**
 
-# Release Notes
+## Release Notes
 
-#### Release 2.1.0    created     March 29, 2016
+#### Release 2.1.0    created     March 31, 2016
 
 # **Summary of New Features in Latest Release**
 
