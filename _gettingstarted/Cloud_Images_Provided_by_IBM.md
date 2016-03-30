@@ -19,7 +19,6 @@ editor: Niraj Patel
 2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM-provided cloud images.
 
 #### Basic concepts
-
 ```
 ```
 ***
@@ -86,6 +85,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 ```
 ```
+***
 
 |--------------|------------
 |**Item** | **Description**
@@ -102,6 +102,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 |**Public** | Select this check box to make the image public to all users on all projects.
 |**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
 
+***
 ```
 ```
 
@@ -178,6 +179,7 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 
 ```
 ```
+***
 
 |-----------|------------
 |**Item** | **Description**
@@ -193,6 +195,7 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 |**Public** | Select this check box to make the image public to all users on all projects.
 |**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
 
+***
 ```
 ```
 
@@ -257,12 +260,14 @@ Then you will see the newly created instance in your instances list. The instanc
 
 ```
 ```
+***
 
 |--------|----------
 |**Field** | **Description**
 |:------|:-------------
 |**Customization Script** | Specify a customization script that runs after your instance is launched.
 
+***
 ```
 ```
 
