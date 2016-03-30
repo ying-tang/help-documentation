@@ -51,9 +51,9 @@ Every IBM Blue Box Cloud 2.1.0, Dedicated or Local, starts with a cluster of con
 
 	• Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
 	
-From either of these starting places (3-node hyper-converged, or 5-node with dedicated controllers), you can add compute nodes of any type, along with block storage (Ceph), and/or object storage (Swift).
+From any of these starting places (e.g., 3-node hyper-converged, or 5-node with dedicated controllers), you can add compute nodes of any type, along with block storage (Ceph), and/or object storage (Swift).
 
-Additional options:
+Additional building blocks:
 
 	• For a Standard Capacity Dedicated cloud, Dedicated Gateway Firewalls are included by default
 	• Enterprise Capacity includes double the resources and 10 Gbps of network connectivity 
