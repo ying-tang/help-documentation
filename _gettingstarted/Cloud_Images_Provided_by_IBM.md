@@ -20,6 +20,9 @@ editor: Niraj Patel
 
 #### Basic concepts
 
+```
+```
+
 |---------+---------------|
 |**Item** | **Description**
 |:-----|:----------------|
@@ -30,6 +33,8 @@ editor: Niraj Patel
 |**Flavor** | The term _flavor_ describes an instance's size, and it defines the pre-determined resource specifications for the amount of vCPU, RAM, and disk space available to an instance.
 |---------|---------------|
 
+```
+```
 
 ### 1. Select From Alternative Cloud Images Provided by IBM Blue Box
 
@@ -37,6 +42,7 @@ The IBM Blue Box Cloud in this release comes pre-populated with Cirros 0.3.3 x86
 
 You, the customer, may upload and install separately-acquired operating system software, or you may provision any of the following operating system images, which we make available to you, as a virtual machine instance.  You, the customer, are responsible to comply with all applicable operating system license terms and to acquire proper entitlements for each virtual machine instance.
 
+```
 * CentOS 6.7 x86_64
 * CentOS 7.2 x86_64
 * Ubuntu Server 12.04 LTS x86_64
@@ -46,6 +52,7 @@ You, the customer, may upload and install separately-acquired operating system s
 * Windows Server 2008 R2 SP1 Standard
 * Windows Server 2012 R2 Datacenter
 * Windows Server 2012 R2 Standard
+```
 
 For any Microsoft Windows operating system virtual computing instances, these are the specific Client provisions: the Client is required to have and maintain Client’s own Microsoft Windows License server for activating such Windows operating system virtual computing instances. Please refer to this document for more information [**How to activate Windows licenses in IBM Blue Box Cloud.**](Windows_License_Activation.md "How to activate Windows licenses in IBM BlueBox Cloud")
 
@@ -75,6 +82,9 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
+```
+```
+
 |--------------|------------
 |**Item** | **Description**
 |:-----|:-------------
@@ -89,6 +99,9 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 |**Copy Data** | **This option must be checked to copy image data to image service.**
 |**Public** | Select this check box to make the image public to all users on all projects.
 |**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
+
+```
+```
 
 For example:
 
@@ -161,6 +174,9 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
+```
+```
+
 |-----------|------------
 |**Item** | **Description**
 |:-----|:------------
@@ -174,6 +190,9 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 |**Minimum RAM(MB)** | For Linux Image, use 512; For Windows Image, use 2048
 |**Public** | Select this check box to make the image public to all users on all projects.
 |**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
+
+```
+```
 
 For example:
 
@@ -233,6 +252,9 @@ For Windows Images, use `--min-disk 25 --min-ram 2048`
 Then you will see the newly created instance in your instances list. The instance is queued for creation. It might take some time before the status changes from "Build" to "Active."
 
 **Set initial username and password in Post-Creation tab**
+
+```
+```
 
 |--------|----------
 |**Field** | **Description**
