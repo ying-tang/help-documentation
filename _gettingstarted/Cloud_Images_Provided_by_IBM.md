@@ -20,11 +20,15 @@ editor: Niraj Patel
 
 #### Basic concepts
 
+|---------+---------------|
 **Item** | **Description**
------|-------------
+|:-----|:----------------:|
 **Image** | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. Use images to create virtual machine instances within the cloud.
+|----------+-------------------|
 **Instance** | Instances are virtual machines (VMs) that run inside the OpenStack cloud.
+|----------+-------------------|
 **Flavor** | The term _flavor_ describes an instance's size, and it defines the pre-determined resource specifications for the amount of vCPU, RAM, and disk space available to an instance.
+|---------|---------------|
 
 
 ### 1. Select From Alternative Cloud Images Provided by IBM Blue Box
