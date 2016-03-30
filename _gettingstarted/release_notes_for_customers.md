@@ -32,7 +32,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 7. [HIPAA-compliant options are now available for IBM Blue Box Dedicated Cloud.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#hipaa-and-ibm-blue-box-dedicated-cloud)
 
-For additional user documentation please refer to the [Help main page.](http://ibm-blue-box-help.github.io/help-documentation/). 
+For additional user documentation please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
 
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/general_product_overview/).
 
@@ -132,44 +132,26 @@ This section briefly lists features from previous IBM Blue Box Cloud releases, p
 
 #### _Features that will affect Users, Groups, and Roles in this release:_
 
-**Hide Host Aggregates panel from `cloud_admin`**
+**Hide Host Aggregates panel from `cloud_admin`**: This Horizon panel has been removed from visibility from `cloud_admin` users. We no longer allow `cloud_admin` to manipulate Host Aggregates, so it was improper to display this panel in Horizon.
 
-* This Horizon panel has been removed from visibility from `cloud_admin` users. We no longer allow `cloud_admin` to manipulate Host Aggregates, so it was improper to display this panel in Horizon.
+**Expose more `admin` panels to `cloud_admin`**: We've enabled more admin panels for the `cloud_admin` users in Horizon. These include "Overview," "Hypervisors," "Instances," "Volumes," "Flavors," "Images," and "Defaults."
 
-**Expose more `admin` panels to `cloud_admin`**
+**Fix user management by name on the command line**: We've fixed a defect that prevented the management of users by name from the command line. Previously, many attempts to reference a user by name would result in an error.
 
-* We've enabled more admin panels for the `cloud_admin` users in Horizon. These include "Overview," "Hypervisors," "Instances," "Volumes," "Flavors," "Images," and "Defaults."
+**Allow `cloud_admin` to make Glance images public**: The `cloud_admin` role now has the privileges to make Glance images public.
 
-**Fix user management by name on the command line**
-
-* We've fixed a defect that prevented the management of users by name from the command line. Previously, many attempts to reference a user by name would result in an error.
-
-**Allow `cloud_admin` to make Glance images public**
-
-* The `cloud_admin` role now has the privileges to make Glance images public.
-
-**Disallow `cloud_admin` from managing Host Aggregates**
-
-* Covered above in discussion of the Host Aggregates panel for Horizon
+**Disallow `cloud_admin` from managing Host Aggregates**: Covered above in discussion of the Host Aggregates panel for Horizon
 
 
 #### _Features that will affect Horizon, Glance, Nova, and Heat in this release:_
 
-**Refresh Horizon code base to fix bugs with volume backups**
+**Refresh Horizon code base to fix bugs with volume backups**: A defect in Horizon that prevented creation of Cinder volume backups has been resolved.
 
-* A defect in Horizon that prevented creation of Cinder volume backups has been resolved.
+**Refresh Horizon code base to allow image upload from Swift URL (curated IBM Blue Box image delivery)**: A defect in Glance preventing uploading images via a URL has been resolved, allowing URLs from Box Panel to be used to upload images into Glance.
 
-**Refresh Horizon code base to allow image upload from Swift URL (curated IBM Blue Box image delivery)**
+**Add DiskFilter for Nova scheduling**: We've resolved a defect that would lead to Nova scheduling builds on Hypervisors that did not have enough free disk space to satisfy the build.
 
-* A defect in Glance preventing uploading images via a URL has been resolved, allowing URLs from Box Panel to be used to upload images into Glance.
-
-**Add DiskFilter for Nova scheduling**
-
-* We've resolved a defect that would lead to Nova scheduling builds on Hypervisors that did not have enough free disk space to satisfy the build.
-
-**Tune Heat for large template support:** `bugs.launchpad.net/heat/+bug/1491185`
-
-* We've resolved a defect that would hinder Heat stack deployments with large templates.
+**Tune Heat for large template support:** `bugs.launchpad.net/heat/+bug/1491185` : We've resolved a defect that would hinder Heat stack deployments with large templates.
 
 **Future Release Notes**
 
