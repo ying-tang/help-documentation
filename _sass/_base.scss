@@ -199,3 +199,19 @@ pre {
         }
     }
 }
+
+
+.post-content {
+    line-height: 1.6;
+}
+
+.post-content > ul > li {
+    list-style: outside;
+    margin: 1rem 0;
+}
+
+.post-content > ol > li {
+    list-style: decimal;
+}
+
+
