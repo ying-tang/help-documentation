@@ -43,8 +43,8 @@ A summary of features from previous releases that will affect users of this rele
 Every IBM Blue Box Cloud 2.1.0, Dedicated or Local, starts with a cluster of controller and compute nodes:
 
 **IBM Blue Box Dedicated Cloud:**
- * Can start as a three-node cluster with two hyper-converged (controller + compute nodes) and one compute-only node. 
- * Can start as a five-node cluster with a pair of dedicated controller-only nodes and three compute-only nodes.  
+ * A cloud can start as a three-node cluster with two hyper-converged (controller + compute nodes) and one compute-only node. 
+ * A cloud can start as a five-node cluster with a pair of dedicated controller-only nodes and three compute-only nodes.  
 
 **IBM Blue Box Local Cloud:**  
  * Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
