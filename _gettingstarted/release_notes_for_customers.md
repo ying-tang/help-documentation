@@ -144,10 +144,6 @@ This section briefly lists features from previous IBM Blue Box Cloud releases, p
 
 * We've fixed a defect that prevented the management of users by name from the command line. Previously, many attempts to reference a user by name would result in an error.
 
-**Restrict password requirements just to `admin` user**
-
-* Strict password requirements for OpenStack users have been eliminated for all but the "admin" user (which Blue Box retains).
-
 **Allow `cloud_admin` to make Glance images public**
 
 * The `cloud_admin` role now has the privileges to make Glance images public.
