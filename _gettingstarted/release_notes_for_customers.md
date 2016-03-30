@@ -62,8 +62,8 @@ Additional options:
 
 Optionally, you can select from the following compute node extensions to add to your standard or enterprise cloud:
 
-	•	You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
-	•	You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE
+	• You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
+	• You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE
 
 Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Both types of expansion nodes—IO optimized and high storage capacity—allow better coverage of instance types and workloads. With this 2.1.0 release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 
@@ -71,14 +71,14 @@ Expansion compute nodes address your requirements for faster IO ephemeral, more 
 
 Hybrid Block Storage nodes provide lower cost and higher density Block Storage.  
 
-	•	You can select Block Storage: SSD or HYBRID
-	•	You can select Object Storage 
+	• You can select Block Storage: SSD or HYBRID
+	• You can select Object Storage 
 
 #### **Direct Link now Available in SoftLayer Data Centers**
 
 For Dedicated Cloud, you have the additional network option of selecting **Direct Link** connectivity:
 
-	•	You can select an access method  (Public, VPN, or Direct Link)
+	• You can select an access method  (Public, VPN, or Direct Link)
 
 Direct Link is available in SoftLayer Data centers. It lets you connect to the SoftLayer private network backbone or network, bypassing the public Internet to connect to your Dedicated cloud(s). 
 
@@ -86,12 +86,12 @@ Direct Link can be utilized to create a hybrid cloud, if you want to link your L
 
 Available:
 
-	•	IBM Blue Box Dedicated Direct Link Cloud Exchange 1 Gbps
-	•	IBM Blue Box Dedicated Direct Link Cloud Exchange 10 Gbps
-	•	IBM Blue Box Dedicated Direct Link Colocation 1 Gbps
-	•	IBM Blue Box Dedicated Direct Link Colocation 10 Gbps
-	•	IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 1 Gbps
-	•	IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 10 Gbps
+	• IBM Blue Box Dedicated Direct Link Cloud Exchange 1 Gbps
+	• IBM Blue Box Dedicated Direct Link Cloud Exchange 10 Gbps
+	• IBM Blue Box Dedicated Direct Link Colocation 1 Gbps
+	• IBM Blue Box Dedicated Direct Link Colocation 10 Gbps
+	• IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 1 Gbps
+	• IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 10 Gbps
 
 
 #### **SoftLayer Private Network Access**
@@ -108,21 +108,21 @@ Several roles are created by default that give you specific access capabilities 
 
 IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Additional cloud images are available, provided as a customer courtesy by IBM Blue Box. These include:
 
-	•	CentOS 6.7 x86_64
-	•	CentOS 7.2 x86_64
-	•	Ubuntu Server 12.04 LTS x86_64
-	•	Ubuntu Server 14.04 LTS x86_64
-	•	Windows Server 2008 R2 SP1 Datacenter
-	•	Windows Server 2008 R2 SP1 Enterprise
-	•	Windows Server 2008 R2 SP1 Standard
-	•	Windows Server 2012 R2 Datacenter
-	•	Windows Server 2012 R2 Standard
+	• CentOS 6.7 x86_64
+	• CentOS 7.2 x86_64
+	• Ubuntu Server 12.04 LTS x86_64
+	• Ubuntu Server 14.04 LTS x86_64
+	• Windows Server 2008 R2 SP1 Datacenter
+	• Windows Server 2008 R2 SP1 Enterprise
+	• Windows Server 2008 R2 SP1 Standard
+	• Windows Server 2012 R2 Datacenter
+	• Windows Server 2012 R2 Standard
 
 To use any of these images, additional information is provided in [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/Cloud_Images_Provided_by_IBM/).
 
 #### **HIPAA and IBM Blue Box Dedicated Cloud**
 
-	•	You can select HIPAA Enablement for your IBM Blue Box Dedicated Cloud
+	• You can select HIPAA Enablement for your IBM Blue Box Dedicated Cloud
 
 A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Dedicated HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Dedicated cloud with non-HIPAA controllers.
 
