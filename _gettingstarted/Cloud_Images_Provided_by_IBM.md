@@ -22,7 +22,7 @@ editor: Niraj Patel
 
 |---------+---------------|
 **Item** | **Description**
-|:-----|:----------------:|
+|:-----|:----------------|
 **Image** | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. Use images to create virtual machine instances within the cloud.
 |----------+-------------------|
 **Instance** | Instances are virtual machines (VMs) that run inside the OpenStack cloud.
