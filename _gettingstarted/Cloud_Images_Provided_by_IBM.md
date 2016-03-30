@@ -73,17 +73,17 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 **Item** | **Description**
 -----|-------------
-Name | Enter a name for the image.
-Description | Optionally, enter a brief description of the image.
-Image Source | Choose **Image Location**.
-Image Location | Specify the Cloud Image download tempURL.
-Format | Select the correct format (for example, `QCOW2`) for the image.
-Architecture | Specify the architecture (for example, i386 for a 32-bit architecture or x86-64 for a 64-bit architecture).
-Minimum Disk (GB) | For Linux Image, use 5; For Windows Image, use 25
-Minimum RAM (MB) | For Linux Image, use 512; For Windows Image, use 2048
+**Name** | Enter a name for the image.
+**Description** | Optionally, enter a brief description of the image.
+**Image Source** | Choose **Image Location**.
+**Image Location** | Specify the Cloud Image download `tempURL`.
+**Format** | Select the correct format (for example, `QCOW2`) for the image.
+**Architecture** | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).
+**Minimum Disk(GB)** | For Linux Image, use 5; For Windows Image, use 25
+**Minimum RAM(MB)** | For Linux Image, use 512; For Windows Image, use 2048
 **Copy Data** | **This option must be checked to copy image data to image service.**
-Public | Select this check box to make the image public to all users on all projects.
-Protected | Select this check box to ensure that only users with permissions can delete the image.	 
+**Public** | Select this check box to make the image public to all users on all projects.
+**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
 
 For example:
 
@@ -158,16 +158,16 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 
 **Item** | **Description**
 -----|------------
-Name | Enter a name for the image.
-Description | Optionally, enter a brief description of the image.
-Image Source | Choose **Image File**.
-Image File | Browse to the directory of the image binary file.
-Format | Select the correct format (for example, `QCOW2`) for the image.
-Architecture | Specify the architecture (for example, i386 for a 32-bit architecture or x86-64 for a 64-bit architecture).
-Minimum Disk (GB) | For Linux Image, use 5; For Windows Image, use 25
-Minimum RAM (MB) | For Linux Image, use 512; For Windows Image, use 2048
-Public | Select this check box to make the image public to all users on all projects.
-Protected | Select this check box to ensure that only users with permissions can delete the image.	 
+**Name** | Enter a name for the image.
+**Description** | Optionally, enter a brief description of the image.
+**Image Source** | Choose **Image File**.
+**Image File** | Browse to the directory of the image binary file.
+**Format** | Select the correct format (for example, `QCOW2`) for the image.
+**Architecture** | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).
+**Minimum Disk(GB)** | For Linux Image, use 5; For Windows Image, use 25
+**Minimum RAM(MB)** | For Linux Image, use 512; For Windows Image, use 2048
+**Public** | Select this check box to make the image public to all users on all projects.
+**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
 
 For example:
 
