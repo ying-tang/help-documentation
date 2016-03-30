@@ -32,7 +32,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 7. [HIPAA-compliant options are now available for IBM Blue Box Dedicated Cloud.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#hipaa-and-ibm-blue-box-dedicated-cloud)
 
-For additional user documentation please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
+For additional user documentation, please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
 
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/general_product_overview/).
 
@@ -48,7 +48,6 @@ Every IBM Blue Box Cloud 2.1.0, Dedicated or Local, starts with a cluster of con
 	• A cloud can start as a five-node cluster with a pair of dedicated controller-only nodes and three compute-only nodes. 
 
 **IBM Blue Box Local Cloud:**
- * Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
 
 	• Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
 	
