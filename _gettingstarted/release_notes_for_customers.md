@@ -128,11 +128,11 @@ To use any of these images, additional information is provided in [this document
 
 A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Dedicated HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Dedicated cloud with non-HIPAA controllers.
 
-Basically, an IBM Blue Box Dedicated HIPAA cloud resembles any other Dedicated cloud with these three exceptions:
+Basically, an IBM Blue Box Dedicated HIPAA cloud resembles any other Dedicated cloud, with these exceptions:
 
-	1.	Every IBM Blue Box Dedicated HIPAA cloud must have IBM Blue Box Dedicated Controllers.
-	2.	Additional HIPAA monthly recurring charges accrue per cluster and per asset under management.
-	3.	Additional (50+) controls are enabled, and responsibility for those controls is shared between you and IBM Blue Box.
+	1.  Every IBM Blue Box Dedicated HIPAA cloud must have IBM Blue Box Dedicated Controllers.
+	2.  Additional HIPAA monthly recurring charges accrue per cluster and per asset under management.
+	3.  Additional (50+) controls are enabled, and responsibility for those controls is shared between you and IBM Blue Box.
 
 IBM Blue Box Dedicated HIPAA clouds can be deployed in any SoftLayer data center that is IBM Blue Box Dedicated ready.
 
