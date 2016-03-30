@@ -147,13 +147,13 @@ This section briefly lists features from previous IBM Blue Box Cloud releases, p
 
 **Hide Host Aggregates panel from `cloud_admin`**: This Horizon panel has been removed from visibility from `cloud_admin` users. We no longer allow `cloud_admin` to manipulate Host Aggregates, so it was improper to display this panel in Horizon.
 
+**Disallow `cloud_admin` from managing Host Aggregates**: Covered above in discussion of the Host Aggregates panel for Horizon.
+
 **Expose more `admin` panels to `cloud_admin`**: We've enabled more admin panels for the `cloud_admin` users in Horizon. These include "Overview," "Hypervisors," "Instances," "Volumes," "Flavors," "Images," and "Defaults."
 
 **Fix user management by name on the command line**: We've fixed a defect that prevented the management of users by name from the command line. Previously, many attempts to reference a user by name would result in an error.
 
 **Allow `cloud_admin` to make Glance images public**: The `cloud_admin` role now has the privileges to make Glance images public.
-
-**Disallow `cloud_admin` from managing Host Aggregates**: Covered above in discussion of the Host Aggregates panel for Horizon
 
 
 #### _Features that will affect Horizon, Glance, Nova, and Heat in this release:_
