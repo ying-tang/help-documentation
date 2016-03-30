@@ -40,23 +40,24 @@ A summary of features from previous releases that will affect users of this rele
 
 #### **IBM Blue Box Cloud Building Blocks**
 
-Every IBM Blue Box Cloud 2.1.0, Dedicated or Local, starts with a cluster of Controller and Compute nodes:
+Every IBM Blue Box Cloud 2.1.0, Dedicated or Local, starts with a cluster of controller and compute nodes:
 
 **IBM Blue Box Dedicated Cloud:**
+
 * Can start as a three-node cluster with two hyper-converged (controller + compute nodes) and one compute-only node. 
-* Can start with a pair of dedicated controller-only nodes and three compute-only nodes.  
+* Can start as a five-node cluster with a pair of dedicated controller-only nodes and three compute-only nodes.  
 
 **IBM Blue Box Local Cloud:**  
 * Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
 
 From either of these starting places (3-node hyper-converged, or 5-node with dedicated controllers), you can add compute nodes of any type, along with block storage (Ceph), and/or object storage (Swift).
 
-Additional choices:
+Additional options:
 
 	•	For a Standard Capacity Dedicated cloud, Dedicated Gateway Firewalls are included by default
 	•	Enterprise Capacity includes double the resources and 10 Gbps of network connectivity 
-	•	Dedicated controller nodes 
-	•	Compute nodes: Standard or Enterprise
+	•	Dedicated controller nodes (or additional ones)
+	•	Compute nodes (or additional ones): Standard or Enterprise, IO or High Storage (new)
 
 #### **Optional Expansion Compute Nodes Now Available**
 
