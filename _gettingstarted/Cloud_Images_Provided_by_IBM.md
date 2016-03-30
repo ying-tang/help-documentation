@@ -22,7 +22,7 @@ editor: Niraj Patel
 
 ```
 ```
-
+***
 |---------+---------------|
 |**Item** | **Description**
 |:-----|:----------------|
@@ -32,7 +32,7 @@ editor: Niraj Patel
 |----------+-------------------|
 |**Flavor** | The term _flavor_ describes an instance's size, and it defines the pre-determined resource specifications for the amount of vCPU, RAM, and disk space available to an instance.
 |---------|---------------|
-
+***
 ```
 ```
 
