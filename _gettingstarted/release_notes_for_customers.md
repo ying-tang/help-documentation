@@ -40,9 +40,20 @@ A summary of features from previous releases that will affect users of this rele
 
 #### **IBM Blue Box Cloud Building Blocks**
 
-Every IBM Blue Box Cloud 2.1.0 starts with a hyper-converged cluster of Controller and Compute nodes, along with:
+Every IBM Blue Box Cloud 2.1.0, Dedicated or Local, starts with a cluster of Controller and Compute nodes:
 
-	•	For a Standard Capacity cloud, Dedicated Gateway Firewalls are included by default
+**IBM Blue Box Dedicated Cloud:**
+* Can start as a three-node cluster with two hyper-converged (controller + compute nodes) and one compute-only node. 
+* Can start with a pair of dedicated controller-only nodes and three compute-only nodes.  
+
+**IBM Blue Box Local Cloud:**  
+* Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
+
+From either of these starting places (3-node hyper-converged, or 5-node with dedicated controllers), you can add compute nodes of any type, along with block storage (Ceph), and/or object storage (Swift).
+
+Additional choices:
+
+	•	For a Standard Capacity Dedicated cloud, Dedicated Gateway Firewalls are included by default
 	•	Enterprise Capacity includes double the resources and 10 Gbps of network connectivity 
 	•	Dedicated controller nodes 
 	•	Compute nodes: Standard or Enterprise
@@ -85,7 +96,7 @@ Available:
 
 #### **SoftLayer Private Network Access**
 
-SoftLayer Private Network access lets you set up connectivity between two IBM Blue Box Dedicated private clouds, using the SoftLayer private network capability, when both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account. A customer would select this service to enable low-latency, un-metered, private network traffic between IBM Blue Box Dedicated clouds.
+SoftLayer Private Network access lets you set up connectivity between two IBM Blue Box Dedicated private clouds, using the SoftLayer private network capability, when both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account. You would select this service to enable low-latency, un-metered, private network traffic between your IBM Blue Box Dedicated clouds.
 
 For more information, please refer to [the main document on this topic.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/Connecting_Clouds_with_SoftLayer/)
 
@@ -113,9 +124,9 @@ To use any of these images, additional information is provided in [this document
 
 	•	You can select HIPAA Enablement for your IBM Blue Box Dedicated Cloud
 
-A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling over 50 additional information-security controls that support our customers who must store personal health information (PHI). Because of this increased information security capability, it must be noted that a HIPAA-enabled cloud must be HIPAA-enabled from its inception. Also, you cannot downgrade from an IBM Blue Box Dedicated HIPAA cloud.  The existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Dedicated cloud with non-HIPAA controllers.
+A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Dedicated HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Dedicated cloud with non-HIPAA controllers.
 
-To summarize, an IBM Blue Box Dedicated HIPAA cloud resembles any other Dedicated cloud with three exceptions:
+Basically, an IBM Blue Box Dedicated HIPAA cloud resembles any other Dedicated cloud with these three exceptions:
 
 	1.	Every IBM Blue Box Dedicated HIPAA cloud must have IBM Blue Box Dedicated Controllers.
 	2.	Additional HIPAA monthly recurring charges accrue per cluster and per asset under management.
