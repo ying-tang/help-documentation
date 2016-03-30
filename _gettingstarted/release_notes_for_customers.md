@@ -167,10 +167,6 @@ This section briefly lists features from previous IBM Blue Box Cloud releases, p
 
 * A defect in Glance preventing uploading images via a URL has been resolved, allowing URLs from Box Panel to be used to upload images into Glance.
 
-**Update Horizon logos for IBM branding**
-
-* The Horizon logo has been updated to reflect the Blue Box and IBM relationship.
-
 **Add DiskFilter for Nova scheduling**
 
 * We've resolved a defect that would lead to Nova scheduling builds on Hypervisors that did not have enough free disk space to satisfy the build.
