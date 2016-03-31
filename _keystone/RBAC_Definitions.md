@@ -9,16 +9,19 @@ author: Ulysses Kanigel
 
 ### Role-Based Access Control (RBAC) and access to OpenStack services
 
-Currently, the only roles that are defined are these:
+Currently, these roles are defined:
 
-	•	admin: allows full access across all projects.
+	• admin: allows full access across all projects. (Reserved for IBM Blue Box operations team)
 	
-	•	cloud_admin: allows cloud level access control. This role lets you perform API execution irrespective of the project you belong to.
-	•	project_admin: allows project level access control.
+	• cloud_admin: allows cloud-level access control. This role lets you perform API execution tasks, irrespective of your project.
 	
-	•	_member_: allows the user to use the resources (like instances and volumes) that are allocated for the project.
+	• project_admin: allows project-level access control.
+	
+	• _member_: allows the user to use the resources (such as instances and volumes) that are allocated for the project.
+	
+	• heat_stack_owner: lets you deploy a Heat stack (always used along with other roles).
 
-None of these roles provides the level of granularity required to restrict access to a particular OpenStack service.
+None of these roles provides the level of granularity required to restrict access only to a particular OpenStack service.
 However, assuming that you are interested in automating updates to Neutron port binding as part of your load balancer failover solution, this may be possible by creating an ID with the **member** role in the desired tenant. Looking at `/etc/neutron/policy.json`, it appears that a port can be updated by any **member** of the tenant (as defined in the "is_owner" rule):
 
 {% highlight bash %}
