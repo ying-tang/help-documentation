@@ -20,7 +20,7 @@ editor: Leslie Lundquist
 
 **Groups**: Groups work as the link between users and roles. A user can be a member of one or more groups and a group can have one or more roles associated with it.
 
-Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is automatically assigned.
+Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically.
 
 |**Role**| **Description**
 |:---------|:-----------
