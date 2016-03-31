@@ -22,7 +22,7 @@ editor: Leslie Lundquist
 
 Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user** is automatically assigned.
 
-**Role**| **Description**
+|**Role**| **Description**
 |:---------|:-----------
 | **cloud_admin** | allows cloud level access control. This role lets you perform API execution tasks, irrespective of the project you belong to. This role can create and manage quotas, groups, users and projects, and perform administrative volume actions. 
 | **project_admin** | allows project level access control. This user can perform user and project mangement within the specified project.
