@@ -214,4 +214,23 @@ pre {
     list-style: decimal;
 }
 
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+
+th{
+    border: 1px solid #ddd;
+}
+
+td{
+    padding: 6px 13px;
+    border : 1px solid #ddd;
+}
+tr {
+    &:nth-child(even) {
+        background-color: #F8F8F8;
+    }
+}
 
