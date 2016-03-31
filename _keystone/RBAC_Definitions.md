@@ -2,12 +2,12 @@
 layout: page
 title: Role-Based Access Control
 featured: false
-tags: [keystone, users, roles, loadbalancing]
+tags: [keystone, users, roles, failover]
 dateAdded: March 11th, 2016
 author: Ulysses Kanigel
 ---
 
-## Role-Based Access Control (RBAC) and access to OpenStack services
+### Role-Based Access Control (RBAC) and access to OpenStack services
 
 Currently, the only roles that are defined are these:
 
