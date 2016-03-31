@@ -19,13 +19,12 @@ editor: Niraj Patel
 2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM-provided cloud images.
 
 #### Basic concepts
-```
-```
-***
+
+
 
 |---------+---------------|
-|**Item** | **Description**
-|:-----|:----------------|
+|**Item** | **Description** |
+|:-----:|----------------|
 |**Image** | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. Use images to create virtual machine instances within the cloud.
 |----------+-------------------|
 |**Instance** | Instances are virtual machines (VMs) that run inside the OpenStack cloud.
@@ -33,9 +32,6 @@ editor: Niraj Patel
 |**Flavor** | The term _flavor_ describes an instance's size, and it defines the pre-determined resource specifications for the amount of vCPU, RAM, and disk space available to an instance.
 |---------|---------------|
 
-***
-```
-```
 
 ### 1. Select From Alternative Cloud Images Provided by IBM Blue Box
 
@@ -83,9 +79,6 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
-```
-```
-***
 
 |--------------|------------
 |**Item** | **Description**
@@ -102,9 +95,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 |**Public** | Select this check box to make the image public to all users on all projects.
 |**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
 
-***
-```
-```
+
 
 For example:
 
@@ -177,9 +168,6 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
-```
-```
-***
 
 |-----------|------------
 |**Item** | **Description**
@@ -195,9 +183,6 @@ If the result returns "OK", the downloaded `qcow2` image is valid.
 |**Public** | Select this check box to make the image public to all users on all projects.
 |**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
 
-***
-```
-```
 
 For example:
 
@@ -258,18 +243,14 @@ Then you will see the newly created instance in your instances list. The instanc
 
 **Set initial username and password in Post-Creation tab**
 
-```
-```
-***
+
 
 |--------|----------
 |**Field** | **Description**
 |:------|:-------------
 |**Customization Script** | Specify a customization script that runs after your instance is launched.
 
-***
-```
-```
+
 
 **For Linux instances:**
 
