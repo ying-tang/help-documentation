@@ -24,11 +24,11 @@ Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_a
 
 |**Role**| **Description**
 |:---------|:-----------
-| **cloud_admin** | This role allows cloud-level access control. It lets you perform API execution tasks, irrespective of the project you belong to. This role can create and manage quotas, groups, users and projects, and perform administrative volume actions. 
+| **cloud_admin** | This role allows cloud-level access control. It lets you perform API execution tasks, irrespective of your project. This role can create and manage quotas, groups, users and projects, and it can perform administrative volume actions. 
 | **project_admin** | This role allows project level access control. This user can perform user and project mangement within the specified project.
 | **\_member\_** | This role lets the user utilize the resources (such as instances and volumes) that are allocated for the project.
-| **heat_stack_owner** | This role lets the user create Heat stacks in the project. This role must be manually assigned, and it never should be assigned to a user that also is assigned the **heat_stack_user** role.
-| **heat_stack_user** | This is a role automatically assigned by Heat to the users it creates. This role is restricted from all API access, and it never should be explicitly assigned to any user. 
+| **heat_stack_owner** | This role lets the user create Heat stacks in the project. This role must be assigned manually, and it never should be assigned to a user that also is assigned the **heat_stack_user** role.
+| **heat_stack_user** | This is a role automatically assigned by Heat to the users it creates. This role is restricted from all API access, and it never should be assigned to any user explicitly. 
 
 The `cloud_admin` role is restricted to cloud and project management actions. A higher set of privileges is granted exclusively to the **admin** role, which includes administrative actions for services, domains and roles, networks, and identity providers. The **admin** role is restricted to IBM, and it is not granted to the customer. 
 
