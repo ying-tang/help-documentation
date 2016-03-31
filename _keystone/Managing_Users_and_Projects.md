@@ -191,13 +191,17 @@ This figure shows an example of traditional role assignments as supported by the
 ### Consequences of disabling projects
 Users with the `cloud_admin` role can enable and disable projects. When you disable a project, it has these consequences:
 
-- In the dashboard, users can no longer access the project from the CURRENT PROJECT list on the Project tab.
+- In the dashboard, users no longer have access to the project from the CURRENT PROJECT list on the Project tab.
 - Users who are members of only the disabled project can no longer log in.
-- You cannot launch instances for a disabled project. Instances that are already running are not automatically terminated. You must stop them manually.
+- You cannot launch instances for a disabled project. Instances that are running already are not terminated automatically. You must stop them manually.
 - The data for a disabled project is maintained so that you can re-enable the project at any time.
 
 ## Using the dashboard
+
+The next section tells you how to use the dashboard to add, update, modify, and delete a project or a user account.
+
 ### Adding a project
+
 1. In the navigation bar, open the Identity panel and click on **Projects**.
 2. Click **Create Project**.
 3. On the Project Information tab in the Create Project window, enter a name and description for the project. By default, the project is enabled.
