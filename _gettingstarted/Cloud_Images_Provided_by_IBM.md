@@ -18,6 +18,8 @@ editor: Niraj Patel
 
 2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM-provided cloud images.
 
+3. Uploading an image to Glance using `tempUrl ` is supported only on Blue Box Cloud 2.1.0 and onwards.
+
 #### Basic concepts
 
 
@@ -72,6 +74,8 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 **Note:** This option cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.
 
 **Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
+
+**Note:** Uploading an image to Glance using `tempUrl ` is supported only on Blue Box Cloud 2.1.0 and onwards.
 
 #### 3.1 Upload an image to Glance using the OpenStack Dashboard
 
