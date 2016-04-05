@@ -1,56 +1,35 @@
 ---
 layout: page
-title: Connecting Clouds with SoftLayer
+title: Utilizing SoftLayer's Private Network with Multiple Blue Box Environments
 featured: false
 weight: 13
-tags: [SoftLayer, network, gettingstarted]
+tags: [SoftLayer, network, private network, gettingstarted]
 dateAdded: March 22nd, 2016
 author: Shaival Choski
-editor: Leslie Lundquist
+editor: Leslie Lundquist, Jesse Proudman
 ---
 
-# Connecting two IBM Blue Box clouds over a SoftLayer private network 
+# Utilizing SoftLayer's Private Network with Multiple Blue Box Environments
 
 ### Overview: 
 
-This document explains how to set up connectivity between two **IBM Blue Box Dedicated** private clouds, using the **SoftLayer** private network capability. 
+This document explains how to set up network connectivity between multiple **IBM Blue Box Dedicated** private clouds, using the **SoftLayer** private network. 
 
-### Assumption: 
+### Assumptions: 
 
-The document assumes that both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account.
+The document assumes that each IBM Blue Box cloud that you are planning to connect have been deployed under the same SoftLayer account. If you order multiple clouds as a an IBM Blue Box customer, this should be true.
 
-**Two use cases exist:** 
+### To Initiatate Network Connectivity
 
-1. If the IBM Blue Box cloud already is deployed for an existing user, open an IBM Blue Box support ticket and request a SoftLayer private network.
+1. If your IBM Blue Box cloud already is deployed, open an IBM Blue Box support ticket and request access to the SoftLayer private network.
 
-2. If the IBM Blue Box cloud is a new deployment (for new users), when ordering the  Blue Box cloud, request SoftLayer private network connectivity.
+2. If your IBM Blue Box cloud is a new deployment (for new users), when ordering the Blue Box cloud, request SoftLayer private network connectivity.
 
 #### Establishing connectivity over a SoftLayer private network
 
-When a user requests a SoftLayer private network, an internal shared network named `sl-private-network` is created for that user.
+When a customer requests a SoftLayer private network, an internal OpenStack shared network named `sl-private-network` is created for that user. This network is subject to a few provisions:
 
-* This network is visible to all users across all OpenStack projects in IBM Blue Box cloud.
-	
-* The user is able to deploy its workload directly on this network.
-	
-* When a workload is deployed, a 10.x.x.x IP address is assigned. This IP address is routable in SoftLayer data centers. 
-	
-* Assuming that the remote workload is deployed in a similar fashion, these two workloads now can communicate over the SoftLayer private network. 
-	
-**Using a jump node to access the workload on a SoftLayer private network**
-
-When your workload is deployed on `sl-private-network`, it is not directly accessible over the Internet. You’ll need to set up a jump node for access to your cloud workload on a SoftLayer private network.
-
-Here are the instructions for setting up a jump node: 
-
-1. Deploy a guest virtual machine (VM) on the SoftLayer private network (sl-private-network). This guest VM acts as your jump node.
-	
-2. Assign a floating IP from the “external" network to the guest VM.
-	
-3. Connect to the guest VM using the floating IP address.
-	
-4. You’ll have access to the workload on your SoftLayer private network from your guest VM.
-	
-**Note:** Even though the guest VM (jump node) has a SoftLayer-routable 10.x.x.x IP address assigned, this guest VM is not reachable over SoftLayer private network from a remote workload.
-
-￼ 
+* This network is visible to all users across all OpenStack projects in your IBM Blue Box Dedicated cloud.
+* All users are able to attach virtual machines directly on this network and will have network connectivity to all other virtual machines attached to that network.
+* When a virtual machine is deployed to the `sl-private-network`, a 10.x.x.x IP address is assigned. This IP address is routable between your SoftLayer data centers. 
+* Assuming that the remote virtual machine is deployed in a similar fashion, these two virtual machines now can communicate over the SoftLayer private network. 	
