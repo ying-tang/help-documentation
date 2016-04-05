@@ -145,9 +145,19 @@ You can upload images through the Glance client. [Installing OpenStack Clients](
 
 ### 4. Upload an image to an IBM Blue Box Cloud Glance repository Using Downloaded Image files
 
+**Notes:**
+
+* Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
+
+* When downloading the cloud image using the `tempUrl` be sure that the `tempUrl` token is escaped or specified in quotes. For example:
+
+```
+ curl -k -i  'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867' >> ubuntu-guest-image-14.04-20160301-x86_64.qcow2 
+```
+
 #### 4.1 Download .qcow2 & .md5sum files of the image
 
-**Download** the `.qcow2` image file & `.md5sum` checksum file using the tempURL and put these 2 files under the same folder.
+**Download** the `.qcow2` image file & `.md5sum` checksum file using the `tempURL` and put these 2 files under the same folder.
 
 For example:
 
