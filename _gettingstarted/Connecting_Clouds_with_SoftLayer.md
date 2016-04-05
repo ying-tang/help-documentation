@@ -19,7 +19,7 @@ This document explains how to set up network connectivity between multiple **IBM
 
 The document assumes that each IBM Blue Box cloud that you are planning to connect have been deployed under the same SoftLayer account. If you order multiple clouds as a an IBM Blue Box customer, this should be true.
 
-### To Initiatate Network Connectivity
+### To Initiate Network Connectivity
 
 1. If your IBM Blue Box cloud already is deployed, open an IBM Blue Box support ticket and request access to the SoftLayer private network.
 
