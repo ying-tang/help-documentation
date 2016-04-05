@@ -21,7 +21,7 @@ Do note, SoftLayer private network traffic is segmented from the public internet
 
 ### Assumptions: 
 
-The document assumes that each IBM Blue Box cloud that you are planning to connect have been deployed under the same SoftLayer account. If you order multiple clouds as a an IBM Blue Box customer, this should be true.
+The document assumes that each IBM Blue Box cloud you are planning to connect has been deployed under the same SoftLayer account. If you order multiple clouds as an IBM Blue Box customer, this assumption should be true automatically.
 
 ### To Initiate Network Connectivity
 
