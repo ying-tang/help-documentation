@@ -71,11 +71,15 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 ### 3. Upload an image to IBM Blue Box Cloud Glance repository Using Your Cloud Image `tempURL`
 
-**Note:** This option cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.
+**Notes:** 
 
-**Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
+* Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
-**Note:** Uploading an image to Glance using `tempUrl ` is supported only on Blue Box Cloud 2.1.0 and onwards.
+* Uploading an image to Glance by using the `tempUrl ` directly as an image location cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.
+
+* Uploading an image to Glance by using the `tempUrl ` directly as an image location is supported *only* on Blue Box Cloud 2.1.0 and later, **not** on releases PRIOR to 2.1.0.
+
+* For IBM Blue Box Clouds on releases PRIOR to 2.1 or with no outbound Internet access, follow the instructions provided in section 4 to use a Downloaded Image file.
 
 #### 3.1 Upload an image to Glance using the OpenStack Dashboard
 
@@ -143,7 +147,7 @@ You can upload images through the Glance client. [Installing OpenStack Clients](
     # glance image-show <image-id>
 ```
 
-### 4. Upload an image to an IBM Blue Box Cloud Glance repository Using Downloaded Image files
+### 4. Upload an image to an IBM Blue Box Cloud Glance repository using Downloaded Image files
 
 **Notes:**
 
