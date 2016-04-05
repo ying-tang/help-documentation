@@ -9,7 +9,7 @@ author: Shaival Choski
 editor: Leslie Lundquist, Jesse Proudman
 ---
 
-# Utilizing SoftLayer's Private Network with Multiple Blue Box Environments
+# Utilizing SoftLayer's Private Network with Multiple IBM Blue Box Environments
 
 ### Overview: 
 
