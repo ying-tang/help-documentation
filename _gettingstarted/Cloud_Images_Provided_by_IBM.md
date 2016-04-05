@@ -14,11 +14,11 @@ editor: Niraj Patel
 
 ### Pre-requisites
 
-1. If you are going to use the command line (CLI) tools, ensure that you have the OpenStack Glance Client installed. You can find installation instructions in our knowledge base: **Getting started with the OpenStack API**
+1. If you are planning to use the command line (CLI) tools, be sure that you have the OpenStack Glance Client installed. You can find installation instructions in our knowledge base: **Getting started with the OpenStack API**
 
 2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM-provided cloud images.
 
-3. Uploading an image to Glance using `tempUrl ` is supported only on Blue Box Cloud 2.1.0 and onwards.
+3. Uploading an image to Glance using `tempUrl ` as an image location is supported only on Blue Box Cloud 2.1.0 and onwards.
 
 #### Basic concepts
 
