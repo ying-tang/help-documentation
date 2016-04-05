@@ -17,7 +17,7 @@ This document explains how to set up network connectivity between multiple **IBM
 
 Traffic transmitted over the SoftLayer private network is not metered, so this is the preferred method to communicate between multiple IBM Blue Box Dedicated clouds. You can read more about the SoftLayer [private network here](http://www.softlayer.com/network).
 
-Do note, SoftLayer private network traffic is segmented from the public internet and from other SoftLayer customers, but traffic is not encrypted. Should you require encryption, even in the context of a private network, you'll want to ensure you add client side encryption to your configuration.
+Do note, SoftLayer private network traffic is segmented from the public internet and from other SoftLayer customers, but traffic is *not encrypted*. Should you require encryption, even in the context of a private network, you'll want to ensure that you add client-side encryption to your configuration.
 
 ### Assumptions: 
 
