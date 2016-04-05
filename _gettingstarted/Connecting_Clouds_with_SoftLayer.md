@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Utilizing SoftLayer's Private Network with Multiple Blue Box Environments
+title: Utilizing SoftLayer's Private Network with Multiple IBM Blue Box Environments
 featured: false
 weight: 13
 tags: [SoftLayer, network, private network, gettingstarted]
@@ -27,7 +27,7 @@ The document assumes that each IBM Blue Box cloud that you are planning to conne
 
 #### Establishing connectivity over a SoftLayer private network
 
-When a customer requests a SoftLayer private network, an internal OpenStack shared network named `sl-private-network` is created for that user. This network is subject to a few provisions:
+When you request a SoftLayer private network, an internal OpenStack shared network named `sl-private-network` is created for you. This network is subject to a few provisions:
 
 * This network is visible to all users across all OpenStack projects in your IBM Blue Box Dedicated cloud.
 * All users are able to attach virtual machines directly on this network and will have network connectivity to all other virtual machines attached to that network.
