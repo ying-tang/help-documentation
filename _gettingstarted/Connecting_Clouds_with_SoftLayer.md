@@ -38,3 +38,7 @@ When you request a SoftLayer private network, an internal OpenStack shared netwo
 * Virtual Machines on this network can be secured using standard OpenStack security groups.
 * When a virtual machine is deployed to the `sl-private-network`, a 10.x.x.x IP address is assigned. This IP address is routable between your SoftLayer data centers. 
 * Each IBM Blue Box Dedicated cloud will have a unique 10.x.x.x subnet, and SoftLayer will route traffic between them over its private network.
+
+The following figure illustrates the relationship between IBM Blue Box Cloud A and IBM Blue Box Cloud B when the private networking relationship has been established.
+
+![Illustration of cloud connections](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/ScreenShot_for_Private_Network.png)
