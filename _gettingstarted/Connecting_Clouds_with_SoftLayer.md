@@ -41,4 +41,4 @@ When you request a SoftLayer private network, an internal OpenStack shared netwo
 
 The following figure illustrates the relationship between IBM Blue Box Cloud A and IBM Blue Box Cloud B when the private networking relationship has been established.
 
-[Illustration of cloud connections](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/sl_priv_net_connectivity.pdf)
+![Illustration of cloud connections](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/sl_priv_net_connectivity.pdf)
