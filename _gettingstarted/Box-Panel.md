@@ -110,7 +110,7 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 
 ![Image of Dashboard 9](https://github.com/help-documentation/img/Dashboard 9.png)
 
-**Note: Steps 8 and 9 can be skipped for non-urgent concerns. **
+**Note: Steps 8 and 9 can be skipped for non-urgent concerns.**
 
 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This will prompt an acknowledgement that you will consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages). 
 9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box. 
