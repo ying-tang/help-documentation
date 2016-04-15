@@ -34,11 +34,11 @@ This user guide provides an end-to-end overview to help you get started using Bo
 
 The top of the Dashboard displays the infrastructure currently being used with your list of hosts. 
 
-(screenshot 1) 
+![Image of Dashboard1](https://github.com/help-documentation/img/Dashboard1.png)
 
 Right below, you can view your bandwidth usage and support tickets related to your cloud, along with your status. 
 
-(screenshot 2) 
+![Image of Dashboard 2](https://github.com/help-documentation/img/Dashboard 2.png)
 
 On the right are additional details related to your account summary. 
 
@@ -54,13 +54,13 @@ On the right are additional details related to your account summary.
 2. As long as you have the proper permissions to delete an asset, you will have the ability to **Power Cycle** the machine’s PDUs, or **Delete Asset.** 
 3. Confirm that you want to delete the asset by clicking **OK** from the Modal window. This will permanently delete your asset. 
 
-(Screenshot 3) 
+![Image of Dashboard 3](https://github.com/help-documentation/img/Dashboard 3.png)
 
 ## Working with Cloud Images 
 
 The **Cloud Images** page in Box Panel is available to customers who have at least one cloud, and are either a **Primary** or **Technical** customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
 
-(Screenshot 4) 
+![Image of Dashboard 4](https://github.com/help-documentation/img/Dashboard 4.png)
 
 Each image is displayed as a card. Cards are grouped by operating system. 
 
@@ -71,29 +71,27 @@ Each image is displayed as a card. Cards are grouped by operating system.
 3. Click the **copy** button to the left of the Image URL. This will add the URL to your clipboard. 
 4. This can also be done using OpenStack APIs. For instructions, click here: https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md 
 
-(Screenshot 5) 
+![Image of Dashboard 5](https://github.com/help-documentation/img/Dashboard 5.png) 
 
 ## Managing Support Tickets 
 
 By clicking on a support ticket from the Dashboard, you can see the text of the associated ticket. This text includes additional ticket, as well as chat history and correspondence related to the selected ticket. The status of the support ticket is highlighted on the orange button in the top left corner. 
 
-(Screenshot 6) 
+![Image of Dashboard 6](https://github.com/help-documentation/img/Dashboard 6.png) 
 
 From the panel on the left-hand side, you have options to create a new support ticket, subscribe to the ticket you have selected if you want to follow its status, view your tickets, and view all tickets submitted by shared users on your account. 
 
 To view a list of Subscribers for a selected ticket, simply click on the **Subscribers** link. 
 
-(Screenshot 7) 
+![Image of Dashboard 7](https://github.com/help-documentation/img/Dashboard 7.png)
 
 To have a conversation with one of our Blue Box support team experts, you can click the green **Post Reply** button, or use the chat feature. 
-
-### Creating a Ticket 
 
 **To create a ticket:**
 
 1. Open a new ticket from the **Support** page. 
 
-(Screenshot 8) 
+![Image of Dashboard 8](https://github.com/help-documentation/img/Dashboard 8.png)
 
 2. In the Modal window, your name should show up as the **Ticket Creator.**
 3. Copy additional users in the **CC** field to make them aware of the ticket and track its status. 
@@ -110,7 +108,7 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 6. Include attachments, such as log files, right below the **Description** section. 
 7. If your deployment is for a new cloud, check the **Deployment** box.
 
-(Screenshot 9) 
+![Image of Dashboard 9](https://github.com/help-documentation/img/Dashboard 9.png)
 
 **Note: Steps 8 and 9 can be skipped for non-urgent concerns. **
 
