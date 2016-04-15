@@ -17,19 +17,18 @@ dateAdded: April 14, 2016
 --- 
 
 
-# Getting Started with Box Panel 
+# Getting Started with Box Panel
 
 The Box Panel interface provides a single, consolidated view of your enterprise assets and deployed in both Dedicated and Local environments. Based on OpenStack Horizon, its self-service access enables users to easily manage support tickets, leverage central authentication, monitor reporting functions, and access their invoicing solutions. 
 
-This user guide provides an end-to-end overview to help you get started using Box Panel with your IBM Blue Box Cloud. 
+This user guide provides an end-to-end overview to help you get started using Box Panel Rersion 3.8.3 with your IBM Blue Box Cloud. 
 
-## Administrator Login 
+## Logging In 
 
-To get started, log into your Box Panel account. The following URL will direct you to the login page: https://boxpanel.bluebox.net 
-
-Primary and Secondary contacts are set up by the Blue Box Administrative Support team with login credentials. If you do not yet have login credentials, have a team member open a support ticket with the contact information you wish to add. 
-
-After logging in, you will be able to see the Box Panel Dashboard UI. 
+1. To get started, log into your Box Panel account the login credentials provided by the Blue Box Administrative Support Team. The following URL will direct you to the login page: https://boxpanel.bluebox.net 
+2. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
+3. Box Panel's central authentication feature enables both **Primary** and **Secondary (Technical)** contacts to log in. If you are a **Secondary** contact and need login credentials to your organization's Box Panel account, have a team member open a support ticket that includes your contact information.
+4. After logging in, you will be automatically directed to the Box Panel Dashboard UI. 
 
 ## Navigating the Box Panel Dashboard
 
@@ -59,7 +58,7 @@ To delete an asset or machine:
 
 ## Working with Cloud Images 
 
-The Cloud Images page in Box Panel is available to customers who have at least one cloud, and are either a Primary or Technical customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
+The **Cloud Images** page in Box Panel is available to customers who have at least one cloud, and are either a **Primary** or **Technical** customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
 
 (Screenshot 4) 
 
