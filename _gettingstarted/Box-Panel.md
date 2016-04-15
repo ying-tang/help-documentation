@@ -130,7 +130,7 @@ To be added as a new customer:
 2. After your company’s billing information is received by the IBM Finance, a contract will be created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. These are documented and written on your contract. 
 3. A billing start date will be set in order for your solution to begin to be billed (typically the start date is the same as your deployment date, and repeats monthly).
 4. Once you’re able to log into Box Panel, you can view the billing contact's information under the **Account Vitals** section. 
-5. Additional contract and line item can be added and found in a monthly report under the **Billing** tab in Box Panel. 
+5. Additional contracts with line items can be added and found in a monthly report under the **Billing** tab in Box Panel. 
 
 ## Professional Services 
 
