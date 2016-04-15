@@ -48,7 +48,7 @@ On the right are additional details related to your account summary.
 
 ## Deleting a Virtual Machine
 
-To delete an asset or machine: 
+**To delete an asset or machine:** 
 
 1. Visit the **Machine** page. 
 2. As long as you have the proper permissions to delete an asset, you will have the ability to **Power Cycle** the machine’s PDUs, or **Delete Asset.** 
@@ -64,7 +64,7 @@ The **Cloud Images** page in Box Panel is available to customers who have at lea
 
 Each image is displayed as a card. Cards are grouped by operating system. 
 
-To download a Cloud Image: 
+**To download a Cloud Image:** 
 
 1. Hover over the card associated with the image you would like to download. 
 2. Click the card. This will open a modal window containing download links to the image and Checksum. 
@@ -89,9 +89,9 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 
 ### Creating a Ticket 
 
-To create a ticket:
+**To create a ticket:**
 
-1. Open a new ticket from the support page. 
+1. Open a new ticket from the **Support** page. 
 
 (Screenshot 8) 
 
@@ -112,7 +112,7 @@ To create a ticket:
 
 (Screenshot 9) 
 
-Note: Steps 8 and 9 can be skipped for non-urgent concerns. 
+**Note: Steps 8 and 9 can be skipped for non-urgent concerns. **
 
 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This will prompt an acknowledgement that you will consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages). 
 9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box. 
@@ -120,11 +120,11 @@ Note: Steps 8 and 9 can be skipped for non-urgent concerns.
 
 **Note: You also can call Blue Box Support at 1-800-613-4305 or email us at support@bluebox.net.**
 
-## Billing 
+## Managing Billing 
 
 To view your contracts and monthly billing reports, simply click the **Billing** tab in the Box Panel Dashboard. Additional contracts with line items can be added by contacting Blue Box Support, and can be found under the same **Billing** tab.
 
-To become a new customer:
+**To become a new customer:**
 
 1. Provide the Blue Box Support team with the billing manager’s name, email, and contact information associated with your company.
 2. After your company’s billing information is received by the IBM Finance, a contract will be created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. These are documented and written on your contract. 
