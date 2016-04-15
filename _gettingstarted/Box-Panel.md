@@ -97,11 +97,8 @@ To create a ticket:
 (Screenshot 8) 
 
 2. In the Modal window, your name should show up as the **Ticket Creator.**
-
-3. CC: additional users in the next field to make them aware of the ticket and its status. 
-
+3. Copy additional users in the **CC** field to make them aware of the ticket and track its status. 
 4. Add a descriptive subject to the ticket. 
-
 5. Collect and add all useful information to the **Description** section, such as: 
    * Date and time the issue began 
    * Frequency of the issue (permanent or constant, at a particular time of day, etc.) 
@@ -111,9 +108,7 @@ To create a ticket:
    * Any error messages returned
    * Applicable server logs 
    * Any additional useful information 
-
 6. Include attachments, such as log files, right below the **Description** section. 
-
 7. If your deployment is for a new cloud, check the **Deployment** box.
 
 (Screenshot 9) 
@@ -121,9 +116,7 @@ To create a ticket:
 Note: Steps 8 and 9 can be skipped for non-urgent concerns. 
 
 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This will prompt an acknowledgement that you will consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages). 
-
 9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box. 
-
 10. Finally, click the **Create Ticket** box. 
 
 **Note: You also can call Blue Box Support at 1-800-613-4305 or email us at support@bluebox.net.**
@@ -135,13 +128,9 @@ To view your contracts and monthly billing reports, simply click the **Billing**
 To be added as a new customer:
 
 1. Provide the Blue Box Support team with the billing manager’s name, email, and contact information associated with your company.
-
 2. After your company’s billing information is received by the IBM Finance, a contract will be created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. These are documented and written on your contract. 
-
 3. A billing start date will be set in order for your solution to begin to be billed (typically the start date is the same as your deployment date, and repeats monthly).
-
 4. Once you’re able to log into Box Panel, you can view the billing contact's information under the **Account Vitals** section. 
-
 5. Additional contract and line item can be added and found in a monthly report under the **Billing** tab in Box Panel. 
 
 ## Professional Services 
