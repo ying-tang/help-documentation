@@ -21,7 +21,7 @@ dateAdded: April 14, 2016
 
 The Box Panel interface provides a single, consolidated view of your enterprise assets and deployed in both Dedicated and Local environments. Based on OpenStack Horizon, its self-service access enables users to easily manage support tickets, leverage central authentication, monitor reporting functions, and access their invoicing solutions. 
 
-This user guide provides an end-to-end overview to help you get started using Box Panel Rersion 3.8.3 with your IBM Blue Box Cloud. 
+This user guide provides an end-to-end overview to help you get started using Box Panel Version 3.8.3 with your IBM Blue Box Cloud. 
 
 ## Logging In 
 
