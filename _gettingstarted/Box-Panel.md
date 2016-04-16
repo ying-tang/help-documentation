@@ -25,10 +25,12 @@ This user guide provides an end-to-end overview to help you get started using Bo
 
 ## Logging In 
 
-1. To get started, log into your Box Panel account the login credentials provided by the Blue Box Administrative Support Team. The following URL will direct you to the login page: https://boxpanel.bluebox.net 
-2. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
-3. Box Panel's central authentication feature enables both **Primary** and **Secondary (Technical)** contacts to log in. If you are a **Secondary** contact and need login credentials to your organization's Box Panel account, have a team member open a support ticket that includes your contact information.
-4. After logging in, you will be automatically directed to the Box Panel Dashboard UI. 
+Box Panel's Keystone v3 identity authentication feature enables both **Primary (Administrator)** and **Secondary (Technical)** contacts to log in.
+
+1. To get started, click the following URL to be directed to the login page: https://boxpanel.bluebox.net.
+2. Log into your Box Panel account with the login credentials provided by the Blue Box Support Team. If you are a **Secondary** contact and don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
+3. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
+5. After logging in, you will be automatically directed to the Box Panel Dashboard UI.
 
 ## Navigating the Box Panel Dashboard
 
@@ -42,11 +44,194 @@ Right below, you can view your bandwidth usage and support tickets related to yo
 
 On the right are additional details related to your account summary. 
 
-## Adding a Virtual Machine 
+## Managing Users and Projects
+
+Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. The table below contains the descriptions associated with each role.
+
+|**Role**| **Description**
+|:---------|:-----------
+| **cloud_admin** | This role allows cloud-level access control. It lets you perform API execution tasks, irrespective of your project. This role can create and manage quotas, groups, users and projects, and it can perform administrative volume actions. 
+| **project_admin** | This role allows project level access control. This user can perform user and project mangement within the specified project.
+| **\_member\_** | This role lets the user utilize the resources (such as instances and volumes) that are allocated for the project.
+| **heat_stack_owner** | This role lets the user create Heat stacks in the project. This role must be assigned manually, and it never should be assigned to a user that also is assigned the **heat_stack_user** role.
+| **heat_stack_user** | This is a role automatically assigned by Heat to the users it creates. This role is restricted from all API access, and it never should be assigned to any user explicitly. 
+
+With your IBM Blue Box Cloud installation you'll receive one user with `cloud_admin` privileges who can create other projects and users. The `cloud_admin` can grant users `cloud_admin` and lower privileged roles.
+
+Identity Feature | cloud_admin | project_admin (within project) |  \_member\_
+---------------- | ----------- | ------------------------------ | -----------
+**Users** |||
+Create user     | Y | Y | N
+Update user     | Y | Y | Y (Self)
+Get user        | Y | Y | Y (Self)
+Delete user     | Y | Y | N
+Change password | Y | Y | Y (Self)
+List user       | Y | Y | N
+**Roles** |||
+Create role     | N | N | N
+Update role     | N | N | N
+Get role        | Y | Y | N
+Delete role     | N | N | N
+List role       | Y | Y | N
+**Projects** |||
+Create project  | Y | N | N
+Update project  | Y | Y | N
+Get project     | Y | Y | Y
+Delete project  | Y | N | N
+List projects   | Y | Y | N
+List user projects  | Y | Y | Y (Self)
+List users within projects  | Y | Y | N
+**Groups** |||
+Create, update, or delete group | Y | N |  N
+Get group       | Y | Y | Y
+List groups     | Y | Y | N
+List groups for user  | Y | Y | Y (Self)
+List users in group | Y  | Y | Y
+Add or remove user from group | Y | Y| N
+
+Compute Feature | cloud_admin | project_admin (within project) |  \_member\_
+--------------- | ----------- | ------------------------------ | -----------
+Create instance | Y | Y | Y
+Delete instance | Y | Y | Y
+Attach network  | Y | Y | Y
+Attach volume   | Y | Y | Y
+Start/Stop instance | Y | Y | Y (owner)
+List instance   | Y | Y | Y 
+Lock/Unlock instance    | Y | Y | N
+Create flavor   | Y | N | N
+Update flavor   | Y | N | N
+Delete flavor   | Y | N | N
+Update quotas   | Y | N | N
+Delete quotas   | Y | N | N
+List quotas     | Y | Y | Y
+
+Volume Feature | cloud_admin | project_admin (within project) |  \_member\_
+--------------- | ----------- | ------------------------------ | -----------
+**Volumes** |||
+Create volume   | Y | Y | Y
+Extend volume   | Y | Y | Y
+Get volume      | Y | Y | Y
+List volumes    | Y | Y | Y
+Delete volume   | Y | Y | Y
+Add project access  | Y | N | N
+Remove project access | Y | N | N
+**Snapshots** |||
+Create snapshot | Y | Y | Y
+List snapshots    | Y | Y | Y
+Delete snapshot | Y | Y | Y
+**Transfers** |||
+Create transfer | Y | Y | Y
+Accept transfer | Y | Y | Y
+Delete transfer | Y | Y | Y
+List transfer s | Y | Y | Y
+**Backups** |||
+Create backup | Y | Y | Y
+Delete backup | Y | Y | Y
+List backups  | Y | Y | Y
+Import backup | Y | N | N
+Export backup | Y | N | N
+
+Image Feature | cloud_admin | project_admin (within project) |  \_member\_
+--------------- | ----------- | ------------------------------ | -----------
+Create image    | Y | Y | Y
+Delete image    | Y | Y | Y
+List images     | Y | Y | Y
+Download image  | Y | Y | Y
+Upload image    | Y | Y | Y
+Publicize image | N | N | N
+Manage image cache | N | N | N
+
+Network Feature | cloud_admin | project_admin (within project) |  \_member\_
+--------------- | ----------- | ------------------------------ | -----------
+Create network  | Y | Y | Y
+Create shared network | N | N | N
+Update network  | Y | Y | Y (owner)
+Delete network  | Y | Y | Y (owner)
+Create port     | Y | Y | Y
+Update port     | Y | Y | Y (owner)
+Delete port     | Y | Y | Y (owner)
+Create router   | Y | Y | Y 
+Update router   | Y | Y | Y (owner)
+Delete router   | Y | Y | Y (owner)
+Create subnet   | Y | Y | Y (network owner)
+Update subnet   | Y | Y | Y (owner)
+Delete subnet   | Y | Y | Y (owner)
+Create floating IP  | Y | Y | Y
+Delete floating IP  | Y | Y | Y
+
+Object Storage Feature | cloud_admin | project_admin (within project) |  \_member\_
+---------------------- | ----------- | ------------------------------ | -----------
+**Accounts** |||
+Create account | Y | N | N
+Delete account | Y (enabled) | N | N
+**Containers** |||
+Create container | Y | Y | N
+Update container | Y | Y | N
+Delete container | Y | Y | N
+**Objects** |||
+Create object    | Y | Y | Y
+Update object    | Y | Y | Y
+Download object  | Y | Y | Y
+Delete object    | Y | Y | Y
+
+**Requirements:**
+
+* This role structure requires Keystone API v3 to run. Using API v2.0 will result in a loss of privileges for the `cloud_admin` and `project_admin` roles, in addition to erratic permissions behavior for `_member_` users.
+
+* Making API calls through the Horizon dashboard does not require any special action, but performing command line calls necessitates changes to the RC file. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
+
+{% highlight bash %}
+
+export OS_PASSWORD=pass
+export OS_AUTH_URL=https://example.ibm.com:5000/v3
+export OS_USERNAME=cloud_admin
+export OS_TENANT_NAME=demo
+export OS_CACERT=/opt/stack/ssl/openstack.crt
+export OS_NO_CACHE=True
+export OS_VOLUME_API_VERSION=2
+export OS_COMPUTE_API_VERSION=2
+export OS_IDENTITY_API_VERSION=3
+{% endhighlight %}
+
+* Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
+
+### Using the Keystone v3 group function 
+
+The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously.
+
+For example, you might have a support team that needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called **Support**, give the group the `_member_` role on all of your projects, and then add all of your support staff to the group.
+
+Another common use case would be to create a `cloud_admin` group that is given the `cloud_admin` role on every project on the environment. This arrangement lets the `cloud_admin` elevate a user’s privileges easily, by temporarily adding them to the `cloud_admin` group. It could be used in situations like vacation coverage.
+
+You can see the difference in approach by these two illustrations.
+
+![User Management With Roles](http://open.ibmcloud.com/documentation/_images/UserManagementWithRoles.gif)
+
+This figure shows an example of traditional role assignments as supported by the Keystone v2 API. The `cloud_admin` user has the `cloud_admin` role for Project 1, Project 2, and Project 3. User 1 has the `project_admin` role for Project 2. User 2 and Support User 1 have the `_member_` role for Project 2. Support User 1 also has the `_member_` role for Project 3.
+
+![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
+
+##Disabling a Project
+
+**Consequences of disabling projects:**
+Users with the `cloud_admin` role can enable and disable projects. When you disable a project, it has these consequences:
+
+- In the dashboard, users no longer have access to the project from the CURRENT PROJECT list on the Project tab.
+- Users who are members of only the disabled project can no longer log in.
+- You cannot launch instances for a disabled project. Instances that are running already are not terminated automatically. You must stop them manually.
+- The data for a disabled project is maintained so that you can re-enable the project at any time.
+
+To disable a project:
+
+##Set quotas for the new project
+
+##Creating a Custom Flavor
+
+## Add a Virtual Machine 
 
 (Will Edit this Section) 
 
-## Deleting a Virtual Machine
+## Delete a Virtual Machine
 
 **To delete an asset or machine:** 
 
@@ -64,7 +249,7 @@ The **Cloud Images** page in Box Panel is available to customers who have at lea
 
 Each image is displayed as a card. Cards are grouped by operating system. 
 
-**To download a Cloud Image:** 
+**Downloading a Cloud Image:** 
 
 1. Hover over the card associated with the image you would like to download. 
 2. Click the card. This will open a modal window containing download links to the image and Checksum. 
@@ -73,7 +258,7 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 ![Image of Dashboard 5](https://github.com/help-documentation/img/Dashboard 5.png) 
 
-## Managing Support Tickets 
+## Manage Support Tickets 
 
 By clicking on a support ticket from the Dashboard, you can see the text of the associated ticket. This text includes additional ticket, as well as chat history and correspondence related to the selected ticket. The status of the support ticket is highlighted on the orange button in the top left corner. 
 
@@ -118,7 +303,7 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 
 **Note: For additional support, you can call Blue Box Support at 1-800-613-4305 or email us at support@bluebox.net.**
 
-## Managing Billing 
+## ManagingUpdat Billing 
 
 To view your contracts and monthly billing reports, simply click the **Billing** tab in the Box Panel Dashboard. Additional contracts with line items can be added by contacting Blue Box Support, and can be found under the same **Billing** tab.
 
