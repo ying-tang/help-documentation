@@ -25,8 +25,6 @@ This user guide provides an end-to-end overview to help you get started using Bo
 
 ## Logging In 
 
-Box Panel's Keystone v3 identity authentication feature enables both **Primary (Administrator)** and **Secondary (Technical)** contacts to log in.
-
 1. To get started, click the following URL to be directed to the login page: https://boxpanel.bluebox.net.
 2. Log into your Box Panel account with the login credentials provided by the Blue Box Support Team. If you are a **Secondary** contact and don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
 3. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
@@ -197,11 +195,7 @@ export OS_IDENTITY_API_VERSION=3
 
 ### Using the Keystone v3 group function 
 
-The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously.
-
-For example, you might have a support team that needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called **Support**, give the group the `_member_` role on all of your projects, and then add all of your support staff to the group.
-
-Another common use case would be to create a `cloud_admin` group that is given the `cloud_admin` role on every project on the environment. This arrangement lets the `cloud_admin` elevate a user’s privileges easily, by temporarily adding them to the `cloud_admin` group. It could be used in situations like vacation coverage.
+The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information, you can view the diagram below and use cases here: help-documentation/_keystone/Managing_Users_and_Projects.md
 
 ![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
 
