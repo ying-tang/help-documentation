@@ -56,7 +56,7 @@ Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_a
 | **heat_stack_owner** | This role lets the user create Heat stacks in the project. This role must be assigned manually, and it never should be assigned to a user that also is assigned the **heat_stack_user** role.
 | **heat_stack_user** | This is a role automatically assigned by Heat to the users it creates. This role is restricted from all API access, and it never should be assigned to any user explicitly. 
 
-With your IBM Blue Box Cloud installation you'll receive one user with `cloud_admin` privileges who can create other projects and users. The `cloud_admin` can grant users `cloud_admin` and lower privileged roles.
+With your IBM Blue Box Cloud installation you'll receive one user with `cloud_admin` privileges who can create other projects and users. The `cloud_admin` can grant users `cloud_admin` and lower privileged roles. The table below displays which features you are able to access, depending on your role.
 
 Identity Feature | cloud_admin | project_admin (within project) |  \_member\_
 ---------------- | ----------- | ------------------------------ | -----------
@@ -203,15 +203,9 @@ For example, you might have a support team that needs access to every project in
 
 Another common use case would be to create a `cloud_admin` group that is given the `cloud_admin` role on every project on the environment. This arrangement lets the `cloud_admin` elevate a user’s privileges easily, by temporarily adding them to the `cloud_admin` group. It could be used in situations like vacation coverage.
 
-You can see the difference in approach by these two illustrations.
-
-![User Management With Roles](http://open.ibmcloud.com/documentation/_images/UserManagementWithRoles.gif)
-
-This figure shows an example of traditional role assignments as supported by the Keystone v2 API. The `cloud_admin` user has the `cloud_admin` role for Project 1, Project 2, and Project 3. User 1 has the `project_admin` role for Project 2. User 2 and Support User 1 have the `_member_` role for Project 2. Support User 1 also has the `_member_` role for Project 3.
-
 ![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
 
-##Disabling a Project
+## Disabling a Project
 
 **Consequences of disabling projects:**
 Users with the `cloud_admin` role can enable and disable projects. When you disable a project, it has these consequences:
@@ -233,7 +227,7 @@ To disable a project:
 
 ## Delete a Virtual Machine
 
-**To delete an asset or machine:** 
+To delete an asset or machine: 
 
 1. Visit the **Machine** page. 
 2. As long as you have the proper permissions to delete an asset, you will have the ability to **Power Cycle** the machine’s PDUs, or **Delete Asset.** 
@@ -249,7 +243,7 @@ The **Cloud Images** page in Box Panel is available to customers who have at lea
 
 Each image is displayed as a card. Cards are grouped by operating system. 
 
-**Downloading a Cloud Image:** 
+To download a **Cloud Image**: 
 
 1. Hover over the card associated with the image you would like to download. 
 2. Click the card. This will open a modal window containing download links to the image and Checksum. 
@@ -258,7 +252,7 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 ![Image of Dashboard 5](https://github.com/help-documentation/img/Dashboard 5.png) 
 
-## Manage Support Tickets 
+## Managing Support Tickets 
 
 By clicking on a support ticket from the Dashboard, you can see the text of the associated ticket. This text includes additional ticket, as well as chat history and correspondence related to the selected ticket. The status of the support ticket is highlighted on the orange button in the top left corner. 
 
@@ -303,7 +297,7 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 
 **Note: For additional support, you can call Blue Box Support at 1-800-613-4305 or email us at support@bluebox.net.**
 
-## ManagingUpdat Billing 
+## Managing Billing 
 
 To view your contracts and monthly billing reports, simply click the **Billing** tab in the Box Panel Dashboard. Additional contracts with line items can be added by contacting Blue Box Support, and can be found under the same **Billing** tab.
 
