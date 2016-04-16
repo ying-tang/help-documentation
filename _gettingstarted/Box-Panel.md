@@ -193,9 +193,7 @@ export OS_IDENTITY_API_VERSION=3
 
 * Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
 
-### Using the Keystone v3 group function 
-
-The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information, you can view the diagram below and use cases here: help-documentation/_keystone/Managing_Users_and_Projects.md
+Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information, you can view the diagram below and use cases here: help-documentation/_keystone/Managing_Users_and_Projects.md
 
 ![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
 
