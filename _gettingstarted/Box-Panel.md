@@ -289,6 +289,8 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 
 **Note: For additional support, you can call Blue Box Support at 1-800-613-4305 or email us at support@bluebox.net.**
 
+## HIPAA Compliance Reporting
+
 ## Managing Billing 
 
 To view your contracts and monthly billing reports, simply click the **Billing** tab in the Box Panel Dashboard. Additional contracts with line items can be added by contacting Blue Box Support, and can be found under the same **Billing** tab.
