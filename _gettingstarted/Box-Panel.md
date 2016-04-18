@@ -193,7 +193,7 @@ export OS_IDENTITY_API_VERSION=3
 
 * Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
 
-Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information, you can view the diagram below and use cases here: help-documentation/_keystone/Managing_Users_and_Projects.md
+Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information on Keystone v3, **groups** and use cases, please refer to the following document: help-documentation/_keystone/Managing_Users_and_Projects.md
 
 ![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
 
@@ -213,11 +213,11 @@ To disable a project:
 
 ##Creating a Custom Flavor
 
-## Add a Virtual Machine 
+## Adding a Virtual Machine 
 
 (Will Edit this Section) 
 
-## Delete a Virtual Machine
+## Deleting a Virtual Machine
 
 To delete an asset or machine: 
 
