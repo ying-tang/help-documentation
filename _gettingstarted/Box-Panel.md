@@ -289,20 +289,21 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 
 ## HIPAA Compliance Reporting
 
+For customers with a HIPAA-enabled cloud, you can access HIPAA compliance features, including security compliance reporting, from your Box Panel Dashboard.
+
 ## Managing Billing 
 
-To view your contracts and monthly billing reports, simply click the **Billing** tab in the Box Panel Dashboard. Additional contracts with line items can be added by contacting Blue Box Support, and can be found under the same **Billing** tab.
+To view your contracts and monthly billing reports, simply click the **Account** tab in the Box Panel Dashboard, then click the **Billing** tab.
 
 **To become a new customer:**
 
 1. Provide the Blue Box Support team with the billing manager’s name, email, and contact information associated with your company.
 2. After your company’s billing information is received by the IBM Finance, a contract will be created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. These are documented and written on your contract. 
 3. A billing start date will be set in order for your solution to begin to be billed (typically the start date is the same as your deployment date, and repeats monthly).
-4. Once you’re able to log into Box Panel, you can view the billing contact's information under the **Account Vitals** section. 
 
-## Professional Services 
+Once you’re able to log into Box Panel, you can view your billing information by selecting **Billing** under the **Account** drop-down menu. From here, you can view your **Account Services** and **Billing History**.
 
-(Edit) 
+By clicking **Billing History**, you can download all of your invoices and save them in PDF format.
 
-**More sections to be added**
-
+For further billing support, please contact the Blue Box Support Team, and we will be happy to assist you.
+To add additional line items to your infrastructure, we also invite you to contact the Blue Box Support Team. We will create a new contract and help you get set up.
