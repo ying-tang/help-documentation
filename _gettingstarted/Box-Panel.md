@@ -195,8 +195,6 @@ export OS_IDENTITY_API_VERSION=3
 
 Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information on Keystone v3, **groups** and use cases, please refer to the following document: help-documentation/_keystone/Managing_Users_and_Projects.md
 
-![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
-
 ## Disabling a Project
 
 **Consequences of disabling projects:**
