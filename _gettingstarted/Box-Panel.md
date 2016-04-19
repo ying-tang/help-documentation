@@ -312,6 +312,7 @@ To receive internet traffic, you must also assign a **Floating IP** that routes 
 1. Click **Instances** from the **Compute** drop-down menu of your project.
 2. Find your Virtual Machine, then select **Edit Instance**.
 3. Add your **Security Group**.
+4. Click the **Save** button.
 
 ## Managing Support Tickets 
 
