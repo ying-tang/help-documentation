@@ -265,6 +265,8 @@ In OpenStack, a **Flavor** is a template for describing the resource configurati
 7. Under the **Networking** tab, assign your machine to your **Selected Networks**. Your **Available Networks** will be shown in the drop-down menu.
 8. Click **Launch Instance**.
 
+On the **Instances** page, you find your machine from the list and select the **Actions** drop-down menu to manage your machine.
+
 ## Deleting a Virtual Machine
 
 **To delete an asset or machine:** 
@@ -307,12 +309,17 @@ A software-based firewall must be opened before the instance can receive externa
 
 To receive internet traffic, you must also assign a **Floating IP** that routes to your machine.
 
-**To assign a floating IP:**
+**To assign a Floating IP:**
 
 1. Click **Instances** from the **Compute** drop-down menu of your project.
 2. Find your Virtual Machine, then select **Edit Instance**.
-3. Add your **Security Group**.
+3. From the Modal window, add your **Security Group**.
 4. Click the **Save** button.
+5. From the **Actions** menu on your instance, click **Associate Floating IP**.
+6. From the Modal window, click **+** to assign a **Floating IP** that routes from the **Pool**.
+7. Click **Associate**.
+8. In the next Modal window, select the **Floating IP** from your **Pool**.
+9. Click **Allocate IP**.
 
 ## Managing Support Tickets 
 
