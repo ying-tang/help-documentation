@@ -32,6 +32,8 @@ This user guide provides an end-to-end overview to help you get started using Bo
 
 ## Navigating the Box Panel Dashboard
 
+From the Box Panel Dashboard, you can see a consolidated asset view of all of your dedicated and local instances on one screen.
+
 The top of the Dashboard displays the infrastructure currently being used with your list of hosts. 
 
 ![Image of Dashboard1](https://github.com/help-documentation/img/Dashboard1.png)
@@ -44,7 +46,9 @@ On the right are additional details related to your account summary.
 
 ## Managing Users and Projects
 
-Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. The table below contains the descriptions associated with each role.
+A **Project** is a group of resources that can be asssigned to a user or a group of users.
+
+**Users** include the following four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. The table below contains the descriptions associated with each role.
 
 |**Role**| **Description**
 |:---------|:-----------
@@ -195,6 +199,31 @@ export OS_IDENTITY_API_VERSION=3
 
 Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information on Keystone v3, **groups** and use cases, please refer to the following document: help-documentation/_keystone/Managing_Users_and_Projects.md
 
+## Creating a Project
+
+As shown in the table above, only `cloud_admin` roles can create projects and users.
+
+**To create a project:**
+
+1. Click the **Identity** tab, then click **Projects**
+2. Click the **Create Project** button.
+3. Assign a **Project Name** and **Description** under the **Project Information** tab shown in the Modal window.
+4. Assign **Users** to your project by clicking the search bar in the **Project Members** tab. Users can later be added and deleted.
+5. Enter resource allocation information under the **Quotas** tab to set and customize quotas for the new project.
+6. Click the **Create Project** button.
+
+To add or delete a user, click the **Modify Users** drop-down under the **Actions** section.
+
+**To create a new user:**
+
+1. Click the **Identity** tab.
+2. Click **Create User**.
+3. Enter a user name and their email in the Modal window.
+4. Assign a password.
+5. Select the primary project you would like to add them to from the **Primary Project** drop-down.
+6. Assign their role from the **Role** drop-down.
+7. Confirm that you would like to create the user by clicking the **Create User** button.
+
 ## Disabling a Project
 
 **Consequences of disabling projects:**
@@ -207,17 +236,34 @@ Users with the `cloud_admin` role can enable and disable projects. When you disa
 
 To disable a project:
 
-##Set quotas for the new project
+## Creating a Custom Flavor
 
-##Creating a Custom Flavor
+In OpenStack, a **Flavor** is a template for describing the resource configuration of a Virtual Machine.
+
+**To create a Custom Flavor:**
+
+1. From the **Project** menu, click the **System** drop-down.
+2. Click **Flavors**. Here you will see a list of your current **Flavors**.
+3. Click the **Create Flavor** button.
+4. Enter a name and assign custom configuration information.
+5. If you would like to limit your **Flavor** to a specific project, click the **Flavor Access* tab, and click the **Plus** symbol to move your **Flavor** to the **Selected Projects** section.
 
 ## Adding a Virtual Machine 
 
-(Will Edit this Section) 
+**To add a Virtual Machine:
+
+1. From the **Project** menu, select **Instances**.
+2. Click the **Launch Instance** button.
+3. Enter an **Instance Name** in the Modal window.
+4. Assign an **Instance Flavor** from the options in the drop-down menu. You can view **Flavor Details** when you select your option to receive feedback on whether you have enough quota to allow this machine to be built. If the **Instance Flavor** exceeds your consumption, you will be notified before creating your instance.
+5. Select a **Boot Source**.
+6. Under the **Access and Security** tab, enter autentication information.
+7. Under the **Networking** tab, assign your machine to your **Selected Networks**. Your **Available Networks** will be shown in the drop-down menu.
+8. Click **Launch Instance**.
 
 ## Deleting a Virtual Machine
 
-To delete an asset or machine: 
+**To delete an asset or machine:** 
 
 1. Visit the **Machine** page. 
 2. As long as you have the proper permissions to delete an asset, you will have the ability to **Power Cycle** the machine’s PDUs, or **Delete Asset.** 
@@ -233,7 +279,7 @@ The **Cloud Images** page in Box Panel is available to customers who have at lea
 
 Each image is displayed as a card. Cards are grouped by operating system. 
 
-To download a **Cloud Image**: 
+**To download a Cloud Image:** 
 
 1. Hover over the card associated with the image you would like to download. 
 2. Click the card. This will open a modal window containing download links to the image and Checksum. 
