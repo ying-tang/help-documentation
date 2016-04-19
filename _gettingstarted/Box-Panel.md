@@ -250,7 +250,7 @@ In OpenStack, a **Flavor** is a template for describing the resource configurati
 2. Click **Flavors**. Here you will see a list of your current **Flavors**.
 3. Click the **Create Flavor** button.
 4. Enter a name and assign custom configuration information.
-5. If you would like to limit your **Flavor** to a specific project, click the **Flavor Access* tab, and click the **Plus** symbol to move your **Flavor** to the **Selected Projects** section.
+5. If you would like to limit your **Flavor** to a specific project, click the **Flavor Access* tab, and click the **+** symbol to move your **Flavor** to the **Selected Projects** section.
 
 ## Adding a Virtual Machine 
 
@@ -319,14 +319,14 @@ To receive internet traffic, you must also assign a **Floating IP** that routes 
 6. From the Modal window, click **+** to assign a **Floating IP** that routes from the **Pool**.
 7. Click **Associate**.
 8. In the next Modal window, select the **Floating IP** from your **Pool**.
-9. Click **Allocate IP**.
+9. Finally, click **Allocate IP**.
 
 ## Creating a Storage Volume
 
 **To create a new volume for your Virtual Machine:**
 
 1. Visit the **Volumes** page in your project.
-2. Click the **Create Volume** button.
+2. Next, click the **Create Volume** button.
 3. From the Modal window, name your volume and add an optional description.
 4. Assign a **Volume Size**. Your **Volume Limits** will display when you assign a size to ensure you stay within your usage quota.
 5. Click **Create Volume**.
