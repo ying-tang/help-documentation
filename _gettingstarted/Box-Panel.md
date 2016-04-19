@@ -25,7 +25,11 @@ This user guide provides an end-to-end overview to help you get started using Bo
 
 ## Logging In 
 
-1. To get started, click the following URL to be directed to the login page: https://boxpanel.bluebox.net.
+To get started with Box Panel, you first need to log in. 
+
+**To log into your Box Panel Account:**
+
+1. Click the following URL to be directed to the login page: https://boxpanel.bluebox.net.
 2. Log into your Box Panel account with the login credentials provided by the Blue Box Support Team. If you are a **Secondary** contact and don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
 3. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
 5. After logging in, you will be automatically directed to the Box Panel Dashboard UI.
@@ -250,7 +254,7 @@ In OpenStack, a **Flavor** is a template for describing the resource configurati
 
 ## Adding a Virtual Machine 
 
-**To add a Virtual Machine:
+**To add an asset or machine:**
 
 1. From the **Project** menu, select **Instances**.
 2. Click the **Launch Instance** button.
@@ -265,7 +269,7 @@ In OpenStack, a **Flavor** is a template for describing the resource configurati
 
 **To delete an asset or machine:** 
 
-1. Visit the **Machine** page. 
+1. Visit the **Instances** page. 
 2. As long as you have the proper permissions to delete an asset, you will have the ability to **Power Cycle** the machine’s PDUs, or **Delete Asset.** 
 3. Confirm that you want to delete the asset by clicking **OK** from the Modal window. This will permanently delete your asset. 
 
@@ -287,6 +291,27 @@ Each image is displayed as a card. Cards are grouped by operating system.
 4. This can also be done using OpenStack APIs. For instructions, click here: https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md 
 
 ![Image of Dashboard 5](https://github.com/help-documentation/img/Dashboard 5.png) 
+
+## Managing Access and Security
+
+A software-based firewall must be opened before the instance can receive external traffic.
+
+**To set firewall rules:**
+
+1. Click **Access and Security** from the **Compute** drop-down menu of your project.
+2. Click the **Create Security Group** button.
+3. Assign a name, then click the **Create Security Group** button from the Modal window.
+4. From the main **Security Group Rules** list, find your new security group and click the **Manage Rules** button. You can also delete a rule from this view.
+5. Add a single **Rule** to the **Port** that your Virtual Machines are members of the security group.
+6. Click the **Add** button.
+
+To receive internet traffic, you must also assign a **Floating IP** that routes to your machine.
+
+**To assign a floating IP:**
+
+1. Click **Instances** from the **Compute** drop-down menu of your project.
+2. Find your Virtual Machine, then select **Edit Instance**.
+3. Add your **Security Group**.
 
 ## Managing Support Tickets 
 
@@ -352,4 +377,4 @@ Once you’re able to log into Box Panel, you can view your billing information 
 By clicking **Billing History**, you can download all of your invoices and save them in PDF format.
 
 For further billing support, please contact the Blue Box Support Team, and we will be happy to assist you.
-To add additional line items to your infrastructure, we also invite you to contact the Blue Box Support Team. We will create a new contract and help you get set up.
+To add additional line items to your infrastructure, we also invite you to contact the Blue Box Support Team. We will create a new contract and help with your setup process in any way that we can.
