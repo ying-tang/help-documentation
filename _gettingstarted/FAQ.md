@@ -73,3 +73,7 @@ examples:
     iops -n 8 -t 2 /dev/disk0
     iops --num_threads 1 --time 2 /dev/md1
     iops --num_threads 16 --time 2 /dev/md1
+
+### When using security groups, how can I log refused TCP connections to forbidden ports?
+
+If you want to log refused TCP connections to forbidden ports, you'll need to open up security groups and run iptables with logging on the instances.
