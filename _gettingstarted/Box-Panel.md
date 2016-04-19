@@ -321,6 +321,22 @@ To receive internet traffic, you must also assign a **Floating IP** that routes 
 8. In the next Modal window, select the **Floating IP** from your **Pool**.
 9. Click **Allocate IP**.
 
+## Creating a Storage Volume
+
+**To create a new volume for your Virtual Machine:**
+
+1. Visit the **Volumes** page in your project.
+2. Click the **Create Volume** button.
+3. From the Modal window, name your volume and add an optional description.
+4. Assign a **Volume Size**. Your **Volume Limits** will display when you assign a size to ensure you stay within your usage quota.
+5. Click **Create Volume**.
+
+**To assign a volume to your Virtual Machine:**
+
+1. From the **Volumes** page, find your volume and select **Manage Volume Attachments** from the **Actions** drop-down menu.
+2. From the Modal window, select an instance from the **Attach to Instance** drop-down.
+3. Click the **Attach Volume** button to assign the volume to your instance.
+
 ## Managing Support Tickets 
 
 By clicking on a support ticket from the Dashboard, you can see the text of the associated ticket. This text includes additional ticket, as well as chat history and correspondence related to the selected ticket. The status of the support ticket is highlighted on the orange button in the top left corner. 
@@ -385,4 +401,4 @@ Once you’re able to log into Box Panel, you can view your billing information 
 By clicking **Billing History**, you can download all of your invoices and save them in PDF format.
 
 For further billing support, please contact the Blue Box Support Team, and we will be happy to assist you.
-To add additional line items to your infrastructure, we also invite you to contact the Blue Box Support Team. We will create a new contract and help with your setup process in any way that we can.
+To add additional line items, such as expansion nodes, to your infrastructure, please contact the Blue Box Support Team. We will create a new monthly contract and help to streamline your setup process in any way that we can.
