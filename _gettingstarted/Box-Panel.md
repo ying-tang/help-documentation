@@ -12,6 +12,8 @@ tags: [getting started, Box Panel]
 
 author: Jill Tempelmeyer 
 
+editor: Leslie Lundquist
+
 dateAdded: April 14, 2016 
 
 --- 
@@ -19,20 +21,20 @@ dateAdded: April 14, 2016
 
 # Getting Started with Box Panel
 
-The Box Panel interface provides a single, consolidated view of your enterprise assets deployed in both Dedicated and Local environments. Based on OpenStack Horizon, its self-service access enables users to easily create support tickets, leverage central authentication, monitor reporting functions, and access their invoicing solutions. 
+The Box Panel interface provides a single, consolidated view of your enterprise assets deployed in both Dedicated and Local environments. Based on OpenStack Horizon, its self-service access lets users create support tickets, leverage central authentication, monitor reporting functions, and view their invoicing solutions easily. 
 
-This user guide provides an end-to-end overview to help you get started using Box Panel Version 3.8.3 with your IBM Blue Box Cloud. 
+This user guide provides an end-to-end overview to help you get started using Box Panel Version 3.8.3 and later, to monitor and control your IBM Blue Box Cloud. 
 
 ## Logging In 
 
-To get started with Box Panel, you first need to log in. 
+To get started with Box Panel, log in. 
 
-**To log into your Box Panel Account:**
+**Logging into your Box Panel Account:**
 
 1. Click the following URL to be directed to the login page: https://boxpanel.bluebox.net.
 2. Log into your Box Panel account with the login credentials provided by the Blue Box Support Team. If you are a **Secondary** contact and don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
 3. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
-5. After logging in, you will be automatically directed to the Box Panel Dashboard UI.
+5. After logging in, you will be directed automatically to the Box Panel Dashboard UI.
 
 ## Navigating the Box Panel Dashboard
 
@@ -54,19 +56,19 @@ A **Project** is a group of resources that can be asssigned to a user or a group
 
 **Users** include the following four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
 
-Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information on Keystone v3, **groups** and use cases, please refer to the following document: help-documentation/_keystone/Managing_Users_and_Projects.md
+Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information on Keystone v3, **groups** and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 ## Creating a Project
 
-As shown in the table above, only `cloud_admin` roles can create projects and users.
+As shown in the **Managing Users and Projects** document, only users with `cloud_admin` roles can create projects and users.
 
 **To create a project:**
 
 1. Click the **Identity** tab, then click **Projects**
 2. Click the **Create Project** button.
 3. Assign a **Project Name** and **Description** under the **Project Information** tab shown in the Modal window.
-4. Assign **Users** to your project by clicking the search bar in the **Project Members** tab. Users can later be added and deleted.
-5. Enter resource allocation information under the **Quotas** tab to set and customize quotas for the new project.
+4. Assign **Users** to your project by clicking the search bar in the **Project Members** tab. Users can be added and deleted later.
+5. Enter resource allocation information under the **Quotas** tab to set and customize quotas for your new project.
 6. Click the **Create Project** button.
 
 To add or delete a user, click the **Modify Users** drop-down under the **Actions** section.
@@ -75,9 +77,9 @@ To add or delete a user, click the **Modify Users** drop-down under the **Action
 
 1. Click the **Identity** tab.
 2. Click **Create User**.
-3. Enter a user name and their email in the Modal window.
+3. Enter a user name and their email address in the Modal window.
 4. Assign a password.
-5. Select the primary project you would like to add them to from the **Primary Project** drop-down.
+5. From the **Primary Project** drop-down, select the primary project for that user.
 6. Assign their role from the **Role** drop-down.
 7. Confirm that you would like to create the user by clicking the **Create User** button.
 
@@ -146,7 +148,7 @@ Each image is displayed as a card. Cards are grouped by operating system.
 **To download a Cloud Image:** 
 
 1. Hover over the card associated with the image you would like to download. 
-2. Click the card. This will open a modal window containing download links to the image and Checksum. 
+2. Click the card. This click opens a modal window containing download links to the image and Checksum. 
 3. Click the **copy** button to the left of the Image URL. This will add the URL to your clipboard. 
 4. This can also be done using OpenStack APIs. For instructions, click here: https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md 
 
@@ -165,7 +167,7 @@ A software-based firewall must be opened before the instance can receive externa
 5. Add a single **Rule** to the **Port** that your Virtual Machines are members of the security group.
 6. Click the **Add** button.
 
-To receive internet traffic, you must also assign a **Floating IP** that routes to your machine.
+To receive Internet traffic, you must also assign a **Floating IP** that routes to your machine.
 
 **To assign a Floating IP:**
 
@@ -197,17 +199,17 @@ To receive internet traffic, you must also assign a **Floating IP** that routes 
 
 ## Managing Support Tickets 
 
-By clicking on a support ticket from the Dashboard, you can see the text of the associated ticket. This text includes additional ticket, as well as chat history and correspondence related to the selected ticket. The status of the support ticket is highlighted on the orange button in the top left corner. 
+By clicking on a support ticket from the Dashboard, you can see the text of the associated ticket. This text includes additional tickets, as well as chat history and correspondence related to the selected ticket. The status of the support ticket is highlighted on the orange button in the top left corner. 
 
 ![Image of Dashboard 6](https://github.com/help-documentation/img/Dashboard 6.png) 
 
-From the panel on the left-hand side, you have options to create a new support ticket, subscribe to the ticket you have selected if you want to follow its status, view your tickets, and view all tickets submitted by shared users on your account. 
+From the panel on the left-hand side, you have options to create a new support ticket, subscribe to the ticket you have selected (if you want to follow its status), view your tickets, and view all tickets submitted by shared users on your account. 
 
 To view a list of Subscribers for a selected ticket, simply click on the **Subscribers** link. 
 
 ![Image of Dashboard 7](https://github.com/help-documentation/img/Dashboard 7.png)
 
-To have a conversation with one of our Blue Box support team experts, you can click the green **Post Reply** button, or use the chat feature. 
+To have a conversation with one of our Blue Box support team experts, you can click the green **Post Reply** button, or use the **Chat** feature. 
 
 **To create a ticket:**
 
