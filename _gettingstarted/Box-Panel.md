@@ -21,9 +21,9 @@ dateAdded: April 14, 2016
 
 # Getting Started with Box Panel
 
-The Box Panel interface provides a single, consolidated view of your enterprise assets deployed in both Dedicated and Local environments. Based on OpenStack Horizon, its self-service access lets users create support tickets, leverage central authentication, monitor reporting functions, and view their invoicing solutions easily. 
+The Box Panel interface provides a single, consolidated view of enterprise assets deployed in your Blue Box Dedicated and Local environments. Based on OpenStack Horizon, its self-service access lets users create support tickets, leverage central authentication, monitor reporting functions, and view their invoicing solutions, easily. 
 
-This user guide provides an end-to-end overview to help you get started using Box Panel Version 3.8.3 and later, to monitor and control your IBM Blue Box Cloud. 
+This user guide provides an end-to-end overview to help you get started using Box Panel Version 3.8.3 and later, so you can monitor and control your IBM Blue Box Cloud. 
 
 ## Logging In 
 
@@ -38,17 +38,17 @@ To get started with Box Panel, log in.
 
 ## Navigating the Box Panel Dashboard
 
-From the Box Panel Dashboard, you can see a consolidated asset view of all of your dedicated and local instances on one screen.
+From the Box Panel Dashboard, you can see a consolidated asset view of all of your Blue Box Dedicated and Local instances on one screen.
 
-The top of the Dashboard displays the infrastructure currently being used with your list of hosts. 
+The top of the Dashboard displays the infrastructure currently in use, with your list of hosts. 
 
 ![Image of Dashboard1](https://github.com/help-documentation/img/Dashboard1.png)
 
-Right below, you can view your bandwidth usage and support tickets related to your cloud, along with your status. 
+Immediately below, you can view your bandwidth usage and any support tickets related to your cloud, along with your status. 
 
 ![Image of Dashboard 2](https://github.com/help-documentation/img/Dashboard 2.png)
 
-On the right are additional details related to your account summary. 
+On the right, additional details related to your account summary are displayed. 
 
 ## Managing Users and Projects
 
@@ -56,7 +56,7 @@ A **Project** is a group of resources that can be asssigned to a user or a group
 
 **Users** include the following four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
 
-Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously. For more information on Keystone v3, **groups** and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
+Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, **groups**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 ## Creating a Project
 
@@ -119,27 +119,27 @@ In OpenStack, a **Flavor** is a template for describing the resource configurati
 1. From the **Project** menu, select **Instances**.
 2. Click the **Launch Instance** button.
 3. Enter an **Instance Name** in the Modal window.
-4. Assign an **Instance Flavor** from the options in the drop-down menu. You can view **Flavor Details** when you select your option to receive feedback on whether you have enough quota to allow this machine to be built. If the **Instance Flavor** exceeds your consumption, you will be notified before creating your instance.
+4. Assign an **Instance Flavor** from the options in the drop-down menu. You can view **Flavor Details** when you select your option to receive feedback on whether you have enough quota to allow this machine to be built. If the **Instance Flavor** exceeds your consumption quota, you'll be notified before your instance is created.
 5. Select a **Boot Source**.
 6. Under the **Access and Security** tab, enter autentication information.
 7. Under the **Networking** tab, assign your machine to your **Selected Networks**. Your **Available Networks** will be shown in the drop-down menu.
 8. Click **Launch Instance**.
 
-On the **Instances** page, you find your machine from the list and select the **Actions** drop-down menu to manage your machine.
+On the **Instances** page, find your machine in the list and select the **Actions** drop-down menu to manage your machine.
 
 ## Deleting a Virtual Machine
 
 **To delete an asset or machine:** 
 
 1. Visit the **Instances** page. 
-2. As long as you have the proper permissions to delete an asset, you will have the ability to **Power Cycle** the machine’s PDUs, or **Delete Asset.** 
-3. Confirm that you want to delete the asset by clicking **OK** from the Modal window. This will permanently delete your asset. 
+2. As long as you have the proper permissions to delete an asset, you can **Power Cycle** the machine’s PDUs, or select **Delete Asset.** 
+3. Confirm that you want to delete the asset by clicking **OK** from the Modal window. Your asset will be deleted permanently. 
 
 ![Image of Dashboard 3](https://github.com/help-documentation/img/Dashboard 3.png)
 
 ## Working with Cloud Images 
 
-The **Cloud Images** page in Box Panel is available to customers who have at least one cloud, and are either a **Primary** or **Technical** customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
+The **Cloud Images** page in Box Panel is available to customers who have at least one cloud, and who are either a **Primary** or a **Technical** customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
 
 ![Image of Dashboard 4](https://github.com/help-documentation/img/Dashboard 4.png)
 
