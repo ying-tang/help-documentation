@@ -91,7 +91,12 @@ Users with the `cloud_admin` role can enable and disable projects. When you disa
 - You cannot launch instances for a disabled project. Instances that are running already are not terminated automatically. You must stop them manually.
 - The data for a disabled project is maintained so that you can re-enable the project at any time.
 
-To disable a project:
+**To disable a project:**
+
+1. Click the **Identity** tab.
+2. Click **Projects**.
+3. Check each box associated with the project(s) you would like to disable.
+4. Confirm that you would like to disable the project by clicking the **Disable Projects** button.
 
 ## Creating a Custom Flavor
 
