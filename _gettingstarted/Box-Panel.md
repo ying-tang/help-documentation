@@ -167,7 +167,7 @@ A software-based firewall must be opened before the instance can receive externa
 5. Add a single **Rule** to the **Port** that your Virtual Machines are members of the security group.
 6. Click the **Add** button.
 
-To receive Internet traffic, you must also assign a **Floating IP** that routes to your machine.
+To receive Internet traffic, you also must assign a **Floating IP** address that routes to your machine.
 
 **To assign a Floating IP:**
 
@@ -188,7 +188,7 @@ To receive Internet traffic, you must also assign a **Floating IP** that routes 
 1. Visit the **Volumes** page in your project.
 2. Next, click the **Create Volume** button.
 3. From the Modal window, name your volume and add an optional description.
-4. Assign a **Volume Size**. Your **Volume Limits** will display when you assign a size to ensure you stay within your usage quota.
+4. Assign a **Volume Size**. Your **Volume Limits** are displayed when you assign a size, to ensure you stay within your usage quota.
 5. Click **Create Volume**.
 
 **To assign a volume to your Virtual Machine:**
@@ -236,7 +236,7 @@ To have a conversation with one of our Blue Box support team experts, you can cl
 
 **Note: Steps 8 and 9 can be skipped for non-urgent concerns.**
 
- 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This will prompt an acknowledgement that you will consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages). 
+ 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This click will prompt an acknowledgement that you consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages). 
  9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box. 
  10. Finally, click the **Create Ticket** box. 
 
@@ -248,9 +248,9 @@ To view your contracts and monthly billing reports, simply click the **Account**
 
 **To become a new customer:**
 
-1. Provide the Blue Box Support team with the billing manager’s name, email, and contact information associated with your company.
-2. After your company’s billing information is received by the IBM Finance, a contract will be created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. These are documented and written on your contract. 
-3. A billing start date will be set in order for your solution to begin to be billed (typically the start date is the same as your deployment date, and repeats monthly).
+1. Provide the Blue Box Support team with the billing manager’s name, email, and other contact information associated with your company.
+2. After your company’s billing information is received by the IBM Finance, a contract is created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. This information is documented and written on your contract. 
+3. A billing start date will be set so that your solution can begin to be billed (typically, the start date is the same as your deployment date, and billing repeats monthly).
 
 Once you’re able to log into Box Panel, you can view your billing information by selecting **Billing** under the **Account** drop-down menu. From here, you can view your **Account Services** and **Billing History**.
 
