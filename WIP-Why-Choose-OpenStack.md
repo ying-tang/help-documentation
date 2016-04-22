@@ -30,36 +30,34 @@ OpenStack™ is an extensive, open source software platform for delivering Infra
 
 **OpenStack Communities**: The biggest strength of OpenStack is its vibrant community. More than 34,000 individual contributors from more than 177 countries are part of this community, with more than 70 user groups worldwide. OpenStack user groups meet regularly. They act as venues for spreading awareness, for fostering technical discussions, and for showing camaraderie with the community at large. If you are new to OpenStack, learning from other users by participating in these groups is the easiest way to get started.
 
-**Market Trends and State of the Stack**: OpenStack is becoming the platform of choice for private cloud deployments. Market revenue is expected to reach $1.3 Billion by 2016, and to cross $3B by 2018. The top three driving factors for OpenStack adoption are the ability to innovate quickly (DevOps) on top of an OpenStack IaaS platform, the ability to automate cloud deployment for easy upscaling, and the fact that OpenStack is an open technology. Web services, followed by QA and testing, currently are the majority of workloads being run on OpenStack clouds. Enterprise workloads are increasing. From a broader perspective, OpenStack adoption is increasing in Academia and Research, Telecommunications, Finance, Media, and throughout other market sectors.
+**Market Trends and State of the Stack**: OpenStack is becoming the platform of choice for private cloud deployments. Market revenue is expected to reach $1.3 Billion by 2016, and to cross $3B by 2018. The top three driving factors for OpenStack adoption are the ability to innovate quickly (DevOps) on top of an OpenStack IaaS platform, the ability to automate cloud deployment for easy upscaling, and the fact that OpenStack is an open technology. Software Development and testing are the most commonly used workloads, followed by infrastructure services. Enterprise workloads are increasing, particularly around OpenStack APIs, which have become the standard for Infrastructure as a Service (IaaS). From a broader perspective, OpenStack adoption is increasing in Academia and Research, Telecommunications, Finance, Media, and throughout other market sectors.
 
 **OpenStack Documentation**: For newcomers to OpenStack, installation guides are available for different platforms (Ubuntu, RHEL, Debian, SUSE). These guides are updated with every release. The OpenStack project provides comprehensive online documentation targeted at System Administrators, Cloud Administrators, End-Users, Architects, and Cloud Developers. Documentation also is available on advanced topics such as Security and High Availability. These advanced documents are updated regularly, but not in the same cadence as the OpenStack releases. 
 
-**Ask OpenStack**: If you have specific questions on OpenStack, learn from experts at Ask OpenStack—a crowdsource Q&A site modeled on the popular site, StackOverflow. 
+**Ask OpenStack**: If you have specific questions on OpenStack, learn from experts at [Ask OpenStack](https://ask.openstack.org/)—a crowdsource Q&A site modeled on the popular site, StackOverflow. 
 
 **OpenStack Marketplace**: OpenStack customers have lot of choices: service providers, vendors, system integrators, distributions, trainers, consultants, and so on. To help you make informed decisions, the OpenStack Marketplace offers a central repository of information and reviews related to OpenStack vendors, products, training, consultants, and other services.
 
 _Trends: Supporting Figures (need to be updated)_
 
-_Figure 1. OpenStack Representation by Industry (OpenStack User Survey, Nov 2014)_
+(photo goes here)
+_Figure 1. OpenStack Representation by Industry (OpenStack User Survey, April 2016)_
 
-![ ](https://github.com/JillianFaith/help-documentation/blob/patch-4/img/Screen%20Shot%202016-04-21%20at%207.27.27%20PM.png)
+(photo goes here)
+_Figure 2. Workloads and Frameworks Running on OpenStack (OpenStack User Survey, April 2016)_
 
-_Figure 2. Common Horizontal Frameworks Running on OpenStack (OpenStack User Survey, Nov 2014)_
-
-![ ](https://github.com/JillianFaith/help-documentation/blob/patch-4/Screen%20Shot%202016-04-21%20at%207.54.26%20PM.png)
-
+![ ](photo goes here)
 _Figure 3. OpenStack Software Development (Projects under The Big Tent, November 2015)_
 
 ## OpenStack: An Overview by Components
 The OpenStack platform is a collection of services, separated into functional components. Together, a few core components provide capabilities in your data center for computing, object and block storage, and networking, with a centralized dashboard for managing all of these resources. These core services are integrated together through a set of supporting services, described in the next sections of this document. The following figure illustrates the relationships among the components of OpenStack.
 
+(insert diagram + look for higher-level one)
 _Figure 4. OpenStack High-Level Architecture, by Components_
 
 
 ## OpenStack Infrastructure (IaaS) Services: The Core Projects
-The projects commonly referred to as Core were among those first developed by the OpenStack community. They have undergone years of use and testing in production environments, and they are still the most widely deployed OpenStack components.
-
-Service you can use as a replacement for traditional capital expenditures on infrastructure.
+The projects commonly referred to as Core were among those first developed by the OpenStack community. They have undergone years of use and testing in production environments, and they are still the most widely deployed OpenStack components. Together, these components are standardized on the same open platform and APIs that power a global network of public and private clouds. Additionally, The Core Projects provide a strategic, viable replacement for traditional capital expenditures on infrastructure.
 
 The OpenStack Core Infrastructure (IaaS) projects are: 
 * **Nova** (Compute)
@@ -83,7 +81,7 @@ In fact, these services (except Swift) originally began as parts of Nova, the co
 
 **Keystone**: Keystone provides authentication and authorization capabilities. It integrates with existing back-end directory services such as LDAP. Keystone provides a central directory of users with mappings to the services they are authorized to use.
 
-For all practical purposes, Keystone is a required component of any OpenStack deployment. Every OpenStack deployment requires some form of authentication service, usually Keystone. (There might be a no-op authentication for some extreme test cases.) For example, Swift still has its own authentication, although it is not often used except in a test deployment where Keystone is not available.
+For all practical purposes, Keystone is a required component of any OpenStack deployment. Every OpenStack deployment requires some form of authentication service, with Keystone as the most common use case. (There might be a no-op authentication for some extreme test cases.) For example, Swift still has its own authentication, although it is not often used except in a test deployment where Keystone is not available.
 
 OpenStack integrates these modules of compute, storage, networking, and provisioning components with each other—and with additional support services—thereby providing a unified and scalable user experience of infrastructure as a service (IaaS). Note that these same OpenStack services also are accessible through a uniform, RESTful API; by using the API interface, creating your own user experience (UX) is an option.
 
@@ -106,7 +104,6 @@ Together, Ceilometer, Horizon and Heat make the OpenStack cloud environment rich
 **Horizon**: Horizon offers a centralized graphical user interface that lets you view, provision, and manage cloud resources. Third-party services, such as billing and monitoring, can be integrated easily with the Horizon dashboard interface. OpenStack still functions entirely without Horizon, and the same usage information is accessible using the underlying OpenStack APIs.
 
 **Ironic**:  Ironic lets you automatically provision and manage physical machines. Traditionally, a company would spend money to buy or build this service, but it can be considered a type of compute service.
-
 
 ## OpenStack Application Support
 
