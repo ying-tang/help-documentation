@@ -52,9 +52,8 @@ _Figure 3. OpenStack Software Development (Projects under The Big Tent, November
 ## OpenStack: An Overview by Components
 The OpenStack platform is a collection of services, separated into functional components. Together, a few core components provide capabilities in your data center for computing, object and block storage, and networking, with a centralized dashboard for managing all of these resources. These core services are integrated together through a set of supporting services, described in the next sections of this document. The following figure illustrates the relationships among the components of OpenStack.
 
-(insert diagram + look for higher-level one)
+![ ](https://cloud.githubusercontent.com/assets/17212946/14742353/545ba3ec-0861-11e6-850d-a75e401e3a68.png)
 _Figure 4. OpenStack High-Level Architecture, by Components_
-
 
 ## OpenStack Infrastructure (IaaS) Services: The Core Projects
 The projects commonly referred to as Core were among those first developed by the OpenStack community. They have undergone years of use and testing in production environments, and they are still the most widely deployed OpenStack components. Together, these components are standardized on the same open platform and APIs that power a global network of public and private clouds. Additionally, The Core Projects provide a strategic, viable replacement for traditional capital expenditures on infrastructure.
