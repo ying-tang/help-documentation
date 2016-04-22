@@ -1,3 +1,21 @@
+--- 
+
+layout: page 
+
+title: "WIP-Why-Choose-OpenStack" 
+
+featured: false 
+
+weight: 2 
+
+tags: [OpenStack, Reference] 
+
+author: Leslie Lundquist, Jill Tempelmeyer 
+
+dateAdded: April 14, 2016 
+
+--- 
+
 # Why Choose OpenStack? 
 
 OpenStack™ is an extensive, open source software platform for delivering Infrastructure-as-a-Service (IaaS). Development of OpenStack began in 2010 through the combined efforts of Rackspace and NASA. OpenStack can manage small or large pools of compute, storage, and networking resources in a datacenter, and it can make those resources available and scalable through a centralized dashboard. 
