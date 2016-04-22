@@ -40,7 +40,7 @@ OpenStack™ is an extensive, open source software platform for delivering Infra
 
 _Trends: Supporting Figures (need to be updated)_
 
-(photo goes here)
+![ ](https://cloud.githubusercontent.com/assets/17212946/14742265/ceec47ac-0860-11e6-8373-c009cf2261cf.png)
 _Figure 1. OpenStack Representation by Industry (OpenStack User Survey, April 2016)_
 
 ![ ](https://cloud.githubusercontent.com/assets/17212946/14742082/0a252470-0860-11e6-9cd3-fffe53145c34.png)
