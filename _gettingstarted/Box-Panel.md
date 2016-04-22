@@ -2,7 +2,7 @@
 
 layout: page 
 
-title: "WIP - Box Panel User Guide" 
+title: "Box Panel User Guide" 
 
 featured: false 
 
