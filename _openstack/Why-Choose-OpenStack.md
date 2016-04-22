@@ -2,7 +2,7 @@
 
 layout: page 
 
-title: "WIP-Why-Choose-OpenStack" 
+title: "Why-Choose-OpenStack" 
 
 featured: false 
 
@@ -10,7 +10,11 @@ weight: 2
 
 tags: [OpenStack, Reference] 
 
-author: Leslie Lundquist, Jill Tempelmeyer 
+author: Leslie Lundquist
+
+formattedBy: Jillian Tempelmeyer
+
+figuresResearch: Jillian Tempelmeyer
 
 dateAdded: April 14, 2016 
 
