@@ -6,7 +6,7 @@ title: "WIP-Why-Choose-OpenStack"
 
 featured: false 
 
-weight: 1 
+weight: 2
 
 tags: [OpenStack, Reference] 
 
