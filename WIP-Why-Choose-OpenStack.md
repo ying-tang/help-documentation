@@ -24,7 +24,7 @@ _Trends: Supporting Figures (need to be updated)_
 
 _Figure 1. OpenStack Representation by Industry (OpenStack User Survey, Nov 2014)_
 
-
+![ ](https://github.com/JillianFaith/help-documentation/blob/patch-4/img/Screen%20Shot%202016-04-21%20at%207.27.27%20PM.png)
 
 _Figure 2. Common Horizontal Frameworks Running on OpenStack (OpenStack User Survey, Nov 2014)_
 
