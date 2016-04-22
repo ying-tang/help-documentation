@@ -36,6 +36,15 @@ To get started with Box Panel, log in.
 3. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
 5. After logging in, you will be directed automatically to the Box Panel Dashboard UI.
 
+## Using Lock Box to Log In
++
++You will receive your `cloud_admin` credentials to your private OpenStack cluster through the Box Panel Lock Box. Your credentials should look like this:
++
++{% highlight bash %} URL: https://customer_name.openstack.blueboxgrid.com User name: **Specified Username** Password: **Specified Password** {% endhighlight %}
++
++Navigate to the above URL. You can then use your **Specified Username** and **Specified Password** to log in.
+
+
 ## Navigating the Box Panel Dashboard
 
 From the Box Panel Dashboard, you can see a consolidated asset view of all of your Blue Box Dedicated and Local instances on one screen.
