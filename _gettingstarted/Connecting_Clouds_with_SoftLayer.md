@@ -23,6 +23,10 @@ Do note, SoftLayer private network traffic is segmented from the public internet
 
 The document assumes that each IBM Blue Box cloud you are planning to connect has been deployed under the same SoftLayer account. If you order multiple clouds as an IBM Blue Box customer, this assumption should be true automatically.
 
+### Known Limitations:
+
+Traffic from instances that have a floating IP associated with them will have SNAT translation performed **before traversing** the SoftLayer private network.  If the customer's application is sensitive to the source address being translated, instances with floating IPs cannot be used.
+
 ### To Initiate Network Connectivity
 
 1. If your IBM Blue Box cloud already is deployed, open an IBM Blue Box support ticket and request access to the SoftLayer private network.
