@@ -38,16 +38,17 @@ OpenStack™ is an extensive, open source software platform for delivering Infra
 
 **OpenStack Marketplace**: OpenStack customers have lot of choices: service providers, vendors, system integrators, distributions, trainers, consultants, and so on. To help you make informed decisions, the OpenStack Marketplace offers a central repository of information and reviews related to OpenStack vendors, products, training, consultants, and other services.
 
-_Trends: Supporting Figures (need to be updated)_
+_Current Marketplace Trends: Supporting Figures_
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/14742265/ceec47ac-0860-11e6-8373-c009cf2261cf.png)
 _Figure 1. OpenStack Representation by Industry (OpenStack User Survey, April 2016)_
+![ ](https://cloud.githubusercontent.com/assets/17212946/14742265/ceec47ac-0860-11e6-8373-c009cf2261cf.png)
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/14742082/0a252470-0860-11e6-9cd3-fffe53145c34.png)
 _Figure 2. Workloads and Frameworks Running on OpenStack (OpenStack User Survey, April 2016)_
+![ ](https://cloud.githubusercontent.com/assets/17212946/14742082/0a252470-0860-11e6-9cd3-fffe53145c34.png)
 
-![ ](photo goes here)
 _Figure 3. OpenStack Software Development (Projects under The Big Tent, November 2015)_
+![ ](photo goes here)
+
 
 ## OpenStack: An Overview by Components
 The OpenStack platform is a collection of services, separated into functional components. Together, a few core components provide capabilities in your data center for computing, object and block storage, and networking, with a centralized dashboard for managing all of these resources. These core services are integrated together through a set of supporting services, described in the next sections of this document. The following figure illustrates the relationships among the components of OpenStack.
