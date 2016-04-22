@@ -43,7 +43,7 @@ _Trends: Supporting Figures (need to be updated)_
 (photo goes here)
 _Figure 1. OpenStack Representation by Industry (OpenStack User Survey, April 2016)_
 
-(photo goes here)
+![ ](https://cloud.githubusercontent.com/assets/17212946/14742082/0a252470-0860-11e6-9cd3-fffe53145c34.png)
 _Figure 2. Workloads and Frameworks Running on OpenStack (OpenStack User Survey, April 2016)_
 
 ![ ](photo goes here)
