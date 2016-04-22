@@ -47,7 +47,7 @@ _Figure 2. Workloads and Frameworks Running on OpenStack (OpenStack User Survey,
 ![ ](https://cloud.githubusercontent.com/assets/17212946/14742082/0a252470-0860-11e6-9cd3-fffe53145c34.png)
 
 _Figure 3. OpenStack Software Development (Projects under The Big Tent, November 2015)_
-![ ](photo goes here)
+![ ]()
 
 
 ## OpenStack: An Overview by Components
@@ -184,7 +184,7 @@ OpenStack functions well across many industry verticals and across diverse use c
 
 ## Using Third-Party Tools with OpenStack
 
-OpenStack integrates well with popular third-party cloud operations, development,  and management tools available. Third-party tools may include Software Developer Kits (SDKs) for the OpenStack APIs, orchestration tools, monitoring tools, logging tools, and provisioning tools. In realistic cloud deployments, it is inevitable that you’ll use some other open source tools. This section lists some types of tools that are widely used along with OpenStack. Note that some proprietary OpenStack distributions may not require any of these tools, because they usually include custom equivalents.
+OpenStack integrates well with popular third-party cloud operations, development, and management tools available. Third-party tools may include Software Developer Kits (SDKs) for the OpenStack APIs, orchestration tools, monitoring tools, logging tools, and provisioning tools. In realistic cloud deployments, it is inevitable that you’ll use some other open source tools. This section lists some types of tools that are widely used along with OpenStack. Note that some proprietary OpenStack distributions may not require any of these tools, because they usually include custom equivalents.
 
 **SDKs**: OpenStack provides two ways to manage your compute, storage, and networking resources in your datacenters: Dashboard and Service Endpoints. OpenStack Service Endpoints are exposed through programmable interfaces (REST APIs). One can access these APIs through any REST client, such as the Client Tools available as part of the OpenStack project. SDKs to work with these APIs also are available for various programming languages.
  
