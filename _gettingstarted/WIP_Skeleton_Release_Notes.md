@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Release Notes 2.X.X
+title: Release Notes 3.0
 featured: false
 weight: 5
 tags: [release, features, gettingstarted]
@@ -12,15 +12,15 @@ author: Leslie Lundquist
 
 # Release Notes (DRAFT)
 
-#### Release 2.X.X    created     April 22, 2016
+#### Release 3.0    created     April 22, 2016
 
 # **Summary of New Features in Latest Release**
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the Dedicated and Local Cloud offerings.  The new capabilities of IBM Blue Box Dedicated and Local Cloud include:  
 
-1.  [OpenStack Power Compute Node Support (Habeñero and Firestone).](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#)
-
-2.  [Openstack Mitaka Support.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#)
+1.  [Openstack Mitaka Support.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#)
+ 
+2.[OpenStack Power Compute Node Support (Habeñero and Firestone).](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#)
 
 3.  [Federated keystone across multiple Blue Box clouds.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#)
 
@@ -50,19 +50,19 @@ For additional user documentation, please refer to the [main Help page.](http://
 
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/general_product_overview/).
 
-#### OpenStack Power Compute Node Support (Habeñero and Firestone).
 #### Openstack Mitaka Support.
+#### OpenStack Power Compute Node Support (Habeñero and Firestone).
 #### Federated keystone across multiple Blue Box clouds.
-#### Federate Keystone to External Identity Provider
-#### Hybrid Ceph Storage Support in BBC Local
-#### I/O Optimized and High Storage Compute Nodes Support for BBC Local
-#### Network connectivity to customer Bare Metal
-#### Box Panel Launched in China
-#### 10G Vyatta Support
-#### Support for PAYGO billing in BB Dedicated
-#### SVC Cinder Driver support
-#### Higher soft limits for Object Storage of 250 TB
-#### Higher soft limits for Block Storage of 1 PB
+#### Federate Keystone to External Identity Provider.
+#### Hybrid Ceph Storage Support in Blue Box Cloud Local.
+#### I/O Optimized and High Storage Compute Nodes Support for Blue Box Cloud Local.
+#### Network connectivity to customer Bare Metal.
+#### Box Panel Launched in China.
+#### 10G Vyatta Support.
+#### Support for PAYGO billing in Blue Box Dedicated.
+#### SVC Cinder Driver support.
+#### Higher soft limits for Object Storage of 250 TB.
+#### Higher soft limits for Block Storage of 1 PB.
 
 #### **HIPAA and IBM Blue Box Local Cloud**
 
