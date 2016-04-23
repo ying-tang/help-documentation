@@ -34,3 +34,9 @@ However, assuming that you are interested in automating updates to Neutron port 
 {% endhighlight %}
 
 If you would like to see more granular roles in a future release, we can open a feature request to our product team.
+
+#### Known Problem with Horizon can Create User Confusion
+
+A Cloud Admin may see a "Live Migration" option when looking at instances in the Admin panel of Horizon. However, the Live Migration functionality is policy restricted to the "admin" role, which Blue Box retains and does not provide to customers. Horizon will present an error if a non-admin attempts to live migrate an instance.
+ 
+This is a small UI/UX problem in Horizon, in that it offers to do things that Policy will prevent.
