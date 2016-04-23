@@ -102,6 +102,8 @@ SoftLayer Private Network access lets you set up connectivity between two IBM Bl
 
 For more information, please refer to [the main document on this topic.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/Connecting_Clouds_with_SoftLayer/)
 
+For a known limitation, please look [here](http://ibm-blue-box-help.github.io/help-documentation/keystone/RBAC_Definitions/).
+
 #### **Role-Based Access Control (RBAC)**
 
 Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](http://ibm-blue-box-help.github.io/help-documentation/keystone/RBAC_Definitions/).
