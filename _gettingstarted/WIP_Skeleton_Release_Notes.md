@@ -57,6 +57,11 @@ For additional user documentation, please refer to the [main Help page.](http://
 #### Hybrid Ceph Storage Support in Blue Box Cloud Local.
 #### I/O Optimized and High Storage Compute Nodes Support for Blue Box Cloud Local.
 #### Network connectivity to customer Bare Metal.
+
+This feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also needs access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack guest-instance network. This capability is based on OpenStack Ironic.
+
+For Blue Box Dedicated cloud, the bare metal hardware must be in a separate, custoemr-owned SoftLayer account.
+
 #### Box Panel Launched in China.
 #### 10G Vyatta Support.
 #### Support for PAYGO billing in Blue Box Dedicated.
