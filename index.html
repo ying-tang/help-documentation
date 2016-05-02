@@ -63,7 +63,7 @@ layout: default
               <a href="{{site.baseurl}}/troubleshooting" class="main-link">
                 <h1>Trouble<span>shooting</span></h1>
               </a>
-              {% for page in site.troubleshooting limit:5 %}
+              {% for page in site.troubleshooting limit:3 %}
                 {% if page.title %}
                   <a href="{{ site.baseurl }}/{{page.url}}">{{page.title}}</a>
                 {% endif %}

@@ -3,7 +3,7 @@ layout: page
 title: General Product Overview
 featured: false
 weight: 10
-tags: [release, features, gettingstarted, overview]
+tags: [getting started, release, features, overview]
 date: March 29, 2016
 author: Leslie Lundquist
 ---

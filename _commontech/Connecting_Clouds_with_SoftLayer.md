@@ -3,7 +3,7 @@ layout: page
 title: Utilizing SoftLayer's Private Network with Multiple IBM Blue Box Environments
 featured: false
 weight: 13
-tags: [SoftLayer, network, private network, gettingstarted]
+tags: [getting started, SoftLayer, network, private network]
 dateAdded: March 22nd, 2016
 author: Shaival Choski
 editor: Leslie Lundquist, Jesse Proudman

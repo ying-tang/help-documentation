@@ -51,6 +51,36 @@
    } {% unless forloop.last %},{% endunless %}
   {% endfor %}
   ,
+  {% for page in site.userguides %}
+   {
+     {% if page.title != nil %}
+       "title"    : "{{ page.title | escape }}",
+       "tags"     : "{{ page.tags | join: ',' }}",
+       "url"      : "{{ site.baseurl }}{{ page.url }}"
+     {% endif %}
+   } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  ,
+  {% for page in site.commontech %}
+   {
+     {% if page.title != nil %}
+       "title"    : "{{ page.title | escape }}",
+       "tags"     : "{{ page.tags | join: ',' }}",
+       "url"      : "{{ site.baseurl }}{{ page.url }}"
+     {% endif %}
+   } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  ,
+  {% for page in site.commonadmin %}
+   {
+     {% if page.title != nil %}
+       "title"    : "{{ page.title | escape }}",
+       "tags"     : "{{ page.tags | join: ',' }}",
+       "url"      : "{{ site.baseurl }}{{ page.url }}"
+     {% endif %}
+   } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  ,
   {% for page in site.gettingstarted %}
    {
      {% if page.title != nil %}

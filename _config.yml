@@ -52,6 +52,15 @@ collections:
   gettingstarted:
     output: true
     permalink: /gettingstarted/:path/
+  commontech:
+    output: true
+    permalink: /gettingstarted/commontech/:path/
+  commonadmin:
+    output: true
+    permalink: /gettingstarted/commonadmin/:path/
+  userguides:
+    output: true
+    permalink: /gettingstarted/userguides/:path/
   glance:
     output: true
     permalink: /glance/:path/

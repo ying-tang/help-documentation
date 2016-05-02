@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Frequently Asked Questions"
+title:  "Technical FAQ"
 featured: true
 weight: 8
 tags: [getting started, faq, resize, instance]

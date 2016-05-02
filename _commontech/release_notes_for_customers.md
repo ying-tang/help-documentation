@@ -3,7 +3,7 @@ layout: page
 title: Release Notes 2.1
 featured: false
 weight: 5
-tags: [release, features, gettingstarted]
+tags: [getting started, release, features]
 dateAdded: March 31, 2016
 author: Leslie Lundquist
 ---

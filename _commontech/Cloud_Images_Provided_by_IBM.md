@@ -3,7 +3,7 @@ layout: page
 title: Cloud Images Provided by IBM Blue Box
 featured: false
 weight: 13
-tags: [images, glance, image-create, instance, gettingstarted]
+tags: [getting started, images, glance, image-create, instance]
 dateAdded: March 9th, 2016
 author: Yanqi Dou
 editor: Leslie Lundquist
