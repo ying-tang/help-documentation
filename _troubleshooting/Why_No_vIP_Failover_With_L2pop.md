@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Why Can't I Use L2pop When I Want My vIP Instance to Failover?
+title: Why can't I use L2pop when I want my vIP instances to failover?
 featured: false
 weight: 13
 tags: [troubleshooting, network, failover ]
