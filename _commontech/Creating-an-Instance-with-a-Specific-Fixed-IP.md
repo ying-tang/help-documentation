@@ -3,7 +3,7 @@ layout: page
 title:  "Creating an Instance with a Specific Fixed IP"
 featured: true
 weight: 2
-tags: [instance, fixed IP, getting started]
+tags: [getting started, instance, fixed IP]
 dateAdded: January 2016
 ---
 

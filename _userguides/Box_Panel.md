@@ -1,22 +1,13 @@
---- 
-
+---
 layout: page 
-
 title: "Box Panel User Guide" 
-
 featured: false 
-
 weight: 2 
-
 tags: [getting started, Box Panel] 
-
 author: Jill Tempelmeyer 
-
 editor: Leslie Lundquist
-
 dateAdded: April 14, 2016 
-
---- 
+---
 
 
 # Getting Started with Box Panel

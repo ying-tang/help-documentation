@@ -25,6 +25,9 @@ layout: default
               {% assign count-helper = count-helper | plus: 1 %}
             {% endif %}
           {% endfor %}
+        {% elsif x == 'gettingstarted'%}
+          {% assign counter = 0 %}
+          {% assign counter = site.commontech.size | plus:site.commonadmin.size | plus:site.userguides.size %}
         {% else %}
           {% assign counter = 0 %}
           {% for item in site[x] %}
@@ -46,7 +49,7 @@ layout: default
 
 
 
-        {% if page.tags %}
+        {% if page.tags.size > 0 %}
         <div class="post-data">
           <img src='{{ site.baseurl }}/img/avatar.png' />
           <ul class="author--info">

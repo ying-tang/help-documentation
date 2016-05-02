@@ -3,7 +3,7 @@ layout: page
 title:  "External reference materials"
 featured: true
 weight: 11
-tags: [getting started, reference, external]
+tags: [openstack, reference, external]
 ---
 
 [OpenStack Homepage](http://www.openstack.org)
