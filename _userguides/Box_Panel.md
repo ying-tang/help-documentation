@@ -188,7 +188,7 @@ A software-based firewall, or **Security Group**, must be enabled before the ins
 
 To receive Internet traffic, you also must assign a **Floating IP** address that routes to your machine.
 
-**To assign a Floating IP:**
+**To assign a floating IP address:**
 
 1. Click **Instances** from the **Compute** drop-down menu of your project.
 2. Find your Virtual Machine, then select **Edit Instance**.
@@ -265,14 +265,14 @@ To view a list of Subscribers for a selected ticket, click on the **Subscribers*
 
 To have a written conversation with one of our Blue Box support team experts about the topic of this ticket, you can click the green **Post Reply** button, or you can use the live **Chat** feature by clicking on **Chat**. All live chat sessions are recorded and added to the ticket as a transcript.
 
-** Using the Chat Feature to chat with Blue Box Support**
+**Using the Chat Feature to chat with Blue Box Support**
 
 1. Click the **Chat** tab from your Dashboard. This action automatically directs you to a chat room with support staff. 
 2. From here, you are able to view the support staff members join your conversation on the left-hand side of the chat room.
 3. Once a support member joins, you can compose and send messages from the chat bar. If you need to enter a new line during your chat, press **Control/Command + Enter**.
 4. If you need to escalate your support issue, please call 1-800-613-4305 ext 1.
 
-+**Note:** Each customer chat room is private. This means that only the contacts within your customer account and the Blue Box support staff have access to your transcript. No sensitive data (such as credit card numbers, or private keys) persists.
+**Note:** Each customer chat room is private. This means that only the contacts within your customer account and the Blue Box support staff have access to your transcript. No sensitive data (such as credit card numbers, or private keys) persists.
 
 ### Managing Billing 
 
@@ -282,7 +282,7 @@ To view your contracts and monthly billing reports, simply click the **Account**
 
 1. Provide the Blue Box Support team with the billing manager’s name, email, and other contact information associated with your company.
 2. After your company’s billing information is received by the IBM Finance, a contract is created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. This information is documented and written on your contract. 
-3. A billing start date will be set so that your solution can begin to be billed (typically, the start date is the same as your deployment date, and billing repeats monthly).
+3. A billing start date will be set so that your cloud usage can be billed (typically, the start date is the same as your deployment date, and billing repeats monthly).
 
 Once you’re able to log into Box Panel, you can view your billing information by selecting **Billing** under the **Account** drop-down menu. From here, you can view your **Account Services** and **Billing History**.
 
