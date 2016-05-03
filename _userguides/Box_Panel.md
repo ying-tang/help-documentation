@@ -12,7 +12,7 @@ dateAdded: April 14, 2016
 
 # Getting Started with Box Panel
 
-The Box Panel interface gives you a single, consolidated view of enterprise assets deployed in your Blue Box Dedicated and Local environments. Based on OpenStack Horizon, its self-service access lets you create support tickets, leverage central authentication, monitor reporting functions, and view your invoices, easily. 
+The Box Panel interface gives you a single, consolidated view of assets deployed in your **IBM Blue Box Dedicated** and **IBM Blue Box Local** cloud environments. Its self-service access lets you create support tickets, leverage central authentication for logins and user permissions, monitor various functions, and view your invoices, easily. 
 
 This user guide gives you an end-to-end overview, so you can get started using Box Panel to monitor and control your IBM Blue Box Cloud. This document applies to Box Panel Version 3.8.3 and later.
 
@@ -22,12 +22,12 @@ To get started with Box Panel, log in.
 
 1. Go to the URL `https://boxpanel.bluebox.net` to be directed to the login page.
 2. Log into your Box Panel account with the login credentials provided by the Blue Box Support Team. If you are a **Secondary** contact and you don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
-3. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
-5. After logging in, you will be directed automatically to the Box Panel Dashboard UI.
+3. If you do not yet have a Box Panel account, please refer to the **Billing** section for instructions on how to get an account.
+5. After logging in, you'll be directed automatically to the Box Panel Dashboard.
 
-## Using Lock Box to Log In
+## Using Lockbox to Log In
 
-You will receive your `cloud_admin` credentials to your private OpenStack cluster through the Box Panel Lock Box. Your credentials should look like this:
+Initially, you will receive `cloud_admin` credentials for your private cloud (OpenStack cluster) through the Box Panel Lockbox. Your credentials should look like this:
 
  {% highlight bash %}
 
@@ -39,12 +39,12 @@ Password: **Your Specified Password**
 
 {% endhighlight %}
 
-Navigate to the above URL. You can then use your **Your Specified Username** and **Your Specified Password** to log in.
+To get started, first navigate to the URL provided in your Lockbox. Then you can use **Your Specified Username** and **Your Specified Password** to log in.
 
 
 ## Navigating the Box Panel Dashboard
 
-From the Box Panel Dashboard, you can see a consolidated asset view of all of your Blue Box Dedicated and Local instances on one screen.
+From the Box Panel Dashboard, you can see a consolidated asset view of all of your **IBM Blue Box Dedicated** and **IBM Blue Box Local** instances, on one screen.
 
 The top of the Dashboard displays the infrastructure currently in use, with your list of hosts. 
 
@@ -60,9 +60,9 @@ On the right, additional details related to your account summary are displayed, 
 
 A **Project** is a group of resources that can be asssigned to a user or a group of users.
 
-**Users** include the following four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
+**Users** may include four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
 
-This release of IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
+This release of IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, which provides the underlying security framework, or more information about **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 ## Creating a Project
 
