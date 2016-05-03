@@ -9,14 +9,29 @@ editor: Leslie Lundquist
 dateAdded: April 14, 2016 
 ---
 
-
-# Getting Started with Box Panel
+## Getting Started with Box Panel
 
 The Box Panel interface gives you a single, consolidated view of assets deployed in your **IBM Blue Box Dedicated** and **IBM Blue Box Local** cloud environments. Its self-service access lets you create support tickets, leverage central authentication for logins and user permissions, monitor various functions, and view your invoices, easily. 
 
 This user guide gives you an end-to-end overview, so you can get started using Box Panel to monitor and control your IBM Blue Box Cloud. This document applies to Box Panel Version 3.8.3 and later.
 
-## Logging In 
+###Table of Contents
+
+ * [Logging In](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#logging-in)
+ * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
+ * [Navigating the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#navigating-the-bax-panel-dashboard)
+ * [Managing Users and Projects](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-users-and-projects)
+ * [Creating a Project](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#creating-a-project)
+ * [Disabling a Project](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#disabling-a-project)
+ * [Managing Machines and Resources](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-machines-and-resources)
+ * [Working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#working-with-cloud-images)
+ * [Managing Access and Security with Security Groups](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-access-and-security-with-security-groups)
+ * [Creating a Storage Volume](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#creating-a storage-volume)
+ * [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support)
+ * [Managing Billing](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-billing)
+
+
+### Logging In 
 
 To get started with Box Panel, log in. 
 
@@ -25,7 +40,7 @@ To get started with Box Panel, log in.
 3. If you do not yet have a Box Panel account, please refer to the **Billing** section for instructions on how to get an account.
 5. After logging in, you'll be directed automatically to the Box Panel Dashboard.
 
-## Using Lockbox to Log In
+### Getting Your Credentials From Lockbox
 
 Initially, you will receive `cloud_admin` credentials for your private cloud (OpenStack cluster) through the Box Panel Lockbox. Your credentials should look like this:
 
@@ -42,7 +57,7 @@ Password: **Your Specified Password**
 To get started, first navigate to the URL provided in your Lockbox. Then you can use **Your Specified Username** and **Your Specified Password** to log in.
 
 
-## Navigating the Box Panel Dashboard
+### Navigating the Box Panel Dashboard
 
 From the Box Panel Dashboard, you can see a consolidated asset view of all of your **IBM Blue Box Dedicated** and **IBM Blue Box Local** instances, on one screen.
 
@@ -56,7 +71,7 @@ Immediately below, you can view your bandwidth usage and any support tickets rel
 
 On the right, additional details related to your account summary are displayed, including your **Lock Box Messages**, **Verbal Password**, **Bandwidth Quota**, and **Backup Quota**. 
 
-## Managing Users and Projects
+### Managing Users and Projects
 
 A **Project** is a group of resources that can be asssigned to a user or a group of users.
 
@@ -64,7 +79,7 @@ A **Project** is a group of resources that can be asssigned to a user or a group
 
 This release of IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, which provides the underlying security framework, or more information about **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
-## Creating a Project
+### Creating a Project
 
 As shown in the **Managing Users and Projects** document, only users with `cloud_admin` roles can create projects and users.
 
@@ -89,7 +104,7 @@ To add or delete a user, click the **Modify Users** drop-down under the **Action
 6. Assign their role from the **Role** drop-down.
 7. Confirm that you would like to create the user by clicking the **Create User** button.
 
-## Disabling a Project
+### Disabling a Project
 
 **Consequences of disabling projects:**
 Users with the `cloud_admin` role can enable and disable projects. When you disable a project, it has these consequences:
@@ -106,7 +121,7 @@ Users with the `cloud_admin` role can enable and disable projects. When you disa
 3. Check each box associated with the project(s) you would like to disable.
 4. Confirm that you would like to disable the project by clicking the **Disable Projects** button.
 
-## Managing Machines and Resources
+### Managing Machines and Resources
 
 **Creating a Custom Flavor**
 
@@ -141,7 +156,7 @@ On the **Instances** page, find your machine in the list and select the **Action
 
 ![Image of Dashboard 3](https://github.com/help-documentation/img/Dashboard 3.png)
 
-## Working with Cloud Images 
+### Working with Cloud Images 
 
 The **Cloud Images** page in Box Panel is available to customers who have at least one cloud, and who are either a **Primary** or a **Technical** customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
 
@@ -158,7 +173,7 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 ![Image of Dashboard 5](https://github.com/help-documentation/img/Dashboard 5.png) 
 
-## Managing Access and Security with Security Groups
+### Managing Access and Security with Security Groups
 
 A software-based firewall, or **Security Group**, must be enabled before the instance can receive external traffic.
 
@@ -185,7 +200,7 @@ To receive Internet traffic, you also must assign a **Floating IP** address that
 8. In the next Modal window, select the **Floating IP** from your **Pool**.
 9. Finally, click **Allocate IP**.
 
-## Creating a Storage Volume
+### Creating a Storage Volume
 
 **To create a new volume for your Virtual Machine:**
 
@@ -201,7 +216,7 @@ To receive Internet traffic, you also must assign a **Floating IP** address that
 2. From the Modal window, select an instance from the **Attach to Instance** drop-down.
 3. Click the **Attach Volume** button to assign the volume to your instance.
 
-## Getting Support 
+### Getting Support 
 
 **Note: For immediate support, you can call Blue Box Support at 1-800-613-4305 or email us at support@bluebox.net.**
 
@@ -259,7 +274,7 @@ To have a written conversation with one of our Blue Box support team experts abo
 
 +**Note:** Each customer chat room is private. This means that only the contacts within your customer account and the Blue Box support staff have access to your transcript. No sensitive data (such as credit card numbers, or private keys) persists.
 
-## Managing Billing 
+### Managing Billing 
 
 To view your contracts and monthly billing reports, simply click the **Account** tab in the Box Panel Dashboard, then click the **Billing** tab.
 
