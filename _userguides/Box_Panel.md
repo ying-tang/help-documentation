@@ -56,7 +56,7 @@ Immediately below, you can view your bandwidth usage and any support tickets rel
 
 ![Image of Dashboard 2](https://github.com/help-documentation/img/Dashboard 2.png)
 
-On the right, additional details related to your account summary are displayed. 
+On the right, additional details related to your account summary are displayed, including your **Lock Box Messages**, **Verbal Password**, **Bandwidth Quota**, and **Backup Quota**. 
 
 ## Managing Users and Projects
 
@@ -64,7 +64,7 @@ A **Project** is a group of resources that can be asssigned to a user or a group
 
 **Users** include the following four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
 
-Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, **groups**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
+Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 ## Creating a Project
 
@@ -238,9 +238,9 @@ In most cases, you'll want to open a support ticket to get support. By using a t
  9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box. 
  10. Finally, click the **Create Ticket** box. 
 
-**Using Your Support Ticket
+**Using Your Support Ticket**
 
-Anytime after a ticket is created, you can see the text associated with that ticket, by clicking on that support ticket from the Dashboard. The text may include references to other tickets, as well as chat history and correspondence related to the selected ticket. The status of the support ticket is highlighted on the orange button in the top left corner. 
+Anytime after a ticket is created, you can see the text associated with that ticket, by clicking on that support ticket from your Dashboard. The ticket's text may include references to other tickets, as well as chat history and any correspondence related to your selected ticket. The status of your support ticket is highlighted on the orange button in the top left corner. Status indicators include OPEN, PENDING COMPLETION, PARKED, and so forth.
 
 ![Image of Dashboard 6](https://github.com/help-documentation/img/Dashboard 6.png) 
 
@@ -251,6 +251,15 @@ To view a list of Subscribers for a selected ticket, click on the **Subscribers*
 ![Image of Dashboard 7](https://github.com/help-documentation/img/Dashboard 7.png)
 
 To have a written conversation with one of our Blue Box support team experts about the topic of this ticket, you can click the green **Post Reply** button, or you can use the live **Chat** feature by clicking on **Chat**. All live chat sessions are recorded and added to the ticket as a transcript.
+
+** Using the Chat Feature to chat with Blue Box Support**
+
+1. Click the **Chat** tab from your Dashboard. This action automatically directs you to a chat room with support staff. 
+2. From here, you are able to view the support staff members join your conversation on the left-hand side of the chat room.
+3. Once a support member joins, you can compose and send messages from the chat bar. If you need to enter a new line during your chat, press **Control/Command + Enter**.
+4. If you need to escalate your support issue, please call 1-800-613-4305 ext 1.
+
++**Note:** Each customer chat room is private. This means that only the contacts within your customer account and the Blue Box support staff have access to your transcript. No sensitive data (such as credit card numbers, or private keys) persists.
 
 ## Managing Billing 
 
