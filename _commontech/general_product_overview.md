@@ -35,7 +35,7 @@ The IBM Blue Box Cloud hardware substrate varies by offering. You can get more i
 
 You can use the **OpenStack Horizon** interface to monitor your cloud’s performance, or you can use a customized IBM Blue Box product, Box Panel, to view your cloud as well as your resource usage, your network configurations, and other features of your cloud.
 
-You can find more information about Box Panel in the [Box Panel User Guide.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/_commontech/Box_Panel.md)
+You can find more information about Box Panel in the [Box Panel User Guide.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/)
 
 **Cloud Overview: IBM Blue Box Cloud Building Blocks**
 
