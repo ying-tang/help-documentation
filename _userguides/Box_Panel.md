@@ -4,7 +4,7 @@ title: "Box Panel User Guide"
 featured: false 
 weight: 2 
 tags: [getting started, Box Panel] 
-author: Jill Tempelmeyer 
+author: Jill Tempelmeyer and Leslie Lundquist
 editor: Leslie Lundquist
 dateAdded: April 14, 2016 
 ---
