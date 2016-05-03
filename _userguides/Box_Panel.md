@@ -15,7 +15,7 @@ The Box Panel interface gives you a single, consolidated view of assets deployed
 
 This user guide gives you an end-to-end overview, so you can get started using Box Panel to monitor and control your IBM Blue Box Cloud. This document applies to Box Panel Version 3.8.3 and later.
 
-###Table of Contents
+### Table of Contents
 
  * [Logging In](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#logging-in)
  * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
@@ -77,7 +77,7 @@ A **Project** is a group of resources that can be asssigned to a user or a group
 
 **Users** may include four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
 
-This release of IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, which provides the underlying security framework, or more information about **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
+This release of IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, which provides the underlying security framework, or more information about **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 ### Creating a Project
 
