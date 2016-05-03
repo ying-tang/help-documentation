@@ -12,36 +12,34 @@ dateAdded: April 14, 2016
 
 # Getting Started with Box Panel
 
-The Box Panel interface provides a single, consolidated view of enterprise assets deployed in your Blue Box Dedicated and Local environments. Based on OpenStack Horizon, its self-service access lets users create support tickets, leverage central authentication, monitor reporting functions, and view their invoicing solutions, easily. 
+The Box Panel interface gives you a single, consolidated view of enterprise assets deployed in your Blue Box Dedicated and Local environments. Based on OpenStack Horizon, its self-service access lets you create support tickets, leverage central authentication, monitor reporting functions, and view your invoices, easily. 
 
-This user guide provides an end-to-end overview to help you get started using Box Panel Version 3.8.3 and later, so you can monitor and control your IBM Blue Box Cloud. 
+This user guide gives you an end-to-end overview, so you can get started using Box Panel to monitor and control your IBM Blue Box Cloud. This document applies to Box Panel Version 3.8.3 and later.
 
 ## Logging In 
 
 To get started with Box Panel, log in. 
 
-**Logging into your Box Panel Account:**
-
-1. Click the following URL to be directed to the login page: https://boxpanel.bluebox.net.
-2. Log into your Box Panel account with the login credentials provided by the Blue Box Support Team. If you are a **Secondary** contact and don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
+1. Go to the URL `https://boxpanel.bluebox.net` to be directed to the login page.
+2. Log into your Box Panel account with the login credentials provided by the Blue Box Support Team. If you are a **Secondary** contact and you don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
 3. If you do not yet have a Box Panel account, refer to the **Billing** section to set up an account.
 5. After logging in, you will be directed automatically to the Box Panel Dashboard UI.
 
 ## Using Lock Box to Log In
-+
-+You will receive your `cloud_admin` credentials to your private OpenStack cluster through the Box Panel Lock Box. Your credentials should look like this:
 
- ++{% highlight bash %}
-+
-+URL: https://customer_name.openstack.blueboxgrid.com 
-+
-+User name: **Your Specified Username**
-+
-+Password: **Your Specified Password**
-+
-+{% endhighlight %}
+You will receive your `cloud_admin` credentials to your private OpenStack cluster through the Box Panel Lock Box. Your credentials should look like this:
 
-+Navigate to the above URL. You can then use your **Your Specified Username** and **Your Specified Password** to log in.
+ {% highlight bash %}
+
+URL: https://customer_name.openstack.blueboxgrid.com 
+
+User name: **Your Specified Username**
+
+Password: **Your Specified Password**
+
+{% endhighlight %}
+
+Navigate to the above URL. You can then use your **Your Specified Username** and **Your Specified Password** to log in.
 
 
 ## Navigating the Box Panel Dashboard
@@ -64,7 +62,7 @@ A **Project** is a group of resources that can be asssigned to a user or a group
 
 **Users** include the following four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
 
-Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
+This release of IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects] (http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 ## Creating a Project
 
@@ -112,7 +110,7 @@ Users with the `cloud_admin` role can enable and disable projects. When you disa
 
 **Creating a Custom Flavor**
 
-In OpenStack, a **Flavor** is a template for describing the resource configuration of a Virtual Machine.
+In OpenStack, a **Flavor** is a predefined template for describing the resource configuration of a Virtual Machine.
 
 **To create a Custom Flavor:**
 
