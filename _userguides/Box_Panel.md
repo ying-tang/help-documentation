@@ -30,10 +30,18 @@ To get started with Box Panel, log in.
 ## Using Lock Box to Log In
 +
 +You will receive your `cloud_admin` credentials to your private OpenStack cluster through the Box Panel Lock Box. Your credentials should look like this:
+
+ ++{% highlight bash %}
 +
-+{% highlight bash %} URL: https://customer_name.openstack.blueboxgrid.com User name: **Specified Username** Password: **Specified Password** {% endhighlight %}
++URL: https://customer_name.openstack.blueboxgrid.com 
 +
-+Navigate to the above URL. You can then use your **Specified Username** and **Specified Password** to log in.
++User name: **Your Specified Username**
++
++Password: **Your Specified Password**
++
++{% endhighlight %}
+
++Navigate to the above URL. You can then use your **Your Specified Username** and **Your Specified Password** to log in.
 
 
 ## Navigating the Box Panel Dashboard
@@ -42,7 +50,7 @@ From the Box Panel Dashboard, you can see a consolidated asset view of all of yo
 
 The top of the Dashboard displays the infrastructure currently in use, with your list of hosts. 
 
-![Image of Dashboard1](https://github.com/help-documentation/img/Dashboard1.png)
+![Image of Dashboard 1](https://github.com/help-documentation/img/Dashboard1.png)
 
 Immediately below, you can view your bandwidth usage and any support tickets related to your cloud, along with your status. 
 
