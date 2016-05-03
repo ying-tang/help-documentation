@@ -37,7 +37,7 @@ You can use the **OpenStack Horizon** interface to monitor your cloud’s perfor
 
 You can find more information about Box Panel in the [Box Panel User Guide.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/)
 
-**Cloud Overview: IBM Blue Box Cloud Building Blocks**
+### Cloud Overview: IBM Blue Box Cloud Building Blocks
 
 Every IBM Blue Box Cloud, Dedicated or Local, starts with a cluster of controller and compute nodes:
 
