@@ -68,7 +68,7 @@ Optionally, you can select from the following compute node extensions to add to 
 
 Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Both types of expansion nodes—IO optimized and high storage capacity—allow better coverage of instance types and workloads. Starting with the 2.1.0 release, compute types have been grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 
-**Optional Hybrid Block Storage Nodes **
+**Optional Hybrid Block Storage Nodes**
 
 Hybrid Block Storage nodes provide lower cost and higher density Block Storage.  
 
