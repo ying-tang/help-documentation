@@ -18,7 +18,7 @@ To deploy the **IBM Blue Box Dedicated** offering, a physical **Site Controller*
 
 To deploy the **IBM Blue Box Local** cloud offering, a Site Controller logical machine must be co-located within your IBM Local Cloud data center, and it will communicate with a Central Site Controller machine at IBM Blue Box.
 
-Each version of **Ursula** on the Site Controller is tailored to initialize and run a specific version of OpenStack and IBM Blue Box Cloud, by setting up the proper environment variables and other aspects of your customized cloud configuration. The particular version of Ursula described in this document is 2.10, and the environment which it creates for your cloud is described in the next section.
+Each version of **Ursula** on the Site Controller is tailored to initialize and run a specific version of OpenStack and IBM Blue Box Cloud, by setting up the proper environment variables and other aspects of your customized cloud configuration. The particular version of Ursula described in this document is 2.1.0, and the environment which it creates for your cloud is described in the next section.
 
 **Software Environment Created by Ursula**
 
@@ -35,7 +35,7 @@ The IBM Blue Box Cloud hardware substrate varies by offering. You can get more i
 
 You can use the **OpenStack Horizon** interface to monitor your cloud’s performance, or you can use a customized IBM Blue Box product, Box Panel, to view your cloud as well as your resource usage, your network configurations, and other features of your cloud.
 
-You can find more information about Box Panel in the [Box Panel User Guide.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/)
+You can find more information about how to use Box Panel in the [Box Panel User Guide.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/)
 
 ### Cloud Overview: IBM Blue Box Cloud Building Blocks
 
