@@ -34,9 +34,9 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 For additional user documentation, please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
 
-[A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/general_product_overview/).
+[A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
-A summary of features from previous releases that will affect users of this release is available [at the end of this document.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/release_notes_for_customers.md/#summary-of-new-features-from-previous-releases-that-will-affect-customer-use-of-this-release)
+A summary of features from previous releases that will affect users of this release is available [at the end of this document.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/_commontech/release_notes_for_customers.md/#summary-of-new-features-from-previous-releases-that-will-affect-customer-use-of-this-release)
 
 #### **IBM Blue Box Cloud Building Blocks**
 
