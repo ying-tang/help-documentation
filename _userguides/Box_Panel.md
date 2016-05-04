@@ -186,7 +186,7 @@ A software-based firewall, or **Security Group**, must be enabled for an instanc
 5. Encode a single **Rule** at a time for each **Port** associated with the security group to which your Virtual Machines belong.
 6. Click the **Add** button.
 
-To receive Internet traffic, you also must assign a **Floating IP** address that routes packets to your machine. Generally, FLoating IP addresses are assigned from an existing **Pool**, therefore you cannot select them aribtrarily. Your possible choices will be displayed for you.
+To receive Internet traffic, you also must assign a **Floating IP** address that routes packets to your machine. Generally, Floating IP addresses are assigned from an existing **Pool**, therefore you cannot select them aribtrarily. Your possible choices will be displayed for you.
 
 **To assign a floating IP address:**
 
@@ -201,6 +201,8 @@ To receive Internet traffic, you also must assign a **Floating IP** address that
 9. Finally, click **Allocate IP**.
 
 ### Creating a Storage Volume
+
+Your IBM Blue Box cloud has storage backed by Ceph clusters.
 
 **To create a new volume for your Virtual Machine:**
 
