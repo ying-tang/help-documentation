@@ -106,7 +106,7 @@ For a known limitation, please look [here](http://ibm-blue-box-help.github.io/he
 
 #### **Role-Based Access Control (RBAC)**
 
-Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](http://ibm-blue-box-help.github.io/help-documentation/keystone/RBAC_Definitions/).
+Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 #### **Additional Cloud Images Available**
 
