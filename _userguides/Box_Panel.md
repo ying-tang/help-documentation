@@ -228,7 +228,7 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 
 1. Open a new ticket from the **Support** page. 
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030139/4a8d4550-1216-11e6-9ddd-16f2ae177e44.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15032587/2f74ce16-1228-11e6-9aba-ce1d1be87d35.png)
 
 2. In the Modal window, your name should show up as the **Ticket Creator.**
 3. Copy additional users in the **CC** field to make them aware of the ticket and track its status. 
@@ -245,7 +245,7 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 6. Include attachments, such as log files, right below the **Description** section. 
 7. If your deployment is for a new cloud, check the **Deployment** box.
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030158/59945a2a-1216-11e6-9733-60f21f6d76b5.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15032633/850d3d4a-1228-11e6-9b37-c20e5d32d9b9.png)
 
 **Note: Steps 8 and 9 can be skipped for non-urgent concerns.**
 
