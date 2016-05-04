@@ -101,7 +101,7 @@ To add or delete a user, click the **Modify Users** drop-down under the **Action
 3. Enter a user name and their email address in the Modal window.
 4. Assign a password.
 5. From the **Primary Project** drop-down, select the primary project for that user.
-6. Assign their role from the **Role** drop-down.
+6. Assign the role using the **Role** drop-down.
 7. Confirm that you would like to create the user by clicking the **Create User** button.
 
 ### Disabling a Project
@@ -112,7 +112,7 @@ Users with the `cloud_admin` role can enable and disable projects. When you disa
 - In the dashboard, users no longer have access to the project from the CURRENT PROJECT list on the Project tab.
 - Users who are members of only the disabled project can no longer log in.
 - You cannot launch instances for a disabled project. Instances that are running already are not terminated automatically. You must stop them manually.
-- The data for a disabled project is maintained so that you can re-enable the project at any time.
+- The data for a disabled project is maintained, so you can re-enable the project at any time.
 
 **To disable a project:**
 
@@ -133,16 +133,16 @@ In OpenStack, a **Flavor** is a predefined template for describing the resource 
 2. Click **Flavors**. Here you will see a list of your current **Flavors**.
 3. Click the **Create Flavor** button.
 4. Enter a name and assign custom configuration information.
-5. If you would like to limit your **Flavor** to a specific project, click the **Flavor Access* tab, and click the **+** symbol to move your **Flavor** to the **Selected Projects** section.
+5. If you want to limit your **Flavor** to a specific project, click the **Flavor Access** tab, and click the **+** symbol to move your **Flavor** to the **Selected Projects** section.
 
 **Adding a Virtual Machine** 
 
 1. From the **Project** menu, select **Instances**.
 2. Click the **Launch Instance** button.
 3. Enter an **Instance Name** in the Modal window.
-4. Assign an **Instance Flavor** from the options in the drop-down menu. You can view **Flavor Details** when you select your option to receive feedback on whether you have enough quota to allow this machine to be built. If the **Instance Flavor** exceeds your consumption quota, you'll be notified before your instance is created.
+4. Assign an **Instance Flavor** from the options in the drop-down menu. If the **Instance Flavor** exceeds your consumption quota, you'll be notified before your instance is created. (To find out whether you have enough quota to allow this machine to be built, you can view **Flavor Details** when you select your option.)
 5. Select a **Boot Source**.
-6. Under the **Access and Security** tab, enter autentication information.
+6. Under the **Access and Security** tab, enter your authentication information.
 7. Under the **Networking** tab, assign your machine to your **Selected Networks**. Your **Available Networks** will be shown in the drop-down menu.
 8. Click **Launch Instance**.
 
@@ -151,8 +151,8 @@ On the **Instances** page, find your machine in the list and select the **Action
 **Deleting an Asset or Virtual Machine**
 
 1. Visit the **Instances** page. 
-2. As long as you have the proper permissions to delete an asset, you can **Power Cycle** the machine’s PDUs, or select **Delete Asset.** 
-3. Confirm that you want to delete the asset by clicking **OK** from the Modal window. Your asset will be deleted permanently. 
+2. If you have the proper permissions to delete an asset, you can **Power Cycle** the machine’s PDUs, or select **Delete Asset.** 
+3. Confirm that you want to delete the asset by clicking **OK** in the Modal window. Your asset will be deleted permanently. 
 
 ![Image of Dashboard 3](https://github.com/help-documentation/img/Dashboard 3.png)
 
@@ -168,25 +168,25 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 1. Hover over the card associated with the image you would like to download. 
 2. Click the card. This click opens a modal window containing download links to the image and Checksum. 
-3. Click the **copy** button to the left of the Image URL. This will add the URL to your clipboard. 
-4. This can also be done using OpenStack APIs. For instructions, click here: https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_gettingstarted/Cloud_Images_Provided_by_IBM.md 
+3. Click the **Copy** button to the left of the Image URL. This click adds the URL to your clipboard. 
+4. This procedure also can be accomplished using OpenStack APIs. For instructions, please see the [main document about Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/) 
 
 ![Image of Dashboard 5](https://github.com/help-documentation/img/Dashboard 5.png) 
 
 ### Managing Access and Security with Security Groups
 
-A software-based firewall, or **Security Group**, must be enabled before the instance can receive external traffic.
+A software-based firewall, or **Security Group**, must be enabled for an instance before it can receive external Internet traffic. Security group *rules* are logically attached to particular *ports* on each specific server or Virtual Machine (VM). Essentially, each rule tells a port whether to accept or deny packets from a particular IP address. Thus, you will be setting up a combination of **Rules** and **Ports** for your security group when you do this task, thereby regulating Internet traffic received.
 
-**To set firewall rules:**
+**To create a security group and set up its firewall rules:**
 
 1. Click **Access and Security** from the **Compute** drop-down menu of your project.
 2. Click the **Create Security Group** button.
-3. Assign a name, then click the **Create Security Group** button from the Modal window.
-4. From the main **Security Group Rules** list, find your new security group and click the **Manage Rules** button. You can also delete a rule from this view.
-5. Add a single **Rule** to the **Port** that your Virtual Machines are members of the security group.
+3. Assign a name to your new security group, then click the **Create Security Group** button in the Modal window.
+4. From the main **Security Group Rules** list, find your new security group and click the **Manage Rules** button. (You also can delete a firewall rule using this **Manage Rules** menu.)
+5. Encode a single **Rule** at a time for each **Port** associated with the security group to which your Virtual Machines belong.
 6. Click the **Add** button.
 
-To receive Internet traffic, you also must assign a **Floating IP** address that routes to your machine.
+To receive Internet traffic, you also must assign a **Floating IP** address that routes packets to your machine. Generally, FLoating IP addresses are assigned from an existing **Pool**, therefore you cannot select them aribtrarily. Your possible choices will be displayed for you.
 
 **To assign a floating IP address:**
 
@@ -207,7 +207,7 @@ To receive Internet traffic, you also must assign a **Floating IP** address that
 1. Visit the **Volumes** page in your project.
 2. Next, click the **Create Volume** button.
 3. From the Modal window, name your volume and add an optional description.
-4. Assign a **Volume Size**. Your **Volume Limits** are displayed when you assign a size, to ensure you stay within your usage quota.
+4. Assign a **Volume Size**. Your **Volume Limits** are displayed when you assign a size, so that you stay within your usage quota.
 5. Click **Create Volume**.
 
 **To assign a volume to your Virtual Machine:**
