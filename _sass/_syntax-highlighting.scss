@@ -9,10 +9,30 @@
         overflow-x: auto;
         word-wrap: normal;
     }
+    
+    table {
+      margin: 0;
+      border: 0;
+    }
+  
+    .code {
+      border: 0;
+      padding: 1em 0;
+    }
+    
+    pre {
+      padding-left: .5em;
+    }
+    
+    .gutter {
+      border: 0;
+      border-right: 1px solid #ddd;
+      padding: 6px 6px 6px 0;
+    }
 
 
     .highlighter-rouge & {
-      background: #eef;
+      background-color: lighten(#E4F2FD, 2%);
     }
 
     .c     { color: #998; font-style: italic } // Comment

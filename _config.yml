@@ -20,6 +20,11 @@ github_username:  twegan
 permalink: /:title
 top-level: /:top-level
 
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
 #variables
 author: /:author
 
