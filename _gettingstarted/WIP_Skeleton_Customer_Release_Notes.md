@@ -36,15 +36,13 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 9. [10G Vyatta Support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-10. [Support for PAYGO billing in Blue Box Dedicated.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+10. [SVC Cinder Driver support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-11. [SVC Cinder Driver support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+11. [Higher soft limits for Object Storage of 250 TB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-12. [Higher soft limits for Object Storage of 250 TB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+12. [Higher soft limits for Block Storage of 1 PB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-13. [Higher soft limits for Block Storage of 1 PB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-
-14. [HIPAA available in Blue Box Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
+13. [HIPAA available in Blue Box Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
 
 For additional user documentation, please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
 
@@ -64,7 +62,6 @@ For Blue Box Dedicated cloud, the bare metal hardware must be in a separate, cus
 
 #### Box Panel Launched in China.
 #### 10G Vyatta Support.
-#### Support for PAYGO billing in Blue Box Dedicated.
 #### SVC Cinder Driver support.
 #### Higher soft limits for Object Storage of 250 TB.
 #### Higher soft limits for Block Storage of 1 PB.
