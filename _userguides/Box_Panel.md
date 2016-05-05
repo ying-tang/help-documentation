@@ -120,13 +120,13 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 
 Anytime after a ticket is created, you can see the text associated with that ticket, by clicking on that support ticket from your Dashboard. The ticket's text may include references to other tickets, as well as chat history and any correspondence related to your selected ticket. The status of your support ticket is highlighted on the orange button in the top left corner. Status indicators include OPEN, PENDING COMPLETION, PARKED, and so forth.
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030210/9702dabc-1216-11e6-9785-3ddcc4c45cd9.png) 
+![ ]() 
 
 From the panel on the left-hand side of the screen, you can select options to create another new support ticket, subscribe to the ticket you have selected (if you want to follow its status), view your tickets, and view all tickets submitted by shared users on your account. 
 
 To view a list of Subscribers for a selected ticket, click on the **Subscribers** link. 
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030220/a98ab0a6-1216-11e6-99d7-f8aac0f3c33c.png)
+![ ]()
 
 To have a written conversation with one of our Blue Box support team experts about the topic of this ticket, you can click the green **Post Reply** button, or you can use the live **Chat** feature by clicking on **Chat**. All live chat sessions are recorded and added to the ticket as a transcript.
 
@@ -141,17 +141,7 @@ To have a written conversation with one of our Blue Box support team experts abo
 
 ### Managing Billing 
 
-To view your contracts and monthly billing reports, simply click the **Account** tab in the Box Panel Dashboard, then click the **Billing** tab.
-
-**To become a new customer:**
-
-1. Provide the Blue Box Support team with the billing manager’s name, email, and other contact information associated with your company.
-2. After your company’s billing information is received by the IBM Finance, a contract is created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. This information is documented and written on your contract. 
-3. A billing start date will be set so that your cloud usage can be billed (typically, the start date is the same as your deployment date, and billing repeats monthly).
-
-Once you’re able to log into Box Panel, you can view your billing information by selecting **Billing** under the **Account** drop-down menu. From here, you can view your **Account Services** and **Billing History**.
-
-By clicking **Billing History**, you can download all of your invoices and save them in PDF format.
+To view your contracts and monthly billing reports, click the **Account** tab in the Box Panel Dashboard, then click the **Billing** tab.
 
 For further billing support, please contact the Blue Box Support Team, and we will be happy to assist you.
 To add additional line items, such as expansion nodes, to your infrastructure, please contact the Blue Box Support Team. We will create a new monthly contract and help to streamline your setup process in any way that we can.
