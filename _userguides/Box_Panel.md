@@ -63,11 +63,11 @@ From the Box Panel Dashboard, you can see a consolidated asset view of all of yo
 
 The top of the Dashboard displays the infrastructure currently in use, with your list of hosts. 
 
-![Image of Dashboard 1](https://github.com/help-documentation/img/Dashboard1.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15029877/322e6f8a-1215-11e6-99f2-fc79cdfa2512.png)
 
 Immediately below, you can view your bandwidth usage and any support tickets related to your cloud, along with your status. 
 
-![Image of Dashboard 2](https://github.com/help-documentation/img/Dashboard 2.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15029845/0d885af6-1215-11e6-9bc8-c93980ca65ce.png)
 
 On the right, additional details related to your account summary are displayed, including your **Lock Box Messages**, **Verbal Password**, **Bandwidth Quota**, and **Backup Quota**. 
 
@@ -154,13 +154,13 @@ On the **Instances** page, find your machine in the list and select the **Action
 2. If you have the proper permissions to delete an asset, you can **Power Cycle** the machine’s PDUs, or select **Delete Asset.** 
 3. Confirm that you want to delete the asset by clicking **OK** in the Modal window. Your asset will be deleted permanently. 
 
-![Image of Dashboard 3](https://github.com/help-documentation/img/Dashboard 3.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15030029/d7934efa-1215-11e6-8e3d-69bd82e81372.png)
 
 ### Working with Cloud Images 
 
 The **Cloud Images** page in Box Panel is available to customers who have at least one cloud, and who are either a **Primary** or a **Technical** customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
 
-![Image of Dashboard 4](https://github.com/help-documentation/img/Dashboard 4.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15030057/fb4cdeec-1215-11e6-9d3e-60fa8d7953a9.png)
 
 Each image is displayed as a card. Cards are grouped by operating system. 
 
@@ -171,7 +171,7 @@ Each image is displayed as a card. Cards are grouped by operating system.
 3. Click the **Copy** button to the left of the Image URL. This click adds the URL to your clipboard. 
 4. This procedure also can be accomplished using OpenStack APIs. For instructions, please see the [main document about Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/) 
 
-![Image of Dashboard 5](https://github.com/help-documentation/img/Dashboard 5.png) 
+![ ](https://cloud.githubusercontent.com/assets/17212946/15030096/20400436-1216-11e6-8987-5dc8e6cdf080.png) 
 
 ### Managing Access and Security with Security Groups
 
@@ -228,7 +228,7 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 
 1. Open a new ticket from the **Support** page. 
 
-![Image of Dashboard 8](https://github.com/help-documentation/img/Dashboard 8.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15032587/2f74ce16-1228-11e6-9aba-ce1d1be87d35.png)
 
 2. In the Modal window, your name should show up as the **Ticket Creator.**
 3. Copy additional users in the **CC** field to make them aware of the ticket and track its status. 
@@ -245,7 +245,7 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 6. Include attachments, such as log files, right below the **Description** section. 
 7. If your deployment is for a new cloud, check the **Deployment** box.
 
-![Image of Dashboard 9](https://github.com/help-documentation/img/Dashboard 9.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15032633/850d3d4a-1228-11e6-9b37-c20e5d32d9b9.png)
 
 **Note: Steps 8 and 9 can be skipped for non-urgent concerns.**
 
@@ -257,13 +257,13 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 
 Anytime after a ticket is created, you can see the text associated with that ticket, by clicking on that support ticket from your Dashboard. The ticket's text may include references to other tickets, as well as chat history and any correspondence related to your selected ticket. The status of your support ticket is highlighted on the orange button in the top left corner. Status indicators include OPEN, PENDING COMPLETION, PARKED, and so forth.
 
-![Image of Dashboard 6](https://github.com/help-documentation/img/Dashboard 6.png) 
+![ ](https://cloud.githubusercontent.com/assets/17212946/15030210/9702dabc-1216-11e6-9785-3ddcc4c45cd9.png) 
 
 From the panel on the left-hand side of the screen, you can select options to create another new support ticket, subscribe to the ticket you have selected (if you want to follow its status), view your tickets, and view all tickets submitted by shared users on your account. 
 
 To view a list of Subscribers for a selected ticket, click on the **Subscribers** link. 
 
-![Image of Dashboard 7](https://github.com/help-documentation/img/Dashboard 7.png)
+![ ](https://cloud.githubusercontent.com/assets/17212946/15030220/a98ab0a6-1216-11e6-99d7-f8aac0f3c33c.png)
 
 To have a written conversation with one of our Blue Box support team experts about the topic of this ticket, you can click the green **Post Reply** button, or you can use the live **Chat** feature by clicking on **Chat**. All live chat sessions are recorded and added to the ticket as a transcript.
 
