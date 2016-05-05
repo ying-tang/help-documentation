@@ -193,3 +193,9 @@
   left: -99999px;
   opacity: 0;
 }
+
+.search__minview:focus,
+.search__minview--page:focus {
+  border-color: $dark-blue;
+  outline: 0;
+}
