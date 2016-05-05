@@ -20,13 +20,7 @@ This user guide gives you an end-to-end overview, so you can get started using B
  * [Logging In](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#logging-in)
  * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
  * [Navigating the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#navigating-the-bax-panel-dashboard)
- * [Managing Users and Projects](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-users-and-projects)
- * [Creating a Project](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#creating-a-project)
- * [Disabling a Project](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#disabling-a-project)
- * [Managing Machines and Resources](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-machines-and-resources)
  * [Working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#working-with-cloud-images)
- * [Managing Access and Security with Security Groups](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-access-and-security-with-security-groups)
- * [Creating a Storage Volume](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#creating-a storage-volume)
  * [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support)
  * [Managing Billing](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-billing)
 
@@ -65,96 +59,9 @@ The top of the Dashboard displays the infrastructure currently in use, with your
 
 ![ ](https://cloud.githubusercontent.com/assets/17212946/15029877/322e6f8a-1215-11e6-99f2-fc79cdfa2512.png)
 
-Immediately below, you can view your bandwidth usage and any support tickets related to your cloud, along with your status. 
-
-![ ](https://cloud.githubusercontent.com/assets/17212946/15029845/0d885af6-1215-11e6-9bc8-c93980ca65ce.png)
 
 On the right, additional details related to your account summary are displayed, including your **Lock Box Messages**, **Verbal Password**, **Bandwidth Quota**, and **Backup Quota**. 
 
-### Managing Users and Projects
-
-A **Project** is a group of resources that can be asssigned to a user or a group of users.
-
-**Users** may include four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**. A fifth role, **heat_stack_user**, is assigned automatically. 
-
-This release of IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to make multiple assignments simultaneously. For more information on Keystone v3, which provides the underlying security framework, or more information about **groups**, **projects**, **users**, and use cases, please refer to the primary document on this topic: [Managing Users and Projects](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
-
-### Creating a Project
-
-As shown in the **Managing Users and Projects** document, only users with `cloud_admin` roles can create projects and users.
-
-**To create a project:**
-
-1. Click the **Identity** tab, then click **Projects**
-2. Click the **Create Project** button.
-3. Assign a **Project Name** and **Description** under the **Project Information** tab shown in the Modal window.
-4. Assign **Users** to your project by clicking the search bar in the **Project Members** tab. Users can be added and deleted later.
-5. Enter resource allocation information under the **Quotas** tab to set and customize quotas for your new project.
-6. Click the **Create Project** button.
-
-To add or delete a user, click the **Modify Users** drop-down under the **Actions** section.
-
-**To create a new user:**
-
-1. Click the **Identity** tab.
-2. Click **Create User**.
-3. Enter a user name and their email address in the Modal window.
-4. Assign a password.
-5. From the **Primary Project** drop-down, select the primary project for that user.
-6. Assign the role using the **Role** drop-down.
-7. Confirm that you would like to create the user by clicking the **Create User** button.
-
-### Disabling a Project
-
-**Consequences of disabling projects:**
-Users with the `cloud_admin` role can enable and disable projects. When you disable a project, it has these consequences:
-
-- In the dashboard, users no longer have access to the project from the CURRENT PROJECT list on the Project tab.
-- Users who are members of only the disabled project can no longer log in.
-- You cannot launch instances for a disabled project. Instances that are running already are not terminated automatically. You must stop them manually.
-- The data for a disabled project is maintained, so you can re-enable the project at any time.
-
-**To disable a project:**
-
-1. Click the **Identity** tab.
-2. Click **Projects**.
-3. Check each box associated with the project(s) you would like to disable.
-4. Confirm that you would like to disable the project by clicking the **Disable Projects** button.
-
-### Managing Machines and Resources
-
-**Creating a Custom Flavor**
-
-In OpenStack, a **Flavor** is a predefined template for describing the resource configuration of a Virtual Machine.
-
-**To create a Custom Flavor:**
-
-1. From the **Project** menu, click the **System** drop-down.
-2. Click **Flavors**. Here you will see a list of your current **Flavors**.
-3. Click the **Create Flavor** button.
-4. Enter a name and assign custom configuration information.
-5. If you want to limit your **Flavor** to a specific project, click the **Flavor Access** tab, and click the **+** symbol to move your **Flavor** to the **Selected Projects** section.
-
-**Adding a Virtual Machine** 
-
-1. From the **Project** menu, select **Instances**.
-2. Click the **Launch Instance** button.
-3. Enter an **Instance Name** in the Modal window.
-4. Assign an **Instance Flavor** from the options in the drop-down menu. If the **Instance Flavor** exceeds your consumption quota, you'll be notified before your instance is created. (To find out whether you have enough quota to allow this machine to be built, you can view **Flavor Details** when you select your option.)
-5. Select a **Boot Source**.
-6. Under the **Access and Security** tab, enter your authentication information.
-7. Under the **Networking** tab, assign your machine to your **Selected Networks**. Your **Available Networks** will be shown in the drop-down menu.
-8. Click **Launch Instance**.
-
-On the **Instances** page, find your machine in the list and select the **Actions** drop-down menu to manage your machine.
-
-**Deleting an Asset or Virtual Machine**
-
-1. Visit the **Instances** page. 
-2. If you have the proper permissions to delete an asset, you can **Power Cycle** the machine’s PDUs, or select **Delete Asset.** 
-3. Confirm that you want to delete the asset by clicking **OK** in the Modal window. Your asset will be deleted permanently. 
-
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030029/d7934efa-1215-11e6-8e3d-69bd82e81372.png)
 
 ### Working with Cloud Images 
 
@@ -173,50 +80,6 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 ![ ](https://cloud.githubusercontent.com/assets/17212946/15030096/20400436-1216-11e6-8987-5dc8e6cdf080.png) 
 
-### Managing Access and Security with Security Groups
-
-A software-based firewall, or **Security Group**, must be enabled for an instance before it can receive external Internet traffic. Security group *rules* are logically attached to particular *ports* on each specific server or Virtual Machine (VM). Essentially, each rule tells a port whether to accept or deny packets from a particular IP address. Thus, you will be setting up a combination of **Rules** and **Ports** for your security group when you do this task, thereby regulating Internet traffic received.
-
-**To create a security group and set up its firewall rules:**
-
-1. Click **Access and Security** from the **Compute** drop-down menu of your project.
-2. Click the **Create Security Group** button.
-3. Assign a name to your new security group, then click the **Create Security Group** button in the Modal window.
-4. From the main **Security Group Rules** list, find your new security group and click the **Manage Rules** button. (You also can delete a firewall rule using this **Manage Rules** menu.)
-5. Encode a single **Rule** at a time for each **Port** associated with the security group to which your Virtual Machines belong.
-6. Click the **Add** button.
-
-To receive Internet traffic, you also must assign a **Floating IP** address that routes packets to your machine. Generally, Floating IP addresses are assigned from an existing **Pool**, therefore you cannot select them aribtrarily. Your possible choices will be displayed for you.
-
-**To assign a floating IP address:**
-
-1. Click **Instances** from the **Compute** drop-down menu of your project.
-2. Find your Virtual Machine, then select **Edit Instance**.
-3. From the Modal window, add your **Security Group**.
-4. Click the **Save** button.
-5. From the **Actions** menu on your instance, click **Associate Floating IP**.
-6. From the Modal window, click **+** to assign a **Floating IP** that routes from the **Pool**.
-7. Click **Associate**.
-8. In the next Modal window, select the **Floating IP** from your **Pool**.
-9. Finally, click **Allocate IP**.
-
-### Creating a Storage Volume
-
-Your IBM Blue Box cloud has storage backed by Ceph clusters.
-
-**To create a new volume for your Virtual Machine:**
-
-1. Visit the **Volumes** page in your project.
-2. Next, click the **Create Volume** button.
-3. From the Modal window, name your volume and add an optional description.
-4. Assign a **Volume Size**. Your **Volume Limits** are displayed when you assign a size, so that you stay within your usage quota.
-5. Click **Create Volume**.
-
-**To assign a volume to your Virtual Machine:**
-
-1. From the **Volumes** page, find your volume and select **Manage Volume Attachments** from the **Actions** drop-down menu.
-2. From the Modal window, select an instance from the **Attach to Instance** drop-down.
-3. Click the **Attach Volume** button to assign the volume to your instance.
 
 ### Getting Support 
 
@@ -257,13 +120,13 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 
 Anytime after a ticket is created, you can see the text associated with that ticket, by clicking on that support ticket from your Dashboard. The ticket's text may include references to other tickets, as well as chat history and any correspondence related to your selected ticket. The status of your support ticket is highlighted on the orange button in the top left corner. Status indicators include OPEN, PENDING COMPLETION, PARKED, and so forth.
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030210/9702dabc-1216-11e6-9785-3ddcc4c45cd9.png) 
+![ ]() 
 
 From the panel on the left-hand side of the screen, you can select options to create another new support ticket, subscribe to the ticket you have selected (if you want to follow its status), view your tickets, and view all tickets submitted by shared users on your account. 
 
 To view a list of Subscribers for a selected ticket, click on the **Subscribers** link. 
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030220/a98ab0a6-1216-11e6-99d7-f8aac0f3c33c.png)
+![ ]()
 
 To have a written conversation with one of our Blue Box support team experts about the topic of this ticket, you can click the green **Post Reply** button, or you can use the live **Chat** feature by clicking on **Chat**. All live chat sessions are recorded and added to the ticket as a transcript.
 
@@ -278,17 +141,7 @@ To have a written conversation with one of our Blue Box support team experts abo
 
 ### Managing Billing 
 
-To view your contracts and monthly billing reports, simply click the **Account** tab in the Box Panel Dashboard, then click the **Billing** tab.
-
-**To become a new customer:**
-
-1. Provide the Blue Box Support team with the billing manager’s name, email, and other contact information associated with your company.
-2. After your company’s billing information is received by the IBM Finance, a contract is created based on your requirements. Every IBM customer has a CFTS (customer fulfillment) account assigned. This information is documented and written on your contract. 
-3. A billing start date will be set so that your cloud usage can be billed (typically, the start date is the same as your deployment date, and billing repeats monthly).
-
-Once you’re able to log into Box Panel, you can view your billing information by selecting **Billing** under the **Account** drop-down menu. From here, you can view your **Account Services** and **Billing History**.
-
-By clicking **Billing History**, you can download all of your invoices and save them in PDF format.
+To view your contracts and monthly billing reports, click the **Account** tab in the Box Panel Dashboard, then click the **Billing** tab.
 
 For further billing support, please contact the Blue Box Support Team, and we will be happy to assist you.
 To add additional line items, such as expansion nodes, to your infrastructure, please contact the Blue Box Support Team. We will create a new monthly contract and help to streamline your setup process in any way that we can.
