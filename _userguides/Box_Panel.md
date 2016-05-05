@@ -20,13 +20,7 @@ This user guide gives you an end-to-end overview, so you can get started using B
  * [Logging In](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#logging-in)
  * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
  * [Navigating the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#navigating-the-bax-panel-dashboard)
- * [Managing Users and Projects](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-users-and-projects)
- * [Creating a Project](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#creating-a-project)
- * [Disabling a Project](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#disabling-a-project)
- * [Managing Machines and Resources](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-machines-and-resources)
  * [Working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#working-with-cloud-images)
- * [Managing Access and Security with Security Groups](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-access-and-security-with-security-groups)
- * [Creating a Storage Volume](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#creating-a storage-volume)
  * [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support)
  * [Managing Billing](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-billing)
 
@@ -85,7 +79,6 @@ Each image is displayed as a card. Cards are grouped by operating system.
 4. This procedure also can be accomplished using OpenStack APIs. For instructions, please see the [main document about Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/) 
 
 ![ ](https://cloud.githubusercontent.com/assets/17212946/15030096/20400436-1216-11e6-8987-5dc8e6cdf080.png) 
-
 
 
 ### Getting Support 
