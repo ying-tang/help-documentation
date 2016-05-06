@@ -160,7 +160,6 @@ function keydownSearch() {
 
 // Function to close full-screen search
 function closeSearch(e) {
-
   // If a link is clicked, go to link destination
   if (e) {
     return true
@@ -262,7 +261,7 @@ function recreateList() {
 searchIcon.addEventListener('click', keydownSearch);
 
 // Trigger full-screen search on input box focus
-searchBox.addEventListener('focus', keydownSearch);
+// searchBox.addEventListener('focus', keydownSearch);
 
 // Trigger full-screen search on keypress
 searchBox.addEventListener('keydown', keydownSearch);
