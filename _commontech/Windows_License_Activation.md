@@ -1,12 +1,14 @@
 ---
-layout: Page
+layout: page
 title: Customer Guide for Windows Activation
-featured: FALSE
-weight: 2
-tags: [gettingstarted,windows,images,license,activation]
-dateAdded: 3/10/2016
+featured: false
+weight: 13
+tags: [getting started, images, windows, license, activation]
+dateAdded: March 10th, 2016
 author: Yang Zhang
+editor: Leslie Lundquist
 ---
+
 ## Activating your Windows licenses in IBM Blue Box Cloud
 
 The IBM®-provided image catalog contains Microsoft® Windows images offered in a bring your own license (BYOL) model. In accordance with Microsoft Service Provider Use Rights, IBM may not provide Key Management Services (KMS) activation services for your Windows BYOL image.
