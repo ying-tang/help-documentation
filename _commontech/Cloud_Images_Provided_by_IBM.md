@@ -53,7 +53,7 @@ You, the customer, may upload and install separately-acquired operating system s
 * Windows Server 2012 R2 Standard
 ```
 
-For any Microsoft Windows operating system virtual computing instances, these are the specific Client provisions: the Client is required to have and maintain Client’s own Microsoft Windows License server for activating such Windows operating system virtual computing instances. Please refer to this document for more information [**How to activate Windows licenses in IBM Blue Box Cloud.**](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Windows_License_Activation.md).
+For any Microsoft Windows operating system virtual computing instances, these are the specific Client provisions: the Client is required to have and maintain Client’s own Microsoft Windows License server for activating such Windows operating system virtual computing instances. Please refer to this document for more information [**How to activate Windows licenses in IBM Blue Box Cloud.**](http://ibm-blue-box-help.github.io/help-documentation/commontech/Windows_License_Activation.md).
 
 
 ### 2. Get Cloud Image Downloads from Box Panel
