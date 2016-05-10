@@ -81,6 +81,8 @@ Delete flavor   | Y | N | N
 Update quotas   | Y | N | N
 Delete quotas   | Y | N | N
 List quotas     | Y | Y | Y
+Get network IP availability | Y | N | N
+Get hosts | N | N | N
 
 Volume Feature | cloud_admin | project_admin (within project) |  \_member\_
 --------------- | ----------- | ------------------------------ | -----------
