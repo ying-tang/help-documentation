@@ -2,7 +2,7 @@
 layout: page
 title:  "Routing Internal Traffic Between Projects"
 tags: [neutron, routing, projects, tenants]
-dateAdded: May 10rd, 2016
+dateAdded: May 10th, 2016
 author: Ulysses Kanigel
 featured: false
 weight: 4
