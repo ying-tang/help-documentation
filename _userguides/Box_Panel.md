@@ -21,7 +21,7 @@ This user guide gives you an end-to-end overview, so you can get started using B
  * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
  * [Navigating the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#navigating-the-bax-panel-dashboard)
  * [Working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#working-with-cloud-images)
- * [Help Documentation]()
+ * [Help Documentation](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#help-documentation)
  * [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support)
  * [Managing Billing](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-billing)
 
