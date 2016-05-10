@@ -85,6 +85,8 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 From your Box Panel dashboard, you'll see  a link on the Nav Bar (the rightmost link) called **Docs**. If you select that link, a Dropdown menu appears, with the options of **OpenStack**, or **Managed Hosting**. To view the Customer Help documentation for IBM Blue Box Cloud, select **OpenStack**. The Help page will appear. You can browse the documentation by category, or you can search, using the search bar. By hovering over one of the icons, you can see a list of articles within that topic area. 
 
+![See the Nav Bar]()
+
 ### Getting Support 
 
 **Note: For immediate support, you can call Blue Box Support at 1-800-613-4305 or email us at support@bluebox.net.**
