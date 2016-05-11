@@ -21,6 +21,7 @@ This user guide gives you an end-to-end overview, so you can get started using B
  * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
  * [Navigating the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#navigating-the-bax-panel-dashboard)
  * [Working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#working-with-cloud-images)
+ * [Help Documentation](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#help-documentation)
  * [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support)
  * [Managing Billing](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-billing)
 
@@ -80,6 +81,9 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 ![ ](https://cloud.githubusercontent.com/assets/17212946/15030096/20400436-1216-11e6-8987-5dc8e6cdf080.png) 
 
+###Help Documentation
+
+From your Box Panel dashboard, you'll see  a link on the Nav Bar (the rightmost link) called **Docs**. If you select that link, a Dropdown menu appears, with the options of **OpenStack**, or **Managed Hosting**. To view the Customer Help documentation for IBM Blue Box Cloud, select **OpenStack**. The Help page will appear. You can browse the documentation by category, or you can search, using the search bar. By hovering over one of the icons, you can see a list of articles within that topic area. 
 
 ### Getting Support 
 
