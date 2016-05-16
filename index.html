@@ -65,7 +65,7 @@ layout: default
               </a>
               {% for page in site.troubleshooting limit:3 %}
                 {% if page.title %}
-                  <a href="{{ site.baseurl }}/{{page.url}}">{{page.title}}</a>
+                  <a href="{{ site.baseurl }}{{page.url}}">{{page.title}}</a>
                 {% endif %}
               {% endfor %}
             </div>
@@ -84,12 +84,12 @@ layout: default
           </div>
           <div class="side-b">
             <div class="content">
-              <a href="{{site.baseurl}}/gettingstarted" class="main-link">
+              <a href="{{site.baseurl}}/openstack" class="main-link">
                 <h1>Open<span>Stack</span></h1>
               </a>
               {% for page in site.openstack %}
                 {% if page.title %}
-                  <a href="{{ site.baseurl }}/{{page.url}}">{{page.title}}</a>
+                  <a href="{{ site.baseurl }}{{page.url}}">{{page.title}}</a>
                 {% endif %}
               {% endfor %}
             </div>
