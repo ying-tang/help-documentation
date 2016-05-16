@@ -314,19 +314,22 @@ When you receive a notification from IBM Blue Box operations that the cloud imag
 **Using the OpenStack Command Line Client to deactivate the existing image**
 
 1. Get the existing image ID:
-```
-# glance image-list
-```
+
+	```
+	# glance image-list
+	```
 
 2. Deactivate the image:
-```
-# glance image-deactivate <image_id>
-```
+	
+	```
+	# glance image-deactivate <image_id>
+	```
 
 3. Show the image status:
-```
-# glance image-show <image_id>
-```
+
+	```
+	# glance image-show <image_id>
+	```
 
 4. After deactivating the existing image, please re-create the new image by following the steps of [Upload an image to IBM Blue Box Cloud Glance repository] in this guide.
 
