@@ -1,5 +1,11 @@
 ![header](/readme-img/bluebox-help.png)
 
+##Running Locally
+  1. Clone the repo 
+  2. Check whether you have Ruby 2.0.0 or higher installed `ruby --version`
+  3. Install Bundler `gem install bundler` 
+  4. Run locally with `bundle exec jekyll serve`
+
 ##Github Organization
 1. [Basic Github folder Organization](#basic-github-folder-organization)
 2. [Folders for Content](#folders-for-content)
