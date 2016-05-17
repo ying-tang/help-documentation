@@ -15,7 +15,7 @@ editor: Leslie Lundquist, Niraj Patel
 
 2. Ensure you have access to Box Panel, so you can get the temporary download URLs for the IBM-provided cloud images.
 
-3. Uploading an image to Glance using `tempUrl ` as an image location is supported only on Blue Box Cloud 2.1.0 and onwards.
+3. Uploading an image to Glance using `tempUrl` as an image location is supported only on Blue Box Cloud 2.1.0 and onwards.
 
 ## Basic concepts
 
@@ -206,6 +206,8 @@ Follow these steps:
 			Minimum RAM(MB): 512
 			Public: True
 			```
+			![Upload the image with the OpenStack dashboard](https://github.com/IBM-Blue-Box-Help/help-documentation/tree/gh-pages/img/upload_image_file.png)
+			
 		4. Check **Create Image**.
 
 		5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
@@ -242,6 +244,8 @@ Follow these steps:
 3. Select an image and click **Launch**.
 
 4. In the **Launch Instance** dialog box, specify field values in the **Details**, **Access & Security**, **Networking**, and **Post-Creation** tabs. For more details about these fields, see the following tables.
+   
+   ![Launch an instance from your uploaded image](https://github.com/IBM-Blue-Box-Help/help-documentation/tree/gh-pages/img/launch_instance_from_image.png)
 
 5. Click **Launch**.
 
@@ -282,9 +286,10 @@ net localgroup administrators <YOUR_USERNAME> /add
 2. Expand the **Project** panel, then the **Compute** tab in the left navigation area, and click on **Instances**.
 
 3. Locate your instance in the list of running instances and note its IP address, such as `192.168.100.237`.
+   
+   ![Locate your instance from the instance list](https://github.com/IBM-Blue-Box-Help/help-documentation/tree/gh-pages/img/locate_instance_from_list.png)
 
 4. Create a connection to your instance by specifying its IP address.
-
 
 ### Connecting to Linux instances
   
@@ -297,9 +302,11 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 	```
 
 * View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
+  
+  ![View the VNC console of your instance](https://github.com/IBM-Blue-Box-Help/help-documentation/tree/gh-pages/img/view_VNC_console.png)
 
-  **Note**: To be able to log in via the console to a new Linux instance as `ibmcloud` user, you must have specified a password in the Customization Script during provisioning.
-
+**Note**: To be able to log in via the console to a new Linux instance as `ibmcloud` user, you must have specified a password in the Customization Script during provisioning.
+  
 ### Connecting to Windows instances
 
 Connect to your instance through Remote Desktop or VNC. **You'll need to use the `userid` and `password` specified in the Customization Script during VM provisioning**. On your first login, a prompt appears, requesting that you change your password. Please do.
