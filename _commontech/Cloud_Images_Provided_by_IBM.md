@@ -19,16 +19,14 @@ editor: Leslie Lundquist, Niraj Patel
 
 ## Basic concepts
 
-|---------+---------------|
-|**Item** | **Description** |
-|:-----:|----------------|
-|**Image** | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. Use images to create virtual machine instances within the cloud.
-|----------+-------------------|
-|**Instance** | Instances are virtual machines (VMs) that run inside the OpenStack cloud.
-|----------+-------------------|
-|**Flavor** | The term _flavor_ describes an instance's size, and it defines the pre-determined resource specifications for the amount of vCPU, RAM, and disk space available to an instance.
-|---------|---------------|
-
+|  **Item**    | **Description**                                                                                                                                                           |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Image**    | A virtual machine image, referred to in this document simply as an image, is a single file that contains a virtual disk with a bootable operating system installed on it. |               | Use images to create virtual machine instances within the cloud.                                                                                                          |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Instance** | Instances are virtual machines (VMs) that run inside the OpenStack cloud.                                                                                                 |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  **Flavor**  | The term _flavor_ describes an instance's size, and it defines the pre-determined resource specifications for the amount of vCPU, RAM, and disk space available to an     |
+|              | instance.                                                                                                                                                                 |
 
 ## Select from alternative cloud images provided by IBM Blue Box
 
@@ -65,7 +63,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 {: #tempURL}
 ## Upload an image to IBM Blue Box Cloud Glance repository using your cloud image `tempURL`
 
-**Notes**:
+**Notes:**
 
 * Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 * Uploading an image to Glance by using the `tempUrl` directly as an image location cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.
@@ -81,20 +79,30 @@ You can either upload an image with the [OpenStack dashboard](#creating-using-da
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
 
-	|--------------|------------
-	|**Item** | **Description**
-	|:-----|:-------------
-	|**Name** | Enter a name for the image.
-	|**Description** | Optionally, enter a brief description of the image.
-	|**Image Source** | Choose **Image Location**.
-	|**Image Location** | Specify the Cloud Image download `tempURL`.
-	|**Format** | Select the correct format (for example, `QCOW2`) for the image.
-	|**Architecture** | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).
-	|**Minimum Disk(GB)** | For Linux Image, use 5; For Windows Image, use 25.
-	|**Minimum RAM(MB)** | For Linux Image, use 512; For Windows Image, use 2048.
-	|**Copy Data** | This option must be checked to copy image data to image service.
-	|**Public** | Select this check box to make the image public to all users on all projects.
-	|**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
+	| **Item**               | **Description**                                                                                                  |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Name**               | Enter a name for the image.                                                                                      |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Description**        | Optionally, enter a brief description of the image.                                                              |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Image Source**       | Choose **Image Location**.                                                                                       |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Image Location**     | Specify the Cloud Image download `tempURL`.                                                                      |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Format**             | Select the correct format (for example, `QCOW2`) for the image.                                                  |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Architecture**       | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).  |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Minimum Disk(GB)**   | For Linux Image, use 5; For Windows Image, use 25.                                                               |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Minimum RAM(MB)**    | For Linux Image, use 512; For Windows Image, use 2048.                                                           |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Copy Data**          | This option must be checked to copy image data to image service.                                                 |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Public**             | Select this check box to make the image public to all users on all projects.                                     |
+	|------------------------|------------------------------------------------------------------------------------------------------------------|
+	| **Protected**          | Select this check box to ensure that only users with permissions can delete the image.	                        |
+   	
 
 	For example:
 
@@ -114,7 +122,7 @@ You can either upload an image with the [OpenStack dashboard](#creating-using-da
 
 5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-**Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
+**Note**: Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
 {: #creating-using-cli}
 ### Create an image using the OpenStack Command Line Client
@@ -141,7 +149,7 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 {: #using-downloaded-images}	
 ## Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
 
-**Notes**:
+**Notes:**
 
 * Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 * When downloading the cloud image using the `tempUrl` be sure that the `tempUrl` token is escaped or specified in quotes. For example:
@@ -179,19 +187,27 @@ Follow these steps:
 		2. Under the **Project** panel, expand **Compute** and click **Images**.
 		3. Click **Create Image** in the page. Specify the following parameters in the new page:
 
-			|-----------|------------
-			|**Item** | **Description**
-			|:-----|:------------
-			|**Name** | Enter a name for the image.
-			|**Description** | Optionally, enter a brief description of the image.
-			|**Image Source** | Choose **Image File**.
-			|**Image File** | Browse to the directory of the image binary file.
-			|**Format** | Select the correct format (for example, `QCOW2`) for the image.
-			|**Architecture** | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).
-			|**Minimum Disk(GB)** | For Linux Image, use 5; For Windows Image, use 25
-			|**Minimum RAM(MB)** | For Linux Image, use 512; For Windows Image, use 2048
-			|**Public** | Select this check box to make the image public to all users on all projects.
-			|**Protected** | Select this check box to ensure that only users with permissions can delete the image.	 
+	     	| **Item**                | **Description**                                                                                                  |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Name**                | Enter a name for the image.                                                                                      |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Description**         | Optionally, enter a brief description of the image.                                                              |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Image Source**        | Choose **Image File**.                                                                                           |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Image File**          | Browse to the directory of the image binary file.                                                                |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Format**              | Select the correct format (for example, `QCOW2`) for the image.                                                  |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Architecture**        | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).  |
+		    |-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Minimum Disk(GB)**    | For Linux Image, use 5; For Windows Image, use 25                                                                |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Minimum RAM(MB)**     | For Linux Image, use 512; For Windows Image, use 2048                                                            |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Public**              | Select this check box to make the image public to all users on all projects.                                     |
+			|-------------------------|------------------------------------------------------------------------------------------------------------------|
+			| **Protected**           | Select this check box to ensure that only users with permissions can delete the image.                           |	 
 
 			For example:
 
@@ -231,7 +247,7 @@ Follow these steps:
 			# glance image-show <image-id>
 			```
 
-		**Note**: For large images, the web upload may time out. For those, we've recommended that people launch an instance in their cloud, download the image to that instance, and then upload from that instance to Glance. All the traffic would stay within SoftLayer, and the upload would be within their own cloud.
+		**Note:** For large images, the web upload may time out. For those, we've recommended that people launch an instance in their cloud, download the image to that instance, and then upload from that instance to Glance. All the traffic would stay within SoftLayer, and the upload would be within their own cloud.
 
 ## Create VM instances using your uploaded images
 
@@ -253,10 +269,10 @@ Then you will see the newly created instance in your instances list. The instanc
 
 ### Set initial username and password in Post-Creation tab
 
-|--------|----------
-|**Field** | **Description**
-|:------|:-------------
-|**Customization Script** | Specify a customization script that runs after your instance is launched.
+
+ |**Field**                 | **Description**                                                           |
+ |--------------------------|---------------------------------------------------------------------------|
+ |**Customization Script**  | Specify a customization script that runs after your instance is launched. |
 
 
 
@@ -279,7 +295,7 @@ net localgroup administrators <YOUR_USERNAME> /add
 
 ## Connecting to your instance
 
-**Note**: Ensure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
+**Note:** Ensure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
 
 1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 
@@ -305,7 +321,7 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
   
   ![View the VNC console of your instance](https://github.com/IBM-Blue-Box-Help/help-documentation/tree/gh-pages/img/view_VNC_console.png)
 
-**Note**: To be able to log in via the console to a new Linux instance as `ibmcloud` user, you must have specified a password in the Customization Script during provisioning.
+**Note:** To be able to log in via the console to a new Linux instance as `ibmcloud` user, you must have specified a password in the Customization Script during provisioning.
   
 ### Connecting to Windows instances
 
