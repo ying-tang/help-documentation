@@ -73,7 +73,7 @@ You can either upload an image with the OpenStack dashboard or the command line 
 
 1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
-3. Click **"Create Image"** in the page. Specify the following parameters in the new page:
+3. Click **Create Image** in the page. Specify the following parameters in the new page:
 
 	| **Item**               | **Description**                                                                                                  |
 	|------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -108,13 +108,13 @@ You can either upload an image with the OpenStack dashboard or the command line 
 
 5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-**Note**: Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
+**Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
 ### Create an image using the OpenStack Command Line Client
 
 You can upload images through the Glance client. See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html) for more information.
 
-1. **Create image** 
+1. Create an image.
 
     * For Linux Images, use `-- min-disk 5 --min-ram 512`
     * For Windows Images, use `--min-disk 25 --min-ram 2048`
@@ -123,7 +123,7 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 	# glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
 	```
 
-2. **Check whether the image was created successfully**
+2. Check whether the image was created successfully.
 
    The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
@@ -131,7 +131,6 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 	# glance image-show <image-id>
 	```
 	
-{: #using-downloaded-images}	
 ## Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
 
 **Notes:**
@@ -210,8 +209,8 @@ Follow these steps:
 
 		1. Create image.
 
-			* For Linux Images, use `-- min-disk 5 --min-ram 512`.
-			* For Windows Images, use `--min-disk 25 --min-ram 2048`.
+			* For Linux Images, use `-- min-disk 5 --min-ram 512`
+			* For Windows Images, use `--min-disk 25 --min-ram 2048`
 
 			```
 			# glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
@@ -246,9 +245,9 @@ Then you will see the newly created instance in your instances list. The instanc
 ### Set initial username and password in Post-Creation tab
 
 
- | **Field**                 | **Description**                                                           |
- |---------------------------|---------------------------------------------------------------------------|
- | **Customization Script**  | Specify a customization script that runs after your instance is launched. |
+| **Field**                 | **Description**                                                           |
+|---------------------------|---------------------------------------------------------------------------|
+| **Customization Script**  | Specify a customization script that runs after your instance is launched. |
 
 
 
@@ -301,7 +300,7 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
   
 ### Connecting to Windows instances
 
-Connect to your instance through Remote Desktop or VNC. **You'll need to use the `userid` and `password` specified in the Customization Script during VM provisioning**. On your first login, a prompt appears, requesting that you change your password. Please do.
+Connect to your instance through Remote Desktop or VNC. You'll need to use the `userid` and `password` specified in the Customization Script during VM provisioning. On your first login, a prompt appears, requesting that you change your password. Please do.
 
 * Use your favorite Remote Desktop client to connect.
 * View the VNC console of the instance by clicking on the instance name in IBM Blue Box Cloud OpenStack dashboard, and then click on the **console** tab. The VNC console connects you with HTTPS.
