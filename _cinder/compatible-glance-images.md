@@ -14,15 +14,16 @@ Resizing of Cinder volumes is not supported yet. Until it becomes supported, you
 
 1. Unmount the Cinder volume from inside the instance:
 
-{% highlight bash %}
-umount /mnt/volume
-{% endhighlight %}
+	{% highlight bash %}
+	umount /mnt/volume
+	{% endhighlight %}
 
 2. Detach the Cinder volume:
 
-{% highlight bash %}
-nova volume-detach <instanceid> <volumeid>
-{% endhighlight %}
+	{% highlight bash %}
+	nova volume-detach <instanceid> <volumeid>
+	{% endhighlight %}
 
 3. Snapshot the volume.
+
 4. Deploy a new volume from the snapshot, with the new size.
