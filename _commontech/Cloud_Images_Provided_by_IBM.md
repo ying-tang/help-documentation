@@ -58,8 +58,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 5. The `tempURL` displayed will be valid for next 24 hours so you can download the cloud image.
 
-(#tempURL)
-## Upload an image to IBM Blue Box Cloud Glance repository using your cloud image `tempURL`
+## <a name="tempURL"></a>Upload an image to IBM Blue Box Cloud Glance repository using your cloud image `tempURL`
 
 **Notes:**
 
@@ -70,8 +69,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 You can either upload an image with the [OpenStack dashboard](#createimage-dashboard) or the [command line client](#createimage-cli).
 
-(#createimage-dashboard)
-### Upload an image using the OpenStack dashboard
+### <a name="createimage-dashboard"></a>Upload an image using the OpenStack dashboard
 
 1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
@@ -112,8 +110,8 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 
 **Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
-(#createimage-cli)
-### Upload an image using the OpenStack Command Line Client
+
+### <a name="createimage-cli"></a>Upload an image using the OpenStack Command Line Client
 
 You can upload images through the Glance client. See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html) for more information.
 
@@ -133,8 +131,8 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 	```
 	# glance image-show <image-id>
 	```
-(#downloadedfiles)	
-## Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
+	
+## <a name="downloadedimages"></a>Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
 
 **Notes:**
 
