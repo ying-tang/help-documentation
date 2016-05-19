@@ -58,6 +58,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 5. The `tempURL` displayed will be valid for next 24 hours so you can download the cloud image.
 
+(#tempURL)
 ## Upload an image to IBM Blue Box Cloud Glance repository using your cloud image `tempURL`
 
 **Notes:**
@@ -65,9 +66,9 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 * Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 * Uploading an image to Glance by using the `tempUrl` directly as an image location cannot be used for IBM Blue Box Cloud that has blocked the outbound Internet access from the OpenStack control plane.
 * Uploading an image to Glance by using the `tempUrl` directly as an image location is supported *only* on Blue Box Cloud 2.1.0 and later, **not** on releases PRIOR to 2.1.0.
-* For IBM Blue Box Clouds on releases PRIOR to 2.1 or with no outbound Internet access, follow the instructions in "Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files".
+* For IBM Blue Box Clouds on releases PRIOR to 2.1 or with no outbound Internet access, follow the instructions in [Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files](#downloadedimages).
 
-You can either upload an image with the OpenStack dashboard or the command line client.
+You can either upload an image with the [OpenStack dashboard](#createimage-dashboard) or the [command line client](#createimage-cli).
 
 ### Upload an image using the OpenStack dashboard
 
@@ -130,7 +131,7 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 	```
 	# glance image-show <image-id>
 	```
-	
+(#downloadedfiles)	
 ## Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
 
 **Notes:**
@@ -329,7 +330,7 @@ When you receive a notification from IBM Blue Box operations that the cloud imag
 	# glance image-show <image_id>
 	```
 
-4. After deactivating the existing image, please re-create the new image by following the steps in "Upload an image to IBM Blue Box Cloud Glance repository using your cloud image tempURL" in this guide.
+4. After deactivating the existing image, please re-create the new image by following the steps in [Upload an image to IBM Blue Box Cloud Glance repository using your cloud image tempURL](#tempURL) in this guide.
 
 ## Get support from IBM Blue Box operations regarding cloud images
 
