@@ -12,7 +12,7 @@ weight: 4
 
 To get started, you’ll need to log in to your OpenStack cluster account.
 
-You should have received admin credentials to your private OpenStack cluster through the **Box Panel Lock Box**. Your credentials should look like this:
+You should have received **admin** credentials to your private OpenStack cluster through the **Box Panel Lock Box**. Your credentials should look like this:
 
 {% highlight bash %}
 URL: https://customer_name.openstack.blueboxgrid.com
