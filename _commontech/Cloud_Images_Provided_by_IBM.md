@@ -70,6 +70,7 @@ For any Microsoft Windows operating system virtual computing instances, these ar
 
 You can either upload an image with the [OpenStack dashboard](#createimage-dashboard) or the [command line client](#createimage-cli).
 
+(#createimage-dashboard)
 ### Upload an image using the OpenStack dashboard
 
 1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
@@ -111,6 +112,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 
 **Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
+(#createimage-cli)
 ### Upload an image using the OpenStack Command Line Client
 
 You can upload images through the Glance client. See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html) for more information.
