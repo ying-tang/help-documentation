@@ -12,7 +12,7 @@ weight: 4
 
 In addition to Horizon's standard **OpenStack** management features, `admin` users have access to an `admin` tab on the left navigation area, providing access to the **System Panel** and **Identity Panel**. Let's look at what features are offered in these sections.
 
-![Identity Panel](http://help.bluebox.net/hc/en-us/article_attachments/201591685/800px-Horizon_admin.png)
+![Identity Panel]({{site.baseurl}}/img/Identity_Panel.png)
 
 **Identity Panel**
 Let's start at the bottom with the **Identity Panel**, which enables `admin` users to administer the Keystone service. In this panel, you create and delete users, projects, groups and roles.

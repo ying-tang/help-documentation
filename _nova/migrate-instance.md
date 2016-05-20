@@ -32,15 +32,14 @@ $ nova list | grep snap
 
 From here we can see the external IP of the instance; let's visit it to make sure `nginx` is up and running:
 
-![Running instance.](http://help.bluebox.net/hc/en-us/article_attachments/203185437/Screen_Shot_2015-09-25_at_6.49.05_PM.png)
+![Running Instance]({{site.baseurl}}/img/Running_Instance.png)
 
 
 So now that we know it's up and running, let's get it moved over to our new cloud.
 
 First, a note about sourcing. You'll need to have sourced the credentials of your existing cloud to run the cloud commands necessary to run the snapshotting and moving. In this case, I have installed [`python-openstackclient`](https://github.com/openstack/python-openstackclient) on my Mac and grabbed the `stackrc` from my cloud, by clicking on **Download OpenStack RC File** on the right, as this image shows:
 
-![Click on Download OpenStack RC File](http://help.bluebox.net/hc/en-us/article_attachments/203261608/Screen_Shot_2015-09-25_at_6.58.42_PM.png)
-
+![Click on Download OpenStack RC File]({{site.baseurl}}/img/Download_RC_File.png)
 
 Make sure you source your `stackrc`:
 
@@ -156,7 +155,6 @@ $ nova add-floating-ip 9d006877-4e8a-499a-85e3-0aeb247030d9 173.247.105.119
 
 Finally, let's test our moved instance to make sure `nginx` is up and running without issue (remember, we haven't even logged into the instance, this is a drag and drop procedure thus far):
 
-![Test the instance.](http://help.bluebox.net/hc/en-us/article_attachments/203185477/Screen_Shot_2015-09-25_at_7.51.58_PM.png)
-
+![Test the instance]({{site.baseurl}}/img/Test_the_Instance.png)
 
 That's it! Thanks!
