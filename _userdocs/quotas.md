@@ -13,11 +13,11 @@ OpenStack has numerous quotas, and it doesn't always clearly notify you when you
 
 * [Common Questions](#common-questions)
   * [Common Quota Error Messages](#common-quota-error-messages)
-  * [Most Commonly Hit Quotas](#most-comonly-hit-quotas)
+  * [Most Commonly Hit Quotas](#most-commonly-hit-quotas)
 * [Compute Quotas](#compute-quotas)
   * [How to list the Default Compute Quotas](#how-to-list-the-default-compute-quotas)
   * [How to view Tenant Compute Quotas](#how-to-view-tenant-compute-quotas)
-  * [How to update Tenant Compute Quotas](#how-to-update-tenant-copute-quotas)
+  * [How to update Tenant Compute Quotas](#how-to-update-tenant-compute-quotas)
 * [Network Quotas](#network-quotas)
   * [How to list Tenant Network Quotas](#how-to-list-tenant-network-quotas)
   * [How to update Tenant Network Quotas](#how-to-update-tenant-network-quotas)
@@ -208,7 +208,7 @@ For example:
 
 # Storage Quotas
 
-## How to view Cinder Quotas
+## How to list Cinder Quotas
 
 {% highlight bash %}
 # cinder quota-show tenant01

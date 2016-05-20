@@ -22,7 +22,7 @@ Given that your existing infrastructure is set up with VXLAN (which is the stand
 
 In the **Networks** section of your **Project**, you will see **Create Network** on the right in **Horizon**. Click that. On the first popup menu, you will select the network name and the network's **Admin Status** (leave it as **UP**, the default). Pressing **Next** will take you to the **Subnet** section, which you need to fill in, as I have done below:
 
- ![Subnet section](https://help.bluebox.net/hc/en-us/article_attachments/202939668/Screen_Shot_2015-08-31_at_12.09.00_PM.png )
+![Subnet section]({{site.baseurl}}/img/Subnet_Section.png)
 
 Make sure that your subnet selection is not already in use on your network, as this dual allocation could cause issues and collisions, as well as being a valid subnet.
 
@@ -34,11 +34,11 @@ Once you've completed these selections, you should see your network listed with 
 
 Below **Networks** on the left in **Horizon**, you will see the **Routers** section. Note that a router is necessary only if you intend to bridge that private network into other networks. Since multiple networks can be attached to instances, it is not required to have a bridge here. Your network is private addressing space, and it should be treated as such. You may create "air gapped" networks in this fashion. From there on the right, select **Create Router**. Once completed (only the name is an option), to the right of your newly created router you will see a dropdown menu, with **Set Gateway** highlighted. Select that option, and then from the subsequent popup menu, select **External** (it will be the only option), as shown below:
 
-![Select External.](https://help.bluebox.net/hc/en-us/article_attachments/202939768/Screen_Shot_2015-08-31_at_12.16.23_PM.png)
+![Select External]({{site.baseurl}}/img/Select_External.png)
 
 That previous series of steps attaches our newly-created router to the external network, now we just need to attach it to the network we created. The easiest place to accomplish this action is from the **Network Topology** section in **Horizon**, under your **Project**. Now you will see your router connected to the External network, and if you hover the mouse over it, a popup menu will appear, showing you the option to add an interface, as shown below:
 
-![Add an interface option.](https://help.bluebox.net/hc/en-us/article_attachments/202869637/Screen_Shot_2015-08-31_at_12.19.46_PM.png)
+![Add Interface]({{site.baseurl}}/img/Add_Interface.png)
 
 From the **Add Interface** section, select your network from the **Subnet** dropdown, and assign it a specific IP address from your range under **IP Address**. (If you do not pick, the first available one will be chosen.) Click **Add Interface**, and you should be all set. The **Network Topology** display should now show you your network bridged to the External network through your router.
 

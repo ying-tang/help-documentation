@@ -10,7 +10,7 @@ weight: 4
 
 By default, your **IBM Blue Box** Cloud will use the DHCP service provided by **Neutron** to resolve instances by name.  If the primary controller fails and the secondary controller node assumes control, the resolver address will change, breaking resolution for any running instances.
 
-This article assumes that you have the **OpenStack API** configured on your local machine. For assistance, please see [**Getting Started with the OpenStack API**](/hc/en-us/articles/204357035-Getting-Started-with-the-OpenStack-API).
+This article assumes that you have the **OpenStack API** configured on your local machine. For assistance, please see [**Getting Started with the OpenStack API**](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/).
 
 To prevent this possibility of breaking resolution in case of failover, we recommend one of the following methods:
 
