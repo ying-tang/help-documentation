@@ -45,4 +45,4 @@ cinder show [VOLUME-ID] 2>/dev/null | grep snapshot_id | awk '{print $4}'
 [SNAPSHOT-ID]
 {% endhighlight %}
 
-If you are unable to attach a Cinder volume, or if nothing happens in the Horizon dashboard when you try to do so, the `open-iscsi` service daemon may need to be restarted on your Cinder volume host.  Please [**open a support ticket**](https://support.bluebox.net/) to have us check whether this restart needs to be done.
+If you are unable to attach a Cinder volume, or if nothing happens in the Horizon dashboard when you try to do so, the `open-iscsi` service daemon may need to be restarted on your Cinder volume host.  Please [**open a support ticket**](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commonadmin/report-issue/) to have us check whether this restart needs to be done.
