@@ -90,7 +90,6 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
    	
 	For example:
     
-	```
 	{% highlight bash %}
 	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
 	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
@@ -103,7 +102,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 	Copy Data: True
 	Public: True
 	{% endhighlight %}	
-	```	
+	
 4. Click **Create Image**.
 
 5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
@@ -120,12 +119,10 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
     * For Linux Images, use `-- min-disk 5 --min-ram 512`
     * For Windows Images, use `--min-disk 25 --min-ram 2048`
     
-	```
 	{% highlight bash %}
 	# glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
 	{% endhighlight %}
-	```
-
+	
 2. Check whether the image was created successfully.
 
    The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
@@ -141,34 +138,28 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 * Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 * When downloading the cloud image using the `tempUrl` be sure that the `tempUrl` token is escaped or specified in quotes. For example:
 
-  ```
   {% highlight bash %}
   curl -f -o <output_file> '<cloud_image_download_tempUrl>'
   curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867'
   {% endhighlight %}
-  ```
-
+  
 Follow these steps:
 	
 1. Download .qcow2 and .md5sum files of the image. 
   
    Download the `.qcow2` image file and `.md5sum` checksum file using the `tempURL` and put these 2 files under the same folder. For example:
 
-   ```
    {% highlight bash %}
    ubuntu-guest-image-14.04-20160301-x86_64.qcow2
    ubuntu-guest-image-14.04-20160301-x86_64.md5sum
    {% endhighlight %}
-   ```
-
+ 
 2. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
 
-   ```
    {% highlight bash %}
    # md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
    ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
    {% endhighlight %}
-   ```
    
    If the result returns "OK", the downloaded `qcow2` image is valid.
 
@@ -197,7 +188,6 @@ Follow these steps:
 
    For example:
 
-    ```
 	{% highlight bash %}
 	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
 	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
@@ -209,7 +199,6 @@ Follow these steps:
 	Minimum RAM(MB): 512
 	Public: True
 	{% endhighlight %}
-	```
 	
 ![Upload the image with the OpenStack dashboard]({{site.baseurl}}/img/upload_image_file.png)
 	
@@ -226,11 +215,9 @@ See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/commo
 	* For Linux Images, use `-- min-disk 5 --min-ram 512`
 	* For Windows Images, use `--min-disk 25 --min-ram 2048`
 
-	```
 	{% highlight bash %}
 	# glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
 	{% endhighlight %}
-    ```
 	
 2. Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
@@ -273,13 +260,11 @@ To enable password authentication through console and SSH, use the following scr
 **For Windows instances:**  
 To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of `_<YOUR_USERNAME>_` and `_<YOUR_PASSWORD>_`).
 
-```
 {% highlight bash %}
 rem cmd
 net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
 net localgroup administrators <YOUR_USERNAME> /add
 {% endhighlight %}
-```
 
 ## Connecting to your instance
 
