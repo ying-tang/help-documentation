@@ -32,7 +32,7 @@ However, assuming that you are interested in automating updates to Neutron port 
 ```
 {% endhighlight %}
 
-If you would like to see more granular roles in a future release, we can [open a feature request](support.bluebox.net) to our product team.
+If you would like to see more granular roles in a future release, we can [open a feature request](https://support.bluebox.net/) to our product team.
 
 #### Known Problem with Horizon Can Create Confusion for Cloud Admins
 
