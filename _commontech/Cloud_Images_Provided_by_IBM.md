@@ -121,7 +121,7 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
     
 	```
 	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
-	```}
+	```
 	
 2. Check whether the image was created successfully.
 
@@ -215,9 +215,9 @@ See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/commo
 	* For Linux Images, use `-- min-disk 5 --min-ram 512`
 	* For Windows Images, use `--min-disk 25 --min-ram 2048`
 
-	{% highlight bash %}
+	```
 	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
-	{% endhighlight %}
+	```
 	
 2. Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
