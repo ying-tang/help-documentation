@@ -119,16 +119,16 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
     * For Linux Images, use `-- min-disk 5 --min-ram 512`
     * For Windows Images, use `--min-disk 25 --min-ram 2048`
     
-	{% highlight bash %}
-	# glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
-	{% endhighlight %}
+	```
+	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
+	```}
 	
 2. Check whether the image was created successfully.
 
    The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 	```
-	# glance image-show <image-id>
+	$ glance image-show <image-id>
 	```
 	
 ## <a name="downloadedimages"></a>Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
@@ -157,7 +157,7 @@ Follow these steps:
 2. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
 
    {% highlight bash %}
-   # md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
+   md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
    ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
    {% endhighlight %}
    
@@ -216,13 +216,13 @@ See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/commo
 	* For Windows Images, use `--min-disk 25 --min-ram 2048`
 
 	{% highlight bash %}
-	# glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
+	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
 	{% endhighlight %}
 	
 2. Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
    ```
-   # glance image-show <image-id>
+   $ glance image-show <image-id>
    ```
 
 **Note:** For large images, the web upload may time out. For those, we've recommended that people launch an instance in their cloud, download the image to that instance, and then upload from that instance to Glance. All the traffic would stay within SoftLayer, and the upload would be within their own cloud.
@@ -287,7 +287,7 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 * Use your favorite SSH client and open a connection to the correct IP address of the VM instance, using the private SSH key of the keypair that you specified during provisioning:
  
   ```  
-  # ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
+  ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
   ```
 	
 * View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
@@ -312,19 +312,19 @@ When you receive a notification from IBM Blue Box operations that the cloud imag
 1. Get the existing image ID:
 
 	```
-	# glance image-list
+	$ glance image-list
 	```
 
 2. Deactivate the image:
 	
 	```
-	# glance image-deactivate <image_id>
+	$ glance image-deactivate <image_id>
 	```
 
 3. Show the image status:
 
 	```
-	# glance image-show <image_id>
+	$ glance image-show <image_id>
 	```
 
 4. After deactivating the existing image, please re-create the new image by following the steps in [Upload an image to IBM Blue Box Cloud Glance repository using your cloud image tempURL](#tempURL) in this guide.
