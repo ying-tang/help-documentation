@@ -8,7 +8,7 @@ weight: 4
 ---
 
 
-**Cinder** volumes are block storage devices that you attach to instances to enable persistent storage. Cinder volumes are not deleted when you terminate an instance. You can attach a volume to a running instance or detach a volume and attach it to another instance at any time. You can also delete a volume.
+**Cinder** volumes are block storage devices that you attach to instances to enable persistent storage. 
 
 Resizing of Cinder volumes is not supported yet. Until it becomes supported, you can accomplish the same thing with these steps:
 
@@ -27,3 +27,5 @@ Resizing of Cinder volumes is not supported yet. Until it becomes supported, you
 3. Snapshot the volume.
 
 4. Deploy a new volume from the snapshot, with the new size.
+
+See [OpenStack Storage Concepts](http://ibm-blue-box-help.github.io/help-documentation/openstack/openstack-storage-concepts) for more information about the OpenStack storage concepts.
