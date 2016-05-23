@@ -18,14 +18,15 @@ dateAdded: May 20, 2016
 
 --- 
 
-# OpenStack Storage Concepts
+## Basic Concepts
 
 | **Concept**   |  **Description**                                      																																																																											|
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Volume**    |  Volumes are block storage devices that you attach to instances to enable persistent storage. Persistent storage is not deleted when you terminate an instance. You can attach a volume to a running instance or detach a volume and attach it to another instance at any time. You can also delete a volume. Only administrative users can create volume types.  |
 | **Ephemeral** |  The disks associated with the instances are ephemeral, meaning that the data is deleted when the instance is terminated. Snapshots created from a running instance will remain, but any additional data added to the ephemeral storage since last snapshot will be lost.                                                                                         |
 
-The following table explains the OpenStack storage concepts:
+
+The following table compares three OpenStack storage concepts:
 
 |                            | **Ephemeral storage**                                      |	**Block storage**                                                                  |	**Object storage**                  |
 |----------------------------|------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------|
