@@ -13,7 +13,7 @@ editor: Leslie Lundquist
 
 ### How Can I Resize my Instances or Migrate them to a New Host?
 
-**Feature:** Instance Resize (up) / or (Non-live) Instance Migration
+**Feature:** Instance Resize (up)
 
 **Description:** Starting with the 1.3 release of Blue Box Cloud, we have supported instance resizing (up). The resize operation is not live: it _does_ stop and re-start the instance. A resize can happen on the same host, which is helpful in small environments.
 
