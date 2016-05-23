@@ -168,7 +168,7 @@ This section briefly lists features from previous IBM Blue Box Cloud releases, p
 
 **Tune Heat for large template support:** `bugs.launchpad.net/heat/+bug/1491185` : We've resolved a defect that would hinder Heat stack deployments with large templates.
 
-**Instance resizing (up) is enabled:** From Blue Box 1.3, instance resizing lets an instance change its flavor to a larger flavor. The resize operation is not live: it does stop and start the instance. More information [in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Instance_Resize/).
+**Instance resizing (up) is enabled:**  Instance resizing lets an instance change its flavor to a larger flavor. The resize operation is not live: it will stop and re-start the instance. More information is available [in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Instance_Resize/).
 
 **Future Release Notes**
 
