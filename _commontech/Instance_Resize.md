@@ -11,7 +11,7 @@ editor: Leslie Lundquist
 
 ---
 
-### How Can I Resize my Instances or Migrate them to a New Host?
+### How Can I Resize my Instances?
 
 **Feature:** Instance Resize (up)
 
