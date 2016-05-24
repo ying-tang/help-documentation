@@ -12,11 +12,11 @@ author: Leslie Lundquist
 
 # Release Notes (DRAFT)
 
-#### Release 3.0    created     April 22, 2016
+#### Release 3.0    created     May 24, 2016
 
-# **Summary of New Features in Latest Release**
+# **Summary of New Features in the Latest Release**
 
-This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the 3.0 Dedicated and Local Cloud offerings.  The new capabilities of IBM Blue Box Dedicated and Local Cloud include:  
+This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the 3.0 Dedicated and Local Cloud offerings. The new capabilities of IBM Blue Box Dedicated and Local Cloud include:  
 
 1.  [Openstack Mitaka Support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
  
@@ -50,7 +50,7 @@ For additional user documentation, please refer to the [main Help page.](http://
 
 #### Openstack Mitaka Support.
 #### OpenStack Power Compute Node Support (Habeñero and Firestone).
-#### Federated keystone across multiple Blue Box clouds.
+#### Federated Keystone across multiple Blue Box clouds.
 #### Federate Keystone to External Identity Provider.
 #### Hybrid Ceph Storage Support in Blue Box Cloud Local.
 #### I/O Optimized and High Storage Compute Nodes Support for Blue Box Cloud Local.
@@ -58,7 +58,7 @@ For additional user documentation, please refer to the [main Help page.](http://
 
 This feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also needs access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack guest-instance network. This capability is based on OpenStack Ironic.
 
-For Blue Box Dedicated cloud, the bare metal hardware must be in a separate, custoemr-owned SoftLayer account.
+For Blue Box Dedicated cloud, the bare metal hardware must be in a separate, customer-owned SoftLayer account.
 
 #### Box Panel Launched in China.
 #### 10G Vyatta Support.
