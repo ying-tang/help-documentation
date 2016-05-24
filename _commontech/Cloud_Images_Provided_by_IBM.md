@@ -138,10 +138,10 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 * Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 * When downloading the cloud image using the `tempUrl` be sure that the `tempUrl` token is escaped or specified in quotes. For example:
 
-  {% highlight bash %}
-  curl -f -o <output_file> '<cloud_image_download_tempUrl>'
-  curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867'
-  {% endhighlight %}
+{% highlight bash %}
+curl -f -o <output_file> '<cloud_image_download_tempUrl>'
+curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867'
+{% endhighlight %}
   
 Follow these steps:
 	
@@ -186,7 +186,7 @@ Follow these steps:
 	| **Public**              | Select this check box to make the image public to all users on all projects.                                     |
 	| **Protected**           | Select this check box to ensure that only users with permissions can delete the image.                           |	 
 
-   For example:
+    For example:
 
 	{% highlight bash %}
 	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
@@ -200,11 +200,11 @@ Follow these steps:
 	Public: True
 	{% endhighlight %}
 	
-![Upload the image with the OpenStack dashboard]({{site.baseurl}}/img/upload_image_file.png)
-	
 4. Check **Create Image**.
 
 5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+
+![Upload the image with the OpenStack dashboard]({{site.baseurl}}/img/upload_image_file.png)
 
 ### <a name="upload-cli"></a>Upload an image using the OpenStack command line client
 
@@ -221,9 +221,9 @@ See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/commo
 	
 2. Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-```
-$ glance image-show <image-id>
-```
+	```
+	$ glance image-show <image-id>
+	```
 
 **Note:** For large images, the web upload may time out. For those, we've recommended that people launch an instance in their cloud, download the image to that instance, and then upload from that instance to Glance. All the traffic would stay within SoftLayer, and the upload would be within their own cloud.
 
@@ -239,9 +239,9 @@ $ glance image-show <image-id>
 
 4. In the **Launch Instance** dialog box, specify field values in the **Details**, **Access & Security**, **Networking**, and **Post-Creation** tabs. For more details about these fields, see the following tables.
    
-   ![Launch an instance from your uploaded image]({{site.baseurl}}/img/launch_instance_from_image.png)
-
 5. Click **Launch**.
+
+![Launch an instance from your uploaded image]({{site.baseurl}}/img/launch_instance_from_image.png)
 
 Then you will see the newly created instance in your instances list. The instance is queued for creation. It might take some time before the status changes from "Build" to "Active."
 
@@ -275,10 +275,10 @@ net localgroup administrators <YOUR_USERNAME> /add
 2. Expand the **Project** panel, then the **Compute** tab in the left navigation area, and click on **Instances**.
 
 3. Locate your instance in the list of running instances and note its IP address, such as `192.168.100.237`.
-   
-   ![Locate your instance from the instance list]({{site.baseurl}}/img/locate_instance_from_list.png)
 
 4. Create a connection to your instance by specifying its IP address.
+
+![Locate your instance from the instance list]({{site.baseurl}}/img/locate_instance_from_list.png)
 
 ### Connecting to Linux instances
   
@@ -310,18 +310,21 @@ When you receive a notification from IBM Blue Box operations that the cloud imag
 **Using the OpenStack Command Line Client to deactivate the existing image**
 
 1. Get the existing image ID: 
-```
-$ glance image-list
-```
+
+	```
+	$ glance image-list
+	```
 	
 2. Deactivate the image: 
-
-    $ glance image-deactivate <image_id>
+   
+   ```
+   $ glance image-deactivate <image_id>
+   ```
  
 3. Show the image status:
    
    ```
-   $ glance image-show <image_id>`
+   $ glance image-show <image_id>
    ```
 
 4. After deactivating the existing image, please re-create the new image by following the steps in [Upload an image to IBM Blue Box Cloud Glance repository using your cloud image tempURL](#tempURL) in this guide.
