@@ -380,7 +380,7 @@ Options error: --key fails with 'server.key': No such file or directory
 That error indicates that `server.key` was not copied to `/etc/openvpn` correctly. Re-copy the file and try again.
 
 
-## Step 3 — Generate Certificates and Keys for Clients
+## Step 3 - Generate Certificates and Keys for Clients
 
 So far we've installed and configured the **OpenVPN** server, created a Certificate Authority, and created the server's own certificate and key. In this step, we use the server's CA to generate certificates and keys for each client device that will be connecting to the VPN. These files later will be installed onto the client devices, such as a laptop or smartphone.
 
