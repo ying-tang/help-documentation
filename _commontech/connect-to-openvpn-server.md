@@ -7,7 +7,7 @@ author: Jason Kennedy
 dateAdded: January 7th, 2016
 ---
 
-Now that you've created an OpenVPN server on your openstack cluster, it's time to connect to it:
+Now that you've created an OpenVPN server on your OpenStack cluster, it's time to connect to it:
 
 
 Remember that the connection will be called whatever you named the `.ovpn` file. In our example, since the file was named `Client1.ovpn`, the connection will be named `Client1`.
