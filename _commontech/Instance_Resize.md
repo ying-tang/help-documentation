@@ -6,7 +6,7 @@ featured: False
 weight: 12
 tags: [getting started, instances, resize, migration]
 dateAdded: May 23, 2016
-author: Jesse Keating
+author: Jesse Keating, Sina Sinadeghi
 editor: Leslie Lundquist
 
 ---
@@ -30,11 +30,11 @@ If your resize operation takes a very long time for large instances (for example
 
 It's very likely that if you attempt to initiate a new resize the same error will occur again. In that case, we suggest a different approach. If your cluster has block storage enabled, we suggest the following steps:
 
-    Shut down the target VM.
-    Take a snapshot of the target VM with nova image-create.
-    Make a volume from that snapshot using cinder create --image-id <SNAPSHOT UUID>.
-    Delete the snapshot with openstack image delete or glance image-delete.
-    Boot a new VM from the volume with nova boot --boot-volume.
+1.  Shut down the target VM.
+2.  Take a snapshot of the target VM with `nova image-create`.
+3.  Make a volume from that snapshot using `cinder create --image-id <SNAPSHOT UUID>`.
+4.  Delete the snapshot with OpenStack `image delete` or `glance image-delete`.
+5.  Boot a new VM from the volume with `nova boot --boot-volume`.
 
 If you want to retain the same IP addresses you can:
  1. Get the port UUID of the volume booted VM using:
