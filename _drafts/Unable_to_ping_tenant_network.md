@@ -12,7 +12,7 @@ dateAdded: May 24, 2016
 
 **Q.** I have created my own network (`private_network`) with a subnet (`private_subnet`). I have also created a router (`iotf_router`) to connect this network to the existing internal network. However, instances attached to `private_network` are not able to ping instances on the internal network. They can ping the gateway IP address (10.0.0.1) and they can ping the IP address of the interface for the internal network on the router (192.168.1.113)... but they cannot ping any instances on the internal network. I am able to ping in the other direction, that is, from instances on the internal network to instances on the `private_network`... just not the other way around.
 
-FYI... these are the commands (as best I can remember them) that I ran to create the relevant components in OpenStack:
+These are the commands (as best I can remember them) that I ran to create the relevant components in OpenStack:
 
 1. `neutron net-create private_network`
 2. `neutron subnet-create private_network --name private_subnet --gateway 10.0.0.1 10.0.0.0/24`
