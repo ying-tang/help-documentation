@@ -31,7 +31,7 @@ neutron router-update default --routes type=dict list=true destination=10.0.0.0/
 neutron router-update iotf_router --routes type=dict list=true destination=192.168.0.0/22,nexthop=192.168.0.1
 ```
 
-Q. Attempting to execute the first command failed with the following error:
+**Q.** Attempting to execute the first command failed with the following error:
 ```
 Invalid format for routes: [{u'destination': u'10.0.0.0/24', u'nexthop': u'10.0.0.1'}], the nexthop is not connected with router
 ```
@@ -41,7 +41,7 @@ I needed to modify the command in order to run it successfully, as shown below, 
 neutron router-update default --routes type=dict list=true destination=10.0.0.0/24,nexthop=192.168.1.119
 ```
 
-It turns out that this is enough to allow traffic to flow from instances connected to the `private_network` to instances connected to the internal network. However, it does appear that this configuration occurs an additional hop for network traffic, i.e., traffic is first routed to the default gw (192.168.0.1) and then redirected to 192.168.1.119. I can see this if I ping an instance on the `private_network` from an instance on the internal network:
+It turns out that this is enough to allow traffic to flow from instances connected to the `private_network` to instances connected to the internal network. However, it does appear that this configuration occurs an additional hop for network traffic, that is, traffic is first routed to the default gw (192.168.0.1) and then redirected to 192.168.1.119. I can see this if I ping an instance on the `private_network` from an instance on the internal network:
 ```
 ubuntu@test:~$ ping 10.0.0.13
 PING 10.0.0.13 (10.0.0.13) 56(84) bytes of data.
