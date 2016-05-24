@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Setting up OpenVPN server on your instance"
-tags: [openstack, setting up openVPN]
+tags: [getting started, setting up openVPN]
 author: Jason Kennedy
 dateAdded: January 7th, 2016
 featured: true
@@ -10,9 +10,9 @@ featured: true
 When you need to connect to your internal Blue Box instances, but either you don't have the available floating IP addresses or you prefer to not put those virtual machines on the internet, one recourse is to establish a bastion host with OpenVPN running on it. That way, you can connect and pass through the host to your internal network. In this article, you'll learn how to install and set up your OpenVPN server and client for the connection.
 Assume that you're already running a virtual machine that has a floating IP allocated to it. We're not going to discuss setting up ufw or go into any hardened of linux, this how-to is strictly about getting OpenVPN up and running on an instance hosted on OpenStack. For the purpose of this example, we're using Ubuntu 14.04.
 
-**Complete these steps for your server-side setup.**
+Complete these steps for your server-side setup.
 
-**OpenVPN Configuration**
+## Step 1 - OpenVPN Configuration
 
 Before we install any packages, first we'll update Ubuntu's repository lists.
 {% highlight bash %}
@@ -108,7 +108,7 @@ By default, **OpenVPN** runs as the root user and thus has full root access to t
 
 Now save your changes and exit **Vim**.
 
-**Packet Forwarding**
+### Packet Forwarding
 
 We need  a `sysctl` setting that tells the server's kernel to forward traffic from client devices out to the Internet. Otherwise, the traffic will stop at the server. Enable packet forwarding during runtime by entering this command:
 
@@ -137,7 +137,7 @@ net.ipv4.ip_forward=1
 
 Save your changes and exit **Vim**.
 
-**Uncomplicated Firewall (ufw)**
+### Uncomplicated Firewall (ufw)
 
 `ufw` is a front-end for iptables. Setting up `ufw` is not difficult. It's included by default in Ubuntu 14.04, so we only need to make a few rules and configuration edits, then switch the firewall on. As a reference for more uses for `ufw`, see **How To Set up a Firewall with UFW on an Ubuntu and Debian Cloud Server**.
 
@@ -230,11 +230,11 @@ To                         Action      From
 {% endhighlight %}
 
 
-**Step 2 — Creating a Certificate Authority and Server-Side Certificate & Key**
+## Step 2 - Creating a Certificate Authority and Server-Side Certificate & Key
 
 **OpenVPN** uses certificates to encrypt traffic.
 
-**Configure and Build the Certificate Authority**
+### Configure and Build the Certificate Authority
 
 It is now time to set up our own Certificate Authority (CA) and generate a certificate and key for the **OpenVPN** server. **OpenVPN** supports bidirectional authentication based on certificates, meaning that the client must authenticate the server certificate and the server must authenticate the client certificate before mutual trust is established. We will use Easy RSA's scripts we copied earlier to do this.
 
@@ -307,7 +307,7 @@ This final command builds the certificate authority (CA) by invoking an interact
 
 Simply press ENTER to pass through each prompt. If something must be changed, you can do that from within the prompt.
 
-**Generate a Certificate and Key for the Server**
+### Generate a Certificate and Key for the Server
 
 Still working from `/etc/openvpn/easy-rsa`, now enter the command to build the server's key. Where you see server marked in red is the export `KEY_NAME` variable we set in Easy-RSA's vars file earlier in Step 2.
 
@@ -340,7 +340,7 @@ Write out database with 1 new entries
 Data Base Updated
 {% endhighlight %}
 
-**Move the Server Certificates and Keys**
+### Move the Server Certificates and Keys
 
 OpenVPN expects to see the server's CA, certificate and key in `/etc/openvpn`. Let's copy them into the proper location.
 
@@ -380,11 +380,11 @@ Options error: --key fails with 'server.key': No such file or directory
 That error indicates that `server.key` was not copied to `/etc/openvpn` correctly. Re-copy the file and try again.
 
 
-**Step 3 — Generate Certificates and Keys for Clients**
+## Step 3 — Generate Certificates and Keys for Clients
 
 So far we've installed and configured the **OpenVPN** server, created a Certificate Authority, and created the server's own certificate and key. In this step, we use the server's CA to generate certificates and keys for each client device that will be connecting to the VPN. These files later will be installed onto the client devices, such as a laptop or smartphone.
 
-**Key and Certificate Building**
+### Key and Certificate Building
 
 It's ideal for each client connecting to the VPN to have its own unique certificate and key. This setup is preferable to generating one general certificate and key to use among all client devices.
 
@@ -429,7 +429,7 @@ cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf /etc/openvpn/
 
 You can repeat this section again for each client, replacing `client1` with the appropriate client name throughout.
 
-**Transferring Certificates and Keys to Client Devices**
+### Transferring Certificates and Keys to Client Devices
 
 Recall from the steps above that we created the client certificates and keys, and that they are stored on the **OpenVPN** server in the `/etc/openvpn/easy-rsa/keys` directory.
 
@@ -471,7 +471,7 @@ client.ovpn
 ca.crt
 {% endhighlight %}
 
-**Step 4 - Creating a Unified OpenVPN Profile for Client Devices**
+## Step 4 - Creating a Unified OpenVPN Profile for Client Devices
 
 There are several methods for managing the client files but the easiest uses a unified profile. This is created by modifying the client.ovpn template file to include the server's Certificate Authority, and the client's certificate and its key. Once merged, only the single client.ovpn profile needs to be imported into the client's OpenVPN application.
 
