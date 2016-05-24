@@ -221,9 +221,9 @@ See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/commo
 	
 2. Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-   ```
-   $ glance image-show <image-id>
-   ```
+```
+$ glance image-show <image-id>
+```
 
 **Note:** For large images, the web upload may time out. For those, we've recommended that people launch an instance in their cloud, download the image to that instance, and then upload from that instance to Glance. All the traffic would stay within SoftLayer, and the upload would be within their own cloud.
 
@@ -286,9 +286,9 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 
 * Use your favorite SSH client and open a connection to the correct IP address of the VM instance, using the private SSH key of the keypair that you specified during provisioning:
  
-  ```  
-  ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
-  ```
+```  
+ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
+```
 	
 * View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
   
@@ -309,23 +309,20 @@ When you receive a notification from IBM Blue Box operations that the cloud imag
 
 **Using the OpenStack Command Line Client to deactivate the existing image**
 
-1. Get the existing image ID:
-
-	```
-	$ glance image-list
-	```
-
-2. Deactivate the image:
+1. Get the existing image ID: 
+```
+$ glance image-list
+```
 	
-	```
-	$ glance image-deactivate <image_id>
-	```
+2. Deactivate the image: 
 
+    $ glance image-deactivate <image_id>
+ 
 3. Show the image status:
-
-	```
-	$ glance image-show <image_id>
-	```
+   
+   ```
+   $ glance image-show <image_id>`
+   ```
 
 4. After deactivating the existing image, please re-create the new image by following the steps in [Upload an image to IBM Blue Box Cloud Glance repository using your cloud image tempURL](#tempURL) in this guide.
 
