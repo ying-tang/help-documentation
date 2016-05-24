@@ -10,20 +10,20 @@ dateAdded: May 24, 2016
 ### Network Troubleshooting Example: Unable to Ping Across Tenant Networks
 
 
-**Q.** I have created my own network (private_network) with a subnet (private_subnet). I have also created a router (iotf_router) to connect this network to the existing internal network. However, instances attached to private_network are not able to ping instances on the internal network. They can ping the gateway IP address (10.0.0.1) and they can ping the IP address of the interface for the internal network on the router (192.168.1.113)... but they cannot ping any instances on the internal network. I am able to ping in the other direction, that is, from instances on the internal network to instances on the private_network... just not the other way around.
+**Q.** I have created my own network (`private_network`) with a subnet (`private_subnet`). I have also created a router (`iotf_router`) to connect this network to the existing internal network. However, instances attached to `private_network` are not able to ping instances on the internal network. They can ping the gateway IP address (10.0.0.1) and they can ping the IP address of the interface for the internal network on the router (192.168.1.113)... but they cannot ping any instances on the internal network. I am able to ping in the other direction, that is, from instances on the internal network to instances on the `private_network`... just not the other way around.
 
 FYI... these are the commands (as best I can remember them) that I ran to create the relevant components in OpenStack:
 
-1) neutron net-create private_network
-2) neutron subnet-create private_network --name private_subnet --gateway 10.0.0.1 10.0.0.0/24
-3) neutron router-create iotf_router
-4) neutron router-interface-add iotf_router private_subnet
-5) neutron port-create internal
-6) neutron router-interface-add iotf_router port=
+1. `neutron net-create private_network`
+2. `neutron subnet-create private_network --name private_subnet --gateway 10.0.0.1 10.0.0.0/24`
+3. `neutron router-create iotf_router`
+4. `neutron router-interface-add iotf_router private_subnet`
+5. `neutron port-create internal`
+6. `neutron router-interface-add iotf_router port=`
 
 I needed to manually create an extra port on the internal network to connect the router to because a router is already connected to it.
 
-**A.** The problem with simply adding an interface from the internal network on iotf_router is that instances on the internal network have a default gateway of 192.168.0.1, which is on the default router, and the default router doesn't know how to route back to private_network.
+**A.** The problem with simply adding an interface from the internal network on `iotf_router` is that instances on the internal network have a default gateway of 192.168.0.1, which is on the default router, and the default router doesn't know how to route back to `private_network`.
 
 In addition to adding ports from the opposite subnet to each router, you would need to add routes so that they can route in both directions...
 ```
@@ -35,14 +35,13 @@ Q. Attempting to execute the first command failed with the following error:
 ```
 Invalid format for routes: [{u'destination': u'10.0.0.0/24', u'nexthop': u'10.0.0.1'}], the nexthop is not connected with router
 ```
-
-I needed to modify the command in order to run it successfully, as shown below, where 192.168.1.119 is the port that I created on the internal network to attach iotf_router to.
+I needed to modify the command in order to run it successfully, as shown below, where `192.168.1.119` is the port that I created on the internal network to attach `iotf_router` to.
 
 ```
 neutron router-update default --routes type=dict list=true destination=10.0.0.0/24,nexthop=192.168.1.119
 ```
 
-It turns out that this is enough to allow traffic to flow from instances connected to the private_network to instances connected to the internal network. However, it does appear that this configuration occurs an additional hop for network traffic, i.e., traffic is first routed to the default gw (192.168.0.1) and then redirected to 192.168.1.119. I can see this if I ping an instance on the private_network from an instance on the internal network:
+It turns out that this is enough to allow traffic to flow from instances connected to the `private_network` to instances connected to the internal network. However, it does appear that this configuration occurs an additional hop for network traffic, i.e., traffic is first routed to the default gw (192.168.0.1) and then redirected to 192.168.1.119. I can see this if I ping an instance on the `private_network` from an instance on the internal network:
 ```
 ubuntu@test:~$ ping 10.0.0.13
 PING 10.0.0.13 (10.0.0.13) 56(84) bytes of data.
@@ -57,13 +56,13 @@ It would appear that a better approach is simply to manually add a route to each
 route add -net 10.0.0.0/24 gw 192.168.1.119
 ```
 
-The next problem that I hit with this configuration is that the instances on the private_network are not able to connect to the public internet via the internal network, e.g., I am not able to ping 8.8.8.8. Would you happen to know why this is and what I need to do to enable it?
+The next problem that I hit with this configuration is that the instances on the `private_network` are not able to connect to the public Internet via the internal network, for example, I am not able to ping 8.8.8.8. Would you happen to know why this is and what I need to do to enable it?
 
-Sorry... I forgot to mention that the error message when attempting to ping a host on the public internet is "destination net unreachable", which suggests that the request is getting as far as the gateway (10.0.0.1) but it does not know how to route the request on.
+Oh, I forgot to mention that the error message when attempting to ping a host on the public internet is "destination net unreachable", which suggests that the request is getting as far as the gateway (10.0.0.1) but it does not know how to route the request on.
 
-**A.** You are correct that routing through iotf_router to get to the internal network incurs another network hop, but the impact is likely to be negligible. Adding static routes on every instance would eliminate that hop, but add a good deal of administrative overhead and many potential points of failure. Given the preference, I would recommend maintaining the routes at the router level.
+**A.** You are correct that routing through `iotf_router` to get to the internal network incurs another network hop, but the impact is likely to be negligible. Adding static routes on every instance would eliminate that hop, but add a good deal of administrative overhead and many potential points of failure. Given the preference, I would recommend maintaining the routes at the router level.
 
-As for why the instances on private_network not being able to reach the Internet, this is because the router has no external gateway set (see external_gateway_info)...
+As for why the instances on `private_network` not being able to reach the Internet, this is because the router has no external gateway set (see `external_gateway_info`)...
 
 ```
 root@ds0006:~# neutron router-show iotf_router
@@ -84,16 +83,16 @@ root@ds0006:~# neutron router-show iotf_router
 
 If you run `neutron router-gateway-set iotf_router external` it will allocate a floating IP to the router and allow it to reach the outside world.
 
-Q. The lack of an external gateway on the iotf_rotuer was intentional. We would like to "hide" the private_network as much as possible from the outside world. We were hoping to be able to route traffic destined for the public internet via the default router, which already has an external gateway configured. Do you know if this is possible and, if it is, are you able to tell us how to achieve this?
+**Q.** The lack of an external gateway on the `iotf_rotuer` was intentional. We would like to "hide" the private_network as much as possible from the outside world. We were hoping to be able to route traffic destined for the public internet via the default router, which already has an external gateway configured. Do you know if this is possible and, if it is, are you able to tell us how to achieve this?
 
-A. It may be possible to add a default router to iotf_router like so...
+**A.** It may be possible to add a default router to `iotf_router` like so:
 ```
 neutron router-update iotf_router --routes type=dict list=true destination=0.0.0.0/0,nexthop=192.168.0.1
 ```
 
 This would effectively provide the same functionality as a router connected directly to the external network, minus the ability to allocate floating IPs. It would be more flexible to connect the router directly to the external network and control access by only allocating floating IPs to instances that need to be accessed from the internet, and use security group rules to protect different server "zones" from each other.
 
-I have confirmed that setting the default route on a router that is not attached to the external network to point to the IP of the default router will allow it to route out to the Internet. Here is what it looks like in our lab environment...
+I have confirmed that setting the default route on a router that is not attached to the external network to point to the IP of the default router will allow it to route out to the Internet. Here is what it looks like in our lab environment:
 
 ```
 root@ds0095:~# neutron router-port-list clwtest
@@ -125,7 +124,7 @@ root@ds0095:~# neutron router-show clwtest
 +-----------------------+--------------------------------------------------------+
 ```
 
-Q. FYI... the instances that we intend to attach to the private_network are truly internal, i.e., they will never be allocated a floating IP. This is actually a majority of our instances... there are only about 4 instances that need to have a floating IP in our offering.
+**Q.** FYI... the instances that we intend to attach to the private_network are truly internal, that is, they will never be allocated a floating IP. This is actually a majority of our instances... there are only about 4 instances that need to have a floating IP in our offering.
 
 The intention is to treat the internal network as the equivalent of a DMZ and attach the instances that require a floating IP to it. All of our other instances will be attached to the private_network and will only be able to access the public internet by routing traffic via the default router... using the configuration you have identified.
 
