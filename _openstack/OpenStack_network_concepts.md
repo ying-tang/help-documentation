@@ -34,8 +34,8 @@ dateAdded: May 25, 2016
 | Network              | An isolated Layer-2 (L2) segment, similar to a VLAN in regular networking. A network may have one or more subnets.                                     																			     |
 | Subnet               | A range of IPv4 addresses.																																																	 |
 | Port 	               | A connection point for attaching a single device, such as the NIC of a virtual server, to a virtual network. The term "port" also describes the associated network configuration, such as the MAC and IP addresses to be used on that port. |
-| Fixed IP address     | IP address that is assigned to an instance on boot, such as a private network IP address for an instance.																											                     |
-| Floating IP address  | IP address that is assigned to an instance on demand, from a pool.																																										 |
+| Fixed IP address     | IP address that is assigned to an instance on boot, such as a network IP address for an instance that needs to reach the public Internet.																											                     |
+| Floating IP address  | IP address that is assigned to an instance on demand, from a pool, often of the IPv6 form.																																										 |
 | Quota                | A quota limits the number of available resources, such as Compute or Disk allocations, for your cloud.																																											 |
 | Security groups      | A set of network filter rules, specific to your project, which are applied to an instance’s network interactions by specifying which IPs can or cannot send packets to another IP or port.																														 |
 | Security group rule  | A list of protocol, port, and IP address specifications that establish how traffic is allowed flow to, or from, any specific instance on the network; these are the specifics of a security group.																										 |
