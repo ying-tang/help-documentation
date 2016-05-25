@@ -9,7 +9,11 @@ author: Ying Tang
 editor: Leslie Lundquist
 dateAdded: May 25, 2016
 --- 
-## Basic Terminology Used in This Document
+##Introduction to OpenStack Cloud Network Concepts
+
+ This document offers a basic introduction to some common networking concepts. You'll encounter these concepts when working with your IBM Blue Box Cloud.
+ 
+### Terminology Used in This Document
 
 | **Concept**          | **Description**                                                                                                                                   																		 |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
@@ -23,7 +27,7 @@ dateAdded: May 25, 2016
 |MAC      | The individual identifier, something like a hardware serial number, that uniquely identifies every host on a network. |
 
 
-## Basic Cloud Networking Concepts
+### Basic Networking Concepts
 
 | **Concept**          | **Description**                                                                                                                                   																		 |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -36,19 +40,19 @@ dateAdded: May 25, 2016
 | Security groups      | A set of network filter rules, specific to your project, which are applied to an instance’s network interactions by specifying which IPs can or cannot send packets to another IP or port.																														 |
 | Security group rule  | A list of protocol, port, and IP address specifications that establish how traffic is allowed flow to, or from, any specific instance on the network; these are the specifics of a security group.																										 |
 
-## Network types
+### Cloud Network Types
 
 Generally, your cloud will have one or more each of **internal** and **external** networks. You can think of this idea as if the instances in your cloud can "talk" to each other on the internal networks, and they "talk" to sources outside your private cloud on the external networks.
 
 Various terms can be used to describe internal and external networks. For example, internal networks sometimes are called "tenant networks." External networks that are used to communicate with the public Internet sometimes are referred to as "provider networks."
 
-### Internal Networks
+#### Internal Networks
 
 An internal network "talks" within your cloud; it provides connectivity among the all of the virtual network interfaces (NICs) attached to it. Each internal network interface is associated with a virtual machine (VM), and a single VM can have multiple network interfaces associated with it, which means it can "talk" on many networks. 
  
 You can enable communication among a set of VMs by connecting them to the same internal network. Internal networks are associated with a single project (tenant), and they are visible to and accessible to that project only. 
  
-### External Networks
+#### External Networks
 
 External networks can "talk" within and outside your cloud. They may include the public Internet, your cloud's external network, and the SoftLayer network, which contains the SoftLayer router.
 
