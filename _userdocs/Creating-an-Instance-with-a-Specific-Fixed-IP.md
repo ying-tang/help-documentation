@@ -3,14 +3,14 @@ layout: page
 title:  "Creating an Instance with a Specific Fixed IP"
 featured: true
 weight: 2
-tags: [getting started, instance, fixed IP]
+tags: [openstack, instance, fixed IP]
 dateAdded: January 2016
 ---
 
 You may have a need to create an instance with a specific, private IP address (_aka Fixed IP_) from your subnet. To do this you must manually create a neutron port. This article outlines the steps that achieve this goal.
 You will need to utilize either the API or the command line tools to do these steps.
 
-*Pre-requisites*
+## Pre-requisites
 
 1. If you are going to use the command line (CLI) tools, ensure you have both of these tools installed. You can find installation instructions for both tools in our knowledge base: **Getting started with the OpenStack API**
 
@@ -25,7 +25,7 @@ If it is not enabled already, run this command with the `NeutronClient` to enabl
 neutron subnet-update --enable-dhcp SUBNET_ID
 {% endhighlight %}
 
-**Example:**
+Example:
 
 {% highlight bash %}
 $ neutron subnet-update --enable-dhcp c5cf95c4-3e36-43c0-9b07-bc73e7a4669b
@@ -53,9 +53,8 @@ $ neutron subnet-show c5cf95c4-3e36-43c0-9b07-bc73e7a4669b
 +------------------+--------------------------------------------+
 {% endhighlight %}
 
-**Notes**
+**Notes:** Here is a full list of the commands used to form these calls:
 
-Here is a full list of the commands used to form these calls:
 {% highlight bash %}
 neutron net-list
 neutron subnet-list
@@ -69,9 +68,11 @@ nova boot
 nova list
 {% endhighlight %}
 
-**Walkthrough Steps**
+## Walkthrough Steps
 
-1. Using the NeutronClient you would start by creating your port with this command:
+### Create a port
+
+Using the NeutronClient you would start by creating your port with this command:
 
 {% highlight bash %}
 neutron port-create --fixed-ip subnet_id=SUBNET_ID,ip_address=IP_FROM_POOL --name PORT_NAME NETWORK_ID
@@ -102,9 +103,11 @@ Created a new port:
 +-----------------------+-------------------------------------------------------------------------------------+
 {% endhighlight %}
 
-2. OPTIONAL: If you want to have a floating IP assigned to your port before creating the instance, this command will do that for you. Floating IPs are used so that your instance will be accessible externally over the internet.
+### Optional: Have a floating IP assigned to your port before creating the instance
 
-**a) You'll need to run the command `neutron net-list` to get the ID of your Ext-Net, which is where the floating IP will be allocated:**
+OPTIONAL: If you want to have a floating IP assigned to your port before creating the instance, this command will do that for you. Floating IPs are used so that your instance will be accessible externally over the internet.
+
+You'll need to run the command `neutron net-list` to get the ID of your Ext-Net, which is where the floating IP will be allocated:**
 
 {% highlight bash %}
 $ neutron net-list
@@ -116,7 +119,7 @@ $ neutron net-list
 +--------------------------------------+---------+--------------------------------------------------+
 {% endhighlight %}
 
-**b) Run a neutron port-list to get the ID of the port you created in step #1:**
+Run a neutron port-list to get the ID of the port you created in step #1:**
 
 {% highlight bash %}
 $ neutron port-list
@@ -129,15 +132,15 @@ $ neutron port-list
 +--------------------------------------+-----------+-------------------+-------------------------------------------------------------------------------------+
 {% endhighlight %}
 
-**c) Next you'll use neutron floatingip-create to both allocate and assign floating IP to your port:**
+Next you'll use neutron floatingip-create to both allocate and assign floating IP to your port:**
 
 ```
 neutron floatingip-create --port-id PORT_ID NETWORK_ID
- ```
+```
 
-**NOTE: Ensure the NETWORK_ID you use is the ID for your Ext-Net network**
+**NOTE:** Ensure the NETWORK_ID you use is the ID for your Ext-Net network.
 
-**Example:**
+Example:
 {% highlight bash %}
 $ neutron floatingip-create --port-id 7c433d21-01d6-417c-8ce5-3744c76856ea 7da74520-9d5e-427b-a508-213c84e69616
 Created a new floatingip:
@@ -154,7 +157,7 @@ Created a new floatingip:
 +---------------------+--------------------------------------+
 {% endhighlight %}
 
-**d) You can then run a neutron floatingip-list to confirm:**
+You can then run a neutron floatingip-list to confirm:
 
 {% highlight bash %}
 $ neutron floatingip-list
@@ -165,13 +168,15 @@ $ neutron floatingip-list
 +--------------------------------------+------------------+---------------------+--------------------------------------+
 {% endhighlight %}
 
-**3. Then using the NovaClient you'd use that port to create the instance with this command:**
+### Create an instance
+
+Then using the NovaClient you'd use that port to create the instance with this command:**
 
 {% highlight bash %}
 nova boot --flavor FLAVOR_ID --key-name KEYPAIR_NAME --image IMAGE_ID --security-groups SECGROUP_ID --nic port-id=PORT_ID INSTANCE_NAME
 {% endhighlight %}
 
-**Example:**
+Example:
 
 {% highlight bash %}
 $ nova boot --flavor 101 --key-name SupportKey --image 85e8bfdf-d560-4a1b-9711-52692d422927 --security-groups 3ea1c931-4825-444c-9f02-f341a8f50cc5 --nic port-id=cd497879-11a2-41ce-9f01-9a3c9a377ab1 porttest

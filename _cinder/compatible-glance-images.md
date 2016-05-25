@@ -7,19 +7,24 @@ featured: false
 weight: 4
 ---
 
-Resizing of **Cinder** volumes is not supported yet.  Until it becomes supported, you can accomplish the same thing with these steps:
 
-* Unmount the Cinder volume from inside the instance:
+**Cinder** volumes are block storage devices that you attach to instances to enable persistent storage. Resizing of Cinder volumes is not supported yet. Until it becomes supported, you can accomplish the same thing with these steps:
 
-{% highlight bash %}
+Unmount the Cinder volume from inside the instance:
+
+```
 umount /mnt/volume
-{% endhighlight %}
+```
 
-* Detach the Cinder volume:
+Detach the Cinder volume:
 
-{% highlight bash %}
+```
 nova volume-detach <instanceid> <volumeid>
-{% endhighlight %}
+```
 
-* Snapshot the volume.
-* Deploy a new volume from the snapshot, with the new size.
+Snapshot the volume.
+
+Deploy a new volume from the snapshot, with the new size.
+
+
+See [OpenStack Storage Concepts](http://ibm-blue-box-help.github.io/help-documentation/openstack/openstack-storage-concepts) for more information about the OpenStack storage concepts.

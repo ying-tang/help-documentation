@@ -3,7 +3,7 @@ layout: page
 title:  "How can I get hypervisor statistics?"
 featured: true
 weight: 8
-tags: [getting started, hypervisor, statistics]
+tags: [nova, hypervisor, statistics]
 dateAdded: June 23rd, 2015
 ---
 
