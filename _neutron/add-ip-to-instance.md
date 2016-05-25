@@ -4,7 +4,7 @@ title:  "Add a Specific Fixed Private IP to an Instance"
 dateAdded: June 19th, 2015
 featured: true
 weight: 4
-tags: [openstack, fixed private IP address]
+tags: [neutron, fixed private IP address]
 ---
 
 You shouldn't normally need to do this.  Instead, update your DNS records so you can use hostnames instead of IPs in your deployment scripts or other config files. If an IP changes, you update the DNS record.
