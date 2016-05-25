@@ -13,7 +13,6 @@ dateAdded: May 25, 2016
 
 | **Concept**          | **Description**                                                                                                                                   																		 |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-
 |L2       |Layer-2 of the ISO 7-layer Internet Architecture, where packets are routed. |
 |VLAN     | Virtual Local Area Network, essentially a subnet. |
 |IP       | Internet Protocol, typically used as an abbreviation for an IP Address, which specifices the destination of a packet on the network. |
@@ -39,7 +38,7 @@ dateAdded: May 25, 2016
 
 ## Network types
 
-Generally, your cloud will have one or more each of **internal** and **external** networks. You can think of it as if the instances in your cloud talk to each other on the internal networks, and they talk to sources outside your private cloud on the external networks.
+Generally, your cloud will have one or more each of **internal** and **external** networks. You can think of this idea as if the instances in your cloud can "talk" to each other on the internal networks, and they "talk" to sources outside your private cloud on the external networks.
 
 Various terms can be used to describe internal and external networks. For example, internal networks sometimes are called "tenant networks." External networks that are used to communicate with the public Internet sometimes are referred to as "provider networks."
 
