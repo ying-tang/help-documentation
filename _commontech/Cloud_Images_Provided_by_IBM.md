@@ -72,7 +72,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 
 1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
-3. Click **Create Image** in the page. Specify the following parameters in the new page:
+3. Click **Create Image** in the page. Specify the following parameters in the new page, and click **Create Image**.
 
 	| **Item**               | **Description**                                                                                                  |
 	|------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -88,24 +88,22 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 	| **Public**             | Select this check box to make the image public to all users on all projects.                                     |
 	| **Protected**          | Select this check box to ensure that only users with permissions can delete the image.	                        |
    	
-	For example:
-    
-	{% highlight bash %}
-	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-	Image Source: Image Location
-	Image File: <tempURL_for_QCOW2>
-	Format: QCOW2 - QEMU Emulator
-	Architecture: x86-64
-	Minimum Disk(GB): 5
-	Minimum RAM(MB): 512
-	Copy Data: True
-	Public: True
-	{% endhighlight %}	
-	
-4. Click **Create Image**.
+For example:
 
-5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+{% highlight bash %}
+Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
+Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
+Image Source: Image Location
+Image File: <tempURL_for_QCOW2>
+Format: QCOW2 - QEMU Emulator
+Architecture: x86-64
+Minimum Disk(GB): 5
+Minimum RAM(MB): 512
+Copy Data: True
+Public: True
+{% endhighlight %}	
+	
+Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 **Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
@@ -114,22 +112,20 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 
 You can upload images through the Glance client. See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html) for more information.
 
-1. Create an image.
+Create an image.
 
     * For Linux Images, use `-- min-disk 5 --min-ram 512`
     * For Windows Images, use `--min-disk 25 --min-ram 2048`
     
-	```
-	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
-	```
+{% highlight bash %}
+$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
+{% endhighlight %}	
 	
-2. Check whether the image was created successfully.
+Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-   The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
-
-	```
-	$ glance image-show <image-id>
-	```
+```
+$ glance image-show <image-id>
+```
 	
 ## <a name="downloadedimages"></a>Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
 
@@ -145,25 +141,24 @@ curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objects
   
 Follow these steps:
 	
-1. Download .qcow2 and .md5sum files of the image. 
-  
-   Download the `.qcow2` image file and `.md5sum` checksum file using the `tempURL` and put these 2 files under the same folder. For example:
+Download .qcow2 and .md5sum files of the image.   
+Download the `.qcow2` image file and `.md5sum` checksum file using the `tempURL` and put these 2 files under the same folder. For example:
 
-   {% highlight bash %}
-   ubuntu-guest-image-14.04-20160301-x86_64.qcow2
-   ubuntu-guest-image-14.04-20160301-x86_64.md5sum
-   {% endhighlight %}
+{% highlight bash %}
+ubuntu-guest-image-14.04-20160301-x86_64.qcow2
+ubuntu-guest-image-14.04-20160301-x86_64.md5sum
+{% endhighlight %}
  
-2. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
+Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
 
-   {% highlight bash %}
-   md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
-   ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
-   {% endhighlight %}
+{% highlight bash %}
+md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
+ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
+{% endhighlight %}
    
-   If the result returns "OK", the downloaded `qcow2` image is valid.
+If the result returns "OK", the downloaded `qcow2` image is valid.
 
-3. Upload the image to Glance. You can upload the image either with the [OpenStack dashboard](#upload-dashboard) or with the [command line client](#upload-cli).
+Upload the image to Glance. You can upload the image either with the [OpenStack dashboard](#upload-dashboard) or with the [command line client](#upload-cli).
 
 ### <a name="upload-dashboard"></a>Upload an image using the OpenStack dashboard
 
@@ -171,7 +166,7 @@ Follow these steps:
 
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 
-3. Click **Create Image** in the page. Specify the following parameters in the new page:
+3. Click **Create Image** in the page. Specify the following parameters in the new page, and check **Create Image**.
 
 	| **Item**                | **Description**                                                                                                  |
 	|-------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -186,23 +181,21 @@ Follow these steps:
 	| **Public**              | Select this check box to make the image public to all users on all projects.                                     |
 	| **Protected**           | Select this check box to ensure that only users with permissions can delete the image.                           |	 
 
-    For example:
+For example:
 
-	{% highlight bash %}
-	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-	Image Source: Image File
-	Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2
-	Format: QCOW2 - QEMU Emulator
-	Architecture: x86-64
-	Minimum Disk(GB): 5
-	Minimum RAM(MB): 512
-	Public: True
-	{% endhighlight %}
+{% highlight bash %}
+Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
+Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
+Image Source: Image File
+Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2
+Format: QCOW2 - QEMU Emulator
+Architecture: x86-64
+Minimum Disk(GB): 5
+Minimum RAM(MB): 512
+Public: True
+{% endhighlight %}
 	
-4. Check **Create Image**.
-
-5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 ![Upload the image with the OpenStack dashboard]({{site.baseurl}}/img/upload_image_file.png)
 
@@ -210,20 +203,20 @@ Follow these steps:
 
 See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html) for more information.
 
-1. Create image.
+Create image.
 
 	* For Linux Images, use `-- min-disk 5 --min-ram 512`
 	* For Windows Images, use `--min-disk 25 --min-ram 2048`
 
-	```
-	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
-	```
+{% highlight bash %}
+$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
+{% endhighlight %}
 	
-2. Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-	```
-	$ glance image-show <image-id>
-	```
+```
+$ glance image-show <image-id>
+```
 
 **Note:** For large images, the web upload may time out. For those, we've recommended that people launch an instance in their cloud, download the image to that instance, and then upload from that instance to Glance. All the traffic would stay within SoftLayer, and the upload would be within their own cloud.
 
