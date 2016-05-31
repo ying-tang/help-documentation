@@ -59,7 +59,7 @@ The latest version of this script currently [is available here.](https://benjami
 
 Usage is as follows: 
 
-   ` iops [-n|--num_threads threads] [-t|--time time] <device>`
+    iops [-n|--num_threads threads] [-t|--time time] <device> 
 
     threads := number of concurrent io threads, default 1
     time    := time in seconds, default 10
