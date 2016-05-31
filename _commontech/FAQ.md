@@ -61,11 +61,13 @@ Usage is as follows:
 
     iops [-n|--num_threads threads] [-t|--time time] <device> 
 
+Parameters:
+
     threads := number of concurrent io threads, default 1
     time    := time in seconds, default 10
     device  := some block device, like /dev/sda or \\\\.\\PhysicalDrive0
 
-examples:
+Examples:
 
     iops /dev/sda
     iops -n 8 -t 2 /dev/disk0
