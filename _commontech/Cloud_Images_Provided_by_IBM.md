@@ -144,17 +144,20 @@ Follow these steps:
 1. Download .qcow2 and .md5sum files of the image.   
 2. Download the `.qcow2` image file and `.md5sum` checksum file using the `tempURL` and put these 2 files under the same folder. For example:
 
-	{% highlight bash %}
+	```
 	ubuntu-guest-image-14.04-20160301-x86_64.qcow2
 	ubuntu-guest-image-14.04-20160301-x86_64.md5sum
 	{% endhighlight %}
+	```
  
 3. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
 
+	```
 	{% highlight bash %}
 	md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
 	ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
 	{% endhighlight %}
+	```
    
     If the result returns "OK", the downloaded `qcow2` image is valid.
 
@@ -181,21 +184,22 @@ Follow these steps:
 	| **Public**              | Select this check box to make the image public to all users on all projects.                                     |
 	| **Protected**           | Select this check box to ensure that only users with permissions can delete the image.                           |	 
 
-  For example:
 
-		{% highlight bash %}
-		Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-		Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-		Image Source: Image File
-		Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2
-		Format: QCOW2 - QEMU Emulator
-		Architecture: x86-64
-		Minimum Disk(GB): 5
-		Minimum RAM(MB): 512
-		Public: True
-		{% endhighlight %}
+For example:
+
+```
+Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
+Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
+Image Source: Image File
+Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2
+Format: QCOW2 - QEMU Emulator
+Architecture: x86-64
+Minimum Disk(GB): 5
+Minimum RAM(MB): 512
+Public: True
+```
 	
-4. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 ![Upload the image with the OpenStack dashboard]({{site.baseurl}}/img/upload_image_file.png)
 
@@ -278,10 +282,10 @@ net localgroup administrators <YOUR_USERNAME> /add
 Connect to your instance through SSH or VNC. The default `userid` for the Linux images provided by IBM is **ibmcloud**. Once connected to your Linux instance, you can use the `sudo` command to execute commands that normally require root access. Sudo is configured not to require a password for the default `userid`.
 
 * Use your favorite SSH client and open a connection to the correct IP address of the VM instance, using the private SSH key of the keypair that you specified during provisioning:
- 
-```  
-ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
-```
+	 
+	```  
+	ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
+	```
 	
 * View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
   
