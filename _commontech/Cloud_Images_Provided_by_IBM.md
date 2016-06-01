@@ -90,27 +90,16 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
    	
    For example:
 
-	```
-	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-	
-	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-	
-	Image Source: Image Location
-	
-	Image File: <tempURL_for_QCOW2>
-	
-	Format: QCOW2 - QEMU Emulator
-	
-	Architecture: x86-64
-	
-	Minimum Disk(GB): 5
-	
-	Minimum RAM(MB): 512
-	
-	Copy Data: True
-	
-	Public: True
-    ```
+		Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
+		Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
+		Image Source: Image Location
+		Image File: <tempURL_for_QCOW2>
+		Format: QCOW2 - QEMU Emulator
+		Architecture: x86-64
+		Minimum Disk(GB): 5
+		Minimum RAM(MB): 512
+		Copy Data: True
+		Public: True    
 	
 4. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
@@ -193,6 +182,7 @@ Follow these steps:
 	For example:
 
 	```
+	
 	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
 	
 	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
@@ -210,9 +200,9 @@ Follow these steps:
 	Minimum RAM(MB): 512
 	
 	Public: True
-	```
 	
-Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+	```
+4. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 ![Upload the image with the OpenStack dashboard]({{site.baseurl}}/img/upload_image_file.png)
 
@@ -225,9 +215,9 @@ Create image.
 * For Linux Images, use `-- min-disk 5 --min-ram 512`
 * For Windows Images, use `--min-disk 25 --min-ram 2048`
 
-{% highlight bash %}
-$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
-{% endhighlight %}
+  ```
+  $ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
+  ```
 	
 Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
