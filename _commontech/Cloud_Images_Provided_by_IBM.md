@@ -156,7 +156,6 @@ Follow these steps:
 	```
 	ubuntu-guest-image-14.04-20160301-x86_64.qcow2
 	ubuntu-guest-image-14.04-20160301-x86_64.md5sum
-	{% endhighlight %}
 	```
  
 3. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
