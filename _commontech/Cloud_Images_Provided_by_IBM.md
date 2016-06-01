@@ -88,22 +88,31 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 	| **Public**             | Select this check box to make the image public to all users on all projects.                                     |
 	| **Protected**          | Select this check box to ensure that only users with permissions can delete the image.	                        |
    	
-For example:
+   For example:
 
-{% highlight bash %}
-Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-Image Source: Image Location
-Image File: <tempURL_for_QCOW2>
-Format: QCOW2 - QEMU Emulator
-Architecture: x86-64
-Minimum Disk(GB): 5
-Minimum RAM(MB): 512
-Copy Data: True
-Public: True
-{% endhighlight %}	
+	```
+	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
 	
-Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
+	
+	Image Source: Image Location
+	
+	Image File: <tempURL_for_QCOW2>
+	
+	Format: QCOW2 - QEMU Emulator
+	
+	Architecture: x86-64
+	
+	Minimum Disk(GB): 5
+	
+	Minimum RAM(MB): 512
+	
+	Copy Data: True
+	
+	Public: True
+    ```
+	
+4. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 **Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
@@ -134,10 +143,10 @@ $ glance image-show <image-id>
 * Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 * When downloading the cloud image using the `tempUrl` be sure that the `tempUrl` token is escaped or specified in quotes. For example:
 
-{% highlight bash %}
-curl -f -o <output_file> '<cloud_image_download_tempUrl>'
-curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867'
-{% endhighlight %}
+  ```
+  curl -f -o <output_file> '<cloud_image_download_tempUrl>'  
+  curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867'
+  ```
   
 Follow these steps:
 	
@@ -152,13 +161,10 @@ Follow these steps:
  
 3. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
 
-	```
-	{% highlight bash %}
+	```	
 	md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
 	ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
-	{% endhighlight %}
-	```
-   
+	```   
     If the result returns "OK", the downloaded `qcow2` image is valid.
 
 4. Upload the image to Glance. You can upload the image either with the [OpenStack dashboard](#upload-dashboard) or with the [command line client](#upload-cli).
@@ -185,19 +191,27 @@ Follow these steps:
 	| **Protected**           | Select this check box to ensure that only users with permissions can delete the image.                           |	 
 
 
-For example:
+	For example:
 
-```
-Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-Image Source: Image File
-Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2
-Format: QCOW2 - QEMU Emulator
-Architecture: x86-64
-Minimum Disk(GB): 5
-Minimum RAM(MB): 512
-Public: True
-```
+	```
+	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
+	
+	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
+	
+	Image Source: Image File
+	
+	Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2
+	
+	Format: QCOW2 - QEMU Emulator
+	
+	Architecture: x86-64
+	
+	Minimum Disk(GB): 5
+	
+	Minimum RAM(MB): 512
+	
+	Public: True
+	```
 	
 Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
