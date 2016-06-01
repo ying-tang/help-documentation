@@ -114,8 +114,10 @@ Create an image.
 
 * For Linux Images, use `-- min-disk 5 --min-ram 512`
 * For Windows Images, use `--min-disk 25 --min-ram 2048`
-    
-    $ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
+
+{% highlight bash %}    
+$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
+{% endhighlight %}
 	
 Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
