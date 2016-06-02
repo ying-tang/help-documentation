@@ -29,11 +29,11 @@ weight: 4
 
 You have the following options with the **Instance Boot Source** field:
 
-* Boot from image: If you choose this option, a new field for Image Name displays. You can select from the list of private and public images.
-* Boot from snapshot: If you choose this option, a new field for Instance Snapshot displays. You can select the snapshot from the list.
-* Boot from volume: If you choose this option, a new field for Volume displays. You can select the volume from the list.
-* Boot from image (creates a new volume): With this option, you can boot from an image and create a volume by entering the Device Size and Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
-* Boot from volume snapshot (creates a new volume): Using this option, you can boot from a volume snapshot and create a new volume by choosing Volume Snapshot from a list and adding a Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
+* **Boot from image**: If you choose this option, a new field for Image Name displays. You can select from the list of private and public images.
+* **Boot from snapshot**: If you choose this option, a new field for Instance Snapshot displays. You can select the snapshot from the list.
+* **Boot from volume**: If you choose this option, a new field for Volume displays. You can select the volume from the list.
+* **Boot from image** (creates a new volume): With this option, you can boot from an image and create a volume by entering the Device Size and Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
+* **Boot from volume snapshot** (creates a new volume): Using this option, you can boot from a volume snapshot and create a new volume by choosing Volume Snapshot from a list and adding a Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
 
 Since you are launching an instance from an image, **Boot from image** is chosen by default.
 
@@ -53,19 +53,16 @@ Since you are launching an instance from an image, **Boot from image** is chosen
 
 #### The Post-Creation tab
 	
-* For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of <YOUR_PASSWORD> ):
+For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of <YOUR_PASSWORD> ):
 
-	```
 	#cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
-	```
-	
-* For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of _<YOUR_USERNAME>_ and _<YOUR_PASSWORD>_).
 
-	```
+	
+For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of _<YOUR_USERNAME>_ and _<YOUR_PASSWORD>_).
+
 	rem cmd
 	net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
 	net localgroup administrators <YOUR_USERNAME> /add
-	```
 	
 #### The Advanced Options tab
 
