@@ -79,7 +79,10 @@ You have two options:
 * **Automatic**: Entire disk is single partition and automatically resizes.
 * **Manual**: Faster build times but requires manual partitioning.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/icos-integration-4
 ## How to connect to your instance
 
 **Note:** Ensure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
