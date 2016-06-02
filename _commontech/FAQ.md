@@ -15,10 +15,8 @@ editor: Leslie Lundquist
 Although the `Resize Instance` option does appear in **Horizon**, this functionality currently is not supported. If you need to extend an instance's size, the recommended path is to take a snapshot of the instance and redeploy that snapshot into a new, larger flavor.
 
 
-
 ### How can I start up an instance on a specific host?
-This functionality is supported through the **OpenStack API**.  Please see [_How to deploy an instance to a specific hypervisor node_](https://github.blueboxgrid.com/documentation/bluebox-docs/blob/master/Deploy_to_specific_hypervisor.md) for more details.
-
+This functionality is supported through the **OpenStack API**.  Please see [How to deploy an instance to a specific hypervisor node](http://ibm-blue-box-help.github.io/help-documentation/nova/deploy-to-specific-hypervisor/) for more details.
 
 
 ### I have a new cloud, and there are already two projects in place. What are these?
@@ -31,7 +29,6 @@ The `admin` and `service` projects are created to support the underlying operati
 The ports that are open through the firewall to your IBM Blue Box Cloud are:
 
 ```
-
 80 - horizon (OpenStack Web Portal)
 443 - horizon (OpenStack Web Portal)
 5000 - keystone (OpenStack Authentication API)
@@ -60,14 +57,17 @@ A particularly easy to use python script for measuring IOPS by Benjamin Schweize
 
 The latest version of this script currently [is available here.](https://benjamin-schweizer.de/files/iops/iops-2011-02-11)
 
-Usage is as follows:
-   ` iops [-n|--num_threads threads] [-t|--time time] <device>`
+Usage is as follows: 
+
+    iops [-n|--num_threads threads] [-t|--time time] <device> 
+
+Parameters:
 
     threads := number of concurrent io threads, default 1
     time    := time in seconds, default 10
     device  := some block device, like /dev/sda or \\\\.\\PhysicalDrive0
 
-examples:
+Examples:
 
     iops /dev/sda
     iops -n 8 -t 2 /dev/disk0
