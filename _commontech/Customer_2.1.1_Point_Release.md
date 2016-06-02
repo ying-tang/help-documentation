@@ -9,7 +9,9 @@ author: Leslie Lundquist
 ---
 
 ### IBM Blue Box Cloud Customer
+
 ### Point Release 2.1.1
+
 #### June 2, 2015
 
 #### Release Notes
