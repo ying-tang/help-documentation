@@ -79,6 +79,44 @@ You have two options:
 * **Automatic**: Entire disk is single partition and automatically resizes.
 * **Manual**: Faster build times but requires manual partitioning.
 
+
+## How to connect to your instance
+
+**Note:** Ensure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
+
+1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
+
+2. Expand the **Project** panel, then the **Compute** tab in the left navigation area, and click on **Instances**.
+
+3. Locate your instance in the list of running instances and note its IP address, such as `192.168.100.237`.
+
+4. Create a connection to your instance by specifying its IP address.
+
+![Locate your instance from the instance list]({{site.baseurl}}/img/locate_instance_from_list.png)
+
+### Connecting to Linux instances
+  
+Connect to your instance through SSH or VNC. The default `userid` for the Linux images provided by IBM is **ibmcloud**. Once connected to your Linux instance, you can use the `sudo` command to execute commands that normally require root access. Sudo is configured not to require a password for the default `userid`.
+
+* Use your favorite SSH client and open a connection to the correct IP address of the VM instance, using the private SSH key of the keypair that you specified during provisioning:
+	 
+	```  
+	ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
+	```
+	
+* View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
+  
+  ![View the VNC console of your instance]({{site.baseurl}}/img/view_VNC_console.png)
+
+**Note:** To be able to log in via the console to a new Linux instance as `ibmcloud` user, you must have specified a password in the Customization Script during provisioning.
+  
+### Connecting to Windows instances
+
+Connect to your instance through Remote Desktop or VNC. You'll need to use the `userid` and `password` specified in the Customization Script during VM provisioning. On your first login, a prompt appears, requesting that you change your password. Please do.
+
+* Use your favorite Remote Desktop client to connect.
+* View the VNC console of the instance by clicking on the instance name in IBM Blue Box Cloud OpenStack dashboard, and then click on the **console** tab. The VNC console connects you with HTTPS.
+
  
 ## How to stop, start, pause, suspend, and restart an existing instance
 
@@ -109,6 +147,4 @@ There are two ways to terminate or delete an instance:
 * In the Actions column there is a **More** button that displays other options for each instance. Click **Terminate Instance**.
 
 A confirmation dialog appears where you can click **Terminate Instances**.
-
- 
 
