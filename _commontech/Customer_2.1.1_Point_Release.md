@@ -1,12 +1,12 @@
- +---
-+layout: page
-+title: Release Notes 2.1.1
-+featured: false
-+weight: 5
-+tags: [commontech, release, features, gettingstarted]
-+dateAdded: June 2, 2016
-+author: Leslie Lundquist
-+---
+---
+layout: page
+title: Release Notes 2.1.1
+featured: true
+weight: 5
+tags: [commontech, release, features, gettingstarted]
+dateAdded: June 2, 2016
+author: Leslie Lundquist
+---
 
 ### IBM Blue Box Cloud Customer
 ### Point Release 2.1.1
