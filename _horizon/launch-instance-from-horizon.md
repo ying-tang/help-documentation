@@ -14,6 +14,8 @@ weight: 4
 3. Click **Launch Instance**.
 4. Enter the following values in different tabs.
 
+![Launch an instance]({{site.baseurl}}/img/launch_instance_from_image.png)
+
 ### Values in Lauch Instance tabs
 
 #### The Details tab
@@ -53,12 +55,12 @@ Since you are launching an instance from an image, **Boot from image** is chosen
 
 #### The Post-Creation tab
 	
-For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of <YOUR_PASSWORD> ):
+For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>`):
 
 	#cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
 
 	
-For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of _<YOUR_USERNAME>_ and _<YOUR_PASSWORD>_).
+For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of `<YOUR_USERNAME>` and `<YOUR_PASSWORD>`).
 
 	rem cmd
 	net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
@@ -72,7 +74,8 @@ For Windows instances: To set the initial username and password, use the followi
 	
 You have two options:
 
-  * Automatic: Entire disk is single partition and automatically resizes.
-  * Manual: Faster build times but requires manual partitioning.
-		
-![Launch an instance]({{site.baseurl}}/img/launch_instance_from_image.png)
+* **Automatic**: Entire disk is single partition and automatically resizes.
+* **Manual**: Faster build times but requires manual partitioning.
+
+  
+
