@@ -8,6 +8,8 @@ featured: false
 weight: 4
 ---
 
+## How to launch an instance from Horizon
+
 ### Steps
 1. Log in to the Horizon dashboard.
 2. Under the Project topic, expand **Compute** and click **Instances**. You can view a list of instances with their details such as name, IP address, and status. 
@@ -37,7 +39,7 @@ You have the following options with the **Instance Boot Source** field:
 * **Boot from image** (creates a new volume): With this option, you can boot from an image and create a volume by entering the Device Size and Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
 * **Boot from volume snapshot** (creates a new volume): Using this option, you can boot from a volume snapshot and create a new volume by choosing Volume Snapshot from a list and adding a Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
 
-Since you are launching an instance from an image, **Boot from image** is chosen by default.
+**Boot from image** is chosen by default. You can select from default images, or use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
 
 #### The Access & Security tab
 
@@ -70,12 +72,43 @@ For Windows instances: To set the initial username and password, use the followi
 
 | **Values**         | **Description** 																	   |	
 |--------------------|-------------------------------------------------------------------------------------|  
-| Disk Partition     | Select the type of disk partition from the dropdown list                            |
+| Disk Partition     | Select the type of disk partition from the drop-down list.                          |
 	
 You have two options:
 
 * **Automatic**: Entire disk is single partition and automatically resizes.
 * **Manual**: Faster build times but requires manual partitioning.
 
-  
+ 
+## How to stop, start, pause, suspend, and restart an existing instance
+
+Under the **Project** topic expand **Compute** and click **Instances**.
+
+The dashboard displays the list of created instances for the current project. In the Actions column there is a **More** button that will display other options:
+
+* Pause instance: pauses the instance and saves its state on memory. This option keeps the resources (vCPUs and memory).
+* Suspend instance: suspends the instance and saves its state to the disk. This option frees up resources (vCPUs and memory).
+* Soft Reboot instance: performs a graceful shutdown and restart of the instance.
+* Hard Reboot instance: performs the equivalent of a power reset of the server.
+
+Click the proper option for the operation you need to apply.
+
+## How to view the VNC console
+
+Under the **Project** topic expand **Compute** and click **Instances**.
+
+The dashboard displays the list of created instances for the current project. To view the VNC console of an instance, click on the name of the instance.
+
+## How to delete an instance
+
+Under the **Project** topic expand **Compute** and click **Instances**.
+
+There are two ways to terminate or delete an instance:
+
+* In the Instances list, select the ones you want to delete and click **Terminate Instances**.
+* In the Actions column there is a **More** button that displays other options for each instance. Click **Terminate Instance**.
+
+A confirmation dialog appears where you can click **Terminate Instances**.
+
+ 
 
