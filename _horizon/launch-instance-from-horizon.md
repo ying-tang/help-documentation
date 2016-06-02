@@ -8,15 +8,17 @@ featured: false
 weight: 4
 ---
 
-
+## Steps
 1. Log in to the Horizon dashboard.
 2. Under the Project topic, expand **Compute** and click **Instances**. You can view a list of instances with their details such as name, IP address, and status. 
 3. Click **Launch Instance**.
-4. Enter the following values.
+4. Enter the following values in different tabs.
 
-* The **Details** tab
+## Values in tabs
 
-| **Values             | **Description** 																																																																																															    | 
+### The **Details** tab
+
+| **Values**           | **Description** 																																																																																															    | 
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Availability Zone    | By default, this value is set to the availability zone given by the cloud provider (for example, us-west or apac-south). It could be nova.																																																																		|
 | Instance Name        | Assign a name to the virtual machine. Note: The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created so you could have two instances with the same host name. |
@@ -35,36 +37,34 @@ You have the following options with *Instance Boot Source**:
 
 Since you are launching an instance from an image, Boot from image is chosen by default.
 
-* The **Access & Security** Tab
+### The Access & Security** tab
 
-| **Values **      | **Description** 																																																																							 | 
+| **Values**       | **Description** 																																																																							 | 
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Key pair	       | Specify a key pair. A list of stored key pairs are displayed to you to choose from or you can create and store a new key pair by clicking the + sign. If the image uses a static root password or a static key set (neither is recommended), you do not need to provide a key pair to launch the instance.  |
 | Security Groups  | The default security group is automatically selected.              																																																										 |       
  
-* The **Network** tab
+### The **Network** tab
 
-| **Values**         | **Description** 																	   |	
-|--------------------|-------------------------------------------------------------------------------------|          
-| Selected Networks  | To add a network to the instance, click the + sign in the Available Networks field. |
+	| **Values**         | **Description** 																	   |	
+	|--------------------|-------------------------------------------------------------------------------------|          
+	| Selected Networks  | To add a network to the instance, click the + sign in the Available Networks field. |
 
-* The **Post-Creation** tab
+### The **Post-Creation** tab
 	
-  For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of <YOUR_PASSWORD> ):
+* For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of <YOUR_PASSWORD> ):
 
-	```
 	#cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
-	```
-  For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of _<YOUR_USERNAME>_ and _<YOUR_PASSWORD>_).
+	 
+* For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of _<YOUR_USERNAME>_ and _<YOUR_PASSWORD>_).
 
-	```
 	rem cmd
 	net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
 	net localgroup administrators <YOUR_USERNAME> /add
-	```
-  **Note**: If your password contains any of the cloud-init control characters (& < > ^ | ), you must escape the character by adding the ^ character. For example, if your password is MySecret&123, you must enter MySecret^&123 in the command. You also need to add /y at the end of the second line if your password is longer than 14 characters.
 
-* The **Advanced Options** tab
+**Note**: If your password contains any of the cloud-init control characters (& < > ^ | ), you must escape the character by adding the ^ character. For example, if your password is MySecret&123, you must enter MySecret^&123 in the command. You also need to add /y at the end of the second line if your password is longer than 14 characters.
+
+### The **Advanced Options** tab
 
 | **Values**         | **Description** 																	   |	
 |--------------------|-------------------------------------------------------------------------------------|  
@@ -74,6 +74,5 @@ You have two options:
 
   * Automatic: Entire disk is single partition and automatically resizes.
   * Manual: Faster build times but requires manual partitioning.
-
 		
 ![Launch an instance]({{site.baseurl}}/img/launch_instance_from_image.png)
