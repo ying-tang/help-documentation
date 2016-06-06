@@ -12,7 +12,7 @@ author: Leslie Lundquist
 
 # Release Notes (DRAFT)
 
-#### Release 3.0    created     May 24, 2016
+#### Release 3.0    created     June 7, 2016
 
 # **Summary of New Features in the Latest Release**
 
@@ -22,13 +22,13 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
  
 2.[OpenStack Power Compute Node Support (Habeñero and Firestone).](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-3.  [Federated keystone across multiple Blue Box clouds.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+3.  [Federated Keystone identity available across multiple Blue Box clouds.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
 4.  [Federate Keystone to External Identity Provider.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-5.  [Hybrid Ceph Storage Support in BBC Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+5.  [Hybrid Ceph Storage Support in Blue Box Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-6.  [I/O Optimized and High Storage Compute Nodes Support for BBC Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+6.  [I/O Optimized and High Storage Compute Nodes Support for Blue Box Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
 7.  [Network connectivity to customer Bare Metal.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
@@ -41,8 +41,8 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 11. [Higher soft limits for Object Storage of 250 TB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
 12. [Higher soft limits for Block Storage of 1 PB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-
-13. [HIPAA available in Blue Box Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
+13. [HIPAA available in Blue Box Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
+14. [Updates for IBM Blue Box Cloud Guest Images now available]()
 
 For additional user documentation, please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
 
