@@ -3,6 +3,7 @@ layout: page
 title: Using IBM UrbanCode Deploy with IBM Blue Box
 featured: no
 weight: 10
+tags: [heat, UCD]
 author: Ying Tang, Pan Xia Zou
 dateAdded: June 7, 2016
 ---
