@@ -2,7 +2,7 @@
 layout: page
 title:  "How to launch an instance from Horizon"
 tags: [horizon, instance, launch]
-dateAdded: June 1, 2016
+dateAdded: June 6, 2016
 author: Ying Tang
 featured: false
 weight: 4
@@ -12,72 +12,108 @@ weight: 4
 
 ### Steps
 1. Log in to the Horizon dashboard.
-2. Under the Project topic, expand **Compute** and click **Instances**. You can view a list of instances with their details such as name, IP address, and status. 
+2. Under the Project topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of instances with their details such as name, IP address, and status. 
 3. Click **Launch Instance**.
 4. Enter the following values in different tabs.
 
-![Launch an instance]({{site.baseurl}}/img/launch_instance_from_image.png)
+![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
 
-### Values in Lauch Instance tabs
+### Values in Launch Instance tabs
 
 #### The Details tab
 
-| **Values**           | **Description** 																																																																																															    | 
-|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Availability Zone    | By default, this value is set to the availability zone given by the cloud provider (for example, us-west or apac-south). It could be nova.																																																																		|
-| Instance Name        | Assign a name to the virtual machine. Note: The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created so you could have two instances with the same host name. |
-| Flavor               | Specify the size of the instance to launch. The flavor must have enough resources to fit the image you are selecting. The Flavor Details table displays the details of the selected flavor.																																																				    |
-| Instance Count	   | To launch multiple instances, enter a value greater than 1. The default is 1.																																																																															        |
-| Instance Boot Source | See the descriptions under this table.																																																																																										    |
-| Image Name           | This field changes based on your previous selection. Since you have chosen to launch an instance using an image, the Image Name field displays. Select the image name from the dropdown list.																																																			        |
+| **Values**           | **Description** 																																																																																													      | 
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Instance Name        | Assign a name to the virtual machine. The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created so you could have two instances with the same host name. |
+| Availability Zone    | By default, this value is set to the availability zone given by the cloud provider, for example, `compute_standard`. 																																																													                                  |
+| Count	               | To launch multiple instances, enter a value greater than 1. The default is 1.																																																																															  |
 
-You have the following options with the **Instance Boot Source** field:
+![The Details tab]({{site.baseurl}}/img/launch_instance_details.png)
 
-* **Boot from image**: If you choose this option, a new field for Image Name displays. You can select from the list of private and public images.
-* **Boot from snapshot**: If you choose this option, a new field for Instance Snapshot displays. You can select the snapshot from the list.
-* **Boot from volume**: If you choose this option, a new field for Volume displays. You can select the volume from the list.
-* **Boot from image** (creates a new volume): With this option, you can boot from an image and create a volume by entering the Device Size and Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
-* **Boot from volume snapshot** (creates a new volume): Using this option, you can boot from a volume snapshot and create a new volume by choosing Volume Snapshot from a list and adding a Device Name for your volume. Click the Delete on Terminate option to delete the volume on terminating the instance.
+Click **Next** or the **Source** tab to continue the steps.
 
-**Boot from image** is chosen by default. You can select from default images, or use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
+#### The Source tab
 
-#### The Access & Security tab
+You have the following options with the **Select Boot Source** field:
 
-| **Values**       | **Description** 																																																																							 | 
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Key pair	       | Specify a key pair. A list of stored key pairs are displayed to you to choose from or you can create and store a new key pair by clicking the + sign. If the image uses a static root password or a static key set (neither is recommended), you do not need to provide a key pair to launch the instance.  |
-| Security Groups  | The default security group is automatically selected.              																																																										 |       
+| **Options**           | **Description**                           								    																							     														  																																														  |	
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Image                 | Select from the list of private and public images in the **Available** table, and click the plus sign (+) to move it to **Allocated**. Optionally you can click **Yes** on **Create New Volume** to enable the volume creation options. If you have a new volume created with this instance, optionally you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume on instance termination. |
+| Instance Snapshot     | Select from the snapshots in the **Available** table, and click the plus sign (+) to move it to **Allocated**.																												            														  																				  										      |
+| Volume				| Select from the volumes in the **Available** table, and click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume on instance termination.   											  																																  |
+| Volume Snapshot       | Select from the volume snapshots in the **Available** table, and click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume on instance termination.										  																																  |
+
+![The Source tab]({{site.baseurl}}/img/launch_instance_source_image.png)
+
+**Notes:** The **Image** option is chosen by default. With the **Image** option you can select images from the public images, or use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
+
+#### The Flavor tab
+
+Select from the list of flavors and click the plus sign (+) to move it to **Allocated**. Click **Next** or the **Flavor** tab to continue the steps.
+
+![The Flavor tab]({{site.baseurl}}/img/launch_instance_flavor.png)
+
+#### The Networks tab
+
+Select from the list of networks and click the plus sign (+) to move it to **Allocated**. You can have multiple networks allocated to the instance. 
+
+![The Flavor tab]({{site.baseurl}}/img/launch_instance_network.png)
+
+#### The Network Ports tab
+
+With the current release of Blue Box, network ports can be created through APIs only. After you create the port and associate it with one of the networks that you select in the **Networks* tab, you will be able to view this port in the **Available** table. You can click the plus sign (+) to move it to **Allocated**.     
+
+![The Flavor tab]({{site.baseurl}}/img/launch_instance_port.png)
+
+#### The Security Groups tab
+
+Select from the list of security groups and click the plus sign (+) to move it to **Allocated**.   
+
+![The Security Group tab]({{site.baseurl}}/img/launch_instance_srg.png)        																																																										 |       
  
-#### The Network tab
+#### The Key Pair tab
 
-| **Values**         | **Description** 																	   |	
-|--------------------|-------------------------------------------------------------------------------------|          
-| Selected Networks  | To add a network to the instance, click the + sign in the Available Networks field. |
+Specify a key pair. You have the following options:
 
+* Select from a list of stored key pairs, and click the plus sign (+) to move it to **Allocated**.   
+* Click **Import Key Pair* to import your own key pair. Copy and paste your public key and click **Import Key Pair**.
+* Click **Create Key Pair** to create and store a new key pair. Specify the key pair name, and click **Create Key Pair**. your will be promoted to save the key pair to the local. 
 
-#### The Post-Creation tab
+![Create a new key pair]({{site.baseurl}}/img/launch_instance_kp.png)
+
+![Create a new key pair and save]({{site.baseurl}}/img/launch_instance_kp_new.png)
+
+#### The Configuration tab
+
+Custom scripts are attached to instances to perform specific actions when the instance is launched. You can type your script directly into the **Customization Script** field. 
 	
 For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>`):
 
 	#cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
 
-	
 For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant username and password in place of `<YOUR_USERNAME>` and `<YOUR_PASSWORD>`).
 
 	rem cmd
 	net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
 	net localgroup administrators <YOUR_USERNAME> /add
 	
-#### The Advanced Options tab
+![Custom script]({{site.baseurl}}/img/launch_instance_script.png)
 
-| **Values**         | **Description** 																	   |	
-|--------------------|-------------------------------------------------------------------------------------|  
-| Disk Partition     | Select the type of disk partition from the drop-down list.                          |
+If your browser supports the HTML5 File API, you may click **Browse** to load your script from a file. The size of your script should not exceed 16 Kb.
+
+In the **Disk Partition** drop-down menu, you can select **Automatic** to resize the disk and set it to a single partition, or select **Manual** to create multiple partitions on the disk.
+
+Select the **Configuration Drive** checkbox if you want to write metadata to a special configuration drive, and specify the metedata in the **Metadata** tab. When the instance boots, it attaches to the configuration drive and accesses the metadata.
 	
-You have two options:
+#### The Metadata tab
 
-* **Automatic**: Entire disk is single partition and automatically resizes.
-* **Manual**: Faster build times but requires manual partitioning.
+A common API is provided by Glance to define key and value pairs to tag metadata for different types of resources (images, artifacts, volumes, flavors, aggregates, and so on). 
+
+The key name, image name and image ID of your instance will be stored as metadata by default. You can also create additional key and value pairs in the **Custom** field and click the plus sign (+) to move it to the **Existing metadata** list. 
+
+![Custom meta]({{site.baseurl}}/img/launch_instance_meta.png)
+
+See [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/metadefs-concepts.html) and [Using Glance’s Metadata Definitions Catalog Public APIs](http://docs.openstack.org/developer/glance/glancemetadefcatalogapi.html).
 
 ## How to connect to your instance
 
@@ -103,7 +139,7 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 	ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
 	```
 	
-* View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
+* From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the Actions column of the instance. The VNC console connects you with HTTPS.
   
   ![View the VNC console of your instance]({{site.baseurl}}/img/view_VNC_console.png)
 
@@ -114,38 +150,37 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 Connect to your instance through Remote Desktop or VNC. You'll need to use the `userid` and `password` specified in the Customization Script during VM provisioning. On your first login, a prompt appears, requesting that you change your password. Please do.
 
 * Use your favorite Remote Desktop client to connect.
-* View the VNC console of the instance by clicking on the instance name in IBM Blue Box Cloud OpenStack dashboard, and then click on the **console** tab. The VNC console connects you with HTTPS.
-
+* From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the Actions column of the instance. The VNC console connects you with HTTPS.
  
-## How to stop, start, pause, suspend, and restart an existing instance
+## How to manage existing instances
 
-Under the **Project** topic expand **Compute** and click **Instances**.
+Under the **Project** topic, expand **Compute** and click **Instances**.
 
-The dashboard displays the list of created instances for the current project. In the Actions column there is a **More** button that will display other options:
+The dashboard displays the list of created instances for the current project. In the Actions column there is drop-down list that will display your options:
 
+* Creates snapshot: creates an instance snapshot.
+* Associate Floating IP: associates an available floating IP to a port of your instance. 
+* Attach an Interface: attaches the interface to a network. 
+* Detach an Interface: removes a port that you created for the instance.
+* Edit instance: changes the instance name, or upload the security groups.
+* Update metedata: updates the custom metadata that you specified for the instance.
+* Edit Security Groups: removes an existing security group or assign a new security group.
+* Console: views the VNC console of the instance.
+* View Log: views the instance log.
 * Pause instance: pauses the instance and saves its state on memory. This option keeps the resources (vCPUs and memory).
 * Suspend instance: suspends the instance and saves its state to the disk. This option frees up resources (vCPUs and memory).
-* Soft Reboot instance: performs a graceful shutdown and restart of the instance.
-* Hard Reboot instance: performs the equivalent of a power reset of the server.
+* Shelve instance: shelves the image and shuts down the instance. 
+* Resize instance: updates the flavor setting of the instance.
+* Lock instance: locks the instance.
+* Unlock instance: unlocks the instance.
+* Soft Reboot Instance: performs a graceful shutdown and restart of the instance.
+* Hard Reboot Instance: performs the equivalent of a power reset of the server.
+* Shut off Instance: performs a power off the instance.
+* Rebuild Instance: rebuilds the instance.
+* Delete Instance: delete the instance. 
 
 Click the proper option for the operation you need to apply.
 
-## How to view the VNC console
-
-Under the **Project** topic expand **Compute** and click **Instances**.
-
-The dashboard displays the list of created instances for the current project. To view the VNC console of an instance, click on the name of the instance.
-
-## How to delete an instance
-
-Under the **Project** topic expand **Compute** and click **Instances**.
-
-There are two ways to terminate or delete an instance:
-
-* In the Instances list, select the ones you want to delete and click **Terminate Instances**.
-* In the Actions column there is a **More** button that displays other options for each instance. Click **Terminate Instance**.
-
-A confirmation dialog appears where you can click **Terminate Instances**.
 
  
 
