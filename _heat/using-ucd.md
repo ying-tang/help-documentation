@@ -42,7 +42,7 @@ Follow these steps to install UCDP:
 
 * Only the default ports (8080 and 8443) are supported. If you want to use different ports, open a support ticket.
 * During installation, accept the default trial license path 27000@localhost unless you have your own license. You can update the license after installation.
-* When prompted with the question ¡°What host name will users access the web UI at?¡±, if your host name is not registered, specify the IP address instead of the host name.
+* When prompted with the question "What host name will users access the web UI at?", if your host name is not registered, specify the IP address instead of the host name.
 * It is best practice to make the versions of the database server and the database driver consistent.
 
 For the complete UCDP documentation, see [IBM UCDP Knowledge Center](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/edt61_welcome.html).
@@ -77,5 +77,3 @@ Integrate your UCD with UCDP by following the instructions in [Connecting to IBM
 With the connection established, you can now deploy applications to IBM Blue Box within IBM UrbanCode Deploy and IBM UrbanCode Deploy with Patterns.
 
 **Note:** If you use an image that has a period (.) in the image name, update the VM name created in Blueprint in the Properties field to remove the period (.). Otherwise, the name of the VM created will contain a period (.) by default, which causes software deployment to fail.
-
-
