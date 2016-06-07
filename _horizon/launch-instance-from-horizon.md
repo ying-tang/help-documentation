@@ -14,7 +14,7 @@ weight: 4
 1. Log in to the Horizon dashboard.
 2. Under the Project topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of instances with their details such as name, IP address, and status. 
 3. Click **Launch Instance**.
-4. Enter the following values in different tabs.
+4. Navigate through the following tabs and provide the values.
 
 ![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
 
@@ -30,7 +30,7 @@ weight: 4
 
 ![The Details tab]({{site.baseurl}}/img/launch_instance_details.png)
 
-Click **Next** or the **Source** tab to continue the steps.
+You can click **Next** or the **Source** tab to continue the steps.
 
 #### The Source tab
 
@@ -45,11 +45,11 @@ You have the following options with the **Select Boot Source** field:
 
 ![The Source tab]({{site.baseurl}}/img/launch_instance_source_image.png)
 
-**Notes:** The **Image** option is chosen by default. With the **Image** option you can select images from the public images, or use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
+**Note:** The **Image** option is chosen by default. With the **Image** option you can select images from the public images, or use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
 
 #### The Flavor tab
 
-Select from the list of flavors and click the plus sign (+) to move it to **Allocated**. Click **Next** or the **Flavor** tab to continue the steps.
+Select from the list of flavors and click the plus sign (+) to move it to **Allocated**. 
 
 ![The Flavor tab]({{site.baseurl}}/img/launch_instance_flavor.png)
 
@@ -61,7 +61,8 @@ Select from the list of networks and click the plus sign (+) to move it to **All
 
 #### The Network Ports tab
 
-With the current release of Blue Box, network ports can be created through APIs only. After you create the port and associate it with one of the networks that you select in the **Networks* tab, you will be able to view this port in the **Available** table. You can click the plus sign (+) to move it to **Allocated**.     
+With the current release of Blue Box, network ports can be created through APIs only. After you create the port and associate it with one of the networks that you select in the
+ **Networks** tab, you will be able to view this port in the **Available** table. You can click the plus sign (+) to move it to **Allocated**.     
 
 ![The Flavor tab]({{site.baseurl}}/img/launch_instance_port.png)
 
@@ -76,12 +77,14 @@ Select from the list of security groups and click the plus sign (+) to move it t
 Specify a key pair. You have the following options:
 
 * Select from a list of stored key pairs, and click the plus sign (+) to move it to **Allocated**.   
-* Click **Import Key Pair* to import your own key pair. Copy and paste your public key and click **Import Key Pair**.
-* Click **Create Key Pair** to create and store a new key pair. Specify the key pair name, and click **Create Key Pair**. your will be promoted to save the key pair to the local. 
-
-![Create a new key pair]({{site.baseurl}}/img/launch_instance_kp.png)
-
-![Create a new key pair and save]({{site.baseurl}}/img/launch_instance_kp_new.png)
+* Click **Import Key Pair** to import your own key pair. Copy and paste your public key and click **Import Key Pair**.
+* Click **Create Key Pair** to create and store a new key pair. Specify the key pair name, and click **Create Key Pair**.  
+  
+  ![Create a new key pair]({{site.baseurl}}/img/launch_instance_kp.png)
+  
+  Your will be promoted to save the new key pair to the local.
+  
+  ![Create a new key pair and save]({{site.baseurl}}/img/launch_instance_kp_new.png)
 
 #### The Configuration tab
 
@@ -113,7 +116,8 @@ The key name, image name and image ID of your instance will be stored as metadat
 
 ![Custom meta]({{site.baseurl}}/img/launch_instance_meta.png)
 
-See [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/metadefs-concepts.html) and [Using Glance’s Metadata Definitions Catalog Public APIs](http://docs.openstack.org/developer/glance/glancemetadefcatalogapi.html).
+For more information about Glance metadata, see [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/metadefs-concepts.html) and [Using Glance’s Metadata Definitions Catalog Public APIs](http://docs.openstack.org/developer/glance/glancemetadefcatalogapi.html).
+
 
 <<<<<<< HEAD
 
@@ -131,8 +135,6 @@ See [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/me
 
 4. Create a connection to your instance by specifying its IP address.
 
-![Locate your instance from the instance list]({{site.baseurl}}/img/locate_instance_from_list.png)
-
 ### Connecting to Linux instances
   
 Connect to your instance through SSH or VNC. The default `userid` for the Linux images provided by IBM is **ibmcloud**. Once connected to your Linux instance, you can use the `sudo` command to execute commands that normally require root access. Sudo is configured not to require a password for the default `userid`.
@@ -143,10 +145,8 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 	ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
 	```
 	
-* From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the Actions column of the instance. The VNC console connects you with HTTPS.
+* From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the **Actions** column of the instance. The VNC console connects you with HTTPS.
   
-  ![View the VNC console of your instance]({{site.baseurl}}/img/view_VNC_console.png)
-
 **Note:** To be able to log in via the console to a new Linux instance as `ibmcloud` user, you must have specified a password in the Customization Script during provisioning.
   
 ### Connecting to Windows instances
@@ -154,9 +154,9 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 Connect to your instance through Remote Desktop or VNC. You'll need to use the `userid` and `password` specified in the Customization Script during VM provisioning. On your first login, a prompt appears, requesting that you change your password. Please do.
 
 * Use your favorite Remote Desktop client to connect.
-* From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the Actions column of the instance. The VNC console connects you with HTTPS.
+* From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the **Actions** column of the instance. The VNC console connects you with HTTPS.
  
-## How to manage existing instances
+## How to manage your instances
 
 Under the **Project** topic, expand **Compute** and click **Instances**.
 
