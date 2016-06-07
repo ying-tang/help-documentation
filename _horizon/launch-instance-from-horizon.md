@@ -12,13 +12,14 @@ weight: 4
 
 ### Steps
 1. Log in to the Horizon dashboard.
-2. Under the Project topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of instances with their details such as name, IP address, and status. 
-3. Click **Launch Instance**.
-4. Navigate through the following tabs and provide the values.
+2. Under the **Project** topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of instances with their details such as name, IP address, and status. For information about managing these instances, see [How to manage your instances](#manage-instance).
+3. Click **Launch Instance** on the upper right. The **Launch Instance** dialog is displayed.
 
 ![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
 
-### Values in Launch Instance tabs
+Navigate through the following tabs and provide the values, and click **Launch Instance** on the lower right side of the dialog.
+
+### Values in Launch Instance dialog
 
 #### The Details tab
 
@@ -156,11 +157,14 @@ Connect to your instance through Remote Desktop or VNC. You'll need to use the `
 * Use your favorite Remote Desktop client to connect.
 * From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the **Actions** column of the instance. The VNC console connects you with HTTPS.
  
-## How to manage your instances
+
+## <a name="manage-instance"></a>How to manage your instances
 
 Under the **Project** topic, expand **Compute** and click **Instances**.
 
 The dashboard displays the list of created instances for the current project. In the Actions column there is drop-down list that will display your options:
+
+![Instance options]({{site.baseurl}}/img/launch_instance_more.png)
 
 * Creates snapshot: creates an instance snapshot.
 * Associate Floating IP: associates an available floating IP to a port of your instance. 
