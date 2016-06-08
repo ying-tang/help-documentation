@@ -22,14 +22,9 @@ The following sections cover both cases by introducing the steps to install UCDP
 
 1. Download the UCDP and UCD installation packages from [IBM Fix Central](http://www-933.ibm.com/support/fixcentral/).
 
-2. To install UCDP and UCD on your instances:
+2. To install UCDP and UCD on your instances, you must have two instances that are provisioned on the same cloud environment. You will install UCDP on one instance and UCD on the other. These two instances must have a public floating IP available, and they must share the same IP type.
 
-   * You must have two instances that are provisioned on the same cloud environment. You will install UCDP on one instance and UCD on the other.
-   * These two instances must have a public floating IP available, and they must share the same IP type.
-
-3. To install UCDP and UCD on external servers:
-
-   * Ensure that your servers meet the system requirements of UCDP and those of UCD. For more details, see [UCDP system requirements](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/install_sysreqs.html) and [UCD system requirements](https://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1/com.ibm.udeploy.install.doc/topics/sysRequire.html?cp=SS4GSP_6.1.1%2F3-0).
+3. To install UCDP and UCD on external servers, ensure that your servers meet the system requirements of UCDP and those of UCD. For more details, see [UCDP system requirements](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/install_sysreqs.html) and [UCD system requirements](https://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1/com.ibm.udeploy.install.doc/topics/sysRequire.html?cp=SS4GSP_6.1.1%2F3-0).
 
 ## Installing UCDP
 
@@ -41,7 +36,7 @@ Follow these steps to install UCDP:
 **Notes:**
 
 * Only the default ports (8080 and 8443) are supported. If you want to use different ports, open a support ticket.
-* During installation, accept the default trial license path 27000@localhost unless you have your own license. You can update the license after installation.
+* During installation, accept the default trial license path `27000@localhost` unless you have your own license. You can update the license after installation.
 * When prompted with the question "What host name will users access the web UI at?", if your host name is not registered, specify the IP address instead of the host name.
 * It is best practice to make the versions of the database server and the database driver consistent.
 
