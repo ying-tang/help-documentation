@@ -11,9 +11,7 @@ weight: 2
 tags: [OpenStack, Reference] 
 
 author: Leslie Lundquist
-
 formattedBy: Jillian Tempelmeyer
-
 figuresResearch: Jillian Tempelmeyer
 
 dateAdded: April 14, 2016 
