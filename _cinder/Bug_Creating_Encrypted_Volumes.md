@@ -20,6 +20,6 @@ cinder encryption-type-create --cipher aes-xts-plain64 \ --key_size 512 \ --cont
 {% endhighlight %}
 
 
-(This happens even though creating encrypted volumes with Ceph is not supported - see https://review.openstack.org/#/c/239798/)
+This happens even though creating encrypted volumes with Ceph is not supported - see https://review.openstack.org/#/c/239798/
 
 This is a known bug, tracked at: https://bugs.launchpad.net/cinder/+bug/1505113
