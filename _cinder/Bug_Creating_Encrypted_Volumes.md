@@ -13,9 +13,9 @@ Try to create an encrypted Cinder volume with Ceph (for example) and the Cinder 
 
 {% highlight bash %}
 
-cinder type-create LUKS
+Prompt> cinder type-create LUKS
 
-cinder encryption-type-create --cipher aes-xts-plain64 \
+Prompt> cinder encryption-type-create --cipher aes-xts-plain64 \
 --key_size 512 \
 --control_location front-end \
 LUKS \
