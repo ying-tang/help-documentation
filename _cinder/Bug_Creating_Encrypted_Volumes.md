@@ -13,13 +13,13 @@ Try to create an encrypted Cinder volume with Ceph (for example) and the Cinder 
 
 {% highlight bash %}
 
->cinder type-create LUKS
+cinder type-create LUKS
 
->cinder encryption-type-create --cipher aes-xts-plain64
---key_size 512
---control_location front-end
-LUKS
-nova.volume.encryptors.luks.LuksEncryptor
+cinder encryption-type-create --cipher aes-xts-plain64 \
+--key_size 512 \
+--control_location front-end \
+LUKS \
+nova.volume.encryptors.luks.LuksEncryptor \
 
 {% endhighlight %}
 
