@@ -95,3 +95,6 @@ A HIPAA-enabled cloud has the same configuration and expansion options as any ot
  #### **Updates for IBM Blue Box Cloud Guest Images now available**
  
  On a regular basis, updates are available for our series of IBM Blue Box Cloud Guest Images. The customer release notes for these updates are published [here]().
+
+### Known Limitations of This Release
+
