@@ -49,7 +49,10 @@ For additional user documentation, please refer to the [main Help page.](http://
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
 #### Openstack Mitaka Support.
-#### OpenStack Power Compute Node Support (Habeñero and Firestone).
+
+For more information, please refer to the [OpenStack Mitaka Release Notes]().
+
+#### OpenStack Power Compute Node Support (Habañero and Firestone).
 #### Federated Keystone across multiple Blue Box clouds.
 #### Federate Keystone to External Identity Provider.
 #### Hybrid Ceph Storage Support in Blue Box Cloud Local.
