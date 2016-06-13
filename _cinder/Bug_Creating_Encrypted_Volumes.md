@@ -7,7 +7,7 @@ featured: false
 weight: 4
 ---
 
-### Creating Encrypted Volumes with Cinder is not supported  
+### Creating Encrypted Volumes with Cinder is Not Currently Supported  
 
 Try to create an encrypted Cinder volume with Ceph (for example) and the Cinder command line client will happily report that it has done so, but the volume will fail to attach to a virtual machine.
 
