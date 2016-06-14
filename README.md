@@ -83,3 +83,5 @@ YOUR CODE HERE
 Tags are a core component of the search and browsing experience. It helps the search tool find articles as they are organized according to categories. It also is beneficial with helping the user understand the context how the articles are organized.
 
 When creating a new article, include tags in this order [ category, subject, subject]. For example, if an article is to be organized under ‘Getting Started,’ then the order will be [ getting started, subject name, subject name ].
+
+**NOTE:** If you'd like to submit a PR but do not want it to be merged right away, for instance if you are waiting for technical review from your colleagues, please include WIP in the PR title. When you are ready for merge, please remove WIP, and if convenient, add a comment requesting the merge. Thanks!
