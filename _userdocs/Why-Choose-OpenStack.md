@@ -2,7 +2,7 @@
 
 layout: page 
 
-title: "Why-Choose-OpenStack" 
+title: "Why Choose OpenStack?" 
 
 featured: false 
 
