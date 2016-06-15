@@ -8,7 +8,6 @@ dateAdded: March 9th, 2016
 author: Yanqi Dou
 editor: Leslie Lundquist, Niraj Patel
 ---
-## User's Guide to Cloud Images
 
 IBM Blue Box Cloud 3.0 comes pre-populated with Cirros 0.3.3 x86_64 images. IBM Blue Box provides other downloadable cloud images, so that you can run instances with the Operating System of your choice. This document tells you what you'll need to know for downloading and working with these images. You can check the [Cloud Image Release Notes]() at any time, to be sure you're working with the latest images.
 
