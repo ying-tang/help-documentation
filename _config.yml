@@ -66,9 +66,6 @@ collections:
   userguides:
     output: true
     permalink: /gettingstarted/userguides/:path/
-  userguides/3.0_image_patch_list:
-    output: true
-    permalink: /gettingstarted/userguides/3.0_image_patch_list/:path
   glance:
     output: true
     permalink: /glance/:path/
