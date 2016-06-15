@@ -23,10 +23,10 @@ Navigate through the following tabs and provide the values, and click **Launch I
 
 #### The Details tab
 
-| **Values**           | **Description** 																																																																																													      | 
-|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Instance Name        | Assign a name to the virtual machine. The name that you assign here becomes the initial host name of the server. After the server is built, changes to this name are not updated in the dashboard (if you change the server name in the API or if you change the host name directly). Server names are not guaranteed to be unique when created so you could have two instances with the same host name. |
-| Availability Zone    | By default, this value is set to the availability zone given by the cloud provider, for example, `compute_standard`. 																																																													                                  |
+| **Values**           | **Description** 																																																					 | 
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Instance Name        | Assign a name to the virtual machine. The name that you assign here becomes the initial host name of the server. Server names are not guaranteed to be unique when created so you could have two instances with the same host name. |
+| Availability Zone    | By default, this value is set to the availability zone given by the cloud provider, for example, `compute_standard`. 																												 |
 | Count	               | To launch multiple instances, enter a value greater than 1. The default is 1.																																																																															  |
 
 ![The Details tab]({{site.baseurl}}/img/launch_instance_details.png)
@@ -62,7 +62,9 @@ Select from the list of networks and click the plus sign (+) to move it to **All
 
 #### The Network Ports tab
 
-With the current release of Blue Box, network ports can be created through APIs only. After you create the port and associate it with one of the networks that you select in the
+If you do not specify any network port, a default one will be assigned to the instance when the instance is created and booted.
+
+In rare occasions though, you can create ports beforehand through APIs. After you create a port and associate it with one of the networks that you select in the
  **Networks** tab, you will be able to view this port in the **Available** table. You can click the plus sign (+) to move it to **Allocated**.     
 
 ![The Flavor tab]({{site.baseurl}}/img/launch_instance_port.png)
@@ -91,7 +93,7 @@ Specify a key pair. You have the following options:
 
 Custom scripts are attached to instances to perform specific actions when the instance is launched. You can type your script directly into the **Customization Script** field. 
 	
-For Linux instances: To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>`):
+For Linux instances: The default username is `ibmcloud`. To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>`):
 
 	#cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
 
@@ -111,17 +113,20 @@ Select the **Configuration Drive** checkbox if you want to write metadata to a s
 	
 #### The Metadata tab
 
-A common API is provided by Glance to define key and value pairs to tag metadata for different types of resources (images, artifacts, volumes, flavors, aggregates, and so on). 
+A common API is provided by Glance to define key and value pairs to tag metadata for different types of resources (images, artifacts, volumes, flavors, aggregates, and so on). If the image that you select contains pre-defined metadata, you will see them in the **Available metadata** column. 
 
-The key name, image name and image ID of your instance will be stored as metadata by default. You can also create additional key and value pairs in the **Custom** field and click the plus sign (+) to move it to the **Existing metadata** list. 
+You can also create additional key and value pairs in the **Custom** field and click the plus sign (+) to move it to the **Existing metadata** list. Example custom metadata is a parameter that you want to pass to the application to be installed with the instance.
 
 ![Custom meta]({{site.baseurl}}/img/launch_instance_meta.png)
 
 For more information about Glance metadata, see [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/metadefs-concepts.html) and [Using Glance’s Metadata Definitions Catalog Public APIs](http://docs.openstack.org/developer/glance/glancemetadefcatalogapi.html).
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/icos-integration-4
 =======
 >>>>>>> refs/remotes/origin/icos-integration-4
 ## How to connect to your instance
@@ -184,7 +189,7 @@ The dashboard displays the list of created instances for the current project. In
 * Soft Reboot Instance: performs a graceful shutdown and restart of the instance.
 * Hard Reboot Instance: performs the equivalent of a power reset of the server.
 * Shut off Instance: performs a power off the instance.
-* Rebuild Instance: rebuilds the instance.
+* Rebuild Instance: rebuilds the instance with another image.
 * Delete Instance: delete the instance. 
 
 Click the proper option for the operation you need to apply.
