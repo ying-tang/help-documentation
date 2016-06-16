@@ -23,7 +23,7 @@ top-level: gettingstarted
       <li><a class="page--title" href="{{ '/gettingstarted/' | prepend: site.baseurl }}">{{ page.title }}</a></li>
       {% for item in site.userguides %}
         {% if item.title %}
-		    {% if item.category == patch %}
+		    {% if item.category != 'patch' %}
 				<li><a class="page--link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
 			{% endif %}
 		{% endif %}
