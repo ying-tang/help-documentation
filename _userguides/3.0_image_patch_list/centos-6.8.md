@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CentOS 7.2
+title: CentOS 6.8
 featured: false
 weight: 13
 category: patch
