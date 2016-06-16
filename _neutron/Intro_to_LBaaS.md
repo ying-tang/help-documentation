@@ -22,6 +22,6 @@ https://specs.openstack.org/openstack/heat-specs/specs/mitaka/lbaasv2-support.ht
 **API:**
 http://developer.openstack.org/api-ref-networking-v2-ext.html#lbaas-v2.0
 
-The reference implementation of LBaas, Octavia, also provides some helpful documentation.
+The reference implementation of LBaaS, called Octavia, also provides some helpful documentation.
 
 http://docs.octavia.io/review/master/index.html#
