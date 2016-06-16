@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: CentOS 6.8
 featured: false
 weight: 13
