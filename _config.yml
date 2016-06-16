@@ -90,3 +90,6 @@ collections:
   ceilometer:
     output: true
     permalink: /ceilometer/:path/
+  patchlist:
+    output: true
+	permalink: /patchlist/:path/
