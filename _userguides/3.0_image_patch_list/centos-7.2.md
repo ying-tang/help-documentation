@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CentOS 7.2
+published: false
 featured: false
 weight: 13
 tags: [release, images, security, kernel, patch]
