@@ -7,7 +7,7 @@ categories: gettingstarted userguides
 {% for page in site.userguides %}
   <li>
       {% if page.title %}
-	     {% if page.category != patch %}
+	     {% if page.category == patch %}
             <a class="page--link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
 		 {% endif %}
       {% endif %}
