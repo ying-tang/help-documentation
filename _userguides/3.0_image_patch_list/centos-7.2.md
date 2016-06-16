@@ -1,9 +1,9 @@
 ---
 layout: page
 title: CentOS 7.2
-published: false
 featured: false
 weight: 13
+category: patch
 tags: [release, images, security, kernel, patch]
 dateAdded: June 10th, 2016
 author: Yang Zhang
