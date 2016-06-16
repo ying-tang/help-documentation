@@ -42,8 +42,6 @@ sass:
     style: compressed
 
 collections:
-  patchlist:
-    output: true
   troubleshooting:
     output: true
     permalink: /troubleshooting/:path/
