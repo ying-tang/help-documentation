@@ -7,7 +7,7 @@ tags: [cinder, ephemeral]
 author: Blue Box Support
 dateAdded: June 16, 2016
 ---
-### How to Move from Ephemeral Disk to Cinder Storage
+
 
 Transitioning from the ephemeral disk to the Cinder disk cannot be performed by making a snapshot, because snapshots do not include ephemeral storage.
 
