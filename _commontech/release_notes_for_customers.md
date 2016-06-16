@@ -122,7 +122,7 @@ IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Ad
 	• Windows Server 2012 R2 Datacenter
 	• Windows Server 2012 R2 Standard
 
-To use any of these images, additional information is provided in [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/).
+To use any of these images, additional information is provided in [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/).
 
 #### **HIPAA and IBM Blue Box Dedicated Cloud**
 
