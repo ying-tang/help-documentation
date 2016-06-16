@@ -3,7 +3,6 @@ layout: page
 title: CentOS 6.8
 featured: false
 weight: 13
-tags: [release, images, security, kernel, patch]
 dateAdded: June 10th, 2016
 author: Yang Zhang
 editor: Leslie Lundquist, Xiong Chen
