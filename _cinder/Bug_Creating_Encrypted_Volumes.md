@@ -9,7 +9,7 @@ weight: 4
 
 ### Creating Encrypted Volumes with Cinder is Not Currently Supported  
 
-Try to create an encrypted Cinder volume with Ceph (for example) and the Cinder command line client will happily report that it has done so, but the volume will fail to attach to a virtual machine. If you enter these commands at the prompt:
+Try to create an encrypted Cinder volume with Ceph (for example) and the Cinder command line client will happily report that it has done so, but the volume will fail to attach to a virtual machine. If you enter these "normal" commands at the prompt, be aware that **they will not work** because encrypted volumes will not work at all:
 
 {% highlight bash %}
 
@@ -23,6 +23,6 @@ nova.volume.encryptors.luks.LuksEncryptor \
 
 {% endhighlight %}
 
-This happens even though creating encrypted volumes with Ceph is not supported - see https://review.openstack.org/#/c/239798/
+This false acknowledgement happens even though creating encrypted volumes with Ceph is not supported - see https://review.openstack.org/#/c/239798/
 
 This is a known bug, tracked at: https://bugs.launchpad.net/cinder/+bug/1505113

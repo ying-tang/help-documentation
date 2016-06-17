@@ -61,7 +61,7 @@ This command will return a list of all running instances in your project.
 
 [Installing OpenStack Command Line Clients](http://docs.openstack.org/user-guide/content/install_clients.html)
 
-[API Versions Supported](https://www.openstack.org/marketplace/hosted-private-clouds/page-20/blue-box-cloud---private-cloud-as-a-service)
+[API Versions Supported](https://www.openstack.org/marketplace/hosted-private-clouds/blue-box/blue-box-cloud---private-cloud-as-a-service)
 
 [What To Do If You Get An ImportError: No module named xmlrpc_client When Running Nova Client on Mac OS X](https://github.com/major/supernova/issues/55#issuecomment-59891149">What To Do If You Get An ImportError: No module named xmlrpc_client When Running Nova Client on Mac OS X)
 
