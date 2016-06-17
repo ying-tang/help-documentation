@@ -1,0 +1,109 @@
+heat_template_version: 2013-05-23
+description: Simpler server with lb
+parameters:
+  image:
+    type: string
+    description: Image used for servers
+    default: Red Hat Enterprise Linux 6.5 x86_64
+  flavor:
+    type: string
+    description: flavor used by the web servers
+    default: Standard_1_2
+  network_subnet_lb_pool:
+    type: string
+    description: Subnet to configure load balancer
+    default: 8b3c5b67-a04e-4159-b805-753bc2c56912
+  network_server:
+    type: string
+    description: Network to which the server will be attached
+    default: 8d601329-4a38-4a85-bc84-ba7d2725ebd9
+  az:
+    type: string
+    description: availability zone for instances
+    default: nova
+
+
+resources:
+
+  my_server:
+    type: OS::Nova::Server
+    properties:
+      flavor: {get_param: flavor}
+      image: {get_param: image}
+      availability_zone: {get_param: az}
+      networks:
+        - network: { get_param: network_server }
+      user_data_format: RAW
+      user_data: |
+        #!/bin/sh
+        #yum install -y httpd
+        service httpd start
+        echo "IBM Cloud Openstack Services Demo: " > /var/www/html/index.html        
+        echo $(ifconfig eth0 | grep 'inet addr' | awk -F: '{ print $2 }' | awk '{ print $1 }') >> /var/www/html/index.html 
+
+  my_other_server:
+    type: OS::Nova::Server
+    properties:
+      flavor: {get_param: flavor}
+      image: {get_param: image}
+      availability_zone: {get_param: az}
+      networks:
+        - network: { get_param: network_server }
+      user_data_format: RAW
+      user_data: |
+        #!/bin/sh
+        #yum install -y httpd
+        service httpd start
+        echo "IBM Cloud Openstack Services Demo: " > /var/www/html/index.html        
+        echo $(ifconfig eth0 | grep 'inet addr' | awk -F: '{ print $2 }' | awk '{ print $1 }') >> /var/www/html/index.html 
+
+  monitor:
+    type: OS::Neutron::HealthMonitor
+    properties:
+      type: TCP
+      delay: 3
+      max_retries: 5
+      timeout: 3
+  pool:
+    type: OS::Neutron::Pool
+    properties:
+      protocol: HTTP
+      monitors: [{get_resource: monitor}]
+      subnet_id: {get_param: network_subnet_lb_pool}
+      lb_method: ROUND_ROBIN
+      vip:
+        protocol_port: 80
+  lb:
+    type: OS::Neutron::LoadBalancer
+    properties:
+      protocol_port: 80
+      pool_id: {get_resource: pool}
+
+  member:
+    type: OS::Neutron::PoolMember
+    properties:
+      pool_id: {get_resource: pool}
+      address: {get_attr: [my_server, first_address]}
+      protocol_port: 80
+  other_member:
+    type: OS::Neutron::PoolMember
+    properties:
+      pool_id: {get_resource: pool}
+      address: {get_attr: [my_other_server, first_address]}
+      protocol_port: 80
+
+outputs:
+  Web_Console:
+    description: The IP address of the loud balancer
+    value:
+      str_replace:
+        template:  http://%vip%
+        params:
+          "%vip%": { get_attr: [ pool, vip, address ] }
+  ServerIP:
+    description: The id of the load balancer
+    value: {get_attr: [my_server, first_address]}
+  OtherServerIP:
+    description: The id of the load balancer
+    value: {get_attr: [my_other_server, first_address]}
+
