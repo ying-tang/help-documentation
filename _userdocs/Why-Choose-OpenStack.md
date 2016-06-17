@@ -20,13 +20,11 @@ dateAdded: April 14, 2016
 
 --- 
 
-# Why Choose OpenStack? 
-
 OpenStack™ is an extensive, open source software platform for delivering Infrastructure-as-a-Service (IaaS). Development of OpenStack began in 2010 through the combined efforts of Rackspace and NASA. OpenStack can manage small or large pools of compute, storage, and networking resources in a datacenter, and it can make those resources available and scalable through a centralized dashboard. 
 
 **History and Vision**: OpenStack is the fastest growing open source project in history, now with over 20 million lines of code. It is governed by the OpenStack Foundation, which promotes its development, distribution and adoption. The OpenStack project comprises more than 34,000 individual contributors and more than 550 participating companies, all of whom are members of the Foundation. Individual membership to the Foundation is free. Corporate memberships are available at two paid levels, Platinum and Gold. The Foundation is guided by a Board of Directors, composed of individuals and representatives of participating corporations.
 
-**Licensing and Releases**: OpenStack software is available under Apache License, on a bi-annual release schedule (April/May, Oct/Nov). Releases are codenamed alphabetically. The most recent release is named “Mitaka.” Currently, the Newton release is in active development, scheduled to be completed in October  2016. Coinciding with these bi-annual releases, the OpenStack community meets at OpenStack Summits to plan for the upcoming release and to display achievements or use cases. The next OpenStack summit will be held in Austin, Texas, USA, in April, 2016.
+**Licensing and Releases**: OpenStack software is available under Apache License, on a bi-annual release schedule (April/May, Oct/Nov). Releases are codenamed alphabetically. The most recent release is named “Mitaka.” Currently, the Newton release is in active development, scheduled to be completed in October  2016. Coinciding with these bi-annual releases, the OpenStack community meets at OpenStack Summits to plan for the upcoming release and to display achievements or use cases. The next OpenStack summit will be held in Barcelona, Spain, in October, 2016.
 
 **Hardware Requirements**: OpenStack works with standard or commodity hardware, no need for specialized vendor hardware. For customers who want to use specific enterprise-grade hardware, drivers are available. A list of these drivers is available on the OpenStack website, in the Marketplace.
 
