@@ -27,4 +27,4 @@ Snapshot the volume.
 Deploy a new volume from the snapshot, with the new size.
 
 
-See [OpenStack Storage Concepts](http://ibm-blue-box-help.github.io/help-documentation/openstack/openstack-storage-concepts) for more information about the OpenStack storage concepts.
+See [OpenStack Storage Concepts](http://ibm-blue-box-help.github.io/help-documentation/openstack/userdocs/openstack-storage-concepts/) for more information about the OpenStack storage concepts.
