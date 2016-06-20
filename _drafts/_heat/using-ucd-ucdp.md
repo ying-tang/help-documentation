@@ -64,6 +64,7 @@ Integrate your UCD with UCDP by following the instructions in [Connecting to IBM
 
 1. For UCD and UCDP installed on external servers only: Use an OpenVPN client to connect to the cloud environment that you want to integrate with. For more information about accessing the environment, see [Setting up OpenVPN server on your instance](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/openvpn-setup/).
 
+2. Connect the UCDP server to IBM Blue Box by following the instructions in [Connecting to OpenStack-based clouds with Keystone authentication](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/cloud_connect_openstack_keystone.html).
 
 **Note:** In Step 2 Create an authentication realm that points to the Keystone server, keep the Use default orchestration engine check box checked when configuring realm.
 
