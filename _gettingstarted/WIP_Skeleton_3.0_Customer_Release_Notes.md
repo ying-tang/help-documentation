@@ -24,25 +24,23 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 3.  [Federated Keystone identity available across multiple Blue Box clouds.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-4.  [Federate Keystone to External Identity Provider.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+4.  [Hybrid Ceph Storage Support in Blue Box Local Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-5.  [Hybrid Ceph Storage Support in Blue Box Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+5.  [I/O Optimized and High Storage Compute Nodes Support for Blue Box Local Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-6.  [I/O Optimized and High Storage Compute Nodes Support for Blue Box Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+6.  [Network connectivity to customer Bare Metal.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-7.  [Network connectivity to customer Bare Metal.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+7. [Box Panel Launched in China.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-8. [Box Panel Launched in China.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+8. [10G Vyatta Support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-9. [10G Vyatta Support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+9. [SVC Cinder Driver support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-10. [SVC Cinder Driver support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+10. [Higher soft limits for Object Storage of 250 TB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
-11. [Higher soft limits for Object Storage of 250 TB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-
-12. [Higher soft limits for Block Storage of 1 PB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-13. [HIPAA available in Blue Box Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
-14. [Updates for IBM Blue Box Cloud Guest Images now available]()
+11. [Higher soft limits for Block Storage of 1 PB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+12. [HIPAA available in Blue Box Local Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
+13. [Updates for IBM Blue Box Cloud Guest Images now available]()
 
 For additional user documentation, please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
 
@@ -53,10 +51,8 @@ For additional user documentation, please refer to the [main Help page.](http://
 For more information, please refer to the [OpenStack Mitaka Release Notes]().
 
 #### OpenStack Power Compute Node Support (Habañero and Firestone).
-#### Federated Keystone across multiple Blue Box clouds.
-#### Federate Keystone to External Identity Provider.
-#### Hybrid Ceph Storage Support in Blue Box Cloud Local.
-#### I/O Optimized and High Storage Compute Nodes Support for Blue Box Cloud Local.
+#### Federated Keystone across multiple IBM Blue Box clouds.
+#### Hybrid Ceph Storage Support in Blue Box Cloud Local.IBM Blue Box Local Cloud .
 
 **Optional Expansion Compute Nodes Now Available in Local**
 
@@ -74,7 +70,7 @@ Hybrid Block Storage nodes provide lower cost and higher density Block Storage.
 	• You can select Block Storage: SSD or HYBRID
 	• You can select Object Storage 
 
-#### Network connectivity to customer Bare Metal.
+#### Network connectivity to customer Bare Metal, in IBM Blue Box Dedicated Cloud only.
 
 This feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also needs access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack guest-instance network. This capability is based on OpenStack Ironic.
 
