@@ -18,7 +18,7 @@ author: Leslie Lundquist
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the 3.0 Dedicated and Local Cloud offerings. The new capabilities of IBM Blue Box Dedicated and Local Cloud include:  
 
-1.  [Openstack Mitaka Support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+1.  [Openstack Mitaka Support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#openstack-mitaka-support)
  
 2.[OpenStack Power Compute Node Support (Habeñero and Firestone).](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 
@@ -52,7 +52,7 @@ For more information, please refer to the [OpenStack Mitaka Release Notes]().
 
 #### OpenStack Power Compute Node Support (Habañero and Firestone).
 #### Federated Keystone across multiple IBM Blue Box clouds.
-#### Hybrid Ceph Storage Support in Blue Box Cloud Local.IBM Blue Box Local Cloud .
+#### Hybrid Ceph Storage Support in Blue Box Cloud Local Cloud .
 
 **Optional Expansion Compute Nodes Now Available in Local**
 
@@ -70,9 +70,9 @@ Hybrid Block Storage nodes provide lower cost and higher density Block Storage.
 	• You can select Block Storage: SSD or HYBRID
 	• You can select Object Storage 
 
-#### Network connectivity to customer Bare Metal, in IBM Blue Box Dedicated Cloud only.
+#### Network connectivity to customer Bare Metal hardware, in IBM Blue Box Dedicated Cloud only.
 
-This feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also needs access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack guest-instance network. This capability is based on OpenStack Ironic.
+This feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack guest-instance network. 
 
 For Blue Box Dedicated cloud, the bare metal hardware must be in a separate, customer-owned SoftLayer account.
 
