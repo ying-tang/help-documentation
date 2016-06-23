@@ -7,7 +7,7 @@ featured: false
 weight: 5
 ---
 
-You can provision instances with load balancer to provide load balancing for your service. This enables your service, such as a website, to distributes workloads across multiple cloud instances and thus increases efficiency by optimizing resources to support huge concurrent access. Moreover, load balancer implements High Availability (HA) to provide better reliability as access requests are redirected to other active instance when the target instance is down.
+You can provision instances with a load balancer to provide load balancing for your service. This enables your service, such as a website, to distributes workloads across multiple cloud instances and thus increases efficiency by optimizing resources to support huge concurrent access. Moreover, load balancer implements High Availability (HA) to provide better reliability as access requests are redirected to other active instance when the target instance is down.
 
 This topic demonstrates the steps to provision instances with load balancer based on Heat by using a predefined Heat Orchestration Template. The following steps lead you to upload and launch the template in the Stacks panel on Horizon, which automatically creates two new instances as well as load balancer pools, virtual IP address, and members on the two instances. You can then access the web services on the two instances via virtual IP address.
 
