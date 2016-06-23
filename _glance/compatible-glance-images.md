@@ -11,4 +11,6 @@ There is.
 
 It includes `CentOS`, `Cirros`, `Ubuntu`, `Red Hat Enterprise Linux`, `openSUSE`, and `Debian`.  
 
-Please see [this link for more details](http://docs.openstack.org/image-guide/content/ch_obtaining_images.html)
+Please see [this OpenStack document](http://docs.openstack.org/image-guide/obtain-images.html) for more details.
+
+See also the topic [User's Guide to Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/). 

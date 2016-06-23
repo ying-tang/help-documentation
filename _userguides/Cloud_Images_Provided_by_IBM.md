@@ -1,13 +1,16 @@
 ---
 layout: page
-title: Cloud images provided by IBM Blue Box
+title: User's Guide to Cloud Images
 featured: false
-weight: 13
-tags: [getting started, images, glance, image-create, instance]
+weight: 10
+tags: [userguides, images, glance, image-create, instance]
 dateAdded: March 9th, 2016
 author: Yanqi Dou
 editor: Leslie Lundquist, Niraj Patel
 ---
+
+IBM Blue Box Cloud 3.0 comes pre-populated with Cirros 0.3.3 x86_64 images. IBM Blue Box provides other downloadable cloud images, so that you can run instances with the Operating System of your choice. This document tells you what you'll need to know for downloading and working with these images. You can check the [Cloud Image Release Notes]() at any time, to be sure you're working with the latest images.
+
 
 ## Pre-requisites
 
@@ -72,7 +75,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 
 1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
 2. Under the **Project** panel, expand **Compute** and click **Images**.
-3. Click **Create Image** in the page. Specify the following parameters in the new page:
+3. Click **Create Image** in the page. Specify the following parameters in the new page, and click **Create Image**.
 
 	| **Item**               | **Description**                                                                                                  |
 	|------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -88,24 +91,20 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 	| **Public**             | Select this check box to make the image public to all users on all projects.                                     |
 	| **Protected**          | Select this check box to ensure that only users with permissions can delete the image.	                        |
    	
-	For example:
-    
-	{% highlight bash %}
-	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-	Image Source: Image Location
-	Image File: <tempURL_for_QCOW2>
-	Format: QCOW2 - QEMU Emulator
-	Architecture: x86-64
-	Minimum Disk(GB): 5
-	Minimum RAM(MB): 512
-	Copy Data: True
-	Public: True
-	{% endhighlight %}	
-	
-4. Click **Create Image**.
+   For example:
 
-5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+		Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
+		Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
+		Image Source: Image Location
+		Image File: <tempURL_for_QCOW2>
+		Format: QCOW2 - QEMU Emulator
+		Architecture: x86-64
+		Minimum Disk(GB): 5
+		Minimum RAM(MB): 512
+		Copy Data: True
+		Public: True    
+	
+4. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 **Note:** Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 
@@ -114,22 +113,20 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 
 You can upload images through the Glance client. See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html) for more information.
 
-1. Create an image.
+Create an image.
 
-    * For Linux Images, use `-- min-disk 5 --min-ram 512`
-    * For Windows Images, use `--min-disk 25 --min-ram 2048`
-    
-	```
-	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
-	```
+* For Linux Images, use `-- min-disk 5 --min-ram 512`
+* For Windows Images, use `--min-disk 25 --min-ram 2048`
+
+  ``` 
+  $ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --copy-from  <tempURL_to_qcow2_image_file>
+  ```
 	
-2. Check whether the image was created successfully.
+Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-   The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
-
-	```
-	$ glance image-show <image-id>
-	```
+```
+$ glance image-show <image-id>
+```
 	
 ## <a name="downloadedimages"></a>Upload an image to an IBM Blue Box Cloud Glance repository using downloaded image files
 
@@ -138,32 +135,30 @@ You can upload images through the Glance client. See [Installing OpenStack Clien
 * Only users with the `cloud_admin` role will be able to make an image public to other users and to the project.
 * When downloading the cloud image using the `tempUrl` be sure that the `tempUrl` token is escaped or specified in quotes. For example:
 
-{% highlight bash %}
-curl -f -o <output_file> '<cloud_image_download_tempUrl>'
-curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867'
-{% endhighlight %}
+  ```
+  curl -f -o <output_file> '<cloud_image_download_tempUrl>'  
+  curl -f -o ubuntu-guest-image-14.04-20160301-x86_64.qcow2 'https://dal05.objectstorage.softlayer.net/v1/AUTH_2201d7be-5d96-431c-9bd0-ec3ed5b62b19/cloud_images/test/ubuntu-guest-image-14.04-20160301-x86_64.qcow2?temp_url_sig=9e9678ad2d81489cebd032dff2332ec8ee50ebba&temp_url_expires=1458956867'
+  ```
   
 Follow these steps:
 	
-1. Download .qcow2 and .md5sum files of the image. 
-  
-   Download the `.qcow2` image file and `.md5sum` checksum file using the `tempURL` and put these 2 files under the same folder. For example:
+1. Download .qcow2 and .md5sum files of the image.   
+2. Download the `.qcow2` image file and `.md5sum` checksum file using the `tempURL` and put these 2 files under the same folder. For example:
 
-   {% highlight bash %}
-   ubuntu-guest-image-14.04-20160301-x86_64.qcow2
-   ubuntu-guest-image-14.04-20160301-x86_64.md5sum
-   {% endhighlight %}
+	```
+	ubuntu-guest-image-14.04-20160301-x86_64.qcow2
+	ubuntu-guest-image-14.04-20160301-x86_64.md5sum
+	```
  
-2. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
+3. Verify the downloaded `.qcow2` image file using the `.md5sum` checksum file. For example:
 
-   {% highlight bash %}
-   md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
-   ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
-   {% endhighlight %}
-   
-   If the result returns "OK", the downloaded `qcow2` image is valid.
+	```	
+	md5sum -c ubuntu-guest-image-14.04-20160301-x86_64.md5sum
+	ubuntu-guest-image-14.04-20160301-x86_64.qcow2: OK
+	```   
+    If the result returns "OK", the downloaded `qcow2` image is valid.
 
-3. Upload the image to Glance. You can upload the image either with the [OpenStack dashboard](#upload-dashboard) or with the [command line client](#upload-cli).
+4. Upload the image to Glance. You can upload the image either with the [OpenStack dashboard](#upload-dashboard) or with the [command line client](#upload-cli).
 
 ### <a name="upload-dashboard"></a>Upload an image using the OpenStack dashboard
 
@@ -171,7 +166,7 @@ Follow these steps:
 
 2. Under the **Project** panel, expand **Compute** and click **Images**.
 
-3. Click **Create Image** in the page. Specify the following parameters in the new page:
+3. Click **Create Image** in the page. Specify the following parameters in the new page, and check **Create Image**.
 
 	| **Item**                | **Description**                                                                                                  |
 	|-------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -186,23 +181,19 @@ Follow these steps:
 	| **Public**              | Select this check box to make the image public to all users on all projects.                                     |
 	| **Protected**           | Select this check box to ensure that only users with permissions can delete the image.                           |	 
 
-    For example:
-
-	{% highlight bash %}
-	Name: Ubuntu Server 14.04 LTS x86_64 - 20160301
-	Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01
-	Image Source: Image File
-	Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2
-	Format: QCOW2 - QEMU Emulator
-	Architecture: x86-64
-	Minimum Disk(GB): 5
-	Minimum RAM(MB): 512
-	Public: True
-	{% endhighlight %}
+   For example:
+		
+		Name: Ubuntu Server 14.04 LTS x86_64 - 20160301	
+		Description: Ubuntu Server 14.04 LTS x86_64 cloud image released on 2016/03/01	
+		Image Source: Image File	
+		Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2	
+		Format: QCOW2 - QEMU Emulator	
+		Architecture: x86-64	
+		Minimum Disk(GB): 5	
+		Minimum RAM(MB): 512	
+		Public: True	
 	
-4. Check **Create Image**.
-
-5. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+4. Check that the created image appears in the image list. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
 ![Upload the image with the OpenStack dashboard]({{site.baseurl}}/img/upload_image_file.png)
 
@@ -210,20 +201,20 @@ Follow these steps:
 
 See [Installing OpenStack Clients](http://docs.openstack.org/cli-reference/common/cli_install_openstack_command_line_clients.html) for more information.
 
-1. Create image.
+Create image.
 
-	* For Linux Images, use `-- min-disk 5 --min-ram 512`
-	* For Windows Images, use `--min-disk 25 --min-ram 2048`
+* For Linux Images, use `-- min-disk 5 --min-ram 512`
+* For Windows Images, use `--min-disk 25 --min-ram 2048`
 
-	```
-	$ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
-	```
+  ```
+  $ glance --os-image-api-version 1 image-create --name <image_name> --min-disk <min-disk> --min-ram <min-ram> --disk-format qcow2 --container-format bare --is-public True --file <path_to_qcow2_image_file>
+  ```
 	
-2. Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
+Check whether the image was created successfully. The image is queued for upload. It might take some time before the status changes from "Queued" to "Active."
 
-	```
-	$ glance image-show <image-id>
-	```
+```
+$ glance image-show <image-id>
+```
 
 **Note:** For large images, the web upload may time out. For those, we've recommended that people launch an instance in their cloud, download the image to that instance, and then upload from that instance to Glance. All the traffic would stay within SoftLayer, and the upload would be within their own cloud.
 
@@ -285,10 +276,10 @@ net localgroup administrators <YOUR_USERNAME> /add
 Connect to your instance through SSH or VNC. The default `userid` for the Linux images provided by IBM is **ibmcloud**. Once connected to your Linux instance, you can use the `sudo` command to execute commands that normally require root access. Sudo is configured not to require a password for the default `userid`.
 
 * Use your favorite SSH client and open a connection to the correct IP address of the VM instance, using the private SSH key of the keypair that you specified during provisioning:
- 
-```  
-ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
-```
+	 
+	```  
+	ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
+	```
 	
 * View the VNC console of the instance by clicking on the instance name in the IBM Blue Box Cloud OpenStack dashboard, and then click on the **Console** tab. The VNC console connects you with HTTPS.
   
