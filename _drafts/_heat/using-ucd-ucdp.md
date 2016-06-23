@@ -17,14 +17,18 @@ You can either install the UCDP and UCD servers on instances in the same Blue Bo
 
 The following sections cover both cases by introducing the steps to install UCDP and UCD and then integrate them with IBM Blue Box.
 
+The following sections uses UCD 6.1.1 and UCDP 6.1.1 as examples. Information about different versions can be found in 
+[IBM Knowledge Center](http://www.ibm.com/support/knowledgecenter/).
 
 ## Prerequisites
 
 1. Download the UCDP and UCD installation packages from [IBM Fix Central](http://www-933.ibm.com/support/fixcentral/).
 
-2. To install UCDP and UCD on your instances, you must have two instances that are provisioned on the same cloud environment. You will install UCDP on one instance and UCD on the other. These two instances must have a public floating IP available, and they must share the same IP type.
+2. If you want to install UCD or UCDP on instances in a cloud environment, these instances must have public floating IPs.
 
 3. To install UCDP and UCD on external servers, ensure that your servers meet the system requirements of UCDP and those of UCD. For more details, see [UCDP system requirements](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/install_sysreqs.html) and [UCD system requirements](https://www-01.ibm.com/support/knowledgecenter/SS4GSP_6.1.1/com.ibm.udeploy.install.doc/topics/sysRequire.html?cp=SS4GSP_6.1.1%2F3-0).
+
+
 
 ## Installing UCDP
 
@@ -60,13 +64,13 @@ For the complete UCD documentation, see [IBM UCD Knowledge Center](https://www-0
 
 Integrate your UCD with UCDP by following the instructions in [Connecting to IBM UrbanCode Deploy](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/integrate_ucd.html).
 
-## Connecting to IBM Cloud OpenStack Servers with UCDP and UCD
+## Connecting to IBM Blue Box with UCDP and UCD
 
 1. For UCD and UCDP installed on external servers only: Use an OpenVPN client to connect to the cloud environment that you want to integrate with. For more information about accessing the environment, see [Setting up OpenVPN server on your instance](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/openvpn-setup/).
 
 2. Connect the UCDP server to IBM Blue Box by following the instructions in [Connecting to OpenStack-based clouds with Keystone authentication](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/cloud_connect_openstack_keystone.html).
 
-**Note:** In Step 2 Create an authentication realm that points to the Keystone server, keep the Use default orchestration engine check box checked when configuring realm.
+**Note:** When connecting the UCDP server to IBM Blue Box, create an authentication realm that points to the Keystone server, and keep the 'Use default orchestration engine check box' checked when configuring the realm.
 
 
 With the connection established, you can now deploy applications to IBM Blue Box within IBM UrbanCode Deploy and IBM UrbanCode Deploy with Patterns.
