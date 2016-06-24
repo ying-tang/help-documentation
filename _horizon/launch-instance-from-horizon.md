@@ -17,9 +17,9 @@ weight: 4
 
 ![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
 
-Navigate through the following tabs and provide the values, then click **Launch Instance** on the lower right side of the dialog.
+Navigate through the following tabs and provide the values, then click **Launch Instance** on the lower right side of the dialog box.
 
-### Values in Launch Instance dialog
+### Fill in values in the Launch Instance dialog box
 
 #### The Details tab
 
@@ -35,7 +35,7 @@ To continue, click **Next** or click on the **Source** tab.
 
 #### The Source tab
 
-You have the following options with the **Select Boot Source** field:
+The **Select Boot Source** field offers these options:
 
 | **Options**           | **Description**                           								    																							     														  																																														  |	
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
