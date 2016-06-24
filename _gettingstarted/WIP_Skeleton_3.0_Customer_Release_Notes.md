@@ -79,7 +79,7 @@ This feature is designed for any IBM Blue Box Customer for whom the performance 
 
 A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
- #### Updates for IBM Blue Box Cloud Guest Images now available
+#### Updates for IBM Blue Box Cloud Guest Images now available
  
  On a regular basis, updates are available for our series of IBM Blue Box Cloud Guest Images. The customer release notes for these updates are published [here]().
 
