@@ -16,7 +16,7 @@ In the following examples, the following two policies are defined:
 * When any CPU utilization rate is below 15%, an instance is terminated until the number of instances reaches one.
 
 ## Creating stacks
-1. Download the [simple scale file](simplescale.yaml).
+1. Download the [simple scale file](../simplescale.yaml).
 2. Log on to the Horizon dashboard with the heat_stack_owner role.
 3. Click **Project** -> **Orchestration** -> **Stacks**.
 4. Click **Launch Stack**.
