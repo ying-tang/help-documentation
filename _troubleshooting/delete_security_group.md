@@ -1,7 +1,7 @@
 ---
 layout: page
-title: “Why Can’t I Delete A Security Group?”
-keywords:[troubleshooting, neutron, security groups]
+title: Why Can’t I Delete A Security Group?
+tags:[troubleshooting, neutron, security groups]
 featured: false
 weight: 5
 author: Leslie Lundquist
