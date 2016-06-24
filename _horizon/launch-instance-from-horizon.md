@@ -93,11 +93,11 @@ Specify a key pair. You have the following options:
 
 Custom scripts attached to instances can perform specific actions when the instance is launched. You can type your script directly into the **Customization Script** field. 
 	
-For Linux instances: The default username is `ibmcloud`. To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant _password_ in place of `<YOUR_PASSWORD>`):
+**For Linux instances:** The default username is `ibmcloud`. To enable password authentication through console and SSH, use the following script data for the Customization Script (substitute the relevant _password_ in place of `<YOUR_PASSWORD>`):
 
 	#cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
 
-For Windows instances: To set the initial username and password, use the following script data for the Customization Script (with the relevant _username_ and _password_ in place of `<YOUR_USERNAME>` and `<YOUR_PASSWORD>`).
+**For Windows instances:** To set up your initial username and password, use the following script data for the Customization Script (substitute the relevant _username_ and _password_ in place of `<YOUR_USERNAME>` and `<YOUR_PASSWORD>`).
 
 	rem cmd
 	net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
@@ -105,11 +105,11 @@ For Windows instances: To set the initial username and password, use the followi
 	
 ![Custom script]({{site.baseurl}}/img/launch_instance_script.png)
 
-If your browser supports the **HTML5 File API**, you may click **Browse** to load your script from a file. The size of your script should not exceed 16 Kb.
+If your browser supports the **HTML5 File API**, you may click **Browse** to load your script from a file. The size of your script should not exceed **16 Kb**.
 
 In the **Disk Partition** drop-down menu, you can select **Automatic** to resize the disk and set it to a single partition, or you can select **Manual** to create multiple partitions on the disk.
 
-Select the **Configuration Drive** checkbox if you want to write metadata to a special configuration drive, and specify the metedata in the **Metadata** tab. When the instance boots, it attaches to the configuration drive and accesses the metadata.
+Select the **Configuration Drive** checkbox if you want to write metadata to a special configuration drive, then specify your metadata in the **Metadata** tab. When the instance boots, it attaches to the configuration drive for access to your metadata.
 	
 #### The Metadata tab
 
