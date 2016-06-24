@@ -13,7 +13,7 @@ weight: 4
 ### Steps
 1. Log in to the Horizon dashboard.
 2. Under the **Project** topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of your instances with their details, such as name, IP address, and status. For information about managing your instances, please see [How to manage your instances](#manage-instance).
-3. Click **Launch Instance** on the upper right of the dashboard. The **Launch Instance** dialog is displayed.
+3. Click **Launch Instance** on the upper right portion of the HOrizon dashboard. The **Launch Instance** dialog is displayed.
 
 ![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
 
@@ -39,10 +39,10 @@ The **Select Boot Source** field offers these options:
 
 | **Options**           | **Description**                           								    																							     														  																																														  |	
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| Image                 | Select from the list of private and public images in the **Available** table, and click the plus sign (+) to move it to **Allocated**. Optionally you can click **Yes** on **Create New Volume** to enable the volume creation options. If you have a new volume created with this instance, optionally you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume on instance termination. |
-| Instance Snapshot     | Select from the snapshots in the **Available** table, and click the plus sign (+) to move it to **Allocated**.																												            														  																				  										      |
-| Volume				| Select from the volumes in the **Available** table, and click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume on instance termination.   											  																																  |
-| Volume Snapshot       | Select from the volume snapshots in the **Available** table, and click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume on instance termination.										  																																  |
+| Image                 | Make a selection from the list of private and public images in the **Available** table, then click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on **Create New Volume** to enable more volume creation options. If you've created a new volume with this instance, you can click **Yes** on the **Delete Volume on Instance Delete** option if you want to delete this volume when the instance is terminated. |
+| Instance Snapshot     | Make a selection from the snapshots in the **Available** table, and click the plus sign (+) to move it to **Allocated**.																												            														  																				  										      |
+| Volume				| Make a selection from the volumes in the **Available** table, then click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume when the instance is terminated.   											  																																  |
+| Volume Snapshot       | Make a selection from the volume snapshots in the **Available** table, then click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume when the instance is terminated.										  																																  |
 
 ![The Source tab]({{site.baseurl}}/img/launch_instance_source_image.png)
 
