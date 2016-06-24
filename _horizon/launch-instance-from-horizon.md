@@ -113,9 +113,9 @@ Select the **Configuration Drive** checkbox if you want to write metadata to a s
 	
 #### The Metadata tab
 
-A common API is provided by Glance to define key and value pairs to tag metadata for different types of resources (images, artifacts, volumes, flavors, aggregates, and so on). If the image that you select contains pre-defined metadata, you will see them in the **Available metadata** column. 
+Glance provides a common API to define key and value pairs that tag metadata for different types of resources (images, artifacts, volumes, flavors, aggregates, and so on). If the image that you select contains pre-defined metadata, you'll see that in the **Available metadata** column. 
 
-You can also create additional key and value pairs in the **Custom** field and click the plus sign (+) to move it to the **Existing metadata** list. Example custom metadata is a parameter that you want to pass to the application to be installed with the instance.
+You can create additional key and value pairs in the **Custom** field and click the plus sign (+) to move them to the **Existing metadata** list. For example, custom metadata is a parameter that you'd want to pass to the application, so it can be installed with the instance.
 
 ![Custom meta]({{site.baseurl}}/img/launch_instance_meta.png)
 
@@ -123,7 +123,7 @@ For more information about Glance metadata, see [Metadata Definition Concepts](h
 
 ## How to connect to your instance
 
-**Note:** Ensure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
+**Note:** Be sure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
 
 1. Log in to the IBM Blue Box Horizon dashboard.
 
@@ -135,9 +135,9 @@ For more information about Glance metadata, see [Metadata Definition Concepts](h
 
 ### Connecting to Linux instances
   
-Connect to your instance through SSH or VNC. The default `userid` for the Linux images provided by IBM is **ibmcloud**. Once connected to your Linux instance, you can use the `sudo` command to execute commands that normally require root access. Sudo is configured not to require a password for the default `userid`.
+Connect to your instance through SSH or VNC. The default `userid` for the Linux images provided by IBM is **ibmcloud**. Once you've connected to your Linux instance, you can use the `sudo` command to execute commands that normally require root access. Sudo is configured not to require a password for the default `userid`.
 
-* Use your favorite SSH client and open a connection to the correct IP address of the VM instance, using the private SSH key of the keypair that you specified during provisioning:
+* Using your favorite SSH client, open a connection to the correct IP address of the VM instance, employing the private SSH key of the keypair that you specified during provisioning:
 	 
 	```  
 	ssh -i <path_of_Your_SSH_private_key_file> <userid>@<ip_of_instance>
@@ -145,11 +145,11 @@ Connect to your instance through SSH or VNC. The default `userid` for the Linux 
 	
 * From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the **Actions** column of the instance. The VNC console connects you with HTTPS.
   
-**Note:** To be able to log in via the console to a new Linux instance as `ibmcloud` user, you must have specified a password in the Customization Script during provisioning.
+**Note:** To log in to a new Linux instance, via the console, as `ibmcloud` user, you must have specified a password previously, in the Customization Script during provisioning.
   
 ### Connecting to Windows instances
 
-Connect to your instance through Remote Desktop or VNC. You'll need to use the `userid` and `password` specified in the Customization Script during VM provisioning. On your first login, a prompt appears, requesting that you change your password. Please do.
+Connect to your instance through Remote Desktop or VNC. You'll need to use the `userid` and `password` you specified in the Customization Script during VM provisioning. On your first login, a prompt appears, requesting that you change your password. Please do.
 
 * Use your favorite Remote Desktop client to connect.
 * From the IBM Blue Box Horizon dashboard, view the VNC console of the instance by clicking **Console** from the drop-down list in the **Actions** column of the instance. The VNC console connects you with HTTPS.
@@ -159,7 +159,7 @@ Connect to your instance through Remote Desktop or VNC. You'll need to use the `
 
 Under the **Project** topic, expand **Compute** and click **Instances**.
 
-The dashboard displays the list of created instances for the current project. In the Actions column, a drop-down list displays your options, as shown below:
+The dashboard displays the list of instances for the current project. In the Actions column, a drop-down list displays your options, as shown below:
 
 ![Instance options]({{site.baseurl}}/img/launch_instance_more.png)
 
