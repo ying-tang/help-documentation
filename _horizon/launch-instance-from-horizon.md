@@ -12,12 +12,12 @@ weight: 4
 
 ### Steps
 1. Log in to the Horizon dashboard.
-2. Under the **Project** topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of instances with their details such as name, IP address, and status. For information about managing these instances, see [How to manage your instances](#manage-instance).
-3. Click **Launch Instance** on the upper right. The **Launch Instance** dialog is displayed.
+2. Under the **Project** topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of your instances with their details, such as name, IP address, and status. For information about managing your instances, please see [How to manage your instances](#manage-instance).
+3. Click **Launch Instance** on the upper right of the dashboard. The **Launch Instance** dialog is displayed.
 
 ![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
 
-Navigate through the following tabs and provide the values, and click **Launch Instance** on the lower right side of the dialog.
+Navigate through the following tabs and provide the values, then click **Launch Instance** on the lower right side of the dialog.
 
 ### Values in Launch Instance dialog
 
@@ -25,8 +25,8 @@ Navigate through the following tabs and provide the values, and click **Launch I
 
 | **Values**           | **Description** 																																																					 | 
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Instance Name        | Assign a name to the virtual machine. The name that you assign here becomes the initial host name of the server. Server names are not guaranteed to be unique when created so you could have two instances with the same host name. |
-| Availability Zone    | By default, this value is set to the availability zone given by the cloud provider, for example, `compute_standard`. 																												 |
+| Instance Name        | Assign a name to your virtual machine. The name that you assign here becomes the initial host name of the server. Server names are not guaranteed to be unique when created, thus you could have two instances with the same host name. |
+| Availability Zone    | By default, this value is set to the Availability Zone (AZ) given by the cloud provider, for example, `compute_standard`. 																												 |
 | Count	               | To launch multiple instances, enter a value greater than 1. The default is 1.																																																																															  |
 
 ![The Details tab]({{site.baseurl}}/img/launch_instance_details.png)
