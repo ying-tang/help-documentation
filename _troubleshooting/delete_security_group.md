@@ -22,3 +22,11 @@ neutron lbaas-listener-delete {}
 neutron lbaas-loadbalancer-list | grep ACTIVE | awk '{print $2}' |xargs -i 
 neutron lbaas-loadbalancer-delete {} 
 ```
+
+With the following commands, you can find and delete a port that might be in use:
+```
+neutron port-list
+neutron port-delete PORT
+```
+
+where PORT is the ID of the port that is in use by the security group you want to delete.
