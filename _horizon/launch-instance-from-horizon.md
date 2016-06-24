@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "How to launch an instance from Horizon"
+title:  "Launching an instance from the Horizon dashboard"
 tags: [horizon, instance, launch]
 dateAdded: June 6, 2016
 author: Ying Tang
@@ -8,7 +8,7 @@ featured: false
 weight: 4
 ---
 
-## How to launch an instance from Horizon
+## Launching an instance from the Horizon dashboard
 
 ### Steps
 1. Log in to the Horizon dashboard.
@@ -163,24 +163,24 @@ The dashboard displays the list of created instances for the current project. In
 
 ![Instance options]({{site.baseurl}}/img/launch_instance_more.png)
 
-* Creates snapshot: creates an instance snapshot.
-* Associate Floating IP: associates an available floating IP to a port of your instance. 
-* Attach an Interface: attaches the interface to a network. 
-* Detach an Interface: removes a port that you created for the instance.
-* Edit instance: changes the instance name, or upload the security groups.
-* Update metedata: updates the custom metadata that you specified for the instance.
-* Edit Security Groups: removes an existing security group or assign a new security group.
-* Console: views the VNC console of the instance.
-* View Log: views the instance log.
-* Pause instance: pauses the instance and saves its state on memory. This option keeps the resources (vCPUs and memory).
-* Suspend instance: suspends the instance and saves its state to the disk. This option frees up resources (vCPUs and memory).
-* Shelve instance: shelves the image and shuts down the instance. 
-* Resize instance: updates the flavor setting of the instance.
-* Lock instance: locks the instance.
-* Unlock instance: unlocks the instance.
-* Soft Reboot Instance: performs a graceful shutdown and restart of the instance.
-* Hard Reboot Instance: performs the equivalent of a power reset of the server.
-* Shut off Instance: performs a power off the instance.
+* **Creates snapshot:**
+* **Associate Floating IP:** associates an available floating IP to a port of your instance. 
+* **Attach an Interface:** attaches the interface to a network. 
+* **Detach an Interface:** removes a port that you created for the instance.
+* **Edit instance:** changes the instance name, or uploads the security groups.
+* **Update metedata:** updates the custom metadata that you specified for the instance.
+* **Edit Security Groups:** removes an existing security group or assigns a new security group.
+* **Console:** views the VNC console of the instance.
+* **View Log:** views the instance log.
+* **Pause instance:** pauses the instance and saves its state in memory. This option keeps the resources (vCPUs and memory).
+* **Suspend instance:** suspends the instance and saves its state to the disk. This option frees up resources (vCPUs and memory).
+* **Shelve instance:** shelves the image and shuts down the instance. 
+* **Resize instance:** updates the flavor setting of the instance.
+* **Lock instance:** locks the instance.
+* **Unlock instance:** unlocks the instance.
+* **Soft Reboot Instance:** performs a graceful shutdown and restart of the instance.
+* **Hard Reboot Instance:** performs the equivalent of a power reset of the server.
+* **Shut off Instance:** performs a power off the instance.
 * Rebuild Instance: rebuilds the instance with another image.
 * Delete Instance: delete the instance. 
 
