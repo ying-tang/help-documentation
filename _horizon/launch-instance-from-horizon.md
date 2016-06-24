@@ -31,7 +31,7 @@ Navigate through the following tabs and provide the values, then click **Launch 
 
 ![The Details tab]({{site.baseurl}}/img/launch_instance_details.png)
 
-You can click **Next** or the **Source** tab to continue the steps.
+To continue, click **Next** or click on the **Source** tab.
 
 #### The Source tab
 
