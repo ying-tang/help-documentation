@@ -125,7 +125,7 @@ For more information about Glance metadata, see [Metadata Definition Concepts](h
 
 **Note:** Ensure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
 
-1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
+1. Log in to the IBM Blue Box Horizon dashboard.
 
 2. Expand the **Project** panel, then the **Compute** tab in the left navigation area, and click on **Instances**.
 
