@@ -159,7 +159,7 @@ Connect to your instance through Remote Desktop or VNC. You'll need to use the `
 
 Under the **Project** topic, expand **Compute** and click **Instances**.
 
-The dashboard displays the list of created instances for the current project. In the Actions column there is drop-down list that will display your options:
+The dashboard displays the list of created instances for the current project. In the Actions column, a drop-down list displays your options, as shown below:
 
 ![Instance options]({{site.baseurl}}/img/launch_instance_more.png)
 
@@ -181,10 +181,10 @@ The dashboard displays the list of created instances for the current project. In
 * **Soft Reboot Instance:** performs a graceful shutdown and restart of the instance.
 * **Hard Reboot Instance:** performs the equivalent of a power reset of the server.
 * **Shut off Instance:** performs a power off the instance.
-* Rebuild Instance: rebuilds the instance with another image.
-* Delete Instance: delete the instance. 
+* **Rebuild Instance:** rebuilds the instance with another image.
+* **Delete Instance:** delete the instance. 
 
-Click the proper option for the operation you need to apply.
+Click the option for the operation you need to apply.
 
 
  
