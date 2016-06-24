@@ -13,7 +13,7 @@ weight: 4
 ### Steps
 1. Log in to the Horizon dashboard.
 2. Under the **Project** topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of your instances with their details, such as name, IP address, and status. For information about managing your instances, please see [How to manage your instances](#manage-instance).
-3. Click **Launch Instance** on the upper right portion of the HOrizon dashboard. The **Launch Instance** dialog is displayed.
+3. Click **Launch Instance** on the upper right portion of the Horizon dashboard. The **Launch Instance** dialog is displayed.
 
 ![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
 
@@ -46,32 +46,32 @@ The **Select Boot Source** field offers these options:
 
 ![The Source tab]({{site.baseurl}}/img/launch_instance_source_image.png)
 
-**Note:** The **Image** option is chosen by default. With the **Image** option you can select images from the public images, or use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
+**Note:** The **Image** option is set by default, so you don't have to select one before booting. If you use the **Image** option, you can select from the public images provided by IBM, or you can upload and use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
 
 #### The Flavor tab
 
-Select from the list of flavors and click the plus sign (+) to move it to **Allocated**. 
+Make a selection from the list of flavors and click the plus sign (+) to move it to **Allocated**. 
 
 ![The Flavor tab]({{site.baseurl}}/img/launch_instance_flavor.png)
 
 #### The Networks tab
 
-Select from the list of networks and click the plus sign (+) to move it to **Allocated**. You can have multiple networks allocated to the instance. 
+Make a selection from the list of networks and click the plus sign (+) to move it to **Allocated**. You can allocate multiple networks to the instance. 
 
 ![The Flavor tab]({{site.baseurl}}/img/launch_instance_network.png)
 
 #### The Network Ports tab
 
-If you do not specify any network port, a default one will be assigned to the instance when the instance is created and booted.
+If you do not specify any network port, a default one is assigned to the instance when the instance is created and booted.
 
 In rare occasions though, you can create ports beforehand through APIs. After you create a port and associate it with one of the networks that you select in the
- **Networks** tab, you will be able to view this port in the **Available** table. You can click the plus sign (+) to move it to **Allocated**.     
+ **Networks** tab, you'll be able to view this port in the **Available** table. You can click the plus sign (+) to move it to **Allocated**.     
 
 ![The Flavor tab]({{site.baseurl}}/img/launch_instance_port.png)
 
 #### The Security Groups tab
 
-Select from the list of security groups and click the plus sign (+) to move it to **Allocated**.   
+Make a selection from the list of security groups and click the plus sign (+) to move it to **Allocated**.   
 
 ![The Security Group tab]({{site.baseurl}}/img/launch_instance_srg.png)        																																																										 |       
  
