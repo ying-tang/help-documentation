@@ -22,7 +22,7 @@ fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Error 
 
 Here's an example of the error message you might receive if you try to delete the port while it is in use by a load balancer:
 ```
-$neutron port-delete 0c3f5473-2b75-4eb4-9b30-d6652ad0336d
+$ neutron port-delete 0c3f5473-2b75-4eb4-9b30-d6652ad0336d
 Port 0c3f5473-2b75-4eb4-9b30-d6652ad0336d cannot be deleted directly via
 the port API: has device owner neutron:LOADBALANCERV2
 ```
