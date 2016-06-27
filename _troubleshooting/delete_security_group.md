@@ -18,7 +18,7 @@ Example: I've tried to delete a security group. Here's an (example) error messag
 fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Error deleting security group 9ad11034-32a0-4b0b-86b3-49b775fa573b: Security Group 9ad11034-32a0-4b0b-86b3-49b775fa573b in use.\nNeutron server returns request_ids: ['req-3e0a34dc-7a99-497e-8f61-bfc2c8f9fd37']"}
 ```
 
-A. It might be in use by a Neutron port. To delete the security group, you'll first need to delete the port. If the port is in use by, for example, a load balancer, you'll need to delete the load balancer before deleting the security group.
+**A. It might be in use by a Neutron port.** To delete the security group, you'll first need to delete the port. If the port is in use by, for example, a load balancer, you'll need to delete the load balancer before deleting the security group.
 
 Here's an example of the error message you might receive if you try to delete the port while it is in use by a load balancer:
 ```
