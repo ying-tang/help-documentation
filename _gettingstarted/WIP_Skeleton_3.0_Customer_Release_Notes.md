@@ -39,7 +39,11 @@ For additional user documentation, please refer to the [main Help page.](http://
 
 #### Openstack Mitaka Support
 
-For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
+Several features are now available based on our move to OpenStack Mitaka. 
+
+ * It is now possible to set up autoscaling groups and LBaaS (v2) using Heat templates.
+ * 
+ * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
 #### OpenStack Power Compute Node Support (Habañero and Firestone)
 #### Federated Keystone across multiple IBM Blue Box clouds
@@ -68,7 +72,7 @@ This feature is designed for any IBM Blue Box Customer for whom the performance 
 **Note:** For Blue Box Dedicated cloud, the Bare Metal hardware must be in a separate, customer-owned SoftLayer account.
 
 #### Box Panel Launched in China
-#### 10G Vyatta Support
+#### 10GB Vyatta Support
 #### SVC Cinder Driver support
 #### Higher soft limits for Object Storage of 250 TB
 #### Higher soft limits for Block Storage of 1 PB
