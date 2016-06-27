@@ -46,7 +46,7 @@ The **Select Boot Source** field offers these options:
 
 ![The Source tab]({{site.baseurl}}/img/launch_instance_source_image.png)
 
-**Note:** The **Image** option is set by default, so you don't have to select one before booting. If you use the **Image** option, you can select from the public images provided by IBM, or you can upload and use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/). 
+**Note:** The **Image** option is set by default, so you don't have to select one before booting. If you use the **Image** option, you can select from the public images provided by IBM, or you can upload and use your own image. For information about how to upload an image to IBM Blue Box, see [Cloud images provided by IBM Blue Box](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/). 
 
 #### The Flavor tab
 
@@ -73,7 +73,7 @@ Occasionally, you may need to create ports beforehand through APIs. After you cr
 
 Make a selection from the list of security groups, then click the plus sign (+) to move it to **Allocated**.   
 
-![The Security Group tab]({{site.baseurl}}/img/launch_instance_srg.png)        																																																										 |       
+![The Security Group tab]({{site.baseurl}}/img/Launch_Instance_srg.png)        																																																										 |       
  
 #### The Key Pair tab
 
