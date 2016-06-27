@@ -15,9 +15,11 @@ author: Leslie Lundquist
 #### Release 3.0  
 #### June 30, 2016
 
+Release 3.0.0 of IBM Blue Box Cloud includes many updates to the underlying OpenStack platform upon which IBM Blue Box Cloud is built, as well as upgrades to IBM Blue Box Dedicated cloud, and to IBM Blue Box Local cloud infrastructure and features. Most notable is the upgrade to the **OpenStack Mitaka** release, which enables many new capabilities. We’ve included some general product improvements such as performance benchmarks and an updated Rally test suite, designed to facilitate smoother operation and deployment. This release also includes many improvements to documentation.
+
 # **Summary of New Features in the Latest Release**
 
-This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the 3.0 Dedicated and Local Cloud offerings. The new capabilities of IBM Blue Box Dedicated and Local Cloud include:  
+This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the 3.0 Dedicated and Local Cloud offerings. The new capabilities of IBM Blue Box Dedicated and Local Cloud include:
 
 1. [Openstack Mitaka Support.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#openstack-mitaka-support)
 2. [OpenStack Power Compute Node Support (Habañero and Firestone).](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
