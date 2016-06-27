@@ -12,15 +12,15 @@ dateAdded: June 24, 2016
 
 A. It might be in use by a Neutron port. To delete the security group, you'll first need to delete the port. If the port is in use by, for example, a load balancer, you'll need to delete the load balancer before deleting the security group.
 
-Here are some example cleanup commands for your LBaaS:
+Here are some example cleanup commands for your LBaaS (output not shown):
 
 ```
-neutron lbaas-pool-list | grep True | awk '{print $2}' |xargs -i neutron 
-lbaas-pool-delete {} 
-neutron lbaas-listener-list | grep True | awk '{print $2}' |xargs -i 
-neutron lbaas-listener-delete {} 
-neutron lbaas-loadbalancer-list | grep ACTIVE | awk '{print $2}' |xargs -i 
-neutron lbaas-loadbalancer-delete {} 
+$ neutron lbaas-pool-list | grep True | awk '{print $2}' |xargs -i neutron 
+$ lbaas-pool-delete {} 
+$ neutron lbaas-listener-list | grep True | awk '{print $2}' |xargs -i 
+$ neutron lbaas-listener-delete {} 
+$ neutron lbaas-loadbalancer-list | grep ACTIVE | awk '{print $2}' |xargs -i 
+$ neutron lbaas-loadbalancer-delete {} 
 ```
 
 With the following commands, you can find and delete a port that might be in use. PORT is the ID of the port that is in use by the security group you want to delete.
