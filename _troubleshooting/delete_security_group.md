@@ -10,9 +10,26 @@ dateAdded: June 24, 2016
 
 ### Q. Why can't I delete a security group?
 
+Example: I've tried to delete a security group. Here's an (example) error message I received:
+
+```
+#TASK [Remove my_security_group from the environment] *********************
+#Friday 24 June 2016 10:54:22 -0500 (0:00:00.101) 0:02:50.029 ***********
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Error deleting security group 9ad11034-32a0-4b0b-86b3-49b775fa573b: Security Group 9ad11034-32a0-4b0b-86b3-49b775fa573b in use.\nNeutron server returns request_ids: ['req-3e0a34dc-7a99-497e-8f61-bfc2c8f9fd37']"}
+```
+
 A. It might be in use by a Neutron port. To delete the security group, you'll first need to delete the port. If the port is in use by, for example, a load balancer, you'll need to delete the load balancer before deleting the security group.
 
-Here are some example cleanup commands for your LBaaS (output not shown):
+Here's an example of the error message you might receive if you try to delete the port while it is in use by a load balancer:
+
+#it will not let me delete the port....
+#(my-deploy)
+vagrant@vagrant-ubuntu-trusty-64:/workspace/mycloud.infrastructure.openstack.deploy$
+neutron port-delete 0c3f5473-2b75-4eb4-9b30-d6652ad0336d
+Port 0c3f5473-2b75-4eb4-9b30-d6652ad0336d cannot be deleted directly via
+the port API: has device owner neutron:LOADBALANCERV2
+
+If you find yourself in this situation, here are some example cleanup commands for your LBaaS (output not shown):
 
 ```
 $ neutron lbaas-pool-list | grep True | awk '{print $2}' |xargs -i neutron 
