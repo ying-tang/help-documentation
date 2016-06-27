@@ -15,7 +15,7 @@ weight: 4
 2. Under the **Project** topic, expand **Compute** and click **Instances**. If you have existing instances, you can view a list of your instances with their details, such as name, IP address, and status. For information about managing your instances, please see [How to manage your instances](#manage-instance).
 3. Click **Launch Instance** on the upper right portion of the Horizon dashboard. The **Launch Instance** dialog is displayed.
 
-![Launch an instance]({{site.baseurl}}/img/launch_instance.png)
+![Launch an instance]({{site.baseurl}}/img/Launch_Instance.png)
 
 Navigate through the following tabs and provide the values, then click **Launch Instance** on the lower right side of the dialog box.
 
@@ -52,7 +52,7 @@ The **Select Boot Source** field offers these options:
 
 Make a selection from the list of flavors, then click the plus sign (+) to move it to **Allocated**. 
 
-![The Flavor tab]({{site.baseurl}}/img/launch_instance_flavor.png)
+![The Flavor tab]({{site.baseurl}}/img/launch_instance_flavor.PNG)
 
 #### The Networks tab
 
@@ -83,11 +83,11 @@ Specify a key pair. You have the following options:
 * Click **Import Key Pair** to import your own key pair. Copy and paste your public key, then click **Import Key Pair**.
 * Click **Create Key Pair** to create and store a new key pair. Specify the key pair name, then click **Create Key Pair**.  
   
-  ![Create a new key pair]({{site.baseurl}}/img/launch_instance_kp.png)
+  ![Create a new key pair]({{site.baseurl}}/img/launch_instance_kp.PNG)
   
   You'll be promoted to save the new key pair to the local host.
   
-  ![Create a new key pair and save]({{site.baseurl}}/img/launch_instance_kp_new.png)
+  ![Create a new key pair and save]({{site.baseurl}}/img/launch_instance_kp_new.PNG)
 
 #### The Configuration tab
 
@@ -103,7 +103,7 @@ Custom scripts attached to instances can perform specific actions when the insta
 	net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
 	net localgroup administrators <YOUR_USERNAME> /add
 	
-![Custom script]({{site.baseurl}}/img/launch_instance_script.png)
+![Custom script]({{site.baseurl}}/img/launch_instance_script.PNG)
 
 If your browser supports the **HTML5 File API**, you may click **Browse** to load your script from a file. The size of your script should not exceed **16 Kb**.
 
@@ -117,7 +117,7 @@ Glance provides a common API to define key and value pairs that tag metadata for
 
 You can create additional key and value pairs in the **Custom** field and click the plus sign (+) to move them to the **Existing metadata** list. For example, custom metadata is a parameter that you'd want to pass to the application, so it can be installed with the instance.
 
-![Custom meta]({{site.baseurl}}/img/launch_instance_meta.png)
+![Custom meta]({{site.baseurl}}/img/launch_instance_meta.PNG)
 
 For more information about Glance metadata, see [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/metadefs-concepts.html) and [Using Glance’s Metadata Definitions Catalog Public APIs](http://docs.openstack.org/developer/glance/glancemetadefcatalogapi.html).
 
