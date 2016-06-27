@@ -33,10 +33,13 @@ the port API: has device owner neutron:LOADBALANCERV2
 If you find yourself in this situation, here are some example cleanup commands for your LBaaS (output not shown):
 
 ```
-$ neutron lbaas-pool-list | grep True | awk '{print $2}' |xargs -i neutron 
-$ lbaas-pool-delete {} 
+#First see if your instance is in the pool and delete from pool if so
+$ neutron lbaas-pool-list | grep True | awk '{print $2}' |xargs -i  
+$ neutron lbaas-pool-delete {}
+#See if it's on the listener list and delete if so
 $ neutron lbaas-listener-list | grep True | awk '{print $2}' |xargs -i 
 $ neutron lbaas-listener-delete {} 
+#See if it's in the list of active loadbalancers and delete if so
 $ neutron lbaas-loadbalancer-list | grep ACTIVE | awk '{print $2}' |xargs -i 
 $ neutron lbaas-loadbalancer-delete {} 
 ```
