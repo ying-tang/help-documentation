@@ -21,13 +21,14 @@ fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Error 
 A. It might be in use by a Neutron port. To delete the security group, you'll first need to delete the port. If the port is in use by, for example, a load balancer, you'll need to delete the load balancer before deleting the security group.
 
 Here's an example of the error message you might receive if you try to delete the port while it is in use by a load balancer:
-
+```
 #it will not let me delete the port....
 #(my-deploy)
 vagrant@vagrant-ubuntu-trusty-64:/workspace/mycloud.infrastructure.openstack.deploy$
 neutron port-delete 0c3f5473-2b75-4eb4-9b30-d6652ad0336d
 Port 0c3f5473-2b75-4eb4-9b30-d6652ad0336d cannot be deleted directly via
 the port API: has device owner neutron:LOADBALANCERV2
+```
 
 If you find yourself in this situation, here are some example cleanup commands for your LBaaS (output not shown):
 
