@@ -31,7 +31,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 8. [Optional Hybrid Block Storage Nodes Now Available for IBM Blue Box 3.0.0 Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 9. [I/O Optimized and High Storage Compute Nodes Support Now Available for IBM Blue Box 3.0.0 Local Cloud.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 10. [HIPAA available for IBM Blue Box Local 3.0.0 Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
-11. [Regular updates for IBM Blue Box Cloud Images now available]()
+11. [Regular updates for IBM Blue Box Cloud Images now available](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md)
 
 For additional user documentation, please refer to the [main Help page](http://ibm-blue-box-help.github.io/help-documentation/) available anytime at _help.blueboxcloud.com_.
 
