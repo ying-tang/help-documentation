@@ -51,35 +51,31 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 This feature supports compatibility with IBM Watson.
 
 **Higher soft limits for Object Storage of 250 TB**
+
 **Higher soft limits for Block Storage of 1 PB**
 
 #### New Features Available in IBM Blue Box Dedicated 3.0.0 Cloud
-##### Support for Transit VLANs and customer Bare Metal hardware connections 
- Available in IBM Blue Box Dedicated Cloud only, this feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack cloud-instance network. [It also lets you create HA IP setup.](http://ibm-blue-box-help.github.io/help-documentation/neutron/configure-ha-ip/)
+
+**Support for Transit VLANs and customer Bare Metal hardware connections:** Available in IBM Blue Box Dedicated Cloud only, this feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack cloud-instance network. [This feature also lets you create a high-availability (HA) IP failover setup.](http://ibm-blue-box-help.github.io/help-documentation/neutron/configure-ha-ip/)
 
   * **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned SoftLayer account.
 
-##### 10GB Vyatta Support for IBM Blue Box Dedicated Cloud
-This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
+**10GB Vyatta Support for IBM Blue Box Dedicated Cloud:** This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
 
 #### New Features Available in IBM Blue Box Local 3.0.0 Cloud
-##### Optional Expansion Compute Nodes Now Available in IBM Blue Box 3.0.0 Local
-Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Both types of expansion nodes—IO optimized and high storage capacity—allow better coverage of instance types and workloads. With this release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
+**Optional Expansion Compute Nodes Now Available in IBM Blue Box 3.0.0 Local:** Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Both types of expansion nodes—IO optimized and high storage capacity—allow better coverage of instance types and workloads. With this release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 
  * Optionally, you can select from the following compute node extensions to add to your IBM Blue Box Local cloud:
 
 	• You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
 	• You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE
 
-##### Optional Hybrid Block Storage Nodes Now Available in IBM Blue Box 3.0.0 Local**
- Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster. 
+**Optional Hybrid Block Storage Nodes Now Available in IBM Blue Box 3.0.0 Local:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster. 
 
 	• You can select Block Storage: SSD or HYBRID
 	• You can select Object Storage 
 
-#### HIPAA and IBM Blue Box Local 3.0.0 Cloud
-
-	• You can select HIPAA Enablement for your IBM Blue Box Local Cloud
+**HIPAA and IBM Blue Box Local 3.0.0 Cloud:** You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
 
  A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
