@@ -41,7 +41,8 @@ For additional user documentation, please refer to the [main Help page](http://i
 
 **Openstack Mitaka Support:**
 Several features are now available based on our move to OpenStack Mitaka. 
- * It is now possible to set up autoscaling groups and LBaaS (v2) using Heat templates.
+ * It is now possible to set up autoscaling groups and LBaaS (v2) using Heat templates and the Horizon dashboard.
+ * The Mitaka release introduces the new **aodh** alert service, which will be installed on any environment that has Ceilometer enabled.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
 **Federated Keystone across multiple IBM Blue Box clouds:**
