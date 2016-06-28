@@ -5,7 +5,7 @@ featured: false
 tags: [federation, keystone, k2k]
 dateAdded: June 24th, 2016
 author: Elvin Tubillara
-editor:
+editor: Leslie Lundquist
 ---
 
 * [What is K2K Federation?](#what_is_k2k?)
@@ -15,53 +15,42 @@ editor:
 * [Using the Python API Libraries](#using_the_python_api_libraries)
 * [More Mappings and Groups](#more_mappings_and_groups)
 
-## <a name="what_is_k2k"></a>What is K2K Federation?
-K2K federation is a way to use credentials from one Keystone across multiple
-Blue Box clouds. A Blue Box cloud instance is designated as an identity provider
-and other cloud instances are designated as service providers. The
-identity provider's job is to store the user's credentials and assert
-to the service providers that the user is a valid user. The user/pass
-is never sent to the service providers (only assertions from the identity provider). The user signs into
-the identity provider, gets a signed SAML assertion from the identity provider
-and uses the SAML assertion to authenticate into the service providers. The log in process
-for handling the SAML flow is handled by the K2K authentication plugin
-(found in keystoneauth1).
-This allows credentials to be managed only on the identity provider
-and be accepted by service providers through assertions.
+## What is K2K Federation?
+Keystone to Keystone (K2K) federation is a way to use credentials from one Keystone instance for logging in across multiple
+Blue Box clouds. One IBM Blue Box cloud instance is designated as an Identity Provider and other cloud instances are designated as Service Providers. The Identity Provider stores the user's credentials and asserts to the Service Providers that the user is a valid user. The user's id and password are never sent to the Service Providers, only assertions from the Identity Provider are sent. 
 
-If several Blue Box clouds have been set up with the K2K feature, one
-will be designated as the identity provider and the others will be
-designated as service providers. Service providers will use mappings to
-define what user attributes from the identity provider will be used to map
-to a local group. Once the user logs in using K2K federation, the user will
-have the roles of the group.
+## How does K2K work? 
+The user signs into the Identity Provider, receives a signed SAML assertion from the Identity Provider
+and then uses that SAML assertion to authenticate into the Service Providers. The log in process
+for handling the SAML flow is handled by the K2K authentication plugin (found in `keystoneauth1`).
+Credentials are managed only on the Identity Provider, and they are accepted by Service Providers through assertions.
 
-By default a mapping called mapping-for-k2k-federation
-will be created for cloud_admin's credentials on the identity provider
-to be mapped to a local group called cloud_admin. This group will
-have the role cloud_admin access to the demo project.
+If several Blue Box clouds have been set up with the K2K feature, one cloud instance
+is designated as the Identity Provider and the others are designated as Service Providers. Service Providers use mappings to
+select the user attributes from the Identity Provider that are utilized to map to a local group. Once the user logs in using K2K federation, the user is granted the roles assigned to the group.
+
+By default, a mapping called `mapping-for-k2k-federation`
+is created for the `cloud_admin` credentials on the Identity Provider by which they are mapped to a local group called `cloud_admin`. This group has the role `cloud_admin` access to the demo project.
 
 The flow of setting up K2K federation is:
-**1. Manage groups on service provider (Federated users will have the same access rights as the group)**
-**2. Manage mappings on service provider (Map remote identity provider users to local service provider groups)**
+**1. Manage groups on the Service Provider (Federated users will have the same access rights as the group)**
+**2. Manage mappings on the Service Provider (Map remote Identity Provider users to local service provider groups)**
 
-## <a name="managin_groups"></a>Managing Groups
+## Managing Groups
 
-K2K Federation works by federating identity provider users to a group on the service provider.
-The group is granted access by assigning the group a role on
-a project. The available roles are:
-{% highlight bash %}
-project_admin - admin for project
-cloud_admin - admin for the cloud instance
-_member_ - member of a project
-heat_stack_owner - owner for heat stacks
-{% endhighlight %}
+K2K Federation works by federating Identity Provider users to a group on the Service Provider. The group is granted access by assigning that group a role on a project. The available roles are as follows:
 
-In order to use the group commands, a credential source file is required.
+ * `project_admin` - The `admin` role for the project.
+ * `cloud_admin` - The `admin` role for the cloud instance.
+ * `_member_` - A member of a project.
+ * `heat_stack_owner` - An owner for heat stacks.
+
+To use the group commands, a credential source file is required.
 Create a file containing the credentials and replace the tags <> with
 the appropriate information:
 
 {% highlight bash %}
+```
 #This file is cloud_adminrc
 export OS_IDENTITY_API_VERSION=3
 export OS_PASSWORD=<cloud_admin password> #Change this
@@ -70,12 +59,14 @@ export OS_USERNAME=cloud_admin
 export OS_TENANT_NAME=demo
 export OS_CACERT=/opt/stack/ssl/openstack.crt
 export OS_NO_CACHE=True
+```
 {% endhighlight %}
 
-Once the credential source file is made, we can source the file and run
-the OpenStack commands to manage groups and roles.
+After the credential source file is made, you can source the file and run the OpenStack commands to manage groups and roles.
+
 {% highlight bash %}
-#These commands run on the service provider
+```
+#These commands run on the Service Provider
 
 #Source the credentials into the environment
 source cloud_adminrc
