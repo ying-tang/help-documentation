@@ -30,10 +30,12 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 7. [10G Vyatta Support for IBM Blue Box Dedicated.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 8. [Optional Hybrid Block Storage Nodes Now Available for IBM Blue Box 3.0.0 Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 9. [I/O Optimized and High Storage Compute Nodes Support Now Available for IBM Blue Box 3.0.0 Local Cloud.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-10. [HIPAA available for IBM Blue Box Local 3.0.0 Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
-11. [Regular updates for IBM Blue Box Cloud Images now available](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md)
+10. [Support for IBM Blue Box Local on PureApp platform (Beta release)](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+11. [Support for Bluemix on IBM Blue Box Local](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+12. [HIPAA available for IBM Blue Box Local 3.0.0 Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
+13. [Regular updates for IBM Blue Box Cloud Images now available](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md)
 
-For additional user documentation, please refer to the [main Help page](http://ibm-blue-box-help.github.io/help-documentation/) available anytime at _help.blueboxcloud.com_.
+For additional user documentation, please refer to the [main Help page](http://ibm-blue-box-help.github.io/help-documentation/), available anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
@@ -72,6 +74,10 @@ You can select from the following compute node extensions to add to your IBM Blu
   * You can select Block Storage: SSD or HYBRID
   * You can select Object Storage 
 
+**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With this release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
+
+**Support for Bluemix:** Support for running Bluemix Local on IBM Blue Box Local.
+
 **HIPAA and IBM Blue Box Local 3.0.0 Cloud:** You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
 
  A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
@@ -81,4 +87,5 @@ You can select from the following compute node extensions to add to your IBM Blu
  On a regular basis, updates are available for our series of IBM Blue Box Cloud Images, available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
 
 ### Known Limitations of This Release
-
+ * The LBaaS v2 Horizon dashboard will not let you create `https` listeners.
+ * 
