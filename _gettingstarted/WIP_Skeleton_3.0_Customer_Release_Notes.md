@@ -26,30 +26,29 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 3. [OpenStack Power Compute Node Support (Habañero and Firestone).](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 4. [Higher soft limits for Object Storage of 250 TB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
 5. [Higher soft limits for Block Storage of 1 PB.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-6. [Network connectivity to customer Bare Metal for IBM Blue Box Dedicated.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-7. [10G Vyatta Supportfor IBM Blue Box Dedicated.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-8. [Optional Hybrid Block Storage Nodes Now Available in IBM Blue Box Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-9. [I/O Optimized and High Storage Compute Nodes Support for Blue Box Local Cloud.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
-10. [HIPAA available in Blue Box Local Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
-11. [Updates for IBM Blue Box Cloud Guest Images now available]()
+6. [Transit VLAN support of HA IP and connectivity to customer Bare Metal for IBM Blue Box Dedicated.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+7. [10G Vyatta Support for IBM Blue Box Dedicated.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+8. [Optional Hybrid Block Storage Nodes Now Available for IBM Blue Box 3.0.0 Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+9. [I/O Optimized and High Storage Compute Nodes Support Now Available for IBM Blue Box 3.0.0 Local Cloud.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#)
+10. [HIPAA available for IBM Blue Box Local 3.0.0 Cloud Local.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers//#)
+11. [Regular updates for IBM Blue Box Cloud Images now available]()
 
 For additional user documentation, please refer to the [main Help page](http://ibm-blue-box-help.github.io/help-documentation/) available anytime at _help.blueboxcloud.com_.
 
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
-#### New Features in Every IBM Blue Box 3.0.0 Cloud
+#### New Features Available in Every IBM Blue Box 3.0.0 Cloud
 
 **Openstack Mitaka Support**
-
 Several features are now available based on our move to OpenStack Mitaka. 
  * It is now possible to set up autoscaling groups and LBaaS (v2) using Heat templates.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
 **Federated Keystone across multiple IBM Blue Box clouds**
- * Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider.
+Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider.
 
 **OpenStack Power Compute Node Support (Habañero and Firestone)**
- * This feature supports compatibility with IBM Watson.
+This feature supports compatibility with IBM Watson.
 
 ** Higher soft limits for Object Storage of 250 TB**
 ** Higher soft limits for Block Storage of 1 PB**
@@ -84,7 +83,7 @@ Expansion compute nodes address your requirements for faster IO ephemeral, more 
 
  A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
-#### Updates for IBM Blue Box Cloud Images now available
+#### Regular updates for IBM Blue Box Cloud Images now available
  
  On a regular basis, updates are available for our series of IBM Blue Box Cloud Images, available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
 
