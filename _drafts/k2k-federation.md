@@ -62,87 +62,84 @@ export OS_NO_CACHE=True
 ```
 {% endhighlight %}
 
-After the credential source file is made, you can source the file and run the OpenStack commands to manage groups and roles.
+After the credential source file is made, you can source the file and use any of the OpenStack commands below to manage groups and roles.
 
-{% highlight bash %}
+**These commands run on the Service Provider.**
+
+**Source the credentials into the environment**: `source cloud_adminrc`
+
+**To list groups**: `openstack group list`
+
+**To create a group**:
 ```
-#These commands run on the Service Provider
-
-#Source the credentials into the environment
-source cloud_adminrc
-
-#To list groups:
-openstack group list
-
-#To create a group
 openstack group create --help
 openstack group create <new group name here>
+```
+**To list roles**: `openstack role list`
 
-# To list roles:
-openstack role list
+**To list role assignments**: `openstack role assignment list --name`
 
-# To list role assignments
-openstack role assignment list --name
+**To list projects**: `openstack project list`
 
-# To list projects:
-openstack project list
+**For help looking at adding role assignment**: `openstack role add --help`
 
-# For help looking at adding role assignment
-openstack role add --help
+**To add a role assignment for a group to have a role on a project**:
+`openstack role  add <role> --project <project> --group <group>`
 
-# To add a role assignment for a group to have a role on a project
-openstack role  add <role> --project <project> --group <group>
-{% endhighlight %}
+Federated users are mapped into groups on the Service Provider. By default, a group called `cloud_admin` exists if K2K federation is enabled. This group has the role  `cloud_admin` on the "demo" project.
 
-Federated users will be mapped into groups on the service provider. By default
-there is a group called "cloud_admin" if K2K federation is enabled. This group
-has the role  "cloud_admin" on the "demo" project.
+Here's the order of operations for granting access for groups:
+1. First, create or edit the group.
+2. Then, create or edit the role assignments for groups on projects.
 
-The flow for granting access for groups:
-1. Create/Edit group
-2. Create/Edit role assignments for groups on projects
+**Example 1.** Creating a `cloud_admin` group.
 
+The commands below show how to source a file with the authentication info for the Service Provider `cloud_admin` user.
 
-Example 1. Creating a cloud_admin group
-{% highlight bash %}
-# Source a file with the authentication info for the service provider
-# cloud_admin user.
-source cloud_adminrc
-openstack group list
-openstack group create cloud_admin --or-show
-openstack role assignment list --name --group cloud_admin
-
-# Create the role assignment if it doesn't exist
-# This adds the role cloud_admin for the group cloud_admin for the demo project
+```
+$ source cloud_adminrc
+$ openstack group list
+$ openstack group create cloud_admin --or-show
+$ openstack role assignment list --name --group cloud_admin
+```
+Next, create the role assignment if it doesn't exist.
+**These commands add the role `cloud_admin` for the group `cloud_admin` for the "demo" project. **
+```
 openstack role add cloud_admin --group cloud_admin --project demo
 openstack role assignment list --name --group cloud_admin
-# After doing the role assignment list command you should see an output
-# similar to:
+```
+After executing the `openstack role assignment list` command you should see an output similar to this one:
+
+```
 # +-------------+------+---------------------+--------------+--------+-----------+
 # | Role        | User | Group               | Project      | Domain | Inherited |
 # +-------------+------+---------------------+--------------+--------+-----------+
 # | cloud_admin |      | cloud_admin@Default | demo@Default |        | False     |
 # +-------------+------+---------------------+--------------+--------+-----------+
-{% endhighlight %}
+```
 
-Example 2. Creating a group with member access
-{% highlight bash %}
-# Source a file with the authentication info for the service provider
-# cloud_admin user.
+**Example 2.** Creating a group with member access.
+
+The commands below show how to ource a file with the authentication info for the Service Provider `cloud_admin` user.
+
+```
 source cloud_adminrc
 openstack group list
 openstack group create demo_member_group --or-show
 openstack role assignment list --name --group demo_member_group
 openstack role add _member_ --group demo_member_group --project demo
 openstack role assignment list --name --group demo_member_group
-# After doing the role assignment list command you should see an output
-# similar to:
+```
+
+After doing the `openstack role assignment list` command you should see an output similar to this one:
+
+```
 # +----------+------+---------------------------+--------------+--------+-----------+
 # | Role     | User | Group                     | Project      | Domain | Inherited |
 # +----------+------+---------------------------+--------------+--------+-----------+
 # | _member_ |      | demo_member_group@Default | demo@Default |        | False     |
 # +----------+------+---------------------------+--------------+--------+-----------+
-{% endhighlight %}
+```
 
 
 ## <a name="managing_mappings"></a>Managing Mappings
