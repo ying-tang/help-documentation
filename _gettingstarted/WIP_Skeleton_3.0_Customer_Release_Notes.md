@@ -37,7 +37,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 For additional user documentation, please refer to the [main Help page](http://ibm-blue-box-help.github.io/help-documentation/), available anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
-[A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
+[A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
 #### New Features Available in Every IBM Blue Box 3.0.0 Cloud
 
@@ -48,14 +48,14 @@ Several features are now available based on our move to OpenStack Mitaka.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
 **Federated Keystone across multiple IBM Blue Box clouds:**
-Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. 
+Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K help  for you.]()
 
 **OpenStack Power Compute Node Support (Habañero and Firestone):**
 This feature supports compatibility with IBM Watson.
 
-**Higher soft limits for Object Storage of 250 TB**
-
-**Higher soft limits for Block Storage of 1 PB**
+**Higher Storage Limits:** Increased storage capacity is now available in every IBM Blue Box Cloud.
+ * Higher soft limits for Object Storage of 250 TB
+ * Higher soft limits for Block Storage of 1 PB
 
 #### New Features Available in IBM Blue Box Dedicated 3.0.0 Cloud
 
@@ -78,36 +78,37 @@ You can select from the following compute node extensions to add to your IBM Blu
 
 **Support for Bluemix:** Support for running Bluemix Local on IBM Blue Box Local.
 
-**HIPAA and IBM Blue Box Local 3.0.0 Cloud:** You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
+**HIPAA and IBM Blue Box Local 3.0.0 Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
- A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
+  * You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
 
 #### Regular updates for IBM Blue Box Cloud Images now available
  
  On a regular basis, updates are available for our series of IBM Blue Box Cloud Images, available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
 
 ### Known Limitations of This Release
- * Horizon Dashboard and LBaaS v2
-  * The LBaaS v2 Horizon dashboard will not let you create `https` listeners.
-  * HTTPS is supported in the v2 Horizon dashboard. To have it present, you must have Barbican enabled for the TLS offload feature to appear.
-  * Pool sharing is not available through the Horizon interface.
-  * You cannot set the weight of a member to 0 through Horizon.
-  * L7 content switching is not available with the default driver. (HaproxyOnHostPluginDriver)
-  * TLS Termination is not supported at this point.
+**Horizon Dashboard and LBaaS v2:**
+ * The LBaaS v2 Horizon dashboard will not let you create `https` listeners.
+ * HTTPS is supported in the v2 Horizon dashboard. To have it present, you must have Barbican enabled for the TLS offload feature to appear.
+ * Pool sharing is not available through the Horizon interface.
+ * You cannot set the weight of a member to 0 through Horizon.
+ * L7 content switching is not available with the default driver. (HaproxyOnHostPluginDriver)
+ * TLS Termination is not supported at this point.
 
-OpenStack Community Open Issues for LBaaS v2:
+**OpenStack Community Open Issues for LBaaS v2:**
  * LBaaS VIP is associated with Default security group by default. A workaround is to open the required ports in the default group. https://bugs.launchpad.net/neutron/+bug/1295424
  * Deleting LBaaSv2 does not delete the LBaaS namespace. https://bugs.launchpad.net/neutron/+bug/1495430
  * Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
  * PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
  * Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
  
- * Horizon Dashboard and projects:
-  * On the Horizon dashboard the quotas edit page is not seen by `cloud_admin` in the Project Edit modal window. Quota modification by `cloud_admin` still is allowed, using the OpenStack CLI or APIs.
-  * On the Horizon dashboard Identity Panel, when creating a new project as role `cloud_admin`, an error pop-up menu is displayed (Unable to set project quotas). However, the project is created and it receives the default quota. A user with a `cloud_admin` role can subsequently update the quota, by using the OpenStack CLI or API.
-  *  On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
+**Horizon Dashboard and projects:**
+ * On the Horizon dashboard the quotas edit page is not seen by `cloud_admin` in the Project Edit modal window. Quota modification by `cloud_admin` still is allowed, using the OpenStack CLI or APIs.
+ * On the Horizon dashboard Identity Panel, when creating a new project as role `cloud_admin`, an error pop-up menu is displayed (Unable to set project quotas). However, the project is created and it receives the default quota. A user with a `cloud_admin` role can subsequently update the quota, by using the OpenStack CLI or API.
+ *  On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
 
- * Neutron RBAC-create: The CLI command neutron rbac-create returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
+**Other Known Limitations:**
+* Neutron RBAC-create: The CLI command neutron rbac-create returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
  * Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
  * Keystone to Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
  * In Ubuntu, the FDB table grows out of control with more than 53 nodes. This issue is fixed in the 3.13.0-91.138 Ubuntu kernel, which would need to be running on all nodes for this limitation to be overcome.
