@@ -39,19 +39,19 @@ For additional user documentation, please refer to the [main Help page](http://i
 
 #### New Features Available in Every IBM Blue Box 3.0.0 Cloud
 
-**Openstack Mitaka Support**
+**Openstack Mitaka Support:**
 Several features are now available based on our move to OpenStack Mitaka. 
  * It is now possible to set up autoscaling groups and LBaaS (v2) using Heat templates.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
-**Federated Keystone across multiple IBM Blue Box clouds**
-Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider.
+**Federated Keystone across multiple IBM Blue Box clouds:**
+Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. 
 
-**OpenStack Power Compute Node Support (Habañero and Firestone)**
+**OpenStack Power Compute Node Support (Habañero and Firestone):**
 This feature supports compatibility with IBM Watson.
 
-** Higher soft limits for Object Storage of 250 TB**
-** Higher soft limits for Block Storage of 1 PB**
+**Higher soft limits for Object Storage of 250 TB**
+**Higher soft limits for Block Storage of 1 PB**
 
 #### New Features Available in IBM Blue Box Dedicated 3.0.0 Cloud
 ##### Support for Transit VLANs and customer Bare Metal hardware connections 
