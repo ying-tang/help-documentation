@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Keystone to Keystone (K2K) Federation on Blue Box
+title: Keystone to Keystone (K2K) Federation on IBM Blue Box Cloud
 featured: false
 tags: [federation, keystone, k2k]
 dateAdded: June 24th, 2016
@@ -9,7 +9,7 @@ editor: Leslie Lundquist
 ---
 
 * [What is K2K Federation?](#what_is_k2k?)
-* [Managing Groups](#managin_groups)
+* [Managing Groups](#managing_groups)
 * [Managing Mappings](#managing_mappings)
 * [Using Horizon](#using_horizon)
 * [Using the Python API Libraries](#using_the_python_api_libraries)
@@ -32,9 +32,11 @@ select the user attributes from the Identity Provider that are utilized to map t
 By default, a mapping called `mapping-for-k2k-federation`
 is created for the `cloud_admin` credentials on the Identity Provider by which they are mapped to a local group called `cloud_admin`. This group has the role `cloud_admin` access to the demo project.
 
-The flow of setting up K2K federation is:
-**1. Manage groups on the Service Provider (Federated users will have the same access rights as the group)**
-**2. Manage mappings on the Service Provider (Map remote Identity Provider users to local service provider groups)**
+The flow of setting up K2K federation is as follows:
+
+**1. First, manage groups on the Service Provider (Federated users will have the same access rights as the group)**
+
+**2. Next, manage mappings on the Service Provider (Map remote Identity Provider users to local service provider groups)**
 
 ## Managing Groups
 
@@ -45,11 +47,8 @@ K2K Federation works by federating Identity Provider users to a group on the Ser
  * `_member_` - A member of a project.
  * `heat_stack_owner` - An owner for heat stacks.
 
-To use the group commands, a credential source file is required.
-Create a file containing the credentials and replace the tags <> with
-the appropriate information:
+To use the group commands, a credential source file is required. You'll need to create a file containing the credentials and replace the tags shown in angle brackets `< >` with the appropriate information:
 
-{% highlight bash %}
 ```
 #This file is cloud_adminrc
 export OS_IDENTITY_API_VERSION=3
@@ -60,11 +59,8 @@ export OS_TENANT_NAME=demo
 export OS_CACERT=/opt/stack/ssl/openstack.crt
 export OS_NO_CACHE=True
 ```
-{% endhighlight %}
 
-After the credential source file is made, you can source the file and use any of the OpenStack commands below to manage groups and roles.
-
-**These commands run on the Service Provider.**
+After the credential source file is made, you can source the file and use any of the OpenStack commands below to manage groups and roles. **Note: These commands run on the Service Provider.**
 
 **Source the credentials into the environment**: `source cloud_adminrc`
 
@@ -143,52 +139,39 @@ After doing the `openstack role assignment list` command you should see an outpu
 
 
 ## <a name="managing_mappings"></a>Managing Mappings
-The cloud_admin user on the service provider will have access to read
-and set mappings for K2K federation. Please note that the cloud_admin
-service provider user cannot delete existing mappings or create new mappings.
+The `cloud_admin` user on the Service Provider has access to read and set mappings for K2K federation. Please note that the `cloud_admin` Service Provider user _cannot_ delete existing mappings or create new mappings.
 
-In order to use the mapping commands, a v3 credentials source file is required.
-Create a file containing the credentials and replace the tags <> with
-the appropriate information:
+To use the mapping commands, a v3 credentials source file is required. You'll create a file containing the credentials and replace the tags in angle brackets `< >` with the appropriate information:
 
-More information on managing mappings can be found here:
+More information on managing mappings can be found in the OpenStack documentation:
 http://docs.openstack.org/developer/keystone/mapping_combinations.html
 
-When a user logs uses K2K federation and logs on to the service provider
-using their identity provider account, a user account gets created locally
-on the service provider. **Please note that the user account that gets
-created during federation are treated as ephemeral and may be deleted
-at a later time.** In the default mapping, the cloud_admin on the
-identity provider user will be federated and a local cloud_admin user
-will be created in the federated domain. This user is different from
-the cloud_admin user which exists in the 'Default' domain. The
-ephemeral cloud_admin user which exists in the federated domain
-may be deleted in the future.
+When a user logs on to the Service Provider through K2K federation, using their Identity Provider account, a user account is created locally on the Service Provider. **Please note that the user account created during federation is ephemeral. It may be deleted at a later time without warning.** 
 
-We need the source file from the previous section to run the following mapping commands.
-{% highlight bash %}
-    source cloud_adminrc
-    openstack mapping list
-    openstack mapping show mapping-for-k2k-federation
-    openstack mapping set mapping-for-k2k-federation --rules <mappings file>
+In the default mapping, the `cloud_admin` on the Identity Provider user is federated, so that a local `cloud_admin` user
+is created in the federated domain. This user is different than the `cloud_admin` user in the "Default" domain. The
+ephemeral `cloud_admin` user in the federated domain may be deleted in the future.
 
-    # You can also use the --help flag for more help
-    openstack mapping show --help
+We need the source file created from the previous section so we can run the following mapping commands:
 
-    # You can also format the output
-    openstack mapping show mapping-for-k2k-federation --format json
-{% endhighlight %}
+```
+   $ source cloud_adminrc
+   $ openstack mapping list
+   $ openstack mapping show mapping-for-k2k-federation
+   $ openstack mapping set mapping-for-k2k-federation --rules <mappings file>
+```
+You can also use the `--help` flag for more help: `openstack mapping show --help`
 
-The `openstack mapping list` command shows a list of mappings, this should
-show the mapping-for-k2k-federation mapping.
+You can also format the output: `openstack mapping show mapping-for-k2k-federation --format json`
 
-The `openstack mapping show mapping-for-k2k-federation` command show
-the details of the given mapping. It should contain a json of the rules
-for the mapping.
+The `openstack mapping list` command shows a list of mappings. It should show the `mapping-for-k2k-federation` mapping.
+
+The `openstack mapping show mapping-for-k2k-federation` command shows the details of the given mapping. It should contain a `json` listing of the rules for the mapping.
 
 The `openstack mapping set mapping-for-k2k-federation --rules newmappings.json`
-command shows how to update and set the mapping-for-k2k-federation mapping.
-The mappings file should follow the format:
+command shows how to update and set the `mapping-for-k2k-federation` mapping.
+
+The mappings file should follow the format given here:
 
 ```
 [
@@ -405,54 +388,38 @@ Example 3. Multiple rules
 {% endhighlight %}
 
 ## <a name="using_horizon"></a>Using Horizon
-The OpenStack dashboard on the identity provider should have a
-drop down labeled "Authenticate with Keystone to Keystone Federation".
-If "Identity Provider" is selected, federation will not be used
-and the user will be signed into the identity provider OpenStack.
-If the service provider is selected, then federation will be used
-and the identity provider user will be federated to the
-service provider. To switch between providers, the user will need
-to log out and select the provider.
+The OpenStack dashboard on the Identity Provider should have a drop -down menu labeled **Authenticate with Keystone to Keystone Federation**. 
+ * If you select the **Identity Provider** option, federation will not be used. The user will be signed into the Identity Provider OpenStack cloud.
+ * If the **Service Provider** option is selected, federation is used. The Identity Provider user credential will be federated to the Service Provider. 
+ * To switch between providers, the user will need to log out and re-select the provider.
 
-```
-Please note that the horizon login screen for K2K for Blue Box
-is not a standard OpenStack feature and may change in the future.
-```
+**Please note:** The Horizon login screen for K2K for IBM Blue Box Cloud 3.0.0 is not a standard OpenStack feature. It may change in future releases.
 
 ## <a name="using_the_python_api_libraries"></a>Using the Python API Libraries
 
-Make a source file which we will use to authenticate using
-the K2K authentication plugin. The OS_SERVICE_PROVIDER is
-the service provider id which can be obtained by running the
-following command against the identity provider:
+Next, we'll make a source file which we will use to authenticate using the K2K authentication plugin. The token `OS_SERVICE_PROVIDER` refers to the Service Provider ID, which you can obtain by running the following command against the Identity Provider: `openstack server provider list`
 
-{% highlight bash %}
-openstack server provider list
-{% endhighlight %}
+Here we can create a source file that will be used by our Python script to list instances on the Service Provider(Sp), by using the `cloud_admin` credentials from the Identity Provider (IdP).
 
-Here we can create a source file that will be used by our python script
-to list instances on the service provider using the cloud_admin credentials
-from the identity provider.
-{% highlight bash %}
-# This contains authentication credentials for logging into the Idp
-# and Sp target information.
+This sequence contains authentication credentials for logging into the Idp and Sp target information.
+```
 export OS_USERNAME=cloud_admin
 export OS_PASSWORD=<cloud admin password>
 export OS_AUTH_URL=https://k2kf-idp.open-test.ibmcloud.com:5000/v3
 export OS_PROJECT_NAME=demo
 export OS_DOMAIN_NAME=Default
+```
 
-# You can see the list of service providers by doing (on the identity provider):
-# `openstack service provider list`
-export OS_SERVICE_PROVIDER=<service provider id>
-{% endhighlight %}
+You can see the list of service providers by using this sequence on the Identity Provider:
+`openstack service provider list`
+`export OS_SERVICE_PROVIDER=<service provider id>`
 
-The following code uses the Keystone2Keystone auth plugin to get an unscoped token.
-This unscoped token is used to get a scoped token which is scoped to one of the projects
-that the federated user has access to. Once we have the scoped token then we can list the server instances on
-the service provider.
+The following code uses the Keystone-to-Keystone `auth` plugin to get an unscoped token.
+This unscoped token is used to get a scoped token, which is then scoped to one of the projects
+to which the federated user has access. Once you have the scoped token, you can list the server instances on
+the Service Provider.
 
-{% highlight python %}
+```
 #!/usr/bin/python
 
 from keystoneauth1 import session
@@ -463,8 +430,10 @@ from keystoneclient.v3.client import Client
 
 from novaclient import client
 import os
+```
 
-# Create a source file and export these variables
+Now create a source file and export these variables:
+```
 OS_AUTH_URL = os.environ.get('OS_AUTH_URL', 'https://127.0.0.1:5000/v3')
 OS_USERNAME = os.environ.get('OS_USERNAME', 'cloud_admin')
 OS_PASSWORD = os.environ.get('OS_PASSWORD', 'asdf')
@@ -517,20 +486,19 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-{% endhighlight %}
+```
 
 ## <a name="more_mappings_and_groups"></a>More Mappings and Groups
-Example 1. Heat Users
-Currently there is an issue with federated users and with the trustor/trustee feature in Keystone. This causes
-the federated heat user to not be able to delegate their heat_stack_owner role.
+**Example 1. Heat Users**
+Currently an issue exists with federated users and with the trustor/trustee feature in Keystone, which prevents
+the federated Heat user from delegating their `heat_stack_owner` role.
 
-Create heat federation group
-{% highlight bash %}
-# Source a file with the authentication info for the service provider
-# cloud_admin user.
-source cloud_adminrc
-# Here we use the role heat_stack_owner and NOT heat_stack_user
+**Create Heat federation group**
+
+Source a file with the authentication info for the Service Provider `cloud_admin` user: `source cloud_adminrc`
+
+Here we use the role `heat_stack_owner` and NOT `heat_stack_user`
+```
 openstack group list
 openstack group create heat_stack_owner_group --or-show
 openstack role assignment list --name --group heat_stack_owner_group
@@ -541,10 +509,12 @@ openstack role assignment list --name --group heat_stack_owner_group
 # +------------------+------+--------------------------------+--------------+--------+-----------+
 # | heat_stack_owner |      | heat_stack_owner_group@Default | demo@Default |        | False     |
 # +------------------+------+--------------------------------+--------------+--------+-----------+
-{% endhighlight %}
+```
 
-Create heat federation mappings
+**Create Heat federation mappings**
+
 {% highlight bash %}
+```
 cat <<EOF > federated_heat_stack_owner_mapping.json
 [
   {
@@ -578,20 +548,16 @@ cat <<EOF > federated_heat_stack_owner_mapping.json
 ]
 EOF
 openstack mapping set mapping-for-k2k-federation --rules federated_heat_stack_owner_mapping.json
+```
 {% endhighlight %}
 
-You will need to do a workaround for the trust delegation by assigning
-the heat_stack_owner role to the user directly. This is the user
-that gets created during federated log in.
-The user's domain is federated and might have the
-value of None (Federation=None).
-
-{% highlight bash %}
+You'll need to use a workaround for the trust delegation by assigning the `heat_stack_owner` role to the user directly. This is the user that is created during federated log in. The user's domain is federated, and it could have the value of **None** (`Federation=None`).
+```
 openstack user list
+```
+The federated user should have a domain of None: `openstack user show <federated user>`
 
-# The federated user should have a domain of None
-openstack user show <federated user>
-
-# Here we use the user ID
+Here we require the user ID: 
+```
 openstack role add heat_stack_owner --user <federated user ID> --project <project>
-{% endhighlight %}
+```
