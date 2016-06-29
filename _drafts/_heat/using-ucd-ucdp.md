@@ -76,3 +76,5 @@ Integrate your UCD with UCDP by following the instructions in [Connecting to IBM
 With the connection established, you can now deploy applications to IBM Blue Box within IBM UrbanCode Deploy and IBM UrbanCode Deploy with Patterns.
 
 **Note:** If you use an image that has a period (.) in the image name, update the VM name created in Blueprint in the Properties field to remove the period (.). Otherwise, the name of the VM created will contain a period (.) by default, which causes software deployment to fail.
+
+For more information about IBM Blue Box and UCD, watch [this video](https://developer.ibm.com/urbancode/videos/deploy-your-apps-with-ibm-bluebox-ibm-urbancode-deploy/) about deploying your applications with IBM BlueBox & IBM UrbanCode Deploy.
