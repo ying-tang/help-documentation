@@ -24,13 +24,13 @@ Your IBM Blue Box Cloud installation comes with four predefined roles: **cloud_a
 
 |**Role**| **Description**
 |:---------|:-----------
-| **cloud_admin** | This role allows cloud-level access control. It lets you perform API execution tasks, irrespective of your project. This role can create and manage quotas, groups, users and projects, and it can perform administrative volume actions. 
+| **cloud_admin** | This role allows cloud-level access control. It lets you perform API execution tasks, irrespective of your project. This role can create and manage quotas, groups, users and projects, and it can perform administrative volume actions.
 | **project_admin** | This role allows project level access control. This user can perform user and project mangement within the specified project.
 | **\_member\_** | This role lets the user utilize the resources (such as instances and volumes) that are allocated for the project.
 | **heat_stack_owner** | This role lets the user create Heat stacks in the project. This role must be assigned manually, and it never should be assigned to a user that also is assigned the **heat_stack_user** role.
-| **heat_stack_user** | This is a role automatically assigned by Heat to the users it creates. This role is restricted from all API access, and it never should be assigned to any user explicitly. 
+| **heat_stack_user** | This is a role automatically assigned by Heat to the users it creates. This role is restricted from all API access, and it never should be assigned to any user explicitly.
 
-The `cloud_admin` role is restricted to cloud and project management actions. A higher set of privileges is granted exclusively to the **admin** role, which includes administrative actions for services, domains and roles, networks, and identity providers. The **admin** role is restricted to IBM, and it is not granted to the customer. 
+The `cloud_admin` role is restricted to cloud and project management actions. A higher set of privileges is granted exclusively to the **admin** role, which includes administrative actions for services, domains and roles, networks, and identity providers. The **admin** role is restricted to IBM, and it is not granted to the customer.
 
 With your IBM Blue Box Cloud installation you'll receive one user with `cloud_admin` privileges who can create other projects and users. The `cloud_admin` can grant users `cloud_admin` and lower privileged roles.
 
@@ -73,7 +73,7 @@ Delete instance | Y | Y | Y
 Attach network  | Y | Y | Y
 Attach volume   | Y | Y | Y
 Start/Stop instance | Y | Y | Y (owner)
-List instance   | Y | Y | Y 
+List instance   | Y | Y | Y
 Lock/Unlock instance    | Y | Y | N
 Create flavor   | Y | N | N
 Update flavor   | Y | N | N
@@ -129,7 +129,7 @@ Delete network  | Y | Y | Y (owner)
 Create port     | Y | Y | Y
 Update port     | Y | Y | Y (owner)
 Delete port     | Y | Y | Y (owner)
-Create router   | Y | Y | Y 
+Create router   | Y | Y | Y
 Update router   | Y | Y | Y (owner)
 Delete router   | Y | Y | Y (owner)
 Create subnet   | Y | Y | Y (network owner)
@@ -158,7 +158,7 @@ Delete object    | Y | Y | Y
 This role structure requires Keystone API v3 to run. Using API v2.0 will result in a loss of privileges for the `cloud_admin` and `project_admin` roles, in addition to erratic permissions behavior for `_member_` users.
 
 
-Making API calls through the Horizon dashboard does not require any special action, but performing command line calls necessitates changes to the RC file. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
+Making API calls through the Horizon dashboard does not require any special action, but performing command line calls necessitates changes to the RC file depending on which version of BlueBox Cloud you are on. In version 2.1, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
 
 {% highlight bash %}
 
@@ -166,16 +166,17 @@ export OS_PASSWORD=pass
 export OS_AUTH_URL=https://example.ibm.com:5000/v3
 export OS_USERNAME=cloud_admin
 export OS_TENANT_NAME=demo
-export OS_CACERT=/opt/stack/ssl/openstack.crt
 export OS_NO_CACHE=True
 export OS_VOLUME_API_VERSION=2
 export OS_COMPUTE_API_VERSION=2
 export OS_IDENTITY_API_VERSION=3
 {% endhighlight %}
 
+With the latest update of the BlueBox Cloud Version 3.0.0, the Horizon dashboard will allow you to generate and download a Identity v3 RC file that does not require the changes highlighted above.
+
 Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
 
-### Using the Keystone v3 group function 
+### Using the Keystone v3 group function
 The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously.
 
 For example, you might have a support team that needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called **Support**, give the group the `_member_` role on all of your projects, and then add all of your support staff to the group.
@@ -239,7 +240,7 @@ You can also assign groups of users in the Project Groups tab.
 3. Click **Delete Projects** to confirm the deletion.
 
 ### Creating a user account
-If you have the `cloud_admin` or `project_admin` roles, you can create new user accounts. When you create a user account, you must assign the account to a primary project. You also have the option of assigning the account to additional projects. 
+If you have the `cloud_admin` or `project_admin` roles, you can create new user accounts. When you create a user account, you must assign the account to a primary project. You also have the option of assigning the account to additional projects.
 
 1. In the navigation bar, open the Identity panel and click on **Users**.
 2. Click **Create User**.
