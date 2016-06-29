@@ -25,7 +25,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 2. [Federated Keystone identity available across multiple Blue Box clouds.](#federated-keystone)
 3. [OpenStack Power Compute Node Support (Habañero and Firestone).](#power-compute)
 4. [Higher soft limits for Object Storage of 250 TB.](#increased-storage)
-5. [Higher soft limits for Block Storage of 1 PB.](#increased-storage)
+5. [Higher soft limits for Block Storage of 640 TB.](#increased-storage)
 6. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal for IBM Blue Box Dedicated.](#transit-vlan)
 7. [High-availability IP setup](#High-availability IP)
 8. [10G Vyatta Support for IBM Blue Box Dedicated.](#10gb-vyatta)
