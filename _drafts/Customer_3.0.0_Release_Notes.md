@@ -32,7 +32,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 9. [Optional Hybrid Block Storage Nodes Now Available for IBM Blue Box 3.0.0 Local.](#block-storage)
 10. [I/O Optimized and High Storage Compute Nodes Support Now Available for IBM Blue Box 3.0.0 Local Cloud.](#)
 11. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
-12. [Support for Bluemix on IBM Blue Box Local](#bluemix)
+12. [Updated Documentation Website now available through Box Panel](#new-docs-site)
 13. [HIPAA available for IBM Blue Box Local 3.0.0 Cloud Local.](#hipaa)
 14. [Regular updates for IBM Blue Box Cloud Images now available](#regular-updates-for-ibm-blue-box-cloud-images-now-available)
 15. [Known Limitations of this Release](#known-limitations-of-this-release)
@@ -79,6 +79,8 @@ You can select from the following compute node extensions to add to your IBM Blu
   * You can select Object Storage 
 
 <a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With this release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
+
+<a name="new-docs-site"></a>We've updated and redesigned our customer documentation website, now available at help.blueboxcloud.com, and accessible through your Box Panel interface.
 
 <a name="hipaa"></a>**HIPAA and IBM Blue Box Local 3.0.0 Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
