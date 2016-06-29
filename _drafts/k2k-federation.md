@@ -227,6 +227,7 @@ blacklist
 whitelist
 ```
 Here are some example scenarios:
+
 **Example 1.** Mapping the `cloud_admin` user to a `cloud_admin` group and setting the username to be `cloud_admin` in the federated domain. This is the default mapping file:
 
 ```
@@ -263,6 +264,7 @@ Here are some example scenarios:
 ```
 
 **Example 2.** Member mappings
+
 This example maps users who have the role `_member_` on project "demo" on the Identity Provider to a group (`demo_member_group` from Group Example 2) on the Service Provider. We assume that the `demo_member_group` is a group on the
 Service Provider, with the `_member_` role on the "demo" project on the Service Provider.
 
@@ -393,7 +395,7 @@ Next, you'll make a source file which you will use to authenticate using the K2K
 
 Here we can create a source file that will be used by our Python script to list instances on the Service Provider(Sp), by using the `cloud_admin` credentials from the Identity Provider (IdP).
 
-This sequence contains authentication credentials for logging into the Idp and Sp target information.
+This sequence contains authentication credentials for logging into the **Idp**, and the **Sp** target information.
 ```
 $ export OS_USERNAME=cloud_admin
 $ export OS_PASSWORD=<cloud admin password>
@@ -410,7 +412,7 @@ $ export OS_SERVICE_PROVIDER=<service provider id>
 
 The following code uses the Keystone-to-Keystone `auth` plugin to get an unscoped token.
 This unscoped token is used to get a scoped token, which is then scoped to one of the projects
-to which the federated user has access. Once you have the scoped token, you can list the server instances on
+to which the federated user will have access. Once you have the scoped token, you can list the server instances on
 the Service Provider.
 
 ```
@@ -484,10 +486,11 @@ if __name__ == '__main__':
 
 ## <a name="more_mappings_and_groups"></a>More Mappings and Groups
 **Example 1.** Heat Users
+
 Currently an issue exists with federated users and with the trustor/trustee feature in Keystone, which prevents
 the federated Heat user from delegating their `heat_stack_owner` role.
 
- * **Create Heat federation group**
+1. **Create Heat federation group**
 
 Source a file with the authentication info for the Service Provider `cloud_admin` user: `source cloud_adminrc`
 
@@ -505,7 +508,7 @@ $ openstack role assignment list --name --group heat_stack_owner_group
 # +------------------+------+--------------------------------+--------------+--------+-----------+
 ```
 
- * **Create Heat federation mappings**
+2. **Create Heat federation mappings**
 
 ```
 $ cat <<EOF > federated_heat_stack_owner_mapping.json
@@ -540,7 +543,7 @@ $ cat <<EOF > federated_heat_stack_owner_mapping.json
   }
 ]
 EOF
-openstack mapping set mapping-for-k2k-federation --rules federated_heat_stack_owner_mapping.json
+$ openstack mapping set mapping-for-k2k-federation --rules federated_heat_stack_owner_mapping.json
 ```
 
 You'll need to use a workaround for the trust delegation by assigning the `heat_stack_owner` role to the user directly. This is the user that is created during federated log in. The user's domain is federated, and it could have the value of **None** (`Federation=None`).
