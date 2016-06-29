@@ -490,7 +490,7 @@ if __name__ == '__main__':
 Currently an issue exists with federated users and with the trustor/trustee feature in Keystone, which prevents
 the federated Heat user from delegating their `heat_stack_owner` role.
 
-1. **Create Heat federation group**
+**Create Heat federation group**
 
 Source a file with the authentication info for the Service Provider `cloud_admin` user: `source cloud_adminrc`
 
@@ -508,7 +508,7 @@ $ openstack role assignment list --name --group heat_stack_owner_group
 # +------------------+------+--------------------------------+--------------+--------+-----------+
 ```
 
-2. **Create Heat federation mappings**
+**Create Heat federation mappings**
 
 ```
 $ cat <<EOF > federated_heat_stack_owner_mapping.json
