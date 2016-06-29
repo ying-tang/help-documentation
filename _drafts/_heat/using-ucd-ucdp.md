@@ -3,13 +3,14 @@ layout: page
 title: Using IBM UrbanCode Deploy with IBM Blue Box
 featured: no
 weight: 10
-tags: [heat, UCD]
+tags: [heat, deploy, UCD, UCDP]
 author: Ying Tang, Pan Xia Zou
 dateAdded: June 7, 2016
 ---
 
-IBM UrbanCode Deploy with Patterns (UCDP) is an environment management and deployment solution that you can use to deploy applications to multiple clouds, and manage their lifecycles. 
-Whereas UCDP provides a graphic and text editor for you to design, test, and promote your full-stack environments, IBM UrbanCode Deploy (UCD) is a more complete solution that helps you fully configure your components.
+**IBM UrbanCode Deploy with Patterns** (UCDP) is an environment management and deployment solution that you can use to deploy applications to multiple clouds, and manage their lifecycles. 
+
+Whereas UCDP provides a graphic and text editor for you to design, test, and promote your full-stack environments, **IBM UrbanCode Deploy** (UCD) is a more complete solution that helps you fully configure your components.
 
 The Heat engine with IBM Blue Box can interact with UCDP and UCD. If you have UCDP and UCD installed on your instance, you can establish a secured connection from your instance to the Heat engine, and then deploy an application quickly on your instance through UCDP and UCD.
 
@@ -17,8 +18,7 @@ You can either install the UCDP and UCD servers on instances in the same Blue Bo
 
 The following sections cover both cases by introducing the steps to install UCDP and UCD and then integrate them with IBM Blue Box.
 
-The following sections uses UCD 6.1.1 and UCDP 6.1.1 as examples. Information about different versions can be found in 
-[IBM Knowledge Center](http://www.ibm.com/support/knowledgecenter/).
+The following sections uses UCD 6.1.1 and UCDP 6.1.1 as examples. Information about different versions can be found in [IBM Knowledge Center](http://www.ibm.com/support/knowledgecenter/).
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ Integrate your UCD with UCDP by following the instructions in [Connecting to IBM
 
 2. Connect the UCDP server to IBM Blue Box by following the instructions in [Connecting to OpenStack-based clouds with Keystone authentication](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/cloud_connect_openstack_keystone.html).
 
-**Note:** When connecting the UCDP server to IBM Blue Box, create an authentication realm that points to the Keystone server, and keep the 'Use default orchestration engine check box' checked when configuring the realm.
+**Note:** When connecting the UCDP server to IBM Blue Box, create an authentication realm that points to the Keystone server, and keep the **Use default orchestration engine** check box checked when configuring the realm.
 
 
 With the connection established, you can now deploy applications to IBM Blue Box within IBM UrbanCode Deploy and IBM UrbanCode Deploy with Patterns.
