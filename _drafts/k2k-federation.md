@@ -1,67 +1,55 @@
 ---
 layout: page
-title: Keystone to Keystone (K2K) Federation on Blue Box
+title: Keystone to Keystone (K2K) Federation on IBM Blue Box Cloud
 featured: false
 tags: [federation, keystone, k2k]
 dateAdded: June 24th, 2016
 author: Elvin Tubillara
-editor:
+editor: Leslie Lundquist
 ---
 
 * [What is K2K Federation?](#what_is_k2k?)
-* [Managing Groups](#managin_groups)
+* [Managing Groups](#managing_groups)
 * [Managing Mappings](#managing_mappings)
 * [Using Horizon](#using_horizon)
 * [Using the Python API Libraries](#using_the_python_api_libraries)
 * [More Mappings and Groups](#more_mappings_and_groups)
 
-## <a name="what_is_k2k"></a>What is K2K Federation?
-K2K federation is a way to use credentials from one Keystone across multiple
-Blue Box clouds. A Blue Box cloud instance is designated as an identity provider
-and other cloud instances are designated as service providers. The
-identity provider's job is to store the user's credentials and assert
-to the service providers that the user is a valid user. The user/pass
-is never sent to the service providers (only assertions from the identity provider). The user signs into
-the identity provider, gets a signed SAML assertion from the identity provider
-and uses the SAML assertion to authenticate into the service providers. The log in process
-for handling the SAML flow is handled by the K2K authentication plugin
-(found in keystoneauth1).
-This allows credentials to be managed only on the identity provider
-and be accepted by service providers through assertions.
+## What is K2K Federation?
+Keystone to Keystone (K2K) federation is a way to use credentials from one Keystone instance for logging in across multiple
+Blue Box clouds. One IBM Blue Box cloud instance is designated as an Identity Provider and other cloud instances are designated as Service Providers. The Identity Provider stores the user's credentials and asserts to the Service Providers that the user is, in fact, a valid user. The user's ID and password are never sent to the Service Providers, only assertions from the Identity Provider are sent. 
 
-If several Blue Box clouds have been set up with the K2K feature, one
-will be designated as the identity provider and the others will be
-designated as service providers. Service providers will use mappings to
-define what user attributes from the identity provider will be used to map
-to a local group. Once the user logs in using K2K federation, the user will
-have the roles of the group.
+## How does K2K work? 
+The user signs into the Identity Provider, receives a signed SAML assertion from the Identity Provider
+and then uses that SAML assertion to authenticate into the Service Providers. The log in process
+for handling the SAML flow is handled by the K2K authentication plugin (found in `keystoneauth1`).
+Credentials are managed only on the Identity Provider, and they are accepted by Service Providers through assertions.
 
-By default a mapping called mapping-for-k2k-federation
-will be created for cloud_admin's credentials on the identity provider
-to be mapped to a local group called cloud_admin. This group will
-have the role cloud_admin access to the demo project.
+If several Blue Box clouds have been set up with the K2K feature, one cloud instance
+is designated as the Identity Provider and the others are designated as Service Providers. Service Providers use mappings to
+select the user attributes from the Identity Provider that are utilized to map to a local group. Once the user logs in using K2K federation, the user is granted the roles assigned to the group.
 
-The flow of setting up K2K federation is:
-**1. Manage groups on service provider (Federated users will have the same access rights as the group)**
-**2. Manage mappings on service provider (Map remote identity provider users to local service provider groups)**
+By default, a mapping called `mapping-for-k2k-federation`
+is created for the `cloud_admin` credentials on the Identity Provider by which they are mapped to a local group called `cloud_admin`. This group has the role `cloud_admin` access to the demo project.
 
-## <a name="managin_groups"></a>Managing Groups
+The flow of setting up K2K federation is as follows:
 
-K2K Federation works by federating identity provider users to a group on the service provider.
-The group is granted access by assigning the group a role on
-a project. The available roles are:
-{% highlight bash %}
-project_admin - admin for project
-cloud_admin - admin for the cloud instance
-_member_ - member of a project
-heat_stack_owner - owner for heat stacks
-{% endhighlight %}
+**1. First, manage groups on the Service Provider (Federated users will have the same access rights as the group)**
 
-In order to use the group commands, a credential source file is required.
-Create a file containing the credentials and replace the tags <> with
-the appropriate information:
+**2. Next, manage mappings on the Service Provider (Map remote Identity Provider users to local service provider groups)**
 
-{% highlight bash %}
+## Managing Groups
+
+K2K Federation works by federating Identity Provider users to a group on the Service Provider. The group is granted access by assigning that group a role on a project. The available roles are as follows:
+
+ * `project_admin` - The `admin` role for the project.
+ * `cloud_admin` - The `admin` role for the cloud instance.
+ * `_member_` - A member of a project.
+ * `heat_stack_owner` - An owner for heat stacks.
+
+To use the group commands, a credential source file is required. You'll need to create a file containing the credentials and replace the tags shown in angle brackets `< >` with the appropriate information:
+
+```
 #This file is cloud_adminrc
 export OS_IDENTITY_API_VERSION=3
 export OS_PASSWORD=<cloud_admin password> #Change this
@@ -70,137 +58,119 @@ export OS_USERNAME=cloud_admin
 export OS_TENANT_NAME=demo
 export OS_CACERT=/opt/stack/ssl/openstack.crt
 export OS_NO_CACHE=True
-{% endhighlight %}
+```
 
-Once the credential source file is made, we can source the file and run
-the OpenStack commands to manage groups and roles.
-{% highlight bash %}
-#These commands run on the service provider
+After the credential source file is made, you can source the file and use any of the OpenStack commands below to manage groups and roles. **Note: These commands run on the Service Provider.**
 
-#Source the credentials into the environment
-source cloud_adminrc
+**Source the credentials into the environment**: `source cloud_adminrc`
 
-#To list groups:
-openstack group list
+**To list groups**: `openstack group list`
 
-#To create a group
+**To create a group**:
+```
 openstack group create --help
 openstack group create <new group name here>
+```
+**To list roles**: `openstack role list`
 
-# To list roles:
-openstack role list
+**To list role assignments**: `openstack role assignment list --name`
 
-# To list role assignments
-openstack role assignment list --name
+**To list projects**: `openstack project list`
 
-# To list projects:
-openstack project list
+**For help looking at adding role assignment**: `openstack role add --help`
 
-# For help looking at adding role assignment
-openstack role add --help
+**To add a role assignment for a group to have a role on a project**:
+`openstack role  add <role> --project <project> --group <group>`
 
-# To add a role assignment for a group to have a role on a project
-openstack role  add <role> --project <project> --group <group>
-{% endhighlight %}
+Federated users are mapped into groups on the Service Provider. By default, a group called `cloud_admin` exists if K2K federation is enabled. This group has the role  `cloud_admin` on the "demo" project.
 
-Federated users will be mapped into groups on the service provider. By default
-there is a group called "cloud_admin" if K2K federation is enabled. This group
-has the role  "cloud_admin" on the "demo" project.
+Here's the order of operations for granting access for groups:
+1. First, create or edit the group.
+2. Then, create or edit the role assignments for groups on projects.
 
-The flow for granting access for groups:
-1. Create/Edit group
-2. Create/Edit role assignments for groups on projects
+**Example 1.** Creating a `cloud_admin` group.
 
+The commands below show how to source a file with the authentication information for the Service Provider `cloud_admin` user.
 
-Example 1. Creating a cloud_admin group
-{% highlight bash %}
-# Source a file with the authentication info for the service provider
-# cloud_admin user.
-source cloud_adminrc
-openstack group list
-openstack group create cloud_admin --or-show
-openstack role assignment list --name --group cloud_admin
+```
+$ source cloud_adminrc
+$ openstack group list
+$ openstack group create cloud_admin --or-show
+$ openstack role assignment list --name --group cloud_admin
+```
+Next, create the role assignment if it doesn't exist.
+**These commands add the role `cloud_admin` for the group `cloud_admin` for the "demo" project. **
+```
+$ openstack role add cloud_admin --group cloud_admin --project demo
+$ openstack role assignment list --name --group cloud_admin
+```
+After executing the `openstack role assignment list` command you should see an output similar to this one:
 
-# Create the role assignment if it doesn't exist
-# This adds the role cloud_admin for the group cloud_admin for the demo project
-openstack role add cloud_admin --group cloud_admin --project demo
-openstack role assignment list --name --group cloud_admin
-# After doing the role assignment list command you should see an output
-# similar to:
+```
 # +-------------+------+---------------------+--------------+--------+-----------+
 # | Role        | User | Group               | Project      | Domain | Inherited |
 # +-------------+------+---------------------+--------------+--------+-----------+
 # | cloud_admin |      | cloud_admin@Default | demo@Default |        | False     |
 # +-------------+------+---------------------+--------------+--------+-----------+
-{% endhighlight %}
+```
 
-Example 2. Creating a group with member access
-{% highlight bash %}
-# Source a file with the authentication info for the service provider
-# cloud_admin user.
-source cloud_adminrc
-openstack group list
-openstack group create demo_member_group --or-show
-openstack role assignment list --name --group demo_member_group
-openstack role add _member_ --group demo_member_group --project demo
-openstack role assignment list --name --group demo_member_group
-# After doing the role assignment list command you should see an output
-# similar to:
+**Example 2.** Creating a group with member access.
+
+The commands below show how to source a file with the authentication information for the Service Provider `cloud_admin` user.
+
+```
+$ source cloud_adminrc
+$ openstack group list
+$ openstack group create demo_member_group --or-show
+$ openstack role assignment list --name --group demo_member_group
+$ openstack role add _member_ --group demo_member_group --project demo
+$ openstack role assignment list --name --group demo_member_group
+```
+
+After entering the `openstack role assignment list` command you should see an output similar to this one:
+
+```
 # +----------+------+---------------------------+--------------+--------+-----------+
 # | Role     | User | Group                     | Project      | Domain | Inherited |
 # +----------+------+---------------------------+--------------+--------+-----------+
 # | _member_ |      | demo_member_group@Default | demo@Default |        | False     |
 # +----------+------+---------------------------+--------------+--------+-----------+
-{% endhighlight %}
-
+```
 
 ## <a name="managing_mappings"></a>Managing Mappings
-The cloud_admin user on the service provider will have access to read
-and set mappings for K2K federation. Please note that the cloud_admin
-service provider user cannot delete existing mappings or create new mappings.
+The `cloud_admin` user on the Service Provider has access to read and set mappings for K2K federation. Please note that the `cloud_admin` Service Provider user _cannot_ delete existing mappings or create new mappings.
 
-In order to use the mapping commands, a v3 credentials source file is required.
-Create a file containing the credentials and replace the tags <> with
-the appropriate information:
+To use the mapping commands, a v3 credentials source file is required. You'll create a file containing the credentials and replace the tags in angle brackets `< >` with the appropriate information:
 
-More information on managing mappings can be found here:
+More information on managing mappings can be found in the OpenStack documentation:
 http://docs.openstack.org/developer/keystone/mapping_combinations.html
 
-When a user logs uses K2K federation and logs on to the service provider
-using their identity provider account, a user account gets created locally
-on the service provider. **Please note that the user account that gets
-created during federation are treated as ephemeral and may be deleted
-at a later time.** In the default mapping, the cloud_admin on the
-identity provider user will be federated and a local cloud_admin user
-will be created in the federated domain. This user is different from
-the cloud_admin user which exists in the 'Default' domain. The
-ephemeral cloud_admin user which exists in the federated domain
-may be deleted in the future.
+When a user logs on to the Service Provider through K2K federation, using their Identity Provider account, a user account is created locally on the Service Provider. **Please note that the user account created during federation is ephemeral. It may be deleted at a later time without warning.** 
 
-We need the source file from the previous section to run the following mapping commands.
-{% highlight bash %}
-    source cloud_adminrc
-    openstack mapping list
-    openstack mapping show mapping-for-k2k-federation
-    openstack mapping set mapping-for-k2k-federation --rules <mappings file>
+In the default mapping, the `cloud_admin` on the Identity Provider user is federated, so that a local `cloud_admin` user
+is created in the federated domain. This user is different than the `cloud_admin` user in the "Default" domain. The
+ephemeral `cloud_admin` user in the federated domain may be deleted in the future.
 
-    # You can also use the --help flag for more help
-    openstack mapping show --help
+We need the source file created from the previous section so we can run the following mapping commands:
 
-    # You can also format the output
-    openstack mapping show mapping-for-k2k-federation --format json
-{% endhighlight %}
+```
+   $ source cloud_adminrc
+   $ openstack mapping list
+   $ openstack mapping show mapping-for-k2k-federation
+   $ openstack mapping set mapping-for-k2k-federation --rules <mappings file>
+```
+You can also use the `--help` flag for more help: `openstack mapping show --help`
 
-The `openstack mapping list` command shows a list of mappings, this should
-show the mapping-for-k2k-federation mapping.
+You can also format the output: `openstack mapping show mapping-for-k2k-federation --format json`
 
-The `openstack mapping show mapping-for-k2k-federation` command show
-the details of the given mapping. It should contain a json of the rules
-for the mapping.
+The `openstack mapping list` command shows a list of mappings. It should show the `mapping-for-k2k-federation` mapping.
+
+The `openstack mapping show mapping-for-k2k-federation` command shows the details of the given mapping. It should contain a `json` listing of the rules for the mapping.
 
 The `openstack mapping set mapping-for-k2k-federation --rules newmappings.json`
-command shows how to update and set the mapping-for-k2k-federation mapping.
-The mappings file should follow the format:
+command shows how to update and set the `mapping-for-k2k-federation` mapping.
+
+The mappings file should follow the format given here:
 
 ```
 [
@@ -215,12 +185,10 @@ The mappings file should follow the format:
 ]
 ```
 
-The rules file should contain a list of rules that map remote users
-to a group that exists on the service provider.
-The local section contains a rule that contains the group that
-the remote users should map to. The local group rule is required.
+The **rules file** should contain a list of rules that map the remote users to a group that exists on the Service Provider.
+The local section contains a rule specifying the group that the remote users should map to. **The local group rule is required.**
 
-{% highlight json %}
+```
 {
   "group": {
     "domain": {
@@ -229,10 +197,9 @@ the remote users should map to. The local group rule is required.
     "name": "cloud_admin"
   }
 }
-{% endhighlight %}
+```
 
-The remote section includes rules for which remote users should be allowed
-access.
+The remote section includes rules that specify which remote users should be allowed access.
 ```
 {
     "type": "openstack_user",
@@ -242,7 +209,7 @@ access.
 }
 ```
 
-The possible user attributes types that can be used in the remote rules are:
+The possible user attributes types that can be given in the remote rules are these:
 ```
 openstack_user
 openstack_user_domain
@@ -259,12 +226,10 @@ not_any_of
 blacklist
 whitelist
 ```
-
 Here are some example scenarios:
-Example 1. mapping the cloud_admin user to a cloud_admin group and sets
-the username to be cloud_admin in the federated domain:
-This is the default mapping file:
-{% highlight json %}
+**Example 1.** Mapping the `cloud_admin` user to a `cloud_admin` group and setting the username to be `cloud_admin` in the federated domain. This is the default mapping file:
+
+```
 [
   {
     "local": [
@@ -295,19 +260,16 @@ This is the default mapping file:
     ]
   }
 ]
-{% endhighlight %}
+```
 
-Example 2. Member mappings
-This maps users who have the role members on project demo
-on the identity provider to a group (demo_member_group from group example 2)
-on the service provider.
-Here we assume that the demo_member_group is a group on the
-service provider with the _member_ role on the demo project on the service
-provider.
-{% highlight bash %}
-# We are running a series of bash commands to cat the following string
-# into a file and then set the mapping.
-cat <<EOF > federated_member_mapping.json
+**Example 2.** Member mappings
+This example maps users who have the role `_member_` on project "demo" on the Identity Provider to a group (`demo_member_group` from Group Example 2) on the Service Provider. We assume that the `demo_member_group` is a group on the
+Service Provider, with the `_member_` role on the "demo" project on the Service Provider.
+
+We are running a series of bash commands to `cat` the following string into a file and then set the mapping.
+
+```
+$ cat <<EOF > federated_member_mapping.json
 [
   {
     "local": [
@@ -345,11 +307,12 @@ cat <<EOF > federated_member_mapping.json
   }
 ]
 EOF
-openstack mapping set mapping-for-k2k-federation --rules federated_member_mapping.json
-{% endhighlight %}
+$ openstack mapping set mapping-for-k2k-federation --rules federated_member_mapping.json
+```
 
-Example 3. Multiple rules
-{% highlight json %}
+**Example 3.** Multiple rules
+
+```
 [
   {
     "local": [
@@ -414,57 +377,43 @@ Example 3. Multiple rules
     ]
   }
 ]
-{% endhighlight %}
+```
 
 ## <a name="using_horizon"></a>Using Horizon
-The OpenStack dashboard on the identity provider should have a
-drop down labeled "Authenticate with Keystone to Keystone Federation".
-If "Identity Provider" is selected, federation will not be used
-and the user will be signed into the identity provider OpenStack.
-If the service provider is selected, then federation will be used
-and the identity provider user will be federated to the
-service provider. To switch between providers, the user will need
-to log out and select the provider.
+The OpenStack dashboard on the Identity Provider should have a drop-down menu labeled **Authenticate with Keystone to Keystone Federation**. 
+ * If you select the **Identity Provider** option, federation will not be used. The user will be signed into the Identity Provider OpenStack cloud.
+ * If the **Service Provider** option is selected, federation is used. The Identity Provider user credential will be federated to the Service Provider. 
+ * To switch between providers, the user will need to log out and re-select the provider.
 
-```
-Please note that the horizon login screen for K2K for Blue Box
-is not a standard OpenStack feature and may change in the future.
-```
+**Please note:** The Horizon login screen for K2K for IBM Blue Box Cloud 3.0.0 is not a standard OpenStack feature. It may change in future releases.
 
 ## <a name="using_the_python_api_libraries"></a>Using the Python API Libraries
 
-Make a source file which we will use to authenticate using
-the K2K authentication plugin. The OS_SERVICE_PROVIDER is
-the service provider id which can be obtained by running the
-following command against the identity provider:
+Next, you'll make a source file which you will use to authenticate using the K2K authentication plugin. The token `OS_SERVICE_PROVIDER` refers to the Service Provider ID, which you can obtain by running the following command against the Identity Provider: `openstack server provider list`
 
-{% highlight bash %}
-openstack server provider list
-{% endhighlight %}
+Here we can create a source file that will be used by our Python script to list instances on the Service Provider(Sp), by using the `cloud_admin` credentials from the Identity Provider (IdP).
 
-Here we can create a source file that will be used by our python script
-to list instances on the service provider using the cloud_admin credentials
-from the identity provider.
-{% highlight bash %}
-# This contains authentication credentials for logging into the Idp
-# and Sp target information.
-export OS_USERNAME=cloud_admin
-export OS_PASSWORD=<cloud admin password>
-export OS_AUTH_URL=https://k2kf-idp.open-test.ibmcloud.com:5000/v3
-export OS_PROJECT_NAME=demo
-export OS_DOMAIN_NAME=Default
+This sequence contains authentication credentials for logging into the Idp and Sp target information.
+```
+$ export OS_USERNAME=cloud_admin
+$ export OS_PASSWORD=<cloud admin password>
+$ export OS_AUTH_URL=https://k2kf-idp.open-test.ibmcloud.com:5000/v3
+$ export OS_PROJECT_NAME=demo
+$ export OS_DOMAIN_NAME=Default
+```
 
-# You can see the list of service providers by doing (on the identity provider):
-# `openstack service provider list`
-export OS_SERVICE_PROVIDER=<service provider id>
-{% endhighlight %}
+You can see the list of Service Providers by using this sequence on the Identity Provider:
+```
+$ openstack service provider list
+$ export OS_SERVICE_PROVIDER=<service provider id>
+```
 
-The following code uses the Keystone2Keystone auth plugin to get an unscoped token.
-This unscoped token is used to get a scoped token which is scoped to one of the projects
-that the federated user has access to. Once we have the scoped token then we can list the server instances on
-the service provider.
+The following code uses the Keystone-to-Keystone `auth` plugin to get an unscoped token.
+This unscoped token is used to get a scoped token, which is then scoped to one of the projects
+to which the federated user has access. Once you have the scoped token, you can list the server instances on
+the Service Provider.
 
-{% highlight python %}
+```
 #!/usr/bin/python
 
 from keystoneauth1 import session
@@ -475,8 +424,10 @@ from keystoneclient.v3.client import Client
 
 from novaclient import client
 import os
+```
 
-# Create a source file and export these variables
+Now create a source file and export these variables:
+```
 OS_AUTH_URL = os.environ.get('OS_AUTH_URL', 'https://127.0.0.1:5000/v3')
 OS_USERNAME = os.environ.get('OS_USERNAME', 'cloud_admin')
 OS_PASSWORD = os.environ.get('OS_PASSWORD', 'asdf')
@@ -529,35 +480,35 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-{% endhighlight %}
+```
 
 ## <a name="more_mappings_and_groups"></a>More Mappings and Groups
-Example 1. Heat Users
-Currently there is an issue with federated users and with the trustor/trustee feature in Keystone. This causes
-the federated heat user to not be able to delegate their heat_stack_owner role.
+**Example 1.** Heat Users
+Currently an issue exists with federated users and with the trustor/trustee feature in Keystone, which prevents
+the federated Heat user from delegating their `heat_stack_owner` role.
 
-Create heat federation group
-{% highlight bash %}
-# Source a file with the authentication info for the service provider
-# cloud_admin user.
-source cloud_adminrc
-# Here we use the role heat_stack_owner and NOT heat_stack_user
-openstack group list
-openstack group create heat_stack_owner_group --or-show
-openstack role assignment list --name --group heat_stack_owner_group
-openstack role add heat_stack_owner --group heat_stack_owner_group --project demo
-openstack role assignment list --name --group heat_stack_owner_group
+ * **Create Heat federation group**
+
+Source a file with the authentication info for the Service Provider `cloud_admin` user: `source cloud_adminrc`
+
+Here we use the role `heat_stack_owner` and NOT `heat_stack_user`
+```
+$ openstack group list
+$ openstack group create heat_stack_owner_group --or-show
+$ openstack role assignment list --name --group heat_stack_owner_group
+$ openstack role add heat_stack_owner --group heat_stack_owner_group --project demo
+$ openstack role assignment list --name --group heat_stack_owner_group
 # +------------------+------+--------------------------------+--------------+--------+-----------+
 # | Role             | User | Group                          | Project      | Domain | Inherited |
 # +------------------+------+--------------------------------+--------------+--------+-----------+
 # | heat_stack_owner |      | heat_stack_owner_group@Default | demo@Default |        | False     |
 # +------------------+------+--------------------------------+--------------+--------+-----------+
-{% endhighlight %}
+```
 
-Create heat federation mappings
-{% highlight bash %}
-cat <<EOF > federated_heat_stack_owner_mapping.json
+ * **Create Heat federation mappings**
+
+```
+$ cat <<EOF > federated_heat_stack_owner_mapping.json
 [
   {
     "local": [
@@ -590,20 +541,15 @@ cat <<EOF > federated_heat_stack_owner_mapping.json
 ]
 EOF
 openstack mapping set mapping-for-k2k-federation --rules federated_heat_stack_owner_mapping.json
-{% endhighlight %}
+```
 
-You will need to do a workaround for the trust delegation by assigning
-the heat_stack_owner role to the user directly. This is the user
-that gets created during federated log in.
-The user's domain is federated and might have the
-value of None (Federation=None).
-
-{% highlight bash %}
+You'll need to use a workaround for the trust delegation by assigning the `heat_stack_owner` role to the user directly. This is the user that is created during federated log in. The user's domain is federated, and it could have the value of **None** (`Federation=None`).
+```
 openstack user list
+```
+The federated user should have a domain of None: `openstack user show <federated user>`
 
-# The federated user should have a domain of None
-openstack user show <federated user>
-
-# Here we use the user ID
+Here we require the user ID: 
+```
 openstack role add heat_stack_owner --user <federated user ID> --project <project>
-{% endhighlight %}
+```
