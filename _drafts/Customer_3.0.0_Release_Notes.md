@@ -25,14 +25,14 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 2. [Federated Keystone identity available across multiple Blue Box clouds.](#federated-keystone)
 3. [OpenStack Power Compute Node Support (Habañero and Firestone).](#power-compute)
 4. [Higher soft limits for Object Storage of 250 TB.](#increased-storage)
-5. [Higher soft limits for Block Storage of 1 PB.](#increased-storage)
+5. [Higher soft limits for Block Storage of 640 TB.](#increased-storage)
 6. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal for IBM Blue Box Dedicated.](#transit-vlan)
 7. [High-availability IP setup](#High-availability IP)
 8. [10G Vyatta Support for IBM Blue Box Dedicated.](#10gb-vyatta)
 9. [Optional Hybrid Block Storage Nodes Now Available for IBM Blue Box 3.0.0 Local.](#block-storage)
 10. [I/O Optimized and High Storage Compute Nodes Support Now Available for IBM Blue Box 3.0.0 Local Cloud.](#)
 11. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
-12. [Support for Bluemix on IBM Blue Box Local](#bluemix)
+12. [Updated Documentation Website now available through Box Panel](#new-docs-site)
 13. [HIPAA available for IBM Blue Box Local 3.0.0 Cloud Local.](#hipaa)
 14. [Regular updates for IBM Blue Box Cloud Images now available](#regular-updates-for-ibm-blue-box-cloud-images-now-available)
 15. [Known Limitations of this Release](#known-limitations-of-this-release)
@@ -80,6 +80,8 @@ You can select from the following compute node extensions to add to your IBM Blu
 
 <a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With this release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
 
+<a name="new-docs-site"></a>We've updated and redesigned our customer documentation website, now available at help.blueboxcloud.com, and accessible through your Box Panel interface.
+
 <a name="hipaa"></a>**HIPAA and IBM Blue Box Local 3.0.0 Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
   * You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
@@ -113,3 +115,5 @@ You can select from the following compute node extensions to add to your IBM Blu
 * Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
 * Keystone to Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
 
+**Other Changes in the Release**
+Customers who were with Blue Box before the IBM acquisition are now receiving invoices from IBM. Under the Billing page in Box Panel, you can still use Box Panel to review what you're being billed for, but it's no longer your invoice and you will be paying IBM directly.
