@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Image Release Notes 2016-06-07
+title: IBM Blue Box Cloud Image Release Notes 2016-06-07
 featured: false
 weight: 13
 tags: [userguides, release, images, security, kernel, patch]
@@ -9,11 +9,9 @@ author: Yang Zhang
 editor: Leslie Lundquist, Ying Tang
 ---
 
-## IBM Blue Box Cloud Images
+**Image Release Notes for version: 2016-06-07**
 
-### Image Release Notes 2016-06-07 for Release version: 2016-06-07
-
-### **Summary of Image Updates in the Latest Release**
+#### Summary of Image Updates in the Latest Release
 
 These release notes describe the system updates and new features applied to cloud images of Release 2016-06-07 in comparison with the images of Release 2016-03-01, published in March, 2016.
 
