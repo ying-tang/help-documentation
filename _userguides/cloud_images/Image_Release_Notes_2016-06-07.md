@@ -13,15 +13,15 @@ editor: Leslie Lundquist, Ying Tang
 
 #### Summary of Image Updates in the Latest Release
 
-These release notes describe the system updates and new features applied to cloud images of Release 2016-06-07 in comparison with the images of Release 2016-03-01, published in March, 2016.
+These release notes describe the system updates and new features applied to IBM Blue Box Cloud Images of Release 2016-06-07 in comparison with the images of Release 2016-03-01, published in March, 2016.
 
-All of the cloud images were updated based on the latest official isos.
+All of the cloud images were updated based on the latest official ISO specs.
 
 All of the system updates and security patches applied on cloud images were officially released as of June 7, 2016.
 
 # **Updates of Linux images**
 
-Kernel versions of all Linux images are the same as the original kernel versions from the official isos.
+Kernel versions of all Linux images are the same as the original kernel versions from the official ISO specs.
 
 `heat-cfn` tools are supported in all Linux images.
 
@@ -31,7 +31,7 @@ Release version was upgraded from **6.7** to **6.8**
 
 Kernel version was upgraded from **2.6.32-573.18.1** to **2.6.32-642.1.1**
 
-Python2.6 from the original iso was upgraded to Python2.7 to support `heat-cfn` tools.
+Python 2.6 from the original ISO spec was upgraded to Python 2.7 to support `heat-cfn` tools.
 
 Check [Package List](../image_patch_list_20160607/centos-6.8.txt) to see a full list of all upgraded/installed packages.
 
