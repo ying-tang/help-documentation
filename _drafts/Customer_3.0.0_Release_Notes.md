@@ -106,7 +106,10 @@ You can select from the following compute node extensions to add to your IBM Blu
 **Horizon Dashboard and projects:**
  * On the Horizon dashboard the quotas edit page is not seen by `cloud_admin` in the Project Edit modal window. Quota modification by `cloud_admin` still is allowed, using the OpenStack CLI or APIs.
  * On the Horizon dashboard Identity Panel, when creating a new project as role `cloud_admin`, an error pop-up menu is displayed (Unable to set project quotas). However, the project is created and it receives the default quota. A user with a `cloud_admin` role can subsequently update the quota, by using the OpenStack CLI or API.
- *  On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
+ * On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
+
+**Horizon Dashboard and Admin panel:**
+ * On the Horizon dashboard Admin Panel, on clicking on the Hypervisors as a user with cloud_admin role, and error pop-up menu is displayed Unable to get nova services list. This is expected as the user with cloud_admin role is not allowed to do operations on nova services as this is management function.
 
 **Other Known Limitations:**
 * Neutron RBAC-create: The CLI command neutron rbac-create returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
