@@ -111,10 +111,10 @@ You can select from the following compute node extensions to add to your IBM Blu
  * On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
 
 **Horizon Dashboard and Admin panel:**
- * On the Horizon dashboard Admin Panel, on clicking on the Hypervisors as a user with cloud_admin role, and error pop-up menu is displayed Unable to get nova services list. This is expected as the user with cloud_admin role is not allowed to do operations on nova services as this is management function.
+ * On the Horizon dashboard Admin Panel, when clicking on the Hypervisors as a user with `cloud_admin` role, an error pop-up menu is displayed: "Unable to get Nova services list." This behavior is expected because a user with the `cloud_admin` roles is not permitted to do operations on those items. 
 
 **Other Known Limitations:**
-* Neutron RBAC-create: The CLI command neutron rbac-create returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
+* Neutron RBAC-create: The CLI command `neutron rbac-create` returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
 * Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
 * Keystone to Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
 
