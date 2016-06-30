@@ -15,30 +15,36 @@ author: Leslie Lundquist
 #### Release 3.0.0
 #### June 30, 2016
 
-Release 3.0.0 of IBM Blue Box Cloud includes many updates to the underlying OpenStack platform upon which IBM Blue Box Cloud is built, as well as upgrades to overall infrastructure and features of IBM Blue Box Dedicated Cloud and IBM Blue Box Local Cloud. Most notable is the move to the **OpenStack Mitaka** release, which enables many new capabilities. We’ve included some general product improvements such as performance benchmarks and an updated Rally test suite, designed to facilitate smoother operation and deployment. This release also includes many improvements to documentation.
+Release 3.0.0 of IBM Blue Box Cloud includes many updates to the underlying OpenStack platform upon which every IBM Blue Box Cloud is built, as well as upgrades to overall infrastructure and features of IBM Blue Box Dedicated Cloud and IBM Blue Box Local Cloud. Most notable is the move to the **OpenStack Mitaka** release, which enables many new capabilities. We’ve included some general product improvements such as performance benchmarks and an updated Rally test suite, designed to facilitate smoother operation and deployment. This release also includes many improvements to documentation.
 
 ### Summary of New Features in the Latest Release
 
-This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the 3.0 Dedicated and Local Cloud offerings. The new capabilities of IBM Blue Box Dedicated and Local Cloud are listed below:
+This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, including specifics of the 3.0 Dedicated and Local Cloud offerings. Links to detailed documentation can be found in each section.
 
+Every IBM Blue Box 3.0.0 Cloud has these new features:
 1. [Openstack Mitaka Support.](#openstack-mitaka)
 2. [Keystone-to-Keystone federated identity across multiple Blue Box clouds.](#federated-keystone)
-3. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal for IBM Blue Box Dedicated.](#transit-vlan)
-4. [High-availability IP setup](#High-availability IP)
-5. [Vyatta with 10G networking for IBM Blue Box Dedicated.](#10gb-vyatta)
-6. [Hybrid Block Storage Nodes](#block-storage)
-7. [New Compute Node Types](#)
-8. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
-9. [Updated Documentation Website now accessible through Box Panel](#new-docs-site)
-10. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
-11. [Regular updates for IBM Blue Box Cloud Images](#regular-updates-for-ibm-blue-box-cloud-images)
-12. [Known Limitations of this Release](#known-limitations-of-this-release)
+3. [Updated Documentation Website now accessible through Box Panel.](#new-docs-site)
+4. [Regular updates for IBM Blue Box Cloud Images.](#regular-updates)
+5. [Billing Changes in this Release.](#billing-changes)
+6. [Known Limitations of this Release](#known-limitations-of-this-release)
+
+IBM Blue Box 3.0.0 Dedicated Cloud features:
+1. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal hosts.](#transit-vlan)
+2. [Vyatta with 10G networking.](#10gb-vyatta)
+
+IBM Blue Box 3.0.0 Local Cloud features:
+1. [Hybrid Block Storage Nodes](#block-storage)
+2. [New Compute Node Types](#)
+3. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
+4. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
+5. [Load Balancing and HA floating IP setup](#High-availability IP)
 
 For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
 [A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
-#### Every IBM Blue Box 3.0.0 Cloud
+#### Every IBM Blue Box 3.0.0 Cloud has these new features:
 
 **<a name="openstack-mitaka"></a>Openstack Mitaka Support:**
 Several features are now available based on our move to OpenStack Mitaka. 
@@ -46,17 +52,18 @@ Several features are now available based on our move to OpenStack Mitaka.
  * The Mitaka release introduces the new **aodh** alert service, which will be installed on any environment that has Ceilometer enabled.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
-<a name="federated-keystone"></a>** Keystone-to-Keystone across multiple IBM Blue Box clouds:**
-Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K help article for you.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/k2k-federation.md)
+<a name="federated-keystone"></a>** Keystone-to-Keystone federation across multiple IBM Blue Box clouds:**
+Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K setup article for you.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/k2k-federation.md)
 
+<a name="new-docs-site"></a>**Updated Documentation Website now accessible through Box Panel:** We've updated and redesigned our customer documentation website, now available at help.blueboxcloud.com, and easily accessible through your Box Panel interface. See the [Box Panel User Guide](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/) for more information.
+
+<a name="regular-updates"></a>**Regular updates for IBM Blue Box Cloud Images:** Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
 
 #### IBM Blue Box Dedicated 3.0.0 Cloud
 
-<a name="transit-vlan"></a>**Support for SoftLayer VLANs spanning and customer Bare Metal hardware connections:** Available in IBM Blue Box Dedicated Cloud only, this feature is designed for any IBM Blue Box Customer for whom the performance of bare metal is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between bare metal infrastructure and an OpenStack cloud-instance network. **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned SoftLayer account.
+<a name="transit-vlan"></a>**Support for SoftLayer VLANs spanning and customer Bare Metal hardware connections:** This feature is designed for any IBM Blue Box Dedicated Cloud customer for whom the performance of Bare Metal servers is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between Bare Metal infrastructure and an OpenStack cloud-instance network. **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned SoftLayer account.
 
-<a name="High-availability IP"></a>You can now create a [high-availability (HA) IP failover setup.](http://ibm-blue-box-help.github.io/help-documentation/neutron/configure-ha-ip/) 
-
-<a name="10gb-vyatta"></a>**10GB Vyatta Support for IBM Blue Box Dedicated Cloud:** This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
+<a name="10gb-vyatta"></a>**Vyatta with 10G networking:** This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
 
 #### IBM Blue Box Local 3.0.0 Cloud
 <a name="expansion-compute"></a>**New Compute Node Types:** Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Expansion nodes allow better coverage of instance types and workloads. With this release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
@@ -69,17 +76,14 @@ You can select from the following compute node extensions to add to your IBM Blu
 
   * You can select Block Storage: SSD or HYBRID
 
-<a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With this release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
 
-<a name="new-docs-site"></a>We've updated and redesigned our customer documentation website, now available at help.blueboxcloud.com, and accessible through your Box Panel interface.
+<a name="High-availability IP"></a>**Load Balancing and HA floating IP setup:** You can now configure a [high-availability (HA) IP failover setup.](http://ibm-blue-box-help.github.io/help-documentation/neutron/configure-ha-ip/) 
+
+<a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With this release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
 
 <a name="hipaa"></a>**HIPAA-enabled Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
   * You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
-
-#### Regular updates for IBM Blue Box Cloud Images
- 
-Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
 
 ### Known Limitations of This Release
 **Horizon Dashboard and LBaaS v2:**
@@ -109,5 +113,5 @@ Regular updates for our supported IBM Blue Box Cloud Images are available throug
 * Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
 * Keystone to Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
 
-**Other Changes in the Release**
+<a name="billing-changes"></a>**Billing Changes in this Release**
 Customers who were with Blue Box before the IBM acquisition are now receiving invoices from IBM. Under the Billing page in Box Panel, you can still use Box Panel to review what you're being billed for, but it's no longer your invoice and you will be paying IBM directly.
