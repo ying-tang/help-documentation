@@ -155,10 +155,12 @@ Delete object    | Y | Y | Y
 
 
 ## Requirements
-This role structure requires Keystone API v3 to run. Using API v2.0 will result in a loss of privileges for the `cloud_admin` and `project_admin` roles, in addition to erratic permissions behavior for `_member_` users.
+This role structure requires Keystone API v3 to run. Using Keystone API v2 will result in a loss of privileges for the `cloud_admin` and `project_admin` roles, in addition to causing erratic permissions behavior for `_member_` users.
 
+Making API calls through the Horizon dashboard does not require any special action, but performing command line calls necessitates changes to the run command (RC) file depending on which version of IBM Blue Box Cloud you are running. 
 
-Making API calls through the Horizon dashboard does not require any special action, but performing command line calls necessitates changes to the RC file depending on which version of BlueBox Cloud you are on. In version 2.1, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
+ * In IBM Blue Box cloud version 2.1.1, the dashboard-generated RC files enable Keystone v2. 
+ * Thus, in 2.1.1, switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
 
 {% highlight bash %}
 
@@ -172,12 +174,12 @@ export OS_COMPUTE_API_VERSION=2
 export OS_IDENTITY_API_VERSION=3
 {% endhighlight %}
 
-With the latest update of the BlueBox Cloud Version 3.0.0, the Horizon dashboard will allow you to generate and download a Identity v3 RC file that does not require the changes highlighted above.
+**NOTE:** With the latest update of the IBM Blue Box Cloud (Version 3.0.0), the Horizon dashboard will let you generate and download an Identity v3 RC file that does not require the changes highlighted above.
 
 Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
 
 ### Using the Keystone v3 group function
-The version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can use groups to quickly and easily make multiple assignments simultaneously.
+Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can easily use groups to make multiple assignments simultaneously.
 
 For example, you might have a support team that needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called **Support**, give the group the `_member_` role on all of your projects, and then add all of your support staff to the group.
 
