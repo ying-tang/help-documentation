@@ -9,15 +9,13 @@ author: Yang Zhang
 editor: Leslie Lundquist, Ying Tang
 ---
 
-# **IBM Blue Box Cloud Images**
+## IBM Blue Box Cloud Images
 
-# Image Release Notes 2016-06-07 (DRAFT)
+### Image Release Notes 2016-06-07 for Release version: 2016-06-07
 
-#### Release version: 2016-06-07
+### **Summary of Image Updates in the Latest Release**
 
-# **Summary of Image Updates in the Latest Release**
-
-These release notes describe the system updates and new features applied to cloud images of Release 2016-06-07 in comparison with the images of Release 2016-03-01, which was published in March, 2016.
+These release notes describe the system updates and new features applied to cloud images of Release 2016-06-07 in comparison with the images of Release 2016-03-01, published in March, 2016.
 
 All of the cloud images were updated based on the latest official isos.
 
