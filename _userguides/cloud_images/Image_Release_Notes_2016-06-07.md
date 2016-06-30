@@ -23,68 +23,56 @@ All of the system updates and security patches applied on cloud images were offi
 
 Kernel versions of all Linux images are the same as the original kernel versions from the official ISO specs.
 
-`heat-cfn` tools are supported in all Linux images.
+All Linux images support `heat-cfn` tools.
 
 **CentOS 6.8 x86_64**
 
-Release version was upgraded from **6.7** to **6.8**
-
-Kernel version was upgraded from **2.6.32-573.18.1** to **2.6.32-642.1.1**
-
-Python 2.6 from the original ISO spec was upgraded to Python 2.7 to support `heat-cfn` tools.
-
-Check the [Package List](../image_patch_list_20160607/centos-6.8.txt) to see a full list of all upgraded/installed packages.
+ * Release version was upgraded from **6.7** to **6.8**
+ * Kernel version was upgraded from **2.6.32-573.18.1** to **2.6.32-642.1.1**
+ * Python 2.6 from the original ISO spec was upgraded to Python 2.7 to support `heat-cfn` tools.
+ * Check the [Package List](../image_patch_list_20160607/centos-6.8.txt) to see a full list of all upgraded/installed packages.
 
 **CentOS 7.2 x86_64**
 
-Kernel version was upgraded from **3.10.0-327.10.1** to **3.10.0-327.18.2**
-
-Check the [Package List](../image_patch_list_20160607/centos-7.2.txt) to see a full list of all upgraded/installed packages.
+ * Kernel version was upgraded from **3.10.0-327.10.1** to **3.10.0-327.18.2**
+ * Check the [Package List](../image_patch_list_20160607/centos-7.2.txt) to see a full list of all upgraded/installed packages.
 
 **Ubuntu Server 12.04 LTS x86_64**
 
-Kernel version was upgraded from **3.13.0-81.125** to **3.13.0-86.131**
-
-Check the [Package List](../image_patch_list_20160607/ubuntu-12.04.txt) to see a full list of all upgraded/installed packages.
+ * Kernel version was upgraded from **3.13.0-81.125** to **3.13.0-86.131**
+ * Check the [Package List](../image_patch_list_20160607/ubuntu-12.04.txt) to see a full list of all upgraded/installed packages.
 
 **Ubuntu Server 14.04 LTS x86_64**
 
-Kernel version was upgraded from **4.2.0-32.37** to **4.2.0-36.42**
-
-Check the [Package List](../image_patch_list_20160607/ubuntu-14.04.txt) to see a full list of all upgraded/installed packages.
-
+ * Kernel version was upgraded from **4.2.0-32.37** to **4.2.0-36.42**
+ * Check the [Package List](../image_patch_list_20160607/ubuntu-14.04.txt) to see a full list of all upgraded/installed packages.
 
 # **Updates of Windows images**
 
 **Windows Server 2008 R2 SP1 Datacenter**
 
-25 updates were applied:
-
-Check the [System Update List](../image_patch_list_20160607/win-2008-r2-datacenter.txt) to see a full list of all applied system updates.
+* 25 updates were applied: 
+* Check the [System Update List](../image_patch_list_20160607/win-2008-r2-datacenter.txt) to see a full list of all applied system updates.
 
 **Windows Server 2008 R2 SP1 Enterprise**
 
-26 updates were applied:
-
-Check the [System Update List](../image_patch_list_20160607/win-2008-r2-enterprise.txt) to see a full list of all applied system updates.
+ * 26 updates were applied:
+ * Check the [System Update List](../image_patch_list_20160607/win-2008-r2-enterprise.txt) to see a full list of all applied system updates.
 
 **Windows Server 2008 R2 SP1 Standard**
 
-25 updates were applied:
-
-Check the [System Update List](../image_patch_list_20160607/win-2008-r2-standard.txt) to see a full list of all applied system updates.
+ * 25 updates were applied:
+ * Check the [System Update List](../image_patch_list_20160607/win-2008-r2-standard.txt) to see a full list of all applied system updates.
 
 **Windows Server 2012 R2 Datacenter**
 
-75 updates were applied:
-
-Check the [System Update List](../image_patch_list_20160607/win-2012r2-datacenter.txt) to see a full list of all applied system updates.
+ * 75 updates were applied:
+ * Check the [System Update List](../image_patch_list_20160607/win-2012r2-datacenter.txt) to see a full list of all applied system updates.
 
 **Windows Server 2012 R2 Standard**
 
-75 updates were applied:
-
-Check the [System Update List](../image_patch_list_20160607/win-2012r2-standard.txt) to see a full list of all applied system updates.
+* 75 updates were applied:
+* Check the [System Update List](../image_patch_list_20160607/win-2012r2-standard.txt) to see a full list of all applied system updates.
 
 ### **Tips:**
 
@@ -96,7 +84,7 @@ https://support.microsoft.com/en-us/kb/<update_number>
 
 Please replace the `<update_number>` in above URL with the **digits** of the actual system update number.
 
-For example, if the system update number is **KB3118401**, please access the following URL:
+For example, if the system update number is **KB3118401**, it would link to the following URL:
 
 ```
 https://support.microsoft.com/en-us/kb/3118401
