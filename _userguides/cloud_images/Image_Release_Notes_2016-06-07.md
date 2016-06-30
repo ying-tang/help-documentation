@@ -11,43 +11,43 @@ editor: Leslie Lundquist, Ying Tang
 
 **Image Release Notes for version: 2016-06-07**
 
-#### Summary of Image Updates in the Latest Release
+#### **Summary of Image Updates in the Latest Release**
 
-These release notes describe the system updates and new features applied to cloud images of Release 2016-06-07 in comparison with the images of Release 2016-03-01, published in March, 2016.
+These release notes describe the system updates and new features applied to IBM Blue Box Cloud Images of Release 2016-06-07 in comparison with the images of Release 2016-03-01, published in March, 2016.
 
-All of the cloud images were updated based on the latest official isos.
+All of the cloud images were updated based on the latest official ISO specs.
 
 All of the system updates and security patches applied on cloud images were officially released as of June 7, 2016.
 
 # **Updates of Linux images**
 
-Kernel versions of all Linux images are the same as the original kernel versions from the official isos.
+Kernel versions of all Linux images are the same as the original kernel versions from the official ISO specs.
 
 `heat-cfn` tools are supported in all Linux images.
 
-### **CentOS 6.8 x86_64**
+### CentOS 6.8 x86_64
 
 Release version was upgraded from **6.7** to **6.8**
 
 Kernel version was upgraded from **2.6.32-573.18.1** to **2.6.32-642.1.1**
 
-Python2.6 from the original iso was upgraded to Python2.7 to support `heat-cfn` tools.
+Python 2.6 from the original ISO spec was upgraded to Python 2.7 to support `heat-cfn` tools.
 
 Check [Package List](../image_patch_list_20160607/centos-6.8.txt) to see a full list of all upgraded/installed packages.
 
-### **CentOS 7.2 x86_64**
+### CentOS 7.2 x86_64
 
 Kernel version was upgraded from **3.10.0-327.10.1** to **3.10.0-327.18.2**
 
 Check [Package List](../image_patch_list_20160607/centos-7.2.txt) to see a full list of all upgraded/installed packages.
 
-### **Ubuntu Server 12.04 LTS x86_64**
+### Ubuntu Server 12.04 LTS x86_64
 
 Kernel version was upgraded from **3.13.0-81.125** to **3.13.0-86.131**
 
 Check [Package List](../image_patch_list_20160607/ubuntu-12.04.txt) to see a full list of all upgraded/installed packages.
 
-### **Ubuntu Server 14.04 LTS x86_64**
+### Ubuntu Server 14.04 LTS x86_64
 
 Kernel version was upgraded from **4.2.0-32.37** to **4.2.0-36.42**
 
@@ -56,31 +56,31 @@ Check [Package List](../image_patch_list_20160607/ubuntu-14.04.txt) to see a ful
 
 # **Updates of Windows images**
 
-### **Windows Server 2008 R2 SP1 Datacenter**
+### Windows Server 2008 R2 SP1 Datacenter
 
 25 updates were applied:
 
 Check [System Update List](../image_patch_list_20160607/win-2008-r2-datacenter.txt) to see a full list of all applied system updates.
 
-### **Windows Server 2008 R2 SP1 Enterprise**
+### Windows Server 2008 R2 SP1 Enterprise
 
 26 updates were applied:
 
 Check [System Update List](../image_patch_list_20160607/win-2008-r2-enterprise.txt) to see a full list of all applied system updates.
 
-### **Windows Server 2008 R2 SP1 Standard**
+### Windows Server 2008 R2 SP1 Standard
 
 25 updates were applied:
 
 Check [System Update List](../image_patch_list_20160607/win-2008-r2-standard.txt) to see a full list of all applied system updates.
 
-### **Windows Server 2012 R2 Datacenter**
+### Windows Server 2012 R2 Datacenter
 
 75 updates were applied:
 
 Check [System Update List](../image_patch_list_20160607/win-2012r2-datacenter.txt) to see a full list of all applied system updates.
 
-### **Windows Server 2012 R2 Standard**
+### Windows Server 2012 R2 Standard
 
 75 updates were applied:
 
