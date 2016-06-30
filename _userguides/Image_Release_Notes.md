@@ -11,7 +11,7 @@ editor: Leslie Lundquist, Ying Tang
 
 # IBM Blue Box Cloud Image Release Notes
 
-Cloud images provided by IBM Blue Box are updated periodically,to apply necessary security patches and other system updates from the official sources. Please check the following release notes to get more details about the changes applied in each release. The version number of each Image release is just the date by when the latest official patches and updates were applied.
+Cloud images provided by IBM Blue Box are updated periodically, to apply necessary security patches and other system updates from the official sources. Please check the following release notes to get more details about the changes applied in each release. The version number of each Image release is just the date by when the latest official patches and updates were applied.
 
 ### [Image Release Notes 2016-06-07](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/Image_Release_Notes_2016-06-07/)
 
