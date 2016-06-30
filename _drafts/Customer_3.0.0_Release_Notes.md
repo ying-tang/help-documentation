@@ -15,30 +15,35 @@ author: Leslie Lundquist
 #### Release 3.0.0
 #### June 30, 2016
 
-Release 3.0.0 of IBM Blue Box Cloud includes many updates to the underlying OpenStack platform upon which every IBM Blue Box Cloud is built, as well as upgrades to overall infrastructure and features of IBM Blue Box Dedicated Cloud and IBM Blue Box Local Cloud. Most notable is the move to the **OpenStack Mitaka** release, which enables many new capabilities. We’ve included some general product improvements such as performance benchmarks and an updated Rally test suite, designed to facilitate smoother operation and deployment. This release also includes many improvements to documentation.
-
-### Summary of New Features in the Latest Release
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, including specifics of the 3.0 Dedicated and Local Cloud offerings. Links to detailed documentation can be found in each section.
 
+### Summary of the Latest Release
+
+Release 3.0.0 of IBM Blue Box Cloud includes many updates to the underlying OpenStack platform upon which every IBM Blue Box Cloud is built, as well as upgrades to infrastructure and features of IBM Blue Box Dedicated Cloud and IBM Blue Box Local Cloud. Most notable is the move to the **OpenStack Mitaka** release, which enables many new capabilities. We’ve included some general product improvements such as performance benchmarks and an updated Rally test suite, designed to facilitate smoother operation and deployment. This release also includes many improvements to documentation.
+
 Every IBM Blue Box 3.0.0 Cloud has these new features:
+
 1. [Openstack Mitaka Support.](#openstack-mitaka)
 2. [Keystone-to-Keystone federated identity across multiple Blue Box clouds.](#federated-keystone)
 3. [Updated Documentation Website now accessible through Box Panel.](#new-docs-site)
 4. [Regular updates for IBM Blue Box Cloud Images.](#regular-updates)
 5. [Billing Changes in this Release.](#billing-changes)
-6. [Known Limitations of this Release](#known-limitations-of-this-release)
 
 IBM Blue Box 3.0.0 Dedicated Cloud features:
+
 1. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal hosts.](#transit-vlan)
 2. [Vyatta with 10G networking.](#10gb-vyatta)
 
 IBM Blue Box 3.0.0 Local Cloud features:
+
 1. [Hybrid Block Storage Nodes](#block-storage)
-2. [New Compute Node Types](#)
-3. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
-4. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
-5. [Load Balancing and HA floating IP setup](#High-availability IP)
+2. [New Compute Node Types](#expansion-compute)
+3. [Load Balancing and HA floating IP setup](#High-availability IP)
+4. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
+5. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
+
+[**Known Limitations of this Release**](#known-limitations-of-this-release)
 
 For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
@@ -58,6 +63,9 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 <a name="new-docs-site"></a>**Updated Documentation Website now accessible through Box Panel:** We've updated and redesigned our customer documentation website, now available at help.blueboxcloud.com, and easily accessible through your Box Panel interface. See the [Box Panel User Guide](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/) for more information.
 
 <a name="regular-updates"></a>**Regular updates for IBM Blue Box Cloud Images:** Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
+
+<a name="billing-changes"></a>**Billing Changes in this Release**
+Customers who were with Blue Box before the IBM acquisition are now receiving invoices from IBM. Under the Billing page in Box Panel, you can still use Box Panel to review what you're being billed for, but it's no longer your invoice and you will be paying IBM directly.
 
 #### IBM Blue Box Dedicated 3.0.0 Cloud
 
@@ -112,6 +120,3 @@ You can select from the following compute node extensions to add to your IBM Blu
 * Neutron RBAC-create: The CLI command `neutron rbac-create` returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
 * Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
 * Keystone to Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
-
-<a name="billing-changes"></a>**Billing Changes in this Release**
-Customers who were with Blue Box before the IBM acquisition are now receiving invoices from IBM. Under the Billing page in Box Panel, you can still use Box Panel to review what you're being billed for, but it's no longer your invoice and you will be paying IBM directly.
