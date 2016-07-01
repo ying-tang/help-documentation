@@ -69,7 +69,7 @@ Customers who were with Blue Box before the IBM acquisition are now receiving in
 
 #### IBM Blue Box Dedicated 3.0.0 Cloud
 
-<a name="transit-vlan"></a>**Support for SoftLayer VLANs spanning and customer Bare Metal hardware connections:** This feature is designed for any IBM Blue Box Dedicated Cloud customer for whom the performance of Bare Metal servers is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between Bare Metal infrastructure and an OpenStack cloud-instance network. **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned SoftLayer account.
+<a name="transit-vlan"></a>**Support for SoftLayer VLANs spanning and customer-managed Bare Metal hardware connections:** This feature is designed for any IBM Blue Box Dedicated Cloud customer for whom the performance of Bare Metal servers is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between their Bare Metal infrastructure and an OpenStack cloud-instance network. **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned and managed SoftLayer account.
 
 <a name="10gb-vyatta"></a>**Vyatta with 10G networking:** This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
 
