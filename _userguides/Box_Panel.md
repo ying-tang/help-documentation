@@ -58,7 +58,7 @@ From the Box Panel Dashboard, you can see a consolidated asset view of all of yo
 
 The top of the Dashboard displays the infrastructure currently in use, with your list of hosts. 
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15029877/322e6f8a-1215-11e6-99f2-fc79cdfa2512.png)
+![Dashboard](https://github.com/IBM-Blue-Box-Help/help-documentation/img/Dashboard.png)
 
 
 On the right, additional details related to your account summary are displayed, including your **Lock Box Messages**, **Verbal Password**, **Bandwidth Quota**, and **Backup Quota**. 
@@ -79,10 +79,10 @@ Each image is displayed as a card. Cards are grouped by operating system.
 3. Click the **Copy** button to the left of the Image URL. This click adds the URL to your clipboard. 
 4. This procedure also can be accomplished using OpenStack APIs. For instructions, please see the [main document about Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Cloud_Images_Provided_by_IBM/) 
 
-![ ](https://cloud.githubusercontent.com/assets/17212946/15030096/20400436-1216-11e6-8987-5dc8e6cdf080.png) 
+![Download Cloud Image](https://github.com/IBM-Blue-Box-Help/help-documentation/img/Download_Cloud_Image.png)
 
 ### Help Documentation
-
+1
 From your Box Panel dashboard, you'll see  a link on the Nav Bar (the rightmost link) called **Docs**. If you select that link, a Dropdown menu appears, with the options of **OpenStack**, or **Managed Hosting**. To view the Customer Help documentation for IBM Blue Box Cloud, select **OpenStack**. The Help page will appear. You can browse the documentation by category, or you can search, using the search bar. By hovering over one of the icons, you can see a list of articles within that topic area. 
 
 ![Managed Hosting](https://github.com/IBM-Blue-Box-Help/help-documentation/img/Managed_Hosting.png)
