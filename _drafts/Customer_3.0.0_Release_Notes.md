@@ -38,14 +38,14 @@ IBM Blue Box 3.0.0 Local Cloud features:
 
 1. [Hybrid Block Storage Nodes](#block-storage)
 2. [New Compute Node Types](#expansion-compute)
-3. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
-4. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
+3. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
+4. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
 
 [**Known Limitations of this Release**](#known-limitations-of-this-release)
 
 For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
-[A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
+A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later [is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
 #### Every IBM Blue Box 3.0.0 Cloud has these new features:
 
@@ -79,11 +79,11 @@ You can select from the following compute node extensions to add to your IBM Blu
 
   * You can select Block Storage: SSD or HYBRID
 
-<a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With this release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
-
 <a name="hipaa"></a>**HIPAA-enabled Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
   * You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
+
+<a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With its Beta release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
 
 ### Known Limitations of This Release
 **Horizon Dashboard and LBaaS v2:**
@@ -111,4 +111,4 @@ You can select from the following compute node extensions to add to your IBM Blu
 **Other Known Limitations:**
 * Neutron RBAC-create: The CLI command `neutron rbac-create` returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
 * Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
-* Keystone to Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
+* Keystone-to-Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
