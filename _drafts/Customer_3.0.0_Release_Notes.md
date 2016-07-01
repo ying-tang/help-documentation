@@ -49,13 +49,13 @@ For additional user documentation, please refer to the [main Customer Help page]
 
 #### Every IBM Blue Box 3.0.0 Cloud has these new features:
 
-**<a name="openstack-mitaka"></a>Openstack Mitaka Support:**
+<a name="openstack-mitaka"></a>**Openstack Mitaka Support:**
 Several features are now available based on our move to OpenStack Mitaka. 
  * It is now possible to set up autoscaling groups and LBaaS (v2) using Heat templates and the Horizon dashboard.
  * The Mitaka release introduces the new **aodh** alert service, which will be installed on any environment that has Ceilometer enabled.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
-<a name="federated-keystone"></a>** Keystone-to-Keystone federation across multiple IBM Blue Box clouds:**
+<a name="federated-keystone"></a>**Keystone-to-Keystone federation across multiple IBM Blue Box clouds:**
 Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K setup article for you.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/k2k-federation.md)
 
 <a name="new-docs-site"></a>**Updated Documentation Website now accessible through Box Panel:** We've updated and redesigned our customer documentation website, now available at help.blueboxcloud.com, and easily accessible through your Box Panel interface. See the [Box Panel User Guide](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/) for more information.
