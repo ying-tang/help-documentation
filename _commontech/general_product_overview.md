@@ -18,15 +18,16 @@ To deploy the **IBM Blue Box Dedicated** offering, a physical **Site Controller*
 
 To deploy the **IBM Blue Box Local** cloud offering, a Site Controller logical machine must be co-located within your IBM Local Cloud data center, and it will communicate with a Central Site Controller machine at IBM Blue Box.
 
-Each version of **Ursula** on the Site Controller is tailored to initialize and run a specific version of OpenStack and IBM Blue Box Cloud, by setting up the proper environment variables and other aspects of your customized cloud configuration. The particular version of Ursula described in this document is 2.1.0, and the environment which it creates for your cloud is described in the next section.
+Each version of **Ursula** on the Site Controller is tailored to initialize and run a specific version of OpenStack and IBM Blue Box Cloud, by setting up the proper environment variables and other aspects of your customized cloud configuration. The particular version of Ursula described in this document is 3.0.0, and the environment which it creates for your cloud is described in the next section.
 
 **Software Environment Created by Ursula**
 
-IBM Blue Box Cloud software is based on **Ubuntu 14.04** or **Cirros 0.3.3 x86_64** and the **Kilo** release of OpenStack, specifically including the Nova, Glance (backend points to Swift), Swift, Cinder (backed by Ceph clusters), Neutron L3 HA, Keystone, Horizon, Heat, LBaaS, and Ceilometer (+MongoDB) modules. The Cinder backing data storage is provided by Ceph clusters. Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
+IBM Blue Box Cloud software is based on **Ubuntu 14.04** or **Cirros 0.3.3 x86_64** and the **Mitaka** release of OpenStack, specifically including the Nova, Glance (backend points to Swift), Swift, Cinder (backed by Ceph clusters), Neutron L3 HA, Neutron LBaaS v2, Keystone, Horizon, Heat, LBaaS, and Ceilometer (+MongoDB) modules. The Cinder backing data storage is provided by Ceph clusters. Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
 
 Upon request, IBM will enable some additional enhanced features:
 
-* Deploying an OpenStack software load balancer (LBaaS) that is managed through Neutron (it requires the Dedicated Controller feature)
+* OpenStack software load balancer (LBaaS) that is managed through Neutron (it requires the Dedicated Controller feature)
+* VLAN support for spanning between clouds
 * Integration with Urban Code Deployer (UCD) through an OpenStack Heat (Orchestration) plug-in.
 
 **Hardware Environment and Monitoring**
@@ -57,20 +58,20 @@ From any of these starting places (e.g., 3-node hyper-converged, or 5-node with 
 	• For a Standard Capacity Dedicated cloud, Dedicated Gateway Firewalls are included by default
 	• Enterprise Capacity includes double the resources and 10 Gbps of network connectivity 
 	• Dedicated controller nodes (or additional ones)
-	• Compute nodes (or additional ones): Standard or Enterprise, IO or High Storage 
+	• Compute nodes (or additional ones): Standard or Enterprise, IO or High Storage, Power Compute (Habañero)
 
-**Optional Expansion Compute Nodes**
+**Expansion Compute Nodes**
 
 Optionally, you can select from the following compute node extensions to add to your standard or enterprise cloud:
 
-	• You can select specialized expansion compute nodes: IO, or HIGH STORAGE 
+	• You can select specialized expansion compute nodes: IO, or HIGH STORAGE, or HABAÑERO POWER COMPUTE
 	• You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE
 
 Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Both types of expansion nodes—IO optimized and high storage capacity—allow better coverage of instance types and workloads. Starting with the 2.1.0 release, compute types have been grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 
-**Optional Hybrid Block Storage Nodes**
+**Types of Storage Nodes**
 
-Hybrid Block Storage nodes provide lower cost and higher density Block Storage.  
+Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage.  
 
 	• You can select Block Storage: SSD or HYBRID
 	• You can select Object Storage 
