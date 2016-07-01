@@ -22,6 +22,6 @@ Password: Specified Password
 
 Navigate to the specified URL. Use the specified user name and password to log in. You should see the following screen:
 
-![Horizon screen](https://s3.amazonaws.com/helpjuice_production/uploads/upload/image/2134/7902/Horizon_home__1_.png )
+![Horizon screen]({{site.baseurl}}/img/Horizon_home.png)
 
 Welcome to Horizon.

@@ -51,7 +51,7 @@ All of these ports are available via your custom Horizon URL.
 
 You can use any number of tools to measure disk performance.
 
-A particularly easy to use python script for measuring IOPS by Benjamin Schweizer, with instructions and example results is available:
+A particularly easy to use Python script for measuring IOPS by Benjamin Schweizer, with instructions and example results is available:
 
 `https://benjamin-schweizer.de/measuring-disk-io-performance.html`
 
@@ -76,4 +76,8 @@ Examples:
 
 ### When using security groups, how can I log refused TCP connections to forbidden ports?
 
-If you want to log refused TCP connections to forbidden ports, you'll need to open up security groups and run iptables with logging on the instances.
+If you want to log refused TCP connections to forbidden ports, you'll need to open up security groups and run `iptables` with logging on the instances.
+
+### What is the maximum number of virtual devices (for example, ports) that can be attached to a virtual machine?
+
+20 is the maximum number of virtual PCI slots available. 
