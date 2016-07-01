@@ -73,7 +73,7 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 You can select from the following compute node extensions to add to your IBM Blue Box Local cloud:
   * You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
   * You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE (Previously available)
-  * You can select Power Compute Nodes (Habañero): These nodes particularly support IBM Watson applications, and others.
+  * You can select POWER Compute Nodes (Habañero): These nodes particularly support IBM Watson applications, and others.
 
 <a name="block-storage"></a>**Hybrid Block Storage Nodes:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster. 
 
