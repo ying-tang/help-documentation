@@ -31,19 +31,19 @@ Every IBM Blue Box 3.0.0 Cloud has these new features:
 
 IBM Blue Box 3.0.0 Dedicated Cloud features:
 
-1. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal hosts.](#transit-vlan)
+1. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal hardware.](#transit-vlan)
 2. [Vyatta with 10G networking.](#10gb-vyatta)
 
 IBM Blue Box 3.0.0 Local Cloud features:
 
-1. [Hybrid Block Storage Nodes](#block-storage)
-2. [New Compute Node Types](#expansion-compute)
+1. [Hybrid Block Storage Nodes.](#block-storage)
+2. [New Compute Node Types.](#expansion-compute)
 3. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
-4. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
+4. [Support for IBM Blue Box Local on PureApp platform (Beta release).](#pure-app)
 
 [**Known Limitations of this Release**](#known-limitations-of-this-release)
 
-For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
+For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available online anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
 A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later [is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
