@@ -28,7 +28,6 @@ Every IBM Blue Box 3.0.0 Cloud has these new features:
 2. [Keystone-to-Keystone federated identity across multiple Blue Box clouds.](#federated-keystone)
 3. [Updated Documentation Website now accessible through Box Panel.](#new-docs-site)
 4. [Regular updates for IBM Blue Box Cloud Images.](#regular-updates)
-5. [Billing Changes in this Release.](#billing-changes)
 
 IBM Blue Box 3.0.0 Dedicated Cloud features:
 
@@ -39,9 +38,8 @@ IBM Blue Box 3.0.0 Local Cloud features:
 
 1. [Hybrid Block Storage Nodes](#block-storage)
 2. [New Compute Node Types](#expansion-compute)
-3. [Load Balancing and HA floating IP setup](#High-availability IP)
-4. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
-5. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
+3. [Support for IBM Blue Box Local on PureApp platform (Beta release)](#pure-app)
+4. [HIPAA-enabled IBM Blue Box Local Cloud.](#hipaa)
 
 [**Known Limitations of this Release**](#known-limitations-of-this-release)
 
@@ -64,9 +62,6 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 
 <a name="regular-updates"></a>**Regular updates for IBM Blue Box Cloud Images:** Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
 
-<a name="billing-changes"></a>**Billing Changes in this Release**
-Customers who were with Blue Box before the IBM acquisition are now receiving invoices from IBM. Under the Billing page in Box Panel, you can still use Box Panel to review what you're being billed for, but it's no longer your invoice and you will be paying IBM directly.
-
 #### IBM Blue Box Dedicated 3.0.0 Cloud
 
 <a name="transit-vlan"></a>**Support for SoftLayer VLANs spanning and customer-managed Bare Metal hardware connections:** This feature is designed for any IBM Blue Box Dedicated Cloud customer for whom the performance of Bare Metal servers is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between their Bare Metal infrastructure and an OpenStack cloud-instance network. **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned and managed SoftLayer account.
@@ -83,9 +78,6 @@ You can select from the following compute node extensions to add to your IBM Blu
 <a name="block-storage"></a>**Hybrid Block Storage Nodes:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster. 
 
   * You can select Block Storage: SSD or HYBRID
-
-
-<a name="High-availability IP"></a>**Load Balancing and HA floating IP setup:** You can now configure a [high-availability (HA) IP failover setup.](http://ibm-blue-box-help.github.io/help-documentation/neutron/configure-ha-ip/) 
 
 <a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With this release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
 
