@@ -62,13 +62,13 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 
 <a name="regular-updates"></a>**Regular updates for IBM Blue Box Cloud Images:** Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
 
-#### IBM Blue Box Dedicated 3.0.0 Cloud
+#### IBM Blue Box Dedicated 3.0.0 Cloud:
 
 <a name="transit-vlan"></a>**Support for SoftLayer VLANs spanning and customer-managed Bare Metal hardware connections:** This feature is designed for any IBM Blue Box Dedicated Cloud customer for whom the performance of Bare Metal servers is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between their Bare Metal infrastructure and an OpenStack cloud-instance network. **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned and managed SoftLayer account.
 
 <a name="10gb-vyatta"></a>**Vyatta with 10G networking:** This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
 
-#### IBM Blue Box Local 3.0.0 Cloud
+#### IBM Blue Box Local 3.0.0 Cloud:
 <a name="expansion-compute"></a>**New Compute Node Types:** Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Expansion nodes allow better coverage of instance types and workloads. With this release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 You can select from the following compute node extensions to add to your IBM Blue Box Local cloud:
   * You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
