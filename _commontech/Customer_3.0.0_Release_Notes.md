@@ -70,44 +70,43 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 #### IBM Blue Box Local 3.0.0 Cloud:
 <a name="expansion-compute"></a>**New Compute Node Types:** Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Expansion nodes allow better coverage of instance types and workloads. With this release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 You can select from the following compute node extensions to add to your IBM Blue Box Local cloud:
-  * You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
-  * You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE (Previously available)
-  * You can select POWER Compute Nodes (Habañero): These nodes particularly support IBM Watson applications, and others.
+ * You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
+ * You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE (Previously available)
+ * You can select POWER Compute Nodes (Habañero): These nodes particularly support IBM Watson applications, and others.
 
 <a name="block-storage"></a>**Hybrid Block Storage Nodes:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster. 
-
-  * You can select Block Storage: SSD or HYBRID
+ * You can select Block Storage: SSD or HYBRID
 
 <a name="hipaa"></a>**HIPAA-enabled Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
-  * You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
+ * You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
 
 <a name="pure-app"></a>**Support for Blue Box on PureApp (Beta release):** PureApp is an existing IBM system for hardware management. With its Beta release, we are making it available as a platform for IBM Blue Box Local, in addition to the Cisco hardware already available.
 
 ### Known Limitations of This Release
 **Horizon Dashboard and LBaaS v2:**
-* The LBaaS v2 Horizon dashboard will not let you create `https` listeners.
-* Pool sharing is not available through the Horizon interface.
-* You cannot set the weight of a member to 0 through Horizon.
-* L7 content switching is not available with the default driver. (HaproxyOnHostPluginDriver)
-* TLS Termination is not supported.
+ * The LBaaS v2 Horizon dashboard will not let you create `https` listeners.
+ * Pool sharing is not available through the Horizon interface.
+ * You cannot set the weight of a member to 0 through Horizon.
+ * L7 content switching is not available with the default driver. (HaproxyOnHostPluginDriver)
+ * TLS Termination is not supported.
  
 **OpenStack Community Open Issues for LBaaS v2:**
-* LBaaS VIP is associated with Default security group by default. A workaround is to open the required ports in the default group. https://bugs.launchpad.net/neutron/+bug/1295424
-* Deleting LBaaSv2 does not delete the LBaaS namespace. https://bugs.launchpad.net/neutron/+bug/1495430
-* Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
-* PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
-* Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
+ * LBaaS VIP is associated with Default security group by default. A workaround is to open the required ports in the default group. https://bugs.launchpad.net/neutron/+bug/1295424
+ * Deleting LBaaSv2 does not delete the LBaaS namespace. https://bugs.launchpad.net/neutron/+bug/1495430
+ * Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
+ * PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
+ * Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
  
 **Horizon Dashboard and projects:**
-* On the Horizon dashboard the quotas edit page is not seen by `cloud_admin` in the Project Edit modal window. Quota modification by `cloud_admin` still is allowed, using the OpenStack CLI or APIs.
-* On the Horizon dashboard Identity Panel, when creating a new project as role `cloud_admin`, an error pop-up menu is displayed (Unable to set project quotas). However, the project is created and it receives the default quota. A user with a `cloud_admin` role can subsequently update the quota, by using the OpenStack CLI or API.
-* On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
+ * On the Horizon dashboard the quotas edit page is not seen by `cloud_admin` in the Project Edit modal window. Quota modification by `cloud_admin` still is allowed, using the OpenStack CLI or APIs.
+ * On the Horizon dashboard Identity Panel, when creating a new project as role `cloud_admin`, an error pop-up menu is displayed (Unable to set project quotas). However, the project is created and it receives the default quota. A user with a `cloud_admin` role can subsequently update the quota, by using the OpenStack CLI or API.
+ * On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
 
 **Horizon Dashboard and Admin panel:**
-* On the Horizon dashboard Admin Panel, when clicking on the Hypervisors as a user with `cloud_admin` role, an error pop-up menu is displayed: "Unable to get Nova services list." This behavior is expected because a user with the `cloud_admin` roles is not permitted to do operations on those items. 
+ * On the Horizon dashboard Admin Panel, when clicking on the Hypervisors as a user with `cloud_admin` role, an error pop-up menu is displayed: "Unable to get Nova services list." This behavior is expected because a user with the `cloud_admin` roles is not permitted to do operations on those items. 
 
 **Other Known Limitations:**
-* Neutron RBAC-create: The CLI command `neutron rbac-create` returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
-* Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
-* Keystone-to-Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
+ * Neutron RBAC-create: The CLI command `neutron rbac-create` returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
+ * Block storage performance limitation exists, when tested in the 30-node performance test environment with a hybrid Ceph configuration (HDD + SSD bcache)
+ * Keystone-to-Keystone Federation: An issue currently exists with the creation of trust-for-trust delegation by a federated user. To work around this issue, the `heat_stack_owner` role needs to be assigned explicitly to the federated user.
