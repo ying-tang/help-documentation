@@ -13,7 +13,7 @@ author: Leslie Lundquist
 ## Release Notes
 
 #### Release 3.0.0
-#### June 30, 2016
+####June 30, 2016
 
 
 This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, including specifics of the 3.0 Dedicated and Local Cloud offerings. Links to detailed documentation can be found in each section.
