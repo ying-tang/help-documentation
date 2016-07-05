@@ -56,11 +56,11 @@ Several features are now available based on our move to OpenStack Mitaka.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
 <a name="federated-keystone"></a>**Keystone-to-Keystone federation across multiple IBM Blue Box clouds:**
-Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K setup article for you.](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/k2k-federation.md)
+Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K setup article for you.](http://ibm-blue-box-help.github.io/help-documentation/keystone/k2k-federation/)
 
 <a name="new-docs-site"></a>**Updated Documentation Website now accessible through Box Panel:** We've updated and redesigned our customer documentation website, now available at help.blueboxcloud.com, and easily accessible through your Box Panel interface. See the [Box Panel User Guide](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/) for more information.
 
-<a name="regular-updates"></a>**Regular updates for IBM Blue Box Cloud Images:** Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://help.blueboxcloud.com/ _userguides/Image_Release_Notes.md). We've also created a [User Guide for working with Cloud Images](http://help.blueboxcloud.com/_userguides/Cloud_Images_Provided_by_IBM.md).
+<a name="regular-updates"></a>**Regular updates for IBM Blue Box Cloud Images:** Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Image_Release_Notes/). We've also created a [User Guide for working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/).
 
 #### IBM Blue Box Dedicated 3.0.0 Cloud:
 
