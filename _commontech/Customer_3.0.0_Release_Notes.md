@@ -87,26 +87,26 @@ You can select from the following compute node extensions to add to your IBM Blu
 
 ### Known Limitations of This Release
 **Horizon Dashboard and LBaaS v2:**
- * The LBaaS v2 Horizon dashboard will not let you create `https` listeners.
- * Pool sharing is not available through the Horizon interface.
- * You cannot set the weight of a member to 0 through Horizon.
- * L7 content switching is not available with the default driver. (HaproxyOnHostPluginDriver)
- * TLS Termination is not supported.
+* The LBaaS v2 Horizon dashboard will not let you create `https` listeners.
+* Pool sharing is not available through the Horizon interface.
+* You cannot set the weight of a member to 0 through Horizon.
+* L7 content switching is not available with the default driver. (HaproxyOnHostPluginDriver)
+* TLS Termination is not supported.
  
 **OpenStack Community Open Issues for LBaaS v2:**
- * LBaaS VIP is associated with Default security group by default. A workaround is to open the required ports in the default group. https://bugs.launchpad.net/neutron/+bug/1295424
- * Deleting LBaaSv2 does not delete the LBaaS namespace. https://bugs.launchpad.net/neutron/+bug/1495430
- * Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
- * PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
- * Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
+* LBaaS VIP is associated with Default security group by default. A workaround is to open the required ports in the default group. https://bugs.launchpad.net/neutron/+bug/1295424
+* Deleting LBaaSv2 does not delete the LBaaS namespace. https://bugs.launchpad.net/neutron/+bug/1495430
+* Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
+* PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
+* Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
  
 **Horizon Dashboard and projects:**
- * On the Horizon dashboard the quotas edit page is not seen by `cloud_admin` in the Project Edit modal window. Quota modification by `cloud_admin` still is allowed, using the OpenStack CLI or APIs.
- * On the Horizon dashboard Identity Panel, when creating a new project as role `cloud_admin`, an error pop-up menu is displayed (Unable to set project quotas). However, the project is created and it receives the default quota. A user with a `cloud_admin` role can subsequently update the quota, by using the OpenStack CLI or API.
- * On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
+* On the Horizon dashboard the quotas edit page is not seen by `cloud_admin` in the Project Edit modal window. Quota modification by `cloud_admin` still is allowed, using the OpenStack CLI or APIs.
+* On the Horizon dashboard Identity Panel, when creating a new project as role `cloud_admin`, an error pop-up menu is displayed (Unable to set project quotas). However, the project is created and it receives the default quota. A user with a `cloud_admin` role can subsequently update the quota, by using the OpenStack CLI or API.
+* On the Horizon dashboard Identity Panel, when modifying an existing project as a user with `cloud_admin` role, an error pop-up menu is displayed (`Unable to modify project`). The project, in fact, will be updated. The pop-up menu is shown because the project quotas could not be set.
 
 **Horizon Dashboard and Admin panel:**
- * On the Horizon dashboard Admin Panel, when clicking on the Hypervisors as a user with `cloud_admin` role, an error pop-up menu is displayed: "Unable to get Nova services list." This behavior is expected because a user with the `cloud_admin` roles is not permitted to do operations on those items. 
+* On the Horizon dashboard Admin Panel, when clicking on the Hypervisors as a user with `cloud_admin` role, an error pop-up menu is displayed: "Unable to get Nova services list." This behavior is expected because a user with the `cloud_admin` roles is not permitted to do operations on those items. 
 
 **Other Known Limitations:**
 * Neutron RBAC-create: The CLI command `neutron rbac-create` returns a "500" error status code unless `--target-tenant` is specified at the point of initial creation.
