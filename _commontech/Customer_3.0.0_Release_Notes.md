@@ -46,7 +46,7 @@ For additional user documentation, please refer to the [main Customer Help page]
 
 A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later [is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
-#### Every IBM Blue Box 3.0.0 Cloud has these new features:
+### Every IBM Blue Box 3.0.0 Cloud has these new features:
 
 <a name="openstack-mitaka"></a>**Openstack Mitaka Support:**
 Several features are now available based on our move to OpenStack Mitaka.
@@ -62,13 +62,13 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 
 <a name="regular-updates"></a>**Regular updates for IBM Blue Box Cloud Images:** Regular updates for our supported IBM Blue Box Cloud Images are available through your Box Panel interface. The customer release notes for all individual image updates are published [here](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Image_Release_Notes/). We've also created a [User Guide for working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/).
 
-#### IBM Blue Box Dedicated 3.0.0 Cloud:
+### IBM Blue Box Dedicated 3.0.0 Cloud:
 
 <a name="transit-vlan"></a>**Support for SoftLayer VLANs spanning and customer-managed Bare Metal hardware connections:** This feature is designed for any IBM Blue Box Dedicated Cloud customer for whom the performance of Bare Metal servers is a strict requirement, but who also need access to secure communication over the SoftLayer private network, between their Bare Metal infrastructure and an OpenStack cloud-instance network. **Note:** To use this feature, the Bare Metal hardware must be in a separate, customer-owned and managed SoftLayer account.
 
 <a name="10gb-vyatta"></a>**Vyatta with 10G networking:** This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
 
-#### IBM Blue Box Local 3.0.0 Cloud:
+### IBM Blue Box Local 3.0.0 Cloud:
 <a name="expansion-compute"></a>**New Compute Node Types:** Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Expansion nodes allow better coverage of instance types and workloads. With this release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 You can select from the following compute node extensions to add to your IBM Blue Box Local cloud:
 
