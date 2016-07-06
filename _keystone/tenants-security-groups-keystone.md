@@ -1,25 +1,25 @@
 ---
 layout: page
-title:  "Tenants and Security Groups"
-tags: [keystone, tenants, security groups]
+title:  "Projects and Security Groups"
+tags: [keystone, projects, tenants, security groups]
 dateAdded: July 28th, 2015
 featured: false
 weight: 4
 ---
 
-**How can I get a list of tenants from the command line?**
+**How can I get a list of projects from the command line?**
 
 {% highlight bash %}
-$ keystone tenant-list
-+----------------------------------+-----------+---------+
-| id                               | name      | enabled |
-+----------------------------------+-----------+---------+
-| 8f5b4c822c36476eb14b68de955b4ca6 | admin     | True    |
-| 6d2987f9ef094d078745e955803f902d | company   | True    |
-| 945ee99cfc2440a1ad85b9d33e31604c | service   | True    |
-+----------------------------------+-----------+---------+
+$ openstack project list
++----------------------------------+---------+
+| ID                               | Name    |
++----------------------------------+---------+
+| 2b724e8f6ede4676938899457055a48c | admin   |
+| 43888d7305334806a0658e02fff03309 | demo    |
+| 8efeea7692e345bd81a326d0381311a7 | service |
++----------------------------------+---------+
 {% endhighlight %}
 
-**Are security groups shared between tenants?**
+**Are security groups shared between projects?**
 
-No.  Each tenant has its own independent set of security groups.
+No.  Each project has its own independent set of security groups.
