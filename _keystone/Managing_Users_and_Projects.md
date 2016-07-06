@@ -176,7 +176,7 @@ export OS_IDENTITY_API_VERSION=3
 
 **NOTE:** With the latest update of the IBM Blue Box Cloud (Version 3.0.0), the Horizon dashboard will let you generate and download an Identity v3 RC file that does not require the changes highlighted above.
 
-Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI. This can be installed by running `sudo pip install python-openstackclient`.
+Additionally, Keystone functions MUST be performed using the new `python-openstackclient` CLI. This client can be installed by running `sudo pip install python-openstackclient`. (The `keystone` CLI commands are not a part of V3.)
 
 ### Using the Keystone v3 group function
 Version 3 of the Keystone API with IBM Blue Box Cloud introduces the concept of **groups**. You can easily use groups to make multiple assignments simultaneously.
