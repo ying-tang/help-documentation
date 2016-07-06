@@ -25,15 +25,25 @@ layout: default
               {% assign count-helper = count-helper | plus: 1 %}
             {% endif %}
           {% endfor %}
-        {% elsif x == 'gettingstarted'%}
+        {% elsif x == 'gettingstarted' %}
           {% assign counter = 0 %}
-          {% assign counter = site.commontech.size | plus:site.commonadmin.size | plus:site.userguides.size %}
+          {% assign hidden-size = 0 %}
+          {% assign original = site.userguides %}
+          {% for item in original %}
+              {% if item.featured == 'hidden' %}
+               {% assign hidden-size = hidden-size | plus: 1 %}
+              {% endif %}
+          {% endfor %}
+          {% assign counter = site.commontech.size | plus:site.commonadmin.size | plus:site.userguides.size | minus:hidden-size %}
         {% else %}
           {% assign counter = 0 %}
           {% for item in site[x] %}
             {% if item.title %}
               {% assign counter = counter | plus: 1 %}
             {% endif %}
+            {% if item.featured == 'hidden' %}
+              {% assign counter = counter | minus : 1 %}
+            {% endif %}            
           {% endfor %}
         {% endif %}
 
