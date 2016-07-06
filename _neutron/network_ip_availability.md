@@ -13,7 +13,7 @@ author: Leslie Lundquist
 Many customers have asked how they can check to see how many Floating IPs are left in their availability pool. There’s now an API call for resource allocation reporting:
 
 ```
-$network-ip-availabilities
+$ network-ip-availabilities
 ```
 This command gives information about how many floating IPs are used, and how many are still available, of these “consumables.”
 
