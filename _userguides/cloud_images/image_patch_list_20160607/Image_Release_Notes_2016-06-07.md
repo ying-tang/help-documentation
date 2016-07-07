@@ -1,7 +1,7 @@
 ---
 layout: page
 title: IBM Blue Box Cloud Image Release Notes 2016-06-07
-featured: false
+featured: hidden
 weight: 13
 tags: [userguides, release, images, security, kernel, patch]
 dateAdded: June 10th, 2016
