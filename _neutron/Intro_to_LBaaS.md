@@ -12,16 +12,18 @@ The OpenStack Networking Service, Neutron, includes a Load Balancer as a Service
 
 The following links give a lot more information about the LBaaS v2 features in OpenStack Mitaka release, including **Installation and Configuration** instructions:
  
-http://docs.openstack.org/developer/openstack-ansible/install-guide/configure-lbaas.html
-http://docs.openstack.org/mitaka/networking-guide/adv-config-lbaas.html
+ * http://docs.openstack.org/developer/openstack-ansible/install-guide/configure-lbaas.html
+ * http://docs.openstack.org/mitaka/networking-guide/adv-config-lbaas.html
 
 **Specs:**
-https://specs.openstack.org/openstack/neutron-specs/specs/kilo/lbaas-api-and-objmodel-improvement.html
-https://specs.openstack.org/openstack/heat-specs/specs/mitaka/lbaasv2-support.html
+
+ * https://specs.openstack.org/openstack/neutron-specs/specs/kilo/lbaas-api-and-objmodel-improvement.html
+ * https://specs.openstack.org/openstack/heat-specs/specs/mitaka/lbaasv2-support.html
 
 **API:**
-http://developer.openstack.org/api-ref-networking-v2-ext.html#lbaas-v2.0
+
+ * http://developer.openstack.org/api-ref-networking-v2-ext.html#lbaas-v2.0
 
 The reference implementation of LBaaS, called Octavia, also provides some helpful documentation.
 
-http://docs.octavia.io/review/master/index.html#
+ * http://docs.octavia.io/review/master/index.html#
