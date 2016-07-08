@@ -53,7 +53,18 @@ Several features are now available based on our move to OpenStack Mitaka.
 
  * It is now possible to set up autoscaling groups and LBaaS (v2) using Heat templates and the Horizon dashboard.
  * The Mitaka release introduces the new **aodh** alert service, which will be installed on any environment that has Ceilometer enabled.
- * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
+ * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/). 
+ * Specific OpenStack Services Enabled for IBM Blue Box 3.0.0 in Mitaka Release:
+
+  * Block Storage API & Extensions (Cinder v2.0)
+  * Compute API & Extensions (Nova v2.1)
+  * Dashboard (Horizon ) API N/A
+  * Identity API & Extensions (Keystone v3.0)
+  * Image Service API (Glance v2.2)
+  * Networking API & Extensions (Neutron v2.0, Neutron LBaaS v2)
+  * Object Storage API & Extensions (Swift v1.0)
+  * Orchestration API (Heat v1.0)
+  * Telemetry API (Ceilometer v2.0) (plus aodh)
 
 <a name="federated-keystone"></a>**Keystone-to-Keystone federation across multiple IBM Blue Box clouds:**
 Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K setup article for you.](http://ibm-blue-box-help.github.io/help-documentation/keystone/k2k-federation/)
@@ -102,6 +113,7 @@ You can select from the following compute node extensions to add to your IBM Blu
  * Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
  * PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
  * Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
+ * Can delete `lbaas-pool` with `lbaas-hm` still attached. When this happens, even `admin` cannot delete the remaining Health Monitor, except by going into the database directly. https://bugs.launchpad.net/neutron/+bug/1526964
  
 **Horizon Dashboard and projects:**
 
