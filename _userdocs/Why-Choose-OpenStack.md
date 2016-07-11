@@ -62,12 +62,12 @@ _Figure 4. OpenStack High-Level Architecture, by Components_
 The projects commonly referred to as Core were among those first developed by the OpenStack community. They have undergone years of use and testing in production environments, and they are still the most widely deployed OpenStack components. Together, these components are standardized on the same open platform and APIs that power a global network of public and private clouds. Additionally, The Core Projects provide a strategic, viable replacement for traditional capital expenditures on infrastructure.
 
 The OpenStack Core Infrastructure (IaaS) projects are: 
-* **Nova** (Compute)
-* **Cinder** (Block Storage) 
-* **Swift** (Object Storage)
-* **Neutron** (Network)
-* **Glance** (Images)
-* **Keystone** (Identity)
+ * **Nova** (Compute)
+ * **Cinder** (Block Storage) 
+ * **Swift** (Object Storage)
+ * **Neutron** (Network)
+ * **Glance** (Images)
+ * **Keystone** (Identity)
 
 In fact, these services (except Swift) originally began as parts of Nova, the compute service that was the very first OpenStack project (along with Swift). Each project was either separated from Nova (Glance and Cinder) or re-implemented later (Neutron). Together, Glance, Cinder, and Swift comprise the data handling and storage capabilities of OpenStack. Neutron consolidates the networking features of OpenStack into an easily deployable form. Ironic assists with automated hardware provisioning, to allow for complete IaaS functionality and extensibility.
 
@@ -124,7 +124,7 @@ Each of the OpenStack projects covered in this section serves as a wrapper for a
 **Ongoing Improvement**: Other Projects in the Big Tent
 OpenStack services constantly are being incubated, implemented, and improved to meet the quality bar already established by these widely deployed OpenStack modules described previously: integrated IaaS, supporting IaaS, and PaaS. Some of the current incubated projects under the Big Tent include Deployment Service (TripleO), DNS-as-a-Service (Designate), Key Management (Barbican), Load-Balancing-as-a-Service (Octavia), Firewall-as-a-Service, Network Function Virtualization (NFV), and others. 
 
-##OpenStack Cloud Delivery Methods
+## OpenStack Cloud Delivery Methods
 
 You might ask: Now that I know all of this, how do I actually *get* an OpenStack Cloud? OpenStack software currently is delivered to customers in three primary ways: 
 
