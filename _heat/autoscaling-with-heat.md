@@ -266,12 +266,12 @@ member:
 ## Process diagrams
 The following diagram shows the process when you launch the Heat stack:
 
-![This figure depicts the process when you launch the Heat stack.]({{site.baseurl}}/img/auto-scale_1.jpg)
+![This figure depicts the process when you launch the Heat stack.]({{site.baseurl}}/img/auto-scale_1.png)
 
 When the VM reaches the high CPU load limit that you set, the alarm in Ceilometer triggers and a new VM is initialized. This diagram shows the process:
 
-![This figure depicts the process when the VM reaches the high CPU limit.]({{site.baseurl}}/img/auto-scale_2.jpg)
+![This figure depicts the process when the VM reaches the high CPU limit.]({{site.baseurl}}/img/auto-scale_2.png)
 
 The same process occurs when a VM reaches the low CPU load limit as shown in this diagram:
 
-![This figure depicts the process when the VM reaches the low CPU limit.]({{site.baseurl}}/img/auto-scale_3.jpg)
+![This figure depicts the process when the VM reaches the low CPU limit.]({{site.baseurl}}/img/auto-scale_3.png)
