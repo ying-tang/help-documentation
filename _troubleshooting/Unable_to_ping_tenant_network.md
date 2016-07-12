@@ -83,7 +83,7 @@ root@ds0006:~# neutron router-show the_router
 
 If you run `neutron router-gateway-set the_router external` it will allocate a floating IP to the router and allow it to reach the outside world.
 
-**Q.** The lack of an external gateway on the `my_rotuer` was intentional. We would like to "hide" the `private_network` as much as possible from the outside world. We were hoping to be able to route traffic destined for the public internet via the default router, which already has an external gateway configured. Do you know if this is possible and, if it is, are you able to tell us how to achieve this?
+**Q.** The lack of an external gateway on the `my_router` was intentional. We would like to "hide" the `private_network` as much as possible from the outside world. We were hoping to be able to route traffic destined for the public internet via the default router, which already has an external gateway configured. Do you know if this is possible and, if it is, are you able to tell us how to achieve this?
 
 **A.** It may be possible to add a default router to `my_router` like so:
 ```
@@ -124,7 +124,7 @@ root@ds0095:~# neutron router-show clwtest
 +-----------------------+--------------------------------------------------------+
 ```
 
-**Q.** FYI... the instances that we intend to attach to the `private_network` are truly internal, that is, they will never be allocated a floating IP. This is actually a majority of our instances... there are only about 4 instances that need to have a floating IP in our offering.
+**Discussion**: FYI... the instances that we intend to attach to the `private_network` are truly internal, that is, they will never be allocated a floating IP. This is actually a majority of our instances... there are only about 4 instances that need to have a floating IP in our offering.
 
 The intention is to treat the internal network as the equivalent of a DMZ and attach the instances that require a floating IP to it. All of our other instances will be attached to the `private_network` and will only be able to access the public internet by routing traffic via the default router... using the configuration you have identified.
 

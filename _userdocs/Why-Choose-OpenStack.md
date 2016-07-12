@@ -24,7 +24,7 @@ OpenStack™ is an extensive, open source software platform for delivering Infra
 
 **History and Vision**: OpenStack is the fastest growing open source project in history, now with over 20 million lines of code. It is governed by the OpenStack Foundation, which promotes its development, distribution and adoption. The OpenStack project comprises more than 34,000 individual contributors and more than 550 participating companies, all of whom are members of the Foundation. Individual membership to the Foundation is free. Corporate memberships are available at two paid levels, Platinum and Gold. The Foundation is guided by a Board of Directors, composed of individuals and representatives of participating corporations.
 
-**Licensing and Releases**: OpenStack software is available under Apache License, on a bi-annual release schedule (April/May, Oct/Nov). Releases are codenamed alphabetically. The most recent release is named “Mitaka.” Currently, the Newton release is in active development, scheduled to be completed in October  2016. Coinciding with these bi-annual releases, the OpenStack community meets at OpenStack Summits to plan for the upcoming release and to display achievements or use cases. The next OpenStack summit will be held in Barcelona, Spain, in October, 2016.
+**Licensing and Releases**: OpenStack software is available under Apache License, on a bi-annual release schedule (April/May, Oct/Nov). Releases are codenamed alphabetically. The most recent release is named “Mitaka.” Currently, the Newton release is in active development, scheduled to be completed in October  2016. Coinciding with these bi-annual releases, the OpenStack community meets at OpenStack Summits to plan for the upcoming release and to display achievements or use cases. The next OpenStack summit will be held in Barcelona, Spain, in October of 2016.
 
 **Hardware Requirements**: OpenStack works with standard or commodity hardware, no need for specialized vendor hardware. For customers who want to use specific enterprise-grade hardware, drivers are available. A list of these drivers is available on the OpenStack website, in the Marketplace.
 
@@ -62,12 +62,12 @@ _Figure 4. OpenStack High-Level Architecture, by Components_
 The projects commonly referred to as Core were among those first developed by the OpenStack community. They have undergone years of use and testing in production environments, and they are still the most widely deployed OpenStack components. Together, these components are standardized on the same open platform and APIs that power a global network of public and private clouds. Additionally, The Core Projects provide a strategic, viable replacement for traditional capital expenditures on infrastructure.
 
 The OpenStack Core Infrastructure (IaaS) projects are: 
-* **Nova** (Compute)
-* **Cinder** (Block Storage) 
-* **Swift** (Object Storage)
-* **Neutron** (Network)
-* **Glance** (Images)
-* **Keystone** (Identity)
+ * **Nova** (Compute)
+ * **Cinder** (Block Storage) 
+ * **Swift** (Object Storage)
+ * **Neutron** (Network)
+ * **Glance** (Images)
+ * **Keystone** (Identity)
 
 In fact, these services (except Swift) originally began as parts of Nova, the compute service that was the very first OpenStack project (along with Swift). Each project was either separated from Nova (Glance and Cinder) or re-implemented later (Neutron). Together, Glance, Cinder, and Swift comprise the data handling and storage capabilities of OpenStack. Neutron consolidates the networking features of OpenStack into an easily deployable form. Ironic assists with automated hardware provisioning, to allow for complete IaaS functionality and extensibility.
 
@@ -124,7 +124,7 @@ Each of the OpenStack projects covered in this section serves as a wrapper for a
 **Ongoing Improvement**: Other Projects in the Big Tent
 OpenStack services constantly are being incubated, implemented, and improved to meet the quality bar already established by these widely deployed OpenStack modules described previously: integrated IaaS, supporting IaaS, and PaaS. Some of the current incubated projects under the Big Tent include Deployment Service (TripleO), DNS-as-a-Service (Designate), Key Management (Barbican), Load-Balancing-as-a-Service (Octavia), Firewall-as-a-Service, Network Function Virtualization (NFV), and others. 
 
-##OpenStack Cloud Delivery Methods
+## OpenStack Cloud Delivery Methods
 
 You might ask: Now that I know all of this, how do I actually *get* an OpenStack Cloud? OpenStack software currently is delivered to customers in three primary ways: 
 

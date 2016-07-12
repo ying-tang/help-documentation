@@ -55,6 +55,18 @@ Several features are now available based on our move to OpenStack Mitaka.
  * The Mitaka release introduces the new **aodh** alert service, which will be installed on any environment that has Ceilometer enabled.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
+**Specific OpenStack Services Enabled for IBM Blue Box 3.0.0 in Mitaka Release:**
+
+ *  Block Storage API & Extensions (Cinder v2.0)
+ * Compute API & Extensions (Nova v2.1)
+ * Dashboard (Horizon ) API N/A
+ * Identity API & Extensions (Keystone v3.0)
+ * Image Service API (Glance v2.2)
+ * Networking API & Extensions (Neutron v2.0, Neutron LBaaS v2)
+ * Object Storage API & Extensions (Swift v1.0)
+ * Orchestration API (Heat v1.0)
+ * Telemetry API (Ceilometer v2.0) (plus aodh)
+
 <a name="federated-keystone"></a>**Keystone-to-Keystone federation across multiple IBM Blue Box clouds:**
 Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using your user credentials stored on one Keystone Identity Provider. [We've created a K2K setup article for you.](http://ibm-blue-box-help.github.io/help-documentation/keystone/k2k-federation/)
 
@@ -75,9 +87,15 @@ You can select from the following compute node extensions to add to your IBM Blu
  * You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
  * You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE (Previously available)
  * You can select POWER Compute Nodes (Habañero): These nodes particularly support IBM Watson applications, and others.
+<<<<<<< HEAD:_commontech/Customer_3.0.0_Release_Notes.md
 
 <a name="block-storage"></a>**Hybrid Block Storage Nodes:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster.
 
+=======
+
+<a name="block-storage"></a>**Hybrid Block Storage Nodes:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster.
+
+>>>>>>> IBM-Blue-Box-Help/gh-pages:_commontech/Customer_3.0.0_Release_Notes.md
  * You can select Block Storage: SSD or HYBRID
 
 <a name="hipaa"></a>**HIPAA-enabled Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
@@ -102,6 +120,7 @@ You can select from the following compute node extensions to add to your IBM Blu
  * Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
  * PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
  * Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
+ * Can delete `lbaas-pool` with `lbaas-hm` still attached. When this happens, even `admin` cannot delete the remaining Health Monitor, except by going into the database directly. https://bugs.launchpad.net/neutron/+bug/1526964
  
 **Horizon Dashboard and projects:**
 

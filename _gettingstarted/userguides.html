@@ -9,9 +9,15 @@ top-level: usergudes
   <li>
       {% if page.title %}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	     {% if page.category != 'patch' %}
             <a class="page--link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
 		 {% endif %}
+=======
+    	{% if page.featured != 'hidden' %}
+      		<a class="page--link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+>>>>>>> IBM-Blue-Box-Help/gh-pages
 =======
     	{% if page.featured != 'hidden' %}
       		<a class="page--link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
