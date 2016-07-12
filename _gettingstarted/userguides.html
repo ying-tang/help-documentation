@@ -1,15 +1,22 @@
 ---
 layout: page
 title:  "User Guides"
-categories: gettingstarted userguides
+category: top-level
+top-level: usergudes
 ---
 
 {% for page in site.userguides %}
   <li>
       {% if page.title %}
+<<<<<<< HEAD
 	     {% if page.category != 'patch' %}
             <a class="page--link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
 		 {% endif %}
+=======
+    	{% if page.featured != 'hidden' %}
+      		<a class="page--link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+>>>>>>> IBM-Blue-Box-Help/gh-pages
       {% endif %}
   </li>
 {% endfor %}

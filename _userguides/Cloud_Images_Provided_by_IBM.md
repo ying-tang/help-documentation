@@ -35,7 +35,7 @@ The IBM Blue Box Cloud in this release comes pre-populated with Cirros 0.3.3 x86
 
 You may upload and install separately-acquired operating system software, or you may provision any of the following operating system images that we make available to you as a virtual machine instance.  You are responsible to comply with all applicable operating system license terms and to acquire proper entitlements for each virtual machine instance.
 
-* CentOS 6.7 x86_64
+* CentOS 6.8 x86_64
 * CentOS 7.2 x86_64
 * Ubuntu Server 12.04 LTS x86_64
 * Ubuntu Server 14.04 LTS x86_64
