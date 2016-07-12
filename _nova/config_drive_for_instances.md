@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Can I create an instance and add files to an image using config drive?"
-tags: [nova, inject files]
+title:  "Can I create an instance and add files to it using config drive?"
+tags: [nova, inject files, config drive]
 dateAdded: June 1, 2016
 featured: false
 author: Ying Tang
