@@ -20,13 +20,13 @@ A common problem occurs when customers are unable to SSH or ping an instance.  H
 
 If you have done all of these steps and you can't get SSH or ping to work, and `ssh -vvv` isn't providing any clues, contact us.  We will check the following items from our side:
 
-1. Does the public network match the local LAN?
+ * Does the public network match the local LAN?
 
 {% highlight bash %}
 ip netns <public namespace id> ping <floating IP>
 {% endhighlight %}
 
-2. Is traffic is being routed correctly out of the instance?
+ * Is traffic is being routed correctly out of the instance?
 
 {% highlight bash %}
 ip netns exec <private namespace id>
