@@ -9,7 +9,7 @@ featured: false
 weight: 4
 ---
 
-Since users have root access to their instances and we want to restrict access to the host hypervisors: anytime information flows from the instance to the hypervisor it should be through secured interfaces. We should think very carefully before introducing any more avenues for information to move from the guest instance to the hypervisor. 
+Users have root access to their instances, and we want to restrict access to the host hypervisors. Therefore, anytime information flows from the instance to the hypervisor, it should be through secured interfaces. We should think very carefully before introducing any more avenues for information to move from the guest instance to the hypervisor. 
 
 The existing interfaces:
 
@@ -17,4 +17,4 @@ The existing interfaces:
 2. Network services: metadata, DHCP, etc -- these are run by Neutron in network namespaces.
 3. OpenStack APIs
 
-These represent the security boundary between users the stack itself. If there is a security weakness in one of these, it could be used to gain access to the hypervisor and potentially to other tenants.
+These interfaces represent the security boundary between users and the stack itself. If there is a security weakness in one of these areas, it could be used to gain access to the hypervisor and potentially to other tenants.
