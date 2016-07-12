@@ -10,29 +10,22 @@ Red Hat has [a good article on launching an instance from a volume](https://acce
 
 1. Choose an image to create a bootable volume from:
 
-{% highlight bash %}
-$nova image-list
-{% endhighlight %}
+		$nova image-list
 
 2. Create a bootable volume from the image using the image ID:
 
-{% highlight bash %}
-# cinder create --image-id e0b7734d-2331-42a3-b19e-067adc0da17d --display-name my-boot-vol 8
-{% endhighlight %}
+		# cinder create --image-id e0b7734d-2331-42a3-b19e-067adc0da17d --display-name my-boot-vol 8
 
 3. List volumes:
-{% highlight bash %}
-$ cinder list
-{% endhighlight %}
+
+		$ cinder list
 
 4. Launch the instance:
 
-{% highlight bash %}
-$ nova boot --flavor 2 --image e0b7734d-2331-42a3-b19e-067adc0da17d \ --block_device_mapping vda=3195a5a7-fd0d-4ac3-b919-7ba6cbe11d46:::0 myInstanceFromVolume
-{% endhighlight %}
+		$ nova boot --flavor 2 --image e0b7734d-2331-42a3-b19e-067adc0da17d \ --block_device_mapping vda=3195a5a7-fd0d-4ac3-b919-7ba6cbe11d46:::0 myInstanceFromVolume
+
 
 5. Observe that the volume is attached to a server when you list volumes:
 
-{% highlight bash %}
-$ nova volume-list
-{% endhighlight %}
+		$ nova volume-list
+
