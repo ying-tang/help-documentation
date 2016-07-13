@@ -119,6 +119,9 @@ $ neutron ext-list | grep allowed-address-pairs
 ```
 {% endhighlight %}
 
+
+**Note:** You cannot have `allowed_address_pairs` enabled and port security disabled on the SAME Neutron port, because they are mutually exclusive.
+
 * Create a VRRP security group.
 
 This security group is used to communicate to your HA nodes. In this instance, we're permitting `SSH` access, but you can make this protocol `HTTP`, `HTTPS`, etc...
