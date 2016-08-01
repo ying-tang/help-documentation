@@ -4,7 +4,7 @@ title:  "Why Can't I See My New vCPUs Listed in Horizon?"
 dateAdded: August 1st, 2016
 featured: false
 weight: 4
-tags: [horizon, overcommit, vcpu]
+tags: [troubleshooting, horizon, nova, overcommit, vcpu]
 ---
 
 **Q.** After you enabled 2x CPU overcommit on my cluster, why aren't the new VCPUs listed in Horizon?
