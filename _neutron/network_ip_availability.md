@@ -19,11 +19,11 @@ In OpenStack Mitaka and above, availability commands let you check the availabil
 **A.** There’s an API call and a client call for resource allocation reporting:
 
 ```
-$ net-ip-availability-list
+> neutron net-ip-availability-list
 ```
 This command gives information about how many floating IPs are used, and how many are still available, of these “consumables.” It returns information something like this (example networks):
+
 ```
-root@ds0069:~# neutron net-ip-availability-list
 +--------------------------------------+----------------------------------------------------+-----------+----------+
 | network_id                           | network_name                                       | total_ips | used_ips |
 +--------------------------------------+----------------------------------------------------+-----------+----------+
