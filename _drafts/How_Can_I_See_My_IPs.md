@@ -12,7 +12,9 @@ dateAdded: August 4, 2016
 
 **A. You can follow the examples below to find your current IP ranges and availability:**
 
-First, find the `network_id` for each of the networks using the `neutron net-list` command with `egrep`, as shown below (the values returned here are example networks):
+First, find the `network_id` for each of the networks using the `neutron net-list` command with `egrep` as shown below: 
+
+(The values returned here are example networks.)
 ```
 > neutron net-list | egrep "external|internal"
 | 0d13276b-c364-443a-9217-4af45e9e38f1 | external     | #this is the external network_id
@@ -29,9 +31,9 @@ Next, enter the `network_id` of the external network to find available IPs there
 You will get back something like this:
 
 ```
-+——————————---—---      —+————————————————————————————————————————————————————----—————+
++——————————---—---------—+————————————————————————————————————————————————————----—————+
 | Field                  |      Value                                                  |
-+—————————--------------—+   —————————————————————————————————————————————————————-————+
++—————————--------------—+---—————————————————————————————————————————————————————-————+
 | network_id             | 0d13276b-c364-443a-9217-4af45e9e38f1                        |
 | network_name           | external                                                    |
 | subnet_ip_availability | {"used_ips": 2, "subnet_id": "46f82bc8-d180-46dd-9914-8733eddae793", "subnet_name": "external", "ip_version": 4, |
