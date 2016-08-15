@@ -15,8 +15,6 @@ tags: [release notes, 3.0.1]
 
 This 3.0.1 Point Release is created primarily to fix some bugs that were affecting a few of our customers. Here are the changes that may affect your customer experience:
 
-**Customer-Visible Issues and Features:**
-
  * The command `neutron net-list` no longer lists subnet information for the external network. Starting in this release, you can use the command `neutron net-ip-availability-show external` to get that information.
 
  * Keystone now allows users to update their own properties in Horizon. Additional workaround: User also can change password with **Settings -> Change Password**.
