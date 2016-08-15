@@ -11,8 +11,6 @@ tags: [release notes, 3.0.1]
 #### August 15, 2016
 
 
-The official version of these Release Notes is maintained on the customer help site: http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Customer_3.0.1_Point_Release/
-
 #### Release Notes
 
 This 3.0.1 Point Release is created primarily to fix some bugs that were affecting a few of our customers. Here are the changes that may affect your customer experience:
