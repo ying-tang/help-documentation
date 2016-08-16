@@ -21,6 +21,6 @@ This 3.0.1 Point Release is created primarily to fix some bugs that were affecti
 
  * Previously, customers have been unable to set quotas in **Horizon**. This is a known upstream limitation, already given in the Known Limitations section of the [3.0.0 Release Notes](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Customer_3.0.0_Release_Notes/), which we are now overriding to resolve in our deployments. 
 
- * We’ll be giving earlier notifications to customers who are reaching their capacity in Ceph. We will warn you via ticket if your overall cluster capacity reaches or exceeds 75%, and if any single storage area exceeds 70%.
+ * We’ll be giving earlier notifications to customers who are reaching their capacity in Ceph. We will warn you via ticket if your overall cluster capacity reaches or exceeds 75%, and if any single logical disk exceeds 70%.
 
  *  Customers currently are unable to update users through the **Edit** button. Workaround: [Will be] Documented in these release notes.
