@@ -7,18 +7,21 @@ tags: [getting started, status page]
 dateAdded: May 5th, 2015
 ---
 
-##Blue Box Group Network Status
+## IBM Blue Box Group Network Status
 
-At the Blue Box Group, we strive to keep our customers informed of any changes in network status as well as maintenance windows and upgrades.
+At the IBM Blue Box Group, we strive to keep our customers informed of any changes in network status as well as maintenance windows and upgrades.
 
 
 _On the Web_
 
 You can always find the latest network status information by visiting:
+
 ```
 https://blueboxstatus.com/
 ```
+
 If you have any trouble loading that site, you can still go to our old page, located here:
+
 ```
 http://status.bluebox.net
 ```
