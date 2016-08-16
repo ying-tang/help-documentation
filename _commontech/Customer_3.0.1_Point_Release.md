@@ -21,6 +21,6 @@ This 3.0.1 Point Release is created primarily to fix some bugs that were affecti
 
  * Previously, customers have been unable to set quotas in **Horizon**. This is a known upstream limitation, already given in 3.0.0 Release Notes, that we are now overriding to resolve in our deployments. 
 
- * We’ve adjusted our Ceph alerting thresholds to give alerts at 70% usage, so there is plenty of time to take action before 95% is reached and Ceph becomes unavailable.
+ * We’ll be giving earlier notifications to customers who are reaching their capacity in Ceph. We will warn you via ticket if your overall cluster capacity reaches or exceeds 75%, and if any single storage area exceeds 70%.
 
  *  Customers currently are unable to update users through the **Edit** button. Workaround: [Will be] Documented in these release notes.
