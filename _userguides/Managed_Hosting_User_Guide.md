@@ -15,6 +15,6 @@ This document offers a way for our Blue Box Managed Hosting customers to find in
 
 To learn how to get the latest Blue Box status updates, including information about maintenance windows, visit the [Blue Box Status Pages](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commonadmin/status-pages/).
 
-To learn how to transfer your domain name from Blue Box to your new cloud service provider, please visit our [article on that topic](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/Transferring_A_Domain_From_Blue_Box.md).
+To learn how to transfer your domain name from Blue Box to your new cloud service provider, please visit our [article on that topic](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commonadmin/Transferring_A_Domain_From_Blue_Box/).
 
 Best wishes to you from the IBM Blue Box support team.
