@@ -9,13 +9,22 @@ dateAdded: November 16th, 2015
 
 Your **IBM Blue Box** Cloud was provisioned with API endpoints for all of the major services running underneath.  Here is how to set up your local system to access these services.
 
-**Install python**
-
 **On Mac OSX:**
 
+**Install Python**
+
+**Note:** OSX El Capitan introduced a mechanisms to prevent damaging the operating system files. `/System/Library/Frameworks/Python.framework/Versions/2.7/share` is one of the protected locations. A normal user has no reason to put or write any files there. Therefore, we do not receommend the use of `sudo pip` to install Python.
+
+Instead, install a Python package, such as IPython, locally to the home folder of your user. The easiest way is to create a virtual environment, activate it and then run `pip` in the virtual environment.
+
+Example:
+
 {% highlight bash %}
-sudo easy_install pip
-sudo pip install python-novaclient
+cd ~ # Go to home directory
+virtualenv my-venv
+source my-venv/bin/activate
+pip install IPython
+pip install python-novaclient
 {% endhighlight %}
 
 **Set up your local `stackrc` file**

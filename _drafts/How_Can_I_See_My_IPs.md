@@ -1,65 +1,14 @@
 ---
 layout: page
-title: How Can I Check My Network IP Availability?
+title: "How Can I See My IPs?"
 featured: false
-weight: 3
-tags: [neutron, IP, availability]
+weight: 5
+tags: [neutron, external ip, internal ip, available ip]
+author: Blue Box Support
 dateAdded: August 4, 2016
-author: Leslie Lundquist
 ---
 
-## How Can I Check My Network IP Availability?
-
-In OpenStack Mitaka and above, availability commands let you check the availability of IPs more easily.
-
-### Floating IP Pool Availability
-
-**Q.** How can I check to see how many Floating IPs are left in my availability pool? 
-
-**A.** There’s an API call and a client call for resource allocation reporting:
-
-```
-> neutron net-ip-availability-list
-```
-This command gives information about how many floating IPs are used, and how many are still available, of these “consumables.” It returns information something like this (example networks):
-
-```
-+--------------------------------------+----------------------------------------------------+-----------+----------+
-| network_id                           | network_name                                       | total_ips | used_ips |
-+--------------------------------------+----------------------------------------------------+-----------+----------+
-| 07f4db1a-14a4-4591-a8d8-d9c9e9b79fb6 | external                                           |        29 |        6 |
-| 8e1594ed-305a-4e6b-b70e-b04059546ee8 | HA network tenant 5c3fd55db4f54096bd348f9774cea4c9 |     16382 |        2 |
-| 6c8f7106-7d6a-4204-9a0e-372a8b7b7ed8 | internal                                           |      2042 |       10 |
-| e33c63e6-ee7c-40a5-915a-29e7a625e731 | HA network tenant 758ff559d5df4960b0fe5d3dbd239997 |     16382 |        2 |
-+--------------------------------------+----------------------------------------------------+-----------+----------+
-```
-To get even more information, you can use another command, which provides the CIDR and more details on used IPs:
-
-```
-> neutron net-ip-availability-show internal
-```
-
-Which will return something like this:
-
-```
-+------------------------+-------------------------------------------------------------------------------------------------+
-| Field                  | Value                                                                                           |
-+------------------------+-------------------------------------------------------------------------------------------------+
-| network_id             | 6c8f7106-7d6a-4204-9a0e-372a8b7b7ed8                                                            |
-| network_name           | internal                                                                                        |
-| subnet_ip_availability | {"used_ips": 8, "subnet_id": "ddf06c18-8de9-4f59-ad38-f29831931ad3", "subnet_name": "internal", "ip_version": 4, "cidr":               |
-|                        | "192.168.0.0/22", "total_ips": 1021}                                                            |
-|                        | {"used_ips": 2, "subnet_id": "f3f651ca-8ef0-4f86-a802-2370d147cd14", "subnet_name": "test-external", "ip_version": 4, "cidr":          |
-|                        | "169.46.132.0/22", "total_ips": 1021}                                                           |
-| tenant_id              | 758ff559d5df4960b0fe5d3dbd239997                                                                |
-| total_ips              | 2042                                                                                            |
-| used_ips               | 10                                                                                              |
-+------------------------+-------------------------------------------------------------------------------------------------+
-```
-
-### Internal and External Network IP Availability
-
-**Q. How can I find out how many IPs I have left, and what IP ranges are currently available?**
+**Q. How do I know how many IPs I have left, and what IP ranges are currently available?**
 
 **A. You can follow the examples below to find your current IP ranges and availability:**
 
@@ -115,5 +64,3 @@ You will get back something like this:
 | used_ips               | 3                                                                                               |
 +------------------------+-------------------------------------------------------------------------------------------------+
 ```
-
-
