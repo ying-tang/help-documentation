@@ -8,8 +8,9 @@ tags: [release notes, 3.0.1]
 
 
 ### IBM Blue Box Cloud Customer
-### Point Release 3.0.1
-#### August 17, 2016
+###Point Release 3.0.1
+
+**August 17, 2016**
 
 
 #### Release Notes
