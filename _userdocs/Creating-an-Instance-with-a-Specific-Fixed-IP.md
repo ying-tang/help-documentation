@@ -12,7 +12,7 @@ You will need to utilize either the API or the command line tools to do these st
 
 ## Pre-requisites
 
-1. If you are going to use the command line (CLI) tools, ensure you have both of these tools installed. You can find installation instructions for both tools in our knowledge base: **Getting started with the OpenStack API**
+1. If you are going to use the command line (CLI) tools, ensure you have both of these tools installed. You can find installation instructions for both tools in our knowledge base: [**Getting started with the OpenStack API**](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/)
 
 * `NeutronClient`
 * `NovaClient`
