@@ -3,6 +3,7 @@ layout: page
 title: IBM Blue Box Managed Hosting User Guide
 author: Leslie Lundquist
 featured: false
+weight: 20
 dateAdded: August 17, 2016
 keywords: [managed hosting, domain name, registrar, status page]
 ---
