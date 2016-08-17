@@ -2,18 +2,17 @@
 layout: page
 title: Customer 3.0.1 Point Release Notes
 author: Leslie Lundquist
+featured: true
 dateAdded: August 15, 2016
 tags: [release notes, 3.0.1]
 ---
 
 
 ### IBM Blue Box Cloud Customer
-###Point Release 3.0.1
+### Point Release 3.0.1
 
 **August 17, 2016**
 
-
-#### Release Notes
 
 This 3.0.1 Point Release is created primarily to fix some bugs that were affecting a few of our customers. Here are the changes that may affect your customer experience:
 
