@@ -245,7 +245,10 @@ The **Customization Script** field specifies a customization script that runs af
 To enable password authentication through console and SSH, use the following script data for the Customization Script (with the relevant password in place of `<YOUR_PASSWORD>` ):
 
 ```
-#cloud-config password: <YOUR_PASSWORD> chpasswd: { expire: False } ssh_pwauth: True
+#cloud-config 
+password: <YOUR_PASSWORD> 
+chpasswd: { expire: False } 
+ssh_pwauth: True
 ```
 
 **For Windows instances:**  

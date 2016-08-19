@@ -81,8 +81,8 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 ![ ](http://ibm-blue-box-help.github.io/help-documentation/img/Download_Cloud_Image.png)
 
-### Help Documentation
-1
+### Finding the Help Documentation
+
 From your Box Panel dashboard, you'll see  a link on the Nav Bar (the rightmost link) called **Docs**. If you select that link, a Dropdown menu appears, with the options of **OpenStack**, or **Managed Hosting**. To view the Customer Help documentation for IBM Blue Box Cloud, select **OpenStack**. The Help page will appear. You can browse the documentation by category, or you can search, using the search bar. By hovering over one of the icons, you can see a list of articles within that topic area. 
 
 ![ ](http://ibm-blue-box-help.github.io/help-documentation/img/Managed_Hosting.png)
@@ -95,32 +95,40 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 
 **To create a ticket:**
 
-1. Open a new ticket from the **Support** page. 
+Step 1. Open a new ticket from the **Support** page. 
 
 ![ ]()
 
-2. In the Modal window, your name should show up as the **Ticket Creator.**
-3. Copy additional users in the **CC** field to make them aware of the ticket and track its status. 
-4. Add a descriptive subject to the ticket. 
-5. Collect and add all useful information to the **Description** section, such as: 
-   * Date and time the issue began 
-   * Frequency of the issue (permanent or constant, at a particular time of day, etc.) 
-   * Steps you have taken to replicate the issue 
-   * Affected server name(s) 
-   * Affected data center(s) 
-   * Any error messages returned
-   * Applicable server logs 
-   * Any additional useful information 
-6. Include attachments, such as log files, right below the **Description** section. 
-7. If your deployment is for a new cloud, check the **Deployment** box.
+Step 2. In the Modal window, your name should show up as the **Ticket Creator.**
+
+Step 3. Copy additional users in the **CC** field to make them aware of the ticket and track its status.
+
+Step 4. Add a descriptive subject to the ticket.
+
+Step 5. Collect and add all useful information to the **Description** section, such as:
+
+ * Date and time the issue began 
+ * Frequency of the issue (permanent or constant, at a particular time of day, etc.) 
+ * Steps you have taken to replicate the issue 
+ * Affected server name(s) 
+ * Affected data center(s) 
+ * Any error messages returned
+ * Applicable server logs 
+ * Any additional useful information
+
+Step 6. Include attachments, such as log files, right below the **Description** section.
+
+Step 7. If your deployment is for a new cloud, check the **Deployment** box.
 
 ![ ](https://cloud.githubusercontent.com/assets/17212946/15032633/850d3d4a-1228-11e6-9b37-c20e5d32d9b9.png)
 
 **Note: Steps 8 and 9 can be skipped for non-urgent concerns.**
 
- 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This click will prompt an acknowledgement that you consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages). 
- 9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box. 
- 10. Finally, click the **Create Ticket** box. 
+ Step 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This click will prompt an acknowledgement that you consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages).
+ 
+ Step 9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box.
+ 
+ Step 10. Finally, click the **Create Ticket** box. 
 
 **Using Your Support Ticket**
 

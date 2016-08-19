@@ -33,16 +33,20 @@ A `stackrc` file defines the environment variables that will let your **Nova** c
 
 {% highlight bash %}
 # ~/stackrc
-export NOVA_VERSION=1.1
+export OS_IDENTITY_API_VERSION=3
 export OS_PASSWORD=yoursecretpassword
-export OS_AUTH_URL=https://example.openstack.blueboxgrid.com:5001/v2.0
+export OS_AUTH_URL=https://example.openstack.blueboxgrid.com:5000/v3
 export OS_USERNAME=yourname
-export OS_TENANT_NAME=projectname
-export COMPUTE_API_VERSION=1.1
+export OS_PROJECT_NAME=projectname
+export OS_TENANT_NAME=tenantname
+export OS_USER_DOMAIN_NAME=domainname
+export OS_PROJECT_DOMAIN_NAME=projectdomainname
+export OS_CACERT=yourpathtocertificate
+export OS_COMPUTE_API_VERSION=2.1
 export OS_NO_CACHE=True
 {% endhighlight %}
 
-Create a `stackrc` for yourself, replacing the `OS_TENANT_NAME`, `OS_USERNAME`, and `OS_PASSWORD` fields with your own.
+Create a `stackrc` for yourself, replacing the `OS_USERNAME`, `OS_PROJECT_NAME`, `OS_TENANT_NAME`, `OS_USER_DOMAIN_NAME`, `OS_PROJECT_DOMAIN_NAME`,`OS_CACERT` and `OS_PASSWORD` fields with your own.
 
 **Note**: If you are concerned about storing your password in this file, leave the password field blank; you will be asked to enter a password after sourcing the `stackrc` file.
 
