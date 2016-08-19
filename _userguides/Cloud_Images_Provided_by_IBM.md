@@ -222,19 +222,7 @@ $ glance image-show <image-id>
 
 ### Create a VM instance using the OpenStack Dashboard
 
-1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
-
-2. Expand the **Project** and **Compute** sections in the navigation area, and select **Images**. The dashboard shows the images that have been uploaded to OpenStack Glance repository and made available for this project.
-
-3. Select an image and click **Launch**.
-
-4. In the **Launch Instance** dialog box, specify field values in the **Details**, **Access & Security**, **Networking**, and **Post-Creation** tabs. For more details about these fields, see the following tables.
-   
-5. Click **Launch**.
-
-![Launch an instance from your uploaded image]({{site.baseurl}}/img/launch_instance_from_image.png)
-
-Then you will see the newly created instance in your instances list. The instance is queued for creation. It might take some time before the status changes from "Build" to "Active."
+See [Launching an instance from the Horizon dashboard](http://ibm-blue-box-help.github.io/help-documentation/horizon/launch-instance-from-horizon/) for the details about the steps.
 
 ### Set initial username and password in Post-Creation tab
 
