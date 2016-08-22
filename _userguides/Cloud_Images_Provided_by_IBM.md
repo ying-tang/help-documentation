@@ -84,7 +84,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 	| **Image Source**       | Choose **Image Location**.                                                                                       |
 	| **Image Location**     | Specify the Cloud Image download `tempURL`.                                                                      |
 	| **Format**             | Select the correct format (for example, `QCOW2`) for the image.                                                  |
-	| **Architecture**       | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).  |
+	| **Architecture**       | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86_64` for a 64-bit architecture).  |
 	| **Minimum Disk(GB)**   | For Linux Image, use 5; For Windows Image, use 25.                                                               |
 	| **Minimum RAM(MB)**    | For Linux Image, use 512; For Windows Image, use 2048.                                                           |
 	| **Copy Data**          | This option must be checked to copy image data to image service.                                                 |
@@ -98,7 +98,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 		Image Source: Image Location
 		Image File: <tempURL_for_QCOW2>
 		Format: QCOW2 - QEMU Emulator
-		Architecture: x86-64
+		Architecture: x86_64
 		Minimum Disk(GB): 5
 		Minimum RAM(MB): 512
 		Copy Data: True
@@ -175,7 +175,7 @@ Follow these steps:
 	| **Image Source**        | Choose **Image File**.                                                                                           |
 	| **Image File**          | Browse to the directory of the image binary file.                                                                |
 	| **Format**              | Select the correct format (for example, `QCOW2`) for the image.                                                  |
-	| **Architecture**        | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).  |
+	| **Architecture**        | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86_64` for a 64-bit architecture).  |
 	| **Minimum Disk(GB)**    | For Linux Image, use 5; For Windows Image, use 25                                                                |
 	| **Minimum RAM(MB)**     | For Linux Image, use 512; For Windows Image, use 2048                                                            |
 	| **Public**              | Select this check box to make the image public to all users on all projects.                                     |
@@ -188,7 +188,7 @@ Follow these steps:
 		Image Source: Image File	
 		Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2	
 		Format: QCOW2 - QEMU Emulator	
-		Architecture: x86-64	
+		Architecture: x86_64	
 		Minimum Disk(GB): 5	
 		Minimum RAM(MB): 512	
 		Public: True	
