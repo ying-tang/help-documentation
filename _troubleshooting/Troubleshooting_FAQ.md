@@ -9,13 +9,13 @@ dateAdded: August 19, 2016
 
 ---
 
-**Q. How Can I Tell When My Host Last Rebooted?**
+**Q. How Can I Tell When My Virtual Machine Last Rebooted?**
 
 **A.** You can use this command 
 ```
 zgrep BOOT_IMAGE /var/log/kern.log* 
 ```
-to see when the virtual machine (VM) last booted, and then use that timestamp to look through the logs to check for any clues regarding issues that you may be troubleshooting. 
+to see when the host (VM) last booted, and then use that timestamp to look through the logs to check for any clues regarding issues that you may be troubleshooting. 
 
 
 
