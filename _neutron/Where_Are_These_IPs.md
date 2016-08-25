@@ -1,11 +1,18 @@
 ---
 layout: page
+
 title: Where Are the First Two IPs?
+
 keywords: [neutron, IP, gateway, available]
+
 author: Ulysses Kanigel
+
 editor: Leslie Lundquist
+
 dateAdded: August 25, 2016
+
 featured: false
+
 weight: 7
 ---
 
