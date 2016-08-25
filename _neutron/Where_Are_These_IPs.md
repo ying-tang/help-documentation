@@ -32,8 +32,8 @@ on my network to find out how many IPs I have available, I found that 29 were al
 +------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
- * 153.122.122.161 is reserved as the gateway IP for your external subnet of 153.122.122.160/27. It is also the Horizon IP.
- * 153.122.122.162 is reserved as the fixed IP assigned to your `router_gateway` port. This address is used to test the reachability of your Neutron router.
+ * `153.122.122.161` is reserved as the gateway IP for your external subnet of `153.122.122.160/27`. It is also the Horizon IP.
+ * `153.122.122.162` is reserved as the fixed IP assigned to your `router_gateway` port. This address is used to test the reachability of your Neutron router.
 	
 	
 These two IPs are essential to the operation of your OpenStack network and are unavailable for use by instances.
