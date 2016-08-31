@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Multi-tier Router Configuration Within Your Cloud
+author: Ulysses Kanigel and Leslie Lundquist
+dateAdded: August 31, 2016
+---
 
 
 ## How To Test a Multi-Tier Router Configuration, and Why You Might Want One
