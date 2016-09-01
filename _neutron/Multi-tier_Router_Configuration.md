@@ -7,7 +7,7 @@ dateAdded: August 31, 2016
 ---
 
 
-## How To Test a Multi-Tier Router Configuration, and Why You Might Want One
+This article explains how to test a Multi-Tier Router Configuration, and why you might want one.
 
 You might want to set up a multi-tier router configuration for your cloud in one of these use cases:
 
