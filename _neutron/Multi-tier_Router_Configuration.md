@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Multi-tier Router Configuration Within Your Cloud
+title: Multi-tier Router Configuration Within Your IBM Blue Box Cloud
 author: Ulysses Kanigel and Leslie Lundquist
 dateAdded: August 31, 2016
 ---
