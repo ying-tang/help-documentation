@@ -130,4 +130,4 @@ rtt min/avg/max/mdev = 1.601/1.635/1.670/0.053 ms
 
 There should be no problems with scaling this design up to include multiple subnets connected to each child router, because the routing is achieved at the child router. 
 
-Note: Remember that any instances that are connected to a child router that is not directly connected to the external network will not be able to have floating IPs associated to them.
+Note: Remember that any instances that are connected to a child router will not be able to have floating IPs associated to them, because that child router is not directly connected to the external network.
