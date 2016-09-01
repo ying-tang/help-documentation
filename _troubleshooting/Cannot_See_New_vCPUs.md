@@ -11,6 +11,8 @@ tags: [troubleshooting, horizon, nova, overcommit, hypervisor, vcpu]
 
 **A.** The `cpu_allocation_ratio` (overcommit) is internally factored in to the decisions made by the Nova scheduler. As a result, while the API (Horizon) only lists, for example, 283 vCPUs total, as shown in the figure below, you will find that you are able to concurrently schedule new instances that require significantly more, up to the expected total (in this example) of 566. This is handled by the CoreFilter filter in the scheduler.
 
+**Please also note:** Enabling overcommit does not affect any currently running virtual machines.  It only affects new virtual machines you create after overcommit is enabled.
+
 ![Hypervisor Summary Screen]({{site.baseurl}}/img/Hypervisor_Summary.png)
 
 Also see https://bugs.launchpad.net/horizon/+bug/1202965 and
