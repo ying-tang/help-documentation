@@ -13,7 +13,7 @@ You might want to set up a multi-tier router configuration for your cloud in one
 
 1. You want to prevent hosts on these (child) subnets from using floating IPs.
 2. You want to create network isolation for these (child) networks from other project or tenant networks within your cloud, by giving each its own (child) router underneath the main router.
-3. You need each of these isolated project networks to have internet ingress and egress, while yet remaining isolated from other networks within your cloud, and also not using floating IPs.
+3. You need each of these isolated project networks to have internet ingress and egress, while remaining isolated from other networks within your cloud, and also not using floating IPs.
 
 The way to establish a multi-tier network initially is to establish static routes from the main router to each of the "child" routers. The main idea of the test is to be sure that these static routes are persistent. In this example, we set up two networks of this type, called `test1` and `test2`.
 
@@ -63,7 +63,7 @@ neutron router-update test-router2 --routes type=dict list=true destination=0.0.
 
 ```
 
-root@ds0096:~# ip netns exec qrouter-0937dbb1-1f57-41b4-958e-326db5df1786 ip route
+root@ds0:~# ip netns exec qrouter-0937dbb1-1f57-41b4-958e-326db5df1786 ip route
 
 default via 162.16.0.1 dev qr-c1b305a1-f6
 
@@ -75,7 +75,7 @@ default via 162.16.0.1 dev qr-c1b305a1-f6
 
 162.16.1.0/24 dev qr-9fab4ce0-54  proto kernel  scope link  src 162.16.1.1
 
-root@ds0096:~# ip netns exec qrouter-0937dbb1-1f57-41b4-958e-326db5df1786 ping 8.8.8.8
+root@ds0:~# ip netns exec qrouter-0937dbb1-1f57-41b4-958e-326db5df1786 ping 8.8.8.8
 
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 
