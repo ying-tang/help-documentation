@@ -58,7 +58,7 @@ neutron router-update test-router2 --routes type=dict list=true destination=0.0.
 
 ```
 
-**Here are the rest results before router failover:**
+**Here are the test results before router failover:**
 
 ```
 
@@ -94,7 +94,7 @@ rtt min/avg/max/mdev = 1.391/1.429/1.477/0.035 ms
 
 ```
 
-**And after failover**
+**And after failover:**
 
 ```
 
