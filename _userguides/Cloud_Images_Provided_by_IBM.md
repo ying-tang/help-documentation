@@ -84,7 +84,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 	| **Image Source**       | Choose **Image Location**.                                                                                       |
 	| **Image Location**     | Specify the Cloud Image download `tempURL`.                                                                      |
 	| **Format**             | Select the correct format (for example, `QCOW2`) for the image.                                                  |
-	| **Architecture**       | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).  |
+	| **Architecture**       | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86_64` for a 64-bit architecture).  |
 	| **Minimum Disk(GB)**   | For Linux Image, use 5; For Windows Image, use 25.                                                               |
 	| **Minimum RAM(MB)**    | For Linux Image, use 512; For Windows Image, use 2048.                                                           |
 	| **Copy Data**          | This option must be checked to copy image data to image service.                                                 |
@@ -98,7 +98,7 @@ You can either upload an image with the [OpenStack dashboard](#createimage-dashb
 		Image Source: Image Location
 		Image File: <tempURL_for_QCOW2>
 		Format: QCOW2 - QEMU Emulator
-		Architecture: x86-64
+		Architecture: x86_64
 		Minimum Disk(GB): 5
 		Minimum RAM(MB): 512
 		Copy Data: True
@@ -175,7 +175,7 @@ Follow these steps:
 	| **Image Source**        | Choose **Image File**.                                                                                           |
 	| **Image File**          | Browse to the directory of the image binary file.                                                                |
 	| **Format**              | Select the correct format (for example, `QCOW2`) for the image.                                                  |
-	| **Architecture**        | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86-64` for a 64-bit architecture).  |
+	| **Architecture**        | Specify the architecture (for example, `i386` for a 32-bit architecture or `x86_64` for a 64-bit architecture).  |
 	| **Minimum Disk(GB)**    | For Linux Image, use 5; For Windows Image, use 25                                                                |
 	| **Minimum RAM(MB)**     | For Linux Image, use 512; For Windows Image, use 2048                                                            |
 	| **Public**              | Select this check box to make the image public to all users on all projects.                                     |
@@ -188,7 +188,7 @@ Follow these steps:
 		Image Source: Image File	
 		Image File: C:\Documents\ubuntu-guest-image-14.04-20160301-x86_64.qcow2	
 		Format: QCOW2 - QEMU Emulator	
-		Architecture: x86-64	
+		Architecture: x86_64	
 		Minimum Disk(GB): 5	
 		Minimum RAM(MB): 512	
 		Public: True	
@@ -222,19 +222,7 @@ $ glance image-show <image-id>
 
 ### Create a VM instance using the OpenStack Dashboard
 
-1. Log in to the IBM Blue Box Cloud OpenStack dashboard.
-
-2. Expand the **Project** and **Compute** sections in the navigation area, and select **Images**. The dashboard shows the images that have been uploaded to OpenStack Glance repository and made available for this project.
-
-3. Select an image and click **Launch**.
-
-4. In the **Launch Instance** dialog box, specify field values in the **Details**, **Access & Security**, **Networking**, and **Post-Creation** tabs. For more details about these fields, see the following tables.
-   
-5. Click **Launch**.
-
-![Launch an instance from your uploaded image]({{site.baseurl}}/img/launch_instance_from_image.png)
-
-Then you will see the newly created instance in your instances list. The instance is queued for creation. It might take some time before the status changes from "Build" to "Active."
+See [Launching an instance from the Horizon dashboard](http://ibm-blue-box-help.github.io/help-documentation/horizon/launch-instance-from-horizon/) for the details about the steps.
 
 ### Set initial username and password in Post-Creation tab
 
