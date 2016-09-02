@@ -3,7 +3,7 @@ layout: page
 title:  "Technical FAQ"
 featured: true
 weight: 8
-tags: [getting started, faq, resize, instance]
+tags: [getting started, faq, resize, instance, admin, project]
 author: Eric French
 dateAdded: April 9th, 2015
 updated: March 18, 2016

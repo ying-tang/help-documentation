@@ -9,13 +9,22 @@ dateAdded: November 16th, 2015
 
 Your **IBM Blue Box** Cloud was provisioned with API endpoints for all of the major services running underneath.  Here is how to set up your local system to access these services.
 
-**Install python**
-
 **On Mac OSX:**
 
+**Install Python**
+
+**Note:** OSX El Capitan introduced a mechanisms to prevent damaging the operating system files. `/System/Library/Frameworks/Python.framework/Versions/2.7/share` is one of the protected locations. A normal user has no reason to put or write any files there. Therefore, we do not receommend the use of `sudo pip` to install Python.
+
+Instead, install a Python package, such as IPython, locally to the home folder of your user. The easiest way is to create a virtual environment, activate it and then run `pip` in the virtual environment.
+
+Example:
+
 {% highlight bash %}
-sudo easy_install pip
-sudo pip install python-novaclient
+cd ~ # Go to home directory
+virtualenv my-venv
+source my-venv/bin/activate
+pip install IPython
+pip install python-novaclient
 {% endhighlight %}
 
 **Set up your local `stackrc` file**
@@ -24,16 +33,20 @@ A `stackrc` file defines the environment variables that will let your **Nova** c
 
 {% highlight bash %}
 # ~/stackrc
-export NOVA_VERSION=1.1
+export OS_IDENTITY_API_VERSION=3
 export OS_PASSWORD=yoursecretpassword
-export OS_AUTH_URL=https://example.openstack.blueboxgrid.com:5001/v2.0
+export OS_AUTH_URL=https://example.openstack.blueboxgrid.com:5000/v3
 export OS_USERNAME=yourname
-export OS_TENANT_NAME=projectname
-export COMPUTE_API_VERSION=1.1
+export OS_PROJECT_NAME=projectname
+export OS_TENANT_NAME=tenantname
+export OS_USER_DOMAIN_NAME=domainname
+export OS_PROJECT_DOMAIN_NAME=projectdomainname
+export OS_CACERT=yourpathtocertificate
+export OS_COMPUTE_API_VERSION=2.1
 export OS_NO_CACHE=True
 {% endhighlight %}
 
-Create a `stackrc` for yourself, replacing the `OS_TENANT_NAME`, `OS_USERNAME`, and `OS_PASSWORD` fields with your own.
+Create a `stackrc` for yourself, replacing the `OS_USERNAME`, `OS_PROJECT_NAME`, `OS_TENANT_NAME`, `OS_USER_DOMAIN_NAME`, `OS_PROJECT_DOMAIN_NAME`,`OS_CACERT` and `OS_PASSWORD` fields with your own.
 
 **Note**: If you are concerned about storing your password in this file, leave the password field blank; you will be asked to enter a password after sourcing the `stackrc` file.
 
