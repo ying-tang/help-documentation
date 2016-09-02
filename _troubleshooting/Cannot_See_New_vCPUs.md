@@ -15,6 +15,13 @@ tags: [troubleshooting, horizon, nova, overcommit, hypervisor, vcpu]
 
 ![Hypervisor Summary Screen]({{site.baseurl}}/img/Hypervisor_Summary.png)
 
+
+**Q. Why does my quota look so low?
+
+**A.**  Under "Limit Summary" in Horizon, the top graph is actually the vCPU quota limits for the project you're currently looking at. In each cloud, when you're looking at the Limits graphs in Horizon, you're viewing Quota Limits for the Project you're currently under, not total CPUs across the cluster and across all projects. This should be more clearly noted in Horizon, but for now, it is what it is.
+
+You can update quotas using the command line by following the examples at http://ibm-blue-box-help.github.io/help-documentation/openstack/userdocs/quotas/#compute-quotas
+
 Also see https://bugs.launchpad.net/horizon/+bug/1202965 and
 https://ask.openstack.org/en/question/12699/nova-compute-question-about-cpu_allocation_ratio/?answer=24673#post-id-24673
 for more information.
