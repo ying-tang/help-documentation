@@ -1,4 +1,13 @@
-
+---
+layout: page
+title:  "How to Create An Instance With Static IP"
+dateAdded: September 2, 2016
+author: Jason Kennedy
+editor: Leslie Lundquist
+featured: true
+weight: 4
+tags: [openstack, static ip, instance]
+---
 
 
 
