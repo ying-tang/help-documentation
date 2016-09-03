@@ -36,6 +36,7 @@ You'll have an overall quota, which cannot be exceeded by the individual quotas 
 
 Here is an example of a capacity report for CPU, RAM, and Disk. You can use the # total numbers (shown in output like this one) to help guide the numbers you plug in for your quotas. The actual limits of the system are those Total (#) numbers below the line. The one exception in this example is the CPU, which is overcommitted 2x.
 
+```
 (+) Overcommit Ratio   (%) Percent Used   (#) Total   (-) Used   (=) Available
 
 Hypervisor                 CPU+  MEM%  DSK%  CPU# CPU- MEM#     MEM-     MEM=     DSK#   DSK-   DSK=
@@ -44,7 +45,7 @@ ds11.dal.bluebox.com       0.000 0.032 0.000 28   0    128828   4096     124732 
 ds2.dal.bluebox.com        0.161 0.083 0.091 31   5    128828   10752    118076   989    90     899
 ---------------------------------------------------------------------------------------------------------------
 TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540   2435   90     2345
-
+```
 
 ### Other limits you may encounter:
 
