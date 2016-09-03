@@ -12,8 +12,8 @@ tags: [openstack, quotas]
 OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't always notify you clearly.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them. The first section contains a general introduction, followed by a more specific section. The Table of Contents lets you click through quickly, to find answers for your specific questions.
 
 ### Table of Contents
-* Introduction
-* Other Limits You May Encounter
+* [Introduction](#introduction)
+* [Other Limits You May Encounter](#other-limits-you-may-encounter)
 * [Common Questions](#common-questions)
   * [Common Quota Error Messages](#common-quota-error-messages)
   * [Most Commonly Hit Quotas](#most-commonly-hit-quotas)
@@ -55,7 +55,9 @@ TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540 
 
 **Instances:** Most customers go with the default limit and adjust upwards as needed. With enough hardware, you can get into hundreds of thousands of instances. For your particular hardware, you need to make your own calculations based on your desired resource consumption for each VM.
 
-# Common Questions
+## Common Questions
+
+The remaining sections of this document offer more detail about commons questions and errors you may encounter.
 
 ## Common Quota Error Messages
 
