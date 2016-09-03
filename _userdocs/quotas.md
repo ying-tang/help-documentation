@@ -9,7 +9,26 @@ weight: 4
 tags: [openstack, quotas]
 ---
 
-OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't always notify you clearly.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them. The first section contains a general introduction, followed by a more specific section, with a a Table of Contents that lets you click through quickly, to find answers for your specific questions.
+OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't always notify you clearly.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them. The first section contains a general introduction, followed by a more specific section. The Table of Contents lets you click through quickly, to find answers for your specific questions.
+
+### Table of Contents
+* Introduction
+* Other Limits You May Encounter
+* [Common Questions](#common-questions)
+  * [Common Quota Error Messages](#common-quota-error-messages)
+  * [Most Commonly Hit Quotas](#most-commonly-hit-quotas)
+* [Compute Quotas](#compute-quotas)
+  * [How to list the Default Compute Quotas](#how-to-list-the-default-compute-quotas)
+  * [How to view Tenant Compute Quotas](#how-to-view-tenant-compute-quotas)
+  * [How to update Tenant Compute Quotas](#how-to-update-tenant-compute-quotas)
+* [Network Quotas](#network-quotas)
+  * [How to list Tenant Network Quotas](#how-to-list-tenant-network-quotas)
+  * [How to update Tenant Network Quotas](#how-to-update-tenant-network-quotas)
+* [Storage Quotas](#storage-quotas)
+  * [How to list Cinder Quotas](#how-to-list-cinder-quotas)
+  * [How to see current Cinder Storage usage](#how-to-see-current-cinder-storage-usage)
+  * [How to update Cinder Quotas](#how-to-update-cinder-quotas)
+* [Appendix](#appendix)
 
 ### Introduction
 
@@ -34,25 +53,6 @@ TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540 
 **Security Groups:** Most customers go with the default limit and adjust upwards as needed. This keeps firewall rules to a manageable level, so as to not impact performance. At a certain point (we haven't seen what particular point this is yet), it is theoretically possible to end up with too many firewall rules and not enough CPU to process them quickly enough. The default limits may seem low, but they're more than enough for most people, who will never create more than a few security groups, with maybe half a dozen rules each.
 
 **Instances:** Most customers go with the default limit and adjust upwards as needed. With enough hardware, you can get into hundreds of thousands of instances. For your particular hardware, you need to make your own calculations based on your desired resource consumption for each VM.
-
-### Table of Contents for Specific Questions
-
-* [Common Questions](#common-questions)
-  * [Common Quota Error Messages](#common-quota-error-messages)
-  * [Most Commonly Hit Quotas](#most-commonly-hit-quotas)
-* [Compute Quotas](#compute-quotas)
-  * [How to list the Default Compute Quotas](#how-to-list-the-default-compute-quotas)
-  * [How to view Tenant Compute Quotas](#how-to-view-tenant-compute-quotas)
-  * [How to update Tenant Compute Quotas](#how-to-update-tenant-compute-quotas)
-* [Network Quotas](#network-quotas)
-  * [How to list Tenant Network Quotas](#how-to-list-tenant-network-quotas)
-  * [How to update Tenant Network Quotas](#how-to-update-tenant-network-quotas)
-* [Storage Quotas](#storage-quotas)
-  * [How to list Cinder Quotas](#how-to-list-cinder-quotas)
-  * [How to see current Cinder Storage usage](#how-to-see-current-cinder-storage-usage)
-  * [How to update Cinder Quotas](#how-to-update-cinder-quotas)
-* [Appendix](#appendix)
-
 
 # Common Questions
 
