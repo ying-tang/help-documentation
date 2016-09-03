@@ -13,11 +13,7 @@ tags: [nova, horizon, allocate, users, floating ip]
 
 **A.** As follows:
 
- * Create a project for privileged users and switch to it. Keep running the command
-
-`nova floating-ip-create`
-
-until you run out of floating IPs to create.
+ * Create a project for privileged users and switch to it. Keep running the command `nova floating-ip-create` until you run out of floating IPs to create.
 
  * Create a separate project for unprivileged users and switch to it. Create an instance, click **Associate Floating IP**, and then try to allocate a floating IP to it.
 
