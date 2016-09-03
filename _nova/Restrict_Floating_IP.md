@@ -23,4 +23,4 @@ until you run out of floating IPs to create.
 
  * In Horizon, as an unprivileged user, you will now get "Error: Unable to allocate Floating IP." From the command line, you will get "No more floating IPs available".
 
-	  * Keep in mind: If you release floating IPs back into the pool via `nova floating-ip-delete` (for example) in the privileged project, that IP will become available to the unprivileged project. So you would need to educate your privileged team to not release IPs.
+ * **Keep in mind:** If you release floating IPs back into the pool by using the command `nova floating-ip-delete` (for example) in the privileged project, that IP will become available to the unprivileged project. So you would need to educate your privileged team to not release IPs.
