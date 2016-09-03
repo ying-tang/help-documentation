@@ -1,3 +1,13 @@
+---
+layout: page
+title:  "How Can I Restrict Floating IPs?"
+dateAdded: September 2nd, 2016
+editor: Leslie Lundquist
+featured: true
+weight: 4
+tags: [nova, horizon, allocate, users, floating ip]
+---
+
 Q. How can I restrict floating IP usage to users in one project?
 
 A. As follows:
