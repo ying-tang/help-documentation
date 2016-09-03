@@ -49,7 +49,7 @@ TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540 
 
 ### Other limits you may encounter:
 
-**Floating IPs:** Please see http://ibm-blue-box-help.github.io/help-documentation/neutron/network_ip_availability/
+**Floating IPs:** Please see [http://ibm-blue-box-help.github.io/help-documentation/neutron/network_ip_availability/](http://ibm-blue-box-help.github.io/help-documentation/neutron/network_ip_availability/)
 
 **Security Groups:** Most customers go with the default limit and adjust upwards as needed. This keeps firewall rules to a manageable level, so as to not impact performance. At a certain point (we haven't seen what particular point this is yet), it is theoretically possible to end up with too many firewall rules and not enough CPU to process them quickly enough. The default limits may seem low, but they're more than enough for most people, who will never create more than a few security groups, with maybe half a dozen rules each.
 
