@@ -2,15 +2,18 @@
 layout: page
 title:  "Quotas"
 dateAdded: June 13th, 2015
+editor: Leslie Lundquist
+updated: September 2, 2016
 featured: true
 weight: 4
 tags: [openstack, quotas]
 ---
 
-OpenStack has numerous quotas, and it doesn't always clearly notify you when you hit one of these quotas.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them.
+OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't always notify you clearly.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them. The first section contains a general introduction, followed by a more specific section. The Table of Contents lets you click through quickly, to find answers for your specific questions.
 
-# Table of Contents
-
+### Table of Contents
+* [Introduction](#introduction)
+* [Other Limits You May Encounter](#other-limits-you-may-encounter)
 * [Common Questions](#common-questions)
   * [Common Quota Error Messages](#common-quota-error-messages)
   * [Most Commonly Hit Quotas](#most-commonly-hit-quotas)
@@ -27,8 +30,34 @@ OpenStack has numerous quotas, and it doesn't always clearly notify you when you
   * [How to update Cinder Quotas](#how-to-update-cinder-quotas)
 * [Appendix](#appendix)
 
+### Introduction
 
-# Common Questions
+You'll have an overall quota, which cannot be exceeded by the individual quotas you'll set for each project you're running within your cloud. The quotas you set depend on how many projects you have and how you want to distribute your resources among those projects. They're really up to you. If you only foresee making one project, you could allocate all available resources to that project and leave it like that.
+
+Here is an example of a capacity report for CPU, RAM, and Disk. You can use the # total numbers (shown in output like this one) to help guide the numbers you plug in for your quotas. The actual limits of the system are those Total (#) numbers below the line. The one exception in this example is the CPU, which is overcommitted 2x.
+
+```
+(+) Overcommit Ratio   (%) Percent Used   (#) Total   (-) Used   (=) Available
+
+Hypervisor                 CPU+  MEM%  DSK%  CPU# CPU- MEM#     MEM-     MEM=     DSK#   DSK-   DSK=
+ds0.dal.bluebox.com        0.000 0.032 0.000 28   0    128828   4096     124732   723    0      723
+ds11.dal.bluebox.com       0.000 0.032 0.000 28   0    128828   4096     124732   723    0      723
+ds2.dal.bluebox.com        0.161 0.083 0.091 31   5    128828   10752    118076   989    90     899
+---------------------------------------------------------------------------------------------------------------
+TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540   2435   90     2345
+```
+
+### Other limits you may encounter:
+
+**Floating IPs:** Please see [http://ibm-blue-box-help.github.io/help-documentation/neutron/network_ip_availability/](http://ibm-blue-box-help.github.io/help-documentation/neutron/network_ip_availability/)
+
+**Security Groups:** Most customers go with the default limit and adjust upwards as needed. This keeps firewall rules to a manageable level, so as to not impact performance. At a certain point (we haven't seen what particular point this is yet), it is theoretically possible to end up with too many firewall rules and not enough CPU to process them quickly enough. The default limits may seem low, but they're more than enough for most people, who will never create more than a few security groups, with maybe half a dozen rules each.
+
+**Instances:** Most customers go with the default limit and adjust upwards as needed. With enough hardware, you can get into hundreds of thousands of instances. For your particular hardware, you need to make your own calculations based on your desired resource consumption for each VM.
+
+## Common Questions
+
+The remaining sections of this document offer more detail about commons questions and errors you may encounter.
 
 ## Common Quota Error Messages
 
