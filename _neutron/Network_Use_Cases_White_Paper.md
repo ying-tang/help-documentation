@@ -9,10 +9,11 @@ weight: 7
 dateAdded: September 7, 2016
 ---
 
-##A Best Practices White Paper 
+## A Best Practices White Paper 
 
-####by Leslie Lundquist and Dustin Lundquist 
-####July 30, 2016 
+#### by Leslie Lundquist and Dustin Lundquist
+
+#### July 30, 2016 
 
 **Background:** IBM Blue Box Dedicated Cloud runs in SoftLayer data centers. Each SoftLayer data center is built out to contain multiple pods, forming subnets, and these subnets share one large IP address space across all SoftLayer data centers worldwide. 
 
