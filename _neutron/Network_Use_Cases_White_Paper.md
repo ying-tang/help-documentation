@@ -66,7 +66,7 @@ VLAN spanning to be enabled between two (otherwise unrelated) SoftLayer accounts
 * a. If this customer is using a SoftLayer routable 10.x.x.x subnet in both clouds, then no action is required, assuming that VLAN spanning between these two accounts is enabled already by SoftLayer. 
 * b. If this customer is using BYOIP networks, then tunneling is required between the IBM Blue Box cloud and the customer’s cloud that is running in another SoftLayer account. 
 
-_Commentary:_ For case (a.), cross-account VLAn spanning is a SoftLayer feature, which really should be called “cross account inter-VLAN routing,” because it is not operating at L2, but at L3. This case means simply spanning two SoftLayer accounts within SoftLayer’s existing IP address plan. For case (b.), the engineers must determine and explain what type of tunnel would work. 
+_Commentary:_ For case (a.), cross-account VLAN spanning is a SoftLayer feature, which really should be called “cross account inter-VLAN routing,” because it is not operating at L2, but at L3. This case means simply spanning two SoftLayer accounts within SoftLayer’s existing IP address plan. For case (b.), the Blue Box engineers must determine and explain what type of tunnel would work. 
 
 ### Problem and Solution Statement
 Because of the complexity of the solutions that must be applied to these IPv4 use cases (as described in this paper), it is recommended that customers seriously consider adopting IPv6 addresses when they need to allocate larger subnets, such as one would wish to have when assigning addresses for a large dedicated cloud. Conversion to IPv6 makes sense wherever possible. We now suggest that, as a best practice, customers consider full migration to IPv6 over the next 5 years. 
