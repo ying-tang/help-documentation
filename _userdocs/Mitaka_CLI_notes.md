@@ -11,15 +11,21 @@ dateAdded: September 7th, 2016
 #### OpenStack command line interface: a few notes about helpful commands now (or still) available
 
 Try these:
+
 ```
 $ openstack catalog list
+
 $ openstack server list  --all-projects     #just one example you might find handy
+
 $ openstack help       #to get a list of all available commands and options
 ```
+
 Also, these client commands still are available:
 ```
 $ neutron net-list
+
 $ cinder list
+
 $ glance image -list
 ```
 
@@ -28,4 +34,4 @@ However, this client is no longer available due to Keystone v3 issue:
 ```
 $ keystone net -list  #not working
 ```
-There is a workaround using the Sensu `stackrc` file (`/etc/sensu/stackrc`) because that file still is configured to use the Keystone v2 API. Please reach out to engineering if you find yourself needing to use this workaround.
+There is a workaround using the Sensu `stackrc` file (`/etc/sensu/stackrc`) because that file still is configured to use the Keystone v2 API. Please reach out to Blue Box Support if you find yourself needing to use this workaround.
