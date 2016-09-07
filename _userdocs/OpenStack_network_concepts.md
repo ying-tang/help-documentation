@@ -9,9 +9,8 @@ author: Ying Tang
 editor: Leslie Lundquist
 dateAdded: May 25, 2016
 --- 
-##Introduction to OpenStack Cloud Network Concepts
 
- This document offers a basic introduction to some common networking concepts. You'll encounter these concepts when working with your IBM Blue Box Cloud.
+This document offers a basic introduction to some common networking concepts. You'll encounter these concepts when working with your IBM Blue Box Cloud.
  
 ### Terminology Used in This Document
 
