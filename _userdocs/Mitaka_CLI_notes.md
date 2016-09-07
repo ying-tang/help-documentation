@@ -21,6 +21,7 @@ $ openstack help       #to get a list of all available commands and options
 ```
 
 Also, these client commands still are available:
+
 ```
 $ neutron net-list
 
