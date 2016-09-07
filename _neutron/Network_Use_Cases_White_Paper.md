@@ -35,10 +35,13 @@ _Commentary:_ As long as the two customer networks are behind separate OpenStack
 
 The next two use cases are related: Inbound and Outbound traffic between the customer’s cloud and the public Internet. These are probably the most normal use cases for any customer or site. 
 
-**2. Ingress (inbound) connectivity from the public Internet:** 
+**2. Ingress (inbound) connectivity from the public Internet:**
+
 In this case, a customer needs access to their guest VMs from the public Internet. To create a solution, the customer needs to assign an IP address (preferably publicly routable IPv6, alternatively, floating IPv4) to each guest VM, and they must ensure that their security groups are set up to allow the appropriate inbound access to their VMs. 
 
-**3. Egress (outbound) connectivity to the public Internet:** In this case, a customer needs access to the Internet from their guest VMs, for example, to download installation packages. Usually, the guest VMs should obtain outbound connectivity to the Internet via NAT on the Vyatta associated with their pod. 
+**3. Egress (outbound) connectivity to the public Internet:** 
+
+In this case, a customer needs access to the Internet from their guest VMs, for example, to download installation packages. Usually, the guest VMs should obtain outbound connectivity to the Internet via NAT on the Vyatta associated with their pod. 
 
 _Commentary:_ Use cases 2 and 3 are referring to global Internet connectivity. In general, as we have noted elsewhere in this paper, when you combine IP address spaces you’re going to have some overlap, in which case you must use NAT. This is not a desirable solution. Alternatively, you could create a customized networking solution; however, these solutions often are fragile, being Byzantine, and they require significant investment in time and energy for maintenance and upkeep. 
 
@@ -48,7 +51,8 @@ Sometimes, a customer needs access to services hosted on SoftLayer’s private n
 
 _Commentary:_ The next two use cases, BYOIP and DirectLink, are really two sides of the same coin. They’re just the mechanism for providing connectivity to their existing/remote networks, using either a VPN or DirectLink, which might be a leased line or an MPLS circuit. (MPLS stands for Multi-Protocol Label Switching, which is a type of VPN often used by enterprise customers.) So it all is really VPN. 
 
-**5. BYOIP connectivity:** 
+**5. BYOIP connectivity:**
+
 In this case, a customer wants to bring their own network subnets into IBM Blue Box cloud and connect to them from their on-premise data center. To create a solution, we can create overlay OpenStack networks with subnet values provided by the customer. These overlay networks are attached to a “default” OpenStack router which has SNAT disabled. We will ensure that routes are set up in the associated Vyatta for each of these customer subnets. This solution requires tunneling between the IBM Blue Box cloud and the customer’s data center. 
 
 **6. DirectLink connectivity:** 
