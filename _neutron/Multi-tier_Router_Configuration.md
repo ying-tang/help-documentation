@@ -8,6 +8,10 @@ keywords: [neutron, networking, router, configuration, multi-tier]
 author: Ulysses Kanigel and Leslie Lundquist
 
 dateAdded: August 31, 2016
+
+weight: 4
+
+featured: false
 ---
 
 This article explains how to test a Multi-Tier Router Configuration, and why you might want one.
