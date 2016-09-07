@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: IBM Blue Box Network Use Cases
