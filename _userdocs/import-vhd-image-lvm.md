@@ -41,4 +41,4 @@ Afterward, you should observe that the VM has successfully launched, and that it
 
 You can verify success by clicking the instance name and navigating to the console, where you will see the boot sequence for RHEL and ultimately the login prompt for the OS.
 
-![Console view]({{site.baseurl}}/Console_View.png)
+![Console view]({{site.baseurl}}/img/Console_View.png)
