@@ -34,4 +34,5 @@ However, this client is no longer available due to Keystone v3 issue:
 ```
 $ keystone net -list  #not working
 ```
-There is a workaround using the Sensu `stackrc` file (`/etc/sensu/stackrc`) because that file still is configured to use the Keystone v2 API. Please reach out to Blue Box Support if you find yourself needing to use this workaround.
+
+Use the OpenStack client instead.
