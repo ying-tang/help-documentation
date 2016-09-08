@@ -16,7 +16,9 @@ You might want to set up a multi-tier router configuration for your cloud in one
 2. You want to create network isolation for these (child) networks from other project or tenant networks within your cloud, by giving each its own (child) router underneath the main router.
 3. You need each of these isolated project networks to have internet ingress and egress, while remaining isolated from other networks within your cloud, and also not using floating IPs.
 
-The way to establish a multi-tier network initially is to establish static routes from the main router to each of the "child" routers. The main idea of the test is to be sure that these static routes are persistent. In this example, we set up two networks of this type, called `test1` and `test2`.
+The way to establish a multi-tier network initially is to establish static routes from the main router to each of the "child" routers. The main idea of this test is to be sure that these static routes are persistent. In this example, we set up two child networks of this type, called `child-net1` and `child-net2`.
+
+![The multi-tier network topology]({{site.baseurl}}/img/multi_router_network.png)
 
 Let's say you want to test a multi-tier router configuration and confirm that the routes you've set up are persistent across failover.
 
@@ -28,9 +30,9 @@ Let's say you want to test a multi-tier router configuration and confirm that th
 
 neutron net-create parent-net
 
-neutron net-create child-net
+neutron net-create child-net1
 
-neutron net-create child-net
+neutron net-create child-net2
 
 neutron subnet-create parent-subnet 162.16.0.0/24
 
