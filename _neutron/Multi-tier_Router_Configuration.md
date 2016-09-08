@@ -26,17 +26,17 @@ Let's say you want to test a multi-tier router configuration and confirm that th
 
 #Create networks and subnets
 
-neutron net-create parent-router
+neutron net-create parent-net
 
-neutron net-create child-router1
+neutron net-create child-net
 
-neutron net-create child-router2
+neutron net-create child-net
 
-neutron subnet-create parent-router 162.16.0.0/24
+neutron subnet-create parent-subnet 162.16.0.0/24
 
-neutron subnet-create child-router1 162.16.1.0/24
+neutron subnet-create child-subnet1 162.16.1.0/24
 
-neutron subnet-create child-router2 162.16.2.0/24
+neutron subnet-create child-subnet2 162.16.2.0/24
 
 # Create routers
 
@@ -50,9 +50,9 @@ neutron router-create child-router2
 
 neutron router-gateway-set parent-router external
 
-neutron router-interface-add parent-router b490f691-364f-4f7c-866c-1c45e7b8f8cf
+neutron router-interface-add parent-subnet b490f691-364f-4f7c-866c-1c45e7b8f8cf  #unique identifier for subnet
 
-# Add interfaces for parent-router, child-router1 and child-router2 subnets to child router(s)
+# Add interfaces for parent-router, child-router1 and child-router2 subnets
 
 neutron port-create parent-router
 
@@ -60,13 +60,13 @@ neutron port-create child-router1
 
 neutron port-create child-router2
 
-neutron router-interface-add child-router1 port=c1b305a1-f634-4828-a6ce-d5a6a058824e
+neutron router-interface-add child-subnet1 port=c1b305a1-f634-4828-a6ce-d5a6a058824e  #unique identifier for port
 
-neutron router-interface-add child-router1 2476ad51-e2cb-4d4e-bbd8-db18cc06ea88
+neutron router-interface-add child-subnet1 2476ad51-e2cb-4d4e-bbd8-db18cc06ea88   #unique identifier for subnet
 
-neutron router-interface-add child-router2 port=c1b305a1-f634-4828-a6ce-d5a6a058824e
+neutron router-interface-add child-subnet2 port=c1b467b1-f444-4325-a5dc-d4b3a04624d   #unique identifier for port
 
-neutron router-interface-add child-router2 2476ad51-e2cb-4d4e-bbd8-db18cc06ea88
+neutron router-interface-add child-subnet2 2378ad51-e4cc-2d3e-bcc5-db34cd05fa48    #unique identifier for subnet
 
 # Set default route on child router(s) to parent-router subnet gateway address : they both talk to the parent router
 
