@@ -1,14 +1,12 @@
 ---
-
 layout: page
 title: IBM Blue Box Network Use Cases
-keywords: [neutron, use cases, network, white paper]
+featured: true
+tags: [neutron, use cases, network, white paper]
 author: Leslie Lundquist and Dustin Lundquist
 editor: Leslie Lundquist
-featured: true
 weight: 7
 dateAdded: September 7, 2016
-
 ---
 
 ## A Best Practices White Paper 
