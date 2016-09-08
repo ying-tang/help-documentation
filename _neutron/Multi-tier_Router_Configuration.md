@@ -26,44 +26,59 @@ Let's say you want to test a multi-tier router configuration and confirm that th
 
 #Create networks and subnets
 
-neutron net-create test1
+neutron net-create parent-net
 
-neutron net-create test2
+neutron net-create child-net
 
-neutron subnet-create test1 162.16.0.0.24
+neutron net-create child-net
 
-neutron subnet-create test2 162.16.1.0/24
+neutron subnet-create parent-subnet 162.16.0.0/24
+
+neutron subnet-create child-subnet1 162.16.1.0/24
+
+neutron subnet-create child-subnet2 162.16.2.0/24
 
 # Create routers
 
-neutron router-create test-router1
+neutron router-create parent-router
 
-neutron router-create test-router2
+neutron router-create child-router1
 
-# Set gateway of the parent router to the external network and add interface on test1 subnet
+neutron router-create child-router2
 
-neutron router-gateway-set test-router1 external
+# Set gateway of the parent router to the external network and add interface on the parent-router subnet
 
-neutron router-interface-add test-router1 b490f691-364f-4f7c-866c-1c45e7b8f8cf
+neutron router-gateway-set parent-router external
 
-# Add interfaces for test1 and test2 subnets to child router
+neutron router-interface-add parent-subnet b490f691-364f-4f7c-866c-1c45e7b8f8cf  #unique identifier for subnet
 
-neutron port-create test1
+# Add interfaces for parent-router, child-router1 and child-router2 subnets
 
-neutron router-interface-add test-router2 port=c1b305a1-f634-4828-a6ce-d5a6a058824e
+neutron port-create parent-router
 
-neutron router-interface-add test-router2 2476ad51-e2cb-4d4e-bbd8-db18cc06ea88
+neutron port-create child-router1
 
-# Set default route on child router to test1 subnet gateway address
+neutron port-create child-router2
 
-neutron router-update test-router2 --routes type=dict list=true destination=0.0.0.0/0,nexthop=162.16.0.1
+neutron router-interface-add child-subnet1 port=c1b305a1-f634-4828-a6ce-d5a6a058824e  #unique identifier for port
+
+neutron router-interface-add child-subnet1 2476ad51-e2cb-4d4e-bbd8-db18cc06ea88   #unique identifier for subnet
+
+neutron router-interface-add child-subnet2 port=c1b467b1-f444-4325-a5dc-d4b3a04624d   #unique identifier for port
+
+neutron router-interface-add child-subnet2 2378ad51-e4cc-2d3e-bcc5-db34cd05fa48    #unique identifier for subnet
+
+# Set default route on child router(s) to parent-router subnet gateway address : they both talk to the parent router
+
+neutron router-update child-router1 --routes type=dict list=true destination=0.0.0.0/0,nexthop=162.16.0.1
+
+neutron router-update child-router2 --routes type=dict list=true destination=0.0.0.0/0,nexthop=162.16.0.1
 
 ```
 
 **Here are the test results before router failover:**
 
 ```
-
 root@ds0:~# ip netns exec qrouter-0937dbb1-1f57-41b4-958e-326db5df1786 ip route
 
 default via 162.16.0.1 dev qr-c1b305a1-f6
@@ -75,6 +90,8 @@ default via 162.16.0.1 dev qr-c1b305a1-f6
 162.16.0.0/24 dev qr-c1b305a1-f6  proto kernel  scope link  src 162.16.0.4
 
 162.16.1.0/24 dev qr-9fab4ce0-54  proto kernel  scope link  src 162.16.1.1
+
+162.16.2.0/24 dev gr-XXXXXXXXXX proto kernel  scope link src 162.16.2.1
 
 root@ds0:~# ip netns exec qrouter-0937dbb1-1f57-41b4-958e-326db5df1786 ping 8.8.8.8
 
@@ -112,6 +129,8 @@ default via 162.16.0.1 dev qr-c1b305a1-f6
 
 162.16.1.0/24 dev qr-9fab4ce0-54  proto kernel  scope link  src 162.16.1.1
 
+162.16.2.0/24 dev gr-XXXXXXXXXX proto kernel  scope link src 162.16.2.1
+
 # ip netns exec qrouter-0937dbb1-1f57-41b4-958e-326db5df1786 ping 8.8.8.8
 
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
@@ -120,14 +139,14 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=58 time=1.60 ms
 
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=58 time=1.62 ms
 ^C
 
 --- 8.8.8.8 ping statistics ---
 
-2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+3 packets transmitted, 3 received, 0% packet loss, time 1001ms
 
 rtt min/avg/max/mdev = 1.601/1.635/1.670/0.053 ms
-
 ```
 
 There should be no problems with scaling this design up to include multiple subnets connected to each child router, because the routing is achieved at the child router. 
