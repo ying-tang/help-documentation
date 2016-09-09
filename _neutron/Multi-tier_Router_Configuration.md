@@ -37,13 +37,6 @@ neutron net-create child-net2
 
 neutron subnet-create parent-subnet 162.16.0.0/24
 
-
-neutron subnet-create child-subnet1 162.16.1.0/24
-
-neutron net-create child-net2
-
-neutron subnet-create parent-subnet 162.16.0.0/24
-
 neutron subnet-create child-subnet1 162.16.1.0/24
 
 neutron subnet-create child-subnet2 162.16.2.0/24
