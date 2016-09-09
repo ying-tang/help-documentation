@@ -15,5 +15,7 @@ Cloud images provided by IBM Blue Box are updated periodically, to apply necessa
 
 #### [Image Release Notes 20160607](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160607/Image_Release_Notes_2016-06-07/) (Released June 7, 2016)
 
+#### [Image Release Notes 20160910](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160910/Image_Release_Notes_2016-09-10/) (Released September 10, 2016)
+
 To get more details about how to use these cloud images, please refer to the [User's Guide to Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/).
 
