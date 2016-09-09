@@ -20,7 +20,6 @@ The way to establish a multi-tier network initially is to establish static route
 
 ![The multi-tier network topology]({{site.baseurl}}/img/multi_router_network.png)
 
-![The multi-tier network topology]({{site.baseurl}}/img/multi_router_network.png)
 
 Let's say you want to test a multi-tier router configuration and confirm that the routes you've set up are persistent across failover.
 
@@ -38,11 +37,14 @@ neutron net-create child-net2
 
 neutron subnet-create parent-subnet 162.16.0.0/24
 
-<<<<<<< HEAD
-neutron subnet-create test1 162.16.0.0/24
-=======
+
 neutron subnet-create child-subnet1 162.16.1.0/24
->>>>>>> IBM-Blue-Box-Help/gh-pages
+
+neutron net-create child-net2
+
+neutron subnet-create parent-subnet 162.16.0.0/24
+
+neutron subnet-create child-subnet1 162.16.1.0/24
 
 neutron subnet-create child-subnet2 162.16.2.0/24
 
