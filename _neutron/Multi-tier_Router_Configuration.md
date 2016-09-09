@@ -20,8 +20,6 @@ The way to establish a multi-tier network initially is to establish static route
 
 ![The multi-tier network topology]({{site.baseurl}}/img/multi_router_network.png)
 
-![The multi-tier network topology]({{site.baseurl}}/img/multi_router_network.png)
-
 Let's say you want to test a multi-tier router configuration and confirm that the routes you've set up are persistent across failover.
 
 **Here are the steps you'd need to take to perform the test:**
