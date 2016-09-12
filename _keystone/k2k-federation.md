@@ -176,6 +176,7 @@ To use the mapping commands, a v3 credentials source file is required. You'll cr
 
 More information on managing mappings can be found in the OpenStack documentation:
 http://docs.openstack.org/developer/keystone/mapping_combinations.html
+http://docs.openstack.org/developer/keystone/federation/federated_identity.html#mapping-combinations
 
 When a user logs on to the Service Provider through K2K federation, using their Identity Provider account, a user account is created locally on the Service Provider. **Please note that the user account created during federation is ephemeral. It may be deleted at a later time without warning.**
 
@@ -260,9 +261,7 @@ blacklist
 whitelist
 ```
 
-Here are some example scenarios:
-
-**Example 1.** Mapping the `cloud_admin` user to a `cloud_admin` group and setting the username to be `cloud_admin` in the federated domain. This is the default mapping file:
+To set the username we can use **{0}** in the local section to indicate to use a field from the remote section. Then we can additional information to the new federated username. **For K2K federation it is important to add some information to indicate which cloud you are using**. We can reference the remote section in the local section by index ("{i}", where i is the index of the remote field), :
 
 ```
 [
@@ -270,7 +269,32 @@ Here are some example scenarios:
     "local": [
       {
         "user": {
-          "name": "{0}"
+          "name": "my_cloud/{0}"
+        }
+      },
+               ...
+    ],
+    "remote": [
+      {
+        "type": "openstack_user"
+      },
+               ...
+    ]
+  }
+]
+```
+
+Here are some example scenarios:
+
+**Example 1.** Mapping the `cloud_admin` user to a `cloud_admin` group and setting the username to be `my_cloud/cloud_admin` in the federated domain. This is the default mapping file:
+
+```
+[
+  {
+    "local": [
+      {
+        "user": {
+          "name": "my_cloud/{0}"
         }
       },
       {
@@ -311,7 +335,7 @@ $ cat <<EOF > federated_member_mapping.json
     "local": [
       {
         "user": {
-          "name": "{0}"
+          "name": "my_cloud/{0}"
         }
       },
       {
@@ -354,7 +378,7 @@ $ openstack mapping set mapping-for-k2k-federation --rules federated_member_mapp
     "local": [
       {
         "user": {
-          "name": "{0}"
+          "name": "my_cloud/{0}"
         }
       },
       {
@@ -382,7 +406,7 @@ $ openstack mapping set mapping-for-k2k-federation --rules federated_member_mapp
     "local": [
       {
         "user": {
-          "name": "{0}"
+          "name": "my_cloud/{0}"
         }
       },
       {
@@ -563,7 +587,7 @@ $ cat <<EOF > federated_heat_stack_owner_mapping.json
     "local": [
       {
         "user": {
-          "name": "{0}"
+          "name": my_cloud/"{0}"
         }
       },
       {
