@@ -9,7 +9,7 @@ weight: 4
 
 On any given CIDR block, the first and last IPs are not usable, because they're the network and broadcast addresses.  
 
-Also, there must be at least two gateway IPs: One for acces to your **Horizon** dashboard, and one for testing the reachability of your **Neutron** router.
+Also, there must be at least two gateway IPs: One for access to your **Horizon** dashboard, and one for testing the reachability of your **Neutron** router.
 
 Type the command
 {% highlight bash %}
