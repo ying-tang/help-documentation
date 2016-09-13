@@ -5,7 +5,7 @@ author: Leslie Lundquist
 featured: false
 weight: 20
 dateAdded: August 17, 2016
-keywords: [managed hosting, domain name, registrar, status page]
+tags: [managed hosting, domain name, registrar, status page]
 ---
 
 ## Welcome to the IBM Blue Box Managed Hosting User Guide
