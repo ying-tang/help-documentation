@@ -56,7 +56,7 @@ TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540 
 
 **Instances:** Most customers go with the default limit and adjust upwards as needed. With enough hardware, you can get into hundreds of thousands of instances. For your particular hardware, you need to make your own calculations based on your desired resource consumption for each VM.
 
-## Neutron vs. Nova Rule Precedence
+### Neutron vs. Nova Rule Precedence
 
 There is some overlap between the quotas enforced by the Nova and Neutron services. In the event of a conflict, Neutron quotas always take precedence.
 
