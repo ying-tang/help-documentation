@@ -16,7 +16,7 @@ For **IBM Blue Box cloud 3.0 or newer**, you may receive this error message when
 
 In that case you may need to use a workaround, by using _group affinity_ and _group antiaffinity_ with server groups to influence scheduling your instance to be deployed close to or away from other instances. [Here's an article on that.](https://raymii.org/s/articles/Openstack_Affinity_Groups-make-sure-instances-are-on-the-same-or-a-different-hypervisor-host.html)
 
-[Here's another article.] (https://dev.cloudwatt.com/en/blog/affinity-and-anti-affinity-in-openstack.html)
+[Here's another article.](https://dev.cloudwatt.com/en/blog/affinity-and-anti-affinity-in-openstack.html)
 
 
 **The instructions that follow are for IBM Blue Box cloud 3.0.0 or older.**
