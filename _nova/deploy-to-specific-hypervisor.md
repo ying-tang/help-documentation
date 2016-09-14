@@ -10,7 +10,20 @@ weight: 4
 
 You may have the need to specify which host an instance is deployed to. While this functionality is not available in Horizon, the API lets you select a specific compute node for instance deployment.
 
-This article assumes you have the OpenStack API configured on your local machine. See [Getting Started with the OpenStack API](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/) for assistance.
+For **IBM Blue Box cloud 3.0 or newer**, you may receive this error message when targeting a specific compute node:
+
+`Policy doesn't allow os_compute_api:servers:create:forced_host to be performed` 
+
+In that case you may need to use a workaround, by using _group affinity_ and _group antiaffinity_ with server groups to influence scheduling your instance to be deployed close to or away from other instances. Here's an article:
+
+https://raymii.org/s/articles/Openstack_Affinity_Groups-make-sure-instances-are-on-the-same-or-a-different-hypervisor-host.html
+
+Another article:  https://dev.cloudwatt.com/en/blog/affinity-and-anti-affinity-in-openstack.html
+
+
+**The instructions that follow are for IBM Blue Box cloud 3.0.0 or older.**
+
+These instructions assume that you have the OpenStack API configured on your local machine. See [Getting Started with the OpenStack API](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/) for assistance.
 
 1. Determine which compute hypervisors are available in your cluster.
 
