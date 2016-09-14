@@ -441,11 +441,14 @@ $ openstack mapping set mapping-for-k2k-federation --rules federated_member_mapp
 
 ## <a name="using_horizon"></a>Using Horizon
  The OpenStack dashboard on the Identity Provider should have a drop-down menu labeled **Authenticate with Keystone to Keystone Federation**.
+ 
  * If you select the **Identity Provider** option, federation will not be used. The user will be signed into the Identity Provider OpenStack cloud.
  * If the **Service Provider** option is selected, federation is used. The Identity Provider user credential will be federated to the Service Provider.
  * To switch between providers, the user will need to log out and re-select the provider.
 
 **Please note:** The Horizon login screen for K2K for IBM Blue Box Cloud 3.0.0 is not a standard OpenStack feature. It may change in future releases.
+
+![The Horizon login screen for Blue Box Cloud]({{site.baseurl}}/img/k2k_auth.png)
 
 ## <a name="using_the_python_api_libraries"></a>Using the Python API Libraries
 
