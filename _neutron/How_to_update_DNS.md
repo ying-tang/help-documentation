@@ -14,11 +14,11 @@ dateAdded: September 13, 2016
 
 ```
 IPV4
-DNS server1 = 130.194.1.99
-DNS server2 = 130.194.7.99
+DNS server1 = 192.168.10.1
+DNS server2 = 192.168.10.2
 DNS server3 = 8.8.8.8
 
-root@ds00:~# neutron subnet-update aa4538ec-e838-4314-9159-4e9b6608cc39 --dns-nameserver 130.194.1.99 --dns-nameserver 130.194.7.99 --dns-nameserver 8.8.8.8
+root@ds00:~# neutron subnet-update aa4538ec-e838-4314-9159-4e9b6608cc39 --dns-nameserver 192.168.10.1 --dns-nameserver 192.168.10.2 --dns-nameserver 8.8.8.8
 Updated subnet: aa4538ec-e838-4314-9159-4e9b6608cc39
 root@ds00:~# neutron subnet-show aa4538ec-e838-4314-9159-4e9b6608cc39
 +-------------------+------------------------------------------------------+
@@ -27,8 +27,8 @@ root@ds00:~# neutron subnet-show aa4538ec-e838-4314-9159-4e9b6608cc39
 | allocation_pools  | {"start": "192.168.228.2", "end": "192.168.231.254"} |
 | cidr              | 192.168.228.0/22                                     |
 | description       |                                                      |
-| dns_nameservers   | 130.194.1.99                                         |
-|                   | 130.194.7.99                                         |
+| dns_nameservers   | 192.168.10.1                                         |
+|                   | 192.168.10.2                                         |
 |                   | 8.8.8.8                                              |
 | enable_dhcp       | True                                                 |
 | gateway_ip        | 192.168.228.1                                        |
