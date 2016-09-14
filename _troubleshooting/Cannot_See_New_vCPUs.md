@@ -9,13 +9,13 @@ tags: [troubleshooting, horizon, nova, overcommit, hypervisor, vcpu]
 
 **Q.** After you enabled 2x CPU overcommit on my cluster, why aren't the new vCPUs listed in Horizon's Hypervisor Summary Screen?
 
-**A.** The `cpu_allocation_ratio` (overcommit) is internally factored in to the decisions made by the Nova scheduler. As a result, while the API (Horizon) only lists, for example, 283 vCPUs total, as shown in the figure below, you will find that you are able to concurrently schedule new instances that require significantly more, up to the expected total (in this example) of 566. This is handled by the CoreFilter filter in the scheduler.
+**A.** The `cpu_allocation_ratio` (overcommit) is internally factored in to the decisions made by the **Nova** scheduler. As a result, while the API (Horizon) only lists, for example, 283 vCPUs total, as shown in the figure below, you will find that you are able to concurrently schedule new instances that require significantly more, up to the expected total (in this example) of 566. This is handled by the CoreFilter filter in the scheduler.
 
 ![Hypervisor Summary Screen]({{site.baseurl}}/img/Hypervisor_Summary.png)
 
 **Q.** How do I view the Hypervisor Summary Screen?
 
-**A.** Login to Horizon as a user with the cloud_admin role.  Hit **System** on the left, and then **Hypervisors** to see the summary.
+**A.** Login to **Horizon** as a user with the `cloud_admin` role.  Select **System** on the left, and then select **Hypervisors** to see the summary.
 
 **Q.** Why don't my currently running virtual machines show the extra CPUs after overcommit was enabled?
 
