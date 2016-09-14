@@ -1,8 +1,16 @@
-
+---
+layout: page
+title: "How Can I Update DNS?"
+featured: false
+weight: 5
+tags: [neutron, DNS settings, subnet ]
+author: Blue Box Support
+dateAdded: September 13, 2016
+---
 
 **Q.** What Neutron commands could I use to update my DNS servers?
 
-**A.** Here’s how to update the DNS settings in the internal-new subnet, to these DNS server addresses:
+**A.** Here’s how to update the DNS settings in the `internal-new` subnet, to these DNS server addresses:
 
 ```
 IPV4
