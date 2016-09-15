@@ -5,6 +5,7 @@
 **(with a nod to Douglas Hofstadter for no particular reason)**
 
 PRELIMINARY DRAFT
+
 IBM INTERNAL USE ONLY
 
 Drafted by Leslie Lundquist with info from Tom Spoonemore August 5, 2016
@@ -19,8 +20,8 @@ Along with other functionalities, Box Panel is a system of record for all datace
 
 The Box Panel suite is delivered as a SaaS application accessible through a Web browser and through custom APIs. The Box Panel Suite includes applications for Support, Ticketing, and Chat, and it includes links to product documentation.
 
-For more information about Box Panel, you can review our Box Panel User’s Guide on our customer help website:
-[link]
+For more information about Box Panel, you can review our [Box Panel User’s Guide on our customer help website](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/).
+
 
 ### Box Panel Manages the Complete Operational Stack
 
@@ -28,8 +29,7 @@ As shown in the figure below: Box_Panel_Manages_the_Stack.png [figure]
 
 ### What Is Box Panel Site Controller?
 
-The Box Panel Site Controller is a software tool that provides distributed control plane
-operations, configuration management, and automation Services to the Box Panel Suite, and to the Blue Box Support and Engineering teams.
+The Box Panel Site Controller is a software tool that provides distributed control plane operations, configuration management, and automation Services to the Box Panel Suite, and to the Blue Box Support and Engineering teams.
 
 The Box Panel Site Controller runs in each Local and Dedicated data center, where it communicates with the Box Panel Software-as-a-Service (SaaS) through a Central Control Pod.
 
@@ -48,6 +48,7 @@ The capabilities of Box Panel Site Controller include:
  * HTTP Proxy Services
  
 The figure below shows an overview of the relationship between Box Panel and its associated Site Controller, when deployed.
+
 [figure] Box_Panel_Site_Controller_Overview.png
 
 ### Terminology FAQ: What is.....
@@ -80,9 +81,11 @@ data centers.
 **A:** A central software repository for the Cloud operations software. This repository does not include client workloads.
 
 **Q: Bastion?**
-**A:** The Bastion host provides secure remote access to the Site Controllers and to customer cloud nodes, by using Role-Based Access Control (RBAC). For more information about RBAC, please refer to this document:
+**A:** The Bastion host provides secure remote access to the Site Controllers and to customer cloud nodes, by using Role-Based Access Control (RBAC). For more information about RBAC, please refer to these documents:
 
-[link]
+ * [Managing Users and Projects](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
+ * [RBAC Definitions](http://ibm-blue-box-help.github.io/help-documentation/keystone/RBAC_Definitions/)
+ * [Federated Identity Services](http://ibm-blue-box-help.github.io/help-documentation/keystone/k2k-federation/)
 
 **Q: Yama?**
 **A:** Provides Multifactor Authentication for access into customer clouds and has logging of cloud support personnel access.
@@ -117,5 +120,6 @@ access to any Cloud VMs or applications deployed in the cloud.
 **Q: What does Blue Box manage?**
 **A:** Blue Box manages the OpenStack cloud from bare metal up to and including the hypervisor. Our processes, policies, and tools are complaint with IBM Cloud Security Policy (CSP). CSP aligns with the industry standard ISO27002, which is the Information technology standard of practice for information security controls—that is, for security techniques.
 
-For more complete information about the security of your IBM Cloud, please download our IBM Cloud Security White Paper at this link:
-[link]
+For more complete information about the security of IBM Cloud, please download our IBM Cloud Security White Paper at this link:
+[Internal link](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=KUW12395USEN)
+[Customer Link](https://www.blueboxcloud.com/resources/downloads/security-whitepaper)
