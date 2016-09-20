@@ -72,15 +72,19 @@ data centers.
 **A:** Monitors the Blue Box Cloud physical nodes (pNodes) and provides alerts back to the Central Control Pod. The pNodes include the control, compute, and storage nodes.
 
 **Q: IPMI Proxy?**
+
 **A:** Provides secure IPMI access to the cloud nodes.
 
 **Q: HTTP Proxy?**
+
 **A:** Provides HTTP interface to the ELK and Sensu User Interfaces on the Site Controller.
 
 **Q: Mirror?**
+
 **A:** A central software repository for the Cloud operations software. This repository does not include client workloads.
 
 **Q: Bastion?**
+
 **A:** The Bastion host provides secure remote access to the Site Controllers and to customer cloud nodes, by using Role-Based Access Control (RBAC). For more information about RBAC, please refer to these documents:
 
  * [Managing Users and Projects](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
@@ -88,35 +92,45 @@ data centers.
  * [Federated Identity Services](http://ibm-blue-box-help.github.io/help-documentation/keystone/k2k-federation/)
 
 **Q: Yama?**
+
 **A:** Provides Multifactor Authentication for access into customer clouds, and it has logging of access by cloud support personnel.
 
 **Q: ELK (Elasticsearch, Logstash & Kibana)?**
+
 **A:** Used for log management of cloud resources. These logs do not leave the customer site.
 
 **Q: Boot-strapper?**
+
 **A:** Provides bare metal provisioning of servers. The Boot-Strapper is a replica of the Mirror repository.
 
 ### Security FAQ:
 
 **Q: Who has access to the Local Cloud from IBM Support?**
+
 **A:** Members of the OpenStack Engineering and Operations teams have access to the Controllers, Compute and Nodes, OpenStack API, and Horizon. They use this access to deploy, and operate the private cloud service. These support engineers do not have any access to customer data or workloads above the hypervisor.
 
 **Q: Can the IBM support representatives gain access to customer resources?**
+
 **A:** Blue Box Engineering and Operations teams do not have credentials to give them access to any Cloud VMs or applications deployed in the cloud.
 
 **Q: What information flows over the VPN?**
+
 **A:** Only those Command and Control messages that are required to deploy and operate the private cloud service flow over the VPN. There is no routing between the VPN and the customer data plane (VMs, workloads, storage, Neutron networks). Secure Administrative Remote Access sessions initiated by OpenStack Support personnel. Software packages used to install and patch the private cloud servers. Monitoring alerts and messages initiated by the cloud nodes. All logging data is maintained on customer premises equipment.
 
 **Q: Who can obtain this information?**
+
 **A:** Blue Box OpenStack Engineering and Operations staff have access to this information for purposes of cloud management and troubleshooting.
 
 **Q: What is the access control policy for the support team?**
+
 **A:** The support team follows a strict IBM Cloud Security Policy to grant, re-evaluate, and revoke access to our customer clouds.
 
 **Q: Can Blue Box use a customer registration process?**
+
 **A:** Blue Box does not currently support and our processes align with ISO27002.
 
 **Q: What does Blue Box manage?**
+
 **A:** Blue Box manages the OpenStack cloud from bare metal up to and including the hypervisor. Our processes, policies, and tools are complaint with IBM Cloud Security Policy (CSP). CSP aligns with the industry standard ISO27002, which is the Information technology standard of practice for information security controls—that is, for security techniques.
 
 For more complete information about the security of IBM Cloud, please download our IBM Cloud Security White Paper at this link:
