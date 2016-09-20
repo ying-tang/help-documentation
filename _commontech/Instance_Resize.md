@@ -21,8 +21,6 @@ Instance resizing lets an instance change its flavor to a larger flavor. An inst
 
 Resizing large instances can be tricky, because it can cause failure if there isn’t enough disk space for the new disk image.
 
-If you don't have Block Storage, and you want to resize to a smaller or bigger flavor, you can create a new instance with the size flavor you want and rsync the data you need from the old to the new instance.
-
 **Note:** There may be a short delay until networking resumes once an instance has been resized or migrated and is in `VERIFY_RESIZE` state.
 
 For more information, please see http://docs.openstack.org/user-guide/enduser/cli_change_the_size_of_your_server.html for documentation on how to perform a resize.
@@ -54,3 +52,6 @@ This process is more convoluted than you probably prefer. However, switching to 
  * Flavor resize will happen much quicker because the disk resize is skipped.
  * The migration to a new hypervisor is very fast using block storage (the new hypervisor simply connects to the block storage cluster).
  * You can extend the disk of your VM on the fly with `cinder extend` command.
+
+
+If you don't have Block Storage, and you want to resize to a smaller or bigger flavor, you can create a new instance with the size flavor you want and `rsync` the data you need from the old to the new instance.
