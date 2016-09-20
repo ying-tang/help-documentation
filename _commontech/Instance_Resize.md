@@ -40,6 +40,7 @@ It's very likely that if you attempt to initiate a new resize the same error wil
 5.  Boot a new VM from the volume with `nova boot --boot-volume`.
 
 If you want to retain the same IP addresses you can:
+
  1. Get the port UUID of the volume booted VM using: `neutron port-list | grep <IP of new VM>` (the first column is the port UUID).
 
  2. Remove the port from the old VM using `nova interface-detach`
