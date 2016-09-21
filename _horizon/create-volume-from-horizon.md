@@ -44,6 +44,6 @@ The dashboard displays the list of volumes for the current project. In the Actio
 * **Create Snapshot**: creates a snapshot of the volume.
 * **Create Backup**: creates a backup of the volume.
 * **Change Volume Type**: changes the type of the volume.
-* **Upload to image**: uploads the volume to the cinder Image Service as an image.
+* **Upload to image**: uploads the volume to the Image Service as an image.
 * **Create Transfer**: creates volume transfer in this project so that it can be "accepted" by a recipient project.
 * **Delete Volume**: deletes the volume.
