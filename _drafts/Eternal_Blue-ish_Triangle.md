@@ -71,11 +71,11 @@ data centers.
 
 **A:** Monitors the Blue Box Cloud physical nodes (pNodes) and provides alerts back to the Central Control Pod. The pNodes include the control, compute, and storage nodes.
 
-**Q:** PagerDuty?
+**Q: PagerDuty?** 
 
 **A:** The incident reporting tool that wakes us up at night when your cloud needs attention.
 
-**Q:** Graphite?
+**Q: Graphite?** 
 
 **A.** A graphical tool we use, especially for making SLA reports that show whether APIs are up. You can see this information in Horizon because Graphite feeds uptime data into the Grafana dashboards.
 
