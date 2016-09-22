@@ -72,7 +72,7 @@ This command will return a list of all running instances in your project.
 
 ### How to query the OpenStack API using cURL
 
-An API guide linked here http://developer.openstack.org/api-guide/quick-start/api-quick-start.html includes examples of using cURL to get a list of servers.
+An API guide linked [here](http://developer.openstack.org/api-guide/quick-start/api-quick-start.html) includes examples of using cURL to get a list of servers.
 
 Each service has its own port for API access. If you log in to the web GUI and go to the **Access & Security => API Access** tab, you can see which port corresponds to which service.
 
