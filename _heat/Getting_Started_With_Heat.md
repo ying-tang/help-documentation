@@ -246,12 +246,10 @@ Your Heat template can have as few or as many resources as you like, it's very e
 openstack stack create -t <template file> <stack name>
 
 openstack stack show <stack name>
-
 ```
 and you can "update" existing stacks by changing the contents of the file and then running an update command:
 
 ```
 openstack stack update -t <template file> <stack name>
-
 ```
-Hope that's useful info, it's definitely how I would try and solve the multi-cloud problem.
+Hope that's useful info, it's definitely how I would try and solve *any* multi-cloud problem.
