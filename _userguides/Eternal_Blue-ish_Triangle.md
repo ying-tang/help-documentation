@@ -3,7 +3,7 @@ layout: page
 title: Box Panel, Site Controller, and IBM Blue Box Local Cloud
 author: Leslie Lundquist and Tom Spoonemore
 dateAdded: September 20, 2016
-tags: [getting started, box panel, site controller, faq, cloud security]
+tags: [user guides, box panel, site controller, faq, cloud security]
 featured: true
 weight: 3
 ---
