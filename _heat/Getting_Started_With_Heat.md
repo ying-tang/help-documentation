@@ -20,6 +20,8 @@ heat_template_version: 2013-05-23)
 
 **Description: HOT file for 3 node CoreOS cluster**
 
+```
+
 parameters:
   flavor:
     type: string
@@ -235,6 +237,7 @@ outputs:
     description: CoreOS Cluster SSH Access IP
     value: { get_attr: [ coreos01_floatingip, floating_ip_address ] }
 
+```
 Your Heat template can have as few or as many resources as you like. For example, if you want a Heat template that spins up stacks that just have security groups in them, it's very easy to do. Once you've constructed a template you can create as many stacks from it as you like, using commands such as these:
 
 ```
