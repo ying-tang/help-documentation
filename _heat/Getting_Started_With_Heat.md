@@ -240,7 +240,7 @@ outputs:
     value: { get_attr: [ coreos01_floatingip, floating_ip_address ] }
 
 ```
-Your Heat template can have as few or as many resources as you like. For example, if you want a Heat template that spins up stacks that just have security groups in them, it's very easy to do. Once you've constructed a template you can create as many stacks from it as you like, using commands such as these:
+Your Heat template can have as few or as many resources as you like, it's very easy to do. Once you've constructed a template you can create as many stacks from it as you like, using commands such as these:
 
 ```
 openstack stack create -t <template file> <stack name>
@@ -248,7 +248,7 @@ openstack stack create -t <template file> <stack name>
 openstack stack show <stack name>
 
 ```
-and you can "update" existing stacks by changing the contents of the file and then running
+and you can "update" existing stacks by changing the contents of the file and then running an update command:
 
 ```
 openstack stack update -t <template file> <stack name>
