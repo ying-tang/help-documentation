@@ -28,7 +28,7 @@ For more information about Box Panel, you can review our [Box Panel User’s Gui
 
 As shown in the figure below: 
 
-![Box_Panel_Manages_the_Whole_Stack.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/Box_Panel_Manages_the_Whole_Stack.png)
+![Box_Panel_Manages_the_Whole_Stack.png]({{site.baseurl}}/_drafts/Box_Panel_Manages_the_Whole_Stack.png)
 
 ### What Is Box Panel Site Controller?
 
@@ -52,7 +52,7 @@ The capabilities of Box Panel Site Controller include:
  
 The figure below shows an overview of the relationship between Box Panel and its associated Site Controller, when deployed.
 
-![Box_Panel_Site_Controller_Overview.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/Box_Panel_Site_Controller_Overview.png)
+![Box_Panel_Site_Controller_Overview.png]({{site.baseurl}}/_drafts/Box_Panel_Site_Controller_Overview.png)
 
 ### Terminology FAQ: What is.....
 
