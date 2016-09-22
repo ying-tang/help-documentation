@@ -21,7 +21,7 @@ Along with other functionalities, Box Panel is a system of record for all datace
 
 The Box Panel suite is delivered as a SaaS application accessible through a Web browser and through custom APIs. The Box Panel Suite includes applications for Support, Ticketing, and Chat, and it includes links to product documentation.
 
-For more information about Box Panel, you can review our [Box Panel User’s Guide on our customer help website](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/).
+For more information about Box Panel, you can review our [Box Panel User’s Guide](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/).
 
 
 ### Box Panel Manages the Complete Operational Stack
