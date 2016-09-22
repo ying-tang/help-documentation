@@ -12,7 +12,7 @@ As a best practice, we suggest that your team consider using the OpenStack Orche
 
 Using Heat, you can define all your resources procedurally in a text file, and run that same file against multiple clouds to achieve the same result (known as a stack).
 
-Introductory documentation created by OpenStack can be found [here]9http://docs.openstack.org/developer/heat/template_guide/hot_guide.html) and [here](http://docs.openstack.org/developer/heat/template_guide/).
+Introductory documentation created by OpenStack can be found [here](http://docs.openstack.org/developer/heat/template_guide/hot_guide.html) and [here](http://docs.openstack.org/developer/heat/template_guide/).
 
 
 I have some personal Heat templates. [This one is a little bit old but it should give you an idea of the sort of things you can do:](https://raw.githubusercontent.com/sinner-/heat-coreos/master/heat-template.yaml
