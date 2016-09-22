@@ -1,12 +1,15 @@
+---
+layout: page
+title: Box Panel, Site Controller, and IBM Blue Box Local Cloud
+author: Leslie Lundquist and Tom Spoonemore
+dateAdded: September 20, 2016
+tags: [user guides, box panel, site controller, faq, cloud security]
+featured: true
+weight: 3
+---
+
+
 ## Box Panel, Site Controller, and IBM Blue Box Local Cloud
-
-## “An Eternal Blue-ish Triangle”
-
-**(with a nod to Douglas Hofstadter for no particular reason)**
-
-Drafted by Leslie Lundquist
-
-August 5, 2016
 
 This document offers an introduction to the fundamental concepts and terminology about Box Panel, Site Controller, and how they work together to control and manage your IBM Blue Box Local Cloud environment. The document includes links and pointers to external documents, so you can find even more information. Some of the terms defined in the Terminology FAQ section will be more technical than you may need to know on a daily basis, but knowing about them might come in handy if you have an opportunity to speak to our support team.
 
@@ -70,6 +73,14 @@ data centers.
 **Q: Sensu on a Site Controller?**
 
 **A:** Monitors the Blue Box Cloud physical nodes (pNodes) and provides alerts back to the Central Control Pod. The pNodes include the control, compute, and storage nodes.
+
+**Q: PagerDuty?** 
+
+**A:** The incident reporting tool that wakes us up at night when your cloud needs attention.
+
+**Q: Graphite?** 
+
+**A.** A graphical tool we use, especially for making SLA reports that show whether APIs are up. You can see this information in Horizon because Graphite feeds uptime data into the Grafana dashboards.
 
 **Q: IPMI Proxy?**
 
