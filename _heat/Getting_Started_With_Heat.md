@@ -3,14 +3,16 @@ layout: page
 title: "Getting Started With Heat Templates"
 author: Sina Sinadeghi
 dateAdded: September 21, 2016
-tags: [heat, orchestration, templates, best practices]
+tags: [heat, orchestration, templates, best practices, multi-cloud, security groups]
 featured: true
 weight: 3
 ---
 
-As a best practice, we suggest that your team consider using the OpenStack Orchestration service (Heat), which comes enabled with all IBM Blue Box Clouds. 
+As a best practice, we suggest that your team consider using the OpenStack Orchestration service (Heat), which comes enabled with all IBM Blue Box Clouds. Using Heat, you can define all your resources procedurally in a text file, and run that same file against multiple clouds to achieve the same result (known as a stack). 
 
-Using Heat, you can define all your resources procedurally in a text file, and run that same file against multiple clouds to achieve the same result (known as a stack).
+You can use Heat to set up a stack that has pretty much any OpenStack resource in it that you wish. 
+
+For example, what if you want to set up several stacks with the same security group definitions? If you look at lines 82-110 of the example script that I give below, you can see how security groups are definedin Heat. This capability doesn't let you "copy" security groups _per se_, but it does let you create an identical stack (containing, for example, security group resources) in as many projects or different clouds as you wish. Since the input text file is the same, the resulting stack and contained resources will be identical. You can even spin up multiple identical stacks under the same project.
 
 Introductory documentation created by OpenStack can be found [here](http://docs.openstack.org/developer/heat/template_guide/hot_guide.html) and [here](http://docs.openstack.org/developer/heat/template_guide/).
 
