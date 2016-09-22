@@ -12,7 +12,7 @@ As a best practice, we suggest that your team consider using the OpenStack Orche
 
 You can use Heat to set up a stack that has pretty much any OpenStack resource in it that you wish. 
 
-For example, what if you want to set up several stacks with the same security group definitions? If you look at lines 82-110 of the example script that I give below, you can see how security groups are definedin Heat. This capability doesn't let you "copy" security groups _per se_, but it does let you create an identical stack (containing, for example, security group resources) in as many projects or different clouds as you wish. Since the input text file is the same, the resulting stack and contained resources will be identical. You can even spin up multiple identical stacks under the same project.
+For example, what if you want to set up several stacks with the same security group definitions? If you look at lines 82-110 of the example script that I give below, you can see how security groups are defined in Heat. This capability doesn't let you "copy" security groups _per se_, but it does let you create an identical stack (containing, for example, security group resources) in as many projects or different clouds as you wish. Since the input text file is the same, the resulting stack and contained resources will be identical. You can even spin up multiple identical stacks under the same project.
 
 Introductory documentation created by OpenStack can be found [here](http://docs.openstack.org/developer/heat/template_guide/hot_guide.html) and [here](http://docs.openstack.org/developer/heat/template_guide/).
 
