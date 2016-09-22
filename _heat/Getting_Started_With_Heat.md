@@ -3,12 +3,12 @@ layout: page
 title: "Getting Started With Heat Templates"
 author: Sina Sinadeghi
 dateAdded: September 21, 2016
-tags: [heat, orchestration, templates]
+tags: [heat, orchestration, templates, best practices]
 featured: true
 weight: 3
 ---
 
-We suggest that your team consider using the OpenStack Orchestration service (Heat), which comes enabled with all IBM Blue Box Clouds. 
+As a best practice, we suggest that your team consider using the OpenStack Orchestration service (Heat), which comes enabled with all IBM Blue Box Clouds. 
 
 Using Heat, you can define all your resources procedurally in a text file, and run that same file against multiple clouds to achieve the same result (known as a stack).
 
