@@ -1,12 +1,12 @@
-## Box Panel, Site Controller, and IBM Blue Box Local Cloud
-
-## “An Eternal Blue-ish Triangle”
-
-**(with a nod to Douglas Hofstadter for no particular reason)**
-
-Drafted by Leslie Lundquist
-
-August 5, 2016
+---
+layout: page
+title: Box Panel, Site Controller, and IBM Blue Box Local Cloud
+author: Leslie Lundquist and Tom Spoonemore
+dateAdded: September 20, 2016
+tags: [user guides, box panel, site controller, faq, cloud security]
+featured: true
+weight: 3
+---
 
 This document offers an introduction to the fundamental concepts and terminology about Box Panel, Site Controller, and how they work together to control and manage your IBM Blue Box Local Cloud environment. The document includes links and pointers to external documents, so you can find even more information. Some of the terms defined in the Terminology FAQ section will be more technical than you may need to know on a daily basis, but knowing about them might come in handy if you have an opportunity to speak to our support team.
 
@@ -18,14 +18,14 @@ Along with other functionalities, Box Panel is a system of record for all datace
 
 The Box Panel suite is delivered as a SaaS application accessible through a Web browser and through custom APIs. The Box Panel Suite includes applications for Support, Ticketing, and Chat, and it includes links to product documentation.
 
-For more information about Box Panel, you can review our [Box Panel User’s Guide on our customer help website](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/).
+For more information about Box Panel, you can review our [Box Panel User’s Guide](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/).
 
 
 ### Box Panel Manages the Complete Operational Stack
 
 As shown in the figure below: 
 
-![Box_Panel_Manages_the_Whole_Stack.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/Box_Panel_Manages_the_Whole_Stack.png)
+![Box_Panel_Manages_the_Whole_Stack.png]({{site.baseurl}}/img/Box_Panel_Manages_the_Whole_Stack.png)
 
 ### What Is Box Panel Site Controller?
 
@@ -49,7 +49,7 @@ The capabilities of Box Panel Site Controller include:
  
 The figure below shows an overview of the relationship between Box Panel and its associated Site Controller, when deployed.
 
-![Box_Panel_Site_Controller_Overview.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_drafts/Box_Panel_Site_Controller_Overview.png)
+![Box_Panel_Site_Controller_Overview.png]({{site.baseurl}}/img/Box_Panel_Site_Controller_Overview.png)
 
 ### Terminology FAQ: What is.....
 
@@ -70,6 +70,14 @@ data centers.
 **Q: Sensu on a Site Controller?**
 
 **A:** Monitors the Blue Box Cloud physical nodes (pNodes) and provides alerts back to the Central Control Pod. The pNodes include the control, compute, and storage nodes.
+
+**Q: PagerDuty?** 
+
+**A:** The incident reporting tool that wakes us up at night when your cloud needs attention.
+
+**Q: Graphite?** 
+
+**A.** A graphical tool we use, especially for making SLA reports that show whether APIs are up. You can see this information in Horizon because Graphite feeds uptime data into the Grafana dashboards.
 
 **Q: IPMI Proxy?**
 
