@@ -52,7 +52,7 @@ Create a `stackrc` for yourself, replacing the `OS_USERNAME`, `OS_PROJECT_NAME`,
 
 It is also possible to download an **OpenStack RC File** from **Horizon**. Log in to **Horizon**, navigate to the **Access & Security** page and select the **API Access** tab.  
 
- ![API Access Tab](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/OpenStack_Access_Security.png)
+![API Access Tab](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/OpenStack_Access_Security.png)
 
 Click the **Download OpenStack RC File** button and modify it as desired.
 
