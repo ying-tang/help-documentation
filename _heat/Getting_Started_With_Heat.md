@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Getting Started With Heat Templates"
-author: Sina Sinadeghi
+author: Sina Sadeghi
 dateAdded: September 21, 2016
 tags: [heat, orchestration, templates, best practices, multi-cloud, security groups]
 featured: true
