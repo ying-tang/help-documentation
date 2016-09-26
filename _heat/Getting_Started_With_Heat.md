@@ -17,8 +17,7 @@ For example, what if you want to set up several stacks with the same security gr
 Introductory documentation created by OpenStack can be found [here](http://docs.openstack.org/developer/heat/template_guide/hot_guide.html) and [here](http://docs.openstack.org/developer/heat/template_guide/).
 
 
-I have some personal Heat templates. [This one is a little bit old but it should give you an idea of the sort of things you can do:](https://raw.githubusercontent.com/sinner-/heat-coreos/master/heat-template.yaml
-heat_template_version: 2013-05-23)
+I have some personal Heat templates. [This one is a little bit old but it should give you an idea of the sort of things you can do:](https://raw.githubusercontent.com/sinner-/heat-coreos/master/heat-template.yaml)
 
 **Description: HOT file for 3 node CoreOS cluster**
 
