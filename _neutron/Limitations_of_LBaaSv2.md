@@ -4,7 +4,7 @@ title: Limitations of Neutron LBaaS v2
 author: Blue Box Support
 editor: Leslie Lundquist
 tags: [neutron, lbaas, limitations, haproxy, maxconn, security group]
-dateAdded: September 26, 2016
+dateAdded: September 27, 2016
 ---
 
 
