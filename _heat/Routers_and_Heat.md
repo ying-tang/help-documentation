@@ -17,7 +17,7 @@ A.  This procedure is analogous to the way it is used in raw API calls. See http
 
 Q. In Heat, how do you add a route to both the new router and the default-router?
 
-A. Formerly, there were a couple of ways to add a static route in Heat (ExtraRoute and RouterRouter), but those ways are deprecated because they are no longer supported upstream. You can still use Heat to put static routes in, but you need to put the route in `user_data`. If you prefer, you can also use the script that follows, which has the following syntax:
+A. Formerly, there were a couple of ways to add a static route in Heat (ExtraRoute and RouterRouter), but those ways are deprecated because they are no longer supported upstream. You can still use Heat to put static routes in, but you need to put the route in `user_data`. If you prefer, you can also use the script that follows, which is invoked using the following command line syntax:
 
 ```
 # ./router_route.py test-router2 add 10.0.0.0/24 172.16.0.2
@@ -25,6 +25,11 @@ Adding route to 10.0.0.0/24 via 172.16.0.2
 
 # ./router_route.py test-router2 delete 10.0.0.0/24 172.16.0.2
 Deleting route to 10.0.0.0/24 via 172.16.0.2
+
+```
+Here's the script:
+
+```
 
 #!/usr/bin/python
 
