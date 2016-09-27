@@ -7,17 +7,19 @@ tags: [heat, subnet pool, router, configuring, python]
 ---
 
 
-Q. When configuring a new router with Heat, how do you use a specific IP address from the router's assigned subnet pool?
+**Q. When configuring a new router with Heat, how do you use a specific IP address from the router's assigned subnet pool?**
 
-A.  This procedure is analogous to the way it is used in raw API calls. See https://gist.github.com/ulyssesbbg/0164c4b0141f2c180d5f1e6b226fa3de for an example.
+**A.**  This procedure is analogous to the way it is used in raw API calls. 
+
+See https://gist.github.com/ulyssesbbg/0164c4b0141f2c180d5f1e6b226fa3de for an example.
 
  * First explicitly specify the subnet and network to be used (using, for example, the `private_net_id` and `private_subnet_id` parameters)
  * Then specify the IP address for each subnet used.
 
 
-Q. In Heat, how do you add a route to both the new router and the default-router?
+**Q. In Heat, how do you add a route to both the new router and the default-router?**
 
-A. Formerly, there were a couple of ways to add a static route in Heat (ExtraRoute and RouterRouter), but those ways are deprecated because they are no longer supported upstream. You can still use Heat to put static routes in, but you need to put the route in `user_data`. If you prefer, you can also use the script that follows, which is invoked using the following command line syntax:
+**A.** Formerly, there were a couple of ways to add a static route in Heat (**ExtraRoute** and **RouterRouter**), but those ways are deprecated because they are no longer supported upstream. You can still use Heat to put static routes in, but you need to put the route in `user_data`. If you prefer, you can also use the script that follows, which is invoked using the following command line syntax:
 
 ```
 # ./router_route.py test-router2 add 10.0.0.0/24 172.16.0.2
