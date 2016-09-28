@@ -192,11 +192,11 @@ Another common use case would be to create a `cloud_admin` group that is given t
 
 You can see the difference in approach by these two illustrations.
 
-![User Management With Roles](http://open.ibmcloud.com/documentation/_images/UserManagementWithRoles.gif)
+![User Management With Roles]({{site.baseurl}}/img/UserManagementWithRoles.gif)
 
 This figure shows an example of traditional role assignments as supported by the Keystone v2 API. The `cloud_admin` user has the `cloud_admin` role for Project 1, Project 2, and Project 3. User 1 has the `project_admin` role for Project 2. User 2 and Support User 1 have the `_member_` role for Project 2. Support User 1 also has the `_member_` role for Project 3.
 
-![User Management with Groups](http://open.ibmcloud.com/documentation/_images/UserManagementWithGroups.gif)
+![User Management with Groups]({{site.baseurl}}/img/UserManagementWithGroups.gif)
 
 ### Consequences of disabling projects
 Users with the `cloud_admin` role can enable and disable projects. When you disable a project, it has these consequences:
