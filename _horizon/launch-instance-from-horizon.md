@@ -163,7 +163,7 @@ The dashboard displays the list of instances for the current project. In the Act
 
 ![Instance options]({{site.baseurl}}/img/launch_instance_more.png)
 
-* **Creates snapshot:**
+* **Creates snapshot:** creates a snapshot of the instance.*
 * **Associate Floating IP:** associates an available floating IP to a port of your instance. 
 * **Attach an Interface:** attaches the interface to a network. 
 * **Detach an Interface:** removes a port that you created for the instance.
