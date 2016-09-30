@@ -1,12 +1,13 @@
 ---
 layout: page
 title:  "How to configure a highly-available IP"
-tags: [neutron, configuring ip, highly available]
-dateAdded: April 9th, 2015
+tags: [neutron, configuring ip, ha, highly available, allowed address pairs, l2 pop]
+dateAdded: September 21, 2016
 author: Eric French
 featured: false
 weight: 4
 note: Leslie Lundquist
+originally added: April 9th, 2015 
 ---
 
 This article provides a resource on how to set up HA floating IPs within an **IBM Blue Box Cloud OpenStack** Local environment. These instructions assume that you already have the [**OpenStack Python API Clients**](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/) installed.
