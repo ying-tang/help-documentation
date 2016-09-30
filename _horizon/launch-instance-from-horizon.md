@@ -121,14 +121,6 @@ You can create additional key and value pairs in the **Custom** field and click 
 
 For more information about Glance metadata, see [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/metadefs-concepts.html) and [Using Glance’s Metadata Definitions Catalog Public APIs](http://docs.openstack.org/developer/glance/glancemetadefcatalogapi.html).
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/icos-integration-4
-=======
->>>>>>> refs/remotes/origin/icos-integration-4
 ## How to connect to your instance
 
 **Note:** Be sure that proper security group rules are defined for connecting to your instance over `ssh` or `rdp`.
@@ -194,4 +186,6 @@ The dashboard displays the list of instances for the current project. In the Act
 
 Click the option for the operation you need to apply.
 
+
+ 
 

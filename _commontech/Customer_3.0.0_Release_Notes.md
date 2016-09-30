@@ -87,15 +87,9 @@ You can select from the following compute node extensions to add to your IBM Blu
  * You can select specialized expansion compute nodes: IO, or HIGH STORAGE (New in this release)
  * You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE (Previously available)
  * You can select POWER Compute Nodes (Habañero): These nodes particularly support IBM Watson applications, and others.
-<<<<<<< HEAD:_commontech/Customer_3.0.0_Release_Notes.md
 
 <a name="block-storage"></a>**Hybrid Block Storage Nodes:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster.
 
-=======
-
-<a name="block-storage"></a>**Hybrid Block Storage Nodes:** Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage. We've added a Hybrid Ceph Storage node type, which provides lower-cost and higher-density Block Storage. It's 4x the capacity for the same price point as SSD, with an identical software stack and reference architecture. Note that only one type of Block Storage can be used per cluster: SSD Block Storage and Hybrid Block Storage cannot be mixed in the same cluster.
-
->>>>>>> IBM-Blue-Box-Help/gh-pages:_commontech/Customer_3.0.0_Release_Notes.md
  * You can select Block Storage: SSD or HYBRID
 
 <a name="hipaa"></a>**HIPAA-enabled Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.

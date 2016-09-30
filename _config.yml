@@ -90,4 +90,3 @@ collections:
   ceilometer:
     output: true
     permalink: /ceilometer/:path/
-  
