@@ -72,6 +72,19 @@ This command will return a list of all running instances in your project.
 
 ### How to query the OpenStack API using cURL
 
+**Q.** How can I get an OpenStack token via the v3 API?
+
+**A.**
+{% highlight bash %} 
+
+curl -si -X POST https://example.openstack.blueboxgrid.com:5000/v3/auth/tokens -H "Content-Type: application/json" -d '{ "auth": { "identity": { "methods": [ "password" ], "password": { "user": { "name": "'"$OS_USERNAME"'", "domain": { "id": "default" }, "password": "'"$OS_PASSWORD"'" } } } } }' | awk '/X-Subject-Token/ {print $2}'
+
+381d756c8bfa4a8cb4dff4fe44255991
+
+{% endhighlight%}
+
+**For more information:**
+
 An API guide linked [here](http://developer.openstack.org/api-guide/quick-start/api-quick-start.html) includes examples of using cURL to get a list of servers.
 
 Each service has its own port for API access. If you log in to the web GUI and go to the **Access & Security => API Access** tab, you can see which port corresponds to which service.
