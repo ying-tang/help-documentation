@@ -24,7 +24,7 @@ This document gives a brief explanation of the different load balancing methods.
 
  * The server with the lowest number of connections receives the connection.
 
-Here's a figure showing the SOURCE_IP menu, where you can select an option.
+Here's a figure showing the **Create Load Balancer** menu, where you can select an option. In this view, the user is selecting from the SOURCE_IP options.
 
 
 ![Create-Load-Balancer.png]({{site.baseurl}}/img/Create-Load-Balancer.png)
