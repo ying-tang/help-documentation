@@ -4,6 +4,8 @@ title: Load Balancing Methods
 tags: [neutron, load balancing, round robin, least connections, source_ip, session persistence, http_cookie, app_cookie]
 dateAdded: October 3, 2016
 author: Leslie Lundquist
+weight: 4
+featured: FALSE
 ---
 
 This document gives a brief explanation of the different load balancing methods.
