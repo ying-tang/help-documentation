@@ -24,7 +24,8 @@ The source IP address is hashed and divided by the total weight of the running s
 
 The server with the lowest number of connections receives the connection.
 
-Here's a figure showing the SOURCE_IP menu, where you can select on option.
+Here's a figure showing the SOURCE_IP menu, where you can select an option.
+
 
 ![Create-Load-Balancer.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/Create-Load-Balancer.png)
 
