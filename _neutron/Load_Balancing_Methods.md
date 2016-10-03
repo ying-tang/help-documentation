@@ -24,6 +24,10 @@ The source IP address is hashed and divided by the total weight of the running s
 
 The server with the lowest number of connections receives the connection.
 
+Here's a figure showing the SOURCE_IP menu, where you can select on option.
+
+![Create-Load-Balancer.png]()
+
 Here is an explanation of the session persistence options:
 
 **Types of session persistence:**
