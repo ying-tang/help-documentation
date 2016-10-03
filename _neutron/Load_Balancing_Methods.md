@@ -14,15 +14,15 @@ This document gives a brief explanation of the different load balancing methods.
 
 *ROUND_ROBIN*
 
-Each server is used in turns, according to their weights.
+ * Each server is used in turn, according to their relative weights.
 
 *SOURCE_IP*
 
-The source IP address is hashed and divided by the total weight of the running servers to designate which server will receive the request
+ * The source IP address is hashed and divided by the total weight of the running servers to designate which server will receive the request.
 
 *LEAST_CONNECTIONS*
 
-The server with the lowest number of connections receives the connection.
+ * The server with the lowest number of connections receives the connection.
 
 Here's a figure showing the SOURCE_IP menu, where you can select an option.
 
@@ -35,14 +35,14 @@ Here is an explanation of the session persistence options:
 
 *SOURCE_IP*
 
-All connections that originate from the same source IP address are handled by the same member of the pool.
+ * All connections that originate from the same source IP address are handled by the same member of the pool.
 
 *HTTP_COOKIE*
 
-The load-balancing function creates a cookie on the first request from a client. Subsequent requests that contain the same cookie value are handled by the same member of the pool.
+ * The load-balancing function creates a cookie on the first request from a client. Subsequent requests that contain the same cookie value are handled by the same member of the pool.
 
 *APP_COOKIE*
 
-The load-balancing function relies on a cookie established by the back-end application. All requests with the same cookie value are handled by the same member of the pool.
+ * The load-balancing function relies on a cookie established by the back-end application. All requests with the same cookie value are handled by the same member of the pool.
 
 For further information, please see: http://docs.openstack.org/admin-guide/networking-introduction.html#load-balancer-as-a-service-lbaas-overview
