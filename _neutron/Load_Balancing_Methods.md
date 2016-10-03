@@ -8,7 +8,7 @@ weight: 4
 featured: FALSE
 ---
 
-This document gives a brief explanation of the different load balancing methods. The SOURCE_IP load balancing method determines which server gets the traffic of a new session. The SOURCE_IP session persistence option determines the destination for an existing session, based solely on the source IP rather than based on a cookie.
+This document gives a brief explanation of the different load balancing methods. The SOURCE_IP load balancing method determines which server gets the traffic of a _new_ session. The SOURCE_IP session persistence option determines the destination for an _existing_ session, based solely on the source IP rather than based on a cookie.
 
 **Types of algorithms:**
 
@@ -23,6 +23,11 @@ The source IP address is hashed and divided by the total weight of the running s
 *LEAST_CONNECTIONS*
 
 The server with the lowest number of connections receives the connection.
+
+Here's a figure showing the SOURCE_IP menu, where you can select an option.
+
+
+![Create-Load-Balancer.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/Create-Load-Balancer.png)
 
 Here is an explanation of the session persistence options:
 
