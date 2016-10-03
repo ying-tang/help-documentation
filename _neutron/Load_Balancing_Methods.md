@@ -8,7 +8,7 @@ weight: 4
 featured: FALSE
 ---
 
-This document gives a brief explanation of the different load balancing methods.
+This document gives a brief explanation of the different load balancing methods. The SOURCE_IP load balancing method determines which server gets the traffic of a new session. The SOURCE_IP session persistence option determines the destination for an existing session, based solely on the source IP rather than based on a cookie.
 
 **Types of algorithms:**
 
@@ -39,7 +39,5 @@ The load-balancing function creates a cookie on the first request from a client.
 *APP_COOKIE*
 
 The load-balancing function relies on a cookie established by the back-end application. All requests with the same cookie value are handled by the same member of the pool.
-
-So, the SOURCE_IP load balancing method determines which server gets the traffic of a new session while the SOURCE_IP session persistence option determines the the destination for an existing session based solely on the source IP rather than a cookie.
 
 For further information, please see: http://docs.openstack.org/admin-guide/networking-introduction.html#load-balancer-as-a-service-lbaas-overview
