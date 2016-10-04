@@ -74,10 +74,13 @@ This command will return a list of all running instances in your project.
 
 **Q.** How can I get an OpenStack token via the v3 API?
 
-**A.**
+**A.** Here's a command you can use:
 {% highlight bash %} 
-
-curl -si -X POST https://example.openstack.blueboxgrid.com:5000/v3/auth/tokens -H "Content-Type: application/json" -d '{ "auth": { "identity": { "methods": [ "password" ], "password": { "user": { "name": "'"$OS_USERNAME"'", "domain": { "id": "default" }, "password": "'"$OS_PASSWORD"'" } } } } }' | awk '/X-Subject-Token/ {print $2}'
+curl -si -X POST https://example.openstack.blueboxgrid.com:5000/v3/auth/tokens \
+-H "Content-Type: application/json" \
+-d '{ "auth": { "identity": { "methods": [ "password" ], \
+"password": { "user": { "name": "'"$OS_USERNAME"'", "domain": { "id": "default" },\
+"password": "'"$OS_PASSWORD"'" } } } } }' | awk '/X-Subject-Token/ {print $2}'
 
 381d756c8bfa4a8cb4dff4fe44255991
 
