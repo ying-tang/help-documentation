@@ -29,7 +29,7 @@ Every IBM Blue Box 3.1.0 Cloud has these new features:
 
 IBM Blue Box 3.1.0 Dedicated Cloud features:
 
-1. [Support for SoftLayer VLAN spanning and connectivity to customer Bare Metal hardware.](#transit-vlan)
+1. With 3.1.0 comes the support for having a multi-tier Ceph cluster (that is, the ability to provision an all-SSD OSD pool and a Hybrid OSD pool). Each Ceph tier is represented as a separate backend in Cinder.
 2. 
 
 IBM Blue Box 3.1.0 Local Cloud features:
