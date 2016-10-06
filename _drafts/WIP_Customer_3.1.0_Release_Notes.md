@@ -19,7 +19,7 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 ### Summary of the Latest Release
 
-Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capabilities and performance improvements related to storage. We’ve also added Federated Keystone to IdP authentication support.
+Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capabilities and performance improvements related to storage. We’ve also added Federated-Keystone-to-IdP authentication support.
 
 **Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
@@ -30,7 +30,7 @@ Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capa
  * [OIDC Federation](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/oidc-federation.md)       
  * OIDC needs a copy edit. these links will be changed to the published version.
 
-2. [Storage Pools](#storage-pools): Customers with diverse storage performance requirements now have the ability to leverage both a high performance SSD and cost effective Hybrid storage pools in the same cloud.  The customer can direct workloads to the optimal storage pool.  
+2. [Storage Pools](#storage-pools): Customers with diverse storage performance requirements now have the ability to leverage both a high-performance SSD and cost-effective Hybrid storage pools in the same cloud.  You can direct your workloads to the optimal storage pool.  
 
  * [Supported volume types](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_cinder/supported_volume_types.md) Needs a copy edit and the correct link.
  * [Creating a volume from Horizon](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_horizon/create-volume-from-horizon.md)
