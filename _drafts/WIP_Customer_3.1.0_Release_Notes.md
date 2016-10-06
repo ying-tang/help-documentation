@@ -25,16 +25,16 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 1. [Federated Keystone–IdP](#federated-keystone): We now support a Federated Keystone that utilizes a customer's existing IdP (Identity Provider), such as LDAP, RADIUS, and Active Directory. Users can have a single credential to manage multiple clouds.
 
- * [SAML Federation](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/saml-federation.md)
- * [K2K Federation](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/k2k-federation.md)
- * [OIDC Federation](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/oidc-federation.md)       
- * OIDC needs a copy edit. these links will be changed to the published version.
+ * [K2K Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/k2k-federation/)
+ * [SAML Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/saml-federation/)
+ * [OIDC Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/oidc-federation/)       
+ * OIDC needs a copy edit.
 
 2. [Storage Pools](#storage-pools): Customers with diverse storage performance requirements now have the ability to leverage both a high-performance SSD and cost-effective Hybrid storage pools in the same cloud.  You can direct your workloads to the optimal storage pool.  
 
- * [Supported volume types](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_cinder/supported_volume_types.md) Needs a copy edit and the correct link.
- * [Creating a volume from Horizon](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_horizon/create-volume-from-horizon.md)
- * [Creating a volume from the command line](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_cinder/cli-create-volume.md)
+ * [Supported volume types](http://ibm-blue-box-help.github.io/help-documentation/cinder/supported_volume_types/) Needs a copy edit.
+ * [Creating a volume from Horizon](http://ibm-blue-box-help.github.io/help-documentation/horizon/create-volume-from-horizon/)
+ * [Creating a volume from the command line](http://ibm-blue-box-help.github.io/help-documentation/cinder/cli-create-volume/)
 
 3. [Storage Performance Improvements](#storage-performance-improvements): The Jewel release of **Ceph** has been implemented to provide approximately a 30% storage performance improvement.
 
@@ -56,7 +56,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 ### Known Limitations of this Release
 
-For specific information about the limitations of LBaaS, please refer to [Limitations of LBaaS v2](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_neutron/Limitations_of_LBaaSv2.md).
+For specific information about the limitations of LBaaS, please refer to [Limitations of LBaaS v2](http://ibm-blue-box-help.github.io/help-documentation/neutron/Limitations_of_LBaaSv2/).
 
 For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available online anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
