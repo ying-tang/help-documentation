@@ -23,8 +23,12 @@ Release 3.1.0 of IBM Blue Box Cloud includes many new capabilities. We’ve incl
 
 Every IBM Blue Box 3.1.0 Cloud has these new features:
 
-1. [Keystone-to-Keystone federated identity across multiple Blue Box clouds.](#federated-keystone)
-2. [Updated Documentation Website now accessible through Box Panel.](#new-docs-site)
+1. [Federated Keystone–IdP](#federated-keystone): We now support a Federated Keystone that utilizes a customer's existing IdP (Identity Provider), such as LDAP, RADIUS, and Active Directory. Users can have a single credential to manage multiple clouds.
+
+2. [Storage Pools](#storage-pools): Customers with diverse storage performance requirements now have the ability to leverage both a high performance SSD and cost effective Hybrid storage pools in the same cloud.  The customer can direct workloads to the optimal storage pool.  
+
+3. [Storage Performance Improvements](#storage-performance-improvements) The Jewel release of CEPH has been implemented to provide approximately a 30% storage performance increase.
+
 3. [An update for IBM Blue Box Cloud Images.](#regular-updates)
 
 IBM Blue Box 3.1.0 Dedicated Cloud features:
@@ -34,8 +38,9 @@ IBM Blue Box 3.1.0 Dedicated Cloud features:
 
 IBM Blue Box 3.1.0 Local Cloud features:
 
-1. 
-2. 
+1. **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo curated bill of materials is now supported.  
+
+2. **Support for Bluemix Local System**: Bluemix Local System is now supported.
 
 [**Known Limitations of this Release**](#known-limitations-of-this-release)
 
