@@ -25,11 +25,20 @@ Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capa
 
 1. [Federated Keystone–IdP](#federated-keystone): We now support a Federated Keystone that utilizes a customer's existing IdP (Identity Provider), such as LDAP, RADIUS, and Active Directory. Users can have a single credential to manage multiple clouds.
 
+ * [SAML Federation](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/saml-federation.md)
+ * [K2K Federation](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/k2k-federation.md)
+ * [OIDC Federation](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_keystone/oidc-federation.md)       
+ * OIDC needs a copy edit. these links will be changed to the published version.
+
 2. [Storage Pools](#storage-pools): Customers with diverse storage performance requirements now have the ability to leverage both a high performance SSD and cost effective Hybrid storage pools in the same cloud.  The customer can direct workloads to the optimal storage pool.  
+
+ * [Supported volume types](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_cinder/supported_volume_types.md) Needs a copy edit and the correct link.
+ * [Creating a volume from Horizon](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_horizon/create-volume-from-horizon.md)
+ * [Creating a volume from the command line](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_cinder/cli-create-volume.md)
 
 3. [Storage Performance Improvements](#storage-performance-improvements): The Jewel release of CEPH has been implemented to provide approximately a 30% storage performance improvement.
 
-3. [An update for IBM Blue Box Cloud Images](#regular-updates): Our Cloud Images have been updated.
+3. [An update for IBM Blue Box Cloud Images](#regular-updates): Our Cloud Images have been updated. The [Cloud Image User Guide]( http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160910/Image_Release_Notes_2016-09-10/) has the latest information. 
 
 4. [Support for containers](#containers): We now have a Container service that offers a managed, scalable, solution for container orchestration, with support for Docker Compose. 
 
