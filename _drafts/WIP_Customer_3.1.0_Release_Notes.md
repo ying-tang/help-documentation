@@ -15,11 +15,11 @@ author: Leslie Lundquist
 #### October 14, 2016
 
 
-This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, including specifics of the 3.1.0 Dedicated and Local Cloud offerings. Links to detailed documentation can be found in each section.
+This document offers a basic description of the specifics of the 3.1.0 Dedicated and Local Cloud offerings. Links to further documentation can be found in each section.
 
 ### Summary of the Latest Release
 
-Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capabilities and performance improvements related to storage. We’ve also added Federated-Keystone-to-IdP authentication support.
+Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new capabilities and performance improvements related to storage. We’ve also added Federated-Keystone-to-IdP authentication support.
 
 **Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
