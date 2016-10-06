@@ -45,7 +45,7 @@ Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capa
 
 **IBM Blue Box 3.1.0 Dedicated Cloud features:**
 
-1. **Multi-tier, hybrid storage pool**: With 3.1.0 comes the support for having a multi-tier Ceph cluster (that is, the ability to provision an all-SSD OSD pool and a Hybrid OSD pool). Each Ceph tier is represented as a separate backend in Cinder.
+1. **Multi-tier, hybrid storage pool**: With 3.1.0 comes the support for having a multi-tier Ceph cluster (that is, the ability to provision an all-SSD OSD pool and/or a Hybrid OSD pool). Each Ceph tier is represented as a separate backend in Cinder. The minimum number of OSD nodes for a new deployment remains at 3, and for hybrid expansion a minumum of 3 nodes must be added. After that, you may expand your storage one node at a time.
 2. **Blue Box in SoftLayer Portal**: We now provide support for inclusion of Blue Box Dedicated into the Softlayer portal.
 3. **Box Panel Beta**: We've included a Beta release of Box Panel with enhanced capabilities to support a co-managed environment.
 
