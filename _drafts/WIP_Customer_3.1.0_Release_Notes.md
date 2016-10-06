@@ -36,18 +36,18 @@ Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capa
  * [Creating a volume from Horizon](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_horizon/create-volume-from-horizon.md)
  * [Creating a volume from the command line](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_cinder/cli-create-volume.md)
 
-3. [Storage Performance Improvements](#storage-performance-improvements): The Jewel release of CEPH has been implemented to provide approximately a 30% storage performance improvement.
+3. [Storage Performance Improvements](#storage-performance-improvements): The Jewel release of **Ceph** has been implemented to provide approximately a 30% storage performance improvement.
 
 3. [An update for IBM Blue Box Cloud Images](#regular-updates): Our Cloud Images have been updated. The [Cloud Image User Guide]( http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160910/Image_Release_Notes_2016-09-10/) has the latest information. 
 
-4. [Support for containers](#containers): We now have a Container service that offers a managed, scalable, solution for container orchestration, with support for Docker Compose. 
+4. [Support for containers](#containers): We now have a Container service that offers a managed, scalable, solution for container orchestration, with support for **Docker Compose**. 
 
 
 **IBM Blue Box 3.1.0 Dedicated Cloud features:**
 
 1. **Multi-tier, hybrid storage pool**: With 3.1.0 comes the support for having a multi-tier Ceph cluster (that is, the ability to provision an all-SSD OSD pool and a Hybrid OSD pool). Each Ceph tier is represented as a separate backend in Cinder.
-2. **Blue Box in SoftLayer Portal**: Support for inclusion of Blue Box Dedicated into the Softlayer portal.
-3. **Box Panel Beta**: A Beta release of Box Panel with enhanced capabilities to support a co-managed environment.
+2. **Blue Box in SoftLayer Portal**: We now provide support for inclusion of Blue Box Dedicated into the Softlayer portal.
+3. **Box Panel Beta**: We've included a Beta release of Box Panel with enhanced capabilities to support a co-managed environment.
 
 **IBM Blue Box 3.1.0 Local Cloud features:**
 
