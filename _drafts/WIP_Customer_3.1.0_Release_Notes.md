@@ -19,9 +19,9 @@ This document offers a basic technical description of the latest IBM Blue Box Cl
 
 ### Summary of the Latest Release
 
-Release 3.1.0 of IBM Blue Box Cloud includes some new capabilities and performance improvements related to storage. We’ve also added improved Keystone authentication support.
+Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capabilities and performance improvements related to storage. We’ve also added Federated Keystone to IdP authentication support.
 
-Every IBM Blue Box 3.1.0 Cloud has these new features:
+**Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
 1. [Federated Keystone–IdP](#federated-keystone): We now support a Federated Keystone that utilizes a customer's existing IdP (Identity Provider), such as LDAP, RADIUS, and Active Directory. Users can have a single credential to manage multiple clouds.
 
@@ -31,16 +31,16 @@ Every IBM Blue Box 3.1.0 Cloud has these new features:
 
 3. [An update for IBM Blue Box Cloud Images](#regular-updates): Our Cloud Images have been updated..
 
-4. [Support for containers]: A Container service that offers a managed, scalable, solution for container orchestration, with support for Docker Compose. 
+4. [Support for containers]: We now have a Container service that offers a managed, scalable, solution for container orchestration, with support for Docker Compose. 
 
 
-IBM Blue Box 3.1.0 Dedicated Cloud features:
+**IBM Blue Box 3.1.0 Dedicated Cloud features:**
 
 1. **Multi-tier, hybrid storage pool**: With 3.1.0 comes the support for having a multi-tier Ceph cluster (that is, the ability to provision an all-SSD OSD pool and a Hybrid OSD pool). Each Ceph tier is represented as a separate backend in Cinder.
 2. **Blue Box in SoftLayer Portal** Support for inclusion of Blue Box Dedicated into the Softlayer portal.
 3. **Box Panel Beta** A Beta release of Box Panel with enhanced capabilities to support a co-managed environment.
 
-IBM Blue Box 3.1.0 Local Cloud features:
+**IBM Blue Box 3.1.0 Local Cloud features:**
 
 1. **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo curated bill of materials is now supported.  
 2. **Support for Bluemix Local System**: Bluemix Local System is now supported.
