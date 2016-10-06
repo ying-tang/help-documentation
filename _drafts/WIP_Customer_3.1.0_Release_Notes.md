@@ -29,9 +29,9 @@ Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capa
 
 3. [Storage Performance Improvements](#storage-performance-improvements): The Jewel release of CEPH has been implemented to provide approximately a 30% storage performance improvement.
 
-3. [An update for IBM Blue Box Cloud Images](#regular-updates): Our Cloud Images have been updated..
+3. [An update for IBM Blue Box Cloud Images](#regular-updates): Our Cloud Images have been updated.
 
-4. [Support for containers]: We now have a Container service that offers a managed, scalable, solution for container orchestration, with support for Docker Compose. 
+4. [Support for containers](#containers): We now have a Container service that offers a managed, scalable, solution for container orchestration, with support for Docker Compose. 
 
 
 **IBM Blue Box 3.1.0 Dedicated Cloud features:**
