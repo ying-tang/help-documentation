@@ -46,13 +46,13 @@ Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capa
 **IBM Blue Box 3.1.0 Dedicated Cloud features:**
 
 1. **Multi-tier, hybrid storage pool**: With 3.1.0 comes the support for having a multi-tier Ceph cluster (that is, the ability to provision an all-SSD OSD pool and a Hybrid OSD pool). Each Ceph tier is represented as a separate backend in Cinder.
-2. **Blue Box in SoftLayer Portal** Support for inclusion of Blue Box Dedicated into the Softlayer portal.
-3. **Box Panel Beta** A Beta release of Box Panel with enhanced capabilities to support a co-managed environment.
+2. **Blue Box in SoftLayer Portal**: Support for inclusion of Blue Box Dedicated into the Softlayer portal.
+3. **Box Panel Beta**: A Beta release of Box Panel with enhanced capabilities to support a co-managed environment.
 
 **IBM Blue Box 3.1.0 Local Cloud features:**
 
-1. **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo curated bill of materials is now supported.  
-2. **Support for Bluemix Local System**: Bluemix Local System is now supported.
+1. **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo-curated bill of materials is now supported.  
+2. **Support for Bluemix Local System**: The Bluemix Local System is now supported on Blue Box Local (IaaS).
 
 [**Known Limitations of this Release**](#known-limitations-of-this-release)
 
@@ -60,7 +60,4 @@ For specific information about the limitations of LBaaS, please refer to [Limita
 
 For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available online anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
-A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later [is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
-
-
-
+For new users of IBM Blue Box Cloud, a **General Product Overview** for IBM Blue Box Cloud version 2.0 and later [is available](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
