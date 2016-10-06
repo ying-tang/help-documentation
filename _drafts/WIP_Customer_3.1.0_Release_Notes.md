@@ -54,7 +54,7 @@ Release 3.1.0 of IBM Blue Box Cloud, Dedicated and Local, includes some new capa
 1. **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo-curated bill of materials is now supported.  
 2. **Support for Bluemix Local System**: The Bluemix Local System is now supported on Blue Box Local (IaaS).
 
-[**Known Limitations of this Release**](#known-limitations-of-this-release)
+### Known Limitations of this Release
 
 For specific information about the limitations of LBaaS, please refer to [Limitations of LBaaS v2](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_neutron/Limitations_of_LBaaSv2.md).
 
