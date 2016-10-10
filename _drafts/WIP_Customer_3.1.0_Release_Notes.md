@@ -23,7 +23,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 **Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
-1. [Federated Keystone–IdP](#federated-keystone): Customers can now use an existing IdP (Identity Provider), such as LDAP, RADIUS, and Active Directory to manage OpenStack identity. Users can have a single credential to manage multiple clouds.
+1.) Federated Keystone–IdP](#federated-keystone): Customers can now use an existing IdP (Identity Provider), such as LDAP, RADIUS, and Active Directory to manage OpenStack identity. Users can have a single credential to manage multiple clouds.
 
 *Here are some related documents:*
 
@@ -31,7 +31,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
  * [SAML Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/saml-federation/)
  * [OIDC Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/oidc-federation/)       
 
-2. [Storage Pools](#storage-pools): Customers with diverse storage performance requirements can now direct workloads optimally, to high-performance SSD and cost-effective Hybrid storage pools in the same cloud. The minimum number of OSD nodes for a new deployment remains at 3, and for hybrid expansion a minumum of 3 nodes must be added. After that, you may expand your storage one node at a time.
+2.) [Storage Pools](#storage-pools): Customers with diverse storage performance requirements can now direct workloads optimally, to high-performance SSD and cost-effective Hybrid storage pools in the same cloud. The minimum number of OSD nodes for a new deployment remains at 3, and for hybrid expansion a minumum of 3 nodes must be added. After that, you may expand your storage one node at a time.
 
 *Here are some related documents:*
 
@@ -39,7 +39,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
  * [Creating a volume from Horizon](http://ibm-blue-box-help.github.io/help-documentation/horizon/create-volume-from-horizon/)
  * [Creating a volume from the command line](http://ibm-blue-box-help.github.io/help-documentation/cinder/cli-create-volume/)
 
-3. [Storage Performance Improvements](#storage-performance-improvements): **Ceph** deployments have been upgraded to the Jewel release, to provide a 30% performance improvement.
+3.) [Storage Performance Improvements](#storage-performance-improvements): **Ceph** deployments have been upgraded to the Jewel release, to provide a 30% performance improvement.
 
 **IBM Blue Box Cloud Image Updates**
 
