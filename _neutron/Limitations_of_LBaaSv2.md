@@ -7,7 +7,7 @@ tags: [neutron, lbaas, limitations, haproxy, maxconn, security group]
 dateAdded: September 27, 2016
 ---
 
-The goal of exposing LBaaS v2 in Blue Box Cloud is two-fold:
+The goal of exposing Neutron LBaaS v2 in IBM Blue Box Cloud is two-fold:
 
  * to provide a consistent LBaaS API as we approach Octavia integration, and
  * to provide a short-term solution for customers who need LBaaS.
