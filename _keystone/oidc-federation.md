@@ -57,6 +57,7 @@ After the Blue Box operator is finished integrating `Company XYZ IDP` with Keyst
 The steps for managing the mapping is:
 
 **1. Manage groups (Federated users will have the same access rights as the group)**
+
 **2. Manage the mappings**
 
 ## <a name="managing_groups"></a>Managing Groups
@@ -111,10 +112,10 @@ $ openstack role add --help
 $ openstack role  add <role> --project <project> --group <group>
 ```
 
-Federated users are mapped into groups on the Service Provider.
+Federated users are mapped into groups on the Service Provider. Here's the order of operations for granting access for groups:
 
-Here's the order of operations for granting access for groups:
 1. First, create or edit the group.
+
 2. Then, create or edit the role assignments for groups on projects.
 
 **Example 1.** Creating a `company_xyz_admin_group` group.
@@ -252,9 +253,9 @@ To set the username we can use **{0}** in the local section to indicate to use a
 
 
 
-Here are some example scenarios:
+##The section that follows contains some example scenarios:
 
-**Example 1.**
+**Example 1.** Using an email address to create a username on Keystone
 In this example, we are mapping users from the Company XYZ IDP and allowing any user from the `admin_group`. The user's email address will be used to create a user on Keystone. If the user's email is `test@test.ibmcloud.com`, then the resulting username would be `CompanyXYZ/test@test.ibmcloud.com`.
 
 ```
@@ -358,22 +359,26 @@ In the following example we are using
 
 ## <a name="using_horizon"></a>Using Horizon
  The OpenStack dashboard on the Identity Provider should have a drop-down menu labeled **Authenticate with SSO**.
- 1. The dropdown should show a label for the IdP. Select the IDP and click Connect.
+ 
+ 1. The dropdown menu should show a label for the IdP. Select the IDP and click **Connect**.
+ 
  2. You will then be redirected to the IDP log in page.
- 3. After successfully authenticating with the IDP, you should then redirected to the horizon page.
+ 
+ 3. After successfully authenticating with the IDP, you should be redirected to the Horizon page.
 
 ## <a name="using_oauth_api"></a>Using OAuth API
 
+User credentials are never sent to Keystone directly, but they are sent to the OAuth provider endpoints.
 
-User credentials are never sent directly to Keystone, but they are sent to the OAuth provider endpoints.
+Steps to run the following code:
 
-Steps to run the following code
+1. Install Pre-Requisites: `request-oauthlib`, Keystone client, and Nova client
 
-1. Install Pre-Requisites: request-oauthlib, keystone client and nova client
 2. source <OIDC stackrc file>
+
 3. python <filename>
 
-OIDC stackrc
+**OIDC stackrc**
 
 ```
 export OS_AUTH_URL=https://<fqdn>:5000/v3
@@ -389,7 +394,7 @@ export OS_PROJECT_ID=<project_id>
 ```
 
 
-**Using API for authorization code flow**
+### Example 3: Using API for authorization code flow**
 
 This file is `oidc-authflow.py`
 
@@ -449,7 +454,7 @@ if __name__ == '__main__':
 
 
 
-**Using API for password flow**
+### Example 4: Using API for password flow**
 
 This file is `oidc-passflow.py`
 
