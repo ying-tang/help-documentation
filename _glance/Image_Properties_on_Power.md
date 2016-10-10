@@ -2,7 +2,7 @@
 layout: page
 author: Niraj Patel
 title: Optimal Settings for Glance Images on Power Compute
-dateAdded: Ocober 6, 2016
+dateAdded: October 6, 2016
 tags: [glance, ppc64el, images, power]
 weight: 5
 featured: FALSE
@@ -19,7 +19,7 @@ When you're working with Glance images that you'll use to boot VMs on Power comp
  * hw_disk_bus=scsi
  (This pair connects every Cinder block device to that controller.)
 
-These settings are needed to be able to attach Cinder volumes to running guest VM's.
+These settings are needed to be able to attach Cinder volumes to running guest VMs.
 
 Here's a screen shot showing what the Horizon interface looks like when you're updating metadata. You can update the matadata when you initially create an image, or later at any time.
 
