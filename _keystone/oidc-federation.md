@@ -255,7 +255,7 @@ To set the username we can use **{0}** in the local section to indicate to use a
 
 ##The section that follows contains some example scenarios:
 
-**Example 1.** Using an email address to create a username on Keystone
+**Example 1. Using an email address to create a username on Keystone**
 In this example, we are mapping users from the Company XYZ IDP and allowing any user from the `admin_group`. The user's email address will be used to create a user on Keystone. If the user's email is `test@test.ibmcloud.com`, then the resulting username would be `CompanyXYZ/test@test.ibmcloud.com`.
 
 ```
@@ -291,7 +291,7 @@ In this example, we are mapping users from the Company XYZ IDP and allowing any 
 ]
 ```
 
-**Example 2.** Multiple Groups
+**Example 2. Multiple Groups**
 
 In the following example we are using
 
