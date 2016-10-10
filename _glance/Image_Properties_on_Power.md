@@ -9,14 +9,18 @@ featured: FALSE
 editor: Leslie Lundquist
 ---
 
-When you're working with Glance images that you'll use to boot VMs on Power compute nodes, we recommend that you use the following properties for your images:
+When you're working with Glance images that you'll use to boot VMs on Power compute nodes, we recommend that you use the following properties (key/value pairs) for your images:
 
- * hw_scsi_model=virtio-scsi: add the virtio-scsi controller and get better performance and support for discard operation
  * architecture=ppc64
- * hw_disk_bus=scsi: connect every Cinder block device to that controller
+ 
+ * hw_scsi_model=virtio-scsi
+ (This pair adds the virtio-scsi controller and gets better performance and support for discard operations.)
+
+ * hw_disk_bus=scsi
+ (This pair connects every Cinder block device to that controller.)
 
 These settings are needed to be able to attach Cinder volumes to running guest VM's.
 
 Here's a screen shot showing what the Horizon interface looks like when you're updating metadata. You can update the matadata when you initially create an image, or later at any time.
 
-[Update_image_metadata.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/Glance_image_metadata.png)
+[Update_image_metadata.png]({{site/baseurl}}/img/Glance_image_metadata.png)
