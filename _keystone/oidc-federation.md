@@ -23,43 +23,41 @@ Keystone federation enables identities from an Identity Provider (IDP) to be use
 The IDP stores and manages the user's credentials and sends claims or assertions to the SP. This allows the customer to use their enterprise credentials to authenticate to a Blue Box cloud without sending their password to their Blue Box cloud. Keystone is usually always the SP since it consumes identities from external resources.
 
 
-## What is OpenID Connect(OIDC)?
+## What is OpenID Connect (OIDC)?
 `OpenID` is a protocol for authentication.
 `OAuth` is a protocol for authorization.
 `OpenID Connect` does both.
 
-OpenID Connect is a simple identity layer on top of the OAuth 2.0 protocol. It enables Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.
+OpenID Connect is a simple identity layer on top of the OAuth 2.0 protocol. It lets Clients verify the identity of an End-User, based on the authentication performed by an Authorization Server. It also lets Clients obtain basic profile information about the End-User, in an interoperable and REST-like manner.
 
-This specification defines a mechanism for an OpenID Connect Relying Party to discover the End-User's OpenID Provider and obtain information needed to interact with it, including its OAuth 2.0 endpoint locations.
+This document describes a mechanism for an OpenID Connect *relying party* to discover the End-User's OpenID Provider, and to obtain information needed to interact with it, including its OAuth 2.0 endpoint locations.
 
 ## <a name="how_does_oidc_work?"></a>How does OpenID Protocol work?
-1. The relying party sends the request to the OpenID provider to authenticate the end user
-2. The OpenID provider authenticates the user
-3. The OpenID provider sends the ID token and access token to the relying party
-4. The relying party sends a request to the user info endpoint with the access token received from OpenID provider
+1. The relying party sends the request to the OpenID provider to authenticate the End-User.
+2. The OpenID provider authenticates the user.
+3. The OpenID provider sends the ID token and access token to the relying party.
+4. The relying party sends a request to the user info endpoint with the access token received from OpenID provider.
 5. The user info endpoint returns the claims.
 
 ## <a name="setting_up_oidc"></a>Setting up OIDC
-A Blue Box operator will need to work with a Company XYZ IDP integration engineer to setup OIDC.
+A Blue Box operator will need to work with an IDP integration engineer from the customer's company (for example purposes, `Company XYZ`) to set up OIDC.
 
-A Blue Box operator will need the following:
+The Blue Box operator will need the following information:
 
 * Authorized Redirect/Callback URL
 * Client ID and Client Secret
 * User Claim - OIDC Claim
-* well-known/configuration URL which provides all the information needed to access the provider
+* The *well-known/configuration URL* which provides all the information needed for access to the provider
 * Default/initial Mapping - The documentation on mappings can be found here: http://docs.openstack.org/developer/keystone/federation/federated_identity.html#mapping-combination
 
-The Blue Box operator should work with the integration engineer to create the initial/default mapping. The mapping is how the remote users on the IDP are mapped to local groups on the SP. The rest of this document may help clarify what a mapping is and how it's used.
+The Blue Box operator should work with the integration engineer to create the initial/default mapping. The mapping provides the way in which the remote users on the IDP are mapped to local groups on the SP. The rest of this document may help clarify what a mapping is and how it's used.
 
-After the Blue Box operator is finished integrating `Company XYZ IDP` with
-Keystone, a mapping called `mapping-for-company-xyz-idp` should be
-created (or a similar mapping name with the IDP name in it).
+After the Blue Box operator is finished integrating `Company XYZ IDP` with Keystone, a mapping called `mapping-for-company-xyz-idp` should be created (or a similar mapping name with the IDP name in it).
 
 The steps for managing the mapping is:
 
-**1. manage groups (Federated users will ahve the same access rights as the group**
-**2. manage the mappings**
+**1. Manage groups (Federated users will have the same access rights as the group)**
+**2. Manage the mappings**
 
 ## <a name="managing_groups"></a>Managing Groups
 
@@ -129,13 +127,14 @@ $ openstack role assignment list --name --group company_xyz_admin_group
 ```
 
 Next, create the role assignment if it doesn't exist.
+
 **These commands add the role `cloud_admin` for the group `cloud_admin` for the "demo" project.**
 
 ```
 $ openstack role add cloud_admin --group company_xyz_admin_group --project demo
 $ openstack role assignment list --name --group company_xyz_admin_group
 ```
-After executing the `openstack role assignment list` command you should see an output similar to this one:
+After executing the `openstack role assignment list` command, you should see an output similar to this one:
 
 ```
 +-------------+------+---------------------------------+--------------+--------+-----------+
@@ -168,9 +167,7 @@ After entering the `openstack role assignment list` command you should see an ou
 
 ## <a name="managing_mappings"></a>Managing Mappings
 
-Below we are using the `Company XYZ IDP` and a mapping for it already exists.
-A user with `cloud_admin` access (user or role) will be able to edit
-the mapping. The user will not be able to create or delete mappings.
+Below, we are using the example of `Company XYZ IDP` and supposing that a mapping for it already exists. A user with `cloud_admin` access (user or role) will be able to edit the mapping. The user will not be able to create or delete mappings.
 
 **Mappings can be managed on Horizon in the Identity Dashboard -> Federation -> Mappings -> Edit**
 
@@ -195,8 +192,7 @@ The mappings file should follow the format given here:
 ]
 ```
 
-The **rules file** should contain a list of rules that map the remote users to a local group.
-The local section contains a rule specifying the group that the remote users should map to. **The local group is required.**
+The **rules file** should contain a list of rules that map the remote users to a local group. The local section contains a rule specifying the group that the remote users should map to. **The local group is required.**
 
 ```
 {
@@ -231,7 +227,7 @@ blacklist
 whitelist
 ```
 
-To set the username we can use **{0}** in the local section to indicate to use a field from the remote section. Then we can additional information to the new federated username. We can reference the remote section in the local section by index ("{i}", where i is the index of the remote field):
+To set the username we can use **{0}** in the local section to indicate to use a field from the remote section. Then we can additional information to the new Federated username. We can reference the remote section in the local section by index ("{i}", where i is the index of the remote field):
 
 ```
 [
@@ -259,10 +255,7 @@ To set the username we can use **{0}** in the local section to indicate to use a
 Here are some example scenarios:
 
 **Example 1.**
-Here we are mapping users from the CompanyXYZ IDP and allowing any user
-from the `admin_group`. The user's email address will be used to create
-a user on Keystone. If the user's email is `test@test.ibmcloud.com`, then
-the resulting username would be `CompanyXYZ/test@test.ibmcloud.com`.
+In this example, we are mapping users from the Company XYZ IDP and allowing any user from the `admin_group`. The user's email address will be used to create a user on Keystone. If the user's email is `test@test.ibmcloud.com`, then the resulting username would be `CompanyXYZ/test@test.ibmcloud.com`.
 
 ```
 [
@@ -372,7 +365,7 @@ In the following example we are using
 ## <a name="using_oauth_api"></a>Using OAuth API
 
 
-User credentials are never sent directly to keystone but are sent to the OAuth provider endpoints.
+User credentials are never sent directly to Keystone, but they are sent to the OAuth provider endpoints.
 
 Steps to run the following code
 
@@ -396,8 +389,9 @@ export OS_PROJECT_ID=<project_id>
 ```
 
 
-using API for authorization code flow
-This file is oidc-authflow.py
+**Using API for authorization code flow**
+
+This file is `oidc-authflow.py`
 
 ```
 from keystoneauth1.identity.v3 import oidc
@@ -455,8 +449,9 @@ if __name__ == '__main__':
 
 
 
-Using API for password flow
-This file is oidc-passflow.py
+**Using API for password flow**
+
+This file is `oidc-passflow.py`
 
 ```
 from keystoneauth1 import session
