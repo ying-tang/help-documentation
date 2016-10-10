@@ -41,13 +41,11 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 3.) **Storage Performance Improvements**: **Ceph** deployments have been upgraded to the Jewel release, to provide a 30% performance improvement.
 
+
 **IBM Blue Box Cloud Image Updates**
 
 **An update for IBM Blue Box Cloud Images**: Our library of available Cloud Images has been updated. The [Cloud Image User Guide]( http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160910/Image_Release_Notes_2016-09-10/) has the latest information. 
 
-**IBM Blue Box 3.1.0 Dedicated Cloud features:**
-
-1.) **Blue Box in SoftLayer Portal**: We now provide support for inclusion of Blue Box Dedicated into the Softlayer portal.
 
 **IBM Blue Box 3.1.0 Local Cloud features:**
 
