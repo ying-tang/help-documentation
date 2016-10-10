@@ -19,4 +19,4 @@ These settings are needed to be able to attach Cinder volumes to running guest V
 
 Here's a screen shot showing what the Horizon interface looks like when you're updating metadata. You can update the matadata when you initially create an image, or later at any time.
 
-[Update_image_metadata.png]()
+[Update_image_metadata.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/Glance_image_metadata.png)
