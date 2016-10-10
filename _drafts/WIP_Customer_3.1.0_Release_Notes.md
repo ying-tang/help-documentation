@@ -28,11 +28,10 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
  * [K2K Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/k2k-federation/)
  * [SAML Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/saml-federation/)
  * [OIDC Federation](http://ibm-blue-box-help.github.io/help-documentation/keystone/oidc-federation/)       
- * OIDC needs a copy edit.
 
 2. [Storage Pools](#storage-pools): Customers with diverse storage performance requirements now have the ability to leverage both a high-performance SSD and cost-effective Hybrid storage pools in the same cloud.  You can direct your workloads to the optimal storage pool.  
 
- * [Supported volume types](http://ibm-blue-box-help.github.io/help-documentation/cinder/supported_volume_types/) Needs a copy edit.
+ * [Supported volume types](http://ibm-blue-box-help.github.io/help-documentation/cinder/supported_volume_types/) 
  * [Creating a volume from Horizon](http://ibm-blue-box-help.github.io/help-documentation/horizon/create-volume-from-horizon/)
  * [Creating a volume from the command line](http://ibm-blue-box-help.github.io/help-documentation/cinder/cli-create-volume/)
 
