@@ -21,13 +21,10 @@ Provide the following details about the volume.
 
 * Volume Name: Type the name of your volume.
 * Description: Type a description of your volume.
-* Volume Source: `No source, empty volume` or `Image`. 
-   
-   * If you choose an empty volume, an empty volume does not contain a file system or a partition table. 
-   * If you choose the image option, a new field for Use image as a source displays and you can select the image from the list.
-* Type: `Ceph_SSD` or `Ceph_Hybrid`. 
+* Volume Source: *No source, empty volume* or *Image*. If you choose an empty volume, an empty volume does not contain a file system or a partition table. If you choose the image option, a new field for **Use image as a source** displays and you can select the image from the list.
+* Type: *Ceph_SSD* or *Ceph_Hybrid*. 
 * Size (GiB): Select the size of the volume in gibibytes(GiB), for example, 1. 
-* Availability Zone: Choose the availablity zone, for example, `nova`. 
+* Availability Zone: Choose the availablity zone, for example, *nova*. 
 
 Click **Create Volume** when complete. 
 
