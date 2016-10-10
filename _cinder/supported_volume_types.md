@@ -10,10 +10,10 @@ weight: 5
 
 ## Introduction
 
-OpenStack Cinder Block Storage Service uses Storage Hardware as backend to support its volumes.
-Typically it is configured with a single backend. Currently, IBM Bluebox Cloud can support two backends using Ceph Storage, namely `rbd_hybrid` and `rbd_ssd`. The `rbd_hybrid` backend uses Ceph Storage Pool corresponding to `Hybrid` type. Similarly, `rbd_ssd` uses Ceph Storage Pool corresponding to `SSD` type.
+OpenStack Cinder Block Storage Service uses storage hardware to provide a backend that supports its volumes.
+Typically, Conder is configured with a single backend. Currently, IBM Bluebox Cloud can support two backends using Ceph Storage, namely `rbd_hybrid` and `rbd_ssd`. The `rbd_hybrid` backend uses a Ceph Storage Pool corresponding to the `Hybrid` type. Similarly, `rbd_ssd` uses a Ceph Storage Pool corresponding to the `SSD` type.
 
-Each Cinder Backend is associated with a Volume Type. The Volume Type assignment provides a mechanism to provide scheduling to a specific backend.
+Each Cinder Backend is associated with a Volume Type. The Volume Type assignment is a mechanism for providing scheduling to a specific backend.
 
 ## Supported Volume Types
    - CEPH_HYBRID
@@ -32,5 +32,5 @@ Each Cinder Backend is associated with a Volume Type. The Volume Type assignment
 
 ### Note:
 
-    In case of Multi Tier Storage, Cinder volumes are created with type `CEPH_HYBRID` by default.
-    Please [contact our support team](https://support.bluebox.net/) if this default behavior needs to be changed.
+For Multi Tier Storage, Cinder volumes are created with type `CEPH_HYBRID` by default.
+Please [contact our support team](https://support.bluebox.net/) if this default behavior needs to be changed.
