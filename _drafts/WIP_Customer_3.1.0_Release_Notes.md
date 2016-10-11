@@ -54,7 +54,12 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 ### Known Limitations of this Release
 
-For specific information about the limitations of LBaaS, please refer to [Limitations of LBaaS v2](http://ibm-blue-box-help.github.io/help-documentation/neutron/Limitations_of_LBaaSv2/).
+On Horizon, Federated users have a page on which they can change their password. An error occurs when
+attempting to change the password, because their identity information is not stored. (Defect #236958)
+
+On Horizon, a user with `project_admin` access granted through groups may not see any users in **Identity->Projects**. (Defect #237038)
+
+For specific information about the limitations of **LBaaS**, please refer to [Limitations of LBaaS v2](http://ibm-blue-box-help.github.io/help-documentation/neutron/Limitations_of_LBaaSv2/).
 
 For additional user documentation, please refer to the [main Customer Help page](http://ibm-blue-box-help.github.io/help-documentation/), available online anytime at [_help.blueboxcloud.com_](http://ibm-blue-box-help.github.io/help-documentation/).
 
