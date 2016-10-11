@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Error: Failure prepping block device"
-tags: [nova, glance, cinder]
+tags: [troubleshooting, nova, glance, cinder]
 dateAdded: June 14th, 2016
 featured: false
 weight: 4
