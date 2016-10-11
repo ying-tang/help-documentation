@@ -23,7 +23,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 **Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
-1.) **Federated Keystone–IdP**: Customers can now use an existing Enterprise IdP (Identity Provider), such as Security Assertion Markup Language (SAML) or OpenIDConnect, to link to their own identity directories such as LDAP, RADIUS, and Active Directory that manage OpenStack identity. Users can have a single credential to manage multiple clouds.
+1.) **Federated Keystone–Customer Identity Provider (IdP)**: Customers now can utilize their existing Identity Infrastructure federation protocols, such as Security Assertion Markup Language (SAML) or OpenIDConnect, to use the identities stored in their own identity directories (such as LDAP, RADIUS, and Active Directory). A single, customer-managed credential can be used to manage multiple OpenStack clouds.
 
 *Here are some related documents:*
 
