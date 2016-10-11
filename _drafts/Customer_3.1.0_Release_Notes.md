@@ -46,11 +46,14 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 **An update for IBM Blue Box Cloud Images**: Our library of available Cloud Images has been updated. The [Cloud Image User Guide]( http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160910/Image_Release_Notes_2016-09-10/) has the latest information. 
 
+**IBM Blue Box 3.1.0 Dedicated Cloud features:**
+
+ * Blue Box Dedicated is now ISO27001 and 270018 compliant, plus SOC 2 and 3.
 
 **IBM Blue Box 3.1.0 Local Cloud features:**
 
-1.) **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo-curated bill of materials is now supported.  
-2.) **Support for Bluemix Local System**: IBM Blue Box Local (PCaaS) Private Cloud as a Service is now supported on Bluemix Local Systems.
+ * **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo-curated bill of materials is now supported.  
+ * **Support for Bluemix Local System**: IBM Blue Box Local (PCaaS) Private Cloud as a Service is now supported on Bluemix Local Systems.
 
 ### Known Limitations of this Release
 
