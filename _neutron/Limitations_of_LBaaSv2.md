@@ -12,7 +12,9 @@ The goal of exposing Neutron LBaaS v2 in IBM Blue Box Cloud is two-fold:
  * to provide a consistent LBaaS API as we approach Octavia integration, and
  * to provide a short-term solution for customers who need LBaaS.
     
-This document briefly covers some specific limitations and possible workarounds for Neutron LBaaS v2. For more information about Known Limitations, please refer to the IBM Blue Box Cloud [3.0.0 Release Notes](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Customer_3.0.0_Release_Notes/), particularly the section on **Known Limitations**.
+This document briefly covers some specific limitations and possible workarounds for Neutron LBaaS v2. *It is extremely important to make these limitations known to customers as part of the pre-sales process.* 
+
+For more information about Known Limitations, please refer to the IBM Blue Box Cloud [3.0.0 Release Notes](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Customer_3.0.0_Release_Notes/), particularly the section on **Known Limitations**.
 
 1) Security Group Configuration is missing from Neutron-LBaaSv2 in Horizon, and new Load Balancers (LBs) are assigned to the default security group, which usually is locked down (appropriately!). Therefore, customers need to create their own LBaaS-specific security group + rules and assign it to the LB port. You can add the appropriate security group to the Load Balancer's port, following the documentation at http://docs.openstack.org/liberty/networking-guide/adv-config-lbaas.html
 
