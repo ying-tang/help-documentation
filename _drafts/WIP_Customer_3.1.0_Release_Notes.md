@@ -15,7 +15,7 @@ author: Leslie Lundquist
 #### October 14, 2016
 
 
-This document offers a basic description of the specifics of the 3.1.0 Dedicated and Local Cloud offerings. Links to further documentation can be found in each section.
+This document offers a basic description of the 3.1.0 Dedicated and Local Cloud offerings. Links to further documentation can be found in each section.
 
 ### Summary of the Latest Release
 
@@ -23,7 +23,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 
 **Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
-1.) **Federated Keystone–IdP**: Customers can now use an existing IdP (Identity Provider), such as LDAP, RADIUS, and Active Directory to manage OpenStack identity. Users can have a single credential to manage multiple clouds.
+1.) **Federated Keystone–IdP**: Customers can now use an existing Enterprise IdP (Identity Provider), such as Security Assertion Markup Language (SAML) or OpenIDConnect, to link to their own identity directories such as LDAP, RADIUS, and Active Directory that manage OpenStack identity. Users can have a single credential to manage multiple clouds.
 
 *Here are some related documents:*
 
