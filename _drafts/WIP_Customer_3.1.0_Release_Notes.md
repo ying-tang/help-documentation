@@ -19,7 +19,7 @@ This document offers a basic description of the specifics of the 3.1.0 Dedicated
 
 ### Summary of the Latest Release
 
-Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new capabilities and performance improvements. 
+Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new capabilities and performance improvements. It is still based on the OpenStack Mitaka release.
 
 **Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
@@ -50,7 +50,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
 **IBM Blue Box 3.1.0 Local Cloud features:**
 
 1.) **Support for Lenovo**: In addition to the current Cisco UCS platform, a Lenovo-curated bill of materials is now supported.  
-2.) **Support for Bluemix Local System**: The Bluemix Local System is now supported on Blue Box Local (IaaS).
+2.) **Support for Bluemix Local System**: IBM Blue Box Local (PCaaS) Private Cloud as a Service is now supported on Bluemix Local Systems.
 
 ### Known Limitations of this Release
 
