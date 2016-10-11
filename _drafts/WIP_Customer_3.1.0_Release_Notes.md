@@ -19,7 +19,7 @@ This document offers a basic description of the specifics of the 3.1.0 Dedicated
 
 ### Summary of the Latest Release
 
-Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new capabilities and performance improvements. 
+Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new capabilities and performance improvements. It is still based on the OpenStack Mitaka release.
 
 **Every IBM Blue Box 3.1.0 Cloud has these new features:**
 
