@@ -39,7 +39,7 @@ Release 3.1.0 of **IBM Blue Box Cloud, Dedicated and Local**, includes some new 
  * [Creating a volume from Horizon](http://ibm-blue-box-help.github.io/help-documentation/horizon/create-volume-from-horizon/)
  * [Creating a volume from the command line](http://ibm-blue-box-help.github.io/help-documentation/cinder/cli-create-volume/)
 
-3.) **Storage Performance Improvements**: **Ceph** deployments have been upgraded to the Jewel release, to provide a 30% performance improvement.
+3.) **Storage Performance Improvements**: **Ceph** deployments have been upgraded to the Jewel release with Jemalloc enabled, to provide a performance improvement.
 
 
 **IBM Blue Box Cloud Image Updates**
