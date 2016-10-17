@@ -3,14 +3,13 @@ layout: page
 title: "Alternative Method For Block Storage Volume Encryption (using an Ubuntu Guest VM)"
 featured: false
 weight: 2
-tags: [Block Storage, Encryption]
+tags: [cinder, block Storage, encryption]
 author: Ruben Orduz
 editor: Leslie Lundquist
 dateAdded: October 17, 2016
 ---
-## Alternative Block Storage Volume Encryption (for Ubuntu guest OS)
 
-Certain situations and workloads require a higher level of data privacy and security, whether on the cloud or on premises. As of this writing, OpenStack compute (Nova) [does not](http://ibm-blue-box-help.github.io/help-documentation/cinder/Bug_Creating_Encrypted_Volumes/) support attachment of LUKS volumes--which is required for OpenStack-managed volume-level encryption. This article will focus on the use case of data encryption in the cloud, and more specifically on self-service volume encryption in Linux.
+Certain situations and workloads require a higher level of data privacy and security, whether on the cloud or on premises. As of this writing, OpenStack compute (Nova) [does not](http://ibm-blue-box-help.github.io/help-documentation/cinder/Bug_Creating_Encrypted_Volumes/) support attachment of LUKS volumes--which is required for OpenStack-managed volume-level encryption. This article is focused on the use case of data encryption in the cloud, and more specifically, it provides a procedure for self-service volume encryption in Linux.
 
 Before we begin, there are some _very important_ caveats the reader should be aware of:
 *	If an encrypted volume becomes corrupted or otherwise unstable, there's a high risk of data loss.
@@ -21,19 +20,19 @@ Before we begin, there are some _very important_ caveats the reader should be aw
 
 This article also assumes the following pre-requisites:
 * Ubuntu 14.04 or newer
-* User can create and attach block storage volumes in their cloud
-* User has administrator privileges in the virtual machine we're going to use for this procedure.
+* The user can create and attach block storage volumes in their cloud.
+* The user has administrator privileges in the virtual machine they're going to use for this procedure.
 
 ### Procedure
 1. The first step is to provision an instance (it can be small) with Ubuntu 14.04 or newer, if you haven't done so already, by using either the API or the Horizon dashboard.
 
-2. The second step is to create a block-storage volume. Again, this task can be accomplished via CLI or the Horizon dashboard. No special parameters are needed, just select a descriptive name, select desired capacity, and make sure it's accessible to and in the same availability zone of the VM you just spun up in the previous step.
+2. The second step is to create a block-storage volume. Again, this task can be accomplished via CLI or the Horizon dashboard. No special parameters are needed, just select a descriptive name, select the desired capacity, and make sure it's accessible to and in the same availability zone of the VM you just spun up in the previous step.
 
-3. After the volume has been successfully provisioned, attach to the VM you created in Step 1.
+3. After the block storage volume has been provisioned successfully, attach it to the VM you created in Step 1.
 
 4. Log into the VM you created in Step 1.
 
-5. Here's some basic house-keeping that's a good idea, to make sure you have the latest bug-fixes and software lists:
+5. Here's some basic house-keeping that's a good idea to do now, just to make sure you have the latest bug-fixes and software lists:
 
 {% highlight bash %}
 sudo aptitude update
@@ -46,13 +45,13 @@ sudo aptitude safe-upgrade
 sudo install cryptsetup
 {% endhighlight %}
 
-7.Check the be sure that the volume you created in Step 2 has been properly attached:
+7.Check to be sure that the volume you created in Step 2 has been attached properly:
 
 {% highlight bash %}
 sudo fdisk -l
 {% endhighlight %}
 
-You should see an output similar to this:
+You should see an output similar to this one:
 
 {% highlight bash %}
 Disk /dev/vdb: 3221 MB, 3221225472 bytes
@@ -71,7 +70,7 @@ The last line of the output is completely expected, because you have not yet for
 
 The next couple of steps take a considerable amount of time (maybe hours, depending on volume size), so you might want to run these commands through `nohup` or a similar utility, just to make sure it completes even if the shell session goes down.
 
-8. Before you encrypt/lock the volume, you need to write random data to the volume. There are couple of ways you could accomplish this task. The one recommended here is going to err on the side of safety--it is the most robust approach:
+8. Before you encrypt/lock the volume, you'll need to write random data to the volume. The method recommended here is going to err on the side of safety--it is the most robust approach:
 
 {% highlight bash %}
 nohup sudo shred -v --random-source=/dev/urandom --iterations=2 /dev/vdb
@@ -120,7 +119,7 @@ System is out of entropy while generating volume key.
 Please move mouse or type some text in another window to gather some random events.
 {% endhighlight %}
 
-Depending on volume size, this process will take a while. After it's done, you should see output something like the one below on your terminal:
+Depending on the volume size, this process will take a while. After it's done, you should see output something like the one below on your terminal:
 
 {% highlight bash %}
 Generating key (93% done).
@@ -169,4 +168,4 @@ sudo umount /mnt
 sudo cryptsetup close data
 {% endhighlight %}
 
-From here on you can detach/attach the volume to other Ubuntu VMs (providing they have `cryptsetup` installed). However, you only need to open the volume (Step 10), mount the volume (Step 12) and then, as needed, unmount and close (Step 14).
+From here on, you can detach/attach the volume to other Ubuntu VMs, if they have `cryptsetup` installed. You only need to open the volume (Step 10), mount the volume (Step 12) and then, as needed, unmount and close (Step 14).
