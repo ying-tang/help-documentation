@@ -12,40 +12,42 @@ dateAdded: October 17, 2016
 Certain situations and workloads require a higher level of data privacy and security, whether on the cloud or on premises. As of this writing, OpenStack compute (Nova) [does not](http://ibm-blue-box-help.github.io/help-documentation/cinder/Bug_Creating_Encrypted_Volumes/) support attachment of LUKS volumes--which is required for OpenStack-managed volume-level encryption. This article is focused on the use case of data encryption in the cloud, and more specifically, it provides a procedure for self-service volume encryption in Linux.
 
 Before we begin, there are some _very important_ caveats the reader should be aware of:
-*	If an encrypted volume becomes corrupted or otherwise unstable, there's a high risk of data loss.
-*	There's a performance "tax" to be aware of, although it might be negligible in many cases.
-*	Once encrypted, things like snapshots or backups might not have predictable behavior.
-*	IBM Blue Box does not provide support on encrypted volumes and/or file systems.
-* The approach explained herein is for new/blank volumes. Do *not* try these commands on volumes with existing data, it'll be erased and lost forever.
+
+ * If an encrypted volume becomes corrupted or otherwise unstable, there's a high risk of data loss.
+ * There's a performance "tax" to be aware of, although it might be negligible in many cases.
+ * Once encrypted, things like snapshots or backups might not have predictable behavior.
+ * IBM Blue Box does not provide support on encrypted volumes and/or file systems.
+ * The approach explained herein is for new/blank volumes. Do *not* try these commands on volumes with existing data, it'll be erased and lost forever.
 
 This article also assumes the following pre-requisites:
-* Ubuntu 14.04 or newer
-* The user can create and attach block storage volumes in their cloud.
-* The user has administrator privileges in the virtual machine they're going to use for this procedure.
+
+ * Ubuntu 14.04 or newer
+ * The user can create and attach block storage volumes in their cloud.
+ * The user has administrator privileges in the virtual machine they're going to use for this procedure.
 
 ### Procedure
-1) The first step is to provision an instance (it can be small) with Ubuntu 14.04 or newer, if you haven't done so already, by using either the API or the Horizon dashboard.
+Step 1) The first step is to provision an instance (it can be small) with Ubuntu 14.04 or newer, if you haven't done so already, by using either the API or the Horizon dashboard.
 
-2) The second step is to create a block-storage volume. Again, this task can be accomplished via CLI or the Horizon dashboard. No special parameters are needed, just select a descriptive name, select the desired capacity, and make sure it's accessible to and in the same availability zone of the VM you just spun up in the previous step.
+Step 2) The second step is to create a block-storage volume. Again, this task can be accomplished via CLI or the Horizon dashboard. No special parameters are needed, just select a descriptive name, select the desired capacity, and make sure it's accessible to and in the same availability zone of the VM you just spun up in the previous step.
 
-3) After the block storage volume has been provisioned successfully, attach it to the VM you created in Step 1.
+Step 3) After the block storage volume has been provisioned successfully, attach it to the VM you created in Step 1.
 
-4) Log into the VM you created in Step 1.
+Step 4) Log into the VM you created in Step 1.
 
-5) Here's some basic house-keeping that's a good idea to do now, just to make sure you have the latest bug-fixes and software lists:
+Step 5) Here's some basic house-keeping that's a good idea to do now, just to make sure you have the latest bug-fixes and software lists:
 
 {% highlight bash %}
 sudo aptitude update
 sudo aptitude safe-upgrade
 {% endhighlight %}
 
-6) Now install the package that will help you perform the encryption/decryption:
+Step 6) Now install the package that will help you perform the encryption/decryption:
 
 {% highlight bash %}
 sudo install cryptsetup
 {% endhighlight %}
 
-7) Check to be sure that the volume you created in Step 2 has been attached properly:
+Step 7) Check to be sure that the volume you created in Step 2 has been attached properly:
 
 {% highlight bash %}
 sudo fdisk -l
@@ -70,7 +72,7 @@ The last line of the output is completely expected, because you have not yet for
 
 The next couple of steps take a considerable amount of time (maybe hours, depending on volume size), so you might want to run these commands through `nohup` or a similar utility, just to make sure it completes even if the shell session goes down.
 
-8) Before you encrypt/lock the volume, you'll need to write random data to the volume. The method recommended here is going to err on the side of safety--it is the most robust approach:
+Step 8) Before you encrypt/lock the volume, you'll need to write random data to the volume. The method recommended here is going to err on the side of safety--it is the most robust approach:
 
 {% highlight bash %}
 nohup sudo shred -v --random-source=/dev/urandom --iterations=2 /dev/vdb
@@ -94,7 +96,7 @@ shred: /dev/vdb: pass 2/2 (random)...2.9GiB/3.0GiB 96%
 shred: /dev/vdb: pass 2/2 (random)...3.0GiB/3.0GiB 100%
 {% endhighlight %}
 
-9) Now that you've wiped/randomized the volume, you can encrypt it:
+Step 9) Now that you've wiped/randomized the volume, you can encrypt it:
 
 {% highlight bash %}
 sudo cryptsetup --verbose --key-size 512 --hash sha512 --iter-time 2000 --use-random luksFormat /dev/vdb
@@ -131,7 +133,7 @@ Command successful.
 
 The two preceding steps will be performed once only, on every volume you encrypt. Next, you can use `cryptsetup` to partition and format the volume, so that you can read/write to it.
 
-10) Now "unlock" the volume you just encrypted:
+Step 10) Now "unlock" the volume you just encrypted:
 
 {% highlight bash %}
 cryptsetup open --type luks /dev/vdb data
@@ -139,19 +141,19 @@ cryptsetup open --type luks /dev/vdb data
 
 You will be prompted for the passphrase that you provided in Step 9.
 
-11) Write a file system to the device mapping `cryptsetup` you created in the previous step:
+Step 11) Write a file system to the device mapping `cryptsetup` you created in the previous step:
 
 {% highlight bash %}
 mkfs.ext4 /dev/mapper/data
 {% endhighlight %}
 
-12) Mount the device:
+Step 12) Mount the device:
 
 {% highlight bash %}
 mount -t ext4 /dev/mapper/data /mnt
 {% endhighlight %}
 
-13) Do a sanity check to make sure you can read and write to the mounted volume:
+Step 13) Do a sanity check to make sure you can read and write to the mounted volume:
 
 {% highlight bash%}
 sudo chmod 0667 /mnt
@@ -161,7 +163,7 @@ cat /mnt/test.txt
 
 If all steps are successful up to this point, it means you're good to go. You can now read and write to the encrypted volume.
 
-14) When you're done using it the volume, you need two additional steps: **unmount** and, more importantly, **close** the encryption mapping.
+Step 14) When you're done using the volume, you'll need two additional steps: **unmount** and, more importantly, **close** the encryption mapping.
 
 {% highlight bash %}
 sudo umount /mnt
