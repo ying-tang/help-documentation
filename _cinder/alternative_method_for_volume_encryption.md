@@ -26,28 +26,28 @@ This article also assumes the following pre-requisites:
  * The user has administrator privileges in the virtual machine they're going to use for this procedure.
 
 ### Procedure
-Step 1) The first step is to provision an instance (it can be small) with Ubuntu 14.04 or newer, if you haven't done so already, by using either the API or the Horizon dashboard.
+_Step 1_) The first step is to provision an instance (it can be small) with Ubuntu 14.04 or newer, if you haven't done so already, by using either the API or the Horizon dashboard.
 
-Step 2) The second step is to create a block-storage volume. Again, this task can be accomplished via CLI or the Horizon dashboard. No special parameters are needed, just select a descriptive name, select the desired capacity, and make sure it's accessible to and in the same availability zone of the VM you just spun up in the previous step.
+_Step 2_) The second step is to create a block-storage volume. Again, this task can be accomplished via CLI or the Horizon dashboard. No special parameters are needed, just select a descriptive name, select the desired capacity, and make sure it's accessible to and in the same availability zone of the VM you just spun up in the previous step.
 
-Step 3) After the block storage volume has been provisioned successfully, attach it to the VM you created in Step 1.
+_Step 3_) After the block storage volume has been provisioned successfully, attach it to the VM you created in Step 1.
 
-Step 4) Log into the VM you created in Step 1.
+_Step 4_) Log into the VM you created in Step 1.
 
-Step 5) Here's some basic house-keeping that's a good idea to do now, just to make sure you have the latest bug-fixes and software lists:
+_Step 5_) Here's some basic house-keeping that's a good idea to do now, just to make sure you have the latest bug-fixes and software lists:
 
 {% highlight bash %}
 sudo aptitude update
 sudo aptitude safe-upgrade
 {% endhighlight %}
 
-Step 6) Now install the package that will help you perform the encryption/decryption:
+_Step 6_) Now install the package that will help you perform the encryption/decryption:
 
 {% highlight bash %}
 sudo install cryptsetup
 {% endhighlight %}
 
-Step 7) Check to be sure that the volume you created in Step 2 has been attached properly:
+_Step 7_) Check to be sure that the volume you created in Step 2 has been attached properly:
 
 {% highlight bash %}
 sudo fdisk -l
@@ -72,7 +72,7 @@ The last line of the output is completely expected, because you have not yet for
 
 The next couple of steps take a considerable amount of time (maybe hours, depending on volume size), so you might want to run these commands through `nohup` or a similar utility, just to make sure it completes even if the shell session goes down.
 
-Step 8) Before you encrypt/lock the volume, you'll need to write random data to the volume. The method recommended here is going to err on the side of safety--it is the most robust approach:
+_Step 8_) Before you encrypt/lock the volume, you'll need to write random data to the volume. The method recommended here is going to err on the side of safety--it is the most robust approach:
 
 {% highlight bash %}
 nohup sudo shred -v --random-source=/dev/urandom --iterations=2 /dev/vdb
@@ -96,7 +96,7 @@ shred: /dev/vdb: pass 2/2 (random)...2.9GiB/3.0GiB 96%
 shred: /dev/vdb: pass 2/2 (random)...3.0GiB/3.0GiB 100%
 {% endhighlight %}
 
-Step 9) Now that you've wiped/randomized the volume, you can encrypt it:
+_Step 9_) Now that you've wiped and randomized the volume, you can encrypt it:
 
 {% highlight bash %}
 sudo cryptsetup --verbose --key-size 512 --hash sha512 --iter-time 2000 --use-random luksFormat /dev/vdb
@@ -131,9 +131,9 @@ Generating key (100% done).
 Command successful.
 {% endhighlight %}
 
-The two preceding steps will be performed once only, on every volume you encrypt. Next, you can use `cryptsetup` to partition and format the volume, so that you can read/write to it.
+The two preceding steps will be performed once only, on every volume you encrypt. Next, you can use `cryptsetup` to partition and format the volume, so that you can read and write to it.
 
-Step 10) Now "unlock" the volume you just encrypted:
+_Step 10_) Now "unlock" the volume you just encrypted:
 
 {% highlight bash %}
 cryptsetup open --type luks /dev/vdb data
@@ -141,19 +141,19 @@ cryptsetup open --type luks /dev/vdb data
 
 You will be prompted for the passphrase that you provided in Step 9.
 
-Step 11) Write a file system to the device mapping `cryptsetup` you created in the previous step:
+_Step 11_) Write a file system to the device mapping `cryptsetup` you created in the previous step:
 
 {% highlight bash %}
 mkfs.ext4 /dev/mapper/data
 {% endhighlight %}
 
-Step 12) Mount the device:
+_Step 12_) Mount the device:
 
 {% highlight bash %}
 mount -t ext4 /dev/mapper/data /mnt
 {% endhighlight %}
 
-Step 13) Do a sanity check to make sure you can read and write to the mounted volume:
+_Step 13_) Do a sanity check to make sure you can read and write to the mounted volume:
 
 {% highlight bash%}
 sudo chmod 0667 /mnt
@@ -163,11 +163,11 @@ cat /mnt/test.txt
 
 If all steps are successful up to this point, it means you're good to go. You can now read and write to the encrypted volume.
 
-Step 14) When you're done using the volume, you'll need two additional steps: **unmount** and, more importantly, **close** the encryption mapping.
+_Step 14_) When you're done using the volume, you'll need two additional steps: **unmount** and, more importantly, **close** the encryption mapping.
 
 {% highlight bash %}
 sudo umount /mnt
 sudo cryptsetup close data
 {% endhighlight %}
 
-From here on, you can detach/attach the volume to other Ubuntu VMs, if they have `cryptsetup` installed. You only need to open the volume (Step 10), mount the volume (Step 12) and then, as needed, unmount and close (Step 14).
+From here on, you can detach and attach the volume with other Ubuntu VMs, if they have `cryptsetup` installed. You only need to open the volume (Step 10), mount the volume (Step 12) and then, as needed, unmount and close (Step 14).
