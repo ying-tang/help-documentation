@@ -9,7 +9,7 @@ editor: Leslie Lundquist
 dateAdded: October 17, 2016
 ---
 
-Certain situations and workloads require a higher level of data privacy and security, whether on the cloud or on premises. As of this writing, OpenStack compute (Nova) [does not](http://ibm-blue-box-help.github.io/help-documentation/cinder/Bug_Creating_Encrypted_Volumes/) support attachment of LUKS volumes--which is required for OpenStack-managed volume-level encryption. This article is focused on the use case of data encryption in the cloud, and more specifically, it provides a procedure for self-service volume encryption in Linux.
+Certain situations and workloads require a higher level of data privacy and security, whether on the cloud or on premises. As of this writing, OpenStack compute (Nova) [does not](http://ibm-blue-box-help.github.io/help-documentation/cinder/Bug_Creating_Encrypted_Volumes/) support attachment of LUKS volumes -- which are required for OpenStack-managed, volume-level encryption. This article is focused on the use case of data encryption in the cloud, and more specifically, it provides a procedure for self-service volume encryption in Linux.
 
 Before we begin, there are some _very important_ caveats the reader should be aware of:
 
