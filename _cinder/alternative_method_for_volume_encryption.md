@@ -3,7 +3,7 @@ layout: page
 title: "Alternative Method For Block Storage Volume Encryption (using an Ubuntu Guest VM)"
 featured: false
 weight: 2
-tags: [cinder, block Storage, encryption, ubuntu]
+tags: [cinder, block storage, encryption, ubuntu]
 author: Ruben Orduz
 editor: Leslie Lundquist
 dateAdded: October 17, 2016
