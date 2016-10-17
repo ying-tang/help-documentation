@@ -14,9 +14,9 @@ Certain situations and workloads require a higher level of data privacy and secu
 Before we begin, there are some _very important_ caveats the reader should be aware of:
 
  * If an encrypted volume becomes corrupted or otherwise unstable, there's a high risk of data loss.
- * There's a performance "tax" to be aware of, although it might be negligible in many cases.
+ * There's a performance "tax" for encryption, although it might be negligible in many cases.
  * Once encrypted, things like snapshots or backups might not have predictable behavior.
- * IBM Blue Box does not provide support on encrypted volumes and/or file systems.
+ * IBM Blue Box does not provide support on encrypted volumes or file systems.
  * The approach explained herein is for new/blank volumes. Do *not* try these commands on volumes with existing data, it'll be erased and lost forever.
 
 This article also assumes the following pre-requisites:
