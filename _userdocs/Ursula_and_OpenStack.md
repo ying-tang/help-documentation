@@ -4,6 +4,7 @@ title: Ursula and OpenStack
 author: Lampros Chaidas
 editor: Leslie Lundquist
 dateAdded: October 20, 2016
+tags: [userdocs, openstack, ursula, ubuntu, playbooks]
 weight: 3
 featured: TRUE
 ---
