@@ -25,57 +25,57 @@ Ursula comes with instructions on how to perform a manual deployment; however, t
 
 1. Install the IUS (Inline with Upstream Stable) repository. We do this so we can get Python 2.7 binaries:
 
-```
-yum -y install https://centos6.iuscommunity.org/ius-release.rpm 
-```
+  ```
+  yum -y install https://centos6.iuscommunity.org/ius-release.rpm 
+  ```
 
 2. Install the Python 2.7 packages and some dependencies:
 
-```
-yum -y install python27 python27-devel python27-pip.noarch openssh-clients git libffi-devel openssl-devel screen gcc
-```
+  ```
+  yum -y install python27 python27-devel python27-pip.noarch openssh-clients git libffi-devel openssl-devel screen gcc
+  ```
 
 3. Create a Virtual Environment for Python. We’ll call it "ursula-python"
 
-```
-pip2.7 install virtualenv
-virtualenv -p /usr/bin/python2.7 ursula-python
-```
+  ```
+  pip2.7 install virtualenv
+  virtualenv -p /usr/bin/python2.7 ursula-python
+  ```
 
 4. Activate the Virtual Environment.
 
-```
-source ursula-python/bin/activate
-```
+  ```
+  source ursula-python/bin/activate
+  ```
 
 5. Use git to clone the Ursula repository and install its Python requirements:
 
-```
-git clone https://github.com/blueboxgroup/ursula.git
-cd ~/ursula/
-pip2.7 install -r requirements.txt
-```
+  ```
+  git clone https://github.com/blueboxgroup/ursula.git
+  cd ~/ursula/
+  pip2.7 install -r requirements.txt
+  ```
 
 6. Set up an SSH configuration for the `allinone`. Note that you must already have set up SSH key authentication between the CentOS 6.x VPS and the Ubuntu target:
 
-Edit or create ~/.ssh/config and add the following:
+Edit or create `~/.ssh/config` and add the following:
 
-```
-Host allinone
-  HostName 69.87.123.456 #replace with real IP
-  User root
-  IdentityFile /root/id_rsa #replace with your private key
-  StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
-```
+  ```
+  Host allinone
+    HostName 69.87.123.456 #replace with real IP
+    User root
+    IdentityFile /root/id_rsa #replace with your private key
+    StrictHostKeyChecking no
+    UserKnownHostsFile=/dev/null
+  ```
 
 7. Fix/correct the SSL certificate that comes in `envs/example/defaults-2.0.yml`
 
 7.1 Confirm that the cert is broken by extracting it and examining it:
 
-```
-cd ~/ursula/envs/example
-```
+  ```
+  cd ~/ursula/envs/example
+  ```
 
 Extract the cert to the file `defaults2.0-cert.crt`
 
@@ -99,10 +99,10 @@ As you can see from the error, this one is obviously broken and needs to be repl
 
 7.2 Generate a new self-signed certificate and private key. We'll use a fake hostname as the Common Name.
 
-```
-cd /etc/ssl/
-openssl req -subj '/CN=openstack.chaidas.com/C=US' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout serverkey.pem -out server.crt
-```
+  ```
+  cd /etc/ssl/
+  openssl req -subj '/CN=openstack.chaidas.com/C=US' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout   serverkey.pem -out server.crt
+  ```
 
 7.3 Now replace the broken cert with this one you generated:
 
