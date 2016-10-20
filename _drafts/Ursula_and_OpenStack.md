@@ -69,72 +69,72 @@ Edit or create `~/.ssh/config` and add the following:
     UserKnownHostsFile=/dev/null
   ```
 
-7. Fix/correct the SSL certificate that comes in `envs/example/defaults-2.0.yml`
+**Fix/correct the SSL certificate that comes in `envs/example/defaults-2.0.yml`**
 
-7.1 Confirm that the cert is broken by extracting it and examining it:
+1. Confirm that the cert is broken by extracting it and examining it:
 
   ```
   cd ~/ursula/envs/example
   ```
 
-Extract the cert to the file `defaults2.0-cert.crt`
+2. Extract the cert to the file `defaults2.0-cert.crt`
 
-```
-cat defaults-2.0.yml  | grep crt: -A50 |grep -v crt: | grep "END CERTIFICATE-----" -B 50 | tr -d ' '> defaults2.0-cert.crt
-sed -i -- 's/-----BEGINCERTIFICATE-----/-----BEGIN CERTIFICATE-----'/g defaults2.0-cert.crt
-sed -i -- 's/-----ENDCERTIFICATE-----/-----END CERTIFICATE-----'/g defaults2.0-cert.crt
-```
+  ```
+  cat defaults-2.0.yml  | grep crt: -A50 |grep -v crt: | grep "END CERTIFICATE-----" -B 50 | tr -d ' '> defaults2.0-cert.crt
+  sed -i -- 's/-----BEGINCERTIFICATE-----/-----BEGIN CERTIFICATE-----'/g defaults2.0-cert.crt
+  sed -i -- 's/-----ENDCERTIFICATE-----/-----END CERTIFICATE-----'/g defaults2.0-cert.crt
+  ```
 
-Try to get details out of it:
+3. Try to get details out of it:
 
-```
-openssl x509 -in defaults2.0-cert.crt -text -noout
-unable to load certificate
-140483871201096:error:0D0680A8:asn1 encoding routines:ASN1_CHECK_TLEN:wrong tag:tasn_dec.c:1343:
-140483871201096:error:0D07803A:asn1 encoding routines:ASN1_ITEM_EX_D2I:nested asn1 error:tasn_dec.c:393:Type=X509
-140483871201096:error:0906700D:PEM routines:PEM_ASN1_read_bio:ASN1 lib:pem_oth.c:83:
-```
+  ```
+  openssl x509 -in defaults2.0-cert.crt -text -noout
+  unable to load certificate
+  140483871201096:error:0D0680A8:asn1 encoding routines:ASN1_CHECK_TLEN:wrong tag:tasn_dec.c:1343:
+  140483871201096:error:0D07803A:asn1 encoding routines:ASN1_ITEM_EX_D2I:nested asn1 error:tasn_dec.c:393:Type=X509
+  140483871201096:error:0906700D:PEM routines:PEM_ASN1_read_bio:ASN1 lib:pem_oth.c:83:
+  ```
 
 As you can see from the error, this one is obviously broken and needs to be replaced.
 
-7.2 Generate a new self-signed certificate and private key. We'll use a fake hostname as the Common Name.
+4. Generate a new self-signed certificate and private key. We'll use a fake hostname as the Common Name.
 
   ```
   cd /etc/ssl/
   openssl req -subj '/CN=openstack.chaidas.com/C=US' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout   serverkey.pem -out server.crt
   ```
 
-7.3 Now replace the broken cert with this one you generated:
+5. Now replace the broken cert with this one you generated:
 
-```
-cd ~/ursula/envs/example
-# Backup your defaults-2.0.yml file
-cp defaults-2.0.yml ~
-# Remove the old cert
-sed -i -- '/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/d' defaults-2.0.yml
-# Remove the old private key
-sed -i -- '/-----BEGIN RSA PRIVATE KEY-----/,/-----END RSA PRIVATE KEY-----/d' defaults-2.0.yml
-# Now tell the playbook to load the certificate and private key from the above files. (note: http://stackoverflow.com/a/24509515)
-sed -i -- 's!crt: |!crt: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/server.crt\\x27') }}"!g' defaults-2.0.yml 
-sed -i -- 's!key: |!key: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/serverkey.pem\\x27') }}"!g' defaults-2.0.yml 
-```
+  ```
+  cd ~/ursula/envs/example
+  # Backup your defaults-2.0.yml file
+  cp defaults-2.0.yml ~
+  # Remove the old cert
+  sed -i -- '/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/d' defaults-2.0.yml
+  # Remove the old private key
+  sed -i -- '/-----BEGIN RSA PRIVATE KEY-----/,/-----END RSA PRIVATE KEY-----/d' defaults-2.0.yml
+  # Now tell the playbook to load the certificate and private key from the above files. (note: http://stackoverflow.com/a/24509515)
+  sed -i -- 's!crt: |!crt: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/server.crt\\x27') }}"!g' defaults-2.0.yml 
+  sed -i -- 's!key: |!key: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/serverkey.pem\\x27') }}"!g' defaults-2.0.yml 
+  ```
 
-7.4 Make sure to change the FQDN to the one you just used for the Common Name. Do not skip this step, otherwise things will break, down the road! 
+6. Make sure to change the FQDN to the one you just used for the Common Name. Do not skip this step, otherwise things will break, down the road! 
 
-```
-sed -i -- 's!fqdn: openstack.example.com!fqdn: openstack.chaidas.com!g' defaults-2.0.yml
-```
+  ```
+  sed -i -- 's!fqdn: openstack.example.com!fqdn: openstack.chaidas.com!g' defaults-2.0.yml
+  ```
 
-8. Inside a screen session, run the `allinone` installation. Note that a successful deployment takes about 1 hour and 26 minutes on a 8GB, 4 Core VPS.
+7. Inside a screen session, run the `allinone` installation. Note that a successful deployment takes about 1 hour and 26 minutes on a 8GB, 4 Core VPS.
 
-```
-screen
-source ursula-python/bin/activate
-cd ~/ursula
-ursula envs/example/allinone site.yml
-```
+  ```
+  screen
+  source ursula-python/bin/activate
+  cd ~/ursula
+  ursula envs/example/allinone site.yml
+  ```
 
-9. Once this process is done, you should be able to log in to Horizon by going to the IP address of your VPS (that would be the 69.87.123.456 in this example). The username is "admin" and the default password is "asdf".
+8. Once this process is done, you should be able to log in to Horizon by going to the IP address of your VPS (that would be the 69.87.123.456 in this example). The username is "admin" and the default password is "asdf".
 
 Enjoy! 
 
