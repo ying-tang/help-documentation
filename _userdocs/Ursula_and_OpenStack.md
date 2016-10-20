@@ -182,7 +182,7 @@ failed: [allinone] (item=demo) => {"extra_data": null, "failed": true, "item": "
 
 **Fix with these steps:**
 
-Edit the file ~/ursula/envs/example/allinone/group_vars/all.yml
+Edit the file `~/ursula/envs/example/allinone/group_vars/all.yml`
 
 **Make this change to the file:**
 
@@ -190,7 +190,7 @@ Find the line: `floating_ip: 172.16.0.100`
 
 Change it to this:
 
-`floating_ip: "{{ hostvars[inventory_hostname][primary_interface]['ipv4']['address'] }}"`
+`floating_ip: "'{{ hostvars[inventory_hostname][primary_interface]['ipv4']['address'] }}'"`
 
 **ERROR 3: `uuid-runtime` package missing**
 
@@ -202,7 +202,7 @@ fatal: [allinone]: FAILED! => {"changed": false, "cmd": "uuidgen -t", "failed": 
 
 **Fix it in this way:**
 
-1. Edit the file ` ~/ursula/roles/common/tasks/main.yml`
+1. Edit the file `~/ursula/roles/common/tasks/main.yml`
 
 2. And add this line under the package listing:
 
