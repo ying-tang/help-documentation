@@ -25,41 +25,40 @@ Ursula comes with instructions on how to perform a manual deployment; however, t
 
  * 1x VPS in which to set up Ansible. I chose to do this on a CentOS 6.x VPS. I used a 2GB, 2 core VPS.
  * 1x VPS to be used as the deployment target. This target has more specific requirements:
-
-  * Ubuntu 14 LTS (Do not use Ubuntu 12 LTS.)
-  * 8GB of RAM (It probably will deploy on less, but it may be quite slow.)
-  * 4 cores
-  * An IP address. In this example, the public IP of our VPS is 69.87.123.456 (which is obviously not a valid IP address!)
+   * Ubuntu 14 LTS (Do not use Ubuntu 12 LTS.)
+   * 8GB of RAM (It probably will deploy on less, but it may be quite slow.)
+   * 4 cores
+   * An IP address. In this example, the public IP of our VPS is 69.87.123.456 (which is obviously not a valid IP address!)
 
 ### Prepare the CentOS 6.x VPS
 Ansible will use this CentOS VPS to install OpenStack on the Ubuntu one! Here are the steps:
 
-1. Install the [IUS (Inline with Upstream Stable)](https://ius.io/) repository. We do this so we can get Python 2.7 binaries:
+Step 1. Install the [IUS (Inline with Upstream Stable)](https://ius.io/) repository. We do this so we can get Python 2.7 binaries:
 
   ```
   yum -y install https://centos6.iuscommunity.org/ius-release.rpm 
   ```
 
-2. Install the Python 2.7 packages and some dependencies:
+Step 2. Install the Python 2.7 packages and some dependencies:
 
   ```
   yum -y install python27 python27-devel python27-pip.noarch openssh-clients git libffi-devel openssl-devel screen gcc
   ```
 
-3. Create a Virtual Environment for Python. We’ll call it `ursula-python`:
+Step 3. Create a Virtual Environment for Python. We’ll call it `ursula-python`:
 
   ```
   pip2.7 install virtualenv
   virtualenv -p /usr/bin/python2.7 ursula-python
   ```
 
-4. Activate the Virtual Environment:
+Step 4. Activate the Virtual Environment:
 
   ```
   source ursula-python/bin/activate
   ```
 
-5. Use git to clone the Ursula repository and install its Python requirements:
+Step 5. Use git to clone the Ursula repository and install its Python requirements:
 
   ```
   git clone https://github.com/blueboxgroup/ursula.git
@@ -67,7 +66,7 @@ Ansible will use this CentOS VPS to install OpenStack on the Ubuntu one! Here ar
   pip2.7 install -r requirements.txt
   ```
 
-6. Set up an SSH configuration for the `allinone`. Note that you must already have set up SSH key authentication between the CentOS 6.x VPS and the Ubuntu target:
+Step 6. Set up an SSH configuration for the `allinone`. Note that you must already have set up SSH key authentication between the CentOS 6.x VPS and the Ubuntu target:
 
 Edit or create `~/.ssh/config` and add the following information:
 
@@ -84,13 +83,13 @@ The example above assumes that the username of your target Ubuntu 14 VPS is `roo
 
 ### Fix/correct the SSL certificate that comes in `envs/example/defaults-2.0.yml`
 
-1. Confirm that the cert is broken by extracting it and examining it:
+Step 1. Confirm that the cert is broken by extracting it and examining it:
 
   ```
   cd ~/ursula/envs/example
   ```
 
-2. Extract the cert to the file `defaults2.0-cert.crt`
+Step 2. Extract the cert to the file `defaults2.0-cert.crt`
 
   ```
   cat defaults-2.0.yml  | grep crt: -A50 |grep -v crt: | grep "END CERTIFICATE-----" -B 50 | tr -d ' '> defaults2.0-cert.crt
@@ -98,7 +97,7 @@ The example above assumes that the username of your target Ubuntu 14 VPS is `roo
   sed -i -- 's/-----ENDCERTIFICATE-----/-----END CERTIFICATE-----'/g defaults2.0-cert.crt
   ```
 
-3. Try to get details out of it:
+Step 3. Try to get details out of it:
 
   ```
   openssl x509 -in defaults2.0-cert.crt -text -noout
@@ -110,14 +109,14 @@ The example above assumes that the username of your target Ubuntu 14 VPS is `roo
 
 As you can see from the error, this one is obviously broken and needs to be replaced.
 
-4. Generate a new self-signed certificate and private key. We'll use a fake hostname as the Common Name. In this case, the Common Name is `openstack.chaidas.com`. 
+Step 4. Generate a new self-signed certificate and private key. We'll use a fake hostname as the Common Name. In this case, the Common Name is `openstack.chaidas.com`. 
 
   ```
   cd /etc/ssl/
   openssl req -subj '/CN=openstack.chaidas.com/C=US' -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout   serverkey.pem -out server.crt
   ```
 
-5. Now replace the broken cert with this one you generated:
+Step 5. Now replace the broken cert with this one you generated:
 
   ```
   cd ~/ursula/envs/example
@@ -132,7 +131,7 @@ As you can see from the error, this one is obviously broken and needs to be repl
   sed -i -- 's!key: |!key: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/serverkey.pem\\x27') }}"!g' defaults-2.0.yml 
   ```
 
-6. Make sure to change the FQDN to the one you just used for the Common Name (in this example, it is `openstack.chaidas.com`) . Do not skip this step, otherwise things will break, down the road! 
+Step 6. Make sure to change the FQDN to the one you just used for the Common Name (in this example, it is `openstack.chaidas.com`) . Do not skip this step, otherwise things will break, down the road! 
 
   ```
   sed -i -- 's!fqdn: openstack.example.com!fqdn: openstack.chaidas.com!g' defaults-2.0.yml
@@ -140,7 +139,7 @@ As you can see from the error, this one is obviously broken and needs to be repl
 
 ### Start the deployment
 
-1. Inside a screen session, run the `allinone` installation. Note that a successful deployment takes about 1 hour and 26 minutes on an 8GB, 4 Core VPS.
+Step 1. Inside a screen session, run the `allinone` installation. Note that a successful deployment takes about 1 hour and 26 minutes on an 8GB, 4 Core VPS.
 
   ```
   screen
@@ -149,13 +148,13 @@ As you can see from the error, this one is obviously broken and needs to be repl
   ursula envs/example/allinone site.yml
   ```
 
-2. Once this process is done, you should be able to log in to Horizon by going to the IP address of your VPS (that would be the `69.87.123.456` in this example). The username is "**admin**" and the default password is "**asdf**".
+Step 2. Once this process is done, you should be able to log in to Horizon by going to the IP address of your VPS (that would be the `69.87.123.456` in this example). The username is "**admin**" and the default password is "**asdf**".
 
-**Enjoy!**
+Step 3. **Enjoy!**
 
 ## Common Errors and Resolutions
 
-### ERROR 1: Packages not downloading due to SSL errors
+**ERROR 1: Packages not downloading due to SSL errors**
 
 ```
 TASK [apt-repos : add any dependent repository keys from url] ******************
@@ -171,7 +170,7 @@ fatal: [allinone]: FAILED! => {"failed": true, "msg": "The conditional check 'co
 
 3. Re-run Ursula: `ursula envs/example/allinone site.yml`
 
-### ERROR 2: The Keystone API cannot talk to Keystone
+**ERROR 2: The Keystone API cannot talk to Keystone**
 
 ```
 TASK [keystone-setup : keystone tenants] ***************************************
@@ -193,7 +192,7 @@ Change it to this:
 
 `floating_ip: "{{ hostvars[inventory_hostname][primary_interface]['ipv4']['address'] }}"`
 
-### ERROR 3: `uuid-runtime` package missing
+**ERROR 3: `uuid-runtime` package missing**
 
 ```
 TASK [nova-data : generate really unique uuid] *********************************
@@ -209,7 +208,7 @@ fatal: [allinone]: FAILED! => {"changed": false, "cmd": "uuidgen -t", "failed": 
 
     `- uuid-runtime`
 
-##Sources:
+### Sources:
 
 * [ask.openstack.org - openstack Could not determine a suitable URL for the plugin](https://ask.openstack.org/en/question/67118/openstack-could-not-determine-a-suitable-url-for-the-plugin/)
 * [superuser - How do I install uuidgen](http://superuser.com/a/621300)
