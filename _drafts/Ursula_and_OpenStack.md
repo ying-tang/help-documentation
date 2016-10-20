@@ -4,8 +4,7 @@ Most of you are probably familiar with [OpenStack](http://www.openstack.org), bu
 
 ### Ursula is two things: 
 
-1. The [Blue Box](https://www.blueboxcloud.com) fork of Ansible.
-2. The [Blue Box](https://github.com/blueboxgroup/ursula) collection of Ansible playbooks that we created, to install OpenStack.
+* The [Blue Box](https://github.com/blueboxgroup/ursula) collection of Ansible playbooks that we created, to deploy and manage OpenStack.
 
 Ursula can be installed in two ways—one way is by using [Vagrant](https://www.vagrantup.com), and the other way is by "Manual Deployment". This post concentrates on the manual deployment method. 
 
@@ -21,7 +20,7 @@ Ursula comes with instructions on how to perform a manual deployment; however, t
   * 4 cores
   * An IP address. In this example the public IP of our VPS is 69.87.123.456 (which is obviously not a valid IP address!)
 
-**We’ll prepare the CentOS 6.x VPS, and Ansible prepares the other one! Here are the steps:**
+### Prepare the CentOS 6.x VPS which Ansible will use to install OpenStack on the Ubuntu one! Here are the steps:
 
 1. Install the [IUS (Inline with Upstream Stable)](https://ius.io/) repository. We do this so we can get Python 2.7 binaries:
 
@@ -71,7 +70,7 @@ Edit or create `~/.ssh/config` and add the following:
 
 The above assumes that the username of your target Ubuntu 14 VPS is `root`, the IP is `69.87.123.456` and the private SSH key is located at `/root/id_rsa` - change those as needed. 
 
-**Fix/correct the SSL certificate that comes in `envs/example/defaults-2.0.yml`**
+### Fix/correct the SSL certificate that comes in `envs/example/defaults-2.0.yml`
 
 1. Confirm that the cert is broken by extracting it and examining it:
 
@@ -127,7 +126,9 @@ As you can see from the error, this one is obviously broken and needs to be repl
   sed -i -- 's!fqdn: openstack.example.com!fqdn: openstack.chaidas.com!g' defaults-2.0.yml
   ```
 
-7. Inside a screen session, run the `allinone` installation. Note that a successful deployment takes about 1 hour and 26 minutes on a 8GB, 4 Core VPS.
+### Start the deployment
+
+1. Inside a screen session, run the `allinone` installation. Note that a successful deployment takes about 1 hour and 26 minutes on a 8GB, 4 Core VPS.
 
   ```
   screen
@@ -136,9 +137,9 @@ As you can see from the error, this one is obviously broken and needs to be repl
   ursula envs/example/allinone site.yml
   ```
 
-8. Once this process is done, you should be able to log in to Horizon by going to the IP address of your VPS (that would be the `69.87.123.456` in this example). The username is "**admin**" and the default password is "**asdf**".
+2. Once this process is done, you should be able to log in to Horizon by going to the IP address of your VPS (that would be the `69.87.123.456` in this example). The username is "**admin**" and the default password is "**asdf**".
 
-Enjoy! 
+**Enjoy!**
 
 ## Common Errors and Resolutions
 
@@ -160,26 +161,33 @@ fatal: [allinone]: FAILED! => {"failed": true, "msg": "The conditional check 'co
 
 ### ERROR 2: The Keystone API cannot talk to Keystone
 
+```
 TASK [keystone-setup : keystone tenants] ***************************************
 Friday 14 October 2016  20:10:32 +0000 (0:00:03.005)       0:22:32.770 ********
 failed: [allinone] (item=admin) => {"extra_data": null, "failed": true, "item": "admin", "msg": "Could not determine a suitable URL for the plugin"}
 failed: [allinone] (item=service) => {"extra_data": null, "failed": true, "item": "service", "msg": "Could not determine a suitable URL for the plugin"}
 failed: [allinone] (item=demo) => {"extra_data": null, "failed": true, "item": "demo", "msg": "Could not determine a suitable URL for the plugin"}
+```
 
 **Fix with:**
 
 Edit the file ~/ursula/envs/example/allinone/group_vars/all.yml
 
 **Make this change to the file:**
-floating_ip: 172.16.0.100
+
+Find the line: `floating_ip: 172.16.0.100`
+
 Change it to this:
-floating_ip: "{{ hostvars[inventory_hostname][primary_interface]['ipv4']['address'] }}"
+
+`floating_ip: "{{ hostvars[inventory_hostname][primary_interface]['ipv4']['address'] }}"`
 
 ### ERROR 3: `uuid-runtime` package missing
 
+```
 TASK [nova-data : generate really unique uuid] *********************************
 Sunday 16 October 2016  02:28:52 +0000 (0:00:01.052)       0:25:53.449 ********
 fatal: [allinone]: FAILED! => {"changed": false, "cmd": "uuidgen -t", "failed": true, "msg": "[Errno 2] No such file or directory", "rc": 2}
+```
 
 **Fix it in this way:**
 
@@ -191,6 +199,7 @@ fatal: [allinone]: FAILED! => {"changed": false, "cmd": "uuidgen -t", "failed": 
 
 ##Sources:
 
-* https://ask.openstack.org/en/question/67118/openstack-could-not-determine-a-suitable-url-for-the-plugin/
-* http://superuser.com/a/621300
-* http://stackoverflow.com/a/24509515
+* [ask.openstack.org - openstack Could not determine a suitable URL for the plugin](https://ask.openstack.org/en/question/67118/openstack-could-not-determine-a-suitable-url-for-the-plugin/)
+* [superuser - How do I install uuidgen](http://superuser.com/a/621300)
+* [stackoverflow - Escape single quote](http://stackoverflow.com/a/24509515)
+* [Github - BlueBoxGroup/Ursula](https://github.com/blueboxgroup/ursula)
