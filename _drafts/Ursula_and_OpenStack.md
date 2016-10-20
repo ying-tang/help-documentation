@@ -195,7 +195,7 @@ fatal: [allinone]: FAILED! => {"changed": false, "cmd": "uuidgen -t", "failed": 
 
 2. And add this line under the package listing:
 
-    - uuid-runtime
+    `- uuid-runtime`
 
 ##Sources:
 
