@@ -1,10 +1,20 @@
+---
+layout: page
+title: Ursula and OpenStack
+author: Lampros Chaidas
+editor: Leslie Lundquist
+dateAdded: October 20, 2016
+weight: 3
+featured: TRUE
+---
+
 ## Ursula and OpenStack
 
 Most of you probably are familiar with [OpenStack](http://www.openstack.org), but probably not everyone is familiar with [Ursula](https://github.com/blueboxgroup/ursula).  At IBM Blue Box, we use Ursula to install OpenStack cloud for our customers. Automated installation reduces user errors and results in faster, cleaner, more customizable OpenStack installations. This blog gets you started on understanding and working with Ursula. All of our Ursula playbooks are open source, and they are available on GitHub. Eventually, you could customize some for your own use.
 
 ### Ursula is: 
 
-* The collection of Ansible playbooks that [Blue Box](https://github.com/blueboxgroup/ursula) created, to deploy and manage OpenStack.
+* The collection of Ansible playbooks that [Blue Box](https://github.com/blueboxgroup/ursula) created, to deploy and manage OpenStack cloud.
 
 Ursula can be installed in two ways: one way is by using [Vagrant](https://www.vagrantup.com), and the other way is by "Manual Deployment". This post concentrates on the manual deployment method. 
 
