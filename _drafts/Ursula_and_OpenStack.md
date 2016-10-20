@@ -16,7 +16,7 @@ Most of you probably are familiar with [OpenStack](http://www.openstack.org), bu
 
 * The collection of Ansible playbooks that [Blue Box](https://github.com/blueboxgroup/ursula) created, to deploy and manage OpenStack cloud.
 
-Ursula can be installed in two ways: one way is by using [Vagrant](https://www.vagrantup.com), and the other way is by "Manual Deployment". This post concentrates on the manual deployment method. 
+Ursula can be installed in two ways: one way is by using [Vagrant](https://www.vagrantup.com), and the other way is by "Manual Deployment." This post concentrates on the manual deployment method. 
 
 Ursula comes with instructions on how to perform a manual deployment; however, those can be rather intimidating for newcomers to OpenStack. In this post, I'll share my experiences with installing Ursula, and give you some detailed instructions on how I did it, and how to troubleshoot it, in case you have difficulties.
 
