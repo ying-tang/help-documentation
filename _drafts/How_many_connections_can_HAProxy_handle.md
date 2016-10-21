@@ -54,7 +54,7 @@ Step 4. Configure [rsyslog](http://www.rsyslog.com/) to receive logs from HAProx
   echo "local2.* -/var/log/haproxy.log" >> /etc/rsyslog.conf
   ```
 
-The previous commands set r`syslog` to listen to UDP port `514` and limit it to `localhost` connections only. The last line sets the HAProxy logs to go `/var/log/haproxy.log`.
+The previous commands set `rsyslog` to listen to UDP port `514` and limit it to `localhost` connections only. The last line sets the HAProxy logs to go `/var/log/haproxy.log`.
 
 Step 5. Restart `rsyslog` so that the changes take effect:
 
