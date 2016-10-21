@@ -117,7 +117,7 @@ Step 1. Create a directory called `/root/slowserver`
 
 Step 2. Inside it, add a file called `/root/slowserver/slowserver.go` with the following contents:
 
-  ```
+```
 package main
 
 import (
@@ -140,7 +140,7 @@ func main() {
     http.HandleFunc("/slow", slow_handler)
     http.ListenAndServe(":8080", nil)
 }
-  ```
+```
 
 Step 3. Compile this file with `go build`:
 
