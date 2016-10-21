@@ -191,8 +191,9 @@ Find the line: `floating_ip: 172.16.0.100`
 Change it to this:
 
 {% highlight bash %}
-floating_ip: {{ hostvars[inventory_hostname][primary_interface]['ipv4']['address'] }}
+floating_ip: \{\{ hostvars[inventory_hostname][primary_interface]['ipv4']['address'] \}\}
 {% endhighlight %}
+_Note: Leave out the backslashes when you enter the line above in your file, we just needed them to be able to show you this code with curly brackets._
 
 **ERROR 3: `uuid-runtime` package missing**
 
