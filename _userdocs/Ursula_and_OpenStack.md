@@ -190,7 +190,7 @@ Find the line: `floating_ip: 172.16.0.100`
 
 Change it to this:
 
-![floating_ip_invisible_code.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/floating_ip_invisible_code.png)
+![floating_ip_invisible_code.png]({{site/baseurl}}/img/floating_ip_invisible_code.png)
 
 **ERROR 3: `uuid-runtime` package missing**
 
