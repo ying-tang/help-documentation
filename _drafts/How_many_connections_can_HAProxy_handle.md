@@ -141,7 +141,7 @@ func main() {
 }
   ```
 
-3. Compile this with `go build`:
+Step 3. Compile this file with `go build`:
 
   ```
   cd /root/slowserver
@@ -199,7 +199,7 @@ You should get the following output:
   UP
   ```
 
-## On the VPS that we'll run the tests from:
+## On the VPS that we'll run the tests from, do this:
 
 Download the [gobench](https://github.com/cmpxchg16/gobench) benchmarker utility:
 
