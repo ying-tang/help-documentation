@@ -66,7 +66,7 @@ Step 6. Add a new HAProxy configuration - `/etc/haproxy/haproxy.cfg` - note the 
 
 What is the `fullconn 20` line? From the [manual page](https://cbonte.github.io/haproxy-dconv/1.6/configuration.html#4-fullconn) it's defined as “the number of connections on the backend which will make the servers use the maximal number of connections.”
 
-  ```
+```
 global
 daemon
 # we need the socket for hatop statistics
@@ -86,7 +86,8 @@ mode http
 balance roundrobin
 fullconn 20
 server go_http_server_1 127.0.0.1:8080 cookie go_http_server_1 check inter 2000 rise 2 fall 3
-  ```
+
+```
 
 ## Installing the Go language - Do this on both servers:
 
