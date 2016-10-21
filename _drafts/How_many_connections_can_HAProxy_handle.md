@@ -19,7 +19,7 @@ We’ll install HAProxy on a **CentOS 6 VPS** and run a series of tests to find 
 
  * 2x CentOS 6.x VPS 
 
-The specifications for the VPS' I used in those tests were:
+The specifications for the VPS's that I used in those tests were:
 
   * 2GB RAM
   * 2 Cores
