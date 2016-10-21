@@ -9,6 +9,8 @@ featured: TRUE
 weight: 3
 ---
 
+**Please Note:** This article is NOT specifically related to OpenStack Neutron LBaaS, only to HAProxy running inside instances.
+
 Recently, I was looking at a customer's load balancing configuration. While examining the HAProxy states page with the customer, the question came up: "How many simultaneous connections can they really support?" 
 
 Does the maximum connections per backend server really matter? This article covers a way to determine the number of simultaneous connections that [HAProxy](http://www.haproxy.org/) can handle.
