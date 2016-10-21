@@ -1,42 +1,51 @@
-# Determining the number of simultaneous connections [HAProxy](http://www.haproxy.org/) can handle
+---
+layout: page
+author: Lampros Chaidas
+title: How Many Simultaneous Connections can HAProxy Handle?
+editor: Leslie Lundquist
+tags: [neutron, haproxy, maxconn, load testing]
+dateAdded: October 21, 2016
+featured: TRUE
+weight: 3
+---
 
-Recently I was looking at a customer's load balancing configuration and while examining the HAProxy states page with the customer, the question came up how many simultaneous connections can they really support. 
+Recently, I was looking at a customer's load balancing configuration. While examining the HAProxy states page with the customer, the question came up: "How many simultaneous connections can they really support?" 
 
-Does the maximum connections per backend server really matter?
+Does the maximum connections per backend server really matter? This article covers a way to determine the number of simultaneous connections that [HAProxy](http://www.haproxy.org/) can handle.
 
-We’ll install HAProxy on a CentOS 6 VPS and run a series of tests to find the answer. On a different VPS we'll setup our benchmarking utility. 
+We’ll install HAProxy on a **CentOS 6 VPS** and run a series of tests to find the answer. On a different VPS, we'll set up our benchmarking utility. 
 
 ## Requirements: 
 
-2x CentOS 6.x VPS. 
+ * 2x CentOS 6.x VPS 
 
 The specifications for the VPS' I used in those tests were:
 
-* 2GB RAM
-* 2 Cores
-* CentOS 6.7 
+  * 2GB RAM
+  * 2 Cores
+  * CentOS 6.7 
  
 ## Installing HAProxy on the HAProxy VPS:
 
-1. Install the HAProxy [IUS (Inline with Upstream Stable) repo](https://ius.io/) for CentOS 6
+Step 1. Install the HAProxy [IUS (Inline with Upstream Stable) repo](https://ius.io/) for **CentOS 6**:
 
   ```
   yum -y install https://centos6.iuscommunity.org/ius-release.rpm
   ```
 
-2. Then get the latest version of HAProxy - at the time of writing that is `1.6.9`.
+Step 2. Then get the latest version of HAProxy - at the time of writing that is `1.6.9`.
 
   ```
   yum -y install haproxy16u && chkconfig haproxy on
   ```
 
-3. Move your default HAproxy configuration somewhere else in case you need to review it later:
+Step 3. Move your default HAproxy configuration somewhere else, in case you need to review it later:
 
   ```
   mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg-default
   ```
 
-4. Configure [rsyslog](http://www.rsyslog.com/) to receive logs from HAProxy
+Step 4. Configure [rsyslog](http://www.rsyslog.com/) to receive logs from HAProxy:
 
   ```
   sed -i -- 's/#$ModLoad imudp/$ModLoad imudp/g' /etc/rsyslog.conf
@@ -45,17 +54,17 @@ The specifications for the VPS' I used in those tests were:
   echo "local2.* -/var/log/haproxy.log" >> /etc/rsyslog.conf
   ```
 
-  The above will set rsyslog to listen to UDP port `514` and limit it to `localhost` connections only. The last line will set the HAProxy logs to go `/var/log/haproxy.log`.
+The previous commands set r`syslog` to listen to UDP port `514` and limit it to `localhost` connections only. The last line sets the HAProxy logs to go `/var/log/haproxy.log`.
 
-5. Restart rsyslog so that the changes take effect:
+Step 5. Restart `rsyslog` so that the changes take effect:
 
   ```
   service rsyslog restart
   ```
 
-6. Add a new HAProxy configuration - `/etc/haproxy/haproxy.cfg` - note the `maxconn 20` line. Per the [manual page](https://cbonte.github.io/haproxy-dconv/1.6/configuration.html#maxconn) “Proxies will stop accepting connections when this limit is reached.” In other words, this configuration should only allow us up to **20** connections at the same time.
+Step 6. Add a new HAProxy configuration - `/etc/haproxy/haproxy.cfg` - note the `maxconn 20` line. Per the [manual page](https://cbonte.github.io/haproxy-dconv/1.6/configuration.html#maxconn) “Proxies will stop accepting connections when this limit is reached.” In other words, this configuration allows us only up to **20** connections at the same time.
 
-What is the `fullconn 20` line? From the [manual page](https://cbonte.github.io/haproxy-dconv/1.6/configuration.html#4-fullconn) “the number of connections on the backend which will make the servers use the maximal number of connections.”
+What is the `fullconn 20` line? From the [manual page](https://cbonte.github.io/haproxy-dconv/1.6/configuration.html#4-fullconn) it's defined as “the number of connections on the backend which will make the servers use the maximal number of connections.”
 
   ```
 global
@@ -81,7 +90,7 @@ server go_http_server_1 127.0.0.1:8080 cookie go_http_server_1 check inter 2000 
 
 ## Installing the Go language - Do this on both servers:
 
-Install the Go language along with the `screen` utility and `git`. The reason we need this on both servers is that on the HAProxy VPS we'll compile a very basic application server. On the benchmarker VPS we need Go in order to run the [gobench](https://github.com/cmpxchg16/gobench) benchmarker utility.
+Install the Go language along with the `screen` utility and `git`. We need this language on both servers because, on the HAProxy VPS, we'll compile a very basic application server. On the benchmarker VPS, we need Go so we can run the [gobench](https://github.com/cmpxchg16/gobench) benchmarker utility.
 
 ```
 yum -y install git screen nc
@@ -97,15 +106,15 @@ echo export "GOPATH=/root/goapps" >> ~/.bashrc
 echo export "export PATH=$PATH:$GOPATH/bin:$GOROOT/bin" >> ~/.bashrc
 ```
 
-## On the HAProxy server we’ll setup a basic application server using Go:
+## On the HAProxy server we’ll set up a basic application server using Go:
 
-1. Create a directory called `/root/slowserver`
+Step 1. Create a directory called `/root/slowserver`
 
   ```
   mkdir -pv /root/slowserver
   ```
 
-2. Inside it add a file called `/root/slowserver/slowserver.go` with contents:
+Step 2. Inside it, add a file called `/root/slowserver/slowserver.go` with the following contents:
 
   ```
 package main
@@ -139,13 +148,13 @@ func main() {
   go build
   ```
 
-4. Start our slowserver in a dettached screen session so that it stays in the background:
+Step 4. Start our slowserver in a detached screen session, so that it stays in the background:
 
   ```
   screen -d -m -t go_slowserver /root/slowserver/slowserver
   ```
 
-5. Confirm that it’s running using `netstat -ntlp | grep slowserver` - you should see the port it's listening on as well as the process ID. This is the output I got:
+Step 5. Confirm that it’s running using `netstat -ntlp | grep slowserver` - you should see the port it's listening on as well as the process ID. This is the output I got:
 
   ```
   netstat -ntlp | grep slowserver
@@ -154,7 +163,7 @@ func main() {
 
 ## On the HAProxy server setup HATop
 
-1. Download and install [HATop](http://feurix.org/projects/hatop/) so that we can monitor HAProxy
+Step 1. Download and install [HATop](http://feurix.org/projects/hatop/) so that we can monitor HAProxy:
 
   ```
   cd /tmp
@@ -166,19 +175,19 @@ func main() {
   gzip /usr/local/share/man/man1/hatop.1
   ```
 
-2. Start HAProxy
+Step 2. Start HAProxy:
 
   ```
   service haproxy start
   ```
 
-3. Start HAtop
+Step 3. Start HAtop:
 
   ```
   hatop -s /var/run/haproxy.sock
   ```
 
-4. Now let’s use a one liner to ask HAProxy for the status of our backend server **go_http_server_1**:
+Step 4. Now let’s use a one-liner to ask HAProxy for the status of our backend server **go_http_server_1**:
 
   ```
   echo "show stat" | nc -U /var/run/haproxy.sock | awk -F, '/go_http_server/{print $18}'
@@ -192,15 +201,15 @@ You should get the following output:
 
 ## On the VPS that we'll run the tests from:
 
-Download the [gobench](https://github.com/cmpxchg16/gobench) benchmarker utility 
+Download the [gobench](https://github.com/cmpxchg16/gobench) benchmarker utility:
 
   ```
   go get github.com/cmpxchg16/gobench
   ```
 
-## Load testing - Does the maximum connections per backend server really matter ? (no artificial delay)
+## Load testing - Does the maximum connections per backend server really matter? (no artificial delay)
 
-For our first test, we'll try to determine if the fullconn setting has any effect on the results. On the first run we're going to set `fullconn` to `20` and on the second to `1`. We'll set the test for `30` seconds worth of benchmarking using `20` fast clients (no artificial delay):
+For our first test, we'll try to determine whether the `fullconn` setting has any effect on the results. On the first run, we'll set `fullconn` to `20` and on the second run we'll set it to `1`. We'll calibrate the test for `30` seconds worth of benchmarking using `20` fast clients (no artificial delay):
 
 * **maxconn** 20
 * **fullconn** 20
@@ -228,7 +237,7 @@ Write throughput:                  1841801 bytes/sec
 Test time:                              30 sec
 ```
 
-Now, before we run it again, we'll modify HAProxy's configuration and set `fullconn` to `1`. We do this using sed and then reload HAProxy:
+Now, before we run it again, we'll modify HAProxy's configuration and set `fullconn` to `1`. We do this task using `sed` and then reload HAProxy:
 
 ```
 sed -i -- 's/fullconn 20/fullconn 1/g' /etc/haproxy/haproxy.cfg
@@ -266,9 +275,9 @@ Write throughput:                  1546353 bytes/sec
 Test time:                              30 sec
 ```
 
-As you can see in the first test we got 20928 hits/sec while on the second one we got 17571 hits/sec. What if the application server was slow though and took 3 seconds to reply each time ? 
+As you can see: in the first test, we got 20928 hits/sec, while on the second test we got 17571 hits/sec. What if the application server was slow, though, and it took 3 seconds to reply each time? 
 
-## Load testing - Does the maximum connections per backend server really matter ? (3 seconds of artificial delay)
+## Load testing - Does the maximum connections per backend server really matter? (3 seconds of artificial delay)
 
 * **maxconn** 20
 * **fullconn** 20
@@ -339,15 +348,15 @@ Write throughput:                      586 bytes/sec
 Test time:                              30 sec
 ```
 
-## Conclusion : Load testing - Does the maximum connections per backend server really matter ?
+## Conclusion : Load testing - Does the maximum connections per backend server really matter?
 
-The answer is yes - it matters but only when the servers are fast. With slow servers we saw no difference in our results. 
+The answer is yes. It matters, but only when the servers are fast. With slow servers, we saw no difference in our results. 
 
 ## Load testing - Determining the number of simultaneous connections HAProxy can handle
 
-Now let's see how many simultaneous connections HAProxy can handle. Before we begin, let's not forget one basic detail regarding HAProxy: ["By default HAProxy operates in keep-alive mode with regards to persistent connections: for each connection it processes each request and response, and leaves the connection idle on both sides between the end of a response and the start of a new request."](https://cbonte.github.io/haproxy-dconv/1.6/configuration.html#1.1)
+Now let's see how many simultaneous connections HAProxy can handle. Before we begin, let's not forget one basic detail regarding HAProxy: ["By default HAProxy operates in keep-alive mode with regard to persistent connections: for each connection it processes each request and response, and it leaves the connection idle on both sides between the end of a response and the start of a new request."](https://cbonte.github.io/haproxy-dconv/1.6/configuration.html#1.1)
 
-This means that long-running connections will have a greater impact on the server than short lived ones. As such we'll run the tests against the "slow" function of our application server. 
+This statement means that long-running connections will have a greater impact on the server than short-lived ones. As such, we'll run the tests against the "slow" function of our application server. 
 
 * **maxconn** 20
 * **fullconn** 20
@@ -375,7 +384,7 @@ Write throughput:                      586 bytes/sec
 Test time:                              30 sec
 ```
 
-`6 hits/sec` and no errors reported. Let's try again with 5 times as many clients (100).
+We see `6 hits/sec` and no errors reported. Let's try again with 5 times as many clients (100).
 
 * **maxconn** 20
 * **fullconn** 20
@@ -403,7 +412,7 @@ Write throughput:                     1120 bytes/sec
 Test time:                              30 sec
 ```
 
-We're still at `6 hits/sec` but this time there's also errors. This means that our HAProxy configuration is at it's limit since the number of hits per second are no longer going up and at the same time we're getting errors. Let's try the same number of clients (100) but double the `maxconns` and see what happens:
+We're still at `6 hits/sec` but this time there also are errors. Errors mean that our HAProxy configuration is at its limit, because the number of hits per second are no longer going up, and at the same time we're getting these errors. Let's try the same number of clients (100), but let's double the `maxconns` and see what happens:
 
 * **maxconn** 40
 * **fullconn** 20
@@ -428,7 +437,7 @@ Write throughput:                     1630 bytes/sec
 Test time:                              30 sec
 ```
 
-As expected from our previous tests the `fullconn` didn't really limit us. By doubling the `maxconns` we got exactly double the hit rate (`12 hits/sec`) although we are still getting errors which means that our HAProxy configuration is still over it's limit. 
+As expected from our previous tests, the `fullconn` didn't really limit us. By doubling the `maxconns` we got exactly double the hit rate (`12 hits/sec`), although we are still getting errors, which means that our HAProxy configuration is still over its limit. 
 
 Let's raise `maxconns` again - this time to `60`:
 
@@ -453,7 +462,7 @@ Write throughput:                     2179 bytes/sec
 Test time:                              30 sec
 ```
 
-As you can see each time we raised the `maxconn` limit, we are seeing a linear increase on the `hits/sec`. Let's keep it going until we see the errors stop:
+As you can see, each time we raise the `maxconn` limit, we are seeing a linear increase on the `hits/sec`. Let's keep it going until we see the errors stop:
 
 * **maxconn** 80
 * **fullconn** 20
@@ -503,7 +512,7 @@ Test time:                              30 sec
 
 ## Conclusion: Load testing - Determining the number of simultaneous connections HAProxy can handle
 
-The conclusion we can draw from the above experiment is that in order to test capacity (max number of clients connected to HAProxy) we need to use a server that opens a TCP connection but holds it open for an extended period of time (3 seconds). This is the opposite of testing how fast a server is where the more traffic you can push through it the better results you’ll get. 
+The conclusion we can draw from the previous experiment is that, in order to test capacity (max number of clients connected to HAProxy), we need to use a server that opens a TCP connection but holds it open for an extended period of time (3 seconds). This is the opposite of testing how fast a server is--where the more traffic you can push through it, the better results you’ll get. 
 
 The second conclusion is that your max connections (`maxconn`) needs to be greater than the request rate (for example 100 clients) * time (3 seconds) to serve each request.
 
