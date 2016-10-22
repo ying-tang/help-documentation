@@ -3,7 +3,7 @@ layout: page
 author: Lampros Chaidas
 title: How Many Simultaneous Connections can HAProxy Handle?
 editor: Leslie Lundquist
-tags: [neutron, haproxy, maxconn, load testing]
+tags: [troubleshooting, haproxy, maxconn, load testing]
 dateAdded: October 21, 2016
 featured: TRUE
 weight: 3
