@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Using IBM UrbanCode Deploy with IBM Blue Box
+title: Using IBM UrbanCode Deploy with IBM Bluemix Private Cloud
 featured: no
 weight: 10
 tags: [heat, deploy, UCD, UCDP]
@@ -64,7 +64,7 @@ For the complete UCD documentation, see [IBM UCD Knowledge Center](https://www-0
 
 Integrate your UCD with UCDP by following the instructions in [Connecting to IBM UrbanCode Deploy](http://www-01.ibm.com/support/knowledgecenter/SSWS3W_6.1.1/com.ibm.edt.doc/topics/integrate_ucd.html).
 
-## Connecting to IBM Blue Box with UCDP and UCD
+## Connecting to IBM Bluemix Private Cloud with UCDP and UCD
 
 1. For UCD and UCDP installed on external servers only: Use an OpenVPN client to connect to the cloud environment that you want to integrate with. For more information about accessing the environment, see [Setting up OpenVPN server on your instance](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/openvpn-setup/).
 
