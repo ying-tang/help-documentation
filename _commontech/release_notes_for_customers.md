@@ -8,7 +8,7 @@ dateAdded: March 31, 2016
 author: Leslie Lundquist
 ---
 
-# **IBM Blue Box Cloud Customer**
+# **IBM Bluemix Private Cloud Customer**
 
 # Release Notes
 
@@ -16,38 +16,38 @@ author: Leslie Lundquist
 
 # **Summary of New Features in Latest Release**
 
-This document offers a basic technical description of the latest IBM Blue Box Cloud offerings, specifically the Dedicated and Local Cloud offerings.  The new capabilities of IBM Blue Box Dedicated and Local Cloud include:  
+This document offers a basic technical description of the latest IBM Bluemix Private Cloud offerings, specifically the Dedicated and Local Cloud offerings.  The new capabilities of IBM Bluemix Private Dedicated and Local Cloud include:  
 
 1.  [Additional types of Expansion Compute Nodes are available.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#optional-expansion-compute-nodes-now-available)
 
 2.  [Hybrid Block Storage Cluster and Expansion Nodes are available.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#optional-hybrid-block-storage-nodes-now-available)
 
-3.  [Direct Link is available on IBM Blue Box Dedicated Cloud, in three varieties, and for hybrid cloud applications.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#direct-link-now-available-in-softlayer-data-centers)
+3.  [Direct Link is available on IBM Bluemix Private Dedicated Cloud, in three varieties, and for hybrid cloud applications.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#direct-link-now-available-in-softlayer-data-centers)
 
-4.  [SoftLayer Private Network access is available.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#softlayer-private-network-access)
+4.  [IBM Cloud data center Private Network access is available.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#softlayer-private-network-access)
 
 5.  [Use of Role-Based Access Control (RBAC) to define permissions.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#role-based-access-control-rbac)
 
-6.  [Additional cloud images are provided by IBM Blue Box.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#additional-cloud-images-available)
+6.  [Additional cloud images are provided by IBM Bluemix.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#additional-cloud-images-available)
 
-7.  [HIPAA-compliant options are now available for IBM Blue Box Dedicated Cloud.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#hipaa-and-ibm-blue-box-dedicated-cloud)
+7.  [HIPAA-compliant options are now available for IBM Bluemix Private Dedicated Cloud.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#hipaa-and-ibm-blue-box-dedicated-cloud)
 
 For additional user documentation, please refer to the [main Help page.](http://ibm-blue-box-help.github.io/help-documentation/) 
 
-[A **General Product Overview** for IBM Blue Box Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
+[A **General Product Overview** for IBM Bluemix Private Cloud version 2.0 and later is available in this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
 A summary of features from previous releases that will affect users of this release is available [at the end of this document.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/#summary-of-new-features-from-previous-releases-that-will-affect-customer-use-of-this-release)
 
-#### **IBM Blue Box Cloud Building Blocks**
+#### **IBM Bluemix Private Cloud Building Blocks**
 
-Every IBM Blue Box Cloud 2.1.0, Dedicated or Local, starts with a cluster of controller and compute nodes:
+Every IBM Bluemix Private Cloud 2.1.0, Dedicated or Local, starts with a cluster of controller and compute nodes:
 
-**IBM Blue Box Dedicated Cloud:**
+**IBM Bluemix Private Cloud:**
 
 	• A cloud can start as a three-node cluster with two hyper-converged (controller + compute nodes) and one compute-only node.
 	• A cloud can start as a five-node cluster with a pair of dedicated controller-only nodes and three compute-only nodes. 
 
-**IBM Blue Box Local Cloud:**
+**IBM Bluemix Private Cloud Local:**
 
 	• Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
 	
@@ -76,29 +76,29 @@ Hybrid Block Storage nodes provide lower cost and higher density Block Storage.
 	• You can select Block Storage: SSD or HYBRID
 	• You can select Object Storage 
 
-#### **Direct Link now Available in SoftLayer Data Centers**
+#### **Direct Link now Available in IBM Cloud Data Centers**
 
 For Dedicated Cloud, you have the additional network option of selecting **Direct Link** connectivity:
 
 	• You can select an access method  (Public, VPN, or Direct Link)
 
-Direct Link is available in SoftLayer Data centers. It lets you connect to the SoftLayer private network backbone or network, bypassing the public Internet to connect to your Dedicated cloud(s). 
+Direct Link is available in IBM Cloud data centers. It lets you connect to the IBM Cloud data center's private network backbone or network, bypassing the public Internet to connect to your Dedicated cloud(s). 
 
-Direct Link can be utilized to create a _hybrid cloud_, if you want to link your Local cloud to a Dedicated cloud that is running in a SoftLayer data center. It is available in 1Gbps and 10Gbps increments. 
+Direct Link can be utilized to create a _hybrid cloud_, if you want to link your Local cloud to a Dedicated cloud that is running in an IBM Cloud data center. It is available in 1Gbps and 10Gbps increments. 
 
 Available:
 
-	• IBM Blue Box Dedicated Direct Link Cloud Exchange 1 Gbps
-	• IBM Blue Box Dedicated Direct Link Cloud Exchange 10 Gbps
-	• IBM Blue Box Dedicated Direct Link Colocation 1 Gbps
-	• IBM Blue Box Dedicated Direct Link Colocation 10 Gbps
-	• IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 1 Gbps
-	• IBM Blue Box Dedicated Direct Link Network Service Provider (NSP) 10 Gbps
+	• IBM Bluemix Private Direct Link Cloud Exchange 1 Gbps
+	• IBM Bluemix Private Direct Link Cloud Exchange 10 Gbps
+	• IBM Bluemix Private Direct Link Colocation 1 Gbps
+	• IBM Bluemix Private Direct Link Colocation 10 Gbps
+	• IBM Bluemix Private Direct Link Network Service Provider (NSP) 1 Gbps
+	• IBM Bluemix Private Direct Link Network Service Provider (NSP) 10 Gbps
 
 
-#### **SoftLayer Private Network Access**
+#### **IBM Cloud Data Center Private Network Access**
 
-SoftLayer Private Network access lets you set up connectivity between two IBM Blue Box Dedicated private clouds, using the SoftLayer private network capability, when both of the IBM Blue Box clouds that will be connected are deployed under the same SoftLayer account. You would select this service to enable _low-latency, un-metered, private network traffic_ between your IBM Blue Box Dedicated clouds.
+IBM Cloud Data Center Private Network access lets you set up connectivity between two IBM Bluemix Private clouds, using the IBM Cloud Data Center private network capability, when both of the IBM Bluemix Private clouds that will be connected are deployed under the same IBM Cloud account. You would select this service to enable _low-latency, un-metered, private network traffic_ between your IBM Bluemix Private clouds.
 
 For more information, please refer to [the main document on this topic.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Connecting_Clouds_with_SoftLayer/)
 
@@ -106,11 +106,11 @@ For a known limitation, please look [here](http://ibm-blue-box-help.github.io/he
 
 #### **Role-Based Access Control (RBAC)**
 
-Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Blue Box Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/).
+Several roles are created by default that give you specific access capabilities within your cloud. This version of IBM Bluemix Private Cloud introduces the concept of **groups**. For more information about users, roles, and groups, please refer to [this document](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/).
 
 #### **Additional Cloud Images Available**
 
-IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Additional cloud images are available, provided as a customer courtesy by IBM Blue Box. These include:
+IBM Bluemix Private Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Additional cloud images are available, provided as a customer courtesy by IBM Bluemix. These include:
 
 	• CentOS 6.7 x86_64
 	• CentOS 7.2 x86_64
@@ -124,25 +124,25 @@ IBM Blue Box Cloud 2.1.0 comes pre-populated with Cirros 0.3.3 x86_64 images. Ad
 
 To use any of these images, additional information is provided in [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/).
 
-#### **HIPAA and IBM Blue Box Dedicated Cloud**
+#### **HIPAA and IBM Bluemix Private Cloud**
 
-	• You can select HIPAA Enablement for your IBM Blue Box Dedicated Cloud
+	• You can select HIPAA Enablement for your IBM Bluemix Private Cloud
 
-A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Blue Box Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Blue Box Dedicated HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Dedicated cloud with non-HIPAA controllers.
+A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Bluemix Private Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an IBM Bluemix Private HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new cloud with non-HIPAA controllers.
 
-Essentially, an IBM Blue Box Dedicated HIPAA cloud resembles any other Dedicated cloud, with these exceptions:
+Essentially, an IBM Bluemix Private HIPAA cloud resembles any other IBM Bluemix Private cloud, with these exceptions:
 
-	1.  Every IBM Blue Box Dedicated HIPAA cloud must have IBM Blue Box Dedicated Controllers.
+	1.  Every IBM Bluemix Private HIPAA cloud must have Dedicated Controllers (not converged controllers).
 	2.  Additional HIPAA monthly recurring charges accrue per cluster and per asset under management.
 	3.  Additional (50+) controls are enabled, and responsibility for those controls is shared between you and IBM Blue Box.
 
-IBM Blue Box Dedicated HIPAA clouds can be deployed in any SoftLayer data center that is IBM Blue Box Dedicated ready.
+IBM Bluemix Private HIPAA clouds can be deployed in any IBM Cloud data center that is ready to deploy IBM Bluemix Private Cloud.
 
-**Pre-requisite:** A BAA must be signed before a of IBM Blue Box Dedicated HIPAA cloud order can be initiated. You must initiate your cloud order using the minimum configuration for HIPAA customers. No HIPAA enablement can be done after service initiation.
+**Pre-requisite:** A BAA must be signed before a of IBM Bluemix Private HIPAA cloud order can be initiated. You must initiate your cloud order using the minimum configuration for HIPAA customers. No HIPAA enablement can be done after service initiation.
 
 #### **Summary of New Features from Previous Releases that will affect Customer Use of this Release**
 
-This section briefly lists features from previous IBM Blue Box Cloud releases, primarily the 2.0.1 release, that will have an effect on your experience when using this 2.1.0 release, especially if you are upgrading from a 1.x release. For more information about these features, please contact your IBM Blue Box support team.
+This section briefly lists features from previous IBM Bluemix Private releases, primarily the 2.0.1 release, that will have an effect on your experience when using this 2.1.0 release, especially if you are upgrading from a 1.x release. For more information about these features, please contact your IBM Bluemix Private Cloud support team.
 
 
 #### _Features that will affect Users, Groups, and Roles in this release:_
@@ -162,7 +162,7 @@ This section briefly lists features from previous IBM Blue Box Cloud releases, p
 
 **Refresh Horizon code base to fix bugs with volume backups**: A defect in Horizon that prevented creation of Cinder volume backups has been resolved.
 
-**Refresh Horizon code base to allow image upload from Swift URL (curated IBM Blue Box image delivery)**: A defect in Glance preventing uploading images via a URL has been resolved, allowing URLs from Box Panel to be used to upload images into Glance.
+**Refresh Horizon code base to allow image upload from Swift URL (curated IBM Bluemix image delivery)**: A defect in Glance preventing uploading images via a URL has been resolved, allowing URLs from Box Panel to be used to upload images into Glance.
 
 **Add DiskFilter for Nova scheduling**: We've resolved a defect that would lead to Nova scheduling builds on Hypervisors that did not have enough free disk space to satisfy the build.
 
@@ -172,4 +172,4 @@ This section briefly lists features from previous IBM Blue Box Cloud releases, p
 
 **Future Release Notes**
 
-Release Notes will be published periodically that give details about what has changed and how it could influence your experience with your IBM Blue Box Cloud offering. For instance, when a new version of OpenStack is installed that might enable new features, you’ll receive Release Notes containing the details.
+Release Notes will be published periodically that give details about what has changed and how it could influence your experience with your IBM Bluemix Private Cloud offering. For instance, when a new version of OpenStack is installed that might enable new features, you’ll receive Release Notes containing the details.
