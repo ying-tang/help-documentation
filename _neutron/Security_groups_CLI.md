@@ -1,7 +1,7 @@
 
 ---
 layout: page
-author: Blue Box Support
+author: Bluemix on OpenStack Support
 title: Using the CLI to Set Up Security Groups
 dateAdded: October 12, 2016
 tags: [neutron, security groups, ports, flags]
