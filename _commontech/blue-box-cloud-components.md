@@ -1,16 +1,16 @@
 ---
 layout: page
-title:  "Blue Box Cloud Components"
+title:  "Bluemix Private Cloud Components"
 featured: true
 weight: 1
-tags: [getting started, blue box cloud, components]
+tags: [getting started, bluemix private cloud, components]
 dateAdded: January 7th, 2016
 author: Eric French
 ---
 
-Blue Box Cloud is built on OpenStack and utilizes many of its core components.
+Bluemix Private Cloud is built on OpenStack and utilizes many of its core components.
 
-_Nova_ provides the computational and scheduling functions of Blue Box Cloud.  Nova is used to create, maintain and destroy instances.
+_Nova_ provides the computational and scheduling functions of Bluemix Private Cloud.  Nova is used to create, maintain and destroy instances.
 
 _Keystone_ is the identity service that provides authorization and endpoint access to the OpenStack cluster.
 
