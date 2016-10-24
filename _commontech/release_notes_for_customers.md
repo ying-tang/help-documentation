@@ -88,12 +88,12 @@ Direct Link can be utilized to create a _hybrid cloud_, if you want to link your
 
 Available:
 
-	• IBM Bluemix Private Cloud Direct Link Cloud Exchange 1 Gbps
-	• IBM Bluemix Private Cloud Direct Link Cloud Exchange 10 Gbps
-	• IBM Bluemix Private Cloud Direct Link Colocation 1 Gbps
-	• IBM Bluemix Private Cloud Direct Link Colocation 10 Gbps
-	• IBM Bluemix Private Cloud Direct Link Network Service Provider (NSP) 1 Gbps
-	• IBM Bluemix Private Cloud Direct Link Network Service Provider (NSP) 10 Gbps
+	• IBM Bluemix Private Direct Link Cloud Exchange 1 Gbps
+	• IBM Bluemix Private Direct Link Cloud Exchange 10 Gbps
+	• IBM Bluemix Private Direct Link Colocation 1 Gbps
+	• IBM Bluemix Private Direct Link Colocation 10 Gbps
+	• IBM Bluemix Private Direct Link Network Service Provider (NSP) 1 Gbps
+	• IBM Bluemix Private Direct Link Network Service Provider (NSP) 10 Gbps
 
 
 #### **IBM Cloud Data Center Private Network Access**
