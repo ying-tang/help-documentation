@@ -42,7 +42,7 @@ A summary of features from previous releases that will affect users of this rele
 
 Every IBM Bluemix Private Cloud 2.1.0, Dedicated or Local, starts with a cluster of controller and compute nodes:
 
-**IBM Bluemix Private Dedicated Cloud:**
+**IBM Bluemix Private Cloud:**
 
 	• A cloud can start as a three-node cluster with two hyper-converged (controller + compute nodes) and one compute-only node.
 	• A cloud can start as a five-node cluster with a pair of dedicated controller-only nodes and three compute-only nodes. 
@@ -136,7 +136,7 @@ Essentially, an IBM Bluemix Private HIPAA cloud resembles any other IBM Bluemix 
 	2.  Additional HIPAA monthly recurring charges accrue per cluster and per asset under management.
 	3.  Additional (50+) controls are enabled, and responsibility for those controls is shared between you and IBM Blue Box.
 
-IBM Bluemix Private HIPAA clouds can be deployed in any IBM Cloud data center that is IBM Bluemix ready.
+IBM Bluemix Private HIPAA clouds can be deployed in any IBM Cloud data center that is ready to deploy IBM Bluemix Private Cloud.
 
 **Pre-requisite:** A BAA must be signed before a of IBM Bluemix Private HIPAA cloud order can be initiated. You must initiate your cloud order using the minimum configuration for HIPAA customers. No HIPAA enablement can be done after service initiation.
 
