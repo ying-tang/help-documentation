@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Box Panel, Site Controller, and IBM Blue Box Local Cloud
+title: Box Panel, Site Controller, and IBM Bluemix Private Cloud Local
 author: Leslie Lundquist and Tom Spoonemore
 dateAdded: September 20, 2016
 tags: [user guides, box panel, site controller, faq, cloud security]
@@ -8,11 +8,11 @@ featured: true
 weight: 3
 ---
 
-This document offers an introduction to the fundamental concepts and terminology about Box Panel, Site Controller, and how they work together to control and manage your IBM Blue Box Local Cloud environment. The document includes links and pointers to external documents, so you can find even more information. Some of the terms defined in the Terminology FAQ section will be more technical than you may need to know on a daily basis, but knowing about them might come in handy if you have an opportunity to speak to our support team.
+This document offers an introduction to the fundamental concepts and terminology about Box Panel, Site Controller, and how they work together to control and manage your IBM Bluemix Private Cloud Local environment. The document includes links and pointers to external documents, so you can find even more information. Some of the terms defined in the Terminology FAQ section will be more technical than you may need to know on a daily basis, but knowing about them might come in handy if you have an opportunity to speak to our support team.
 
 ### What Is Box Panel?
 
-Box Panel is a suite of applications that we utilize to deliver IBM Blue Box Cloud. Box Panel is used by internal support staff, as well as our IBM customers. It is the way we manage cloud infrastructure.
+Box Panel is a suite of applications that we utilize to deliver IBM Bluemix Private Cloud. Box Panel is used by internal support staff, as well as our IBM customers. It is the way we manage cloud infrastructure.
 
 Along with other functionalities, Box Panel is a system of record for all datacenters, machine assets, clusters, IP addresses, and customer account information.
 
@@ -29,7 +29,7 @@ As shown in the figure below:
 
 ### What Is Box Panel Site Controller?
 
-The Box Panel Site Controller is a software tool that provides distributed control plane operations, configuration management, and automation Services to the Box Panel Suite, and to the Blue Box Support and Engineering teams.
+The Box Panel Site Controller is a software tool that provides distributed control plane operations, configuration management, and automation Services to the Box Panel Suite, and to the Bluemix Private Cloud Support and Engineering teams.
 
 The Box Panel Site Controller runs in each Local and Dedicated data center, where it communicates with the Box Panel Software-as-a-Service (SaaS) through a Central Control Pod.
 
@@ -64,12 +64,12 @@ These functions include automated software patching, new node deployment, and re
 
 **Q: Sensu on the Central Control Pod?**
 
-**A:** Provides monitoring of the remote site controllers in SoftLayer and customer-owned
+**A:** Provides monitoring of the remote site controllers in IBM Cloud and customer-owned
 data centers.
 
 **Q: Sensu on a Site Controller?**
 
-**A:** Monitors the Blue Box Cloud physical nodes (pNodes) and provides alerts back to the Central Control Pod. The pNodes include the control, compute, and storage nodes.
+**A:** Monitors the Bluemix Private Cloud physical nodes (pNodes) and provides alerts back to the Central Control Pod. The pNodes include the control, compute, and storage nodes.
 
 **Q: PagerDuty?** 
 
@@ -113,13 +113,13 @@ data centers.
 
 ### Security FAQ:
 
-**Q: Who has access to the Local Cloud from IBM Support?**
+**Q: Who has access to Bluemix Private Cloud Local from IBM Support?**
 
 **A:** Members of the OpenStack Engineering and Operations teams have access to the Controllers, Compute and Nodes, OpenStack API, and Horizon. They use this access to deploy, and operate the private cloud service. These support engineers do not have any access to customer data or workloads above the hypervisor.
 
 **Q: Can the IBM support representatives gain access to customer resources?**
 
-**A:** Blue Box Engineering and Operations teams do not have credentials to give them access to any Cloud VMs or applications deployed in the cloud.
+**A:** IBM Bluemix Private Cloud Engineering and Operations teams do not have credentials to give them access to any Cloud VMs or applications deployed in the cloud.
 
 **Q: What information flows over the VPN?**
 
@@ -127,19 +127,19 @@ data centers.
 
 **Q: Who can obtain this information?**
 
-**A:** Blue Box OpenStack Engineering and Operations staff have access to this information for purposes of cloud management and troubleshooting.
+**A:** IBM Bluemix Private Cloud OpenStack Engineering and Operations staff have access to this information for purposes of cloud management and troubleshooting.
 
 **Q: What is the access control policy for the support team?**
 
 **A:** The support team follows a strict IBM Cloud Security Policy to grant, re-evaluate, and revoke access to our customer clouds.
 
-**Q: Can Blue Box use a customer registration process?**
+**Q: Can Bluemix Private Cloud use a customer registration process?**
 
-**A:** Blue Box does not currently support and our processes align with ISO27002.
+**A:** Bluemix Private Cloud does not currently support and our processes align with ISO27002.
 
-**Q: What does Blue Box manage?**
+**Q: What does Bluemix Private Cloud manage?**
 
-**A:** Blue Box manages the OpenStack cloud from bare metal up to and including the hypervisor. Our processes, policies, and tools are complaint with IBM Cloud Security Policy (CSP). CSP aligns with the industry standard ISO27002, which is the Information technology standard of practice for information security controls—that is, for security techniques.
+**A:** Bluemix Private Cloud manages the OpenStack cloud from bare metal up to and including the hypervisor. Our processes, policies, and tools are complaint with IBM Cloud Security Policy (CSP). CSP aligns with the industry standard ISO27002, which is the Information technology standard of practice for information security controls—that is, for security techniques.
 
 For more complete information about the security of IBM Cloud, please download our IBM Cloud Security White Paper at this link:
 
