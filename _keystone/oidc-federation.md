@@ -42,7 +42,7 @@ This document describes a mechanism for an OpenID Connect *relying party* to dis
 ## <a name="setting_up_oidc"></a>Setting up OIDC
 A Blue Box operator will need to work with an IDP integration engineer from the customer's company (for example purposes, `Company XYZ`) to set up OIDC.
 
-The Bluemix operator will need the following information:
+The Bluemix Private Cloud operator will need the following information:
 
 * Authorized Redirect/Callback URL
 * Client ID and Client Secret
@@ -50,9 +50,9 @@ The Bluemix operator will need the following information:
 * The *well-known/configuration URL* which provides all the information needed for access to the provider
 * Default/initial Mapping - The documentation on mappings can be found here: http://docs.openstack.org/developer/keystone/federation/federated_identity.html#mapping-combination
 
-The Bluemix operator should work with the integration engineer to create the initial/default mapping. The mapping provides the way in which the remote users on the IDP are mapped to local groups on the SP. The rest of this document may help clarify what a mapping is and how it's used.
+The Bluemix Private Cloud operator should work with the integration engineer to create the initial/default mapping. The mapping provides the way in which the remote users on the IDP are mapped to local groups on the SP. The rest of this document may help clarify what a mapping is and how it's used.
 
-After the Bluemix operator is finished integrating `Company XYZ IDP` with Keystone, a mapping called `mapping-for-company-xyz-idp` should be created (or a similar mapping name with the IDP name in it).
+After the Bluemix Private Cloud operator is finished integrating `Company XYZ IDP` with Keystone, a mapping called `mapping-for-company-xyz-idp` should be created (or a similar mapping name with the IDP name in it).
 
 The steps for managing the mapping is:
 
