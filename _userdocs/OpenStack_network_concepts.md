@@ -10,7 +10,7 @@ editor: Leslie Lundquist
 dateAdded: May 25, 2016
 --- 
 
-This document offers a basic introduction to some common networking concepts. You'll encounter these concepts when working with your IBM Blue Box Cloud.
+This document offers a basic introduction to some common networking concepts. You'll encounter these concepts when working with your IBM Bluemix Private Cloud.
  
 ### Terminology Used in This Document
 
@@ -53,7 +53,7 @@ You can enable communication among a set of VMs by connecting them to the same i
  
 #### External Networks
 
-External networks can "talk" within and outside your cloud. They may include the public Internet, your cloud's external network, and the SoftLayer network, which contains the SoftLayer router.
+External networks can "talk" within and outside your cloud. They may include the public Internet, your cloud's external network, and the IBM Cloud Data Center network, which contains the IBM Cloud Data Center router.
 
 * Your cloud's "public network" or "external network" provides access to and from the public Internet. 
 * The SoftLayer private network is intended to provide access to other services in SoftLayer, including other clouds you may wish to communicate with. (See the [Release Notes](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/) for more information about access to the SoftLayer private network. 
