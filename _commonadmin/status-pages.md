@@ -1,15 +1,15 @@
 ---
 layout: page
-title:  "Blue Box Status Pages"
+title:  "Bluemix Private Cloud Status Pages"
 featured: false
 weight: 4
 tags: [getting started, status page]
 dateAdded: May 5th, 2015
 ---
 
-## IBM Blue Box Group Network Status
+## IBM Bluemix Private Cloud Network Status
 
-At the IBM Blue Box Group, we strive to keep our customers informed of any changes in network status as well as maintenance windows and upgrades.
+At the IBM Bluemix Private Cloud support center, we strive to keep our customers informed of any changes in network status as well as maintenance windows and upgrades.
 
 
 _On the Web_
