@@ -3,7 +3,7 @@ layout: page
 title:  "Bluemix Private Cloud Components"
 featured: true
 weight: 1
-tags: [getting started, blue box cloud, components]
+tags: [getting started, bluemix private cloud, components]
 dateAdded: January 7th, 2016
 author: Eric French
 ---
