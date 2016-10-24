@@ -11,7 +11,7 @@ featured: TRUE
 
 ## Ursula and OpenStack
 
-Most of you probably are familiar with [OpenStack](http://www.openstack.org), but probably not everyone is familiar with [Ursula](https://github.com/blueboxgroup/ursula).  At IBM Blue Box, we use Ursula to install OpenStack cloud for our customers. Automated installation reduces user errors and results in faster, cleaner, more customizable OpenStack installations. This blog gets you started on understanding and working with Ursula. All of our Ursula playbooks are open source, and they are available on GitHub. Eventually, you could customize some for your own use.
+Most of you probably are familiar with [OpenStack](http://www.openstack.org), but probably not everyone is familiar with [Ursula](https://github.com/blueboxgroup/ursula).  For your IBM Bluemix Private Cloud, we use Ursula to install a specialized version of OpenStack. Automated installation reduces user errors and results in faster, cleaner, more customizable OpenStack installations. This blog gets you started on understanding and working with Ursula. All of our Ursula playbooks are open source, and they are available on GitHub. Eventually, you could customize some for your own use.
 
 ### Ursula is: 
 
