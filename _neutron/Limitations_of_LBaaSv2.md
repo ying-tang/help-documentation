@@ -30,6 +30,8 @@ For more information about Known Limitations, please refer to the IBM Blue Box C
 
  * Customers should consider deploying multiple load balancers and using DNS round-robin to provide limited HA.
  * Customers must otherwise build HA options into their applications, such as failback strategies in a service-oriented architecture, in order to use this capability as part of a larger application.
+ 
+ 7) Dedicated Controller nodes (not Converged Controllers) are required to use LBaaS.
 
 ### Performance Limitations
 The LBaaS v2 namespace driver should perform in line with other software-based load balancers. Any software forwarding solution (LBaaS or Neutron L3 Agent) will have some performance limitations.
