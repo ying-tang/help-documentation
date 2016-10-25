@@ -21,7 +21,7 @@ This document offers a basic technical description of the latest IBM Bluemix Pri
 
 Release 3.0.0 of IBM Bluemix Private Cloud includes many updates to the underlying OpenStack platform upon which every Bluemix Private Cloud is built, as well as upgrades to infrastructure and features of Bluemix Private Cloud and Bluemix Private Cloud Local. Most notable is the move to the **OpenStack Mitaka** release, which enables many new capabilities. We’ve included some general product improvements such as performance benchmarks and an updated Rally test suite, designed to facilitate smoother operation and deployment. This release also includes many improvements to documentation.
 
-Every IBM Bluemix Private Cloud 3.0.0 has these new features:
+Every IBM Bluemix Private Cloud, Version 3.0.0, has these new features:
 
 1. [Openstack Mitaka Support.](#openstack-mitaka)
 2. [Keystone-to-Keystone federated identity across multiple Blue Box clouds.](#federated-keystone)
