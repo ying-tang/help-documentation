@@ -24,9 +24,9 @@ Release 3.0.0 of IBM Bluemix Private Cloud includes many updates to the underlyi
 Every IBM Bluemix Private Cloud, Version 3.0.0, has these new features:
 
 1. [Openstack Mitaka Support.](#openstack-mitaka)
-2. [Keystone-to-Keystone federated identity across multiple Blue Box clouds.](#federated-keystone)
+2. [Keystone-to-Keystone federated identity across multiple Bluemix Private clouds.](#federated-keystone)
 3. [Updated Documentation Website now accessible through Box Panel.](#new-docs-site)
-4. [Regular updates for IBM Blue Box Cloud Images.](#regular-updates)
+4. [Regular updates for IBM Bluemix Private Cloud Images.](#regular-updates)
 
 IBM Bluemix Private Cloud 3.0.0 (in IBM Cloud Data Centers) features:
 
@@ -55,9 +55,9 @@ Several features are now available based on our move to OpenStack Mitaka.
  * The Mitaka release introduces the new **aodh** alert service, which will be installed on any environment that has Ceilometer enabled.
  * For more information, please refer to the [OpenStack Mitaka Release Notes](http://releases.openstack.org/mitaka/).
 
-**Specific OpenStack Services Enabled for every IBM Bluemix Private Cloud 3.0.0 in Mitaka Release:**
+**Specific OpenStack Services Enabled for every IBM Bluemix Private Cloud, Version 3.0.0, in Mitaka Release:**
 
- *  Block Storage API & Extensions (Cinder v2.0)
+ * Block Storage API & Extensions (Cinder v2.0)
  * Compute API & Extensions (Nova v2.1)
  * Dashboard (Horizon ) API N/A
  * Identity API & Extensions (Keystone v3.0)
