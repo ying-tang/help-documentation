@@ -21,7 +21,7 @@ This document offers a basic technical description of the latest IBM Bluemix Pri
 
 Release 3.0.0 of IBM Bluemix Private Cloud includes many updates to the underlying OpenStack platform upon which every Bluemix Private Cloud is built, as well as upgrades to infrastructure and features of Bluemix Private Cloud and Bluemix Private Cloud Local. Most notable is the move to the **OpenStack Mitaka** release, which enables many new capabilities. We’ve included some general product improvements such as performance benchmarks and an updated Rally test suite, designed to facilitate smoother operation and deployment. This release also includes many improvements to documentation.
 
-Every IBM Bluemix Private Cloud 3.0.0 Cloud has these new features:
+Every IBM Bluemix Private Cloud, Version 3.0.0, has these new features:
 
 1. [Openstack Mitaka Support.](#openstack-mitaka)
 2. [Keystone-to-Keystone federated identity across multiple Blue Box clouds.](#federated-keystone)
@@ -80,7 +80,7 @@ Keystone-to-Keystone (K2K) federation lets you log in to multiple clouds using y
 
 <a name="10gb-vyatta"></a>**Vyatta with 10G networking:** This feature is designed for customers with high bandwidth requirements for cloud egress and ingress. 
 
-### IBM Bluemix Private Cloud Local 3.0.0 :
+### IBM Bluemix Private Cloud Local 3.0.0:
 <a name="expansion-compute"></a>**New Compute Node Types:** Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Expansion nodes allow better coverage of instance types and workloads. With this release, compute types are grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
 You can select from the following compute node extensions to add to your IBM Bluemix Private Cloud Local:
 
@@ -92,9 +92,9 @@ You can select from the following compute node extensions to add to your IBM Blu
 
  * You can select Block Storage: SSD or HYBRID
 
-<a name="hipaa"></a>**HIPAA-enabled Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Bluemix Private Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from an Bluemix Private Local HIPAA cloud: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
+<a name="hipaa"></a>**HIPAA-enabled Cloud:** A HIPAA-enabled cloud has the same configuration and expansion options as any other IBM Bluemix Private Cloud offering, but we are enabling _over 50 additional information-security controls_ that support our customers who must store personal health information (PHI). Because of this increased information security capability, a HIPAA-enabled cloud must be HIPAA-enabled from its inception: you cannot upgrade an existing cloud to enable HIPAA protocol. Also, you cannot downgrade from a HIPAA-enabled Bluemix Private Cloud Local: the existing HIPAA cloud must be wiped—per HIPAA protocol—and you must order a new Local cloud with non-HIPAA controllers.
 
- * You can now select HIPAA Enablement for your IBM Blue Box Local Cloud.
+ * You can now select HIPAA Enablement for IBM Bluemix Private Cloud Local.
 
 <a name="pure-app"></a>**Support for Bluemix Private Cloud on Bluemix Local System (Beta release):** Bluemix Local is an existing IBM system for hardware management (formerly called PureApp). With its Beta release, we are making it available as a platform for IBM Bluemix Private Cloud Local, in addition to the Cisco hardware already available.
 
@@ -112,7 +112,7 @@ You can select from the following compute node extensions to add to your IBM Blu
  * LBaaS VIP is associated with Default security group by default. A workaround is to open the required ports in the default group. https://bugs.launchpad.net/neutron/+bug/1295424
  * Deleting LBaaSv2 does not delete the LBaaS namespace. https://bugs.launchpad.net/neutron/+bug/1495430
  * Health monitor status does not reflect whether health monitor is successful or has failed. https://bugs.launchpad.net/neutron/+bug/1464229
- * PING monitor sends HTTP requests. When the LSaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
+ * PING monitor sends HTTP requests. When the LBaaS v2 health monitor is configured for Ping, it sends HTTP requests. https://bugs.launchpad.net/neutron/+bug/1463816
  * Unable to delete LBaaSv2 health monitor if its listener has been deleted. A workaround is to delete the orphan health monitor from the command line. https://bugs.launchpad.net/neutron/+bug/1571097
  * Can delete `lbaas-pool` with `lbaas-hm` still attached. When this happens, even `admin` cannot delete the remaining Health Monitor, except by going into the database directly. https://bugs.launchpad.net/neutron/+bug/1526964
  
