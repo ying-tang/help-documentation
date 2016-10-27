@@ -1,13 +1,18 @@
 ---
 layout: page
-title: FAQ: Working with Windows Images
+
+title: Working with Windows Images FAQ
+
 author: Leslie Lundquist
+
 dateAdded: October 27, 2016
+
 tags: [troubleshooting, timezone, windows, images]
+
 weight: 4
+
 featured: TRUE
 ---
-
 
 **Q.** Why is the timezone set incorrectly on my Windows VM when I boot?
 
