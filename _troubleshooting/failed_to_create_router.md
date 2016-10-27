@@ -1,10 +1,16 @@
 ---
 layout: page
+
 title: Attempt to Create a Router is Failing
-tags:[troubleshooting, nova, router, IPs, availability]
+
+tags: [troubleshooting, nova, router, IPs, availability]
+
 dateAdded: October 24, 2016
+
 weight: 3
+
 featured: FALSE
+
 author: Leslie Lundquist
 ---
 
