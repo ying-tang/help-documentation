@@ -1,7 +1,7 @@
 ---
 layout: page
 
-title: FAQ–Working with Windows Images
+title: Working with Windows Images FAQ
 
 author: Leslie Lundquist
 
