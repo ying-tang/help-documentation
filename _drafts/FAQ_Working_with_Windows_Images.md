@@ -32,6 +32,10 @@ RealTimeIsUniversal REG_DWORD 0x1.
 
 Additionally, we have opened a defect to ask our image developers to include this registry setting in a future version of the Windows images we provide. 
 
-**Q.** Is it recommended to configure `—property os_type="windows”` with `glance image-update` on the Windows image used to create the VM?
+**Q.** To ensure the timezone is set correctly, what else should I do?
 
-**A.** It  is indeed recommended to set `--property os_type="windows"` with `glance image-update` when dealing with Windows images on your IBM Bluemix Private Cloud. 
+**A.** Set `--property os_type="windows"` with `glance image-update` when dealing with Windows images on your IBM Bluemix Private Cloud.  Also, specify `set_timezone: ExampleTime/Zone`  in your #cloud-config user-data.
+
+
+
+
