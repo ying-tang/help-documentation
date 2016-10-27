@@ -61,7 +61,25 @@ The top of the Dashboard displays the infrastructure currently in use, with your
 ![ ](http://ibm-blue-box-help.github.io/help-documentation/img/Dashboard.png)
 
 
-On the right, additional details related to your account summary are displayed, including your **Lock Box Messages**, **Verbal Password**, **Bandwidth Quota**, and **Backup Quota**. 
+On the right, additional details related to your account summary are displayed, including your **Lock Box Messages**, **Verbal Password**, **Bandwidth Quota**, and **Backup Quota**.
+
+On the upper right, you can view the following tabs and menu options. 
+
+![ ](http://ibm-blue-box-help.github.io/help-documentation/img/menus.png)
+
+Tabs:
+
+* **Support**: To view existing tickets and create new tickets. See [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support) for more information.
+* **Chat**: To have a live chat with IBM Bluemix Private Cloud support staff. See the "Using the Chat Feature to chat with Bluemix Private Cloud Support" section in [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support).
+* **Webmail**: To use the webmail hosted on https://mail.blueboxgrid.com/.
+* **Me**: To view or update your profile, or change your password. 
+
+Menus:
+
+* **Switch accounts**: If you have access to multiple IBM Bluemix Private Cloud instances, you can use this option to switch to another account.
+* **Accounts**: View your account contacts, lock box messages, billing information, escalation procedure, and your account information. 
+* **Services**: View all the **Blue Box Cloud** and **Managed Hosting** services that are available to your account, including **Servers**, **Cloud Images**, **DNS**, **Bandwidth Graphs**, **Bandwidth Data**, and **New Relic**. The options may differ for different types of customers. 
+* **Docs**: View the help documentation. See [Help Documentation](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#help-documentation) for more information.
 
 
 ### Working with Cloud Images 
@@ -83,7 +101,7 @@ Each image is displayed as a card. Cards are grouped by operating system.
 
 ### Finding the Help Documentation
 
-From your Box Panel dashboard, you'll see  a link on the Nav Bar (the rightmost link) called **Docs**. If you select that link, a Dropdown menu appears, with the options of **OpenStack**, or **Managed Hosting**. To view the Customer Help documentation for IBM Bluemix Private Cloud, select **OpenStack**. The Help page will appear. You can browse the documentation by category, or you can search, using the search bar. By hovering over one of the icons, you can see a list of articles within that topic area. 
+From your Box Panel dashboard, you'll see  a link on the Nav Bar (the rightmost link) called **Docs**. If you select that link, a Dropdown menu appears, with the options of **OpenStack**, **Cloud Object Storage**, or **Managed Hosting**. To view the Customer Help documentation for IBM Bluemix Private Cloud, select **OpenStack**. The Help page will appear. You can browse the documentation by category, or you can search, using the search bar. By hovering over one of the icons, you can see a list of articles within that topic area. 
 
 ![ ](http://ibm-blue-box-help.github.io/help-documentation/img/Managed_Hosting.png)
 
@@ -95,17 +113,19 @@ In most cases, you'll want to open a support ticket to get support. By using a t
 
 **To create a ticket:**
 
-Step 1. Open a new ticket from the **Support** page. 
+Step 1. Click **New Ticket** from the **Support** page. 
 
-![ ]()
+![ ](http://ibm-blue-box-help.github.io/help-documentation/img/new_ticket.jpg)
 
 Step 2. In the Modal window, your name should show up as the **Ticket Creator.**
 
-Step 3. Copy additional users in the **CC** field to make them aware of the ticket and track its status.
+Step 3. Select a category (**Support** or **Billing**). Verify the user list that should have access to your ticket.
 
-Step 4. Add a descriptive subject to the ticket.
+Step 4. Copy additional users in the **CC additional users** field to make them aware of the ticket and track its status.
 
-Step 5. Collect and add all useful information to the **Description** section, such as:
+Step 5. Add a descriptive subject to the ticket.
+
+Step 6. Collect and add all useful information to the **Description** section, such as:
 
  * Date and time the issue began 
  * Frequency of the issue (permanent or constant, at a particular time of day, etc.) 
@@ -116,31 +136,29 @@ Step 5. Collect and add all useful information to the **Description** section, s
  * Applicable server logs 
  * Any additional useful information
 
-Step 6. Include attachments, such as log files, right below the **Description** section.
+Step 7. Include attachments, such as log files, right below the **Description** section.
 
-Step 7. If your deployment is for a new cloud, check the **Deployment** box.
+Step 8. If your deployment is for a new cloud, check the **Deployment** box.
 
 ![ ](https://cloud.githubusercontent.com/assets/17212946/15032633/850d3d4a-1228-11e6-9b37-c20e5d32d9b9.png)
 
-**Note: Steps 8 and 9 can be skipped for non-urgent concerns.**
+**Note: Steps 9 and 10 can be skipped for non-urgent concerns.**
 
- Step 8. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This click will prompt an acknowledgement that you consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages).
+ Step 9. If the issue is urgent, you can check the **Open this Ticket as Urgent** box to escalate the ticket. This click will prompt an acknowledgement that you consent to pay consulting charges if the issue is non-critical (critical items would include situations in which there are outages).
  
- Step 9. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box.
+ Step 10. If you wish to open your ticket as **Urgent** and consent to pay the consulting charges for non-critical items, check the **I Agree** box.
  
- Step 10. Finally, click the **Create Ticket** box. 
+ Step 11. Finally, click the **Create Ticket** box. 
 
 **Using Your Support Ticket**
 
 Anytime after a ticket is created, you can see the text associated with that ticket, by clicking on that support ticket from your Dashboard. The ticket's text may include references to other tickets, as well as chat history and any correspondence related to your selected ticket. The status of your support ticket is highlighted on the orange button in the top left corner. Status indicators include OPEN, PENDING COMPLETION, PARKED, and so forth.
 
-![ ]() 
+![ ](http://ibm-blue-box-help.github.io/help-documentation/img/ticket_status.jpg)
 
 From the panel on the left-hand side of the screen, you can select options to create another new support ticket, subscribe to the ticket you have selected (if you want to follow its status), view your tickets, and view all tickets submitted by shared users on your account. 
 
 To view a list of Subscribers for a selected ticket, click on the **Subscribers** link. 
-
-![ ]()
 
 To have a written conversation with one of our Bluemix Private Cloud support team experts about the topic of this ticket, you can click the green **Post Reply** button, or you can use the live **Chat** feature by clicking on **Chat**. All live chat sessions are recorded and added to the ticket as a transcript.
 
