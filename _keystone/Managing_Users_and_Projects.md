@@ -117,7 +117,7 @@ Delete image    | Y | Y | Y
 List images     | Y | Y | Y
 Download image  | Y | Y | Y
 Upload image    | Y | Y | Y
-Publicize image | N | N | N
+Publicize image | Y | N | N
 Manage image cache | N | N | N
 
 Network Feature | cloud_admin | project_admin (within project) |  \_member\_
