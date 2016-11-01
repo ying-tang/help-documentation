@@ -1,20 +1,21 @@
 ---
 layout: page
 title:  "How to configure a highly-available IP"
-tags: [neutron, configuring ip, highly available]
-dateAdded: April 9th, 2015
+tags: [neutron, configuring ip, ha, highly available, allowed address pairs, l2 pop]
+dateAdded: September 21, 2016
 author: Eric French
 featured: false
 weight: 4
 note: Leslie Lundquist
+originally added: April 9th, 2015 
 ---
 
-This article provides a resource on how to set up HA floating IPs within an **IBM Blue Box Cloud OpenStack** Local environment. These instructions assume that you already have the [**OpenStack Python API Clients**](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/) installed.
+This article provides a resource on how to set up HA floating IPs within an **IBM Bluemix Private Cloud Local** environment. These instructions assume that you already have the [**OpenStack Python API Clients**](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/) installed.
 
-NOTE: This feature works with IBM Blue Box Local Cloud ONLY. It does not apply to the IBM Blue Box Dedicated Cloud offering. The SoftLayer Network currently requires us to use L2 POP, a driver designed to support scaling to large networks. To quote one of our engineers: 
+NOTE: This feature works with IBM Bluemix Private Local Cloud ONLY. It does not apply to the IBM Bluemix Private Cloud (Dedicated Cloud) offering. The IBM Bluemix data center Network currently requires us to use L2 POP, a driver designed to support scaling to large networks. To quote one of our engineers: 
 
 
-"The L2Population mechanism driver we need to use to make VXLAN work on SoftLayer is incompatible with MAC learning or ARP responses used by HA IP methods. IPs are mapped to hosts through two translation mechanisms: ARP maps IPs to MAC addresses, and switches learn which MAC is associated with each port. At failover time, any HA IP must change at least one of these two mappings." 
+"The L2Population mechanism driver we need to use to make VXLAN work on IBM Bluemix data center networks is incompatible with MAC learning or ARP responses used by HA IP methods. IPs are mapped to hosts through two translation mechanisms: ARP maps IPs to MAC addresses, and switches learn which MAC is associated with each port. At failover time, any HA IP must change at least one of these two mappings." 
 
 
 As a possible workaround, in the OpenStack Mitaka release, there is an option to disable half of the L2 POP responder, which could allow you to set up the gratuitous ARP type of HA. (See this article: https://review.openstack.org/278597) If you really need HA, it's best to use a Load Balancer for that, such as Neutron LBaaS v2. As another possible workaround, if your cloud is deployed within a single SoftLayer Pod, and it will never grow beyond that single Pod, you could possibly implement some type of HA IP in a custom way.
@@ -109,7 +110,7 @@ That's it!
 
 * Confirm that the `allowed-address-pairs` extension is loaded.
 
-The `allowed-address-pairs` extension is required, and it is shipped by default with each **IBM Blue Box** Cloud installation. You can confirm it's operating by running the following commands:
+The `allowed-address-pairs` extension is required, and it is shipped by default with each **IBM Bluemix Private** Cloud installation. You can confirm it's operating by running the following commands:
 
 {% highlight bash %}
 ```

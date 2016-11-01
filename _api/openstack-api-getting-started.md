@@ -7,7 +7,7 @@ author: Eric French
 dateAdded: November 16th, 2015
 ---
 
-Your **IBM Blue Box** Cloud was provisioned with API endpoints for all of the major services running underneath.  Here is how to set up your local system to access these services.
+Your **IBM Bluemix Private** Cloud was provisioned with API endpoints for all of the major services running underneath.  Here is how to set up your system to access these services.
 
 **On Mac OSX:**
 
@@ -52,7 +52,7 @@ Create a `stackrc` for yourself, replacing the `OS_USERNAME`, `OS_PROJECT_NAME`,
 
 It is also possible to download an **OpenStack RC File** from **Horizon**. Log in to **Horizon**, navigate to the **Access & Security** page and select the **API Access** tab.  
 
- ![API Access Tab](https://help.bluebox.net/hc/en-us/article_attachments/201813957/Access___Security_-_OpenStack_Dashboard.png)
+![API Access Tab]({{site.baseurl}}/img/OpenStack_Access_Security.png)
 
 Click the **Download OpenStack RC File** button and modify it as desired.
 
@@ -69,6 +69,51 @@ nova image-list
 {% endhighlight %}
 
 This command will return a list of all running instances in your project.
+
+### How to query the OpenStack API using cURL
+
+**Q.** How can I get an OpenStack token via the v3 API?
+
+**A.** Here's a command you can use:
+{% highlight bash %} 
+curl -si -X POST https://example.openstack.blueboxgrid.com:5000/v3/auth/tokens \
+-H "Content-Type: application/json" \
+-d '{ "auth": { "identity": { "methods": [ "password" ], \
+"password": { "user": { "name": "'"$OS_USERNAME"'", "domain": { "id": "default" },\
+"password": "'"$OS_PASSWORD"'" } } } } }' | awk '/X-Subject-Token/ {print $2}'
+
+381d756c8bfa4a8cb4dff4fe44255991
+
+{% endhighlight%}
+
+**For more information:**
+
+An API guide linked [here](http://developer.openstack.org/api-guide/quick-start/api-quick-start.html) includes examples of using cURL to get a list of servers.
+
+Each service has its own port for API access. If you log in to the web GUI and go to the **Access & Security => API Access** tab, you can see which port corresponds to which service.
+
+To query any of the other API services (Nova, Neutron, Cinder, etc) you must first get a token from the authentication service (Keystone). You can reuse that token to make as many API calls as you require until it expires.
+
+For example, 9696 is Neutron, but to get a token (the command you're trying to run) requires a Keystone authentication request, which needs to be on port 5000.
+
+So here are some steps:
+
+1. Fetch a token from `$OS_AUTH_URL/tokens` with an HTTP POST (not a GET, because you need to POST your `$OS_USERNAME` and `$OS_PASSWORD, $OS_TENANT_NAME` to be able to retrieve a token). The response will include a token, and a catalog of the different services.
+
+2. Retrieve that token and check that the token expiry date is in the future.
+
+3. Retrieve from the returned catalog the URL of the service you want to make an API call against. In your case you will be looking for the entry in the catalog with the type `network`. It should have a name of `neutron`.
+
+4. Include that token as an `X-Auth-Token` header when you make a different HTTP GET to that URL. You can run `neutron --debug security-group-list` to see what that POST should look like, it should be something like this: 
+
+```
+curl -g -i --cacert "/etc/ssl/certs/ca-certificates.crt" \
+-X GET https://example.openstack.blueboxgrid.com:9696/v2.0/security-groups.json \
+-H "User-Agent: python-neutronclient" \
+-H "Accept: application/json" \
+-H "X-Auth-Token: {SHA1}11111a1111aaa1a111aaaaaa1111aa1a111a1111"
+
+```
 
 **Further Reading**
 

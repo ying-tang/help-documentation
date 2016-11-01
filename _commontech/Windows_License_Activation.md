@@ -9,28 +9,28 @@ author: Yang Zhang
 editor: Leslie Lundquist
 ---
 
-## Activating your Windows licenses in IBM Blue Box Cloud
+## Activating your Windows licenses in IBM Bluemix Private Cloud
 
 The IBM®-provided image catalog contains Microsoft® Windows images offered in a bring your own license (BYOL) model. In accordance with Microsoft Service Provider Use Rights, IBM may not provide Key Management Services (KMS) activation services for your Windows BYOL image.
 
 There are several ways to activate your Windows licenses:
 
-* Create a KMS server in your IBM Blue Box Cloud environment
+* Create a KMS server in your IBM Bluemix Private Cloud environment
 * Use an existing KMS server at your site or at another location
 * Activate online directly with Microsoft
 * Activate offline by telephone with Microsoft
 
 You might use one or more of these methods depending on your circumstances. Things to consider when selecting your method:
 
-* KMS servers have minimum thresholds for the number of clients they will activate. If your KMS service is hosted on Windows Server 2008 or Windows Server 2012, you must activate a minimum of five clients. If you are activating less than five licenses, you cannot use KMS within IBM Blue Box Cloud.
-* To use an existing KMS server located outside of your IBM BlueBox Cloud environment, you must establish proper connectivity. This includes both the IBM Blue Box Cloud firewalls and the firewalls allowing the IBM Blue Box Cloud Windows instances to initiate traffic to the KMS server on tcp port 1688.
+* KMS servers have minimum thresholds for the number of clients they will activate. If your KMS service is hosted on Windows Server 2008 or Windows Server 2012, you must activate a minimum of five clients. If you are activating less than five licenses, you cannot use KMS within IBM Bluemix PRivate Cloud.
+* To use an existing KMS server located outside of your IBM Bluemix Private Cloud environment, you must establish proper connectivity. This includes both the Bluemix Private Cloud firewalls and the firewalls allowing the Bluemix Private Cloud Windows instances to initiate traffic to the KMS server on tcp port 1688.
 * To use direct online activation, your Windows instances must have outbound connectivity to the Internet. Instances do not have Internet connectivity by default, but you may request access in your initial order or submit a support ticket to update access at any time.
 
 ### Creating a KMS server in IBM Blue Box Cloud
 
 You can configure any Windows Server 2008 or newer instance to provide the KMS service. To act as a KMS server, the Windows instance needs outbound Internet connectivity to communicate with Microsoft License Servers. You also must purchase a KMS Host Key from Microsoft to receive a specific entitlement.
 
-To convert a Windows 2008 R2 instance to a KMS inside IBM Blue Box Cloud, use these steps:
+To convert a Windows 2008 R2 instance to a KMS inside IBM Bluemix Private Cloud, use these steps:
 
 1. Download this [**Microsoft update file**](http://download.microsoft.com/download/8/0/9/809D7026-D0F4-406E-ACDB-99E306A56A54/Windows6.1-KB2757817-x64.msu "Microsoft update file") to your instance.
 
@@ -61,7 +61,7 @@ To convert a Windows 2008 R2 instance to a KMS inside IBM Blue Box Cloud, use th
 
 ### Using an existing KMS server
 
-If you already have a KMS server in your site or at another location, you can use it provided that it has the appropriate network connections established. For the Windows server to be able to activate with the KMS server, it needs the ability to initiate communication with the KMS server (typically on TCP port 1688). Create a support ticket to have the appropriate static rules applied in the IBM BlueBox Cloud firewall.
+If you already have a KMS server in your site or at another location, you can use it provided that it has the appropriate network connections established. For the Windows server to be able to activate with the KMS server, it needs the ability to initiate communication with the KMS server (typically on TCP port 1688). Create a support ticket to have the appropriate static rules applied in the IBM Bluemix Private Cloud firewall.
 
 
 ### Activating your Windows server through a KMS server

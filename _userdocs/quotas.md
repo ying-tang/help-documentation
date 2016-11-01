@@ -14,6 +14,7 @@ OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't 
 ### Table of Contents
 * [Introduction](#introduction)
 * [Other Limits You May Encounter](#other-limits-you-may-encounter)
+* [Neutron vs. Nova Rule Precedence](#neutron-vs-nova-rule-precedence)
 * [Common Questions](#common-questions)
   * [Common Quota Error Messages](#common-quota-error-messages)
   * [Most Commonly Hit Quotas](#most-commonly-hit-quotas)
@@ -54,6 +55,21 @@ TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540 
 **Security Groups:** Most customers go with the default limit and adjust upwards as needed. This keeps firewall rules to a manageable level, so as to not impact performance. At a certain point (we haven't seen what particular point this is yet), it is theoretically possible to end up with too many firewall rules and not enough CPU to process them quickly enough. The default limits may seem low, but they're more than enough for most people, who will never create more than a few security groups, with maybe half a dozen rules each.
 
 **Instances:** Most customers go with the default limit and adjust upwards as needed. With enough hardware, you can get into hundreds of thousands of instances. For your particular hardware, you need to make your own calculations based on your desired resource consumption for each VM.
+
+### Neutron vs. Nova Rule Precedence
+
+There is some overlap between the quotas enforced by the Nova and Neutron services. In the event of a conflict, Neutron quotas always take precedence.
+
+If you need to update security group rules, for instance, take note, there are three places you may need to make the update:
+
+In Neutron: `neutron quota-update --security-group-rule 250 <project-ID>`
+
+In Nova: 
+
+ * For the project: `nova quota-update --security-group-rules 250 <project-ID>`
+
+ * And potentially for the user: `nova quota-show --user <username> --tenant <project-ID>`
+
 
 ## Common Questions
 
