@@ -47,6 +47,8 @@ All Linux images support `heat-cfn` tools.
 
 # **Updates of Windows images**
 
+All windows images have been set to use UTC(Coordinated Universal Time).
+
 **Windows Server 2008 R2 SP1 Datacenter**
 
 * 51 updates were applied: 
