@@ -55,7 +55,7 @@ Create project  | Y | N | N
 Update project  | Y | Y | N
 Get project     | Y | Y | Y
 Delete project  | Y | N | N
-List projects   | Y | Y | N
+List projects   | Y | Y | Y (Self)
 List user projects  | Y | Y | Y (Self)
 List users within projects  | Y | Y | N
 **Groups** |||
