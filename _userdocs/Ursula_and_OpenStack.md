@@ -127,9 +127,17 @@ Step 5. Now replace the broken cert with this one you generated:
   # Remove the old private key
   sed -i -- '/-----BEGIN RSA PRIVATE KEY-----/,/-----END RSA PRIVATE KEY-----/d' defaults-2.0.yml
   # Now tell the playbook to load the certificate and private key from the above files.
-  sed -i -- 's!crt: |!crt: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/server.crt\\x27') }}"!g' defaults-2.0.yml 
-  sed -i -- 's!key: |!key: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/serverkey.pem\\x27') }}"!g' defaults-2.0.yml 
   {% endhighlight %}
+
+  {% raw %}
+  ```
+  sed -i -- 's!crt: |!crt: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/server.crt\\x27') }}"!g' defaults-2.0.yml
+  ```
+
+  ```
+  sed -i -- 's!key: |!key: "{{ lookup(\x27'file\\x27',\x27'/etc/ssl/serverkey.pem\\x27') }}"!g' defaults-2.0.yml
+  ```
+  {% endraw %}
 
 Step 6. Make sure to change the FQDN to the one you just used for the Common Name (in this example, it is `openstack.chaidas.com`) . Do not skip this step, otherwise things will break, down the road! 
 
