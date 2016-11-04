@@ -181,7 +181,7 @@ rm /etc/apt/sources.list.d/apt_mirror_openstack_*
 2. Back on the Ansible host, run this command: 
 
 {% highlight bash %}
-sed -i -- 's!https://apt-mirror.openstack.blueboxgrid.com!http://apt-mirror.openstack.blueboxgrid.com!g' ~/ursula/envs/example/defaults-2.0.yml`
+sed -i -- 's!https://apt-mirror.openstack.blueboxgrid.com!http://apt-mirror.openstack.blueboxgrid.com!g' ~/ursula/envs/example/defaults-2.0.yml
 {% endhighlight %}
 
 3. Re-run Ursula: 
