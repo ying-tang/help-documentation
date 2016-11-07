@@ -144,9 +144,9 @@ Object Storage Feature | cloud_admin | project_admin (within project) |  \_membe
 Create account | Y | N | N
 Delete account | Y (enabled) | N | N
 **Containers** |||
-Create container | Y | Y | N
-Update container | Y | Y | N
-Delete container | Y | Y | N
+Create container | Y | Y | Y
+Update container | Y | Y | Y
+Delete container | Y | Y | Y
 **Objects** |||
 Create object    | Y | Y | Y
 Update object    | Y | Y | Y
