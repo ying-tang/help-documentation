@@ -87,4 +87,4 @@ You can improve your cloud’s workload performance by using either path we’ve
 
 **Further reading on this topic:**
 
-Red Hat Enterprise Linux 7 Virtualization Tuning and Optimization Guide
+[Red Hat Enterprise Linux 7 Virtualization Tuning and Optimization Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Virtualization_Tuning_and_Optimization_Guide/sect-Virtualization_Tuning_Optimization_Guide-Networking-Virtio_and_vhostnet.html)
