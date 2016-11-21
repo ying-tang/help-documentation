@@ -1,7 +1,7 @@
 
 ---
 layout: page
-title: Building Up to OpenStack: QEMU and Your Cloud
+title: Building Up to OpenStack — QEMU and Your Cloud
 author: Dustin Lundquist and Leslie Lundquist
 tags: [qemu, kvm, hypervisor, emulator]
 dateAdded: November 21, 2016
