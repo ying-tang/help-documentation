@@ -33,7 +33,7 @@ Older I/O devices typically were not general-purpose processors, and they were s
 
 To perform efficient I/O, your cloud system requires (1) a driver for the guest VM, (2) some additional backend in the host software (e.g. QEMU) that provides the I/O device, and finally, (3) the interfaces that the host software uses to communicate with the underlying I/O device.
 
-[qemu_io_passthrough_figure](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/QEMU_IO_Passthrough_figure.png)
+[qemu_io_passthrough_figure]({{site.baseurl}}/img/QEMU_IO_Passthrough_figure.png)
 
 As you can see in the figure, several components get involved in fulfilling an I/O request from within a VM. Each transition between these components incurs a performance penalty. To demonstrate how quickly the I/O performance can degrade, here’s a step-by-step breakdown of how it works:
 
