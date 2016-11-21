@@ -80,10 +80,11 @@ It’s important to remember that PCI passthrough requires a dedicated I/O devic
 Newer, high-end network interfaces and disk controllers include SR-IOV (single root I/O virtualization). Essentially, these hardware devices can present themselves as multiple PCI devices, each of which can be attached to a VM. In a typical deployment, there would be a main one, a parent (or PF), and then one or more logical devices known as virtual function units (VFs). By configuring the PF, additional VF devices can be created along with their associated resources. Then, these VFs can be attached to individual VMs by means of PCI passthrough.
 
 Potentially, you could use PCI passthrough for two I/O devices per guest VM: a network interface and disk controller. For example, with two SR-IOV devices, you could gain I/O performance improvement both for network and for storage.
-Summary
+
+**Summary**
 
 You can improve your cloud’s workload performance by using either path we’ve described in this article, the software path or the hardware path. There’s an optimized software path with **virtio** and **vhost**, and a hardware-assisted optimized path that uses PCI passthrough and SR-IOV.
 
+**Further reading on this topic:**
 
-Further reading on this topic:
 Red Hat Enterprise Linux 7 Virtualization Tuning and Optimization Guide
