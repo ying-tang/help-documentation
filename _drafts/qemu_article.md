@@ -6,6 +6,7 @@ dateAdded: November 21, 2016
 featured: true
 weight: 4
 tags: [qemu, kvm, hypervisor, emulator]
+---
 
 _Republished from https://www.ibm.com/blogs/bluemix/2016/10/building-up-to-openstack/_
 
