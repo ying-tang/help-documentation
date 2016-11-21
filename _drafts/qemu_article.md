@@ -21,7 +21,7 @@ QEMU, short for Quick Emulator, began its existence as an unremarkable software 
 
 When it comes to the cloud, it’s important to understand that all memory allocated to a running virtual machine (VM) is used by the QEMU process. This is true in the case of pure QEMU and QEMU + KVM cases, which we are discussing here. For this reason, in many ways, QEMU actually IS the running instance of the VM. In other words, if you merely connect the QEMU process to a storage device and a network, you have created an atomic cloud, a fundamental machine:
 ￼
-[Figure]()
+![Figure]()
 
 **Atomic QEMU = a fundamental machine emulator**
 
@@ -37,7 +37,7 @@ Generally your VM runs much faster when KVM is allowed to assist QEMU. Until you
 
 By adding KVM to the picture, you are essentially taking the virtual CPU and memory out of QEMU (for emulation) and using KVM (for configuration) to control execution by the hardware CPU, for reasons of speed.
 ￼
-[Figure]()
+![Figure]()
 
 To summarize, as depicted in the diagram above, think of QEMU as an interpreter, a software evaluation path of CPU instructions––and KVM as a faster execution path for those underlying instructions:
 
@@ -60,7 +60,7 @@ With KVM, QEMU and some storage and network backend technologies such as Ceph RB
 
 As we are building up to the complexity of OpenStack, an important concept to remember is that the QEMU process assumes there is only a single user. In essence, using an OpenStack VM merely adds the power of multiuser capability, ease of initial VM configuration, and additional security to the atomic VM machine that QEMU fundamentally has instantiated. Eventually, we’ll be looking at an OpenStack “machine” that delivers complexity like this:
 ￼
-[Figure]()
+![Figure]()
 
 _OpenStack Grizzly Release — This was a while ago!_
 
