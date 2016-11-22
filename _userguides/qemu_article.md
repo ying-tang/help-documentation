@@ -12,7 +12,7 @@ _Republished from https://www.ibm.com/blogs/bluemix/2016/10/building-up-to-opens
 
  Recently, in the midst of a cloud customer support crisis, a new, young engineer asked a more senior engineer, “Quick…what is QEMU and how do I restart it?” That question has led to the creation of this article. It’s time to take a deeper look into the very nucleus of an OpenStack cloud—it is QEMU (Quick Emulator)!
 
-As we see how QEMU is connected to all the other functional parts of a cloud, we will build up our general understanding of OpenStack, from the core to the very top, from the essential running instance to the Horizon dashboard that the user sees. If you’re not yet familiar with IBM Bluemix Private and OpenStack, you can check out this [article]() to get a brief introduction.
+As we see how QEMU is connected to all the other functional parts of a cloud, we will build up our general understanding of OpenStack, from the core to the very top, from the essential running instance to the Horizon dashboard that the user sees. If you’re not yet familiar with IBM Bluemix Private Cloud and OpenStack, you can check out this [article]() to get a brief introduction.
 
 OpenStack adoption increases with each release cycle, and with good reason: it addresses a variety of common use cases and consumption models. Still, developers can find it difficult to appreciate OpenStack, or indeed to understand it fully, with its incomplete features and the increasingly complex interrelationships among its parts. Therefore, it’s good to avoid making assumptions about what our co-developers know about the fast-moving target that is OpenStack.
 
