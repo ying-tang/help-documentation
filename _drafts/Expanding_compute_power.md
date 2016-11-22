@@ -18,7 +18,7 @@ IBM Bluemix Private Cloud, Dedicated and Local, is a solution built by cloud ope
 
 ## Bring IBM Bluemix Private Cloud to your data center of choice
 
-You may already know that IBM Bluemix Private Cloud runs in SoftLayer data centers, available worldwide, exclusively on specially selected hardware. Expansion is a highly streamlined process, because we have a full set of standardized APIs and automation tools that interact easily with the standardized hardware in IBM Cloud data centers. Expansion is easy because we manage it for you, in our data centers.
+You may already know that IBM Bluemix Private Cloud runs in SoftLayer data centers, available worldwide, exclusively on specially selected hardware. Expansion is a highly streamlined process, because we have a full set of standardized APIs and automation tools that interact easily with the standardized hardware in IBM Cloud data centers. In other words, expansion is easy because we manage it for you, in our data centers.
 
 In contrast, IBM Bluemix Private Cloud Local offers a turnkey, private-cloud-as-a-service (PCaaS) solution, delivered to your in-house or colocation data center. The Local cloud shares a common architecture with our Dedicated cloud solution. This common architecture lets you add compute nodes to your Local Cloud just as easily as in Dedicated Cloud, making your expansion seamless. The following diagram shows how we do it:
 
