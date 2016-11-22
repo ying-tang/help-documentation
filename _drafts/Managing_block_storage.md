@@ -8,7 +8,7 @@ featured: true
 weight: 4
 ---
 
-You might have heard that IBM Bluemix Private Cloud offers several different storage models, each with the performance and scale to address our customers’ unique requirements. If you have workloads such as expandable file systems and data management systems hosted on your Bluemix Private Cloud, block storage may be a good fit for your environment-specific use case. This post explains how to get started with our block storage model.
+You might have heard that IBM Bluemix Private Cloud offers several different storage models, each with the performance and scale to address our customers’ unique requirements. If you have workloads such as expandable file systems and data management systems hosted on your Bluemix Private Cloud, block storage may be a good fit for your environment-specific use case. This article explains how to get started with our block storage model.
 
 ### OpenStack Cinder
 
