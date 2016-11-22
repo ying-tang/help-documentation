@@ -12,7 +12,7 @@ _Republished from https://www.ibm.com/blogs/bluemix/2016/10/building-up-to-opens
 
  Recently, in the midst of a cloud customer support crisis, a new, young engineer asked a more senior engineer, “Quick…what is QEMU and how do I restart it?” That question has led to the creation of this article. It’s time to take a deeper look into the very nucleus of an OpenStack cloud—it is QEMU (Quick Emulator)!
 
-As we see how QEMU is connected to all the other functional parts of a cloud, we will build up our general understanding of OpenStack, from the core to the very top, from the essential running instance to the Horizon dashboard that the user sees. If you’re not yet familiar with Blue Box Cloud and OpenStack, you can check out this blog post to get a brief introduction.
+As we see how QEMU is connected to all the other functional parts of a cloud, we will build up our general understanding of OpenStack, from the core to the very top, from the essential running instance to the Horizon dashboard that the user sees. If you’re not yet familiar with IBM Bluemix Private and OpenStack, you can check out this [article]() to get a brief introduction.
 
 OpenStack adoption increases with each release cycle, and with good reason: it addresses a variety of common use cases and consumption models. Still, developers can find it difficult to appreciate OpenStack, or indeed to understand it fully, with its incomplete features and the increasingly complex interrelationships among its parts. Therefore, it’s good to avoid making assumptions about what our co-developers know about the fast-moving target that is OpenStack.
 
@@ -20,7 +20,7 @@ OpenStack adoption increases with each release cycle, and with good reason: it a
 
 QEMU, short for Quick Emulator, began its existence as an unremarkable software emulator for a variety of CPU architectures. It was also useful for testing various CPU architectures, such as ARM or SPARC. Initially, QEMU offered limited I/O options: files for block devices (disks) and tap(3) interfaces for network devices.
 
-When it comes to the cloud, it’s important to understand that all memory allocated to a running virtual machine (VM) is used by the QEMU process. This is true in the case of pure QEMU and QEMU + KVM cases, which we are discussing here. For this reason, in many ways, QEMU actually IS the running instance of the VM. In other words, if you merely connect the QEMU process to a storage device and a network, you have created an atomic cloud, a fundamental machine:
+When it comes to the cloud, it’s important to understand that all memory allocated to a running virtual machine (VM) is used by the QEMU process. This is true in the case of **pure QEMU** and **QEMU + KVM** cases, which we are discussing here. For this reason, in many ways, QEMU actually _IS_ the running instance of the VM. In other words, if you merely connect the QEMU process to a storage device and a network, you have created an atomic cloud, a fundamental machine:
 
 ![Figure]({{site.baseurl}}/img/Atomic_qemu.png)
 
