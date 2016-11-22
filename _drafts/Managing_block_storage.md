@@ -29,7 +29,8 @@ With the power of Ceph, Bluemix Private Cloud provides a block storage option wi
  * A multi-tier option with a mixture of SSD-only and hybrid nodes is ideal for large-scale environments.
 
 After your block storage is configured with the proper multiple backend and multi-tier options, creating a Cinder volume is just a few quick steps away! You can easily use the Horizon dashboard or the Cinder client.
-Creating a Cinder volume using OpenStack API
+
+### Creating a Cinder volume using OpenStack API
 
 To create a volume using the OpenStack client, run the following Cinder command:
 
@@ -40,36 +41,35 @@ $  cinder create <size> --display-name <name> --volume-type <type> \
 
 The following commands show examples of how you can customize your newly-created volume for your Bluemix Private Cloud.
 
-```
-    <size>: The size of the volume in gibibytes (GiB).
-    <name>: The name of the volume.
-    <type>: CEPH_HYBRID for the hybrid option or CEPH_SSD for the SSD-only option. You can also use the cinder type-list command to get a list of available volume types.
-    <imageid>: Optionally, specify the ID of the image that you want to use for your volume. You can use the nova image-list command to list the existing images.
-    <az>: Optionally, specify the availability zone in which you want to create the volume. You can use the cinder availability-zone-list command to get a list of availability zones.
-```
+* *\<size>*: The size of the volume in gibibytes (GiB).     
+* *\<name>*: The name of the volume.
+* *\<type>*: `CEPH_HYBRID` or `CEPH_SSD`. You can use the `cinder type-list` command to get a list of available volume types. 
+* *\<imageid>*: Optionally, specify the ID of the image that you want to use for your volume. You can use the `nova image-list` command to list the existing images. 
+* *\<az>*: Optionally, specify the availability zone in which you want to create the volume. You can use the `cinder availability-zone-list` command to get a list of availability zones. 
 
-**Creating a Cinder volume with Horizon**
+### Creating a Cinder volume with Horizon
 
 You can also create a block storage volume using Horizon, the OpenStack dashboard. You can get started with the following steps:
 
-    Log into the Horizon dashboard.
+1. Log into the Horizon dashboard.
     
-    Under the Project section, select Compute, then click Volumes. If you have existing volumes, you can view a list of your volumes and their details (such as name, description, size, and status), from the dashboard UI.
+2. Under the **Project** section, select **Compute**, then click **Volumes**. If you have existing volumes, you can view a list of your volumes and their details (such as name, description, size, and status), from the dashboard UI.
 
-Click Create Volume on the upper right portion of the Horizon dashboard. The Create Volume dialog is displayed.
+Click **Create Volume** on the upper right portion of the Horizon dashboard. The Create Volume dialog is displayed.
 
-**Create a volume using Horizon**
+![Create a volume using Horizon](https://www.ibm.com/blogs/bluemix/wp-content/uploads/2016/10/create_volume-800x706.png)
 
 Provide the following details about the volume:
 
-    Volume Name: Type the name of your volume.
-    Description: Type a description of your volume.
-    Volume Source: No source, empty volume or Image. If you choose an empty volume, an empty volume does not contain a file system or a partition table. If you choose the image option, a new field for Use image as a source displays and you can select the image from the list.
-    Type: Select CEPH_HYBRID if you want the hybrid option or CEPH_SSD for the SSD-only option.
-    Size (GiB): Select the size of the volume in gibibytes(GiB), for example, 1.
-    Availability Zone: Choose the availability zone. For example, Nova.
+* Volume Name: Type the name of your volume.
+* Description: Type a description of your volume.
+* Volume Source: *No source, empty volume* or *Image*. If you choose an empty volume, an empty volume does not contain a file system or a partition table. If you choose the image option, a new field for **Use image as a source** displays and you can select the image from the list.
+* Type: *Ceph_SSD* or *Ceph_Hybrid*. 
+* Size (GiB): Select the size of the volume in gibibytes(GiB), for example, 1. 
+* Availability Zone: Choose the availablity zone, for example, *nova*. 
 
-Simply click Create Volume when complete. You’re now able to attach your Cinder volume to your virtual server. It’s also just as easy to detach and re-attach your block volume to another Virtual Server requiring persistent storage, and you can rest assured that your data will remain safe.
-Learn more
+Simply click **Create Volume** when complete. You’re now able to attach your Cinder volume to your virtual server. It’s also just as easy to detach and re-attach your block volume to another Virtual Server requiring persistent storage, and you can rest assured that your data will remain safe.
 
-After creating and attaching your Cinder volumes to Virtual Servers, you can easily adjust and expand their volume sizes as your capacity requirements grow. To learn more about Cinder, check out our documentation.
+**Learn more**
+
+After creating and attaching your Cinder volumes to Virtual Servers, you can easily adjust and expand their volume sizes as your capacity requirements grow. 
