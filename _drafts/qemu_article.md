@@ -52,9 +52,10 @@ If you take a look at `qemu disk space help`, you can see that QEMU actually sup
  * tiered storage
 
 For example, a modern storage solution such as Ceph RBD (RADOS Block Device) combines the rich storage features above with network accessibility, thus providing optimizations in speed, resiliency, and redundancy while still allowing remote access.
-As a further optimization on cloud storage solutions, one can remove QEMU entirely from the I/O path to optimize guest-to-I/O performance. We will cover that topic in a subsequent article.
+As a further optimization on cloud storage solutions, one can remove QEMU entirely from the I/O path to optimize guest-to-I/O performance. We will cover that topic in a [subsequent article](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Improving_Cloud_Performance/).
 
-Virtualized servers are nearly bare metal server performance
+**Virtualized servers nearly equal to bare metal server performance**
+
 With KVM, QEMU and some storage and network backend technologies such as Ceph RBD, we can achieve CPU, memory, disk and network performance levels that exceed the performance of bare metal servers from a few years ago. They also gain the operational flexibility afforded by newer storage features such as thin provisioning and snapshots. On the hardware available today, these solutions are faster than ever before.
 
 ### Building up to OpenStack
@@ -65,4 +66,4 @@ As we are building up to the complexity of OpenStack, an important concept to re
 
 _OpenStack Grizzly Release — This was a while ago!_
 
-Because we know the OpenStack cloud down to its roots, IBM Bluemix Private Cloud  can deliver exceptional product performance and service to our customers. Take the time to learn more  and stay tuned for upcoming articles as we continue to dive into the basic elements of cloud computing.
+Because we know the OpenStack cloud down to its roots, IBM Bluemix Private Cloud can deliver exceptional product performance and service to our customers. Take the time to learn more  and stay tuned for upcoming articles as we continue to dive into the basic elements of cloud computing.
