@@ -12,20 +12,20 @@ No one could underestimate the importance of computing. When computing emerged, 
 
 Because we offer computing services to our customers, it’s natural that we refuse to set a limit to our customers’ computing power–and the power that our customers, in turn, provide to their customers.
 
-How does the IBM Blue Box Local team ensure the best possible customer experience?
+How does the IBM Bluemix Private Cloud Local team ensure the best possible customer experience?
 
-IBM Blue Box, Dedicated and Local, is a solution built by cloud operators, for cloud operators, so we’re purpose-driven to optimize our deployment and expansion time for our customers. IBM Blue Box Local delivers a managed, extensible private cloud as a service (PCaaS) in your own data center, thereby speeding up your application development process “behind the firewall.”
+IBM Bluemix Private Cloud, Dedicated and Local, is a solution built by cloud operators, for cloud operators, so we’re purpose-driven to optimize our deployment and expansion time for our customers. We deliver a managed, extensible private cloud as a service (PCaaS) in your own data center, thereby speeding up your application development process “behind the firewall.”
 
-## Bring IBM Blue Box Cloud to your data center of choice
+## Bring IBM Bluemix Private Cloud to your data center of choice
 
-You may already know that IBM Blue Box Dedicated Cloud runs in SoftLayer data centers, available worldwide, exclusively on specially selected hardware. With IBM Blue Box Dedicated, expansion is a highly streamlined process, because we have a full set of standardized APIs and automation tools that interact easily with the standardized hardware in SoftLayer data centers. Expansion is easy because we manage it for you, in our data centers.
+You may already know that IBM Bluemix Private Cloud runs in SoftLayer data centers, available worldwide, exclusively on specially selected hardware. Expansion is a highly streamlined process, because we have a full set of standardized APIs and automation tools that interact easily with the standardized hardware in IBM Cloud data centers. Expansion is easy because we manage it for you, in our data centers.
 
-In contrast, IBM Blue Box Local offers a turnkey, private-cloud-as-a-service (PCaaS) solution, delivered to your in-house or colocation data center. IBM Blue Box Local Cloud shares a common architecture with our IBM Blue Box Dedicated solution. This common architecture lets you add compute nodes to your Local Cloud just as easily as in Dedicated Cloud, making your expansion seamless. The following diagram shows how we do it:
+In contrast, IBM Bluemix Private Cloud Local offers a turnkey, private-cloud-as-a-service (PCaaS) solution, delivered to your in-house or colocation data center. The Local cloud shares a common architecture with our Dedicated cloud solution. This common architecture lets you add compute nodes to your Local Cloud just as easily as in Dedicated Cloud, making your expansion seamless. The following diagram shows how we do it:
 
-The IBM Blue Box Local architecture allows compute nodes to be added easily.
-![IBM Blue Box Local architecture allows compute nodes to be added easily](bluemix-on-bluebox-pic3.jpg)
+The IBM Bluemix Private Cloud Local architecture lets you add compute nodes easily.
+![IBM Bluemix Private Local architecture allows compute nodes to be added easily](bluemix-on-bluebox-pic3.jpg)
 
-IBM Blue Box Cloud Local is planned perfectly to accommodate your data center’s energy usage, space, heat, and wiring specifications, among other things. To start, after a site survey for the data center, we propose some hardware options that we’ve selected for maximum performance and cost efficiency. When an option of the servers and network gears is accepted, we procure the hardware and configure it with the predefined automation process, using a variety of automation tools that we’ve developed, so the hardware is tailored specifically for your environment.
+IBM Bluemix Private Cloud Local is planned perfectly to accommodate your data center’s energy usage, space, heat, and wiring specifications, among other things. To start, after a site survey for the data center, we propose some hardware options that we’ve selected for maximum performance and cost efficiency. When an option of the servers and network gears is accepted, we procure the hardware and configure it with the predefined automation process, using a variety of automation tools that we’ve developed, so the hardware is tailored specifically for your environment.
 
 During deployments, our on-site experts collaborate closely with customer data center experts to expedite the hardware racking and wiring procedures. We’re well-equipped to handle operative challenges and streamline the process.
 
@@ -43,7 +43,7 @@ These steps get the nodes prepared for PXE. The Pre-Boot Execution Environment (
 
 ## Bootstrap and run OpenStack automatically: That’s it!
 
-When we perform the bootstrapping process for IBM Blue Box Local, we prepare your expansion nodes with the required software and network configuration before we install OpenStack.
+When we perform the bootstrapping process for IBM Bluemix Private Cloud Local, we prepare your expansion nodes with the required software and network configuration before we install OpenStack.
 
 Our OpenStack installation is facilitated by a fully automated process developed in-house by our tooling experts. The unified code management repository keeps the package up-to-date and easily accessible.
 
