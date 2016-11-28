@@ -21,7 +21,7 @@ Because Bluemix Private Cloud is powered by OpenStack, we offer OpenStack Cinder
 
 ![Cinder architecture](Cinder_Architecture.png)
 
-Cinder supports multiple backends: its scheduler can locate the right volume types, with flexibility. Cinder block storage is configured to use Ceph clusters, by default.
+For customers running [IBM Bluemix Private Cloud version 3.1.0](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Customer_3.1.0_Release_Notes/) and later, Cinder supports multiple backends: its scheduler can locate the right volume types, with flexibility. Cinder block storage is configured to use Ceph clusters, by default.
 
 ### How Ceph works with Bluemix Private Cloud
 
