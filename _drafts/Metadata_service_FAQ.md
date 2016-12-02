@@ -57,7 +57,7 @@ After these agents restart, the technician also should scan for stuck neutron po
 
 **Q. Is there a simpler, more reliable alternative?**
 
-Yes!  It's ConfigDrive.  It eliminates all the complexity of dealing with the Neutron metadata agent.  ConfigDrive brings your data closer to your instance by putting it on a virtual CD-ROM / ISO that is mounted and unmounted during `cloud_init`.  Use it like so:
+**A.** Yes!  It's ConfigDrive.  It eliminates all the complexity of dealing with the Neutron metadata agent.  ConfigDrive brings your data closer to your instance by putting it on a virtual CD-ROM / ISO that is mounted and unmounted during `cloud_init`.  Use it like so:
 
 ```
 nova boot --config-drive true --image my-image-name --flavor my-flavor myinstance
