@@ -45,12 +45,10 @@ failed to read iid from metadata. tried 20
 **A.** Open a support ticket and request a restart of these services on both of your controller (network) nodes.
 
  * neutron-metadata-agent
-
  * neutron-l3-agent
-
  * neutron-dhcp-agent
 
-After these agents restart, the technician also should scan for stuck neutron ports, and fix them if he sees any.  In most cases, a neutron-metadata-agent restart followed by an instance reboot resolves the problem.
+After these agents are restarted, the technician also should scan for stuck neutron ports, and fix them if he sees any.  In most cases, a neutron-metadata-agent restart followed by an instance reboot resolves the problem.
 
 **Q. Is there a simpler, more reliable alternative?**
 
