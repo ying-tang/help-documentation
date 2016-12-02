@@ -18,9 +18,9 @@ The guest OS must run a software package called `cloud-init` so that metadata ca
 
 **Q. Why would you NOT want to use the Nova/Neutron metadata service?**
 
-**A.** Because it's implemented in a complicated way that sometimes fails.  Neutron does not really run the metadata service.  Instead, it runs a proxy for metadata. The actual metadata service is owned by Nova.  You can see a diagram of how the service works at:
+**A.** Because it's implemented in a complicated way that sometimes fails.  Neutron does not really run the metadata service.  Instead, it runs a proxy for metadata. The actual metadata service is owned by Nova.  You can see a diagram of how the service works at https://www.evernote.com/l/APxNTL2U-99IPop-gQ214WAurbjFAPp4qnA or int he figure below:
 
-https://www.evernote.com/l/APxNTL2U-99IPop-gQ214WAurbjFAPp4qnA
+![Openstack_metadata.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/Openstack_metadata.png)
 
 Problems can occur anywhere along the data flow.  Most often, you'll get an error in `nova console-log` similar to this:
 
