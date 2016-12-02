@@ -18,32 +18,29 @@ The guest OS must run a software package called `cloud-init` so that metadata ca
 
 **Q. Why would you NOT want to use the Nova/Neutron metadata service?**
 
-**A.** Because it's implemented in a complicated way that sometimes fails.  Neutron does not really run the metadata service.  Instead, it runs a proxy for metadata. The actual metadata service is owned by Nova.  You can see a diagram of how the service works at https://www.evernote.com/l/APxNTL2U-99IPop-gQ214WAurbjFAPp4qnA or in the figure below:
+**A.** Because it's implemented in a complex way that sometimes fails.  Neutron does not really run the metadata service.  Instead, it runs a proxy for metadata. The actual metadata service is owned by Nova.  You can see a diagram of how the service works at https://www.evernote.com/l/APxNTL2U-99IPop-gQ214WAurbjFAPp4qnA or in the figure below:
 
 ![Openstack_metadata.png](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/Openstack_metadata.png)
 
-Problems can occur anywhere along the data flow.  Most often, you'll get an error in `nova console-log` similar to this:
+If you really want to see how complicated it gets, check out https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/  Problems can occur anywhere along the data flow.  Most often, you'll get an error in `nova console-log` similar to:
 
 ```
-2016-11-30 17:09:33,599 - url_helper.py[WARNING]: Calling 'http://169.254.169.254/2009-04-04/meta-data/instance-id' failed [50/120s]: request error [HTTPConnectionPool(host='169.254.169.254', port=80): Read timed out. (read timeout=50.0)]
-
+2016-11-30 17:09:33,599 - url_helper.py[WARNING]: Calling 'http://169.254.169.254/2009-04-04/meta-data/instance-id'
+failed [50/120s]: request error [HTTPConnectionPool(host='169.254.169.254', port=80): Read timed out.
+(read timeout=50.0)]
 ```
 
 **or**
 
 ```
 checking http://169.254.169.254/2009-04-04/instance-id
-
 failed 1/20: up 1.13. request failed
-
 ...
-
 failed 20/20: up 229.58. request failed
-
 failed to read iid from metadata. tried 20
 ```
 
-**Q. What do I do when it times out?**
+**Q. What can I do when it times out?**
 
 **A.** Open a support ticket and request a restart of these services on both of your controller (network) nodes.
 
@@ -53,7 +50,7 @@ failed to read iid from metadata. tried 20
 
  * neutron-dhcp-agent
 
-After these agents restart, the technician also should scan for stuck neutron ports.  In most cases, a neutron-metadata-agent restart resolves the problem.
+After these agents restart, the technician also should scan for stuck neutron ports, and fix them if he sees any.  In most cases, a neutron-metadata-agent restart followed by an instance reboot resolves the problem.
 
 **Q. Is there a simpler, more reliable alternative?**
 
@@ -67,7 +64,7 @@ Read more at: http://docs.openstack.org/user-guide/cli-config-drive.html
 
 **Q. What are the caveats to using ConfigDrive?**
 
-**A.** The main caveat is that, with ConfigDrive, live migration is forbidden due to a bug in `libvirt` of copying a read-only disk.  This won't be a problem for long; there is a patch that fixes this.  We're working on getting it included in a future release.
+**A.** The main caveat is that, with ConfigDrive, live migration is forbidden due to a bug in `libvirt` of copying a read-only disk.  This won't be a problem for long; there is a patch at https://bugs.launchpad.net/nova/+bug/1246201/comments/65 that fixes this.  We're working on getting it included in a future release.
 
 **Q. What's the difference between metadata and userdata?**
 
@@ -80,9 +77,7 @@ User data is mainly consumed by Heat, and usually includes instance root passwor
 **A.** Use an include in your userdata to fetch the script and bypass the size limitation:
 ```
 #include
-
 http://example.com/yourscript.txt
-
 ```
 
 **Q. What are the 4 types of metadata and how can I use them?**
