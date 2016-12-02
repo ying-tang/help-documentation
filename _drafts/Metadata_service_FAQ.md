@@ -8,15 +8,15 @@ featured: true
 tags: [metadata, service, timeout, config drive]
 ---
 
-**Q. Why would you want to use the nova/neutron metadata service?**
+**Q. Why would you want to use the Nova/Neutron metadata service?**
 
-A. The nova/neutron metadata service is a way to inject customizations into instances via the network.  You may want to add SSH keys, passwords, hostnames, and custom scripts, for example.  The metadata service runs on 169.254.169.254 and proxies commands it receives to nova.
+A. The Nova/Neutron metadata service is a way to inject customizations into instances via the network.  You may want to add SSH keys, passwords, hostnames, and custom scripts, for example.  The metadata service runs on 169.254.169.254 and it proxies the commands it receives to Nova.
 
 **Q. What do I need in my guest OS to make use of the metadata service?**
 
 The guest OS must run a software package called `cloud-init` so that metadata can automatically work on boot up. During boot, `cloud-init` calls into the metadata service to customize the instances, based on metadata that the user passes in during the creation of the instance.
 
-**Q. Why would you NOT want to use the nova/neutron metadata service?**
+**Q. Why would you NOT want to use the Nova/Neutron metadata service?**
 
 A. Because it's implemented in a complicated way that sometimes fails.  Neutron does not really run the metadata service.  Instead, it runs a proxy for metadata. The actual metadata service is owned by Nova.  You can see a diagram of how the service works at:
 
@@ -59,7 +59,9 @@ After these agents restart, the technician also should scan for stuck neutron po
 
 Yes!  It's ConfigDrive.  It eliminates all the complexity of dealing with the Neutron metadata agent.  ConfigDrive brings your data closer to your instance by putting it on a virtual CD-ROM / ISO that is mounted and unmounted during `cloud_init`.  Use it like so:
 
-```nova boot --config-drive true --image my-image-name --flavor my-flavor myinstance```
+```
+nova boot --config-drive true --image my-image-name --flavor my-flavor myinstance
+```
 
 Read more at: http://docs.openstack.org/user-guide/cli-config-drive.html
 
