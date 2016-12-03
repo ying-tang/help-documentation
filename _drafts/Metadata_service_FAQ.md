@@ -23,11 +23,11 @@ tags: [metadata, service, timeout, config drive]
 
 **A.** The Nova/Neutron metadata service is a way to inject customizations into instances via the network.  You may want to add SSH keys, passwords, hostnames, and custom scripts, for example.  The metadata service runs on 169.254.169.254 and it proxies the commands it receives to Nova.
 
-**Q. What do I need in my guest OS to make use of the metadata service?**
+#### Q. What do I need in my guest OS to make use of the metadata service?
 
 The guest OS must run a software package called `cloud-init` so that metadata can automatically work on boot up. During boot, `cloud-init` calls into the metadata service to customize the instances, based on metadata that the user passes in during the creation of the instance.
 
-**Q. Why would you NOT want to use the Nova/Neutron metadata service?**
+#### Q. Why would you NOT want to use the Nova/Neutron metadata service?
 
 **A.** Because it's implemented in a complex way that sometimes fails.  Neutron does not really run the metadata service.  Instead, it runs a proxy for metadata. The actual metadata service is owned by Nova.  You can see a diagram of how the service works at: 
 
@@ -51,7 +51,7 @@ failed 20/20: up 229.58. request failed
 failed to read iid from metadata. tried 20
 ```
 
-**Q. What can I do when it times out?**
+#### Q. What can I do when it times out?
 
 **A.** Open a support ticket and request a restart of these services on both of your controller (network) nodes.
 
@@ -61,7 +61,7 @@ failed to read iid from metadata. tried 20
 
 After these agents are restarted, the technician also should scan for stuck neutron ports, and fix them if he sees any.  In most cases, a neutron-metadata-agent restart followed by an instance reboot resolves the problem.
 
-**Q. Is there a simpler, more reliable alternative?**
+#### Q. Is there a simpler, more reliable alternative?
 
 **A.** Yes!  It's ConfigDrive.  It eliminates all the complexity of dealing with the Neutron metadata agent.  ConfigDrive brings your data closer to your instance by putting it on a virtual CD-ROM / ISO that is mounted and unmounted during `cloud_init`.  Use it like so:
 
@@ -71,17 +71,17 @@ nova boot --config-drive true --image my-image-name --flavor my-flavor myinstanc
 
 Read more at: http://docs.openstack.org/user-guide/cli-config-drive.html
 
-**Q. What are the caveats to using ConfigDrive?**
+#### Q. What are the caveats to using ConfigDrive?
 
 **A.** The main caveat is that, with ConfigDrive, live migration is forbidden due to a bug in `libvirt` of copying a read-only disk.  This won't be a problem for long; there is a patch at https://bugs.launchpad.net/nova/+bug/1246201/comments/65 that fixes this.  We're working on getting it included in a future release.
 
-**Q. What's the difference between metadata and userdata?**
+#### Q. What's the difference between metadata and userdata?
 
 **A.** Instance metadata is mainly consumed by Nova instances, and usually includes instance hostnames, SSH keys, etc.
 
 User data is mainly consumed by Heat, and usually includes instance root passwords and startup scripts.
 
-**Q. I want to use userdata with Heat, but my data is over the 16K limit. What should I do?**
+#### Q. I want to use userdata with Heat, but my data is over the 16K limit. What should I do?
 
 **A.** Use an include in your userdata to fetch the script and bypass the size limitation:
 ```
@@ -89,11 +89,11 @@ User data is mainly consumed by Heat, and usually includes instance root passwor
 http://example.com/yourscript.txt
 ```
 
-**Q. What are the 4 types of metadata and how can I use them?**
+#### Q. What are the 4 types of metadata and how can I use them?
 
 The 4 types are: *meta-data*, *user-data*, *vendor-data*, and *network-data*.  Read more about these types and how to use them at http://www.madorn.com/openstack-metadata-types.html#.WEHS63eZMl4
 
-**Q. Where can I find out more about the OpenStack Metadata Service?**
+#### Q. Where can I find out more about the OpenStack Metadata Service?
 
 **A.** Check out Matt Dorn's excellent video workshop from the Austin OpenStack Summit: http://www.madorn.com/openstack-metadata-service.html
 
