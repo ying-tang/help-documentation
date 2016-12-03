@@ -8,8 +8,8 @@ featured: true
 tags: [metadata, service, timeout, config drive]
 ---
 ## Table of Contents
- * [**Why would you want to use the Nova/Neutron metadata service?**]()
- * [**What do I need in my guest OS to make use of the metadata service?**]()
+ * [**Why would you want to use the Nova/Neutron metadata service?**](#q-why-would-you-want-to-use-the-novaneutron-metadata -service)
+ * [**What do I need in my guest OS to make use of the metadata service?**](#q-what-do-i-need-in-my-guest-os-to-make-use-of-the-metadata-service)
  * [**Why would you NOT want to use the Nova/Neutron metadata service?**]()
  * [**What can I do when it times out?**]()
  * [**Is there a simpler, more reliable alternative?**]()
