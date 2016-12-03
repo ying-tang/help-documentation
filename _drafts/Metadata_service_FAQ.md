@@ -7,6 +7,17 @@ weight: 5
 featured: true
 tags: [metadata, service, timeout, config drive]
 ---
+## Table of Contents
+ * [**Why would you want to use the Nova/Neutron metadata service?**]()
+ * [**What do I need in my guest OS to make use of the metadata service?**]()
+ * [**Why would you NOT want to use the Nova/Neutron metadata service?**]()
+ * [**What can I do when it times out?**]()
+ * [**Is there a simpler, more reliable alternative?**]()
+ * [**What are the caveats to using ConfigDrive?**]()
+ * [**What's the difference between metadata and userdata?**]()
+ * [**I want to use userdata with Heat, but my data is over the 16K limit. What should I do?**]()
+ * [**What are the 4 types of metadata and how can I use them?**]()
+ * [**Where can I find out more about the OpenStack Metadata Service?**]()
 
 **Q. Why would you want to use the Nova/Neutron metadata service?**
 
