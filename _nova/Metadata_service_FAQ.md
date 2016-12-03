@@ -103,5 +103,6 @@ Credit and thanks for some of the information in this article goes to:
 
  * Jacob Cherkas https://ask.openstack.org/en/users/9244/sfcloudman/
  * Matt Dorn http://www.madorn.com/
-
+ * http://docs.openstack.org/admin-guide/compute-networking-nova.html
+ 
 Keywords: metadata, timeout, timeouts, neutron-metadata-agent, configdrive, config_drive, user_data, user-data
