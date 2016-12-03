@@ -35,7 +35,7 @@ The guest OS must run a software package called `cloud-init` so that metadata ca
 
 (Image credit: Matt Dorn)
 
-If you really want to see how complicated it gets, check out https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/  Problems can occur anywhere along the data flow.  Most often, you'll get an error in `nova console-log` similar to:
+If you really want to see how complicated it gets, check out [https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/](https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/). Problems can occur anywhere along the data flow. Most often, you'll get an error in `nova console-log` similar to:
 
 ```
 2016-11-30 17:09:33,599 - url_helper.py[WARNING]: Calling 'http://169.254.169.254/2009-04-04/meta-data/instance-id'
@@ -75,13 +75,13 @@ Read more at: http://docs.openstack.org/user-guide/cli-config-drive.html
 
 #### Q. What are the caveats to using ConfigDrive?
 
-**A.** The main caveat is that, with ConfigDrive, live migration is forbidden due to a bug in `libvirt` of copying a read-only disk.  This won't be a problem for long; there is a patch at https://bugs.launchpad.net/nova/+bug/1246201/comments/65 that fixes this.  We're working on getting it included in a future release.
+**A.** The main caveat is that, with ConfigDrive, live migration is forbidden due to a bug in `libvirt` of copying a read-only disk. This won't be a problem for long; there is a patch at [https://bugs.launchpad.net/nova/+bug/1246201/comments/65](https://bugs.launchpad.net/nova/+bug/1246201/comments/65) that fixes this issue. We're working on getting it included in a future release.
 
 #### Q. What's the difference between metadata and userdata?
 
-**A.** Instance metadata is mainly consumed by Nova instances, and usually includes instance hostnames, SSH keys, etc.
+**A.** Instance metadata is mainly consumed by Nova instances, and it usually includes instance hostnames, SSH keys, etc.
 
-User data is mainly consumed by Heat, and usually includes instance root passwords and startup scripts.
+User data is mainly consumed by Heat, and it usually includes instance root passwords and startup scripts.
 
 #### Q. I want to use userdata with Heat, but my data is over the 16K limit. What should I do?
 
@@ -93,18 +93,18 @@ http://example.com/yourscript.txt
 
 #### Q. What are the 4 types of metadata and how can I use them?
 
-The 4 types are: *meta-data*, *user-data*, *vendor-data*, and *network-data*.  Read more about these types and how to use them at http://www.madorn.com/openstack-metadata-types.html#.WEHS63eZMl4
+The 4 types are: *meta-data*, *user-data*, *vendor-data*, and *network-data*.  Read more about these types and how to use them at [http://www.madorn.com/openstack-metadata-types.html#.WEHS63eZMl4](http://www.madorn.com/openstack-metadata-types.html#.WEHS63eZMl4)
 
 #### Q. Where can I find out more about the OpenStack Metadata Service?
 
-**A.** Check out Matt Dorn's excellent video workshop from the Austin OpenStack Summit: http://www.madorn.com/openstack-metadata-service.html
+**A.** Check out Matt Dorn's excellent video workshop from the Austin OpenStack Summit: [http://www.madorn.com/openstack-metadata-service.html](http://www.madorn.com/openstack-metadata-service.html)
 
-Direct link to video: https://www.youtube.com/watch?v=YGUG8vU5KuQ
+Direct link to video: [https://www.youtube.com/watch?v=YGUG8vU5KuQ](https://www.youtube.com/watch?v=YGUG8vU5KuQ)
 
 Credit and thanks for some of the information in this article goes to:
 
- * Jacob Cherkas https://ask.openstack.org/en/users/9244/sfcloudman/
- * Matt Dorn http://www.madorn.com/
- * http://docs.openstack.org/admin-guide/compute-networking-nova.html
+ * Jacob Cherkas [https://ask.openstack.org/en/users/9244/sfcloudman/](https://ask.openstack.org/en/users/9244/sfcloudman/)
+ * Matt Dorn [http://www.madorn.com/](http://www.madorn.com/)
+ * [http://docs.openstack.org/admin-guide/compute-networking-nova.html](ttp://docs.openstack.org/admin-guide/compute-networking-nova.html)
  
 Keywords: metadata, timeout, timeouts, neutron-metadata-agent, configdrive, config_drive, user_data, user-data
