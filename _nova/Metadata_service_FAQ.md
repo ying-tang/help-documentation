@@ -33,6 +33,8 @@ The guest OS must run a software package called `cloud-init` so that metadata ca
 
 ![Openstack_metadata.png]({{site.baseurl}}/img/Openstack_metadata.png)
 
+(Image credit: Matt Dorn)
+
 If you really want to see how complicated it gets, check out https://www.suse.com/communities/blog/vms-get-access-metadata-neutron/  Problems can occur anywhere along the data flow.  Most often, you'll get an error in `nova console-log` similar to:
 
 ```
