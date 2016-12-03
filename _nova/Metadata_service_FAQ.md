@@ -71,7 +71,7 @@ After these agents are restarted, the technician also should scan for stuck neut
 nova boot --config-drive true --image my-image-name --flavor my-flavor myinstance
 ```
 
-Read more at: http://docs.openstack.org/user-guide/cli-config-drive.html
+Read more at: [http://docs.openstack.org/user-guide/cli-config-drive.html](http://docs.openstack.org/user-guide/cli-config-drive.html)
 
 #### Q. What are the caveats to using ConfigDrive?
 
