@@ -8,16 +8,16 @@ featured: true
 tags: [metadata, service, timeout, config drive]
 ---
 ## Table of Contents
- * [**Why would you want to use the Nova/Neutron metadata service?**](#q-why-would-you-want-to-use-the-novaneutron-metadata -service)
+ * [**Why would you want to use the Nova/Neutron metadata service?**](#q-why-would-you-want-to-use-the-novaneutron-metadata-service)
  * [**What do I need in my guest OS to make use of the metadata service?**](#q-what-do-i-need-in-my-guest-os-to-make-use-of-the-metadata-service)
- * [**Why would you NOT want to use the Nova/Neutron metadata service?**]()
- * [**What can I do when it times out?**]()
- * [**Is there a simpler, more reliable alternative?**]()
- * [**What are the caveats to using ConfigDrive?**]()
- * [**What's the difference between metadata and userdata?**]()
- * [**I want to use userdata with Heat, but my data is over the 16K limit. What should I do?**]()
- * [**What are the 4 types of metadata and how can I use them?**]()
- * [**Where can I find out more about the OpenStack Metadata Service?**]()
+ * [**Why would you NOT want to use the Nova/Neutron metadata service?**](#q-why-would-you-not-want-to-use-the-novaneutron-metadata-service)
+ * [**What can I do when it times out?**](#q-what-can-i-do-when-it-times-out)
+ * [**Is there a simpler, more reliable alternative?**](#q-is-there-a-simpler-more-reliable-alternative)
+ * [**What are the caveats to using ConfigDrive?**](#q-what-are-the-caveats-to-using-configdrive)
+ * [**What's the difference between metadata and userdata?**](#q-whats-the-difference-between-metadata-and-userdata)
+ * [**I want to use userdata with Heat, but my data is over the 16K limit. What should I do?**](#q-i-want-to-use-userdata-with-heat-but-my-data-is-over-the-16k-limit-what-should-i-do)
+ * [**What are the 4 types of metadata and how can I use them?**](#q-what-are-the-4-types-of-metadata-and-how-can-i-use-them)
+ * [**Where can I find out more about the OpenStack Metadata Service?**](#q-where-can-i-find-out-more-about-the-openstack-metadata-service)
 
 #### Q. Why would you want to use the Nova/Neutron metadata service?
 
