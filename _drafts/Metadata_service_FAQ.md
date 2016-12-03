@@ -19,7 +19,7 @@ tags: [metadata, service, timeout, config drive]
  * [**What are the 4 types of metadata and how can I use them?**]()
  * [**Where can I find out more about the OpenStack Metadata Service?**]()
 
-**Q. Why would you want to use the Nova/Neutron metadata service?**
+#### Q. Why would you want to use the Nova/Neutron metadata service?
 
 **A.** The Nova/Neutron metadata service is a way to inject customizations into instances via the network.  You may want to add SSH keys, passwords, hostnames, and custom scripts, for example.  The metadata service runs on 169.254.169.254 and it proxies the commands it receives to Nova.
 
