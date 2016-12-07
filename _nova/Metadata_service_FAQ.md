@@ -25,7 +25,7 @@ tags: [metadata, service, timeout, config drive]
 
 #### Q. What do I need in my guest OS to make use of the metadata service?
 
-The guest OS must run a software package called `cloud-init` so that metadata can automatically work on boot up. During boot, `cloud-init` calls into the metadata service to customize the instances, based on metadata that the user passes in during the creation of the instance.
+The guest OS must run a software package called `cloud-init` so that metadata can work automatically on boot up. During boot, `cloud-init` calls into the metadata service to customize the instances, based on metadata that the user passes in during the creation of the instance.
 
 #### Q. Why would you NOT want to use the Nova/Neutron metadata service?
 
@@ -65,7 +65,7 @@ If you see it trying to connect to an IP like 192.168.0.2 instead of 169.254.169
  * neutron-dhcp-agent (on both network nodes)
  * neutron-linuxbridge-agent (on the compute node that the instance is on)
 
-After these agents are restarted, the technician also should scan for stuck neutron ports, and fix them if he sees any.  In most cases, a neutron-metadata-agent restart followed by an instance reboot resolves the problem.
+After these agents are restarted, the technician also should scan for stuck Neutron ports, and fix them if he sees any.  In most cases, a `neutron-metadata-agent` restart followed by an instance reboot resolves the problem.
 
 #### Q. Is there a simpler, more reliable alternative?
 
