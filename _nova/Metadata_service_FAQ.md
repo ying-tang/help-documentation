@@ -53,13 +53,17 @@ failed 20/20: up 229.58. request failed
 failed to read iid from metadata. tried 20
 ```
 
+If you see it trying to connect to an IP like 192.168.0.2 instead of 169.254.169.254, this means it's trying to get metadata from the DHCP agent if 169.254.169.254 is timing out.
+
+
 #### Q. What can I do when it times out?
 
 **A.** Open a support ticket and request a restart of these services on both of your controller (network) nodes.
 
- * neutron-metadata-agent
- * neutron-l3-agent
- * neutron-dhcp-agent
+ * neutron-metadata-agent (on both network nodes)
+ * neutron-l3-agent (on both network nodes)
+ * neutron-dhcp-agent (on both network nodes)
+ * neutron-linuxbridge-agent (on the compute node that the instance is on)
 
 After these agents are restarted, the technician also should scan for stuck neutron ports, and fix them if he sees any.  In most cases, a neutron-metadata-agent restart followed by an instance reboot resolves the problem.
 
