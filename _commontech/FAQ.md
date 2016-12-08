@@ -81,3 +81,13 @@ If you want to log refused TCP connections to forbidden ports, you'll need to op
 ### What is the maximum number of virtual devices (for example, ports) that can be attached to a virtual machine?
 
 20 is the maximum number of virtual PCI slots available. 
+
+### How can I get a list of all my VMs and their host names?
+
+Need a list of all instances on a cloud with the host they live on? (Need the names of the VMs, too? 
+There’s a one-liner for that!
+
+```
+nova list --all-tenants --fields name,OS-EXT-SRV-ATTR:host
+
+```
