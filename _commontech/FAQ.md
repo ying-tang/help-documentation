@@ -3,8 +3,8 @@ layout: page
 title:  "Technical FAQ"
 featured: true
 weight: 8
-tags: [getting started, faq, resize, instance, admin, project]
-author: Eric French
+tags: [getting started, faq, resize, instance, admin, project, forbidden ports, security groups]
+author: Eric French, Ulysses Kanigel, Leslie Lundquist
 dateAdded: April 9th, 2015
 updated: March 18, 2016
 editor: Leslie Lundquist
@@ -45,7 +45,7 @@ The ports that are open through the firewall to your Bluemix Private Cloud are:
 5000 - keystone (OpenStack Authentication API)
 6080 - nova-novnc (OpenStack VNC Console)
 8000 - heat (OpenStack CloudFormation API)
-8004 - heat (OpenStack Orchestration API)
+securi8004 - heat (OpenStack Orchestration API)
 8774 - nova (OpenStack Compute API)
 8776 - cinder (OpenStack Block Storage API)
 9292 - glance (OpenStack Image API)
