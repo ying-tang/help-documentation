@@ -14,11 +14,11 @@ editor: Leslie Lundquist
 
  * [How can I resize an existing instance?](#how-can-i-resize-an-existing-instance)
  * [How can I start up an instance on a specific host?](#how-can-i-start-up-an-instance-on-a-specific-host)
- * [I have a new cloud, and there are already two projects in place. What are these?]()
- * [Which ports/URLs etc are publicly accessible on my Bluemix Private Cloud, and for what purpose?]()
- * [How can I measure IO Operations Per Second on an instance's or a volume's drive?]()
- * [When using security groups, how can I log refused TCP connections to forbidden ports?]()
- * [What is the maximum number of virtual devices (for example, ports) that can be attached to a virtual machine?]()
+ * [I have a new cloud, and there are already two projects in place. What are these?](#i-have-a-new-cloud-and-there-are-already-two-projects-in-place-what-are-these)
+ * [Which ports/URLs etc are publicly accessible on my Bluemix Private Cloud, and for what purpose?](#which-ports-urls-etc-are-publicly-accessible-on-my-bluemix-private-cloud-and-for-what-purpose)
+ * [How can I measure IO Operations Per Second on an instance's or a volume's drive?](#how-can-i-measure-io-operations-per-second-on-an-instances-or-a-volumes-drive)
+ * [When using security groups, how can I log refused TCP connections to forbidden ports?](#when-using-security-groups-how-can-i-log-refused-tcp-connections-to-forbidden-ports)
+ * [What is the maximum number of virtual devices (for example, ports) that can be attached to a virtual machine?](#what-is-the-maximum-number-of-virtual-devices-for-example-ports-that-can-be-attached-to-a-virtual-machine)
  * [How can I get a list of all my VMs and their host names?](#how-can-i-get-a-list-of-all-my-vms-and-their-host-names)
  
 ### How can I resize an existing instance?
