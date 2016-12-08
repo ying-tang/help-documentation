@@ -79,7 +79,9 @@ Read more at: [http://docs.openstack.org/user-guide/cli-config-drive.html](http:
 
 #### Q. What are the caveats to using ConfigDrive?
 
-**A.** The main caveat is that, with ConfigDrive, live migration is forbidden due to a bug in `libvirt` of copying a read-only disk. This won't be a problem for long; there is a patch at [https://bugs.launchpad.net/nova/+bug/1246201/comments/65](https://bugs.launchpad.net/nova/+bug/1246201/comments/65) that fixes this issue. We're working on getting it included in a future release.
+**A.** The main caveat is that, with ConfigDrive, live migration is forbidden due to a bug in `libvirt` of copying a read-only disk. There is a patch at [https://bugs.launchpad.net/nova/+bug/1246201/comments/65](https://bugs.launchpad.net/nova/+bug/1246201/comments/65) that fixes this problem, but only when block migration is used.  Since block migration isn't supported yet in our current release, we will not be adding this patch.
+
+As an aside, also note that live migration itself is restricted to support technician use in one rare circumstance: when evacuating a host when a planned maintenance is going to happen that would otherwise disrupt customer workload.  Even in this one use case, it is only supported for instances that are boot from volume.
 
 #### Q. What's the difference between metadata and userdata?
 
