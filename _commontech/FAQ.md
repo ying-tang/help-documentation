@@ -19,7 +19,7 @@ editor: Leslie Lundquist
  * [How can I measure IO Operations Per Second on an instance's or a volume's drive?]()
  * [When using security groups, how can I log refused TCP connections to forbidden ports?]()
  * [What is the maximum number of virtual devices (for example, ports) that can be attached to a virtual machine?]()
- * [How can I get a list of all my VMs and their host names?]()
+ * [How can I get a list of all my VMs and their host names?](#how-can-i-get-a-list-of-all-my-vms-and-their-host-names)
  
 ### How can I resize an existing instance?
 
