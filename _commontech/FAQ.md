@@ -10,6 +10,17 @@ updated: March 18, 2016
 editor: Leslie Lundquist
 ---
 
+## Table of Contents
+
+ * [How can I resize an existing instance?](#how-can-i-resize-an-existing-instance)
+ * [How can I start up an instance on a specific host?](#how-can-i-start-up-an-instance-on-a-specific-host)
+ * [I have a new cloud, and there are already two projects in place. What are these?]()
+ * [Which ports/URLs etc are publicly accessible on my Bluemix Private Cloud, and for what purpose?]()
+ * [How can I measure IO Operations Per Second on an instance's or a volume's drive?]()
+ * [When using security groups, how can I log refused TCP connections to forbidden ports?]()
+ * [What is the maximum number of virtual devices (for example, ports) that can be attached to a virtual machine?]()
+ * [How can I get a list of all my VMs and their host names?]()
+ 
 ### How can I resize an existing instance?
 
 Although the `Resize Instance` option does appear in **Horizon**, this functionality currently is not supported. If you need to extend an instance's size, the recommended path is to take a snapshot of the instance and redeploy that snapshot into a new, larger flavor.
