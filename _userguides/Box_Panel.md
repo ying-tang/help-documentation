@@ -31,7 +31,7 @@ This user guide gives you an end-to-end overview, so you can get started using B
 To get started with Box Panel, log in. 
 
 1. Go to the URL `https://boxpanel.bluebox.net` to be directed to the login page.
-2. Log into your Box Panel account with the login credentials provided by the IBM Bluemix Private Cloud Support Team. If you are a **Secondary** contact and you don't yet have access, you can be added by an **Administrator**. See the **Managing Users and Projects** section for more details.
+2. Log into your Box Panel account with the login credentials provided by the IBM Bluemix Private Cloud Support Team. If you are a **Secondary** contact and you don't yet have access, you can be added by an **Administrator**. See the [**Managing Users and Projects**](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/) section for more details.
 3. If you do not yet have a Box Panel account, please refer to the **Billing** section for instructions on how to get an account.
 5. After logging in, you'll be directed automatically to the Box Panel Dashboard.
 
