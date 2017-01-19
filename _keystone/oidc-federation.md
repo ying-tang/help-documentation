@@ -15,6 +15,7 @@ author: Nithya Renganathan
 * [Managing Mappings](#managing_mappings)
 * [Using Horizon](#using_horizon)
 * [Using OAuth API](#using_oauth_api)
+* [Using OAuth CLI](#using_oauth_cli)
 * [Additional Notes](#additional_notes)
 
 ## <a name="what_is_keystone_federation?"></a>What is Federation?
@@ -359,11 +360,9 @@ In the following example we are using
 
 ## <a name="using_horizon"></a>Using Horizon
  The OpenStack dashboard on the Identity Provider should have a drop-down menu labeled **Authenticate with SSO**.
- 
+
  1. The dropdown menu should show a label for the IdP. Select the IDP and click **Connect**.
- 
  2. You will then be redirected to the IDP log in page.
- 
  3. After successfully authenticating with the IDP, you should be redirected to the Horizon page.
 
 ## <a name="using_oauth_api"></a>Using OAuth API
@@ -394,7 +393,7 @@ export OS_PROJECT_ID=<project_id>
 ```
 
 
-### Example 3: Using API for authorization code flow**
+#### Using API for authorization code flow
 
 This file is `oidc-authflow.py`
 
@@ -454,7 +453,7 @@ if __name__ == '__main__':
 
 
 
-### Example 4: Using API for password flow**
+#### Using API for password flow
 
 This file is `oidc-passflow.py`
 
@@ -515,6 +514,50 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+## <a name="using_oauth_cli"></a>Using OAuth CLI
+
+#### Authorization code flow for Command line
+
+Steps to use the OpenStack client with authorization code
+1. Create a file oidcrc
+2. Paste the following contents in the file. Update the parameters based on your environment
+    **OIDC stackrc**
+    ```
+    export OS_TOKEN_ENDPOINT=https://<replace>/oauth/token
+    export OS_CLIENT_SECRET=<client secret>
+    export OS_CLIENT_ID=<client_id>
+    export OS_DISCOVERY_ENDPOINT=https://<replace>/.well-known/openid-configuration
+    export OS_IDENTITY_PROVIDER=auth0
+    export OS_REDIRECT_URI=<redirect_uri>
+    export OS_IDENTITY_API_VERSION=3
+    export OS_DOMAIN=Default
+    export OS_PROTOCOL=oidc
+    export OS_AUTH_URL=https://<FQDN>:5000/v3
+    export OS_USERNAME=<username>
+    export OS_AUTHORIZATION_ENDPOINT=https://<replace>/authorize
+    ```
+3. Get an authorization code from your Identity Manager
+4. The following command fetches a keystone token that you can use to perform any command till it expires
+    openstack --os-auth-type v3oidcauthcode --os-code <auth-code> --os-project-name <project-name> --os-project-domain-name Default token issue
+
+   example:
+   ```
+   root@allinone-multiple:~# openstack --os-auth-type v3oidcauthcode --os-code 6LxfzO7GvCjmmcRa --os-project-name admin --os-project-domain-name Default token issue
+      +------------+----------------------------------+
+      | Field      | Value                            |
+      +------------+----------------------------------+
+      | expires    | 2017-01-18 17:02:32.432419+00:00 |
+      | id         | 7c43310f774f4401b5ec6abee8aa3d77 |
+      | project_id | 2abdd5e144ad490294f20f9efb9968e7 |
+      | user_id    | 6f81cf8c63fc49d1a12f8fd4f75cab82 |
+      +------------+----------------------------------+
+      ```
+5. Perform user list using the token just generated
+
+   openstack --os-auth-type v3token --os-token <token id from previous request> --os-project-name <project-name> --os-project-domain-name Default user list
+
+**NOTE:**
+Client ID and Secret can be passed as parameters in the OpenStack CLI instead of saving it in the rc file, using  --os-client-secret --os-client-id.
 
 ## <a name="additional_notes"></a>Additional Notes
 
