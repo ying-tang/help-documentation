@@ -5,10 +5,11 @@ featured: true
 weight: 1
 tags: [getting started, bluemix private cloud, components]
 dateAdded: January 7th, 2016
-author: Eric French
+dateUpdated: January 24, 2017
+author: Eric French, Leslie Lundquist
 ---
 
-Bluemix Private Cloud is built on OpenStack and utilizes many of its core components.
+**IBM Bluemix Private Cloud** is built on OpenStack and utilizes many of its core components.
 
 _Nova_ provides the computational and scheduling functions of Bluemix Private Cloud.  Nova is used to create, maintain and destroy instances.
 
