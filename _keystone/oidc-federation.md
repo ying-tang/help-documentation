@@ -8,7 +8,7 @@ author: Nithya Renganathan
 ---
 
 * [What is Keystone Federation?](#what_is_keystone_federation?)
-* [What is OpenID Connect(OIDC)?](#what_is_openid-connect-oidc?)
+* [What is OpenID Connect (OIDC)?](#what_is_openid-connect-oidc?)
 * [How does OpenID Protocol work?](#how_does_oidc_work?)
 * [Setting up OIDC](#setting_up_oidc)
 * [Managing Groups](#managing_groups)
@@ -294,7 +294,7 @@ In this example, we are mapping users from the Company XYZ IDP and allowing any 
 
 **Example 2. Multiple Groups**
 
-In the following example we are using
+In the following example we are using multiple groups.
 
 ```
 [
@@ -374,7 +374,7 @@ User credentials are never sent to Keystone directly, but they are sent to the O
 
 Steps to run the following code:
 
-1. Install Pre-Requisites: 'request-oauthlib', Keystone client, and Nova client
+1. Install Pre-Requisites: `request-oauthlib`, Keystone client, and Nova client
 
 2. Source *OIDC stackrc file*
 
@@ -457,7 +457,7 @@ if __name__ == '__main__':
 
 #### Using API for password flow
 
-This file is oidc-passflow.py
+This file is `oidc-passflow.py`
 
 ```
 from keystoneauth1 import session
@@ -546,7 +546,7 @@ Steps to use the OpenStack client with authorization code:
 4. The following command fetches a Keystone token that you can use to perform any command till it expires:
 
 ```
-    openstack --os-auth-type v3oidcauthcode --os-code *auth-code* --os-project-name *project-name* --os-project-domain-name
+    openstack --os-auth-type v3oidcauthcode --os-code <auth-code> --os-project-name <project-name> --os-project-domain-name
 ```
     
     
@@ -575,7 +575,7 @@ Default token issue
 5. Perform `user list` command using the token just generated.
 
 ```
-openstack --os-auth-type v3token --os-token *token id from previous request* --os-project-name *project-name* --os-project-domain-name 
+openstack --os-auth-type v3token --os-token <token id from previous request> --os-project-name <project-name> --os-project-domain-name 
 ```
 
 **Default user list**
