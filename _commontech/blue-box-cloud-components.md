@@ -40,3 +40,5 @@ Also, the **OpenStack API QuickStart Guide** might be helpful for gettign starte
  * Object Storage API & Extensions (Swift v1.0) http://developer.openstack.org/api-ref/object-storage/
  * Orchestration API (Heat v1.0) http://developer.openstack.org/api-ref/orchestration/index.html
  * Telemetry API (Ceilometer v2.0) (plus aodh) http://docs.openstack.org/developer/ceilometer/webapi/v2.html
+
+You might also wish to evaluate the relative maturity of each OpenStack service we use, from information in the OpenStack Project Navigator. https://www.openstack.org/software/project-navigator
