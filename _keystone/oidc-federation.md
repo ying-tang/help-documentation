@@ -254,7 +254,7 @@ To set the username we can use **{0}** in the local section to indicate to use a
 
 
 
-##The section that follows contains some example scenarios:
+### The section that follows contains some example scenarios:
 
 **Example 1. Using an email address to create a username on Keystone**
 In this example, we are mapping users from the Company XYZ IDP and allowing any user from the `admin_group`. The user's email address will be used to create a user on Keystone. If the user's email is `test@test.ibmcloud.com`, then the resulting username would be `CompanyXYZ/test@test.ibmcloud.com`.
@@ -518,9 +518,12 @@ if __name__ == '__main__':
 
 #### Authorization code flow for Command line
 
-Steps to use the OpenStack client with authorization code
-1. Create a file oidcrc
+Steps to use the OpenStack client with authorization code:
+
+1. Create a file `oidcrc`
+
 2. Paste the following contents in the file. Update the parameters based on your environment
+
     **OIDC stackrc**
     ```
     export OS_TOKEN_ENDPOINT=https://<replace>/oauth/token
@@ -536,11 +539,19 @@ Steps to use the OpenStack client with authorization code
     export OS_USERNAME=<username>
     export OS_AUTHORIZATION_ENDPOINT=https://<replace>/authorize
     ```
-3. Get an authorization code from your Identity Manager
-4. The following command fetches a keystone token that you can use to perform any command till it expires
-    openstack --os-auth-type v3oidcauthcode --os-code <auth-code> --os-project-name <project-name> --os-project-domain-name Default token issue
+3. Get an authorization code from your Identity Manager.
 
-   example:
+4. The following command fetches a Keystone token that you can use to perform any command till it expires:
+
+```
+    openstack --os-auth-type v3oidcauthcode --os-code <auth-code> --os-project-name <project-name> --os-project-domain-name
+```
+    
+    
+**Default token issue**
+
+Example:
+   
    ```
    root@allinone-multiple:~# openstack --os-auth-type v3oidcauthcode --os-code 6LxfzO7GvCjmmcRa --os-project-name admin --os-project-domain-name Default token issue
       +------------+----------------------------------+
@@ -552,12 +563,21 @@ Steps to use the OpenStack client with authorization code
       | user_id    | 6f81cf8c63fc49d1a12f8fd4f75cab82 |
       +------------+----------------------------------+
       ```
-5. Perform user list using the token just generated
 
-   openstack --os-auth-type v3token --os-token <token id from previous request> --os-project-name <project-name> --os-project-domain-name Default user list
+5. Perform `user list` using the token just generated.
+
+```
+openstack --os-auth-type v3token --os-token <token id from previous request> --os-project-name <project-name> --os-project-domain-name 
+```
+
+**Default user list**
 
 **NOTE:**
-Client ID and Secret can be passed as parameters in the OpenStack CLI instead of saving it in the rc file, using  --os-client-secret --os-client-id.
+Client ID and Secret can be passed as parameters in the OpenStack CLI instead of saving it in the `rc` file, using
+
+```
+--os-client-secret --os-client-id
+```
 
 ## <a name="additional_notes"></a>Additional Notes
 
