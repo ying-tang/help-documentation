@@ -8,7 +8,7 @@ author: Nithya Renganathan
 ---
 
 * [What is Keystone Federation?](#what_is_keystone_federation?)
-* [What is OpenID Connect(OIDC)?](#what_is_oidc?)
+* [What is OpenID Connect(OIDC)?](#what_is_openid-connect-oidc?)
 * [How does OpenID Protocol work?](#how_does_oidc_work?)
 * [Setting up OIDC](#setting_up_oidc)
 * [Managing Groups](#managing_groups)
@@ -24,7 +24,7 @@ Keystone federation enables identities from an Identity Provider (IDP) to be use
 The IDP stores and manages the user's credentials and sends claims or assertions to the SP. This allows the customer to use their enterprise credentials to authenticate to a Bluemix Private Cloud without sending their password to their Bluemix Private Cloud. Keystone is usually always the SP since it consumes identities from external resources.
 
 
-## What is OpenID Connect (OIDC)?
+## <a name="what_is_openid-connect-oidc?">What is OpenID Connect (OIDC)?
 `OpenID` is a protocol for authentication.
 `OAuth` is a protocol for authorization.
 `OpenID Connect` does both.
@@ -359,11 +359,14 @@ In the following example we are using
 
 
 ## <a name="using_horizon"></a>Using Horizon
- The OpenStack dashboard on the Identity Provider should have a drop-down menu labeled **Authenticate with SSO**.
 
- 1. The dropdown menu should show a label for the IdP. Select the IDP and click **Connect**.
- 2. You will then be redirected to the IDP log in page.
- 3. After successfully authenticating with the IDP, you should be redirected to the Horizon page.
+The OpenStack dashboard on the Identity Provider should have a drop-down menu labeled **Authenticate with SSO**.
+
+1. The dropdown menu should show a label for the IdP. Select the IDP and click **Connect**.
+
+2. You will then be redirected to the IDP log in page.
+
+3. After successfully authenticating with the IDP, you should be redirected to the Horizon page.
 
 ## <a name="using_oauth_api"></a>Using OAuth API
 
@@ -371,13 +374,13 @@ User credentials are never sent to Keystone directly, but they are sent to the O
 
 Steps to run the following code:
 
-1. Install Pre-Requisites: `request-oauthlib`, Keystone client, and Nova client
+1. Install Pre-Requisites: 'request-oauthlib', Keystone client, and Nova client
 
-2. source <OIDC stackrc file>
+2. Source *OIDC stackrc file*
 
-3. python <filename>
+3. python *filename*
 
-**OIDC stackrc**
+**Example 3. OIDC stackrc**
 
 ```
 export OS_AUTH_URL=https://<fqdn>:5000/v3
@@ -392,8 +395,7 @@ export OS_AUTHORIZATION_ENDPOINT=https://<FQDN-OP>/authorize
 export OS_PROJECT_ID=<project_id>
 ```
 
-
-#### Using API for authorization code flow
+#### Example 4. Using API for authorization code flow
 
 This file is `oidc-authflow.py`
 
@@ -455,7 +457,7 @@ if __name__ == '__main__':
 
 #### Using API for password flow
 
-This file is `oidc-passflow.py`
+This file is oidc-passflow.py
 
 ```
 from keystoneauth1 import session
@@ -465,7 +467,6 @@ from keystoneclient.v3.client import Client
 
 from novaclient import client
 import os
-
 
 
 auth_url = os.environ.get('OS_AUTH_URL')
@@ -520,11 +521,12 @@ if __name__ == '__main__':
 
 Steps to use the OpenStack client with authorization code:
 
-1. Create a file `oidcrc`
+1. Create a file called `oidcrc`
 
-2. Paste the following contents in the file. Update the parameters based on your environment
+2. Paste the following contents into the file. Update the parameters based on your environment.
 
     **OIDC stackrc**
+    
     ```
     export OS_TOKEN_ENDPOINT=https://<replace>/oauth/token
     export OS_CLIENT_SECRET=<client secret>
@@ -544,7 +546,7 @@ Steps to use the OpenStack client with authorization code:
 4. The following command fetches a Keystone token that you can use to perform any command till it expires:
 
 ```
-    openstack --os-auth-type v3oidcauthcode --os-code <auth-code> --os-project-name <project-name> --os-project-domain-name
+    openstack --os-auth-type v3oidcauthcode --os-code *auth-code* --os-project-name *project-name* --os-project-domain-name
 ```
     
     
@@ -552,8 +554,14 @@ Steps to use the OpenStack client with authorization code:
 
 Example:
    
-   ```
-   root@allinone-multiple:~# openstack --os-auth-type v3oidcauthcode --os-code 6LxfzO7GvCjmmcRa --os-project-name admin --os-project-domain-name Default token issue
+```
+root@allinone-multiple:~# openstack --os-auth-type v3oidcauthcode --os-code 6LxfzO7GvCjmmcRa --os-project-name admin --os-project-domain-name
+
+```
+
+Default token issue
+
+```
       +------------+----------------------------------+
       | Field      | Value                            |
       +------------+----------------------------------+
@@ -562,12 +570,12 @@ Example:
       | project_id | 2abdd5e144ad490294f20f9efb9968e7 |
       | user_id    | 6f81cf8c63fc49d1a12f8fd4f75cab82 |
       +------------+----------------------------------+
-      ```
+```
 
-5. Perform `user list` using the token just generated.
+5. Perform `user list` command using the token just generated.
 
 ```
-openstack --os-auth-type v3token --os-token <token id from previous request> --os-project-name <project-name> --os-project-domain-name 
+openstack --os-auth-type v3token --os-token *token id from previous request* --os-project-name *project-name* --os-project-domain-name 
 ```
 
 **Default user list**
@@ -584,19 +592,17 @@ Client ID and Secret can be passed as parameters in the OpenStack CLI instead of
 Currently an issue exists with federated users and with the trustor/trustee feature in Keystone, which prevents
 the federated Heat user from delegating their `heat_stack_owner` role.
 
-You'll need to use a workaround for the trust delegation by assigning the `heat_stack_owner` role to the user directly. This is the user that is
-created during federated log in. The user's domain is federated, and it could have the value of **None** (`Federation=None`).
+You'll need to use a workaround for the trust delegation by assigning the `heat_stack_owner` role to the user directly. This is the user that is created during federated log in. The user's domain is federated, and it could have the value of **None** (`Federation=None`).
 
 ```
 $ openstack user list
 ```
-The federated user should have a domain of None: `openstack user show <federated user>`
+The federated user should have a domain of None: `openstack user show *federated user*`
 
 Here we require the user ID:
 
 ```
-$ openstack role add heat_stack_owner --user <federated user ID> --project <project>
+$ openstack role add heat_stack_owner --user *federated user ID* --project *project*
 ```
 
-Another known issue is that a federated user is presented with the option to change
-their password in the settings page. They will not be able to change their password.
+Another known issue is that a federated user is presented with the option to change their password in the settings page. They will not be able to change their password.
