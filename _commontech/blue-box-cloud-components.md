@@ -27,14 +27,14 @@ Most services have many of their common functions available in the Horizon inter
 
 **Specific OpenStack Services Enabled for every IBM Bluemix Private Cloud**
 
-Starting with version 3.0.0, your cloud is based on the OpenStack Mitaka Release and the services listed below. A link to the OpenStack API documentation is provided.
+Starting with version 3.0.0, your cloud is based on the OpenStack Mitaka Release and the services listed below. A link to the OpenStack API documentation is provided for each service.
 
 Also, the **OpenStack API QuickStart Guide** might be helpful for gettign started: http://developer.openstack.org/api-guide/quick-start/api-quick-start.html
 
- * Block Storage API & Extensions (Cinder v2.0) http://developer.openstack.org/api-ref/block-storage/index.html
- * Compute API & Extensions (Nova v2.1) http://developer.openstack.org/api-ref/compute/
+ * Block Storage API & Extensions (Cinder v2.0) [http://developer.openstack.org/api-ref/block-storage/index.html](http://developer.openstack.org/api-ref/block-storage/index.html)
+ * Compute API & Extensions (Nova v2.1) [http://developer.openstack.org/api-ref/compute/](http://developer.openstack.org/api-ref/compute/)
  * Dashboard (Horizon) API N/A
- * Identity API & Extensions (Keystone v3.0) http://developer.openstack.org/api-ref/identity/v3/index.html
+ * Identity API & Extensions (Keystone v3.0) [http://developer.openstack.org/api-ref/identity/v3/index.html](http://developer.openstack.org/api-ref/identity/v3/index.html)
  * Image Service API (Glance v2.2) http://developer.openstack.org/api-ref/image/index.html
  * Networking API & Extensions (Neutron v2.0, Neutron LBaaS v2) http://developer.openstack.org/api-ref/networking/v2/index.html
  * Object Storage API & Extensions (Swift v1.0) http://developer.openstack.org/api-ref/object-storage/
