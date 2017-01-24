@@ -3,7 +3,7 @@ layout: page
 title:  "Bluemix Private Cloud Components"
 featured: true
 weight: 1
-tags: [getting started, bluemix private cloud, components]
+tags: [getting started, bluemix private cloud, components, services, api]
 dateAdded: January 7th, 2016
 dateUpdated: January 24, 2017
 author: Eric French, Leslie Lundquist
