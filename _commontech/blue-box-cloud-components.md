@@ -23,3 +23,17 @@ _Neutron_ is the networking service that provides connectivity between OpenStack
 _Swift_ is the service that provides object storage and retrieval.
 
 Most services have many of their common functions available in the Horizon interface.  In addition, each service has a set of API commands, which are discussed in detail in each section.
+
+**Specific OpenStack Services Enabled for every IBM Bluemix Private Cloud**
+
+Starting with version 3.0.0, your cloud is based on the OpenStack Mitaka Release and these services:
+
+ * Block Storage API & Extensions (Cinder v2.0)
+ * Compute API & Extensions (Nova v2.1)
+ * Dashboard (Horizon) API N/A
+ * Identity API & Extensions (Keystone v3.0)
+ * Image Service API (Glance v2.2)
+ * Networking API & Extensions (Neutron v2.0, Neutron LBaaS v2)
+ * Object Storage API & Extensions (Swift v1.0)
+ * Orchestration API (Heat v1.0)
+ * Telemetry API (Ceilometer v2.0) (plus aodh)
