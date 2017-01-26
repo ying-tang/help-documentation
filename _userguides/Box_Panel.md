@@ -20,7 +20,7 @@ This user guide gives you an end-to-end overview, so you can get started using B
  * [Logging In](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#logging-in)
  * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
  * [Navigating the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#navigating-the-box-panel-dashboard)
-  * [Managing Your Contacts](ttp://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-your-contacts)
+ * [Managing Your Contacts](ttp://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-your-contacts)
  * [Working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#working-with-cloud-images)
  * [Help Documentation](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#help-documentation)
  * [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support)
@@ -92,7 +92,7 @@ To view and update your customer contact information in Box Panel, do the follow
   * **Admin (A)** contacts can order or remove services, and also manage other contacts
   * **Billing (B)** contacts can view and pay invoices
   * **Technical (T)** contacts can open tickets and contact the Bluemix Private Cloud Support team for assistance
-  * One contact will be the **Primary (P)** contact. This person retains administrative control over the account.  The Primary Contact may only be changed by IBM Bluemix Private Cloud support staff.
+  * **Primary (P)** contact. This one person (only one) retains administrative control over the account.  The Primary Contact may only be changed by IBM Bluemix Private Cloud support staff.
  
  * To add a new contact, click the **Add Contact** button. The **Add a Contact** form will display, allowing you to enter the contact’s name, email address, telephone number and which role(s) the contact should belong to.  When done, click the Save Details button to add the contact.
  * To remove an existing contact, click the X on the row with their name in the Authorized Contacts list.
