@@ -94,7 +94,7 @@ To view and update your customer contact information in Box Panel, do the follow
   * **Technical (T)** contacts can open tickets and contact the Bluemix Private Cloud Support team for assistance
   * One contact will be the **Primary (P)** contact. This person retains administrative control over the account.  The Primary Contact may only be changed by IBM Bluemix Private Cloud support staff.
  
- * To add a new contact, click the **Add Contact** button. The Add a contact form will display, allowing you to enter the contact’s name, email address, telephone number and which role(s) the contact should belong to.  When done, click the Save Details button to add the contact.
+ * To add a new contact, click the **Add Contact** button. The **Add a Contact** form will display, allowing you to enter the contact’s name, email address, telephone number and which role(s) the contact should belong to.  When done, click the Save Details button to add the contact.
  * To remove an existing contact, click the X on the row with their name in the Authorized Contacts list.
  * Notice that the Primary Contact cannot be removed. Please contact IBM Bluemix Private Cloud support for assistance in modifying the Primary Contact.
     
