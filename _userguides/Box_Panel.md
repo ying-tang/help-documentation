@@ -20,6 +20,7 @@ This user guide gives you an end-to-end overview, so you can get started using B
  * [Logging In](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#logging-in)
  * [Getting Your Credentials From Lockbox](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-your-credentials-from-lockbox)
  * [Navigating the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#navigating-the-box-panel-dashboard)
+ * [Managing Your Contacts](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#managing-your-contacts)
  * [Working with Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#working-with-cloud-images)
  * [Help Documentation](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#help-documentation)
  * [Getting Support](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#getting-support)
@@ -81,7 +82,25 @@ Menus:
 * **Services**: View all the **Blue Box Cloud** and **Managed Hosting** services that are available to your account, including **Servers**, **Cloud Images**, **DNS**, **Bandwidth Graphs**, **Bandwidth Data**, and **New Relic**. The options may differ for different types of customers. 
 * **Docs**: View the help documentation. See [Help Documentation](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/#help-documentation) for more information.
 
+### Managing Your Contacts
 
+To view and update your customer contact information in Box Panel, do the following steps:
+
+* Log into Box Panel.
+* From the **Account** menu, choose **Account Contacts** to open the Account Contacts page.
+* All contacts authorized to access your account are listed under the Authorized Contacts section. Each person’s name and e-mail address are listed, along with three contact roles (note that a contact can have one or more of these contact roles):
+
+  * **Admin (A)** contacts can order or remove services, and also manage other contacts
+  * **Billing (B)** contacts can view and pay invoices
+  * **Technical (T)** contacts can open tickets and contact the Bluemix Private Cloud Support team for assistance
+  * **Primary (P)** contact. This one person (only one) retains administrative control over the account.  The Primary Contact may only be changed by IBM Bluemix Private Cloud support staff.
+ 
+To add a new contact, click the **Add Contact** button. The **Add a Contact** form will display, allowing you to enter the contact’s name, email address, telephone number and which role(s) the contact should belong to.  When done, click the Save Details button to add the contact.
+
+To remove an existing contact, click the X on the row with their name in the Authorized Contacts list.
+
+Notice that the Primary Contact cannot be removed. Please contact IBM Bluemix Private Cloud support for assistance in modifying the Primary Contact.
+    
 ### Working with Cloud Images 
 
 The **Cloud Images** page in Box Panel is available to customers who have at least one cloud, and who are either a **Primary** or a **Technical** customer contact. If you qualify as a user, the **Services** navigation will include a **Cloud Images** link with access to the page. 
