@@ -86,17 +86,20 @@ Menus:
 
 To view and update your customer contact information in Box Panel, do the following steps:
 
-* Log into Box Panel
-* From the **Account** menu, choose **Account Contacts** to open the Account Contacts page
+* Log into Box Panel.
+* From the **Account** menu, choose **Account Contacts** to open the Account Contacts page.
 * All contacts authorized to access your account are listed under the Authorized Contacts section. Each person’s name and e-mail address are listed, along with three contact roles (note that a contact can have one or more of these contact roles):
+
   * **Admin (A)** contacts can order or remove services, and also manage other contacts
   * **Billing (B)** contacts can view and pay invoices
   * **Technical (T)** contacts can open tickets and contact the Bluemix Private Cloud Support team for assistance
   * **Primary (P)** contact. This one person (only one) retains administrative control over the account.  The Primary Contact may only be changed by IBM Bluemix Private Cloud support staff.
  
- * To add a new contact, click the **Add Contact** button. The **Add a Contact** form will display, allowing you to enter the contact’s name, email address, telephone number and which role(s) the contact should belong to.  When done, click the Save Details button to add the contact.
- * To remove an existing contact, click the X on the row with their name in the Authorized Contacts list.
- * Notice that the Primary Contact cannot be removed. Please contact IBM Bluemix Private Cloud support for assistance in modifying the Primary Contact.
+To add a new contact, click the **Add Contact** button. The **Add a Contact** form will display, allowing you to enter the contact’s name, email address, telephone number and which role(s) the contact should belong to.  When done, click the Save Details button to add the contact.
+
+To remove an existing contact, click the X on the row with their name in the Authorized Contacts list.
+
+Notice that the Primary Contact cannot be removed. Please contact IBM Bluemix Private Cloud support for assistance in modifying the Primary Contact.
     
 ### Working with Cloud Images 
 
