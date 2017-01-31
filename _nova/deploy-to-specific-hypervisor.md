@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "How to deploy an instance to a specific hypervisor node"
-tags: [nova, deploy, hypervisor]
+tags: [nova, deploy, hypervisor, affinity, affinity groups, anti-affinity, antiaffinity]
 dateAdded: September 14th, 2015
 author: Bluemix Private Cloud Support
 editor: Leslie Lundquist
