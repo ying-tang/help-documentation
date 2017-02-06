@@ -3,13 +3,13 @@ layout: page
 title:  "Quotas"
 dateAdded: June 13th, 2015
 editor: Leslie Lundquist
-updated: September 2, 2016
+updated: February 6, 2017
 featured: true
 weight: 4
 tags: [openstack, quotas]
 ---
 
-OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't always notify you clearly.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them. The first section contains a general introduction, followed by a more specific section. The Table of Contents lets you click through quickly, to find answers for your specific questions.
+OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't always notify you clearly.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them.
 
 ### Table of Contents
 * [Introduction](#introduction)
@@ -33,9 +33,9 @@ OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't 
 
 ### Introduction
 
-You'll have an overall quota, which cannot be exceeded by the individual quotas you'll set for each project you're running within your cloud. The quotas you set depend on how many projects you have and how you want to distribute your resources among those projects. They're really up to you. If you only foresee making one project, you could allocate all available resources to that project and leave it like that.
+You have an overall quota, which cannot be exceeded by the individual quotas you'll set for each project you're running within your cloud. The quotas you set depend on how many projects you have and how you want to distribute your resources among those projects. They're really up to you. If you only foresee making one project, you could allocate all available resources to that project and leave it like that.
 
-Here is an example of a capacity report for CPU, RAM, and Disk. You can use the # total numbers (shown in output like this one) to help guide the numbers you plug in for your quotas. The actual limits of the system are those Total (#) numbers below the line. The one exception in this example is the CPU, which is overcommitted 2x.
+Here is an example of a capacity report for CPU, RAM, and Disk. You can use the # total numbers (shown in output like this one) to help guide the numbers you use for your quotas. The actual limits of the system are those Total (#) numbers below the line. The one exception in this example is the CPU, which is overcommitted 2x.
 
 ```
 (+) Overcommit Ratio   (%) Percent Used   (#) Total   (-) Used   (=) Available
@@ -55,6 +55,8 @@ TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540 
 **Security Groups:** Most customers go with the default limit and adjust upwards as needed. This keeps firewall rules to a manageable level, so as to not impact performance. At a certain point (we haven't seen what particular point this is yet), it is theoretically possible to end up with too many firewall rules and not enough CPU to process them quickly enough. The default limits may seem low, but they're more than enough for most people, who will never create more than a few security groups, with maybe half a dozen rules each.
 
 **Instances:** Most customers go with the default limit and adjust upwards as needed. With enough hardware, you can get into hundreds of thousands of instances. For your particular hardware, you need to make your own calculations based on your desired resource consumption for each VM.
+
+**Maximum Number of Host Routes per Subnet:** There is not (yet) a user-adjustable quota in Neutron that controls this. There is a hard limit in neutron.conf (`max_subnet_host_routes`) that specifies a maximum number of host routes per subnet, and the default is 20.
 
 ### Neutron vs. Nova Rule Precedence
 
