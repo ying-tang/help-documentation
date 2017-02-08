@@ -81,7 +81,7 @@ By using this technique, called hierarchical routing, you can decompose the prob
 
 However, many customers still expect all their hosts to belong the same L2 domain, as it would be configured, naturally, if the subnet were in their own data center. Therefore, many cloud solutions deploy overlay networks (which refers to some techniques for carrying the customer’s layer 2 network over the provider’s L3 infrastructure) to join the hosts into subnet domains.
 
-This situation applies to many IBM Bluemix Private Cloud deployments in SoftLayer data centers. Because SoftLayer organizes the data centers into localized hardware “pods,” software defined overlay networks (SDN) must be deployed to connect any customer cloud deployments that have not been established within the same hardware pod. IBM Blue Box Cloud 3.0 has implemented many SDN solutions that let customers connect their clouds together, thus creating many possible hybrid cloud solutions.
+This situation applies to many IBM Bluemix Private Cloud deployments in SoftLayer data centers. Because SoftLayer organizes the data centers into localized hardware “pods,” software defined overlay networks (SDN) must be deployed to connect any customer cloud deployments that have not been established within the same hardware pod. IBM Bluemix Private Cloud 3.0 has implemented many SDN solutions that let customers connect their clouds together, thus creating many possible hybrid cloud solutions.
 
 *Footnote: Software Defined Networking (SDN) was developed as a way to define a set of policies in a central database, and then use computation to enforce these policies automatically. The term has come to be used more generally to refer to the use of network overlays.*
 
