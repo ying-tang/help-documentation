@@ -42,7 +42,7 @@ Address Resolution Protocol, or ARP, works at Layer 3 (L3), using IP addresses t
 
 The question that ARP answers is this: How do we send packets to our local neighbors? (That is, how do we identify and send to hosts on the same subnet?)
 
-*Footnote: For the purposes of this paper, a subnet refers to group of hosts that share the network (mask) portion of an IP address (XX.XX.XX.me) To reach addresses outside the subnet, packets are sent to one of these hosts that works as a gateway, which means that it has some connection to a larger network.
+*Footnote: For the purposes of this paper, a subnet refers to group of hosts that share the network (mask) portion of an IP address (XX.XX.XX.me) To reach addresses outside the subnet, packets are sent to one of these hosts that works as a gateway, which means that it has some connection to a larger network.*
 
 ARP is really elegantly simple. It includes four types of messages, for example:
 
@@ -83,7 +83,7 @@ However, many customers still expect all their hosts to belong the same L2 domai
 
 This situation applies to many IBM Bluemix Private Cloud deployments in SoftLayer data centers. Because SoftLayer organizes the data centers into localized hardware “pods,” software defined overlay networks (SDN) must be deployed to connect any customer cloud deployments that have not been established within the same hardware pod. IBM Blue Box Cloud 3.0 has implemented many SDN solutions that let customers connect their clouds together, thus creating many possible hybrid cloud solutions.
 
-*Footnote: Software Defined Networking (SDN) was developed as a way to define a set of policies in a central database, and then use computation to enforce these policies automatically. The term has come to be used more generally to refer to the use of network overlays
+*Footnote: Software Defined Networking (SDN) was developed as a way to define a set of policies in a central database, and then use computation to enforce these policies automatically. The term has come to be used more generally to refer to the use of network overlays.*
 
 For example, VxLAN is form of overlay whereby an encapsulation carries Ethernet frames inside UDP packets. Each host participating in a VXLAN overlay network has a VTEP (VxLAN tunnel end point) which is a listening UDP socket with a UDP port and and IP address.
 
