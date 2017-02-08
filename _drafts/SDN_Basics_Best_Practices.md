@@ -1,9 +1,12 @@
-## Cloud Networking and SDN
-## A Best Practices White Paper (DRAFT)
-### Dustin Lundquist and Leslie Lundquist
-#### June 7, 2016
+---
+title: Cloud Networking and SDN--A Best Practices White Paper (DRAFT)
+author: Dustin Lundquist and Leslie Lundquist
+tags: [sdn, networking, best practices, vlan, vxlan, l2pop, arp]
+dateAdded: June 7, 2016
+---
 
 **Overview:**
+
 Within many “enterprise” data center networks and many next-generation wireless provider networks, there’s a shift going on from fully distributed networking control toward networked environments designed for centralized networking control using Software Defined Networking (SDN). This shift is arising in response to emergent complexity in network behavior, which can arise as a result of heavy network traffic combined with distributed local learning by routers and switches.  
 
 These emergent complexities have an impact on Cloud network engineering, which is our particular focus. Engineers struggle with virtual overlay networks and rely on implementation details of the underlying hardware networks, which can lead to undefined behavior in production Cloud environments. Solutions are available. 
@@ -12,6 +15,7 @@ This paper gives background information on why and how some choices for SDN seem
 
 
 **Background at Layer 2: Ethernet Switches**
+
 Let’s review the design and operating principles of Ethernet Switches, as a starting point for understanding how complexity can develop rapidly in a busy network environment. We’ll include only the most salient features about switches. First, keep in mind that the Ethernet switch operates at the Layer-2 (L2) protocol level, which means that it works with MAC addresses, rather than IP addresses.  Also, remember that at L2, datagrams are referred to as “frames,” whereas at Layer 3 (L3), they are referred to as “packets.” We’ll keep using this terminology later to keep the discussion more clear.
 
 If we first break down into simple detail what happens each time a switch receives a frame, it helps us understand what’s happening as complexity grows. When a frame is received:
@@ -37,7 +41,7 @@ Meanwhile, performance degradation and other problems can occur.
 Address Resolution Protocol, or ARP, works at Layer 3 (L3), using IP addresses to help handle packet routing among “neighbors” on a subnet. 
 The question that ARP answers is this: How do we send packets to our local neighbors? (That is, how do we identify and send to hosts on the same subnet.)
 
-(Footnote: For the purposes of this paper, a subnet refers to group of hosts that share the network (mask) portion of an IP address (XX.XX.XX.me) To reach addresses outside the subnet, packets are sent to one of these hosts that works as a gateway, which means that it has some connection to a larger network.)
+*Footnote: For the purposes of this paper, a subnet refers to group of hosts that share the network (mask) portion of an IP address (XX.XX.XX.me) To reach addresses outside the subnet, packets are sent to one of these hosts that works as a gateway, which means that it has some connection to a larger network.
 
 ARP is really elegantly simple. It includes four types of messages, for example:
 
@@ -58,10 +62,10 @@ There actually are two levels of mapping, as shown in the following overview fig
 
 
 IP      o    o     o
-          \     /      |
-MAC       o       o
-               |        |
-Port       o        o
+          \ /      |
+MAC        o       o
+           |       |
+Port       o       o
 
 
 MAC address to Port is 1-to-1 mapping, but MAC address to IP address can be one-to-many. (This mapping distinction is common in cloud deployments, where VMs can have internal + external IPs and more, one for each network they connect with.)
@@ -86,7 +90,7 @@ Sometimes we get questions from customers about the ultimate limitations of how 
 
 VLANs are provisioned across an entire switch fabric, therefore every switch (potentially hundreds) in the fabric would be able to access each of the 4096 VLANs. If, however, a 4097th VLAN was needed, that would have to be provisioned on a new switching fabric entirely. This is a basic limitation of Ethernet, not of our platform.
 
-VxLAN is used to get beyond this limitation by enabling an additional 65,000 virtual VLANs to be provisioned on each of Ethernet's 4096 VLANs. That would max out at 268,435,456 VxLANs on a single fabric. In short, I don't think that VLAN exhaustion is a practical limitation.
+VxLAN is used to get beyond this limitation by enabling an additional 65,000 virtual VLANs to be provisioned on each of Ethernet's 4096 VLANs. That would max out at 268,435,456 VxLANs on a single fabric. In short, VLAN exhaustion is NOT a practical limitation.
 
 Given our standard configuration for IBM Bluemix Private Cloud, a single fabric could support 3000+ customers, each having 65,000 VxLANs.
 
