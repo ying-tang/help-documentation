@@ -39,7 +39,8 @@ Meanwhile, performance degradation and other problems can occur.
 **Background at L3: ARP Messages**
 
 Address Resolution Protocol, or ARP, works at Layer 3 (L3), using IP addresses to help handle packet routing among “neighbors” on a subnet. 
-The question that ARP answers is this: How do we send packets to our local neighbors? (That is, how do we identify and send to hosts on the same subnet.)
+
+The question that ARP answers is this: How do we send packets to our local neighbors? (That is, how do we identify and send to hosts on the same subnet?)
 
 *Footnote: For the purposes of this paper, a subnet refers to group of hosts that share the network (mask) portion of an IP address (XX.XX.XX.me) To reach addresses outside the subnet, packets are sent to one of these hosts that works as a gateway, which means that it has some connection to a larger network.
 
@@ -58,15 +59,15 @@ Thus, as you might have deduced already, there is no security with ARP.  Hopeful
 
 Remember from the previous section that the Ethernet switching protocol delivers frames within a subnet based on a host’s MAC address (L2), not its IP address( L3). Therefore, each host needs a mapping table from MAC addresses (L2)  to IP addresses (L3) for local neighbors it talks to on the subnet.
 
-There actually are two levels of mapping, as shown in the following overview figure:
+There actually are two levels of mapping, as shown in the following schematic figure:
 
-
+```
 IP      o    o     o
           \ /      |
 MAC        o       o
            |       |
 Port       o       o
-
+```
 
 MAC address to Port is 1-to-1 mapping, but MAC address to IP address can be one-to-many. (This mapping distinction is common in cloud deployments, where VMs can have internal + external IPs and more, one for each network they connect with.)
 
