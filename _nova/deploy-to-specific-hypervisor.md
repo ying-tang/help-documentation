@@ -21,7 +21,7 @@ https://raymii.org/s/articles/Openstack_Affinity_Groups-make-sure-instances-are-
 https://dev.cloudwatt.com/en/blog/affinity-and-anti-affinity-in-openstack.html
 
 
-**The instructions that follow are for IBM Bluemix Private Cloud 3.0.0 or _older_.**
+**The instructions that follow are for legacy clouds older than 3.0.**
 
 You may have the need to specify the host to which an instance is deployed.  Although this functionality is not available in Horizon, the API in older clouds lets you select a specific compute node for instance deployment.
 
@@ -43,3 +43,17 @@ These instructions assume that you have the OpenStack API configured on your loc
 
 		$ nova boot --flavor 'm1.normal' --image 1e74ae39-8413-426e-9e3a-dcc5dd0704a3 --key-name your_key --security-groups default --availability-zone nova:ds1111 instance_1
 
+
+<!-- new draft workaround method (works on all cloud versions, but requires extra support on the first 3 commands)
+
+(first 3 commands must be performed by our support team)
+nova aggregate-create host3 nova
+nova aggregate-set-metadata host3 host3=true
+nova aggregate-add-host host3 ds0003
+
+(as soon as the first 3 commands are run, the following commands can be run by the customer to place an instance on a particular host, in this case, "ds0003")
+openstack flavor create host3 --id auto --ram 512 --disk 1 --vcpus 1
+nova flavor-key host3 set aggregate_instance_extra_specs:host3=true
+nova boot --flavor [flavor-ID] --image [image-ID] --nic net-id=94a1c357-4d1d-4586-8971-623992d33ceb ubuntu-host3
+
+-->
