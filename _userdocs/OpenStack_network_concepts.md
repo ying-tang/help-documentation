@@ -8,6 +8,7 @@ tags: [OpenStack, concepts]
 author: Ying Tang
 editor: Leslie Lundquist
 dateAdded: May 25, 2016
+dateUpdated: February 15, 2017
 --- 
 
 This document offers a basic introduction to some common networking concepts. You'll encounter these concepts when working with your IBM Bluemix Private Cloud.
@@ -59,3 +60,22 @@ External networks can "talk" within and outside your cloud. They may include the
 * The SoftLayer private network is intended to provide access to other services in SoftLayer, including other clouds you may wish to communicate with. (See the [Release Notes](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/release_notes_for_customers/) for more information about access to the SoftLayer private network. 
 * The SoftLayer router network connects to the SoftLayer Backend Core Router (BCR), which lets you reach resources outside your own private cloud environment, resources which might reside in a data center at your site (Blue Box Local) or in another private cloud environment owned by you, in a SoftLayer data center or elsewhere (Blue Box Dedicated or your own legacy cloud). 
 * Public and SoftLayer private networks are physical networks.
+
+#### Connectivity between Virtual Machines on Different Private Subnets?
+
+Let's say you have two private networks, you created virtual machines on each network subnet, and added the necessary security groups for them to accept incoming traffic.  How would you achieve connectivity between VMs on different private subnets?  Let's say you have one network named `operations` and one network called `internal`.  You can achieve communication between them in several ways:
+
+* Connect your operations network to the default router.  This enables traffic between the default internal network  and the operations network.  Now you can deploy an instance to the internal network, assign a public floating IP address to it and use this instance to connect to the target instance.
+* Or use a similar approach and create a new internal router between the internal network and operations network.  Use an instance with a public IP on the internal network to access your VM the operations network.  By creating an internal router, VMs on the operations network will not have any external connectivity to the internet.
+* Another possibility is creating a multi-homed instance.  Create an instance that is connected to the internal and operations networks.  Assign a public floating IP to it.  Use this VM to access instances on your operations network via a second private interface.
+
+#### What Kind of Security Precautions Should be Taken on Machines with Public Floating IPs?
+
+As a start:
+
+* Configure sshd to permit key authentication only and disable root ssh access.
+* Do not use standard/default system user names for SSH (ubuntu, deploy and similar).
+* Use a system service like fail2ban or denyhosts to block potential brute force attacks.  Both tools are already packaged in most popular Linux distributions.
+* Use security group rules to limit the SSH access to a limited number of IP addresses.
+* Update the system running on your public instance on a regular basis.
+* Do not run any unnecessary services on your public instance (http, ftp, smb ...)
