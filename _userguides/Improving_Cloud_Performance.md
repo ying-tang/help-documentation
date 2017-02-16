@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Improving Cloud Performance
+title: Building Up to OpenStack II -- Improving Cloud Performance
 tags: [openstack, sr-iov, virtio, vhost]
 author: Dustin Lundquist and Leslie Lundquist
 dateAdded: November 21, 2016
