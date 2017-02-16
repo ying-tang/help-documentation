@@ -16,7 +16,7 @@ At a certain time in the market, it was unclear whether KVM or Xen would dominat
 
 *`libvirt` sits on top of your hypervisor*
 
-![QEMU_KVM_and_libvirt](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/Atomic_QEMU%2BKVM.PNG)
+![QEMU_KVM_and_libvirt](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/atomic_qemu_with_libvirt.png)
 
 **Here’s what you need to know about Xen**
 
