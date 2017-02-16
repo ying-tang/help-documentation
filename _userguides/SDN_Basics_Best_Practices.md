@@ -78,15 +78,15 @@ On a busy subnet, there can be a lot of ARP requests! Each host remembers the ad
 
 These systems of Ethernet switching and ARP requests work pretty well until there is too much broadcast traffic, or until there too many MAC addresses start talking on the network for the switches to accommodate all the addresses in their tables. (Many switches will begin flooding if they run out of slots for MAC addresses.) To get around these limitations, many data center designers break local networks up into smaller L2 segments and connect them with routers. In other words, they “conquer by dividing” the problem into smaller L2 domains.
 
-By using this technique, called hierarchical routing, you can decompose the problem into log N smaller problems.
+By using this technique, called hierarchical routing, you can decompose the problem into *log N* smaller problems.
 
 However, many customers still expect all their hosts to belong the same L2 domain, as it would be configured, naturally, if the subnet were in their own data center. Therefore, many cloud solutions deploy overlay networks (which refers to some techniques for carrying the customer’s layer 2 network over the provider’s L3 infrastructure) to join the hosts into subnet domains.
 
-This situation applies to many IBM Bluemix Private Cloud deployments in SoftLayer data centers. Because SoftLayer organizes the data centers into localized hardware “pods,” software defined overlay networks (SDN) must be deployed to connect any customer cloud deployments that have not been established within the same hardware pod. IBM Bluemix Private Cloud 3.0 has implemented many SDN solutions that let customers connect their clouds together, thus creating many possible hybrid cloud solutions.
-
-*Footnote: Software Defined Networking (SDN) was developed as a way to define a set of policies in a central database, and then use computation to enforce these policies automatically. The term has come to be used more generally to refer to the use of network overlays.*
+This situation applies to many IBM Bluemix Private Cloud deployments in SoftLayer data centers. Because SoftLayer organizes the data centers into localized hardware “pods,” software defined overlay networks (SDN) must be deployed to connect any customer cloud deployments that have not been established within the same hardware pod. IBM Bluemix Private Cloud 3.0 (and newer) has implemented many SDN solutions that let customers connect their clouds together, thus creating many possible hybrid cloud solutions.
 
 For example, VxLAN is form of overlay whereby an encapsulation carries Ethernet frames inside UDP packets. Each host participating in a VXLAN overlay network has a VTEP (VxLAN tunnel end point) which is a listening UDP socket with a UDP port and and IP address.
+
+**Provisioning**
 
 Sometimes we get questions from customers about the ultimate limitations of how many VLANs and VxLANs can be deployed at one time. Here is some basic information about provisioning:
 
@@ -97,3 +97,5 @@ VxLAN is used to get beyond this limitation by enabling an additional 65,000 vir
 Given our standard configuration for IBM Bluemix Private Cloud, a single fabric could support 3000+ customers, each having 65,000 VxLANs.
 
 Within Box Panel, VLANs can be tracked with names reflecting the switch fabrics they are associated with. We have never exceeded the VLAN limits of our fabrics, so we simply name ours VL### (eg VL101). To distinguish fabrics, they could be named "fabric1-VL101", "fabric2-VL101", etc.
+
+*Footnote: Software Defined Networking (SDN) was developed as a way to define a set of policies in a central database, and then use computation to enforce these policies automatically. The term has come to be used more generally to refer to the use of network overlays.*
