@@ -1,15 +1,15 @@
- ---
- layout: page
- title: Building Up to OpenStack III -- Xen and libvirt
- author: Dustin Lundquist and Leslie Lundquist
- dateAdded: February 16, 2017
- tags: [libvirt, qemu, kvm, hypervisor]
- featured: true
---- 
+---
+layout: page
+title: Building Up to OpenStack III -- Xen and libvirt
+author: Dustin Lundquist and Leslie Lundquist
+tags:  [libvirt, qemu, kvm, hypervisor]
+dateAdded: February 16, 2017
+---
+
  
 *Republished from blog post by Dustin Lundquist and Leslie Lundquist*
 
-In the first article of our Building Up to OpenStack series,  we looked at qemu and KVM, and their roles in the nucleus of any OpenStack cloud. In this article, we will look at Xen, another hypervisor that can work well with qemu. It offers an alternative to KVM. We’ll also look at libvirt, a helpful abstraction layer for your OpenStack cloud, and the basis for OpenStack Nova. 
+In the first article of our *Building Up to OpenStack* series,  we looked at qemu and KVM, and their roles in the nucleus of any OpenStack cloud. In this article, we will look at Xen, another hypervisor that can work well with qemu. It offers an alternative to KVM. We’ll also look at libvirt, a helpful abstraction layer for your OpenStack cloud, and the basis for OpenStack Nova. 
 
 Today,  IBM Bluemix Private Cloud and many other OpenStack-based cloud implementations utilize KVM (which has come to be nearly synonymous with qemu). In principle, however, these two types of hypervisors—qemu and Xen—are interchangeable, with certain modifications, because of libvirt.
 
