@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cloud Networking and SDN--A Best Practices White Paper
+title: Cloud Networking and Software Defined Networking--A Best Practices White Paper
 author: Dustin Lundquist and Leslie Lundquist
 tags: [sdn, networking, best practices, vlan, vxlan, l2pop, arp, provisioning]
 dateAdded: June 7, 2016
@@ -8,7 +8,7 @@ dateAdded: June 7, 2016
 
 **Overview:**
 
-Within many “enterprise” data center networks and many next-generation wireless provider networks, there’s a shift going on from fully distributed networking control toward networked environments designed for centralized networking control using Software Defined Networking (SDN). This shift is arising in response to emergent complexity in network behavior, which can arise as a result of heavy network traffic combined with distributed local learning by routers and switches.  
+Within many “enterprise” data center networks and many next-generation wireless provider networks, there’s a shift going on from fully distributed networking control toward networked environments designed for centralized networking control using **Software Defined Networking** (SDN). This shift is arising in response to emergent complexity in network behavior, which can arise as a result of heavy network traffic combined with distributed local learning by routers and switches.  
 
 These emergent complexities have an impact on Cloud network engineering, which is our particular focus. Engineers struggle with virtual overlay networks and rely on implementation details of the underlying hardware networks, which can lead to undefined behavior in production Cloud environments. Solutions are available. 
 
@@ -99,3 +99,5 @@ Given our standard configuration for IBM Bluemix Private Cloud, a single fabric 
 Within Box Panel, VLANs can be tracked with names reflecting the switch fabrics they are associated with. We have never exceeded the VLAN limits of our fabrics, so we simply name ours VL### (eg VL101). To distinguish fabrics, they could be named "fabric1-VL101", "fabric2-VL101", etc.
 
 *Footnote: Software Defined Networking (SDN) was developed as a way to define a set of policies in a central database, and then use computation to enforce these policies automatically. The term has come to be used more generally to refer to the use of network overlays.*
+
+Suggestion for further reading: https://en.wikipedia.org/wiki/Switched_fabric
