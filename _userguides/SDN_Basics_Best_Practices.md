@@ -1,7 +1,8 @@
 ---
-title: Cloud Networking and SDN--A Best Practices White Paper (DRAFT)
+layout: page
+title: Cloud Networking and SDN--A Best Practices White Paper
 author: Dustin Lundquist and Leslie Lundquist
-tags: [sdn, networking, best practices, vlan, vxlan, l2pop, arp]
+tags: [sdn, networking, best practices, vlan, vxlan, l2pop, arp, provisioning]
 dateAdded: June 7, 2016
 ---
 
