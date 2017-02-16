@@ -24,7 +24,7 @@ Xen differs from KVM mainly in that the host operating system (OS), such as Linu
 
 ![Comparing_QEMU_and_Xen](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/qemu_vs_Xen.png)
 
-As the previous figure illustrates, this type of architecture contrasts directly with the QEMU + KVM cloud model, which we explored previously.
+As the previous schematic figure illustrates, this architecture of Xen contrasts directly with the QEMU + KVM cloud model, which we explored [in a previous article](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/qemu_article/).
 
 **Here’s what you need to know about libvirt: Three ways that libvirt builds you a cloud**
 
