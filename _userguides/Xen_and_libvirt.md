@@ -16,13 +16,13 @@ At a certain time in the market, it was unclear whether KVM or Xen would dominat
 
 *`libvirt` sits on top of your hypervisor*
 
-![QEMU_KVM_and_libvirt](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/atomic_qemu_with_libvirt.png)
+![QEMU_KVM_and_libvirt]({{site.baseurl}}/img/atomic_qemu_with_libvirt.png)
 
 **Here’s what you need to know about Xen**
 
 Xen differs from KVM mainly in that the host operating system (OS), such as Linux, also runs as a VM under the Xen hypervisor. The Xen hypervisor only virtualizes CPU and memory, and, like qemu, Xen can provide pass through to I/O devices, as discussed in our previous blog, Improving Cloud Performance, which was the second blog of this series.  
 
-![Comparing_QEMU_and_Xen](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/img/qemu_vs_Xen.png)
+![Comparing_QEMU_and_Xen]({{site.baseurl}}/img/qemu_vs_Xen.png)
 
 As the previous schematic figure illustrates, this architecture of Xen contrasts directly with the QEMU + KVM cloud model, which we explored [in a previous article](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/qemu_article/).
 
