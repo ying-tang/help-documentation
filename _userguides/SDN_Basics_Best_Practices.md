@@ -12,7 +12,7 @@ Within many “enterprise” data center networks and many next-generation wirel
 
 These emergent complexities have an impact on Cloud network engineering, which is our particular focus. Engineers struggle with virtual overlay networks and rely on implementation details of the underlying hardware networks, which can lead to undefined behavior in production Cloud environments. Solutions are available. 
 
-This paper gives background information on why and how some choices for SDN seem easy to make, but can lead to difficulty later. It offers some alternatives for creating stable and predictable network environments, based on known principles of behavior for simpler network hardware and software. Generally, it examines the best areas of applicability for SDN, and it describes how a user can select the right technologies to use with SDN.  
+This paper gives background information on why and how some choices for Software Defined Networking seem easy to make, but can lead to difficulty later. It offers some alternatives for creating stable and predictable network environments, based on known principles of behavior for simpler network hardware and software. Generally, it examines the best areas of applicability for SDN, and it describes how a user can select the right technologies to use with SDN.  
 
 
 **Background at Layer 2: Ethernet Switches**
@@ -29,7 +29,7 @@ If we first break down into simple detail what happens each time a switch receiv
 
 4. If the Destination address is not found, the frame is sent to all ports known to the switch, except the ingress port. That action is called “Flooding.” The frame is duplicated as many times as necessary to send a copy to every known port.
 
-This method is very basic, and it works, even when you connect many switches—hundreds—into a tree, as long as there are no loops in the tree. A protocol known as “Spanning tree protocol” detects and prevents loops, so that no frames go around and around forever. (These are called bpdu frames—bridge protocol data unit.) They can drop due to congestion or can be dropped because of a link error (invalid checksum, for example).
+This method is very basic, and it works, even when you connect many switches—hundreds—into a tree, as long as there are no loops in the tree. A protocol known as “Spanning tree protocol” detects and prevents loops, so that no frames go around and around forever. (These are called "bpdu frames" —bridge protocol data unit.) They can drop due to congestion or can be dropped because of a link error (invalid checksum, for example).
 
 As an additional factor in this process, known addresses are “aged out” (on an individual switch) if no frames are received from them or sent to them for some pre-established duration of time, usually anywhere from 5 minutes to 4 hours. It’s easy to see that, as new frames are received and old addresses are aged out, not all the switches always will have the same state at all times. Their lists of known addresses will differ slightly, and that’s part of the design.
 
@@ -82,9 +82,10 @@ By using this technique, called hierarchical routing, you can decompose the prob
 
 However, many customers still expect all their hosts to belong the same L2 domain, as it would be configured, naturally, if the subnet were in their own data center. Therefore, many cloud solutions deploy overlay networks (which refers to some techniques for carrying the customer’s layer 2 network over the provider’s L3 infrastructure) to join the hosts into subnet domains.
 
-This situation applies to many IBM Bluemix Private Cloud deployments in SoftLayer data centers. Because SoftLayer organizes the data centers into localized hardware “pods,” software defined overlay networks (SDN) must be deployed to connect any customer cloud deployments that have not been established within the same hardware pod. IBM Bluemix Private Cloud 3.0 (and newer) has implemented many SDN solutions that let customers connect their clouds together, thus creating many possible hybrid cloud solutions.
-
 For example, VxLAN is form of overlay whereby an encapsulation carries Ethernet frames inside UDP packets. Each host participating in a VXLAN overlay network has a VTEP (VxLAN tunnel end point) which is a listening UDP socket with a UDP port and and IP address.
+
+This situation applies to many IBM Bluemix Private Cloud deployments in SoftLayer data centers. Because SoftLayer organizes the data centers into localized hardware “pods,” software defined overlay networks (SDN) must be deployed to connect any customer cloud deployments that have not been established within the same hardware pod. IBM Bluemix Private Cloud 3.0 (and newer) has implemented many Software Defined Networking solutions that let customers connect their clouds together, thus creating many possible *hybrid cloud* solutions. (By hybrid cloud, we are referring to the ability to bind together two or more private or public clusters of computers, where those clusters each in turn are designed to create collections of virtual machines and their associated networks -- that is, to combine multiple cloud environments.)
+
 
 **Provisioning**
 
