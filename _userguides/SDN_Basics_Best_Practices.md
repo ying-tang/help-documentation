@@ -100,4 +100,4 @@ Within Box Panel, VLANs can be tracked with names reflecting the switch fabrics 
 
 *Footnote: Software Defined Networking (SDN) was developed as a way to define a set of policies in a central database, and then use computation to enforce these policies automatically. The term has come to be used more generally to refer to the use of network overlays.*
 
-Suggestion for further reading: https://en.wikipedia.org/wiki/Switched_fabric
+**Suggestion for further reading:** [https://en.wikipedia.org/wiki/Switched_fabric](https://en.wikipedia.org/wiki/Switched_fabric)
