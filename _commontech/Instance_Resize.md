@@ -6,7 +6,7 @@ featured: False
 weight: 12
 tags: [getting started, instances, resize, migration]
 dateAdded: May 23, 2016
-author: Jesse Keating, Sina Sinadeghi
+author: Jesse Keating, Sina Sadeghi
 editor: Leslie Lundquist
 
 ---
