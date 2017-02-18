@@ -7,13 +7,13 @@ author: Eric French
 dateAdded: November 16th, 2015
 ---
 
-Your **IBM Bluemix Private** Cloud was provisioned with API endpoints for all of the major services running underneath.  Here is how to set up your system to access these services.
+Your **IBM Bluemix Private** Cloud was provisioned with API endpoints for all of the major OpenStack services running underneath.  Here is how to set up your system to access these services:
 
-**On Mac OSX:**
+**On macOS:**
 
 **Install Python**
 
-**Note:** OSX El Capitan introduced a mechanisms to prevent damaging the operating system files. `/System/Library/Frameworks/Python.framework/Versions/2.7/share` is one of the protected locations. A normal user has no reason to put or write any files there. Therefore, we do not receommend the use of `sudo pip` to install Python.
+**Note:** macOS El Capitan introduced a mechanisms to prevent damaging the operating system files. `/System/Library/Frameworks/Python.framework/Versions/2.7/share` is one of the protected locations. A normal user has no reason to put or write any files there. Therefore, we do not receommend the use of `sudo pip` to install Python.
 
 Instead, install a Python package, such as IPython, locally to the home folder of your user. The easiest way is to create a virtual environment, activate it and then run `pip` in the virtual environment.
 
@@ -68,13 +68,13 @@ source ~/tardis_stackrc
 nova image-list
 {% endhighlight %}
 
-This command will return a list of all running instances in your project.
+This command will return a list of images in your project that you can boot an instance (virtual machine) from.
 
 ### How to query the OpenStack API using cURL
 
 **Q.** How can I get an OpenStack token via the v3 API?
 
-**A.** Here's a command you can use:
+**A.** You can use the cURL command:
 {% highlight bash %} 
 curl -si -X POST https://example.openstack.blueboxgrid.com:5000/v3/auth/tokens \
 -H "Content-Type: application/json" \
@@ -127,7 +127,9 @@ curl -g -i --cacert "/etc/ssl/certs/ca-certificates.crt" \
 
 **Troubleshooting**
 
-If you get the error **A true SSLContext object is not available**, you can run
+If you get an error **A true SSLContext object is not available**, run
 `sudo easy_install requests[security]` or `pip install requests[security]`
+
+If you get an error "No module named six.moves", run `pip install six`.
 
 Also see what to do if you get the error [**AttributeError: '_socketobject' object has no attribute 'set_tlsext_host_name'**](http://stackoverflow.com/questions/31576258/attributeerror-socketobject-object-has-no-attribute-set-tlsext-host-name)
