@@ -2,9 +2,9 @@
 layout: page
 title: Role-Based Access Control
 featured: false
-tags: [keystone, users, roles, failover]
+tags: [keystone, users, roles, failover, RBAC, cloud_admin, migration, live migration, cold migration, affinity]
 dateAdded: March 11th, 2016
-author: Ulysses Kanigel
+dateUpdated: February 17th, 2017
 ---
 
 ### Role-Based Access Control (RBAC) and access to OpenStack services
@@ -37,3 +37,7 @@ If you would like to see more granular roles in a future release, we can [open a
 A Cloud Admin may see a "Live Migration" option when looking at instances in the Admin panel of Horizon. However, the Live Migration functionality is policy restricted to the "admin" role, which IBM Bluemix retains and does not provide to customers. Horizon will present an error if a non-admin attempts to live migrate an instance.
  
 This is a small UI/UX problem in Horizon, in that it offers to do things that Policy will prevent.
+
+Both live and cold migration are not supported for customer use, in part due to unreliability. It is possible these features will become more reliable in a future release of OpenStack, in which case they will be re-evaluated.
+
+The alternative, which works well, is to snapshot and re-provision the instances using anti-affinity groups.  See http://ibm-blue-box-help.github.io/help-documentation/nova/deploy-to-specific-hypervisor/ for more information on doing this.
