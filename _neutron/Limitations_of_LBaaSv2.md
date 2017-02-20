@@ -32,6 +32,9 @@ For more information about Known Limitations, please refer to the IBM Bluemix Pr
  * Customers must otherwise build HA options into their applications, such as failback strategies in a service-oriented architecture, in order to use this capability as part of a larger application.
  
  7) Dedicated Controller nodes (not Converged Controllers) are required to use LBaaS.
+ 
+ 8) If a member of a load balancer pool goes down, there is no known way to check the status of the member via the Neutron LBaaSv2 API.  See https://bugs.launchpad.net/neutron/+bug/1596709 for more details on this.  There is also no way (yet), via the Neutron LBaaSv2 API, to check the status of error codes returned by the load balancer health monitors.
+
 
 ### Performance Limitations
 The LBaaS v2 namespace driver should perform in line with other software-based load balancers. Any software forwarding solution (LBaaS or Neutron L3 Agent) will have some performance limitations.
