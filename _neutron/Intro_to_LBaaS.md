@@ -6,7 +6,7 @@ weight: 6
 tags: [neutron, lbaas, delete, healthmonitor]
 author: Leslie Lundquist
 dateAdded: June 16, 2016
-dateUpdated: January 11, 2017
+dateUpdated: February 22, 2017
 ---
 
 The OpenStack Networking Service, Neutron, includes a Load Balancer as a Service (LBaaS). This service lets you configure a load balancer that runs outside of your instances and directs traffic to your instances. A common use case occurs when you want to use multiple instances to serve web pages and you also want to meet high performance or availability goals. OpenStack LBaaS v2 in Mitaka allows for multiple ports (called _listeners_) per load balancer.
@@ -28,6 +28,10 @@ The following links give a lot more information about the LBaaS v2 features in O
 The reference implementation of LBaaS, called Octavia, also provides some helpful documentation.
 
  * http://docs.octavia.io/review/master/index.html#
+
+**Limitations:**
+
+See http://ibm-blue-box-help.github.io/help-documentation/neutron/Limitations_of_LBaaSv2/
 
 **How do you delete a load balancer instance via the command line?**
 
