@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Multi-tier Router Configuration Within Your IBM Blue Box Cloud
-tags: [neutron, networking, router, configuration, multi-tier]
+tags: [neutron, networking, router, configuration, multi-tier, add_interface]
 author: Ulysses Kanigel and Leslie Lundquist
 dateAdded: August 31, 2016
 weight: 4
@@ -154,3 +154,14 @@ rtt min/avg/max/mdev = 1.601/1.635/1.670/0.053 ms
 There should be no problems with scaling this design up to include multiple subnets connected to each child router, because the routing is achieved at the child router. 
 
 Note: Remember that any instances that are connected to a child router will not be able to have floating IPs associated to them, because that child router is not directly connected to the external network.
+
+**Troubleshooting: Error: Failed to add_interface:**
+
+You might get this error if you try to attach an interface to tenant-A-router for a tenant-B-network:
+`Error: Failed to add_interface: Request Failed: internal server error while processing your request.`
+
+Our Neutron policy actually does permit adding a router interface to users with admin, cloud_admin, or project_admin roles, but it fails because the Neutron API is explicitly coded to disallow operations on resources owned by tenants other than the one you are authenticated to unless you have the admin role, as reflected in this code:
+
+https://github.com/openstack/neutron/blob/stable/mitaka/neutron/api/v2/attributes.py#L971
+
+If you need a network from one tenant attached to a router in a different tenant, we will need to perform that operation on your behalf.  Please provide the CLI command you are trying to run that throws the error and we will run it for you.
