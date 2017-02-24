@@ -3,7 +3,7 @@ layout: page
 title:  "Troubleshooting FAQ"
 featured: true
 weight: 8
-tags: [faq, reboot, instance, timestamp, console, resize, stuck, port, depends_on, smtp, email, sendgrid]
+tags: [faq, reboot, instance, timestamp, console, resize, stuck, port, depends_on, smtp, email, sendgrid, single user mode, vnc]
 author: Leslie Lundquist, Ulysses Kanigel
 dateAdded: August 19, 2016
 
@@ -39,6 +39,14 @@ Note the time on the console, if any.
 Capture a screenshot of the console if it's frozen and contains useful information. After you reboot, if you've enabled crash dumps on the virtual machine, you can check `/var/crash` for `vmcore` (on RedHat) or `.crash` (on Ubuntu) files and analyze the dump from there. Also check system activity (sar) stats around the time of the freeze.
 
 Reboot the machine if you need it back up ASAP, or better yet, spin up a new one based on the same image. If you need further investigation done on the infrastructure, try to let us know the time of the freeze in UTC prior to rebooting it, and the UUID of the instance, and we'll see if there is anything to be found in the logs.
+
+If you need to get into single user mode, we've had success using the full-screen console in the Safari browser.  For single-user mode in CentOS, for example:
+
+* Scroll down and erase most of the end of the line (beginning with console), and just leave `console=tty` there
+* The final line should look something like this `kernel /boot/vmlinuz-2.6.32-431.el6.x86_64 ro root=UUID=8a057bba-2787-46a7-9436-fd6dc8a3aa85 rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD crashkernel=auto rd_NO_DM SYSFONT=latarcyrheb-sun16  KEYBOARDTYPE=pc KEYTABLE=us console=tty notsc single`
+* You can also try adding `rw init=/bin/bash` in place of the `ro` portion of the line
+* If the boot process seems to stop, press enter a few times
+
 
 #### Q. <a name="cant_resize"></a>Why can’t I resize my instance from `m1.tiny` to `m1.medium`?
 
