@@ -3,10 +3,10 @@ layout: page
 title:  "Quotas"
 dateAdded: June 13th, 2015
 editor: Leslie Lundquist
-updated: February 6, 2017
+updated: March 2, 2017
 featured: true
 weight: 4
-tags: [openstack, quotas]
+tags: [openstack, quota, limit, host routes, maximum, volumes]
 ---
 
 OpenStack has numerous quotas, and when you hit one of these quotas, it doesn't always notify you clearly.  Not every quota is exposed in the **Horizon** user interface.  This article explains what quotas you may hit, what happens when you hit them, and how to modify them.
@@ -57,6 +57,8 @@ TOTAL                      0.057 0.049 0.037 87   5    386484   18944    367540 
 **Instances:** Most customers go with the default limit and adjust upwards as needed. With enough hardware, you can get into hundreds of thousands of instances. For your particular hardware, you need to make your own calculations based on your desired resource consumption for each VM.
 
 **Maximum Number of Host Routes per Subnet:** There is not (yet) a user-adjustable quota in Neutron that controls this. There is a hard limit in neutron.conf (`max_subnet_host_routes`) that specifies a maximum number of host routes per subnet, and the default is 20.
+
+**Maximum Number of Volumes per Virtual Machine:** There is no quota for this, but there is a hard-coded limit of 26.  This manifests when you try to attach a another new volume via the command line and receive the error "No free disk device names for prefix 'vd'". You can view this hard-coded limit at https://github.com/openstack/nova/blob/master/nova/virt/libvirt/blockinfo.py#L162  You can run `lspci` inside your VM to see all of the devices attached to the PCI bus in your VM.  (The PCI bus itself is limited to 32 devices with KVM.)
 
 ### Neutron vs. Nova Rule Precedence
 
