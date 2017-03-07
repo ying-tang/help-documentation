@@ -7,7 +7,7 @@ author: Jason Kennedy
 dateAdded: August 13th, 2015
 ---
 
-Hey folks, today we're going to run through the process necessary to add a floating IP address to one of your instances. I touched on how to complete this at the end of [**Creating Additional Networks in OpenStack via the Horizon Panel**](http://ibm-blue-box-help.github.io/help-documentation/horizon/creating-additional-networks-with-horizon/), so let's run this example through the terminal. The first thing to consider is that *creating* a floating IP doesn't actually create the address, it merely allocates one from the assigned pool. Let's take a look at what we have assigned:
+Today we're going to run through the process necessary to add a floating IP address to one of your instances. I touched on how to complete this at the end of [**Creating Additional Networks in OpenStack via the Horizon Panel**](http://ibm-blue-box-help.github.io/help-documentation/horizon/creating-additional-networks-with-horizon/), so let's run this example through the terminal. The first thing to consider is that *creating* a floating IP doesn't actually create the address, it merely allocates one from the assigned pool. Let's take a look at what we have assigned:
 
 {% highlight bash %}
 $neutron net-list | grep external
@@ -68,4 +68,10 @@ At any point you want, you may also disassociate a floating IP by running the co
 Disassociated floatingip 953cda96-1a33-4645-a4e2-1b00d6e06736
 {% endhighlight %}
 
-You will note the address is no longer associated with your instance. Thanks!
+You will note the address is no longer associated with your instance.
+
+* In OpenStack, floating IPs are publicly routable IPs that you assign to your VMs. What happens inside the VM once the floating IP is added? The answer is ... nothing. If you log in via SSH and display the network configuration, you will see there is still a single network interface with a fixed IP configured. All setup is done on the compute hypervisor itself. OpenStack Neutron sets up the NAT between the VM's fixed and floating IPs.
+
+One of the big advantages of floating IPs is: If a VM dies, you can re-use the floating IP by attaching it to another VM.
+
+For more information, please see: https://www.mirantis.com/blog/configuring-floating-ip-addresses-networking-openstack-public-private-clouds/
