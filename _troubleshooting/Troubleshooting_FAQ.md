@@ -30,22 +30,24 @@ to see when the host (VM) last booted, and then use that timestamp to look throu
 
 #### Q. <a name="instance_froze"></a>What should I do if my instance froze and stopped responding?
 
-**A.** We recommend that you check the console of the virtual machine and see if it's completely frozen, or if there's evidence of a kernel panic or another error. If you aren't doing so already, you can get the URL of the console via 
+**A.** We recommend that you check the console of the virtual machine and see if it's completely frozen, or if there's evidence of a kernel panic or another error.  You can get the URL of the console via: 
+
 ```
-nova get-vnc-console UUID novnc
+nova get-vnc-console VM-UUID novnc
 ```
+
 Note the time on the console, if any.
 
 Capture a screenshot of the console if it's frozen and contains useful information. After you reboot, if you've enabled crash dumps on the virtual machine, you can check `/var/crash` for `vmcore` (on RedHat) or `.crash` (on Ubuntu) files and analyze the dump from there. Also check system activity (sar) stats around the time of the freeze.
 
 Reboot the machine if you need it back up ASAP, or better yet, spin up a new one based on the same image. If you need further investigation done on the infrastructure, try to let us know the time of the freeze in UTC prior to rebooting it, and the UUID of the instance, and we'll see if there is anything to be found in the logs.
 
-If you need to get into single user mode, we've had success using the full-screen console in the Safari browser.  For single-user mode in CentOS, for example:
+If you need to get into single user mode reliably, for example, to run a filesystem check, or to fix SSH directory permissions, we've had success using the full-screen console in the Safari browser.  You'll need to press the "send ctrl/alt/del" button to reboot the VM while logged into the console so you can catch it at the GRUB loading screen.  When you get to the the GRUB boot menu, press `e` to edit it.  For single-user mode in CentOS, for example:
 
-* Scroll down and erase most of the end of the line (beginning with console), and just leave `console=tty` there
-* The final line should look something like this `kernel /boot/vmlinuz-2.6.32-431.el6.x86_64 ro root=UUID=8a057bba-2787-46a7-9436-fd6dc8a3aa85 rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD crashkernel=auto rd_NO_DM SYSFONT=latarcyrheb-sun16  KEYBOARDTYPE=pc KEYTABLE=us console=tty notsc single`
-* You can also try adding `rw init=/bin/bash` in place of the `ro` portion of the line
-* If the boot process seems to stop, press enter a few times
+1. Scroll down and erase most of the end of the line (beginning with console), and just leave `console=tty` there.
+2. After you edit it, the line should look something like: `kernel /boot/vmlinuz-2.6.32-431.el6.x86_64 ro root=UUID=8a057bba-2787-46a7-9436-fd6dc8a3aa85 rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD crashkernel=auto rd_NO_DM SYSFONT=latarcyrheb-sun16  KEYBOARDTYPE=pc KEYTABLE=us console=tty notsc single`
+3. You can also try adding `rw init=/bin/bash` in place of the `ro` portion of the line.
+4. If the boot process seems to stop, press enter a few times.
 
 
 #### Q. <a name="cant_resize"></a>Why can’t I resize my instance from `m1.tiny` to `m1.medium`?
