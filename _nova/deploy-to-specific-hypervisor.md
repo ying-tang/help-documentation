@@ -21,7 +21,7 @@ https://raymii.org/s/articles/Openstack_Affinity_Groups-make-sure-instances-are-
 https://dev.cloudwatt.com/en/blog/affinity-and-anti-affinity-in-openstack.html
 
 
-**The instructions that follow are for legacy clouds older than 3.0.**
+**The instructions that follow are for any IBM Bluemix Private cloud older than release 3.0.**
 
 You may have the need to specify the host to which an instance is deployed.  Although this functionality is not available in Horizon, the API in older clouds lets you select a specific compute node for instance deployment.
 
