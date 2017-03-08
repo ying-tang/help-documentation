@@ -15,7 +15,7 @@ Heat resource types such as `OS::Heat::SoftwareDeployment` call back to Heat dur
 
 ### How to resolve this issue
 
-This proposed resolution convers the following resource types:
+This proposed resolution covers the following resource types:
 
 * Stack with `OS::Heat::SoftwareDeployment`
 * Stack with `OS::Nova::Server` and the `user_data_format: SOFTWARE_CONFIG` setting
