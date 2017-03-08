@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Using Heat with self-signed certificate"
+title:  "Using Heat With a Self-signed Certificate"
 tags: [heat, deployment, self-signed]
 dateAdded: June 24th, 2016
 author: Pan Xia Zou, Ying Tang
