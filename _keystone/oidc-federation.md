@@ -16,7 +16,9 @@ author: Nithya Renganathan
 * [Using Horizon](#using_horizon)
 * [Using OAuth API](#using_oauth_api)
 * [Using OAuth CLI](#using_oauth_cli)
+* [Upgrading python-openstackclient package](#upgrade_package)
 * [Additional Notes](#additional_notes)
+
 
 ## <a name="what_is_keystone_federation?"></a>What is Federation?
 Keystone federation enables identities from an Identity Provider (IDP) to be used on a Service Provider (SP). The different protocols and formats supported are OpenIDConnect (OIDC) and Security Assertion Markup Language (SAML).
@@ -515,9 +517,19 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+
 ## <a name="using_oauth_cli"></a>Using OAuth CLI
 
+
 #### Authorization code flow for Command line
+
+Required: version of python-openstackclient > 3.0.0
+          Check the version by running the following command :
+          ```  
+          pip freeze | grep openstackclient
+          ```  
+            
 
 Steps to use the OpenStack client with authorization code:
 
@@ -526,7 +538,7 @@ Steps to use the OpenStack client with authorization code:
 2. Paste the following contents into the file. Update the parameters based on your environment.
 
     **OIDC stackrc**
-    
+
     ```
     export OS_TOKEN_ENDPOINT=https://<replace>/oauth/token
     export OS_CLIENT_SECRET=<client secret>
@@ -546,20 +558,18 @@ Steps to use the OpenStack client with authorization code:
 4. The following command fetches a Keystone token that you can use to perform any command till it expires:
 
 ```
-    openstack --os-auth-type v3oidcauthcode --os-code <auth-code> --os-project-name <project-name> --os-project-domain-name
+    openstack --os-auth-type v3oidcauthcode --os-code <auth-code> --os-project-name <project-name> --os-project-domain-name Default token issue
 ```
-    
-    
-**Default token issue**
+
 
 Example:
-   
+
 ```
-root@allinone-multiple:~# openstack --os-auth-type v3oidcauthcode --os-code 6LxfzO7GvCjmmcRa --os-project-name admin --os-project-domain-name
+root@allinone-multiple:~# openstack --os-auth-type v3oidcauthcode --os-code 6LxfzO7GvCjmmcRa --os-project-name admin --os-project-domain-name Default token issue
 
 ```
 
-Default token issue
+
 
 ```
       +------------+----------------------------------+
@@ -572,19 +582,22 @@ Default token issue
       +------------+----------------------------------+
 ```
 
-5. Perform `user list` command using the token just generated.
+Perform `user list` command using the token just generated.
 
 ```
-openstack --os-auth-type v3token --os-token <token id from previous request> --os-project-name <project-name> --os-project-domain-name 
+openstack --os-auth-type v3token --os-token <token id from previous request> --os-project-name <project-name> --os-project-domain-name Default user list
 ```
 
-**Default user list**
 
 **NOTE:**
-Client ID and Secret can be passed as parameters in the OpenStack CLI instead of saving it in the `rc` file, using
+Client ID and Secret can be passed as parameters in the OpenStack CLI instead of saving it in the `rc` file by using the parameters --os-client-secret and --os-client-id
+
+## <a name="upgrade_package"></a>Upgrading python-openstackclient version
+Run the following commands:
 
 ```
---os-client-secret --os-client-id
+  sudo su
+  pip install python-openstackclient --upgrade
 ```
 
 ## <a name="additional_notes"></a>Additional Notes
