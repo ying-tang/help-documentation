@@ -13,7 +13,7 @@ Your **IBM Bluemix Private** Cloud was provisioned with API endpoints for all of
 
 **Install Python**
 
-**Note:** macOS El Capitan introduced a mechanisms to prevent damaging the operating system files. `/System/Library/Frameworks/Python.framework/Versions/2.7/share` is one of the protected locations. A normal user has no reason to put or write any files there. Therefore, we do not receommend the use of `sudo pip` to install Python.
+**Note:** macOS El Capitan introduced a mechanisms to prevent damaging the operating system files. `/System/Library/Frameworks/Python.framework/Versions/2.7/share` is one of the protected locations. A normal user has no reason to put or write any files there. Therefore, we do not recommend the use of `sudo pip` to install Python.
 
 Instead, install a Python package, such as IPython, locally to the home folder of your user. The easiest way is to create a virtual environment, activate it and then run `pip` in the virtual environment.
 
