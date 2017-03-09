@@ -1,10 +1,12 @@
 ---
+
 layout: page
 title: Getting Started with Keystone Federated Identity
 author: Elvin Tubillara
 dateAdded; March 6, 2017
 featured: true
 weight: 4
+
 ---
 
 
@@ -100,7 +102,7 @@ $ openstack role add _member_ --user demo_member_user --project demo
 $ openstack role assignment list --name --user demo_member_user
 ```
 
-Users are now able to log into the Horizon dashboard.
+**Users are now able to log into the Horizon dashboard.**
 
-From Horizon, you can securely and easily access your OpenStack services managed by the Service Provider Keystone.
+From Horizon, you have easy access to your OpenStack services, managed by the Service Provider's Keystone.
 
