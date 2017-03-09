@@ -35,15 +35,17 @@ This command gives information about how many floating IPs are used, and how man
 +--------------------------------------+----------------------------------------------------+-----------+----------+
 ```
 
-Aside: Why are networks and subnets called "**HA network tenant xyz**" created?
+**Aside:** Why are networks and subnets called "**HA network tenant xyz**" created?
 
 The networks with names that include the phrase "HA network" host the High Availability network for a project.  One HA network is used per project, and all HA router ports are created on this network.  This arrangement allows failover to work if one of your network nodes goes down.  You can read more about this topic at:
 
-http://docs.openstack.org/mitaka/networking-guide/scenario-l3ha-lb.html 
+ * [http://docs.openstack.org/mitaka/networking-guide/scenario-l3ha-lb.html](http://docs.openstack.org/mitaka/networking-guide/scenario-l3ha-lb.html)
 
-https://review.openstack.org/gitweb?p=openstack/neutron.git;a=blob;f=neutron/db/l3_hamode_db.py
+ * [https://review.openstack.org/gitweb?p=openstack/neutron.git;a=blob;f=neutron/db/l3_hamode_db.py](https://review.openstack.org/gitweb?p=openstack/neutron.git;a=blob;f=neutron/db/l3_hamode_db.py)
 
-You'll note that HA networks and subnets have an associated project, but the association is done in a non-obvious way: The `project_id` is shown to the right of word "tenant" in the `network_name`. But the `project_id` associated with the network itself is left blank.
+You'll note that HA networks and subnets have an associated project, but the association is done in a non-obvious way: 
+
+The `project_id` is shown to the right of word "tenant" in the `network_name`. But the `project_id` associated with the network itself is left blank.
 
 Back to **floating IPs**: To get even more information about floating IPs, you can use another command, shown below, which provides the CIDR and more details about IPs that are in use:
 
@@ -51,7 +53,7 @@ Back to **floating IPs**: To get even more information about floating IPs, you c
 > neutron net-ip-availability-show internal
 ```
 
-This command returns output something like this example:
+This command returns output something similar to this example:
 
 ```
 +------------------------+-------------------------------------------------------------------------------------------------+
