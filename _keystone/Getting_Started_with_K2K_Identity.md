@@ -7,14 +7,13 @@ featured: true
 weight: 4
 ---
 
-
 Keystone-to-Keystone (K2K) Federated Identity uses the OpenStack Keystone v3 component, which is commonly used for authentication. If you're just getting started with OpenStack, you can learn more about Keystone and other OpenStack core components in another article, [The Power of OpenStack](https://www.ibm.com/blogs/bluemix/2016/07/the-power-of-openstack/).
 
 Our team of experts automatically sets up K2K Federated Identity upon request. Once set up, an administrator, or `cloud_admin` user, can manage federated identities by managing permissions through groups, and by managing mappings from remote users, from the Identity Provider to local groups on the Service Providers. Service Providers use mappings to select the OpenStack user attributes from the Identity Provider, and then they use those attributes to map the user to a local group. Once the user logs in using K2K Federated Identity, the user is granted the roles assigned to the group, automatically.
 
 The following examples show how federated users that belong to a demo project on the Identity Provider have access to the demo project on the service provider.
 
-###Creating groups for federated users
+### Creating groups for federated users
 
 Let’s create a group called `demo_member_group` and assign it the `_member_` role on the demo project.
 
@@ -30,7 +29,7 @@ $ openstack role add _member_ --project demo --group demo_member_group
 
 The `demo_member_group` will now have access to the demo project.
 
-###Creating mappings for federated users
+### Creating mappings for federated users
 
 Once a group is created, you can create mappings to map remote users from the Identity Provider to a local group on the Service Provider.
 
@@ -86,7 +85,7 @@ $ openstack mapping show mapping-for-k2k-federation --format json
 
 After performing these steps, you have now mapped rules for federated users.
 
-###Trying it out on Horizon
+### Trying it out on Horizon
 
 IBM Bluemix Private Cloud customers can use Keystone-to-Keystone Federated Identity to sign into Horizon, the OpenStack dashboard. By signing into the Identity Provider, you’re able to use the services on the Service Provider.
 
