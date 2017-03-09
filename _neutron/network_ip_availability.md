@@ -9,8 +9,6 @@ dateUpdated: January 4, 2017
 author: Leslie Lundquist, Ulysses Kanigel
 ---
 
-## How Can I Check My Network IP Availability?
-
 In OpenStack Mitaka and newer, availability commands let you check the availability of IPs more easily.
 
 ### Floating IP Pool Availability
