@@ -16,7 +16,7 @@ $ cinder list
 ERROR: Unable to establish connection to http://<cinderURL>:<cinderPort>/v1/<tenantID>/volumes/detail
 {% endhighlight %}
 
-This situations appears to be related to version discovery support that was added in version 1.2.0 and reverted in 1.3.0.
+This situation appears to be related to version discovery support that was added in version 1.2.0 and reverted in 1.3.0.
 (See the release notes for more details: `http://docs.openstack.org/developer/python-cinderclient/`).
 
 If you experience this issue, upgrade the `python-cinderclient` package to 1.3.0 or later by running
