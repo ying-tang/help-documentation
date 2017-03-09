@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Utilizing IBM Cloud Data Center's Private Network with Multiple IBM Bluemix Private Cloud Environments
+title: Set Up Network Connectivity Between Multiple IBM Bluemix Private Cloud Environments, Using the Private Network
 featured: false
 weight: 13
 tags: [getting started, network, private network]
@@ -13,7 +13,7 @@ editor: Leslie Lundquist, Jesse Proudman
 
 This document explains how to set up network connectivity between multiple **IBM Bluemix Private Cloud** installations, using the **IBM Cloud Data Center** private network. 
 
-Traffic transmitted over the BM Cloud Data Center private network is not metered, so this is the preferred method to communicate between multiple IBM Bluemix Private Clouds. You can read more about the IBM Cloud Data Centers [private network here](http://www.softlayer.com/network).
+Traffic transmitted over the IBM Cloud Data Center private network is not metered, so this is the preferred method to communicate between multiple IBM Bluemix Private Clouds. You can read more about the IBM Cloud Data Centers [private network here](http://www.softlayer.com/network).
 
 Do note, IBM Cloud Data Center private network traffic is segmented from the public internet and from other SoftLayer customers, but traffic is *not encrypted*. Should you require encryption, even in the context of a private network, you'll want to ensure that you add client-side encryption to your configuration.
 
