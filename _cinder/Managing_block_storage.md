@@ -29,7 +29,7 @@ Ceph is a distributed storage solution based on Reliable Autonomic Distributed O
 
 A Ceph cluster typically is composed of monitor nodes and storage nodes (OSD nodes). The monitor nodes maintain a copy of the cluster map to ensure high availability, and they keep track of the cluster health.
 
-![Ceph architecture](https://github.com/IBM-Blue-Box-Help/help-documentation/_drafts/Ceph_Architecture.png)
+![Ceph architecture]({{site.baseurl}}/img/Ceph_architecture.png)
 
 With Ceph, Bluemix Private Cloud provides a block storage option with increased capacity, exceptional performance, and lower cost. According to your specific workload requirements, you can also customize the following node types for your Ceph clusters:
 
