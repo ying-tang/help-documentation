@@ -17,7 +17,7 @@ The following examples show how federated users that belong to a demo project on
 
 Let’s create a group called `demo_member_group` and assign it the `_member_` role on the demo project.
 
-Run the following commands as the Service Provider cloud_admin user:
+Run the following commands as the Service Provider `cloud_admin` user:
 
 ```
 $ openstack group list
@@ -33,7 +33,7 @@ The `demo_member_group` will now have access to the demo project.
 
 Once a group is created, you can create mappings to map remote users from the Identity Provider to a local group on the Service Provider.
 
-The following example shows how to create a mapping file that maps Identity Provider users, assigned the _member_ role on the demo project, to the demo_member_group on the Service Provider.
+The following example shows how to create a mapping file that maps Identity Provider users, assigned the `_member_` role on the demo project, to the `demo_member_group` on the Service Provider.
 
 First, you'll need to create a file called `federated_demo_mapping.json`:
 ```
