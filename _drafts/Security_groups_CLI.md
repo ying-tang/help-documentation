@@ -1,4 +1,3 @@
-
 ---
 layout: page
 author: Bluemix on OpenStack Support
