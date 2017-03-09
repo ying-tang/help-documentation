@@ -1,12 +1,10 @@
 ---
-
 layout: page
 title: Getting Started with Keystone Federated Identity
 author: Elvin Tubillara
-dateAdded; March 6, 2017
+dateAdded: March 6, 2017
 featured: true
 weight: 4
-
 ---
 
 
