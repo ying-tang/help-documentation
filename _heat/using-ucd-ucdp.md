@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Using IBM UrbanCode Deploy with IBM Bluemix Private Cloud
+title: Using IBM Urban Code Deploy with IBM Bluemix Private Cloud
 featured: no
 weight: 10
 tags: [heat, deploy, UCD, UCDP]
@@ -8,9 +8,9 @@ author: Ying Tang, Pan Xia Zou
 dateAdded: June 7, 2016
 ---
 
-**IBM UrbanCode Deploy with Patterns** (UCDP) is an environment management and deployment solution that you can use to deploy applications to multiple clouds, and manage their lifecycles. 
+**IBM Urban Code Deploy with Patterns** (UCDP) is an environment management and deployment solution that you can use to deploy applications to multiple clouds, and manage their lifecycles. 
 
-Whereas UCDP provides a graphic and text editor for you to design, test, and promote your full-stack environments, **IBM UrbanCode Deploy** (UCD) is a more complete solution that helps you fully configure your components.
+Whereas UCDP provides a graphic and text editor for you to design, test, and promote your full-stack environments, **IBM Urban Code Deploy** (UCD) is a more complete solution that helps you fully configure your components.
 
 The Heat engine with IBM Bluemix Private Cloud can interact with UCDP and UCD. If you have UCDP and UCD installed on your instance, you can establish a secured connection from your instance to the Heat engine, and then deploy an application quickly on your instance through UCDP and UCD.
 
@@ -73,8 +73,8 @@ Integrate your UCD with UCDP by following the instructions in [Connecting to IBM
 **Note:** When connecting the UCDP server to IBM Bluemix Private Cloud, create an authentication realm that points to the Keystone server, and keep the **Use default orchestration engine** check box checked when configuring the realm.
 
 
-With the connection established, you can now deploy applications to IBM Bluemix Private Cloud within IBM UrbanCode Deploy and IBM UrbanCode Deploy with Patterns.
+With the connection established, you can now deploy applications to IBM Bluemix Private Cloud within IBM Urban Code Deploy and IBM Urban Code Deploy with Patterns.
 
 **Note:** If you use an image that has a period (.) in the image name, update the VM name created in Blueprint in the Properties field to remove the period (.). Otherwise, the name of the VM created will contain a period (.) by default, which causes software deployment to fail.
 
-For more information about IBM Bluemix Private Cloud and UCD, watch [this video](https://developer.ibm.com/urbancode/videos/deploy-your-apps-with-ibm-bluebox-ibm-urbancode-deploy/) about deploying your applications with IBM Bluemix & IBM UrbanCode Deploy.
+For more information about IBM Bluemix Private Cloud and UCD, watch [this video](https://developer.ibm.com/urbancode/videos/deploy-your-apps-with-ibm-bluebox-ibm-urbancode-deploy/) about deploying your applications with IBM Bluemix & IBM Urban Code Deploy.
