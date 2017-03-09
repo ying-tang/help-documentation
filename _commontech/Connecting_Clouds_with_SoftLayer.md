@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Set Up Network Connectivity Between Multiple IBM Bluemix Private Cloud Environments, Using the Private Network
+title: Set Up Network Connectivity Between Multiple Cloud Environments, Using the Private Network
 featured: false
 weight: 13
 tags: [getting started, network, private network]
