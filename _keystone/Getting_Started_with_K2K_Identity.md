@@ -2,6 +2,7 @@
 layout: page
 title: Getting Started with Keystone Federated Identity
 author: Elvin Tubillara
+tags: [keystone, federation, k2k, groups]
 dateAdded: March 6, 2017
 featured: true
 weight: 4
