@@ -14,7 +14,7 @@ weight: 4
 _This article was adapted from the following Bluemix blog post: [Get Started with IBM UrbanCode Deploy and IBM Bluemix Private Cloud](https://www.ibm.com/blogs/bluemix/2016/09/get-started-ibm-urbancode-deploy-ibm-blue-box/)_
 
 
-**IBM UrbanCode Deploy** (UCD) is an application deployment automation tool that’s designed to facilitate rapid feedback and continuous delivery in agile development, while providing the audit trails, versioning, and approvals needed in production. Using UCD with **IBM Bluemix Private Cloud**, developers can accelerate their application delivery and lifecycle management across multiple cloud environments.
+**IBM Urban Code Deploy** (UCD) is an application deployment automation tool that’s designed to facilitate rapid feedback and continuous delivery in agile development, while providing the audit trails, versioning, and approvals needed in production. Using UCD with **IBM Bluemix Private Cloud**, developers can accelerate their application delivery and lifecycle management across multiple cloud environments.
 
 This Article provides a brief tutorial, covering how to:
 
