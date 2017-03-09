@@ -62,9 +62,9 @@ Your new instances are provisioned through UCD, and the UCD agent is installed a
 
 Throughout the installation process, you can use the [OpenStack API](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/) client to retrieve installation logs for the server and the application. These logs can help you to identify whether there were any problems with the installation process.
 
-## Accessing applications in OpenStack Horizon
+## Access to your applications in OpenStack Horizon
 
-The UCD agent deploys your full-stack in a matter of seconds. Once your applications are deployed through OpenStack Heat, you’ll have access to your instances and their applications in your IBM Bluemix Private Cloud environment. This environment is accessible through the OpenStack Horizon dashboard or through OpenStack APIs. The following image displays an example deployment, accessed through Horizon:
+The UCD agent deploys your full-stack in a matter of seconds. Once your applications are deployed through OpenStack Heat, you’ll have access to your instances and their applications in your IBM Bluemix Private Cloud environment. This environment is accessible through the OpenStack Horizon dashboard or through OpenStack APIs. The following image displays an example deployment, accessible through Horizon:
 
 ![UCD_horizon]({{site.baseurl}}/_drafts/UCD_horizon.png)
 
