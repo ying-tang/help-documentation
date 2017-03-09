@@ -22,7 +22,7 @@ This Article provides a brief tutorial, covering how to:
 * Use OpenStack Heat blueprints to set up a full-stack deployment
 * Manage applications using OpenStack APIs from IBM UrbanCode Deploy
 
-![UCD_Arch](https://ibm-blue-box-help/help-documentation/_drafts/UCD_Arch.png)
+![UCD_Arch]({{site.baseurl}}/_drafts/UCD_Arch.png)
 
 ## Installing the UCD software
 
@@ -36,11 +36,11 @@ To set up a full-stack deployment, you can create a blueprint to install your ap
 
 To create your blueprint, click the **New** button in the top left corner. This opens a new modal window, where you can name your blueprint, then click **Save**, as shown in the following image.
 
-![UCD_add_file](https://ibm-blue-box-help/help-documentation/_drafts/UCD_add_file.png)
+![UCD_add_file]({{site.baseurl}}/_drafts/UCD_add_file.png)
 
 Click the plus sign (`+`) icon from the toolbar at the top of your screen to perform a search, then select the network, VMs, and applications you want to install. To set up your blueprint even faster, you can drag-and-drop the items you’d like to install, using the palette on the right of the screen. Your VMs will bind to the network automatically, and your applications will bind to your VMs automatically, once you drop them into place.
 
-![UCD_blueprint](https://ibm-blue-box-help/help-documentation/_drafts/UCD_blueprint.png)
+![UCD_blueprint]({{site.baseurl}}/_drafts/UCD_blueprint.png)
 
 From the **Policies** tab on the right, you can use the **Deployment Sequence** icon to identify an installation order for your newly-added applications. 
 
@@ -52,11 +52,11 @@ You’re now ready to provision your blueprint. To start provisioning, click the
 
 As you provision your environment, you’ll connect to an OpenStack Heat engine, which automates your VMs to enter your IBM Bluemix Private Cloud. From this single viewpoint, you can see your UCD applications and their current deployment status, as shown in the following image:
 
-![UCD_heat](https://ibm-blue-box-help/help-documentation/_drafts/UCD_heat.png)
+![UCD_heat]({{site.baseurl}}/_drafts/UCD_heat.png)
 
 You can also click the **Details** icon from the OpenStack Heat engine, to view step-by-step progress of each installation, as shown in the following image:
 
-![UCD_details](https://ibm-blue-box-help/help-documentation/_drafts/UCD_details.png)
+![UCD_details]({{site.baseurl}}/_drafts/UCD_details.png)
 
 Your new instances are provisioned through UCD, and the UCD agent is installed and bootstrapped for the host. Once your instances are online, your applications will install automatically.
 
@@ -66,7 +66,7 @@ Throughout the installation process, you can use the [OpenStack API](http://ibm-
 
 The UCD agent deploys your full-stack in a matter of seconds. Once your applications are deployed through OpenStack Heat, you’ll have access to your instances and their applications in your IBM Bluemix Private Cloud environment. This environment is accessible through the OpenStack Horizon dashboard or through OpenStack APIs. The following image displays an example deployment, accessed through Horizon:
 
-![UCD_horizon](https://ibm-blue-box-help/help-documentation/_drafts/UCD_horizon.png)
+![UCD_horizon]({{site.baseurl}}/_drafts/UCD_horizon.png)
 
 For more information on how to deploy applications using IBM UrbanCode Deploy and IBM Bluemix Private Cloud, you can visit the following links:
 
