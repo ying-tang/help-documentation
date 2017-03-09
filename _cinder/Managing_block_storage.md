@@ -19,7 +19,7 @@ Block storage is stand-alone persistent storage that you can attach to and detac
 
 Because Bluemix Private Cloud is powered by OpenStack, we offer OpenStack Cinder as the block storage option to our clients. Cinder gives developers the ability to manage their block volumes using both the OpenStack Horizon dashboard UI and standardized OpenStack APIs.
 
-![Cinder architecture]({{site.baseurl}}/_drafts/Cinder_Architecture.png)
+![Cinder architecture](https://github.com/IBM-Blue-Box-Help/help-documentation/_drafts/Cinder_Architecture.png)
 
 For customers running [IBM Bluemix Private Cloud version 3.1.0](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Customer_3.1.0_Release_Notes/) and later, Cinder supports multiple backends: its scheduler can locate the right volume types, with flexibility. Cinder block storage is configured to use Ceph clusters, by default.
 
@@ -29,7 +29,7 @@ Ceph is a distributed storage solution based on Reliable Autonomic Distributed O
 
 A Ceph cluster typically is composed of monitor nodes and storage nodes (OSD nodes). The monitor nodes maintain a copy of the cluster map to ensure high availability, and they keep track of the cluster health.
 
-![Ceph architecture]({{site.baseurl}}/_drafts/Ceph_Architecture.png)
+![Ceph architecture](https://github.com/IBM-Blue-Box-Help/help-documentation/_drafts/Ceph_Architecture.png)
 
 With Ceph, Bluemix Private Cloud provides a block storage option with increased capacity, exceptional performance, and lower cost. According to your specific workload requirements, you can also customize the following node types for your Ceph clusters:
 
