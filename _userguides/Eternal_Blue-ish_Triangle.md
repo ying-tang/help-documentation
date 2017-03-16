@@ -145,4 +145,4 @@ For more complete information about the security of IBM Cloud, please download o
 
 [Customer Link](https://www.ibm.com/cloud-computing/bluemix/bluemix-private-cloud)
 
-(http://public.dhe.ibm.com/common/ssi/ecm/ku/en/kuw12395usen/KUW12395USEN.pdf)
+http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=KUW12395USEN
