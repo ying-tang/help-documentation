@@ -57,3 +57,7 @@ This process is more convoluted than you probably prefer. However, switching to 
 
 
 If you don't have Block Storage, and you want to resize to a smaller or bigger flavor, you can create a new instance with the size flavor you want and `rsync` the data you need from the old to the new instance.
+
+### Why doesn't OpenStack allow you to resize an instance down?
+
+You can see why at https://blueprints.launchpad.net/nova/+spec/no-downward-resize - Essentially, allowing a resize-down operation could impact data integrity and is therefore not permitted.  As a safe workaround, you can still create a new VM  with the smaller size flavor, and rsync the data you need from the larger instance to the smaller instance.
