@@ -22,7 +22,7 @@ Each version of **Ursula** on the Site Controller is tailored to initialize and 
 
 **Software Environment Created by Ursula**
 
-IBM Bluemix Private Cloud software is based on **Ubuntu 14.04** or **Cirros 0.3.3 x86_64** and the **Mitaka** release of OpenStack, specifically including the Nova, Glance (backend points to Swift), Swift, Cinder (backed by Ceph clusters), Neutron L3 HA, Neutron LBaaS v2, Keystone, Horizon, Heat, LBaaS, and Ceilometer (+MongoDB) modules. The Cinder backing data storage is provided by Ceph clusters. Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
+IBM Bluemix Private Cloud software is based on **Ubuntu 14.04** or ** ** and the **Mitaka** or **Newton** release of OpenStack, specifically including the Nova, Glance (backend points to Swift), Swift, Cinder (backed by Ceph clusters), Neutron L3 HA, Neutron LBaaS v2, Keystone, Horizon, Heat, LBaaS, and Ceilometer (+MongoDB) modules. The Cinder backing data storage is provided by Ceph clusters. Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
 
 Upon request, IBM will enable some additional enhanced features:
 
@@ -34,46 +34,16 @@ Upon request, IBM will enable some additional enhanced features:
 
 The IBM Bluemix Private Cloud hardware substrate varies by offering. You can get more information about the Bill of Materials (BOM) from your IBM Bluemix Private Cloud service team.
 
-You can use the **OpenStack Horizon** interface to monitor your cloud’s performance, or you can use our customized product, Box Panel, to view your cloud as well as your resource usage, your network configurations, and other features of your cloud.
+You can use the **OpenStack Horizon** interface to monitor your cloud’s performance, or you can use our customized product, **Box Panel**, to view your cloud as well as your resource usage, your network configurations, and other features of your cloud.
 
 You can find more information about how to use Box Panel in the [Box Panel User Guide.](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Box_Panel/)
 
-### Cloud Overview: IBM Bluemix Private Cloud Building Blocks
-
-Every IBM Bluemix Private Cloud, Dedicated or Local, starts with a cluster of controller and compute nodes:
-
-**IBM Bluemix Private Cloud:**
-
-* A cloud can start as a three-node cluster with two hyper-converged (controller + compute nodes) and one compute-only node.
-* A cloud can start as a five-node cluster with a pair of dedicated controller-only nodes and three compute-only nodes. 
-
-**IBM Bluemix Private Cloud Local:**
-
-* Each cloud must have at least one dedicated controller-only node and three compute-only nodes.  
-	
-From any of these starting places (e.g., 3-node hyper-converged, or 5-node with dedicated controllers), you can add compute nodes of any type, along with block storage (Ceph), and/or object storage (Swift).
-
-**Additional building blocks:**
-
-* For a Standard Capacity Dedicated cloud, Dedicated Gateway Firewalls are included by default
-* Enterprise Capacity includes double the resources and 10 Gbps of network connectivity 
-* Dedicated controller nodes (or additional ones)
-* Compute nodes (or additional ones): Standard or Enterprise, IO or High Storage, Power Compute (Habañero)
-
-**Expansion Compute Nodes**
-
-Optionally, you can select from the following compute node extensions to add to your standard or enterprise cloud:
-
-* You can select specialized expansion compute nodes: IO, or HIGH STORAGE, or HABAÑERO POWER COMPUTE
-* You can select additional standard or enterprise compute nodes: STANDARD COMPUTE, or ENTERPRISE COMPUTE
-
-Expansion compute nodes address your requirements for faster IO ephemeral, more RAM, and an order of magnitude larger ephemeral storage.  Both types of expansion nodes—IO optimized and high storage capacity—allow better coverage of instance types and workloads. Starting with the 2.1.0 release, compute types have been grouped into Availability Zones for easy targeting of workloads to the appropriate compute type.
-
-**Types of Storage Nodes**
-
-Hybrid Block Storage nodes provide lower-cost and higher-density Block Storage.  
-
-* You can select Block Storage: SSD or HYBRID
-* You can select Object Storage 
+**Support**
 
 Your purchase of IBM Bluemix Private Cloud includes 24/7 technical support. The Box Panel product provides an interface for opening a support ticket. You also can call Bluemix Private Cloud Support at 1-800-613-4305 or email us at *support@bluebox.net*.
+
+For more detailed information about your cloud configuration, please refer to these documents;
+
+ * [Building Blocks for IBM Bluemix Private Cloud]()
+
+ * [Building Blocks for Coming Soon]()
