@@ -143,4 +143,4 @@ data centers.
 
 For more complete information about the security of IBM Cloud, please download our IBM Cloud Security White Paper at this link:
 
-[Customer Link](http://public.dhe.ibm.com/common/ssi/ecm/ku/en/kuw12395usen/KUW12395USEN.pdf)
+[Customer Link](http://public.dhe.ibm.com/common/ssi/ecm/ku/en/kuw12395usen/KUW12395USEN)
