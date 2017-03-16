@@ -1,3 +1,13 @@
+---
+layout: page
+title: Building Blocks for IBM Bluemix Private Cloud
+featured: false
+weight: 10
+tags: [getting started, dedicated, local, controllers, nodes, overview]
+dateAdded: March 31, 2017
+author: Leslie Lundquist
+---
+
 ### Cloud Overview: IBM Bluemix Private Cloud Building Blocks
 
 Every IBM Bluemix Private Cloud, Dedicated or Local, starts with a cluster of controller and compute nodes:
