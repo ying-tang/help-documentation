@@ -143,4 +143,4 @@ data centers.
 
 For more complete information about the security of IBM Cloud, please download our IBM Cloud Security White Paper at this link:
 
-[Customer Link](https://www.blueboxcloud.com/resources/downloads/security-whitepaper)
+[Customer Link](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=KUW12395USENr)
