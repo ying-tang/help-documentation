@@ -1,5 +1,6 @@
 ---
 layout: page
+category: newton
 title: User's Guide to Cloud Images (IBM Bluemix Private Cloud with Red Hat) 
 featured: false
 weight: 10
