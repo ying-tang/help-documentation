@@ -10,19 +10,19 @@ author: Leslie Lundquist
 
 ### General Product Overview
 
-Both offerings of **IBM Bluemix Private Cloud**, Dedicated and Local, are deployed automatically through a **Site Controller** machine, which serves as a storehouse for the **Ursula/Ansible playbooks** we use to create your cloud. You can view the [Ursula playbooks](https://github.com/blueboxgroup/ursula) on **GitHub**. They are open source documents.
+All offerings of **IBM Bluemix Private Cloud**, Dedicated and Local, or **IBM Bluemix Private Cloud with Red Hat** are deployed automatically through a **Site Controller** machine, which serves as a storehouse for the **Ursula/Ansible playbooks** we use to create your cloud. You can view the [Ursula playbooks](https://github.com/blueboxgroup/ursula) on **GitHub**. They are open source documents.
 
 **Site Controller**
 
-To deploy the **IBM Bluemix Private Cloud** offering, a physical **Site Controller** machine must be located in an **IBM Cloud Data Center** within the same geographical region in which your new Bluemix Private cloud is deployed.
+To deploy any **IBM Bluemix Private Cloud** or **IBM Bluemix Private Cloud with Red Hat** offering, a physical **Site Controller** machine must be located in an **IBM Cloud Data Center** within the same geographical region in which your new cloud is deployed.
 
 To deploy the **IBM Bluemix Private Cloud Local** offering, a Site Controller logical machine must be co-located within your IBM Local Cloud data center, and it will communicate with a Central Site Controller machine at your IBM Cloud Data Center.
 
-Each version of **Ursula** on the Site Controller is tailored to initialize and run a specific version of OpenStack and IBM Bluemix Private Cloud, by setting up the proper environment variables and other aspects of your customized cloud configuration. The particular version of Ursula described in this document is 3.0.0, and the environment which it creates for your cloud is described in the next section.
+Each version of **Ursula** on the Site Controller is tailored to initialize and run a specific version of OpenStack and IBM Cloud product, by setting up the proper environment variables and other aspects of your customized cloud configuration. The next section describes the environment that Ursula creates for your cloud.
 
 **Software Environment Created by Ursula**
 
-IBM Bluemix Private Cloud software is based on **Ubuntu 14.04** or ** ** and the **Mitaka** or **Newton** release of OpenStack, specifically including the Nova, Glance (backend points to Swift), Swift, Cinder (backed by Ceph clusters), Neutron L3 HA, Neutron LBaaS v2, Keystone, Horizon, Heat, LBaaS, and Ceilometer (+MongoDB) modules. The Cinder backing data storage is provided by Ceph clusters. Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
+IBM Bluemix Private Cloud software is based on **Ubuntu 14.04** and the **Mitaka** . The IBM Bluemix Private Cloud with Red Hat software is based on **RHEL 7.3** and the **Newton** release of OpenStack, specifically including the Nova, Glance (backend points to Swift), Swift, Cinder (backed by Ceph clusters), Neutron L3 HA, Neutron LBaaS v2, Keystone, Horizon, Heat, LBaaS, and Ceilometer (+MongoDB) modules. The Cinder backing data storage is provided by Ceph clusters. Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
 
 Upon request, IBM will enable some additional enhanced features:
 
