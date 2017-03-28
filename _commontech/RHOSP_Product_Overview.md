@@ -42,7 +42,7 @@ For general information about the features that IBM Bluemix Private Cloud provid
 
 The following figure illustrates the overall product architecture:
 
-![RHOSP_architecture_overview](https://github.ibm.com/BlueBoxDocs/Operations-and-Engineering-Docs/blob/master/Images/RSHOSP_Product_Overview.png)
+![RHOSP_architecture_overview]({{site.baseurl}}/img/RSHOSP_Product_Overview.png)
 
 
 ### Customer Experience
