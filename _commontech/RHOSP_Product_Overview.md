@@ -27,18 +27,18 @@ IBM Bluemix Private Cloud with Red Hat, **release 4.0.0r**, offers the following
  * Ability to customize the Glance image store to be Object Storage, Ceph Storage, or local File System on Dedicated Controllers
  * Cinder support with Ceph backend
  * Network customizations such as:
-  * Transit VLAN
-  * IPSec VPN or OpenVPN
-  * BYOIP into OpenStack overlay network
-  * Private Network Access between two SoftLayer accounts
-  * SoftLayer Direct Link connectivity
+  - Transit VLAN
+  - IPSec VPN or OpenVPN
+  - BYOIP into OpenStack overlay network
+  - Private Network Access between two SoftLayer accounts
+  - SoftLayer Direct Link connectivity
  * Load Balancing as a Service (LBaaS v2 using HAProxy Driver)
  * Role-based user identity and cloud management using OpenStack Keystone
  * Ceph backend storage services, with SSD Block Storage available
  * Orchestration with Heat and IBM Urban Code Deploy
  * A catalog of bootable public Images with customer BYOL
 
-For more information about the features that IBM Bluemix Private Cloud provides, see its [General Product Overview](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
+For general information about the features that IBM Bluemix Private Cloud provides, see this [General Product Overview](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/general_product_overview/).
 
 The following figure illustrates the overall product architecture:
 
