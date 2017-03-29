@@ -91,4 +91,4 @@ After creating and attaching your Cinder volumes to Virtual Servers, you can eas
 
 ### Troubleshooting
 ### openstack volume list --name vs. cinder list --name
-As a user with a non-cloud_admin role, `openstack volume list --name` doesn't function correctly.  To workaround this problem, you can either use a user with the cloud_admin role to filter volumes by name, or use the `cinder list --name` command as any user.  We have internal defect 374319 open and are working with our engineering team on resolving this.
+If you are a user with a role that is not `cloud_admin`, the `openstack volume list --name` command doesn't function correctly for you.  To circumventd this problem, you can let a user with the `cloud_admin` role filter volumes by name, or you can use the `cinder list --name` command, which works for any user.  We have opened internal defect 374319 for this issue, and we are working with our engineering team on resolving the problem.
