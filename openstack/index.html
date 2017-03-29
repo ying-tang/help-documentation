@@ -47,6 +47,14 @@ top-level: openstack
        {% endif %}
     {% endfor %}
 
+    {% for item in site.userguides %}
+      {% if item.title %}
+       {% if item.category == 'newton' %}
+         {% assign newton-count = newton-count | plus: 1 %}
+       {% endif %}
+      {% endif %}
+   {% endfor %}
+
   {% if newton-count != 0 %}
     <ul class="page--list">
       <li class="page--title">OpenStack Newton release ({{ newton-count }})</li>
@@ -57,6 +65,14 @@ top-level: openstack
               {% endif %}
           {% endif %}
        {% endfor %}
+       {% for item in site.userguides %}
+           {% if item.title %}
+               {% if item.category == 'newton' %}
+                 <li><a class="page--link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+               {% endif %}
+           {% endif %}
+        {% endfor %}
+
       </ul>
   {% endif %}
 
