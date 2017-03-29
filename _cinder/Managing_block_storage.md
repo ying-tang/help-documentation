@@ -88,3 +88,7 @@ For more information on this topic, you can refer to the following document: [Cr
 
 
 After creating and attaching your Cinder volumes to Virtual Servers, you can easily adjust and expand their volume sizes as your capacity requirements grow. You are also able to detach and re-attach your block volumes to another Virtual Server requiring persistent storage, while your stored data remains safeguarded.
+
+### Troubleshooting
+### openstack volume list --name vs. cinder list --name
+If you are a user with a role that is not `cloud_admin`, the `openstack volume list --name` command doesn't function correctly for you.  To circumvent this problem, you can let a user with the `cloud_admin` role filter volumes by name, or you can use the `cinder list --name` command, which works for any user.  We have opened internal defect 374319 for this issue, and we are working with our engineering team on resolving the problem.
