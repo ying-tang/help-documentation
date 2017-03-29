@@ -19,7 +19,7 @@ author: Leslie Lundquist
 
 ### Features
 
-IBM Bluemix Private Cloud with Red Hat, **release 4.0.0r**, offers the following high-level cloud features:
+IBM Bluemix Private Cloud with Red Hat, **release 4.0.0.0r**, offers the following high-level cloud features:
 
  * OpenStack cloud, based on RHOSP 10 (that is, the OpenStack Newton Release)
  * Different types of compute nodes to suit different workloads
