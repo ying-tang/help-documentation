@@ -22,7 +22,20 @@ Each version of **Ursula** on the Site Controller is tailored to initialize and 
 
 **Software Environment Created by Ursula**
 
-IBM Bluemix Private Cloud software is based on **Ubuntu 14.04** and the **Mitaka** . The IBM Bluemix Private Cloud with Red Hat software is based on **RHEL 7.3** and the **Newton** release of OpenStack, specifically including the Nova, Glance (backend points to Swift), Swift, Cinder (backed by Ceph clusters), Neutron L3 HA, Neutron LBaaS v2, Keystone, Horizon, Heat, LBaaS, and Ceilometer (+MongoDB) modules. The Cinder backing data storage is provided by Ceph clusters. Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
+IBM Bluemix Private Cloud software is based on **Ubuntu 14.04** and the **Mitaka** release of OpenStack. The IBM Bluemix Private Cloud with Red Hat software is based on **RHEL 7.3** and the **Newton** release of OpenStack. Both offerings specifically include these OpenStack modules:
+
+ * Nova, 
+ * Glance (backend points to Swift), 
+ * Swift, 
+ * Cinder (data storage backed by Ceph clusters), 
+ * Neutron L3 HA, 
+ * Neutron LBaaS v2, 
+ * Keystone, 
+ * Horizon, 
+ * Heat, 
+ * Ceilometer (+MongoDB). 
+ 
+Your cloud also will include some third-party software monitoring tools that work along with the OpenStack modules: Grafana, ELK, and Sensu.
 
 Upon request, IBM will enable some additional enhanced features:
 
@@ -46,4 +59,4 @@ For more detailed information about your cloud configuration, please refer to th
 
  * [Building Blocks for IBM Bluemix Private Cloud]()
 
- * [Building Blocks for Coming Soon]()
+ * [Building Blocks for IBM Bluemix Private Cloud with Red Hat]()
