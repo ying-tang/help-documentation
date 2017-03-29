@@ -52,7 +52,7 @@ The following figure illustrates the overall product architecture:
 <table>
     <tr>
         <td>Option</td>
-        <td>IBM Bluemix Private Cloud using RHOSP</td>
+        <td>IBM Bluemix Private Cloud with Red Hat</td>
         <td>IBM Bluemix Private Cloud</td>
     </tr>
     <tr>
