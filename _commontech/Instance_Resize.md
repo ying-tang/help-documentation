@@ -4,7 +4,7 @@ layout: page
 title: Resizing an Instance (Non-live)
 featured: False
 weight: 12
-tags: [getting started, instances, resize, migration]
+tags: [getting started, instances, resize, migration, volume]
 dateAdded: May 23, 2016
 author: Jesse Keating, Sina Sadeghi
 editor: Leslie Lundquist
@@ -61,3 +61,9 @@ If you don't have Block Storage, and you want to resize to a smaller or bigger f
 ### Why doesn't OpenStack allow you to resize an instance down?
 
 You can see why at https://blueprints.launchpad.net/nova/+spec/no-downward-resize - Essentially, allowing a resize-down operation could impact data integrity and is therefore not permitted.  As a safe workaround, you can still create a new VM  with the smaller size flavor, and rsync the data you need from the larger instance to the smaller instance.
+
+### When I resize my instance booted from a volume, the flavor changes but the size remains the same.  Why?
+
+This behavior is expected.  The disk size of the flavor is not the disk size of the root disk when booting from a volume.  You can check out this invalid OpenStack bug https://bugs.launchpad.net/nova/+bug/1412993 that explains this further.
+
+To resize the disk, please refer to https://docs.openstack.org/user-guide/dashboard-manage-volumes.html#edit-a-volume to resize the volume.  If for some reason this doesn't work, you can also try the steps listed at  https://mcwhirter.com.au/craige/blog/2014/Resizing_a_Root_Volume_for_an_Openstack_Instance/
