@@ -96,3 +96,7 @@ If you are a user with a role that is not `cloud_admin`, the `openstack volume l
 ### publicURL endpoint for volumev2 service not found error when running cinder or openstack volume commands
 
 If you get this error, it is usually because you don't have any block storage (Cinder volume) nodes in your current cluster. If you'd like to order block storage, please open a ticket requesting it and our sales team will help you get it added.
+
+### publicURL endpoint for volumev3 service ... not found
+
+This error can happen when you have an earlier version of the volume service in your endpoint list.  To resolve this, add  `export OS_VOLUME_API_VERSION=2` to your RC file.
