@@ -4,8 +4,8 @@ category: newton
 title: User's Guide to Cloud Images (IBM Bluemix Private Cloud with Red Hat) 
 featured: false
 weight: 10
-tags: [userguides, images, glance, image-create, instance]
-dateAdded: March 9th, 2016
+tags: [userguides, images, glance, image-create, instance, rhosp, newton]
+dateAdded: March 31, 2017
 author: Ying Tang, Xiong Chen
 editor: Leslie Lundquist, Niraj Patel
 ---
@@ -18,8 +18,7 @@ To work with Red Hat guest images, you can download the image files from the fol
 
 * [Red Hat Enterprise Linux 7 KVM Guest Image](
 https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-downloads)
-* [Red Hat Enterprise Linux 6 KVM Guest Image]
-(https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) 
+* [Red Hat Enterprise Linux 6 KVM Guest Image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) 
 
 ## Pre-requisites
 
