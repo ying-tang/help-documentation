@@ -8,8 +8,8 @@ dateAdded: March 31, 2017
 author: Leslie Lundquist
 ---
 
-## IBM Bluemix Private Cloud with Red Hat
-## Customer Release Notes, version 4.0.0.0r
+## IBM Bluemix Private Cloud with Red Hat Customer
+## Release Notes, version 4.0.0.0r
 
 #### March 31, 2017
 
