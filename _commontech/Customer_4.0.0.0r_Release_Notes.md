@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Release Notes 4.0.0.0r
-featured: false
+featured: true
 weight: 5
 tags: [commontech, release, features, gettingstarted, red hat, rhosp]
 dateAdded: March 31, 2017
