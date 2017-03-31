@@ -108,9 +108,9 @@ You will need to open at least ports 67/68 for DHCP and port 80 for metadata. Ad
 
 If the minimum required set of ports is not open, you may encounter trouble with `cloud_init`so that your instances may not be able to start successfully.
 
-#### Q. <a name="volume_limit"></a>What does this error mean? "Error: Unable to retrieve volume limit information."
+#### Q. <a name="volume_limit"></a>What does this error mean? "Unable to retrieve volume limit information."
 
-Often when I load a page in the Horizon dashboard, I see a little red pop-up that says, "Error: Unable to retrieve volume limit information." What is this error?
+Often when I load a page in the Horizon dashboard, I see a red pop-up that says, "Error: Unable to retrieve volume limit information." What does this mean?
 
 This error is harmless, but it happens because you do not have any Cinder block storage in your deployment.
 
