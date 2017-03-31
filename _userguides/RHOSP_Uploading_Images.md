@@ -1,7 +1,7 @@
 ---
 layout: page
 title: How to Upload an Image
-tags: [userguides, image, rhosp, red hat]
+tags: [commontech, userguides, image, rhosp, red hat]
 dateAdded: March 28, 2017
 author: Leslie Lundquist
 ---
