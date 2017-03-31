@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Image Configuration Parameters for RHOSP
-tags: [commontech, userguides, image, glance, distro, libvirt, property keys]
+tags: [glance, userguides, image, glance, distro, libvirt, property keys]
 dateAdded: March 28, 2017
 author: Leslie Lundquist
 ---
