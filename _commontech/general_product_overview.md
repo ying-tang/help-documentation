@@ -57,6 +57,6 @@ Your purchase of IBM Bluemix Private Cloud includes 24/7 technical support. The 
 
 For more detailed information about your cloud configuration, please refer to these documents;
 
- * [Building Blocks for IBM Bluemix Private Cloud]()
+ * [Building Blocks for IBM Bluemix Private Cloud](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/Building_Blocks/)
 
- * [Building Blocks for IBM Bluemix Private Cloud with Red Hat]()
+ * [Building Blocks for IBM Bluemix Private Cloud with Red Hat](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/RHOSP_Building_Blocks/)
