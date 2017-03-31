@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building Blocks for IBM Bluemix Private Cloud (Community Edition)
+title: IBM Bluemix Private Cloud Building Blocks (Community Edition)
 featured: false
 weight: 10
 tags: [getting started, dedicated, local, controllers, nodes, overview]
