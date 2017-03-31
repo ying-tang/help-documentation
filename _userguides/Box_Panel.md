@@ -194,4 +194,4 @@ To have a written conversation with one of our Bluemix Private Cloud support tea
 
 To view your contracts and monthly billing reports, click the **Account** tab in the Box Panel Dashboard, then click the **Billing** tab.
 
-For further billing support, please contact the Blue Box Support Team, and we will be happy to assist you.
+For further billing support, please [contact the IBM Support Team](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commonadmin/report-issue/), and we will be happy to assist you.
