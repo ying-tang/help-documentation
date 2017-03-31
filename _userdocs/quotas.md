@@ -229,7 +229,7 @@ For example:
 ## How to list Tenant Network Quotas
 
 {% highlight bash %}
-# neutron quota-show --tenant-id <tenant-id> --user-id <user-id>
+# neutron quota-show --tenant-id <tenant-id>
 {% endhighlight %}
 
 For example:
@@ -252,7 +252,13 @@ For example:
 ## How to update Tenant Network Quotas
 
 {% highlight bash %}
-# neutron quota-update --tenant-id <tenant-id> --user-id <user-id> --<resource> <limit>
+# neutron quota-update --tenant-id <tenant-id> --<resource> <limit>
+{% endhighlight %}
+
+If Neutron LBaaS is enabled in your cluster, you may encounter a problem that the quota of `loadbalancer` can't be updated via above command when you are using `python-neutronclient` of version < `6.0.0` (there won't be any error from the command, but the quota limit will be unchanged), that is a bug in older version of `python-neutronclient` and had been fixed in version `6.0.0` and higher. Please upgrade your `python-neutronclient` or use the following command as a workaround solution for `python-neutronclient` of version < `6.0.0`.
+
+{% highlight bash %}
+# neutron quota-update <tenant-id> --loadbalancer <limit>
 {% endhighlight %}
 
 # Storage Quotas

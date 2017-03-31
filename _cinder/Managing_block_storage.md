@@ -4,7 +4,7 @@ title: Managing Block Storage
 author: Ying Tang
 editor: Jillian Tempelmeyer
 dateAdded: November 21, 2016
-tags: [cinder, block storage]
+tags: [cinder, block storage, publicURL, endpoint, not found]
 featured: true
 weight: 4
 ---
@@ -88,3 +88,15 @@ For more information on this topic, you can refer to the following document: [Cr
 
 
 After creating and attaching your Cinder volumes to Virtual Servers, you can easily adjust and expand their volume sizes as your capacity requirements grow. You are also able to detach and re-attach your block volumes to another Virtual Server requiring persistent storage, while your stored data remains safeguarded.
+
+### Troubleshooting
+### openstack volume list --name vs. cinder list --name
+If you are a user with a role that is not `cloud_admin`, the `openstack volume list --name` command doesn't function correctly for you.  To circumvent this problem, you can let a user with the `cloud_admin` role filter volumes by name, or you can use the `cinder list --name` command, which works for any user.  We have opened internal defect 374319 for this issue, and we are working with our engineering team on resolving the problem.
+
+### publicURL endpoint for volumev2 service not found error when running cinder or openstack volume commands
+
+If you get this error, it is usually because you don't have any block storage (Cinder volume) nodes in your current cluster. If you'd like to order block storage, please open a ticket requesting it and our sales team will help you get it added.
+
+### publicURL endpoint for volumev3 service ... not found
+
+This error can happen when you have an earlier version of the volume service in your endpoint list.  To resolve this, add  `export OS_VOLUME_API_VERSION=2` to your RC file.

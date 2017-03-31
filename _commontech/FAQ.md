@@ -3,7 +3,7 @@ layout: page
 title:  "Technical FAQ"
 featured: true
 weight: 8
-tags: [getting started, faq, resize, instance, admin, project, forbidden ports, security groups]
+tags: [getting started, faq, resize, instance, admin, project, forbidden ports, ports, security groups]
 author: Eric French, Ulysses Kanigel, Leslie Lundquist
 dateAdded: April 9th, 2015
 updated: March 18, 2016
