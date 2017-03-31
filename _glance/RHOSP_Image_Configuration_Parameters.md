@@ -6,7 +6,6 @@ dateAdded: March 28, 2017
 author: Leslie Lundquist
 ---
 
-## IMAGE CONFIGURATION PARAMETERS for RED HAT
 
 When working with **IBM Bluemix Private Cloud with Red Hat** the following keys can be used with the property option for both the `glance image-update` and `glance image-create` commands.
 
