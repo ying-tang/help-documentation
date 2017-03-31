@@ -23,7 +23,7 @@ All of our Linux cloud images were updated based on the latest official images s
 
 All Linux images support `heat-cfn` tools.
 
-As ubuntu 12.04 will be suppoted untill April, 2017. So ubuntu 12.04 won't be one of our offers and ubuntu 16.04 will be supported since this release.
+Ubuntu 12.04 will be supported until April, 2017. After that time, Ubuntu 12.04 will be deprecated and Ubuntu 16.04 will be our supported version.
 
 **CentOS 6.8 x86_64**
 
@@ -48,9 +48,9 @@ As ubuntu 12.04 will be suppoted untill April, 2017. So ubuntu 12.04 won't be on
 
 # **Updates of Windows images**
 
-All of the windows cloud images were updated based on the latest official ISO specs.
+All of the Windows cloud images were updated based on the latest official ISO specs.
 
-All windows images have been set to use UTC(Coordinated Universal Time).
+All Windows images have been set to use UTC (Coordinated Universal Time).
 
 **Windows Server 2008 R2 SP1 Datacenter**
 
