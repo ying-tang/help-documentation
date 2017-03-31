@@ -2,7 +2,7 @@
 layout: page
 title: Customer 3.1.1 Point Release Notes
 author: Leslie Lundquist
-featured: true
+featured: false
 dateAdded: December 16, 2016
 tags: [release notes, 3.1.1]
 
