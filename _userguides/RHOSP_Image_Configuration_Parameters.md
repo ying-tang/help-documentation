@@ -16,7 +16,7 @@ $ glance image-update IMG-UUID --property architecture=x86_64
 
 **Note:** Behavior set using image properties overrides behavior set using flavors.
 
-### Table A.1. Property Keys
+### Property Keys
 
 
 | Applies To    | Key   | Description | Supported values  |
