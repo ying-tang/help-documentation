@@ -8,7 +8,7 @@ author: Leslie Lundquist
 
 ## IMAGE CONFIGURATION PARAMETERS
 
-The following keys can be used with the property option for both the `glance image-update` and `glance image-create` commands.
+When working with **IBM Bluemix Private Cloud with Red Hat** the following keys can be used with the property option for both the `glance image-update` and `glance image-create` commands.
 
 ```
 $ glance image-update IMG-UUID --property architecture=x86_64
