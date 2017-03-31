@@ -19,5 +19,7 @@ Cloud images provided by IBM Bluemix Private Cloud are updated periodically, to 
 
 #### [Image Release Notes 20161130](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20161130/Image_Release_Notes_2016-11-30/) (Released November 30, 2016)
 
+#### [Image Release Notes 20170228](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20170228/Image_Release_Notes_2017-02-28/) (Released February 28, 2017)
+
 To get more details about how to use these cloud images, please refer to the [User's Guide to Cloud Images](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/).
 
