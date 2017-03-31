@@ -17,7 +17,7 @@ This document offers a basic technical description of the **IBM Bluemix Private 
 
 ### General Product Overview
 
-IBM Bluemix Private Cloud with Red Hat is built upon the RHOSP 10 release, with RHEL 7.3, and using OpenStack Newton. A **Product Overview** for IBM Bluemix Private Cloud with Red Hat is given in this [Overview Document](https://github.com/IBM-Blue-Box-Help/help-documentation/pull/702/files).
+IBM Bluemix Private Cloud with Red Hat is built upon the RHOSP 10 release, with RHEL 7.3, and using OpenStack Newton. A **Product Overview** for IBM Bluemix Private Cloud with Red Hat is given in this [Overview Document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/RHOSP_Product_Overview/).
 
 ### Working with Images
 
