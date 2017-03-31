@@ -2,8 +2,8 @@
 layout: page
 category: newton
 title:  "Launching an instance from the Horizon dashboard (OpenStack Newton release)"
-tags: [horizon, instance, launch]
-dateAdded: June 6, 2016
+tags: [horizon, instance, launch, newton, rhosp]
+dateAdded: March 31, 2017
 author: Ying Tang
 featured: false
 weight: 4
@@ -28,7 +28,7 @@ Navigate through the following tabs and provide the values, then click **Launch 
 | Availability Zone    | By default, this value is set to the Availability Zone (AZ) given by the cloud provider, for example, `compute_standard`. 																												 |
 | Count	               | To launch multiple instances, enter a value greater than 1. The default is 1.																																																																															  |
 
-![The Details tab]({{site.baseurl}}/img/launch_instance_details.png)
+![The Details tab]({{site.baseurl}}/img/launch_instance_details_newton.png)
 
 To continue, click **Next** or click on the **Source** tab.
 
@@ -43,7 +43,7 @@ The **Select Boot Source** field offers these options:
 | Volume				| Make a selection from the volumes in the **Available** table, then click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume when the instance is terminated.   											  																																  |
 | Volume Snapshot       | Make a selection from the volume snapshots in the **Available** table, then click the plus sign (+) to move it to **Allocated**. Optionally, you can click **Yes** on the **Delete Volume on Instance Delete** option to delete this volume when the instance is terminated.										  																																  |
 
-![The Source tab]({{site.baseurl}}/img/launch_instance_source_image.png)
+![The Source tab]({{site.baseurl}}/img/launch_instance_source_image_newton.png)
 
 **Note:** The **Image** option is set by default, so you don't have to select one before booting. If you use the **Image** option, you can select from the public images provided by IBM, or you can upload and use your own image. For information about how to upload an image to IBM Bluemix Private Cloud, see [Cloud images provided by IBM Bluemix Private Cloud](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/). 
 
@@ -51,13 +51,13 @@ The **Select Boot Source** field offers these options:
 
 Make a selection from the list of flavors, then click the plus sign (+) to move it to **Allocated**. 
 
-![The Flavor tab]({{site.baseurl}}/img/launch_instance_flavor.PNG)
+![The Flavor tab]({{site.baseurl}}/img/launch_instance_flavor_newton.PNG)
 
 #### The Networks tab
 
 Make a selection from the list of networks, then click the plus sign (+) to move it to **Allocated**. You can allocate multiple networks to the instance. 
 
-![The Flavor tab]({{site.baseurl}}/img/launch_instance_network.png)
+![The Flavor tab]({{site.baseurl}}/img/launch_instance_network_newton.png)
 
 #### The Network Ports tab
 
@@ -72,7 +72,7 @@ Occasionally, you may need to create ports beforehand through APIs. After you cr
 
 Make a selection from the list of security groups, then click the plus sign (+) to move it to **Allocated**.   
 
-![The Security Group tab]({{site.baseurl}}/img/Launch_Instance_srg.png)        
+![The Security Group tab]({{site.baseurl}}/img/Launch_Instance_srg_newton.png)        
 
 			
 #### The Key Pair tab
@@ -87,7 +87,7 @@ Specify a key pair. You have the following options:
   
   You'll be promoted to save the new key pair to the local host.
   
-  ![Create a new key pair and save]({{site.baseurl}}/img/launch_instance_kp_new.PNG)
+  ![Create a new key pair and save]({{site.baseurl}}/img/launch_instance_kp_new_newton.PNG)
 
 #### The Configuration tab
 
@@ -103,7 +103,7 @@ Custom scripts attached to instances can perform specific actions when the insta
 	net user <YOUR_USERNAME> <YOUR_PASSWORD> /logonpasswordchg:yes /add /y
 	net localgroup administrators <YOUR_USERNAME> /add
 	
-![Custom script]({{site.baseurl}}/img/launch_instance_script.PNG)
+![Custom script]({{site.baseurl}}/img/launch_instance_script_newton.PNG)
 
 If your browser supports the **HTML5 File API**, you may click **Browse** to load your script from a file. The size of your script should not exceed **16 Kb**.
 
@@ -118,14 +118,14 @@ Server groups can be used to control the affinity and anti-affinity scheduling p
 
 Occasionally, you may need to create server groups beforehand through APIs. After you create a server group you'll be able to view this server group in the **Available** table. You can click the plus sign (+) to move it to **Allocated**. 
 
-![Server Groups]({{site.baseurl}}/img/launch_instance_servergroup.png)    
+![Server Groups]({{site.baseurl}}/img/launch_instance_servergroup_newton.png)    
 
 
 #### The Scheduler Hints tab
 
 The scheduler hints can be used to pass additional placement related information to the Nova scheduler. For example, you can use a scheduler hint to ensure that an instance is scheduled on to a host from a certain server group. You can also construct a custom scheduler hint in JSON format. For more details about the scheduling mechanism and the supported hint types, see [Compute Schedulers](https://docs.openstack.org/newton/config-reference/compute/schedulers.html).
 
-![Scheduler Hints]({{site.baseurl}}/img/launch_instance_hints.png)
+![Scheduler Hints]({{site.baseurl}}/img/launch_instance_hints_newton.png)
 
 
 	
@@ -135,7 +135,7 @@ Glance provides a common API to define key and value pairs that tag metadata for
 
 You can create additional key and value pairs in the **Custom** field and click the plus sign (+) to move them to the **Existing metadata** list. For example, custom metadata is a parameter that you'd want to pass to the application, so it can be installed with the instance.
 
-![Custom meta]({{site.baseurl}}/img/launch_instance_meta.PNG)
+![Custom meta]({{site.baseurl}}/img/launch_instance_meta_newton.PNG)
 
 For more information about Glance metadata, see [Metadata Definition Concepts](http://docs.openstack.org/developer/glance/metadefs-concepts.html) and [Using Glance’s Metadata Definitions Catalog Public APIs](http://docs.openstack.org/developer/glance/glancemetadefcatalogapi.html).
 
