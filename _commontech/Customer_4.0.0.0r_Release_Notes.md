@@ -21,6 +21,6 @@ IBM Bluemix Private Cloud with Red Hat is built upon the RHOSP 10 release, with 
 
 ### Working with Images
 
-If you're planning to use your own licensed images, you'll want to see [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/RHOSP_Uploading_Images.md) for information about how to obtain Red Hat images and about how to upload and manage your images.
+If you're planning to use your own licensed images, you'll want to see [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_RHOSP.md) for information about how to obtain Red Hat images and about how to upload and manage your images.
 
 You'll want to see [this document](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/RHOSP_Image_Configuration_Parameters.md) for more detailed information about configuring your images.
