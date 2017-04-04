@@ -47,6 +47,15 @@ top-level: gettingstarted
         {% endif %}
       {% endfor %}
     </ul>
+      {% elsif page.title == 'Release Notes' %}
+    <ul class="page--list">
+      <li><a class="page--title" href="{{ '/gettingstarted/' | prepend: site.baseurl }}">{{ page.title }}</a></li>
+      {% for item in site.releasenotes %}
+        {% if item.title %}
+        <li><a class="page--link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
     {% endif %}
   {% endfor %}
 </div>
