@@ -3,7 +3,7 @@ layout: page
 title: Release Notes 2.1.1
 featured: true
 weight: 5
-tags: [commontech, release, features, gettingstarted]
+tags: [releasenotes, commontech, release, features, gettingstarted]
 dateAdded: June 2, 2016
 author: Leslie Lundquist
 ---
