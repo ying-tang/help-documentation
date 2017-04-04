@@ -3,7 +3,7 @@ layout: page
 title: Release Notes 3.0.0
 featured: false
 weight: 5
-tags: [commontech, releasenotes, features, gettingstarted]
+tags: [commontech, releasenotes, features, gettingstarted, mitaka]
 dateAdded: April 22, 2016
 author: Leslie Lundquist
 ---
