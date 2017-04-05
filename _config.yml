@@ -90,3 +90,6 @@ collections:
   ceilometer:
     output: true
     permalink: /ceilometer/:path/
+  releasenotes:
+    output: true
+    permalink: /releasenotes/:path/
