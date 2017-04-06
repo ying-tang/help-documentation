@@ -77,9 +77,9 @@ The following table summarizes the OpenStack components in IBM Bluemix Private C
 
 | Service    | Version   | API Version | Port    | Related Documentation  |
 |------------|-----------|-------------|---------|----------------|
-| Horizon    | 10.0.1    |  N/A    | 80, 443 | [Using the Box Panel Dashboard](http://ibm-blue-box-help.github.io/help-documentation/horizon/) |
-| Keystone   | 10.0.0    |  v3     | 5000    | [Working With Virtual Machine Instances](http://ibm-blue-box-help.github.io/help-documentation/nova/) |
-| Nova       | 14.0.2   |   v2.1   | 8774    | [Managing Users and Identity](http://ibm-blue-box-help.github.io/help-documentation/keystone/) |
+| Horizon    | 10.0.1    |  N/A    | 80, 443 | [Using the Horizon Dashboard](http://ibm-blue-box-help.github.io/help-documentation/horizon/) |
+| Keystone   | 10.0.0    |  v3     | 5000    | [Managing Users and Identity](http://ibm-blue-box-help.github.io/help-documentation/nova/) |
+| Nova       | 14.0.2   |   v2.1   | 8774    | [Working With Virtual Machine Instances](http://ibm-blue-box-help.github.io/help-documentation/keystone/) |
 | Glance     | 13.0.0    |   v2   | 9292    | [Using Images](http://ibm-blue-box-help.github.io/help-documentation/glance/) |
 | Cinder     | 9.1.1    |   v3  | 8776    | [Block Storage Concepts](http://ibm-blue-box-help.github.io/help-documentation/cinder/) |
 | Neutron    | 9.1.1    |  v2   | 9696    | [Networking Concepts](http://ibm-blue-box-help.github.io/help-documentation/neutron/) |
