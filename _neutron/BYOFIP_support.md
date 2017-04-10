@@ -1,9 +1,9 @@
 ---
-layout: Page
-title: BYOFIP_customer_doc.md
+layout: page
+title: "Using BYOFIP Connectivity Between IBM Bluemix Private Cloud and a Customer Site"
 featured: FALSE
 weight: 5
-tags: [networking, byofip]
+tags: [neutron, byofip]
 date: August 12, 2016
 author: Xiang Wang
 editor: Jillian Tempelmeyer
