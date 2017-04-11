@@ -13,49 +13,68 @@ author: Ying Tang
 
 ### VPN
 
-VPN is a secured tunnel between two networks. Typical VPN use cases with IBM Bluemix Private Cloud are the following: 
+VPN is a secured tunnel between two networks. A most typical VPN use cases with IBM Bluemix Private Cloud is the following: 
 
-1. [Connect with OpenVPN to your cloud instance](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/connect-to-openvpn-server/)
-2. [Create your own network](http://ibm-blue-box-help.github.io/help-documentation/neutron/creating-virtual-networks/)
+When you need to connect to your internal Bluemix Private Cloud instances, but either you don’t have the available floating IP addresses or you prefer to not put those virtual machines on the internet, you can [establish a bastion host with OpenVPN running on it](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/openvpn-setup/) and then [connect with OpenVPN to your cloud instance](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/connect-to-openvpn-server/). 
 
+ 
 ### VLAN
 
 You may want to create a new network with one or more subnets to your cloud instance. This new network is called a VLAN. 
 
-If you have cloud instances on different IBM Datacenters, and want to enable VLAN connectivity between these cloud instances, a snapping will be needed between these VLANs.
+Typically, you can use the Horizon dashboard or the OpenStack command line to [create additional networks with OpenStack Neutron](http://ibm-blue-box-help.github.io/help-documentation/neutron/creating-virtual-networks/).
 
 ### Direct Link
+
 **Direct Link** is a SoftLayer feature that lets you connect to the SoftLayer private network backbone or network, bypassing the public Internet to connect to your Dedicated cloud(s). It is available in 1Gbps and 10Gbps increments. 
 
 Direct Link can be utilized to create a hybrid cloud, if you want to link your Local cloud to a Dedicated cloud that is running in a SoftLayer data center. More information about Direct Link is available on the [SoftLayer website](http://www.softlayer.com/direct-link).
 
 The most common use of Direct Link is to bring your own IP address to your IBM Bluemix Private Cloud instance. 
 
+## Requesting VPN
+
+In the following cases you need to contact the IBM Bluemix Private Cloud personnel for VPN setup:
+
+* If you bring your own SoftLayer IP (BYOIP) to the IBM Bluemix Private Cloud, and want to assign it to your cloud instance, you need either an OpenVPN connection or IPSec tunnel between your customer site and the cloud instance. Open a support ticket and provide the following information:
+   
+   * The SoftLayer IP that you want to assign to your cloud instance
+   * Your remote-site VPN endpoint
+   
+
+* If you bring your own floating IP (BYOFIP) to the IBM Bluemix Private Cloud, and want to connect to the cloud instances over the BYOFIP network from your customer site, a tunnel must be establised by the IBM Bluemix Private Cloud personnel between the BYOFIP network and the cloud instance. Open a support ticket and provide the following information: 
+   
+   * The floating IP that you would like to bring
+   * Your remote-site VPN endpoint
 
 
 ## Requesting VLAN
-To request a VLAN, prepare the following information and open a support ticket with that included:
 
-* Private or Public Network: Choose either private or public.
-* Description of VLAN Use / hosts contained within VLAN
+If a Neutron-enabled network does not meet your requirement, for example, you need a provider network (either a container Network, ot a private SoftLayer static network), you can prepare the following information and open a support ticket with that included:
 
-1. Customer Information: Customer name, company name, address, phone number, time zone, job title, and optionally, Customer ID on SoftLayer.
+* Customer Information: Customer name, company name, address, phone number, time zone, job title, and optionally, Customer ID on SoftLayer.
 
-2. Number of IPs you are requesting.
+* The number of IPs you are requesting
 
-3. Number of new IPs that will be used within 30 days of allocation.
+* The number of new IPs that will be used within 30 days of allocation
 
-4. Total number of new IPs that will be used within the next 6 months.
+* Total number of new IPs that will be used within the next 6 months
 
-5. How should the additional IPs be delivered?
+* How should the additional IPs be delivered?
 
-6. Brief description of your need for additional IPs.
+* Brief description of your need for additional IPs
 
-7. Optionally, specific the neutron network name.
+* Optionally, specify the neutron network name.
 
+The Bluemix Private Cloud team will request the VLAN on SoftLayer according to the provided information. 
+
+If you have cloud instances on different IBM Datacenters, and want to enable VLAN connectivity between these cloud instances, a VLAN spanning may be needed between these VLANs. This job will be done by the IBM Bluemix Private Cloud personnel.
 
 ## Requesting Direct Link
 
+If you request Direct Link for the purpose of BYOIP, Direct Link can be considered an alternative to the tunnel establised as described in [Requesting VPN](#requesting-vpn). 
+
 To request a Direct Link, prepare the following information and open a support ticket with that included:
 
-1. Which SoftLayer Datacenter to connect.
+* Which SoftLayer Datacenter to connect
+* Your remote-site Direct Link endpoint 
