@@ -4,7 +4,7 @@ title: Managing Block Storage
 author: Ying Tang
 editor: Jillian Tempelmeyer
 dateAdded: November 21, 2016
-tags: [cinder, block storage, publicURL, endpoint, not found]
+tags: [cinder, block storage, publicURL, endpoint, not found, usage]
 featured: true
 weight: 4
 ---
@@ -100,3 +100,9 @@ If you get this error, it is usually because you don't have any block storage (C
 ### publicURL endpoint for volumev3 service ... not found
 
 This error can happen when you have an earlier version of the volume service in your endpoint list.  To resolve this, add  `export OS_VOLUME_API_VERSION=2` to your RC file.
+
+### Why does the total volume size of all the volumes allocated in Cinder not match the raw total from Ceph? ###
+
+This can happen if you have volumes in Ceph that were deleted but are still in the pool, and other volumes were created from these volumes before they were deleted.  The way Ceph works, cloned volumes are copy-on-write child volumes of the volume from which they were cloned, which means that the parent volume must be retained until all of its children (and grand-children, great-grand-children, etc.) are deleted.  That being the case, the usage won't equal the sum of the sizes of currently active volumes.
+
+More information on Ceph copy-on-write layering can be found at: http://docs.ceph.com/docs/hammer/dev/rbd-layering/
