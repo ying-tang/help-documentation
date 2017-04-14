@@ -58,7 +58,9 @@ If you see it trying to connect to an IP like 192.168.0.2 instead of 169.254.169
 
 #### Q. What can I do when it times out?
 
-**A.** Open a support ticket and request a restart of these services on both of your controller (network) nodes.
+**A.** From inside the instance, try manually accessing the metadata service with `curl http://169.254.169.254/latest/meta-data/`.  To help narrow it down further, try temporarily relaxing your security group rules, and your SELinux settings.  You can also try a different image, preferably one of the official IBM provided images.
+
+If that doesn't work, open a support ticket and request a restart of these services on both of your controller (network) nodes.
 
  * neutron-metadata-agent (on both network nodes)
  * neutron-l3-agent (on both network nodes)
