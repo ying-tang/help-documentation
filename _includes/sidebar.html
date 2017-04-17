@@ -10,7 +10,7 @@
                {% assign hidden-size = hidden-size | plus: 1 %}
               {% endif %}
         {% endfor %}
-        <a {% if page.url == '/gettingstarted/' %} class="page-link active" {% else %} class="page-link" {% endif %} href="{{ site.baseurl | append: '/gettingstarted' }}">Getting Started ({{ site.commontech.size | plus:site.commonadmin.size | plus:site.userguides.size | minus:hidden-size}})</a>
+        <a {% if page.url == '/gettingstarted/' %} class="page-link active" {% else %} class="page-link" {% endif %} href="{{ site.baseurl | append: '/gettingstarted' }}">Getting Started ({{ site.commontech.size | plus:site.commonadmin.size | plus:site.userguides.size | plus:site.releasenotes.size | minus:hidden-size}})</a>
         <a href="" {% if page.url == '/gettingstarted/' %} class="expand" {% else %} class="expand rotate" {% endif %}><img src="{{ site.baseurl }}/img/arrow.svg" /></a>
       </h3>
       <ul {% if page.url == '/gettingstarted/' %} class="article__list" {% elsif page.tags[0] contains 'getting' %} class="article__list" {% else %} class="article__list slide-up-hidden" {% endif %}>
@@ -88,6 +88,30 @@
         <li><a href="" class="page-link view">View More ( {{ count }} )</a></li>
       </ul>
       
+      <ul {% if page.url == '/gettingstarted/' %} class="article__list" {% elsif page.tags[0] contains 'getting' %} class="article__list" {% else %} class="article__list slide-up-hidden" {% endif %}>
+        <h5 class="sub__head">Release Notes</h5>
+        {% assign count = 0 %}
+        {% assign rn = site.releasenotes | sort:"weight" %}
+          {% for node in rn %}
+             {% if node.featured == true %}
+                <li>
+                <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+                </li>
+              {% elsif node.featured == false %}
+                {% if page.url == node.url %}
+                  <li>
+                    <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend:  site.baseurl }}">{{ node.title }}</a>
+                  </li>
+                {% else %}
+                  {% assign count = count | plus: 1 %}
+                  <li class="hidden non-featured">
+                    <a {% if page.url == node.url %}class="page-link--active" {% else %}class="page-link"{% endif %} href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+                  </li>
+              {% endif %}
+             {% endif %}
+         {% endfor %}
+        <li><a href="" class="page-link view">View More ( {{ count }} )</a></li>
+      </ul>
     </li>
     <li>
       <h3 class="title">
