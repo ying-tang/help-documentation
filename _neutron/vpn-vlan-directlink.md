@@ -4,7 +4,7 @@ title: "VPN, VLAN, and Direct Link"
 featured: FALSE
 weight: 5
 tags: [neutron, VLAN, Direct Link]
-date: April 10, 2017
+date: April 17, 2017
 author: Ying Tang
 ---
 
@@ -15,12 +15,13 @@ author: Ying Tang
 
 VPN is a secured tunnel between two networks. A most typical VPN use cases with IBM Bluemix Private Cloud is the following: 
 
-When you need to connect to your internal Bluemix Private Cloud instances, but either you don’t have the available floating IP addresses or you prefer to not put those virtual machines on the internet, you can [establish a bastion host with OpenVPN running on it](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/openvpn-setup/) and then [connect with OpenVPN to your cloud instance](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/connect-to-openvpn-server/). 
-
+When you need to connect to your internal Bluemix Private Cloud instances, and you prefer not to put those virtual machines on the internet, you can [establish a bastion host with OpenVPN running on it](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/openvpn-setup/) and then [connect with OpenVPN to your cloud instance](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/commontech/connect-to-openvpn-server/). 
  
 ### VLAN
 
-You may want to create a new network with one or more subnets to your cloud instance. This new network is called a VLAN. 
+A VLAN is a logical grouping of switch (or bridge) ports spanning one or more switches which present a common isolated L2 broadcast domain, that is, a broadcast domain where a broadcast frame _should_ reach all ports on the VLAN). 
+
+Technically a Neutron network _may_ be a VLAN. It has been extended to various overlay and tunnel technologies, and recently extended to mean a group of Neutron ports which are reachable via L3 (e.g. IP protocol packets). This distinction was made for large providers who wish to use L3 routing to reduce the L2 broadcast domain size to improve scaling.
 
 Typically, you can use the Horizon dashboard or the OpenStack command line to [create additional networks with OpenStack Neutron](http://ibm-blue-box-help.github.io/help-documentation/neutron/creating-virtual-networks/).
 
@@ -47,28 +48,6 @@ In the following cases you need to contact the IBM Bluemix Private Cloud personn
    * The floating IP that you would like to bring
    * Your remote-site VPN endpoint
 
-
-## Requesting VLAN
-
-If a Neutron-enabled network does not meet your requirement, for example, you need a provider network (either a container Network, ot a private SoftLayer static network), you can prepare the following information and open a support ticket with that included:
-
-* Customer Information: Customer name, company name, address, phone number, time zone, job title, and optionally, Customer ID on SoftLayer.
-
-* The number of IPs you are requesting
-
-* The number of new IPs that will be used within 30 days of allocation
-
-* Total number of new IPs that will be used within the next 6 months
-
-* How should the additional IPs be delivered?
-
-* Brief description of your need for additional IPs
-
-* Optionally, specify the neutron network name.
-
-The Bluemix Private Cloud team will request the VLAN on SoftLayer according to the provided information. 
-
-If you have cloud instances on different IBM Datacenters, and want to enable VLAN connectivity between these cloud instances, a VLAN spanning may be needed between these VLANs. This job will be done by the IBM Bluemix Private Cloud personnel.
 
 ## Requesting Direct Link
 
