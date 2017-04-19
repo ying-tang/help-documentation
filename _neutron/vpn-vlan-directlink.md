@@ -49,6 +49,10 @@ In the following cases you need to contact the IBM Bluemix Private Cloud personn
    * Your remote-site VPN endpoint
 
 
+## Requesting VLAN
+
+There is very rare chance that you need to orginate a VLAN request deliberately, because this should be a default setup process by IBM Bluemix Private Cloud personnel when they set up the cloud for you. In case there is a need, you can open a support ticket.
+
 ## Requesting Direct Link
 
 If you request Direct Link for the purpose of BYOIP, Direct Link can be considered an alternative to the tunnel establised as described in [Requesting VPN](#requesting-vpn). 
