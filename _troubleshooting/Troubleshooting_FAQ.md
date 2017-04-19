@@ -12,6 +12,7 @@ dateAdded: August 19, 2016
 
  * [How Can I Tell When My Virtual Machine Last Rebooted?](#last_rebooted)
  * [What should I do if my instance froze and stopped responding?](#instance_froze)
+ * [What if I need to perform rescue operations on my instance?](#instance_rescue)
  * [Why can’t I resize my instance from `m1.tiny` to `m1.medium`?](#cant_resize)
  * [What causes stuck ports in Neutron?](#stuck_ports)
  * [What ports need to be open for OpenStack?](#ports_open)
@@ -50,9 +51,56 @@ If you need to get into single user mode reliably, for example, to run a filesys
 4. If the boot process seems to stop, press enter a few times.
 
 
+#### Q. <a name="instance_rescue"></a>What if I need to perform rescue operations on my instance?
+
+**A.**
+1. Get a rescue CD ISO, for example from http://www.system-rescue-cd.org :
+```
+wget https://dronedata.dl.sourceforge.net/project/systemrescuecd/sysresccd-x86/4.9.6/systemrescuecd-x86-4.9.6.iso
+```
+
+2. Install isohybrid from the sysutils package:
+```
+apt-get install syslinux [or yum install syslinux]
+```
+
+3. Add the master boot record to the ISO to make it a bootable hard disk
+```
+isohybrid systemrescuecd-x86-4.9.6.iso
+```
+
+4. Upload the new hybrid rescue CD to Glance:
+```
+openstack image create --file systemrescuecd-x86-4.9.6.iso --public sysrescuecd-4.9.6.iso
+```
+
+5. Put the instance that needs to be rescued into rescue mode:
+```
+nova rescue brokeninstance --image sysrescuecd-4.9.6.iso
+```
+
+6. Login to the instance via the VNC console in Horizon and perform whatever rescue operation you need to do.  You may need to wait 1-2 minutes for the rescue CD to become viewable in the console.  Reload the console screen after waiting.
+
+(/img/systemrescuefromvnc.png)
+
+From here you can use tools such as:
+
+```
+blkid
+fsck /dev/vdb1
+mount -t ntfs /dev/xxx /mnt/windows -o ro
+ntfs-3g /dev/sda1 /mnt/windows
+```
+
+7. When you're satisfied the instance is fixed, get it out of rescue mode and start it from the normal boot disk again using the command: 
+```
+nova unrescue brokeninstance
+```
+
+
 #### Q. <a name="cant_resize"></a>Why can’t I resize my instance from `m1.tiny` to `m1.medium`?
 
-It’s possible that the instance was actually created at a time when the `m1.tiny` flavor had a larger Ephemeral disk. The resize process is checking for that, and it will fail to resize if that value is not found.
+It's possible that the instance was actually created at a time when the `m1.tiny` flavor had a larger ephemeral disk. The resize process is checking for that, and it will fail to resize if that value is not found.
 
 You might need to [open a support ticket](https://github.com/IBM-Blue-Box-Help/help-documentation/blob/gh-pages/_commonadmin/report-issue.md) to get help in verifying that this is the cause of your failure. The support team would see an error in the logs, something like this:
 
