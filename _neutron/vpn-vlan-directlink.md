@@ -43,7 +43,7 @@ In the following cases you need to contact the IBM Bluemix Private Cloud personn
    * Your remote-site VPN endpoint
    
 
-* If you bring your own floating IP (BYOFIP) to the IBM Bluemix Private Cloud, and want to connect to the cloud instances over the BYOFIP network from your customer site, a tunnel must be establised by the IBM Bluemix Private Cloud personnel between the BYOFIP network and the cloud instance. Open a support ticket and provide the following information: 
+* If you bring your own floating IP (BYOFIP) to the IBM Bluemix Private Cloud, and want to connect to the cloud instances over the BYOFIP network from your customer site, a tunnel must be established by the IBM Bluemix Private Cloud personnel between the BYOFIP network and the cloud instance. Open a support ticket and provide the following information: 
    
    * The floating IP that you would like to bring
    * Your remote-site VPN endpoint
