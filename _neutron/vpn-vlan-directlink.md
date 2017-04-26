@@ -1,10 +1,10 @@
 ---
-layout: Page
+layout: page
 title: "VPN, VLAN, and Direct Link"
-featured: FALSE
+featured: false
 weight: 5
 tags: [neutron, VLAN, Direct Link]
-date: April 17, 2017
+dateAdded: April 17, 2017
 author: Ying Tang
 ---
 
@@ -37,16 +37,16 @@ The most common use of Direct Link is to bring your own IP address to your IBM B
 
 In the following cases you need to contact the IBM Bluemix Private Cloud personnel for VPN setup:
 
-* If you bring your own SoftLayer IP (BYOIP) to the IBM Bluemix Private Cloud, and want to assign it to your cloud instance, you need either an OpenVPN connection or IPSec tunnel between your customer site and the cloud instance. Open a support ticket and provide the following information:
+If you bring your own SoftLayer IP (BYOIP) to the IBM Bluemix Private Cloud, and want to assign it to your cloud instance, you need either an OpenVPN connection or IPSec tunnel between your customer site and the cloud instance. Open a support ticket and provide the following information:
    
-   * The SoftLayer IP that you want to assign to your cloud instance
-   * Your remote-site VPN endpoint
+* The SoftLayer IP that you want to assign to your cloud instance
+* Your remote-site VPN endpoint
    
 
-* If you bring your own floating IP (BYOFIP) to the IBM Bluemix Private Cloud, and want to connect to the cloud instances over the BYOFIP network from your customer site, a tunnel must be established by the IBM Bluemix Private Cloud personnel between the BYOFIP network and the cloud instance. Open a support ticket and provide the following information: 
+If you bring your own floating IP (BYOFIP) to the IBM Bluemix Private Cloud, and want to connect to the cloud instances over the BYOFIP network from your customer site, a tunnel must be established by the IBM Bluemix Private Cloud personnel between the BYOFIP network and the cloud instance. Open a support ticket and provide the following information: 
    
-   * The floating IP that you would like to bring
-   * Your remote-site VPN endpoint
+* The floating IP that you would like to bring
+* Your remote-site VPN endpoint
 
 
 ## Requesting VLAN
