@@ -1,4 +1,13 @@
-
+---
+layout: page
+title: Requirements for OpenStack client versions
+featured: false
+weight: 10
+tags: [openstack, client, command line, package, version, python, compatibility]
+dateAdded: April 28, 2017
+author: Leslie Lundquist
+editor: Leslie Lundquist, Niraj Patel
+---
 
 
 ## Requirements for OpenStack client versions
