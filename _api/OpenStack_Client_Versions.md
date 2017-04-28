@@ -14,12 +14,12 @@ editor: Leslie Lundquist, Niraj Patel
 
 When interacting with your IBM Bluemix Private Cloud, it is a best practice to follow the list of suggested package versions for the OpenStack client, as given on the OpenStack website.
 
-Using an unexpected version of `python-openstackclient` can cause problems for the clients interacting with the cloud. The OpenStack website contains a list of requirements with the package compatibility for each release of OpenStack. For example, to review the Newton package requirements, please see this page:
+Using an unexpected version of `python-openstackclient` can cause problems for the clients interacting with the cloud. The OpenStack website contains a list of requirements with the package compatibility for each release of OpenStack. For example, to review the Newton or Mitaka package requirements, please see these pages:
 
-Newton:
+**Newton:**
 https://github.com/openstack/requirements/blob/stable/newton/upper-constraints.txt
 
-Mitaka:
+**Mitaka:**
 https://github.com/openstack/requirements/blob/stable/mitaka/upper-constraints.txt
 
 It’s recommended that you use the versions for OpenStack clients listed in these requirements documents, so that the behavior of your client is predictable when interacting with the cloud.
