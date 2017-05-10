@@ -26,8 +26,8 @@ Please see [https://docs.openstack.org/image-guide/ubuntu-image.html](https://do
 
 ### Regarding VMDK Images
 
-You can convert a VMDK image to QCOW2 with `qemu-img convert -O qcow2 example.vmdk example.qcow2`(see [https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd](https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd) for reference), but you need to make sure the image contains the proper `cloud-init` packages as well, before uploading. 
-
 VMDK is a VMWare format, so it won't work directly under a KVM hypervisor, as QCOW2 will.  There has to be a conversion somewhere along the way, either by the customer or by Glance.
+
+You can convert a VMDK image to QCOW2 with `qemu-img convert -O qcow2 example.vmdk example.qcow2`(see [https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd](https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd) for reference), but you need to make sure the image contains the proper `cloud-init` packages as well, before uploading. 
 
 Glance tries to do a basic conversion when a VMDK image is uploaded, but it is not guaranteed to work - see [https://etherpad.openstack.org/p/kilo-glance-image-conversion](https://etherpad.openstack.org/p/kilo-glance-image-conversion) "when using qemu-img, converting vmdk->qcow2 is likely to work (but not guaranteed since VMDK support may be incomplete)"
