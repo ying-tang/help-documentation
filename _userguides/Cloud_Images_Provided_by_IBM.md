@@ -11,6 +11,7 @@ editor: Leslie Lundquist, Niraj Patel
 
 **IBM Bluemix Private Cloud 3.0** comes pre-populated with Cirros 0.3.3 x86_64 images. IBM Bluemix Private Cloud provides other downloadable cloud images, so that you can run instances with the Operating System of your choice. This document tells you what you'll need to know for downloading and working with these images. To be sure you're working with the latest images, you can check the [Cloud Image Release Notes](http://ibm-blue-box-help.github.io/help-documentation/gettingstarted/userguides/Image_Release_Notes/) at any time.
 
+More information about using images with OpenStack is available on the OpenStack website: https://docs.openstack.org/image-guide/
 
 ## Pre-requisites
 
