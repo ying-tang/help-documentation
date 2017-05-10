@@ -20,6 +20,8 @@ To work with Red Hat guest images, you can download the image files from the fol
 https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-downloads)
 * [Red Hat Enterprise Linux 6 KVM Guest Image](https://rhn.redhat.com/rhn/software/channel/downloads/Download.do?cid=16952) 
 
+More information about using images with OpenStack is available on the OpenStack website: https://docs.openstack.org/image-guide/
+
 ## Pre-requisites
 
 If you are planning to use the command line (CLI) tools, be sure that you have the OpenStack Glance Client installed. You can find installation instructions in our knowledge base: [Getting started with the OpenStack API](http://ibm-blue-box-help.github.io/help-documentation/openstack/api/openstack-api-getting-started/).
