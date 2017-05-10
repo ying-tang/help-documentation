@@ -20,12 +20,14 @@ General information about working with images and OpenStack is available in the 
 
 ### Converting Third-Party Images
 
-If you are trying to upload a third-party image to your cluster, such as a VMDK image, you may find that your process will hang or fail, because the image is not in QCOW2 format, and/or because the image does not have the `cloud-init` packages installed that are required for operation on OpenStack. Please see https://docs.openstack.org/image-guide/ubuntu-image.html for an example of how to create an image that is compatible with OpenStack. More examples for other operating systems are on the left side of the page.
+If you are trying to upload a third-party image to your cluster, such as a VMDK image, you may find that your process will hang or fail, because the image is not in QCOW2 format, and/or because the image does not have the `cloud-init` packages installed that are required for operation on OpenStack. 
+
+Please see [https://docs.openstack.org/image-guide/ubuntu-image.html](https://docs.openstack.org/image-guide/ubuntu-image.html) for an example of how to create an image that is compatible with OpenStack. More examples for other operating systems are on the left side of the page.
 
 ### Regarding VMDK Images
 
-You can convert a VMDK image to QCOW2 with `qemu-img convert -O qcow2 example.vmdk example.qcow2`(see https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd for reference), but you need to make sure the image contains the proper cloud-init packages as well, before uploading. 
+You can convert a VMDK image to QCOW2 with `qemu-img convert -O qcow2 example.vmdk example.qcow2`(see [https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd](https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd) for reference), but you need to make sure the image contains the proper `cloud-init` packages as well, before uploading. 
 
 VMDK is a VMWare format, so it won't work directly under a KVM hypervisor, as QCOW2 will.  There has to be a conversion somewhere along the way, either by the customer or by Glance.
 
-Glance tries to do a basic conversion when a VMDK image is uploaded, but it is not guaranteed to work - see https://etherpad.openstack.org/p/kilo-glance-image-conversion "when using qemu-img, converting vmdk->qcow2 is likely to work (but not guaranteed since VMDK support may be incomplete)"
+Glance tries to do a basic conversion when a VMDK image is uploaded, but it is not guaranteed to work - see [https://etherpad.openstack.org/p/kilo-glance-image-conversion](https://etherpad.openstack.org/p/kilo-glance-image-conversion) "when using qemu-img, converting vmdk->qcow2 is likely to work (but not guaranteed since VMDK support may be incomplete)"
