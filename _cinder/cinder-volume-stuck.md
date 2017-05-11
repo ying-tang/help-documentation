@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Cinder Volume Stuck"
-tags: [troubleshooting, cinder volume stuck]
+tags: [troubleshooting, cinder volume stuck, snapshot, delete]
 dateAdded: November 19th, 2015
 featured: true
 ---
