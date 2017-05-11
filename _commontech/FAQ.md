@@ -126,7 +126,7 @@ Work is proposed for the OpenStack Newton release that would start including thi
 
 ### How can I create a volume from a snapshot and remove dependencies?
 
-When you create a volume froma snapshot, you may observe dependency behavior, which is from the snapshot itself holding the necessary info/data that the volume/s need.
+When you create a volume from a snapshot, you may observe dependency behavior, which is from the snapshot itself holding the necessary info/data that the volume(s) need.
 
 A way around this would be to create an Image from the Volume and then create a Volume from that Image.
 
@@ -141,5 +141,5 @@ openstack image create --volume $volumeid $image_name
 ```
 openstack volume create --image $imageID --size $x
 ```
-Volume size could be found by  using `openstack volume show $volumeid`
+Volume size could be found by using `openstack volume show $volumeid`
 
