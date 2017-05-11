@@ -21,6 +21,7 @@ editor: Leslie Lundquist
  * [What is the maximum number of virtual devices (for example, ports) that can be attached to a virtual machine?](#what-is-the-maximum-number-of-virtual-devices-for-example-ports-that-can-be-attached-to-a-virtual-machine)
  * [How can I get a list of all my VMs and their host names?](#how-can-i-get-a-list-of-all-my-vms-and-their-host-names)
  * [Does the command `openstack host show disk name` show the actual hard disk usage of the physical host?](#does-the-command-openstack-host-show-disk-name-show-the-actual-hard-disk-usage-of-the-physical-host)
+ * [How can I create a volume from a snapshot and remove dependencies?](#how-can-i-create-a-volume-from-a-snapshot-and-remove-dependencies)
  
 ### How can I resize an existing instance?
 
@@ -122,3 +123,23 @@ To help answer this question, we need to turn to the OpenStack documentation: ht
 Work is proposed for the OpenStack Newton release that would start including this optional swap space, as per this spec  https://specs.openstack.org/openstack/nova-specs/specs/newton/implemented/resource-providers-allocations.html: 
 
 "When the compute node utilizes local storage for instance disks OR was booted from volume, the value used should be the sum of the `root_gb`, `ephemeral_gb`, and `swap` field values of the flavor. The `resource_provider_uuid` should be the compute node’s UUID. Note that for instances that were booted from volume, the `root_gb` value will be 0." 
+
+### How can I create a volume from a snapshot and remove dependencies?
+
+When you create a volume from a snapshot, you may observe dependency behavior, which is from the snapshot itself holding the necessary info/data that the volume(s) need.
+
+A way around this would be to create an Image from the Volume and then create a Volume from that Image.
+
+**Step 1:** Create one temp Image from Volume:
+
+```
+openstack image create --volume $volumeid $image_name
+```
+
+**Step 2:** Create one new Volume from temp Image:
+
+```
+openstack volume create --image $imageID --size $x
+```
+Volume size could be found by using `openstack volume show $volumeid`
+
