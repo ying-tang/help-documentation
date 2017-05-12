@@ -126,20 +126,22 @@ Work is proposed for the OpenStack Newton release that would start including thi
 
 ### How can I create a volume from a snapshot and remove dependencies?
 
-When you create a volume from a snapshot, you may observe dependency behavior, which is from the snapshot itself holding the necessary info/data that the volume(s) need.
+When you create a volume from a snapshot, the original snapshot can hold dependent (meta)data that the volume(s) need.  You can run `openstack volume show $volumeid` to find the parent snapshot_id.  When you then try to delete the volume, you may run into an error due to the dependent snapshot needing to be deleted first:
 
-A way around this would be to create an Image from the Volume and then create a Volume from that Image.
+`Failed to delete snapshot with name or ID ...`
 
-**Step 1:** Create one temp Image from Volume:
+A way around this is to create an image from the volume and then create a volume from that image:
+
+**Step 1:** Create a temporary image from a volume:
 
 ```
 openstack image create --volume $volumeid $image_name
 ```
 
-**Step 2:** Create one new Volume from temp Image:
+**Step 2:** Create a volume from the temporary image:
 
 ```
 openstack volume create --image $imageID --size $x
 ```
-Volume size could be found by using `openstack volume show $volumeid`
 
+You can then delete the temporary image and you will have an independent volume.
