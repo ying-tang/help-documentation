@@ -67,7 +67,7 @@ parameters:
   subnet_id:
     type: string
     description: subnet on which the load balancer will be located
-    default:  "your subnet on teh private network ID"
+    default:  "your subnet ID on the private network"
   external_network_id:
     type: string
     description: UUID of a Neutron external network
