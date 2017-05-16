@@ -232,7 +232,7 @@ parameters:
   subnet:
     type: string
     description: subnet on which server will be located
-    default:  "your subnet on teh private network ID"
+    default:  "your subnet ID on the private network"
 {% endhighlight %}
 
 * The first resource is the Nova server that you will initialize from a specific image. In our example, this is Ubuntu 14.04 with WordPress already installed and configured:
