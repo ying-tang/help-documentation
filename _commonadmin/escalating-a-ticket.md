@@ -23,4 +23,4 @@ If you have a new or existing ticket, and you feel that your situation requires 
 
 When a ticket is escalated, **IBM Bluemix Private Cloud Support** is notified automatically. If your escalated ticket has not received a response in 15 minutes, we will be notified again.
 
-(NOTE: **IBM Bluemix Private Cloudt** is notified if a normal-priority ticket has not received a response after 1 hour. )
+(NOTE: **IBM Bluemix Private Cloud Support** is notified if a normal-priority ticket has not received a response after 1 hour. )
