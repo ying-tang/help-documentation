@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Cloud 101: Optimized Load Balancing"
+title: "Cloud 101 -- Optimized Load Balancing"
 tags: [load balancing, HA, arp responder, MAC move]
 dateAdded: May 17, 2017
 author: Dustin Lundquist and Leslie Lundquist
