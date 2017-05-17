@@ -1,5 +1,5 @@
 ---
-layout: Page
+layout: page
 title: "Cloud 101: Optimized Load Balancing"
 tags: [load balancing, HA, arp responder, MAC move]
 dateAdded: May 17, 2017
