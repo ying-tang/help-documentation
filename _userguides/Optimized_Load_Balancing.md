@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Cloud 101 -- Optimized Load Balancing"
+title: Cloud 101 -- Optimized Load Balancing
 tags: [load balancing, HA, arp responder, MAC move]
-dateAdded: May 17, 2017
 author: Dustin Lundquist and Leslie Lundquist
-featured: false
-weight: 4
+dateAdded: May 17, 2017
+featured: true
+weight: 5
 ---
 
 When running your workloads on a cloud, you often want to spread the load across two or more virtual machine (VM) hosts. One reason might be for the sake of redundancy, for example if you’re running a mission-critical database application. Or you might want to scale your workload across multiple machines, so that it can serve more clients. 
