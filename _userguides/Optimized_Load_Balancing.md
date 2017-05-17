@@ -37,9 +37,8 @@ Essentially, load balancing is the same as managing (or changing) the mapping be
 
 The table that follows summarizes these three options. If you understand this table just by looking at it, you probably don’t need to read the rest of this article. Go for it! For others, the explanation will follow, keep reading. Enjoy!
 
-
+|             | MAC Move (#3) | ARP Move (#2) | GLB (Global) (#1) |
 |------------|-------------|-------------|--------------|
-| | MAC Move (#3) | ARP Move (#2) | GLB (Global) (#1) |
 | Association | MAC -> Port | IP -> MAC | Domain Name -> IP |
 | Update MSG |Gratuitous ARP | Gratuitous ARP | None (DNS Response) |
 | Who needs to take action | Switches in path between HA servers | Routers and hosts on local VLAN | Client, by means of Caching DNS Resolvers |
