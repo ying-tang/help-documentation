@@ -123,6 +123,6 @@ These implementations require more advanced network configuration, and they gene
 
 Certain services—such as `keepalived` —also can be put into this category.
 
-Experts such as managed hosting providers may use these more complex alternatives successfully. For example, at Blue Box, we used OSPF to announce the shared IP to our network infrastructure, for our Blue Box Blocks load balancer.
+Experts such as managed hosting providers may use these more complex alternatives successfully. For example, at Blue Box, before we were acquired by IBM, we used OSPF to announce the shared IP to our network infrastructure, for our Blue Box "Blocks" load balancer.
 
 To summarize, other, more advanced implementations of the three basic methods we’ve included in this article exist, but the three methods described in this article are the basic, underlying methods that any implementation would have to be using to accomplish load balancing in a cloud environment.
