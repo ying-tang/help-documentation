@@ -290,16 +290,17 @@ If Neutron LBaaS is enabled in your cluster, you may encounter a problem that th
 ## How to update Cinder Quotas
 
 Update a particular quota value, as follows:
+Known Limitation: When updating or viewing quota values corresponding to a tenant or project, always use ID of the project instead of its Name. Otherwise you might see inconsitent values.
 
 {% highlight bash %}
-# tenant=$(keystone tenant-list | awk '/tenantName/ {print $2}')
+# tenant=$(openstack project list | awk '/tenantName/ {print $2}')
 # cinder quota-update --quotaName NewValue tenantID
 {% endhighlight %}
 
 For example:
 {% highlight bash %}
 # cinder quota-update --volumes 15 $tenant
-# cinder quota-show tenant01
+# cinder quota-show $tenant
 +-----------+-------+
 |  Property | Value |
 +-----------+-------+
