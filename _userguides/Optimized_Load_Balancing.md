@@ -89,7 +89,7 @@ However, in the ARP move method using this same example, the switches will say �
 
 ### Why are ARP move and MAC move bad on SDN?
 
-These methods are not particularly scalable with SDN for all the standard reasons: potential performance concerns, potential security issues, potential propagation delays leading to slow failover, and possible split-brain situations that could arise.
+These methods are not particularly scalable with software-defined networking (SDN) for all the standard reasons: potential performance concerns, potential security issues, potential propagation delays leading to slow failover, and possible split-brain situations that could arise.
 
 #### Performance and Security
 
@@ -109,6 +109,8 @@ Finally, the SDN may or may not include L3 networking. If it does, the ARP move 
 
 Some SDNs have an ARP responder (for example, as in OpenStack Neutron), so they may respond with old or inconsistent information. This situation accentuates the normal drawbacks with the ARP move method, leading to a possibility of split-brain function. This method would be very unhealthy to apply in OpenStack Neutron if you have a Master-Master DB setup, for example. Fortunately, ARP responder is an option in Neutron, so it can be disabled if necessary.
 
+For more information about load balancing in Neutron, here's a [related introductory article](http://ibm-blue-box-help.github.io/help-documentation/neutron/Intro_to_LBaaS/), and here's an article describing some [limitations you might encounter](http://ibm-blue-box-help.github.io/help-documentation/neutron/Limitations_of_LBaaSv2/).
+
 ### One Degenerate Case: ARP Load Balancing 
 
 Here there be dragons! ARP load balancing is a case in which you are constantly sending gratuitous ARP packets, so that—on a sub-second time window—you are sending thousands and thousands of packets that must be processed. It generates hundreds or thousands of times the normal load. In a normal networking situation, the ARP move or MAC move is a rare event—for example, there will be an ARP packet when the system comes online, then there might be one maybe 4 hours later…and so forth. It is not a usual design case for SDNs. Load balancing in this case is accomplished by a constant stream of updates that must ascend to the control plane and be pushed back out to every host, thus eating up a lot of system resources to perform a function that could be performed much more efficiently.
@@ -121,7 +123,7 @@ Other protocols exist that load balancers can use to connect to the network. For
 
 These implementations require more advanced network configuration, and they generally can be made more specific. In certain situations, they can be a better choice than the methods described previously. (They won’t work everywhere but a cloud provider may choose to use one of these methods to connect their LB service.)
 
-Certain services—such as `keepalived` —also can be put into this category.
+Certain services—such as `keepalived`—also can be put into this category.
 
 Experts such as managed hosting providers may use these more complex alternatives successfully. For example, at Blue Box, before we were acquired by IBM, we used OSPF to announce the shared IP to our network infrastructure, for our Blue Box "Blocks" load balancer.
 
