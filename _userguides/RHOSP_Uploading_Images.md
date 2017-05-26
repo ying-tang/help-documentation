@@ -35,7 +35,7 @@ If you need to obtain a Red Hat image, here is a link where you can log in to yo
 
 When the image has been uploaded successfully, its status is changed to *active*, which indicates that the image is available for use. The Image service can handle  large images that take a long time to upload, possibly longer than the lifetime of the Identity service token which was used when the upload was initiated. The Image service first creates a trust with the Identity service so that a new token can be obtained and used when the upload is complete, and the status of the image is to be updated.
 
-**Note:** You can also use the `glance image-create` command with the `property` option to upload an image. More values are available on the command line. For a complete listing, see [Image Configuration Parameters](https://github.ibm.com/BlueBoxDocs/Operations-and-Engineering-Docs/pull/962/files).
+**Note:** You can also use the `glance image-create` command with the `property` option to upload an image. More values are available on the command line. For a complete listing, see [Image Configuration Parameters](http://ibm-blue-box-help.github.io/help-documentation/glance/RHOSP_Image_Configuration_Parameters/).
 
 ## Update an Image
 
@@ -45,7 +45,7 @@ When the image has been uploaded successfully, its status is changed to *active*
 4. Click the drop-down menu and select **Update Metadata** option.
 5. Specify metadata by adding items from the left column to the right one. In the left column, there are metadata definitions from the **Image Service Metadata Catalog**. Select **Other** to add metadata with the key of your choice and click **Save** when you've finished.
 
-**Note:** You can also use the `glance image-update` command with the `property` option to update an image. More values are available on the command line; for a complete listing, see [Image Configuration Parameters](https://github.ibm.com/BlueBoxDocs/Operations-and-Engineering-Docs/pull/962/files).
+**Note:** You can also use the `glance image-update` command with the `property` option to update an image. More values are available on the command line; for a complete listing, see [Image Configuration Parameters](http://ibm-blue-box-help.github.io/help-documentation/glance/RHOSP_Image_Configuration_Parameters/s).
 
 ## Delete an Image
 
