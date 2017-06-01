@@ -12,7 +12,7 @@ You can set up DNS for the floating IP associated with your instance using your 
 
 As for DNS for the private IPs of instances, OpenStack does not currently provide DNS services, aside from the `dnsmasq` daemon, which lives on `nova-network` hosts and manages DHCP.  You can set up an internal DNS server, or `/etc/hosts` file, if you prefer.
 
-Tiy cab also set a fully qualified domain name (fqdn), and pass it via cloud-init via the metadata server.  For example:
+You can also set a fully qualified domain name (fqdn), and pass it via cloud-init via the metadata server.  For example:
 
 ```
 #cloud-config
