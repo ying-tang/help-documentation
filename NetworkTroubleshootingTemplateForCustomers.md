@@ -19,7 +19,7 @@ At Destination IP, do the reverse:
 * Report results of `netstat -nr`
 * If possible, do an nmap against the source to see if the port is potentially being filtered by a firewall along the way.
 
-Now isolate if the communication problem constrained to 1 VM or many VMs in the same network:
+Now isolate if the communication problem is constrained to 1 VM or many VMs in the same network:
 * Spin up test VMs in the same networks as these IPs and try to reproduce the same problem.
 
 Lastly:
