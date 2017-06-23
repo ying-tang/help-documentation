@@ -26,4 +26,4 @@ Lastly:
 * Check your security group settings for the VM(s) to see if they are as you expect and check with teammates to see if any changes have been made to security groups or on the cluster recently.
 * If applicable: Connect from a computer on a completely different network, or even a completely different cluster, if possible, to see if the same problem occurs.
 
-That should be enough to get a handle on the problem, and either point you in the right direction for resolving it or provide enough info for us to check the right logs and have network engineers assist.  Hope this helps, and thanks!
+That should be enough to get a handle on the problem, and either point you in the right direction for resolving it or provide enough info for us to check the right logs and have network engineers assist.
