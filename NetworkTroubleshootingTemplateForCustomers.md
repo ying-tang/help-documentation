@@ -6,6 +6,7 @@ Please provide:
 * Virtual machine names/UUIDs involved, and datacenter location: 
 * Problem was first noticed on [date/time/timezone]
 * Problem [ ] is ongoing [ ] was resolved on [date/time/timezone]
+* Any error messages seen
 
 At Source IP, please:
 * Perform 100 packet MTR from Source IP to Destination IP using UDP datagrams `mtr -r -u -c 100`
