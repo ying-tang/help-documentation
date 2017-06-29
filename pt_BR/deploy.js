@@ -6,7 +6,7 @@ var env = process.argv[2] || "staging"
 var repo;
 switch(env.toUpperCase()) {
   case "PRODUCTION":
-    repo = "https://github.com/IBM-Blue-Box-Help/help-documentation";
+    repo = "git@github.com:IBM-Blue-Box-Help/help-documentation.git"
     break;
   case "STAGING":
     repo = "git@github.ibm.com:bluebox/help-documentation-staging-area.git"
