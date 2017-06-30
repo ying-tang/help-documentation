@@ -142,7 +142,7 @@
   
    {
      
-       "title"    : "Requirements for OpenStack client versions",
+       "title"    : "Requisitos para versões de clientes do OpenStack",
        "tags"     : "openstack,client,command line,package,version,python,compatibility",
        "url"      : "/help-documentation/openstack/api/OpenStack_Client_Versions/"
      
@@ -150,7 +150,7 @@
   
    {
      
-       "title"    : "Creating a floating IP address using the OpenStack API",
+       "title"    : "Criando um endereço IP flutuante usando a API do OpenStack",
        "tags"     : "openstack,floating ip address,api",
        "url"      : "/help-documentation/openstack/api/floating-ip-address/"
      
@@ -158,7 +158,7 @@
   
    {
      
-       "title"    : "Getting Started with the OpenStack API",
+       "title"    : "Introdução à API do OpenStack",
        "tags"     : "api,getting started,openstack",
        "url"      : "/help-documentation/openstack/api/openstack-api-getting-started/"
      
@@ -168,7 +168,7 @@
   
    {
      
-       "title"    : "Cloud Foundry: Invalid Availability Zone Error",
+       "title"    : "Cloud Foundry: Erro de zona de disponibilidade inválida",
        "tags"     : "Openstack,troubleshooting,availability zone,cloud foundry",
        "url"      : "/help-documentation/troubleshooting/Bad_Availability_Zone/"
      
@@ -176,7 +176,7 @@
   
    {
      
-       "title"    : "When using any of the OpenStack CLIs on Windows, I get authentication failure errors",
+       "title"    : "Ao usar qualquer uma das CLIs do OpenStack no Windows, recebo erros de falha de autenticação",
        "tags"     : "troubleshooting,authentication,windows",
        "url"      : "/help-documentation/troubleshooting/CLI-authentication-error/"
      
@@ -184,7 +184,7 @@
   
    {
      
-       "title"    : "Cannot change floating-ip quota allocation",
+       "title"    : "Não é possível alterar a alocação de cotas do IP flutuante",
        "tags"     : "",
        "url"      : "/help-documentation/troubleshooting/Cannot_Change_Floating_IP_Quota/"
      
@@ -192,7 +192,7 @@
   
    {
      
-       "title"    : "Why Can&#39;t I See My New vCPUs Listed in Horizon?",
+       "title"    : "Por que não é possível visualizar minhas novas vCPUs listadas no Horizon?",
        "tags"     : "troubleshooting,horizon,nova,overcommit,hypervisor,vcpu",
        "url"      : "/help-documentation/troubleshooting/Cannot_See_New_vCPUs/"
      
@@ -200,7 +200,7 @@
   
    {
      
-       "title"    : "How Many Simultaneous Connections can HAProxy Handle?",
+       "title"    : "Quantas conexões simultâneas o HAProxy suporta?",
        "tags"     : "troubleshooting,haproxy,maxconn,load testing",
        "url"      : "/help-documentation/troubleshooting/How_many_connections_can_HAProxy_handle/"
      
@@ -208,7 +208,7 @@
   
    {
      
-       "title"    : "Running Out of Space on Converged Controllers?",
+       "title"    : "Falta de espaço para controladores convergidos?",
        "tags"     : "troubleshooting,cinder,snapshots,object storage,glance images",
        "url"      : "/help-documentation/troubleshooting/Running_out_of_space_converged_controllers/"
      
@@ -216,7 +216,7 @@
   
    {
      
-       "title"    : "Troubleshooting FAQ",
+       "title"    : "Perguntas Frequentes de Resolução de Problemas",
        "tags"     : "faq,reboot,instance,timestamp,console,resize,stuck,port,depends_on,smtp,email,sendgrid,single user mode,vnc",
        "url"      : "/help-documentation/troubleshooting/Troubleshooting_FAQ/"
      
@@ -224,7 +224,7 @@
   
    {
      
-       "title"    : "Why Can&#39;t I Ping Across My Tenant Networks?",
+       "title"    : "Por que não é possível executar ping em minhas redes de locatário?",
        "tags"     : "",
        "url"      : "/help-documentation/troubleshooting/Unable_to_ping_tenant_network/"
      
@@ -232,7 +232,7 @@
   
    {
      
-       "title"    : "Why can&#39;t I use L2pop when I want my vIP instances to failover?",
+       "title"    : "Por que não é possível usar L2pop quando quero fazer failover em minhas instâncias vIP?",
        "tags"     : "troubleshooting,network,failover",
        "url"      : "/help-documentation/troubleshooting/Why_No_vIP_Failover_With_L2pop/"
      
@@ -240,7 +240,7 @@
   
    {
      
-       "title"    : "Why Can’t I Delete A Security Group?",
+       "title"    : "Por  que não posso excluir um Grupo de Segurança?",
        "tags"     : "troubleshooting,neutron,security groups",
        "url"      : "/help-documentation/troubleshooting/delete_security_group/"
      
@@ -248,7 +248,7 @@
   
    {
      
-       "title"    : "Attempt to Create a Router is Failing",
+       "title"    : "Tentativa de criar um roteador está falhando",
        "tags"     : "troubleshooting,nova,router,IPs,availability",
        "url"      : "/help-documentation/troubleshooting/failed_to_create_router/"
      
@@ -256,7 +256,7 @@
   
    {
      
-       "title"    : "Error: Failure prepping block device",
+       "title"    : "Erro: Falha na preparação de dispositivo de bloco",
        "tags"     : "troubleshooting,nova,glance,cinder",
        "url"      : "/help-documentation/troubleshooting/failure_prepping_block_device/"
      
@@ -264,7 +264,7 @@
   
    {
      
-       "title"    : "Why are all the floating IPs that were assigned to me not available?",
+       "title"    : "Por que todos os IPs flutuantes que são designados a mim não estão disponíveis?",
        "tags"     : "troubleshooting,floating ip",
        "url"      : "/help-documentation/troubleshooting/floating-ips-error/"
      
@@ -272,7 +272,7 @@
   
    {
      
-       "title"    : "Why can&#39;t I delete my project/tenant from the Horizon dashboard?",
+       "title"    : "Por que não é possível excluir meu projeto/locatário a partir do painel do Horizon?",
        "tags"     : "troubleshooting,delete project",
        "url"      : "/help-documentation/troubleshooting/horizon-delete-error/"
      
@@ -280,7 +280,7 @@
   
    {
      
-       "title"    : "Instance in error status: libvirt error",
+       "title"    : "Status de erro em instância: erro libvirt",
        "tags"     : "troubleshooting,libvert,error",
        "url"      : "/help-documentation/troubleshooting/libvirt_error/"
      
@@ -288,7 +288,7 @@
   
    {
      
-       "title"    : "Error: No valid host was found",
+       "title"    : "Erro: Nenhum host válido foi localizado",
        "tags"     : "troubleshooting,no valid host,no valid host was found,resize,launch",
        "url"      : "/help-documentation/troubleshooting/no-valid-host-error/"
      
@@ -296,7 +296,7 @@
   
    {
      
-       "title"    : "Error: &#39;Server doesn&#39;t support microversions&#39; When Running Nova Commands",
+       "title"    : "Erro: &#39;O servidor não suporta microversões&#39; ao executar comandos Nova",
        "tags"     : "troubleshooting,microversions,nova",
        "url"      : "/help-documentation/troubleshooting/nova-microversions-error/"
      
@@ -304,7 +304,7 @@
   
    {
      
-       "title"    : "Why can&#39;t I SSH to an instance, or ping it?",
+       "title"    : "Por que não é possível realizar SSH ou executar ping em uma instância?",
        "tags"     : "troubleshooting,ssh,ping",
        "url"      : "/help-documentation/troubleshooting/ping-instance-error/"
      
@@ -312,7 +312,7 @@
   
    {
      
-       "title"    : "Why does it take 4-5 seconds to SSH to my instance?",
+       "title"    : "Por que devo esperar de 4 a 5 segundos para realizar SSH em minha instância?",
        "tags"     : "troubleshooting,ssh",
        "url"      : "/help-documentation/troubleshooting/ssh-too-long-error/"
      
@@ -322,7 +322,7 @@
   
    {
      
-       "title"    : "Creating an Instance with a Specific Fixed IP",
+       "title"    : "Criando uma instância com um IP fixo específico",
        "tags"     : "openstack,instance,fixed IP",
        "url"      : "/help-documentation/openstack/userdocs/Creating-an-Instance-with-a-Specific-Fixed-IP/"
      
@@ -330,7 +330,7 @@
   
    {
      
-       "title"    : "How to Create An Instance With Static IP",
+       "title"    : "Como criar uma instância com IP estático",
        "tags"     : "openstack,static ip,instance",
        "url"      : "/help-documentation/openstack/userdocs/Creating_Instances_With_Static_IP/"
      
@@ -338,7 +338,7 @@
   
    {
      
-       "title"    : "How to Isolate Tenants (Projects)",
+       "title"    : "Como isolar locatários (Projetos)",
        "tags"     : "userdocs,tenants,projects,networks",
        "url"      : "/help-documentation/openstack/userdocs/How_to_Isolate_Tenants/"
      
@@ -346,7 +346,7 @@
   
    {
      
-       "title"    : "OpenStack Mitaka CLI Notes",
+       "title"    : "Notas sobre a CLI do OpenStack",
        "tags"     : "OpenStack,mitaka,keystone",
        "url"      : "/help-documentation/openstack/userdocs/Mitaka_CLI_notes/"
      
@@ -354,7 +354,7 @@
   
    {
      
-       "title"    : "OpenStack Network Concepts",
+       "title"    : "Conceitos de rede do OpenStack",
        "tags"     : "OpenStack,concepts",
        "url"      : "/help-documentation/openstack/userdocs/OpenStack_network_concepts/"
      
@@ -362,7 +362,7 @@
   
    {
      
-       "title"    : "Ursula and OpenStack",
+       "title"    : "Ursula e OpenStack",
        "tags"     : "userdocs,openstack,ursula,ubuntu,playbooks",
        "url"      : "/help-documentation/openstack/userdocs/Ursula_and_OpenStack/"
      
@@ -370,7 +370,7 @@
   
    {
      
-       "title"    : "Why Choose OpenStack?",
+       "title"    : "Por que escolher o OpenStack?",
        "tags"     : "OpenStack,Reference",
        "url"      : "/help-documentation/openstack/userdocs/Why-Choose-OpenStack/"
      
@@ -378,7 +378,7 @@
   
    {
      
-       "title"    : "External reference materials",
+       "title"    : "Materiais de referência externa",
        "tags"     : "openstack,reference,external",
        "url"      : "/help-documentation/openstack/userdocs/external-reference-material/"
      
@@ -386,7 +386,7 @@
   
    {
      
-       "title"    : "Importing a VHD image that uses linux volume management for its root directory",
+       "title"    : "Importando uma imagem VHD que usa gerenciamento de volume do Linux para seu diretório raiz",
        "tags"     : "openstack,import VHD image,linux",
        "url"      : "/help-documentation/openstack/userdocs/import-vhd-image-lvm/"
      
@@ -394,7 +394,7 @@
   
    {
      
-       "title"    : "How to Launch an Instance from a Volume",
+       "title"    : "Como ativar uma instância de um volume",
        "tags"     : "openstack,launch instance,volume",
        "url"      : "/help-documentation/openstack/userdocs/launch-instance-from-volume/"
      
@@ -402,7 +402,7 @@
   
    {
      
-       "title"    : "OpenStack Storage Concepts",
+       "title"    : "Conceitos do OpenStack Storage",
        "tags"     : "OpenStack,concepts,volume,ephemeral,swap,disk usage,physical,hypervisor,openstack host show",
        "url"      : "/help-documentation/openstack/userdocs/openstack-storage-concepts/"
      
@@ -410,7 +410,7 @@
   
    {
      
-       "title"    : "Quotas",
+       "title"    : "Cotas",
        "tags"     : "openstack,quota,limit,host routes,maximum,volumes",
        "url"      : "/help-documentation/openstack/userdocs/quotas/"
      
@@ -420,7 +420,7 @@
   
    {
      
-       "title"    : "Box Panel User Guide",
+       "title"    : "Guia do usuário do Box Panel",
        "tags"     : "getting started,Box Panel",
        "url"      : "/help-documentation/gettingstarted/userguides/Box_Panel/"
      
@@ -428,7 +428,7 @@
   
    {
      
-       "title"    : "User&#39;s Guide to Cloud Images (IBM Bluemix Private Cloud with Red Hat)",
+       "title"    : "Guia do usuário para Imagens na Nuvem (IBM Bluemix Private Cloud com Red Hat)",
        "tags"     : "userguides,images,glance,image-create,instance,rhosp,newton",
        "url"      : "/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_RHOSP/"
      
@@ -436,7 +436,7 @@
   
    {
      
-       "title"    : "User&#39;s Guide to Cloud Images (Community Edition)",
+       "title"    : "Guia do Usuário para Imagens da Nuvem (Edição Community)",
        "tags"     : "userguides,images,glance,image-create,instance",
        "url"      : "/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/"
      
@@ -444,7 +444,7 @@
   
    {
      
-       "title"    : "Box Panel, Site Controller, and IBM Bluemix Private Cloud Local",
+       "title"    : "Box Panel, Site Controller e IBM Bluemix Private Cloud Local",
        "tags"     : "user guides,box panel,site controller,faq,cloud security",
        "url"      : "/help-documentation/gettingstarted/userguides/Eternal_Blue-ish_Triangle/"
      
@@ -452,7 +452,7 @@
   
    {
      
-       "title"    : "IBM Bluemix Private Cloud Image Release Notes",
+       "title"    : "Notas sobre a liberação da imagem do IBM Bluemix Private Cloud",
        "tags"     : "userguides,release,images,security,kernel,patch",
        "url"      : "/help-documentation/gettingstarted/userguides/Image_Release_Notes/"
      
@@ -460,7 +460,7 @@
   
    {
      
-       "title"    : "Building Up to OpenStack II -- Improving Cloud Performance",
+       "title"    : "Preparando-se para o OpenStack II - Melhorando o desempenho da nuvem",
        "tags"     : "openstack,sr-iov,virtio,vhost",
        "url"      : "/help-documentation/gettingstarted/userguides/Improving_Cloud_Performance/"
      
@@ -468,7 +468,7 @@
   
    {
      
-       "title"    : "Cloud 101 -- Optimized Load Balancing",
+       "title"    : "Nuvem 101 -- Balanceamento otimizado de carga",
        "tags"     : "load balancing,HA,arp responder,MAC move",
        "url"      : "/help-documentation/gettingstarted/userguides/Optimized_Load_Balancing/"
      
@@ -476,7 +476,7 @@
   
    {
      
-       "title"    : "How to Upload an Image",
+       "title"    : "Como fazer upload de uma imagem",
        "tags"     : "commontech,userguides,image,rhosp,red hat",
        "url"      : "/help-documentation/gettingstarted/userguides/RHOSP_Uploading_Images/"
      
@@ -484,7 +484,7 @@
   
    {
      
-       "title"    : "Cloud Networking and Software Defined Networking--A Best Practices White Paper",
+       "title"    : "Rede em nuvem e rede definida por software - Um White Paper de melhores práticas",
        "tags"     : "sdn,networking,best practices,vlan,vxlan,l2pop,arp,provisioning",
        "url"      : "/help-documentation/gettingstarted/userguides/SDN_Basics_Best_Practices/"
      
@@ -492,7 +492,7 @@
   
    {
      
-       "title"    : "Building Up to OpenStack III -- Xen and libvirt",
+       "title"    : "Preparando-se para o OpenStack III -- Xen e libvirt",
        "tags"     : "libvirt,qemu,kvm,hypervisor",
        "url"      : "/help-documentation/gettingstarted/userguides/Xen_and_libvirt/"
      
@@ -532,7 +532,7 @@
   
    {
      
-       "title"    : "Building Up to OpenStack — QEMU and Your Cloud",
+       "title"    : "Preparando-se para o OpenStack — QEMU e sua nuvem",
        "tags"     : "qemu,kvm,hypervisor,emulator",
        "url"      : "/help-documentation/gettingstarted/userguides/qemu_article/"
      
@@ -542,7 +542,7 @@
   
    {
      
-       "title"    : "IBM Bluemix Private Cloud Building Blocks (Community Edition)",
+       "title"    : "Blocos de contrução do IBM Bluemix Private Cloud (Edição da comunidade)",
        "tags"     : "getting started,dedicated,local,controllers,nodes,overview",
        "url"      : "/help-documentation/gettingstarted/commontech/Building_Blocks/"
      
@@ -550,7 +550,7 @@
   
    {
      
-       "title"    : "Set Up Network Connectivity Between Multiple Cloud Environments, Using the Private Network",
+       "title"    : "Configurar conectividade de rede entre diversos ambientes de nuvem usando a rede privada",
        "tags"     : "getting started,network,private network",
        "url"      : "/help-documentation/gettingstarted/commontech/Connecting_Clouds_with_SoftLayer/"
      
@@ -558,7 +558,31 @@
   
    {
      
-       "title"    : "Technical FAQ",
+       "title"    : "Notas sobre a liberação 3.1.0",
+       "tags"     : "commontech,release,features,gettingstarted",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_3.1.0_Release_Notes/"
+     
+   } ,
+  
+   {
+     
+       "title"    : "Notas sobre a liberação do ponto 3.1.1 para cliente",
+       "tags"     : "release notes,3.1.1",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_3.1.1_Point_Release/"
+     
+   } ,
+  
+   {
+     
+       "title"    : "Notas sobre a liberação 4.0.0.0r",
+       "tags"     : "commontech,release,features,gettingstarted,red hat,rhosp",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_4.0.0.0r_Release_Notes/"
+     
+   } ,
+  
+   {
+     
+       "title"    : "Perguntas Frequentes sobre Questões Técnicas",
        "tags"     : "getting started,faq,resize,instance,admin,project,forbidden ports,ports,security groups",
        "url"      : "/help-documentation/gettingstarted/commontech/FAQ/"
      
@@ -566,7 +590,7 @@
   
    {
      
-       "title"    : "Resizing an Instance (Non-live)",
+       "title"    : "Redimensionando uma instância (fora de tempo real)",
        "tags"     : "getting started,instances,resize,migration,volume",
        "url"      : "/help-documentation/gettingstarted/commontech/Instance_Resize/"
      
@@ -574,7 +598,7 @@
   
    {
      
-       "title"    : "Building Blocks for IBM Bluemix Private Cloud with Red Hat",
+       "title"    : "Blocos de construção para IBM Bluemix Private Cloud com Red Hat",
        "tags"     : "getting started,dedicated controllers,nodes,overview,red hat,rhosp",
        "url"      : "/help-documentation/gettingstarted/commontech/RHOSP_Building_Blocks/"
      
@@ -582,7 +606,7 @@
   
    {
      
-       "title"    : "IBM Bluemix Private Cloud with Red Hat - Product Overview",
+       "title"    : "IBM Bluemix Private Cloud com Red Hat - Visão geral do produto",
        "tags"     : "getting started,release,features,overview",
        "url"      : "/help-documentation/gettingstarted/commontech/RHOSP_Product_Overview/"
      
@@ -590,7 +614,7 @@
   
    {
      
-       "title"    : "Customer Guide for Windows Activation",
+       "title"    : "Guia do cliente para ativação do Windows",
        "tags"     : "getting started,images,windows,license,activation",
        "url"      : "/help-documentation/gettingstarted/commontech/Windows_License_Activation/"
      
@@ -598,7 +622,7 @@
   
    {
      
-       "title"    : "Bluemix Private Cloud Components",
+       "title"    : "Componentes do Bluemix Private Cloud",
        "tags"     : "getting started,bluemix private cloud,components,services,api",
        "url"      : "/help-documentation/gettingstarted/commontech/blue-box-cloud-components/"
      
@@ -606,7 +630,7 @@
   
    {
      
-       "title"    : "Connecting to your OpenVPN server",
+       "title"    : "Conectando-se ao seu servidor OpenVPN",
        "tags"     : "getting started,openVPN,connecting",
        "url"      : "/help-documentation/gettingstarted/commontech/connect-to-openvpn-server/"
      
@@ -614,7 +638,7 @@
   
    {
      
-       "title"    : "What Should I Do Prior to Detaching a Volume?",
+       "title"    : "O que deve ser feito antes de separar um volume?",
        "tags"     : "getting started,detach volume",
        "url"      : "/help-documentation/gettingstarted/commontech/detaching-volume/"
      
@@ -622,7 +646,7 @@
   
    {
      
-       "title"    : "General Product Overview",
+       "title"    : "Visão geral do produto",
        "tags"     : "getting started,release,features,overview",
        "url"      : "/help-documentation/gettingstarted/commontech/general_product_overview/"
      
@@ -630,7 +654,7 @@
   
    {
      
-       "title"    : "Setting up OpenVPN server on your instance",
+       "title"    : "Configurando um servidor OpenVPN em sua instância",
        "tags"     : "getting started,setting up openVPN",
        "url"      : "/help-documentation/gettingstarted/commontech/openvpn-setup/"
      
@@ -638,7 +662,7 @@
   
    {
      
-       "title"    : "Virtual python environments and you: A developer&#39;s primer",
+       "title"    : "Ambientes de python virtuais e você: uma cartilha do desenvolvedor",
        "tags"     : "getting started,python,environments",
        "url"      : "/help-documentation/gettingstarted/commontech/python-environment-primer/"
      
@@ -648,7 +672,7 @@
   
    {
      
-       "title"    : "Transferring A Domain From Blue Box",
+       "title"    : "Transferindo um domínio do Blue Box",
        "tags"     : "managed hosting,domain,registrar,transfer",
        "url"      : "/help-documentation/gettingstarted/commonadmin/Transferring_A_Domain_From_Blue_Box/"
      
@@ -656,7 +680,7 @@
   
    {
      
-       "title"    : "Adding or removing subscribers to a ticket",
+       "title"    : "Incluindo ou removendo assinantes para um chamado",
        "tags"     : "getting started,adding,removing",
        "url"      : "/help-documentation/gettingstarted/commonadmin/adding-removing-subscribers/"
      
@@ -672,7 +696,7 @@
   
    {
      
-       "title"    : "How do I report an issue?",
+       "title"    : "Como posso reportar um problema?",
        "tags"     : "getting started,report issue",
        "url"      : "/help-documentation/gettingstarted/commonadmin/report-issue/"
      
@@ -680,7 +704,7 @@
   
    {
      
-       "title"    : "Bluemix Private Cloud Status Pages",
+       "title"    : "Páginas de status do Bluemix Private Cloud",
        "tags"     : "getting started,status page",
        "url"      : "/help-documentation/gettingstarted/commonadmin/status-pages/"
      
@@ -688,7 +712,7 @@
   
    {
      
-       "title"    : "How do I view my bill?",
+       "title"    : "Como posso visualizar minha fatura?",
        "tags"     : "getting started,view bill",
        "url"      : "/help-documentation/gettingstarted/commonadmin/view-my-bill/"
      
@@ -698,7 +722,7 @@
     
    {
      
-       "title"    : "Release Notes 2.1.1",
+       "title"    : "Notas sobre a liberação 2.1.1",
        "tags"     : "releasenotes,commontech,release,features,gettingstarted",
        "url"      : "/help-documentation/releasenotes/Customer_2.1.1_Point_Release/"
      
@@ -706,7 +730,7 @@
   
    {
      
-       "title"    : "Release Notes 3.0.0",
+       "title"    : "Notas sobre a liberação 3.0.0",
        "tags"     : "commontech,releasenotes,features,mitaka,Unable to get Nova services list,hypervisor",
        "url"      : "/help-documentation/releasenotes/Customer_3.0.0_Release_Notes/"
      
@@ -714,7 +738,7 @@
   
    {
      
-       "title"    : "Customer 3.0.1 Point Release Notes",
+       "title"    : "Notas sobre a liberação do ponto 3.0.1 para cliente",
        "tags"     : "release notes,3.0.1",
        "url"      : "/help-documentation/releasenotes/Customer_3.0.1_Point_Release/"
      
@@ -754,7 +778,7 @@
   
    {
      
-       "title"    : "Release Notes 2.1",
+       "title"    : "Notas sobre a liberação 2.1",
        "tags"     : "getting started,releasenotes,features",
        "url"      : "/help-documentation/releasenotes/release_notes_2.1_for_customers/"
      
@@ -798,7 +822,7 @@
   
    {
      
-       "title"    : "Horizon Troubleshooting FAQ",
+       "title"    : "Perguntas mais frequentes sobre resolução de problemas do Horizon",
        "tags"     : "troubleshooting,faq,server,cookie,timezone,quotas,filter,volume limit",
        "url"      : "/help-documentation/horizon/Horizon_troubleshooting_FAQ/"
      
@@ -806,7 +830,7 @@
   
    {
      
-       "title"    : "Using Horizon for Snapshots",
+       "title"    : "Usando o Horizon para capturas instantâneas",
        "tags"     : "Horizon,snapshots,OpenStack,Cinder,image,error,token expires,glance",
        "url"      : "/help-documentation/horizon/Making_Snapshots_in_Horizon/"
      
@@ -814,7 +838,7 @@
   
    {
      
-       "title"    : "Allocating and Attaching a Public (Floating) IP to an Instance",
+       "title"    : "Alocando e anexando um IP público (flutuante) a uma instância",
        "tags"     : "horizon,fixed private IP address",
        "url"      : "/help-documentation/horizon/allocate-floating-ip/"
      
@@ -822,7 +846,7 @@
   
    {
      
-       "title"    : "Creating a volume from the Horizon dashboard",
+       "title"    : "Criando um volume a partir do painel do Horizon",
        "tags"     : "horizon,volume,Ceph",
        "url"      : "/help-documentation/horizon/create-volume-from-horizon/"
      
@@ -830,7 +854,7 @@
   
    {
      
-       "title"    : "Creating Additional Networks in OpenStack Using the Horizon Panel",
+       "title"    : "Criando redes adicionais no OpenStack usando o painel do Horizon",
        "tags"     : "getting started,additional networks",
        "url"      : "/help-documentation/horizon/creating-additional-networks-with-horizon/"
      
@@ -838,7 +862,7 @@
   
    {
      
-       "title"    : "Horizon for Administrators",
+       "title"    : "Horizon para administradores",
        "tags"     : "horizon,administrator",
        "url"      : "/help-documentation/horizon/horizon-for-administrators/"
      
@@ -846,7 +870,7 @@
   
    {
      
-       "title"    : "Launching an instance from the Horizon dashboard",
+       "title"    : "Ativando uma instância do painel do Horizon",
        "tags"     : "horizon,instance,launch",
        "url"      : "/help-documentation/horizon/launch-instance-from-horizon/"
      
@@ -854,7 +878,7 @@
   
    {
      
-       "title"    : "Launching an instance from the Horizon dashboard (OpenStack Newton release)",
+       "title"    : "Ativando uma instância do painel do Horizon (versão OpenStack Newton)",
        "tags"     : "horizon,instance,launch,newton,rhosp",
        "url"      : "/help-documentation/horizon/launch-instance-from-horizon_newton/"
      
@@ -862,7 +886,7 @@
   
    {
      
-       "title"    : "How do I set a reverse DNS (PTR) record for an IBM Bluemix Private Cloud instance?",
+       "title"    : "Como configuro um registro DNS (PTR) reverso para uma instância do IBM Bluemix Private Cloud?",
        "tags"     : "horizon,reverse dns",
        "url"      : "/help-documentation/horizon/set-reverse-dns/"
      
@@ -870,7 +894,7 @@
   
    {
      
-       "title"    : "Using Horizon",
+       "title"    : "Usando o Horizon",
        "tags"     : "horizon,using horizon",
        "url"      : "/help-documentation/horizon/using-horizon/"
      
@@ -880,7 +904,7 @@
   
    {
      
-       "title"    : "How to Create an Instance and Make it Available Publicly Using the Command Line",
+       "title"    : "Como criar uma instância e torná-la disponível publicamente usando a linha de comandos",
        "tags"     : "nova,command line,instance",
        "url"      : "/help-documentation/nova/CLI-create-public-instance/"
      
@@ -888,7 +912,7 @@
   
    {
      
-       "title"    : "Metadata Service in OpenStack Neutron and Nova",
+       "title"    : "Serviço de Metadados no OpenStack Neutron e Nova",
        "tags"     : "metadata,service,timeout,config drive",
        "url"      : "/help-documentation/nova/Metadata_service_FAQ/"
      
@@ -896,7 +920,7 @@
   
    {
      
-       "title"    : "What happens behind the scenes when I boot a virtual machine, and how can I make it boot faster?",
+       "title"    : "O que acontece nos bastidores quando inicializo uma máquina virtual e como faço para que ela seja mais rápida?",
        "tags"     : "nova,instance,VM,virtual,boot,time,speed,slow,fast,glance,image,size",
        "url"      : "/help-documentation/nova/Nova_boot_speed/"
      
@@ -904,7 +928,7 @@
   
    {
      
-       "title"    : "How Can I Restrict Floating IPs?",
+       "title"    : "Como posso restringir IPs flutuantes?",
        "tags"     : "nova,horizon,allocate,users,floating ip",
        "url"      : "/help-documentation/nova/Restrict_Floating_IP/"
      
@@ -912,7 +936,7 @@
   
    {
      
-       "title"    : "Can I create an instance and add files to it using config drive?",
+       "title"    : "É possível criar uma instância e incluir arquivos nela usando o drive de configuração?",
        "tags"     : "nova,inject files,config drive",
        "url"      : "/help-documentation/nova/config_drive_for_instances/"
      
@@ -920,7 +944,7 @@
   
    {
      
-       "title"    : "How can I create an instance with the Nova command line client?",
+       "title"    : "Como posso criar uma instância com o cliente da linha de comandos Nova?",
        "tags"     : "nova,boot,ephemeral",
        "url"      : "/help-documentation/nova/create-vm-with-volumes/"
      
@@ -928,7 +952,7 @@
   
    {
      
-       "title"    : "How can I define flavor vCPU topology?",
+       "title"    : "Como posso definir a topologia do vCPU de tipo?",
        "tags"     : "nova,compute,vCPU",
        "url"      : "/help-documentation/nova/define-flavor-vcpu/"
      
@@ -944,7 +968,7 @@
   
    {
      
-       "title"    : "How can I get hypervisor statistics?",
+       "title"    : "Como posso obter estatísticas do hypervisor?",
        "tags"     : "nova,hypervisor,statistics",
        "url"      : "/help-documentation/nova/hypervisor-statistics/"
      
@@ -952,7 +976,7 @@
   
    {
      
-       "title"    : "What is the maximum spec I can set for a flavor?",
+       "title"    : "Qual é a especificação máxima que posso configurar para um tipo?",
        "tags"     : "nova,flavor",
        "url"      : "/help-documentation/nova/maximum-flavor-spec/"
      
@@ -960,7 +984,7 @@
   
    {
      
-       "title"    : "Migrating an instance to a new cloud",
+       "title"    : "Migrando uma instância para uma nova nuvem",
        "tags"     : "nova,migrate,migration to new cloud",
        "url"      : "/help-documentation/nova/migrate-instance/"
      
@@ -976,7 +1000,7 @@
   
    {
      
-       "title"    : "How do I set an initial username and password on a Windows instance in OpenStack?",
+       "title"    : "Como configurar um nome do usuário e senha em uma instância Windows no OpenStack?",
        "tags"     : "nova,windows,initial setup",
        "url"      : "/help-documentation/nova/windows-user-and-password/"
      
@@ -986,7 +1010,7 @@
   
    {
      
-       "title"    : "Using BYOFIP Connectivity Between IBM Bluemix Private Cloud and a Customer Site",
+       "title"    : "Usando a conectividade BYOFIP entre o IBM Bluemix Private Cloud e um site do cliente",
        "tags"     : "neutron,byofip",
        "url"      : "/help-documentation/neutron/BYOFIP_support/"
      
@@ -994,7 +1018,7 @@
   
    {
      
-       "title"    : "How Can I See My IPs?",
+       "title"    : "Como posso visualizar meus IPs?",
        "tags"     : "neutron,external ip,internal ip,available ip",
        "url"      : "/help-documentation/neutron/How_Can_I_See_My_IPs/"
      
@@ -1002,7 +1026,7 @@
   
    {
      
-       "title"    : "How Can I Update DNS?",
+       "title"    : "Como posso atualizar o DNS?",
        "tags"     : "neutron,DNS settings,subnet",
        "url"      : "/help-documentation/neutron/How_to_update_DNS/"
      
@@ -1010,7 +1034,7 @@
   
    {
      
-       "title"    : "Introduction to Load Balancer as a Service (LBaaS)",
+       "title"    : "Introdução ao Balanceador de Carga Como um Serviço (LBaaS)",
        "tags"     : "neutron,lbaas,delete,healthmonitor",
        "url"      : "/help-documentation/neutron/Intro_to_LBaaS/"
      
@@ -1018,7 +1042,7 @@
   
    {
      
-       "title"    : "Limitations of Neutron LBaaS v2",
+       "title"    : "Limitações do Neutron LBaaS v2",
        "tags"     : "neutron,lbaas,limitations,haproxy,maxconn,security group",
        "url"      : "/help-documentation/neutron/Limitations_of_LBaaSv2/"
      
@@ -1026,7 +1050,7 @@
   
    {
      
-       "title"    : "Load Balancing Methods",
+       "title"    : "Métodos de balanceamento de carga",
        "tags"     : "neutron,source_ip,session persistence,http_cookie,app_cookie",
        "url"      : "/help-documentation/neutron/Load_Balancing_Methods/"
      
@@ -1034,7 +1058,7 @@
   
    {
      
-       "title"    : "Multi-tier Router Configuration Within Your IBM Bluemix Private Cloud",
+       "title"    : "Configuração de roteador de várias camadas em seu IBM Bluemix Private Cloud",
        "tags"     : "neutron,networking,router,configuration,multi-tier,add_interface",
        "url"      : "/help-documentation/neutron/Multi-tier_Router_Configuration/"
      
@@ -1042,7 +1066,7 @@
   
    {
      
-       "title"    : "IBM Blue Box Network Use Cases",
+       "title"    : "Casos de uso de rede do IBM Blue Box",
        "tags"     : "neutron,use cases,network,white paper",
        "url"      : "/help-documentation/neutron/Network_Use_Cases_White_Paper/"
      
@@ -1050,7 +1074,7 @@
   
    {
      
-       "title"    : "Using the CLI to Set Up Security Groups",
+       "title"    : "Usando a CLI para configurar grupos de segurança",
        "tags"     : "neutron,security groups,ports,flags",
        "url"      : "/help-documentation/neutron/Security_groups_CLI/"
      
@@ -1058,7 +1082,7 @@
   
    {
      
-       "title"    : "Where Are the First Two IPs?",
+       "title"    : "Onde estão os dois primeiros IPs?",
        "tags"     : "",
        "url"      : "/help-documentation/neutron/Where_Are_These_IPs/"
      
@@ -1066,7 +1090,7 @@
   
    {
      
-       "title"    : "Add a Specific Fixed Private IP to an Instance",
+       "title"    : "Inclua um IP privado fixo específico para uma instância",
        "tags"     : "neutron,fixed private IP address",
        "url"      : "/help-documentation/neutron/add-ip-to-instance/"
      
@@ -1074,7 +1098,7 @@
   
    {
      
-       "title"    : "Configuring DNS for Instances",
+       "title"    : "Configurando o DNS para instâncias",
        "tags"     : "neutron,configuring dns,instances",
        "url"      : "/help-documentation/neutron/configure-dns.for-instances/"
      
@@ -1082,7 +1106,7 @@
   
    {
      
-       "title"    : "How to configure a highly-available IP",
+       "title"    : "Como configurar um IP de alta disponibilidade",
        "tags"     : "neutron,configuring ip,ha,highly available,allowed address pairs,l2 pop",
        "url"      : "/help-documentation/neutron/configure-ha-ip/"
      
@@ -1090,7 +1114,7 @@
   
    {
      
-       "title"    : "Configuring multiple network interfaces for your own cloud images",
+       "title"    : "Configurando diversas interfaces de rede para suas próprias imagens de nuvem",
        "tags"     : "neutron,muliple NICs",
        "url"      : "/help-documentation/neutron/configure-multi-nics/"
      
@@ -1098,7 +1122,7 @@
   
    {
      
-       "title"    : "Creating virtual networks on IBM Bluemix Private Cloud",
+       "title"    : "Criando redes virtuais no IBM Bluemix Private Cloud",
        "tags"     : "neutron,creating virtual networks",
        "url"      : "/help-documentation/neutron/creating-virtual-networks/"
      
@@ -1106,7 +1130,7 @@
   
    {
      
-       "title"    : "How can you isolate project networks connected to a shared router?",
+       "title"    : "Como é possível isolar redes do projeto conectadas a um roteador compartilhado?",
        "tags"     : "neutron,projects,shared router,isolation,isolate",
        "url"      : "/help-documentation/neutron/isolatetwoprojectnetworksconnectedtoonesharedrouter/"
      
@@ -1114,7 +1138,7 @@
   
    {
      
-       "title"    : "How Can I Check My Network IP Availability?",
+       "title"    : "Como posso verificar a disponibilidade do IP em minha rede?",
        "tags"     : "neutron,IP,availability",
        "url"      : "/help-documentation/neutron/network_ip_availability/"
      
@@ -1122,7 +1146,7 @@
   
    {
      
-       "title"    : "Routing Internal Traffic Between Projects",
+       "title"    : "Tráfego interno de roteamento entre projetos",
        "tags"     : "neutron,routing,projects,tenants",
        "url"      : "/help-documentation/neutron/routing_internal_traffic_between_projects/"
      
@@ -1130,7 +1154,7 @@
   
    {
      
-       "title"    : "How do I set up DNS records pointing to OpenStack instances?",
+       "title"    : "Como posso configurar registros DNS direcionados para as instâncias do OpenStack?",
        "tags"     : "neutron,configuring dns,instances",
        "url"      : "/help-documentation/neutron/set-up-dns-records/"
      
@@ -1138,7 +1162,7 @@
   
    {
      
-       "title"    : "How can I find the time a floating IP was associated or disassociated from an instance?",
+       "title"    : "Como posso descobrir quando um IP flutuante foi associado ou desassociado de uma instância?",
        "tags"     : "neutron,configuring ip,highly available",
        "url"      : "/help-documentation/neutron/time-ip-associated-with-instance/"
      
@@ -1146,7 +1170,7 @@
   
    {
      
-       "title"    : "VPN, VLAN, and Direct Link",
+       "title"    : "VPN, VLAN e link direto",
        "tags"     : "neutron,VLAN,Direct Link",
        "url"      : "/help-documentation/neutron/vpn-vlan-directlink/"
      
@@ -1164,7 +1188,7 @@
   
    {
      
-       "title"    : "Working with Windows Images FAQ",
+       "title"    : "Perguntas Frequentes sobre como trabalhar como imagens no Windows",
        "tags"     : "troubleshooting,timezone,windows,images",
        "url"      : "/help-documentation/glance/FAQ_Working_with_Windows_Images/"
      
@@ -1172,7 +1196,7 @@
   
    {
      
-       "title"    : "Optimal Settings for Glance Images on Power Compute",
+       "title"    : "Configurações ideais para imagens do Glance no Power Compute",
        "tags"     : "glance,ppc64el,images,power",
        "url"      : "/help-documentation/glance/Image_Properties_on_Power/"
      
@@ -1180,7 +1204,7 @@
   
    {
      
-       "title"    : "Image Configuration Parameters for RHOSP",
+       "title"    : "Parâmetros de configuração de imagem para RHOSP",
        "tags"     : "glance,userguides,image,glance,distro,libvirt,property keys",
        "url"      : "/help-documentation/glance/RHOSP_Image_Configuration_Parameters/"
      
@@ -1188,7 +1212,7 @@
   
    {
      
-       "title"    : "Is there a list of official OpenStack-compatible images that I can download for use with Glance? (CentOS, Ubuntu, etc.)",
+       "title"    : "Existe uma lista de imagens oficiais compatíveis com o OpenStack para download e usar com o Glance? (CentOS, Ubuntu, etc.)",
        "tags"     : "glance,images,vmdk,qcow2,conversion,vmware",
        "url"      : "/help-documentation/glance/compatible-glance-images/"
      
@@ -1196,7 +1220,7 @@
   
    {
      
-       "title"    : "Disk Capacity Constraints",
+       "title"    : "Restrições de capacidade de disco",
        "tags"     : "glance,disk capacity",
        "url"      : "/help-documentation/glance/disk-capacity-constraints/"
      
@@ -1204,7 +1228,7 @@
   
    {
      
-       "title"    : "Difference Between Image and Snapshot",
+       "title"    : "Diferença entre imagem e captura instantânea",
        "tags"     : "glance,image,snapshot,versus,base image,images,snapshots",
        "url"      : "/help-documentation/glance/imagesnapshot/"
      
@@ -1214,7 +1238,7 @@
   
    {
      
-       "title"    : "Creating Encrypted Volumes with Cinder is Not Supported",
+       "title"    : "A criação de volumes criptografados com o Cinder não é suportada",
        "tags"     : "cinder,encryption,volumes",
        "url"      : "/help-documentation/cinder/Bug_Creating_Encrypted_Volumes/"
      
@@ -1222,7 +1246,7 @@
   
    {
      
-       "title"    : "How to Move from Ephemeral Disk to Cinder Storage",
+       "title"    : "Como mover do disco efêmero para o armazenamento Cinder",
        "tags"     : "cinder,ephemeral",
        "url"      : "/help-documentation/cinder/Ephemeral_to_Cinder/"
      
@@ -1230,7 +1254,7 @@
   
    {
      
-       "title"    : "How to Force a Snapshot on an Attached Volume",
+       "title"    : "Como forçar uma captura instantânea em um volume anexado",
        "tags"     : "cinder,snapshot,force",
        "url"      : "/help-documentation/cinder/Force_snapshot_on_attached_volume/"
      
@@ -1238,7 +1262,7 @@
   
    {
      
-       "title"    : "Managing Block Storage",
+       "title"    : "Gerenciamento o armazenamento de bloco",
        "tags"     : "cinder,block storage,publicURL,endpoint,not found,usage",
        "url"      : "/help-documentation/cinder/Managing_block_storage/"
      
@@ -1246,7 +1270,7 @@
   
    {
      
-       "title"    : "Alternative Method For Block Storage Volume Encryption (using an Ubuntu Guest VM)",
+       "title"    : "Método alternativo para criptografia de volume de armazenamento de bloco (usando uma VM guest do Ubuntu)",
        "tags"     : "cinder,block storage,encryption,ubuntu",
        "url"      : "/help-documentation/cinder/alternative_method_for_volume_encryption/"
      
@@ -1254,7 +1278,7 @@
   
    {
      
-       "title"    : "What do I do if the Cinder client returns &#39;ERROR: Unable to establish connection&#39; message and fails to connect?",
+       "title"    : "O que faço se o cliente Cinder retornar a mensagem &#39;ERRO: Não foi possível estabelecer a conexão&#39; e falhar ao contectar-se?",
        "tags"     : "troubleshooting,cinder,error",
        "url"      : "/help-documentation/cinder/cinder-failed-connection-error/"
      
@@ -1262,7 +1286,7 @@
   
    {
      
-       "title"    : "Cinder Volume Stuck",
+       "title"    : "Paralisação do volume Cinder",
        "tags"     : "troubleshooting,cinder volume stuck,snapshot,delete",
        "url"      : "/help-documentation/cinder/cinder-volume-stuck/"
      
@@ -1270,7 +1294,7 @@
   
    {
      
-       "title"    : "Creating a volume with the command line",
+       "title"    : "Criando um volume com a linha de comandos",
        "tags"     : "cinder,ceph,volume",
        "url"      : "/help-documentation/cinder/cli-create-volume/"
      
@@ -1278,7 +1302,7 @@
   
    {
      
-       "title"    : "Is creating a volume from an instance snapshot supported?",
+       "title"    : "É compatível criar um volume a partir de uma instância?",
        "tags"     : "cinder,snapshot",
        "url"      : "/help-documentation/cinder/create-volume-from-snapshot/"
      
@@ -1286,7 +1310,7 @@
   
    {
      
-       "title"    : "What causes read-only Cinder volumes and how can I fix them?",
+       "title"    : "O que gera volumes Cinder somente leitura e como posso corrigi-los?",
        "tags"     : "troubleshooting,read-only,cinder",
        "url"      : "/help-documentation/cinder/read-only-cinder-error/"
      
@@ -1294,7 +1318,7 @@
   
    {
      
-       "title"    : "How Can I Resize a Cinder Volume?",
+       "title"    : "Como posso redimensionar um volume Cinder?",
        "tags"     : "cinder,resize",
        "url"      : "/help-documentation/cinder/resize_cinder_volume/"
      
@@ -1302,7 +1326,7 @@
   
    {
      
-       "title"    : "Which Cinder Volume Types are supported in Cloud Instance?",
+       "title"    : "Quais tipos de volume Cinder são compatíveis com uma instância na nuvem?",
        "tags"     : "cinder,volumetype,multibackend,multitier",
        "url"      : "/help-documentation/cinder/supported_volume_types/"
      
@@ -1320,7 +1344,7 @@
   
    {
      
-       "title"    : "Getting Started with Keystone Federated Identity",
+       "title"    : "Introdução à identidade federada do Keystone",
        "tags"     : "keystone,federation,k2k,groups",
        "url"      : "/help-documentation/keystone/Getting_Started_with_K2K_Identity/"
      
@@ -1328,7 +1352,7 @@
   
    {
      
-       "title"    : "Managing Users and Projects",
+       "title"    : "Gerenciando usuários e projetos",
        "tags"     : "users,roles,Keystone",
        "url"      : "/help-documentation/keystone/Managing_Users_and_Projects/"
      
@@ -1336,7 +1360,7 @@
   
    {
      
-       "title"    : "Role-Based Access Control",
+       "title"    : "Controle de acesso baseado em função",
        "tags"     : "keystone,users,roles,failover,RBAC,cloud_admin,migration,live migration,cold migration,affinity",
        "url"      : "/help-documentation/keystone/RBAC_Definitions/"
      
@@ -1344,7 +1368,7 @@
   
    {
      
-       "title"    : "Custom Domains within Keystone V3",
+       "title"    : "Domínios customizados no Keystone V3",
        "tags"     : "keystone,snapshot",
        "url"      : "/help-documentation/keystone/custom-domains-keystone/"
      
@@ -1352,7 +1376,7 @@
   
    {
      
-       "title"    : "Keystone to Keystone (K2K) Federation on IBM Bluemix Private Cloud",
+       "title"    : "Federação de Keystone to Keystone (K2K) no IBM Bluemix Private Cloud",
        "tags"     : "federation,keystone,k2k",
        "url"      : "/help-documentation/keystone/k2k-federation/"
      
@@ -1360,7 +1384,7 @@
   
    {
      
-       "title"    : "OpenID Connect Federation on IBM Bluemix Private Cloud",
+       "title"    : "Federação do OpenID Connect no IBM Bluemix Private Cloud",
        "tags"     : "federation,keystone,oidc",
        "url"      : "/help-documentation/keystone/oidc-federation/"
      
@@ -1368,7 +1392,7 @@
   
    {
      
-       "title"    : "Keystone SAML Federation on IBM Bluemix Private Cloud",
+       "title"    : "Federação SAML de Keystone no IBM Bluemix Private Cloud",
        "tags"     : "federation,keystone,saml",
        "url"      : "/help-documentation/keystone/saml-federation/"
      
@@ -1376,7 +1400,7 @@
   
    {
      
-       "title"    : "Projects and Security Groups",
+       "title"    : "Projetos e grupos de segurança",
        "tags"     : "keystone,projects,tenants,security groups",
        "url"      : "/help-documentation/keystone/tenants-security-groups-keystone/"
      
@@ -1386,7 +1410,7 @@
   
    {
      
-       "title"    : "Deploying Applications with IBM UrbanCode Deploy and IBM Bluemix Private Cloud",
+       "title"    : "Implementando aplicativos com o IBM UrbanCode Deploy e o IBM Bluemix Private Cloud",
        "tags"     : "UCD,Heat,OpenStack",
        "url"      : "/help-documentation/heat/Deploying_apps_with_UCD/"
      
@@ -1394,7 +1418,7 @@
   
    {
      
-       "title"    : "Getting Started With Heat Templates",
+       "title"    : "Introdução aos modelos do Heat",
        "tags"     : "heat,orchestration,templates,best practices,multi-cloud,security groups,owner,user",
        "url"      : "/help-documentation/heat/Getting_Started_With_Heat/"
      
@@ -1402,7 +1426,7 @@
   
    {
      
-       "title"    : "Routers and Heat",
+       "title"    : "Roteadores e Heat",
        "tags"     : "heat,subnet pool,router,configuring,python",
        "url"      : "/help-documentation/heat/Routers_and_Heat/"
      
@@ -1410,7 +1434,7 @@
   
    {
      
-       "title"    : "Using Heat for autoscaling",
+       "title"    : "Usando Heat para efetuar Auto-scaling",
        "tags"     : "heat,autoscaling,deploy",
        "url"      : "/help-documentation/heat/autoscaling-with-heat/"
      
@@ -1418,7 +1442,7 @@
   
    {
      
-       "title"    : "Using IBM Urban Code Deploy with IBM Bluemix Private Cloud",
+       "title"    : "Usando o IBM Urban Code Deploy com o IBM Bluemix Private Cloud",
        "tags"     : "heat,deploy,UCD,UCDP",
        "url"      : "/help-documentation/heat/using-ucd-ucdp/"
      
@@ -1426,7 +1450,7 @@
   
    {
      
-       "title"    : "Using Heat With a Self-signed Certificate",
+       "title"    : "Usando o Heat com um certificado autoassinado",
        "tags"     : "heat,deployment,self-signed",
        "url"      : "/help-documentation/heat/using_heat_for_deployment/"
      
@@ -1434,7 +1458,7 @@
   
    {
      
-       "title"    : "Using Heat for provisioning servers with a load balancer",
+       "title"    : "Usando o Heat para servidores de provisionamento com um balanceador de carga",
        "tags"     : "heat,load balancer,stack",
        "url"      : "/help-documentation/heat/using_heat_for_load_balancer/"
      
@@ -1444,7 +1468,7 @@
   
    {
      
-       "title"    : "Is creating a volume from an instance snapshot supported?",
+       "title"    : "É compatível criar um volume a partir de uma instância?",
        "tags"     : "cinder,snapshot",
        "url"      : "/help-documentation/ceilometer/compatible-glance-images/"
      

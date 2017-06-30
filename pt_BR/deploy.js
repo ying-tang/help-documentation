@@ -6,10 +6,10 @@ var env = process.argv[2] || "staging"
 var repo;
 switch(env.toUpperCase()) {
   case "PRODUCTION":
-    repo = "git@github.com:IBM-Blue-Box-Help/help-documentation.git"
+    repo = "git@github.com:IBM-Blue-Box-Help/help-documentation.git";
     break;
   case "STAGING":
-    repo = "git@github.ibm.com:bluebox/help-documentation-staging-area.git"
+    repo = "git@github.ibm.com:bluebox/help-documentation-staging-area.git";
     break;
   default:
     console.log("The specified environment '" + env + "' is not supported");

@@ -558,6 +558,30 @@
   
    {
      
+       "title"    : "Notas sobre a liberação 3.1.0",
+       "tags"     : "commontech,release,features,gettingstarted",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_3.1.0_Release_Notes/"
+     
+   } ,
+  
+   {
+     
+       "title"    : "Notas sobre a liberação do ponto 3.1.1 para cliente",
+       "tags"     : "release notes,3.1.1",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_3.1.1_Point_Release/"
+     
+   } ,
+  
+   {
+     
+       "title"    : "Notas sobre a liberação 4.0.0.0r",
+       "tags"     : "commontech,release,features,gettingstarted,red hat,rhosp",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_4.0.0.0r_Release_Notes/"
+     
+   } ,
+  
+   {
+     
        "title"    : "技術常見問題",
        "tags"     : "getting started,開始使用,常見問題,調整大小,執行實例,管理者,專案,禁止埠,埠,安全群組",
        "url"      : "/help-documentation/gettingstarted/commontech/FAQ/"

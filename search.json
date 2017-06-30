@@ -562,6 +562,30 @@
   
    {
      
+       "title"    : "Notas sobre a liberação 3.1.0",
+       "tags"     : "commontech,release,features,gettingstarted",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_3.1.0_Release_Notes/"
+     
+   } ,
+  
+   {
+     
+       "title"    : "Notas sobre a liberação do ponto 3.1.1 para cliente",
+       "tags"     : "release notes,3.1.1",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_3.1.1_Point_Release/"
+     
+   } ,
+  
+   {
+     
+       "title"    : "Notas sobre a liberação 4.0.0.0r",
+       "tags"     : "commontech,release,features,gettingstarted,red hat,rhosp",
+       "url"      : "/help-documentation/gettingstarted/commontech/Customer_4.0.0.0r_Release_Notes/"
+     
+   } ,
+  
+   {
+     
        "title"    : "Technical FAQ",
        "tags"     : "getting started,faq,resize,instance,admin,project,forbidden ports,ports,security groups",
        "url"      : "/help-documentation/gettingstarted/commontech/FAQ/"
