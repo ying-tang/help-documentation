@@ -8,7 +8,7 @@
      
         "title"    : "Cinder (Block Storage)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/cinder/"
+        "url"      : "/help-documentation/cinder/"
      
    } ,
   
@@ -16,7 +16,7 @@
      
         "title"    : "Getting Started",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/gettingstarted/"
+        "url"      : "/help-documentation/gettingstarted/"
      
    } ,
   
@@ -24,7 +24,7 @@
      
         "title"    : "Glance (Images)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/glance/"
+        "url"      : "/help-documentation/glance/"
      
    } ,
   
@@ -32,7 +32,7 @@
      
         "title"    : "Heat (Orchestration)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/heat/"
+        "url"      : "/help-documentation/heat/"
      
    } ,
   
@@ -40,7 +40,7 @@
      
         "title"    : "Horizon (GUI)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/horizon/"
+        "url"      : "/help-documentation/horizon/"
      
    } ,
   
@@ -48,7 +48,7 @@
      
         "title"    : "Keystone (Identity)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/keystone/"
+        "url"      : "/help-documentation/keystone/"
      
    } ,
   
@@ -56,7 +56,7 @@
      
         "title"    : "Neutron (Networking)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/neutron/"
+        "url"      : "/help-documentation/neutron/"
      
    } ,
   
@@ -64,7 +64,7 @@
      
         "title"    : "Nova (Compute)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/nova/"
+        "url"      : "/help-documentation/nova/"
      
    } ,
   
@@ -72,7 +72,7 @@
      
         "title"    : "OpenStack",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/openstack/"
+        "url"      : "/help-documentation/openstack/"
      
    } ,
   
@@ -80,7 +80,7 @@
      
         "title"    : "Troubleshooting",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/troubleshooting/"
+        "url"      : "/help-documentation/troubleshooting/"
      
    } ,
   
@@ -92,7 +92,7 @@
      
         "title"    : "Ceilometer (Telemetry)",
         "tags"     : "",
-        "url"      : "/tyying/help-documentation-staging-area/ceilometer/"
+        "url"      : "/help-documentation/ceilometer/"
      
    } ,
   
@@ -126,7 +126,7 @@
      
        "title"    : "API",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/api/"
+       "url"      : "/help-documentation/openstack/api/"
      
    } ,
   
@@ -134,7 +134,7 @@
      
        "title"    : "User Docs",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/"
+       "url"      : "/help-documentation/openstack/userdocs/"
      
    } 
   
@@ -144,7 +144,7 @@
      
        "title"    : "OpenStack 用戶端版本的需求",
        "tags"     : "openstack,openstack,用戶端,指令行,套件,版本,python,相容性",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/api/OpenStack_Client_Versions/"
+       "url"      : "/help-documentation/openstack/api/OpenStack_Client_Versions/"
      
    } ,
   
@@ -152,7 +152,7 @@
      
        "title"    : "使用 OpenStack API 建立浮動 IP 位址",
        "tags"     : "openstack,openstack,浮動 ip 位址,api",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/api/floating-ip-address/"
+       "url"      : "/help-documentation/openstack/api/floating-ip-address/"
      
    } ,
   
@@ -160,7 +160,7 @@
      
        "title"    : "開始使用 OpenStack API",
        "tags"     : "api,api,開始使用,openstack",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/api/openstack-api-getting-started/"
+       "url"      : "/help-documentation/openstack/api/openstack-api-getting-started/"
      
    } 
   
@@ -170,7 +170,7 @@
      
        "title"    : "Cloud Foundry：無效可用性區域錯誤",
        "tags"     : "Openstack,Openstack,疑難排解,可用性區域,cloud foundry",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/Bad_Availability_Zone/"
+       "url"      : "/help-documentation/troubleshooting/Bad_Availability_Zone/"
      
    } ,
   
@@ -178,7 +178,7 @@
      
        "title"    : "當我在 Windows 上使用任何 OpenStack CLI 時，發生鑑別失敗錯誤",
        "tags"     : "troubleshooting,疑難排解,鑑別,windows",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/CLI-authentication-error/"
+       "url"      : "/help-documentation/troubleshooting/CLI-authentication-error/"
      
    } ,
   
@@ -186,7 +186,7 @@
      
        "title"    : "無法變更浮動 IP 配額配置",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/Cannot_Change_Floating_IP_Quota/"
+       "url"      : "/help-documentation/troubleshooting/Cannot_Change_Floating_IP_Quota/"
      
    } ,
   
@@ -194,7 +194,7 @@
      
        "title"    : "為何 Horizon 中沒有列出我的新 vCPU？",
        "tags"     : "troubleshooting,疑難排解,horizon,nova,過量使用,hypervisor,vcpu",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/Cannot_See_New_vCPUs/"
+       "url"      : "/help-documentation/troubleshooting/Cannot_See_New_vCPUs/"
      
    } ,
   
@@ -202,7 +202,7 @@
      
        "title"    : "HAProxy 可以處理多少同時連線？",
        "tags"     : "troubleshooting,疑難排解,haproxy,maxconn,負載測試",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/How_many_connections_can_HAProxy_handle/"
+       "url"      : "/help-documentation/troubleshooting/How_many_connections_can_HAProxy_handle/"
      
    } ,
   
@@ -210,7 +210,7 @@
      
        "title"    : "聚合控制器上的空間用盡？",
        "tags"     : "troubleshooting,疑難排解,cinder,snapshot,物件儲存空間,glance 映像檔",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/Running_out_of_space_converged_controllers/"
+       "url"      : "/help-documentation/troubleshooting/Running_out_of_space_converged_controllers/"
      
    } ,
   
@@ -218,7 +218,7 @@
      
        "title"    : "疑難排解常見問題",
        "tags"     : "faq,常見問題,重新啟動,執行實例,時間戳記,主控台,調整大小,停滯,埠,depends_on,smtp,電子郵件,sendgrid,單一使用者模式,vnc",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/Troubleshooting_FAQ/"
+       "url"      : "/help-documentation/troubleshooting/Troubleshooting_FAQ/"
      
    } ,
   
@@ -226,7 +226,7 @@
      
        "title"    : "為何無法在我的租戶網路之間執行 ping？",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/Unable_to_ping_tenant_network/"
+       "url"      : "/help-documentation/troubleshooting/Unable_to_ping_tenant_network/"
      
    } ,
   
@@ -234,7 +234,7 @@
      
        "title"    : "當我想要我的 vIP 執行實例進行失效接手時，為何無法使用 L2pop？",
        "tags"     : "troubleshooting,疑難排解,網路,失效接手",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/Why_No_vIP_Failover_With_L2pop/"
+       "url"      : "/help-documentation/troubleshooting/Why_No_vIP_Failover_With_L2pop/"
      
    } ,
   
@@ -242,7 +242,7 @@
      
        "title"    : "為何無法刪除安全群組？",
        "tags"     : "troubleshooting,疑難排解,neutron,安全群組",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/delete_security_group/"
+       "url"      : "/help-documentation/troubleshooting/delete_security_group/"
      
    } ,
   
@@ -250,7 +250,7 @@
      
        "title"    : "嘗試建立路由器失敗",
        "tags"     : "troubleshooting,疑難排解,nova,路由器,IP,可用性",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/failed_to_create_router/"
+       "url"      : "/help-documentation/troubleshooting/failed_to_create_router/"
      
    } ,
   
@@ -258,7 +258,7 @@
      
        "title"    : "錯誤：準備區塊裝置時失敗",
        "tags"     : "troubleshooting,疑難排解,nova,glance,cinder",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/failure_prepping_block_device/"
+       "url"      : "/help-documentation/troubleshooting/failure_prepping_block_device/"
      
    } ,
   
@@ -266,7 +266,7 @@
      
        "title"    : "為何所有指派給我的浮動 IP 都無法使用？",
        "tags"     : "troubleshooting,疑難排解,浮動 ip",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/floating-ips-error/"
+       "url"      : "/help-documentation/troubleshooting/floating-ips-error/"
      
    } ,
   
@@ -274,7 +274,7 @@
      
        "title"    : "為何無法從 Horizon 儀表板中刪除我的專案/租戶？",
        "tags"     : "troubleshooting,疑難排解,刪除專案",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/horizon-delete-error/"
+       "url"      : "/help-documentation/troubleshooting/horizon-delete-error/"
      
    } ,
   
@@ -282,7 +282,7 @@
      
        "title"    : "執行實例處於錯誤狀態：libvirt 錯誤",
        "tags"     : "troubleshooting,疑難排解,libvert,錯誤",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/libvirt_error/"
+       "url"      : "/help-documentation/troubleshooting/libvirt_error/"
      
    } ,
   
@@ -290,7 +290,7 @@
      
        "title"    : "錯誤：找不到有效的主機",
        "tags"     : "troubleshooting,疑難排解,沒有有效的主機,找不到有效的主機,調整大小,啟動",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/no-valid-host-error/"
+       "url"      : "/help-documentation/troubleshooting/no-valid-host-error/"
      
    } ,
   
@@ -298,7 +298,7 @@
      
        "title"    : "錯誤：執行 Nova 指令時，發生「伺服器不支援微型版本」",
        "tags"     : "troubleshooting,疑難排解,微型版本,nova",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/nova-microversions-error/"
+       "url"      : "/help-documentation/troubleshooting/nova-microversions-error/"
      
    } ,
   
@@ -306,7 +306,7 @@
      
        "title"    : "為何無法透過 SSH 連上執行實例或 ping 它？",
        "tags"     : "troubleshooting,疑難排解,ssh,ping",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/ping-instance-error/"
+       "url"      : "/help-documentation/troubleshooting/ping-instance-error/"
      
    } ,
   
@@ -314,7 +314,7 @@
      
        "title"    : "為何需要 4-5 秒的時間才能透過 SSH 連上我的執行實例？",
        "tags"     : "troubleshooting,疑難排解,ssh",
-       "url"      : "/tyying/help-documentation-staging-area/troubleshooting/ssh-too-long-error/"
+       "url"      : "/help-documentation/troubleshooting/ssh-too-long-error/"
      
    } 
   
@@ -324,7 +324,7 @@
      
        "title"    : "使用特定的固定 IP 建立執行實例",
        "tags"     : "openstack,openstack,執行實例,固定 IP",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/Creating-an-Instance-with-a-Specific-Fixed-IP/"
+       "url"      : "/help-documentation/openstack/userdocs/Creating-an-Instance-with-a-Specific-Fixed-IP/"
      
    } ,
   
@@ -332,7 +332,7 @@
      
        "title"    : "如何使用靜態 IP 建立執行實例",
        "tags"     : "openstack,openstack,靜態 ip,執行實例",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/Creating_Instances_With_Static_IP/"
+       "url"      : "/help-documentation/openstack/userdocs/Creating_Instances_With_Static_IP/"
      
    } ,
   
@@ -340,7 +340,7 @@
      
        "title"    : "如何隔離租戶（專案）",
        "tags"     : "userdocs,userdocs,租戶,專案,網路",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/How_to_Isolate_Tenants/"
+       "url"      : "/help-documentation/openstack/userdocs/How_to_Isolate_Tenants/"
      
    } ,
   
@@ -348,7 +348,7 @@
      
        "title"    : "OpenStack Mitaka CLI 注意事項",
        "tags"     : "OpenStack,OpenStack,mitaka,keystone",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/Mitaka_CLI_notes/"
+       "url"      : "/help-documentation/openstack/userdocs/Mitaka_CLI_notes/"
      
    } ,
   
@@ -356,7 +356,7 @@
      
        "title"    : "OpenStack 網路概念",
        "tags"     : "OpenStack,OpenStack,概念",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/OpenStack_network_concepts/"
+       "url"      : "/help-documentation/openstack/userdocs/OpenStack_network_concepts/"
      
    } ,
   
@@ -364,7 +364,7 @@
      
        "title"    : "Ursula 與 OpenStack",
        "tags"     : "userdocs,userdocs,openstack,ursula,ubuntu,playbook",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/Ursula_and_OpenStack/"
+       "url"      : "/help-documentation/openstack/userdocs/Ursula_and_OpenStack/"
      
    } ,
   
@@ -372,7 +372,7 @@
      
        "title"    : "為什麼選擇 OpenStack？",
        "tags"     : "OpenStack,OpenStack,參照",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/Why-Choose-OpenStack/"
+       "url"      : "/help-documentation/openstack/userdocs/Why-Choose-OpenStack/"
      
    } ,
   
@@ -380,7 +380,7 @@
      
        "title"    : "外部參照資料",
        "tags"     : "openstack,openstack,參照,外部",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/external-reference-material/"
+       "url"      : "/help-documentation/openstack/userdocs/external-reference-material/"
      
    } ,
   
@@ -388,7 +388,7 @@
      
        "title"    : "匯入 VHD 映像檔，以對其根目錄使用 Linux 磁區管理",
        "tags"     : "openstack,openstack,匯入 VHD 映像檔,linux",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/import-vhd-image-lvm/"
+       "url"      : "/help-documentation/openstack/userdocs/import-vhd-image-lvm/"
      
    } ,
   
@@ -396,7 +396,7 @@
      
        "title"    : "如何從磁區啟動執行實例",
        "tags"     : "openstack,openstack,啟動執行實例,磁區",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/launch-instance-from-volume/"
+       "url"      : "/help-documentation/openstack/userdocs/launch-instance-from-volume/"
      
    } ,
   
@@ -404,7 +404,7 @@
      
        "title"    : "OpenStack 儲存空間概念",
        "tags"     : "OpenStack,OpenStack,概念,磁區,暫時,交換,磁碟使用情形,實體,hypervisor,openstack host show",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/openstack-storage-concepts/"
+       "url"      : "/help-documentation/openstack/userdocs/openstack-storage-concepts/"
      
    } ,
   
@@ -412,7 +412,7 @@
      
        "title"    : "配額",
        "tags"     : "openstack,openstack,配額,限制,主機路由,上限,磁區",
-       "url"      : "/tyying/help-documentation-staging-area/openstack/userdocs/quotas/"
+       "url"      : "/help-documentation/openstack/userdocs/quotas/"
      
    } 
   
@@ -422,7 +422,7 @@
      
        "title"    : "Box Panel 使用手冊",
        "tags"     : "getting started,開始使用,Box Panel",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Box_Panel/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Box_Panel/"
      
    } ,
   
@@ -430,7 +430,7 @@
      
        "title"    : "雲端映像檔的使用手冊 (IBM Bluemix Private Cloud with Red Hat)",
        "tags"     : "userguides,使用手冊,映像檔,glance,image-create,執行實例,rhosp,newton",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Cloud_Images_Provided_RHOSP/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_RHOSP/"
      
    } ,
   
@@ -438,7 +438,7 @@
      
        "title"    : "雲端映像檔的使用手冊（社群版）",
        "tags"     : "userguides,使用手冊,映像檔,glance,image-create,執行實例",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Cloud_Images_Provided_by_IBM/"
      
    } ,
   
@@ -446,7 +446,7 @@
      
        "title"    : "Box Panel、網站控制器及 IBM Bluemix Private Cloud（本端）",
        "tags"     : "userguides,使用手冊,box panel,網站控制器,常見問題,雲端安全",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Eternal_Blue-ish_Triangle/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Eternal_Blue-ish_Triangle/"
      
    } ,
   
@@ -454,7 +454,7 @@
      
        "title"    : "IBM Bluemix Private Cloud 映像檔版本注意事項",
        "tags"     : "userguides,使用手冊,版本,映像檔,安全,核心,修補程式",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Image_Release_Notes/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Image_Release_Notes/"
      
    } ,
   
@@ -462,7 +462,7 @@
      
        "title"    : "淺談 OpenStack II -- 增進雲端效能",
        "tags"     : "openstack,openstack,sr-iov,virtio,vhost",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Improving_Cloud_Performance/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Improving_Cloud_Performance/"
      
    } ,
   
@@ -470,7 +470,7 @@
      
        "title"    : "雲端 101 -- 最佳化負載平衡",
        "tags"     : "load balancing,負載平衡,HA,arp 回應端,MAC 移動",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Optimized_Load_Balancing/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Optimized_Load_Balancing/"
      
    } ,
   
@@ -478,7 +478,7 @@
      
        "title"    : "如何上傳映像檔",
        "tags"     : "commontech,常用技術,使用手冊,映像檔,rhosp,red hat",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/RHOSP_Uploading_Images/"
+       "url"      : "/help-documentation/gettingstarted/userguides/RHOSP_Uploading_Images/"
      
    } ,
   
@@ -486,7 +486,7 @@
      
        "title"    : "雲端網路與軟體定義網路--最佳作法白皮書",
        "tags"     : "sdn,sdn,網路,最佳作法,vlan,vxlan,l2pop,arp,佈建",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/SDN_Basics_Best_Practices/"
+       "url"      : "/help-documentation/gettingstarted/userguides/SDN_Basics_Best_Practices/"
      
    } ,
   
@@ -494,7 +494,7 @@
      
        "title"    : "淺談 OpenStack III -- Xen 與 libvirt",
        "tags"     : "libvirt,libvirt,qemu,kvm,hypervisor",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/Xen_and_libvirt/"
+       "url"      : "/help-documentation/gettingstarted/userguides/Xen_and_libvirt/"
      
    } ,
   
@@ -502,7 +502,7 @@
      
        "title"    : "IBM Bluemix Private Cloud Image Release Notes 2016-06-07",
        "tags"     : "userguides,release,images,security,kernel,patch",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/cloud_images/image_patch_list_20160607/Image_Release_Notes_2016-06-07/"
+       "url"      : "/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160607/Image_Release_Notes_2016-06-07/"
      
    } ,
   
@@ -510,7 +510,7 @@
      
        "title"    : "IBM Bluemix Private Cloud Image Release Notes 2016-09-10",
        "tags"     : "userguides,release,images,security,kernel,patch",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/cloud_images/image_patch_list_20160910/Image_Release_Notes_2016-09-10/"
+       "url"      : "/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20160910/Image_Release_Notes_2016-09-10/"
      
    } ,
   
@@ -518,7 +518,7 @@
      
        "title"    : "IBM Bluemix Private Cloud Image Release Notes 2016-11-30",
        "tags"     : "userguides,release,images,security,kernel,patch",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/cloud_images/image_patch_list_20161130/Image_Release_Notes_2016-11-30/"
+       "url"      : "/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20161130/Image_Release_Notes_2016-11-30/"
      
    } ,
   
@@ -526,7 +526,7 @@
      
        "title"    : "IBM Bluemix Private Cloud Image Release Notes 2017-02-28",
        "tags"     : "userguides,release,images,security,kernel,patch",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/cloud_images/image_patch_list_20170228/Image_Release_Notes_2017-02-28/"
+       "url"      : "/help-documentation/gettingstarted/userguides/cloud_images/image_patch_list_20170228/Image_Release_Notes_2017-02-28/"
      
    } ,
   
@@ -534,7 +534,7 @@
      
        "title"    : "淺談 OpenStack — QEMU 與您的雲端",
        "tags"     : "qemu,qemu,kvm,hypervisor,模擬器",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/qemu_article/"
+       "url"      : "/help-documentation/gettingstarted/userguides/qemu_article/"
      
    } 
   
@@ -544,7 +544,7 @@
      
        "title"    : "IBM Bluemix Private Cloud 建置區塊（社群版）",
        "tags"     : "getting started,開始使用,專用,本端,控制器,節點,概觀",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/Building_Blocks/"
+       "url"      : "/help-documentation/gettingstarted/commontech/Building_Blocks/"
      
    } ,
   
@@ -552,31 +552,7 @@
      
        "title"    : "使用私有網路設定多個雲端環境之間的網路連線功能",
        "tags"     : "getting started,開始使用,網路,私有網路",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/Connecting_Clouds_with_SoftLayer/"
-     
-   } ,
-  
-   {
-     
-       "title"    : "Notas sobre a liberação 3.1.0",
-       "tags"     : "commontech,release,features,gettingstarted",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/Customer_3.1.0_Release_Notes/"
-     
-   } ,
-  
-   {
-     
-       "title"    : "Notas sobre a liberação do ponto 3.1.1 para cliente",
-       "tags"     : "release notes,3.1.1",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/Customer_3.1.1_Point_Release/"
-     
-   } ,
-  
-   {
-     
-       "title"    : "Notas sobre a liberação 4.0.0.0r",
-       "tags"     : "commontech,release,features,gettingstarted,red hat,rhosp",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/Customer_4.0.0.0r_Release_Notes/"
+       "url"      : "/help-documentation/gettingstarted/commontech/Connecting_Clouds_with_SoftLayer/"
      
    } ,
   
@@ -584,7 +560,7 @@
      
        "title"    : "技術常見問題",
        "tags"     : "getting started,開始使用,常見問題,調整大小,執行實例,管理者,專案,禁止埠,埠,安全群組",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/FAQ/"
+       "url"      : "/help-documentation/gettingstarted/commontech/FAQ/"
      
    } ,
   
@@ -592,7 +568,7 @@
      
        "title"    : "調整執行實例大小（非即時）",
        "tags"     : "getting started,開始使用,執行實例,調整大小,移轉,磁區",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/Instance_Resize/"
+       "url"      : "/help-documentation/gettingstarted/commontech/Instance_Resize/"
      
    } ,
   
@@ -600,7 +576,7 @@
      
        "title"    : "為 IBM Bluemix Private Cloud with Red Hat 建置區塊",
        "tags"     : "getting started,開始使用,專用控制器,節點,概觀,red hat,rhosp",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/RHOSP_Building_Blocks/"
+       "url"      : "/help-documentation/gettingstarted/commontech/RHOSP_Building_Blocks/"
      
    } ,
   
@@ -608,7 +584,7 @@
      
        "title"    : "IBM Bluemix Private Cloud with Red Hat - 產品概觀",
        "tags"     : "getting started,開始使用,版本,功能,概觀",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/RHOSP_Product_Overview/"
+       "url"      : "/help-documentation/gettingstarted/commontech/RHOSP_Product_Overview/"
      
    } ,
   
@@ -616,7 +592,7 @@
      
        "title"    : "Windows 啟動客戶手冊",
        "tags"     : "getting started,開始使用,映像檔,windows,授權,啟動",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/Windows_License_Activation/"
+       "url"      : "/help-documentation/gettingstarted/commontech/Windows_License_Activation/"
      
    } ,
   
@@ -624,7 +600,7 @@
      
        "title"    : "Bluemix Private Cloud 元件",
        "tags"     : "getting started,開始使用,bluemix private cloud,元件,服務,api",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/blue-box-cloud-components/"
+       "url"      : "/help-documentation/gettingstarted/commontech/blue-box-cloud-components/"
      
    } ,
   
@@ -632,7 +608,7 @@
      
        "title"    : "連接至 OpenVPN 伺服器",
        "tags"     : "getting started,開始使用,openVPN,連接",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/connect-to-openvpn-server/"
+       "url"      : "/help-documentation/gettingstarted/commontech/connect-to-openvpn-server/"
      
    } ,
   
@@ -640,7 +616,7 @@
      
        "title"    : "分離磁區之前我應該做什麼？",
        "tags"     : "getting started,開始使用,分離磁區",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/detaching-volume/"
+       "url"      : "/help-documentation/gettingstarted/commontech/detaching-volume/"
      
    } ,
   
@@ -648,7 +624,7 @@
      
        "title"    : "一般產品概觀",
        "tags"     : "getting started,開始使用,版本,功能,概觀",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/general_product_overview/"
+       "url"      : "/help-documentation/gettingstarted/commontech/general_product_overview/"
      
    } ,
   
@@ -656,7 +632,7 @@
      
        "title"    : "在執行實例上設定 OpenVPN 伺服器",
        "tags"     : "getting started,開始使用,設定 openVPN",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/openvpn-setup/"
+       "url"      : "/help-documentation/gettingstarted/commontech/openvpn-setup/"
      
    } ,
   
@@ -664,7 +640,7 @@
      
        "title"    : "虛擬 Python 環境與您：開發人員的開始使用書",
        "tags"     : "getting started,開始使用,python,環境",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/python-environment-primer/"
+       "url"      : "/help-documentation/gettingstarted/commontech/python-environment-primer/"
      
    } 
   
@@ -674,7 +650,7 @@
      
        "title"    : "透過 Blue Box 轉移網域",
        "tags"     : "managed hosting,主機代管服務,網域,登記員,轉移",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commonadmin/Transferring_A_Domain_From_Blue_Box/"
+       "url"      : "/help-documentation/gettingstarted/commonadmin/Transferring_A_Domain_From_Blue_Box/"
      
    } ,
   
@@ -682,7 +658,7 @@
      
        "title"    : "新增或移除問題單的訂閱者",
        "tags"     : "getting started,開始使用,新增,移除",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commonadmin/adding-removing-subscribers/"
+       "url"      : "/help-documentation/gettingstarted/commonadmin/adding-removing-subscribers/"
      
    } ,
   
@@ -690,7 +666,7 @@
      
        "title"    : "如何呈報問題單？",
        "tags"     : "getting started,開始使用,問題單",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commonadmin/escalating-a-ticket/"
+       "url"      : "/help-documentation/gettingstarted/commonadmin/escalating-a-ticket/"
      
    } ,
   
@@ -698,7 +674,7 @@
      
        "title"    : "如何報告問題？",
        "tags"     : "getting started,開始使用,報告問題",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commonadmin/report-issue/"
+       "url"      : "/help-documentation/gettingstarted/commonadmin/report-issue/"
      
    } ,
   
@@ -706,7 +682,7 @@
      
        "title"    : "Bluemix Private Cloud 狀態頁面",
        "tags"     : "getting started,開始使用,狀態頁面",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commonadmin/status-pages/"
+       "url"      : "/help-documentation/gettingstarted/commonadmin/status-pages/"
      
    } ,
   
@@ -714,7 +690,7 @@
      
        "title"    : "如何檢視我的帳單？",
        "tags"     : "getting started,開始使用,檢視帳單",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commonadmin/view-my-bill/"
+       "url"      : "/help-documentation/gettingstarted/commonadmin/view-my-bill/"
      
    } 
   
@@ -724,7 +700,7 @@
      
        "title"    : "版本注意事項 2.1.1",
        "tags"     : "releasenotes,版本注意事項,常用技術,版本,功能,開始使用",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/Customer_2.1.1_Point_Release/"
+       "url"      : "/help-documentation/releasenotes/Customer_2.1.1_Point_Release/"
      
    } ,
   
@@ -732,7 +708,7 @@
      
        "title"    : "版本注意事項 3.0.0",
        "tags"     : "commontech,常用技術,版本注意事項,功能,mitaka,無法取得 Nova 服務清單,hypervisor",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/Customer_3.0.0_Release_Notes/"
+       "url"      : "/help-documentation/releasenotes/Customer_3.0.0_Release_Notes/"
      
    } ,
   
@@ -740,7 +716,7 @@
      
        "title"    : "客戶 3.0.1 版本注意事項",
        "tags"     : "release notes,版本注意事項,3.0.1",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/Customer_3.0.1_Point_Release/"
+       "url"      : "/help-documentation/releasenotes/Customer_3.0.1_Point_Release/"
      
    } ,
   
@@ -748,7 +724,7 @@
      
        "title"    : "版本注意事項 3.1.0",
        "tags"     : "commontech,常用技術,版本,功能,開始使用",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/Customer_3.1.0_Release_Notes/"
+       "url"      : "/help-documentation/releasenotes/Customer_3.1.0_Release_Notes/"
      
    } ,
   
@@ -756,7 +732,7 @@
      
        "title"    : "客戶 3.1.1 版本注意事項",
        "tags"     : "release notes,版本注意事項,3.1.1",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/Customer_3.1.1_Point_Release/"
+       "url"      : "/help-documentation/releasenotes/Customer_3.1.1_Point_Release/"
      
    } ,
   
@@ -764,7 +740,7 @@
      
        "title"    : "Release Notes 4.0.0.0c",
        "tags"     : "commontech,release,features,gettingstarted",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/Customer_4.0.0.0c_Release_Notes/"
+       "url"      : "/help-documentation/releasenotes/Customer_4.0.0.0c_Release_Notes/"
      
    } ,
   
@@ -772,7 +748,7 @@
      
        "title"    : "版本注意事項 4.0.0.0r",
        "tags"     : "commontech,常用技術,版本,功能,開始使用,red hat,rhosp",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/Customer_4.0.0.0r_Release_Notes/"
+       "url"      : "/help-documentation/releasenotes/Customer_4.0.0.0r_Release_Notes/"
      
    } ,
   
@@ -780,7 +756,7 @@
      
        "title"    : "版本注意事項 2.1",
        "tags"     : "getting started,開始使用,版本注意事項,功能",
-       "url"      : "/tyying/help-documentation-staging-area/releasenotes/release_notes_2.1_for_customers/"
+       "url"      : "/help-documentation/releasenotes/release_notes_2.1_for_customers/"
      
    } 
   
@@ -790,7 +766,7 @@
      
        "title"    : "Common Administrative Questions",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commonadmin/"
+       "url"      : "/help-documentation/gettingstarted/commonadmin/"
      
    } ,
   
@@ -798,7 +774,7 @@
      
        "title"    : "Common Technical Questions",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/commontech/"
+       "url"      : "/help-documentation/gettingstarted/commontech/"
      
    } ,
   
@@ -806,7 +782,7 @@
      
        "title"    : "Release Notes",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/releasenotes/"
+       "url"      : "/help-documentation/gettingstarted/releasenotes/"
      
    } ,
   
@@ -814,7 +790,7 @@
      
        "title"    : "User Guides",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/gettingstarted/userguides/"
+       "url"      : "/help-documentation/gettingstarted/userguides/"
      
    } 
   
@@ -824,7 +800,7 @@
      
        "title"    : "Horizon 疑難排解常見問題",
        "tags"     : "troubleshooting,疑難排解,常見問題,伺服器,cookie,時區,配額,過濾,磁區限制",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/Horizon_troubleshooting_FAQ/"
+       "url"      : "/help-documentation/horizon/Horizon_troubleshooting_FAQ/"
      
    } ,
   
@@ -832,7 +808,7 @@
      
        "title"    : "對 Snapshot 使用 Horizon",
        "tags"     : "Horizon,Horizon,snapshot,OpenStack,Cinder,映像檔,錯誤,記號到期,glance",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/Making_Snapshots_in_Horizon/"
+       "url"      : "/help-documentation/horizon/Making_Snapshots_in_Horizon/"
      
    } ,
   
@@ -840,7 +816,7 @@
      
        "title"    : "配置公用（浮動）IP  並將其附加至執行實例",
        "tags"     : "horizon,horizon,固定專用 IP 位址",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/allocate-floating-ip/"
+       "url"      : "/help-documentation/horizon/allocate-floating-ip/"
      
    } ,
   
@@ -848,7 +824,7 @@
      
        "title"    : "從 Horizon 儀表板建立磁區",
        "tags"     : "horizon,horizon,磁區,Ceph",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/create-volume-from-horizon/"
+       "url"      : "/help-documentation/horizon/create-volume-from-horizon/"
      
    } ,
   
@@ -856,7 +832,7 @@
      
        "title"    : "使用 Horizon 畫面在 OpenStack 中建立其他網路",
        "tags"     : "getting started,開始使用,其他網路",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/creating-additional-networks-with-horizon/"
+       "url"      : "/help-documentation/horizon/creating-additional-networks-with-horizon/"
      
    } ,
   
@@ -864,7 +840,7 @@
      
        "title"    : "管理者適用的 Horizon",
        "tags"     : "horizon,horizon,管理者",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/horizon-for-administrators/"
+       "url"      : "/help-documentation/horizon/horizon-for-administrators/"
      
    } ,
   
@@ -872,7 +848,7 @@
      
        "title"    : "從 Horizon 儀表板啟動執行實例",
        "tags"     : "horizon,horizon,執行實例,啟動",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/launch-instance-from-horizon/"
+       "url"      : "/help-documentation/horizon/launch-instance-from-horizon/"
      
    } ,
   
@@ -880,7 +856,7 @@
      
        "title"    : "從 Horizon 儀表板啟動執行實例（OpenStack Newton 版本）",
        "tags"     : "horizon,horizon,執行實例,啟動,newton,rhosp",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/launch-instance-from-horizon_newton/"
+       "url"      : "/help-documentation/horizon/launch-instance-from-horizon_newton/"
      
    } ,
   
@@ -888,7 +864,7 @@
      
        "title"    : "如何設定 IBM Bluemix Private Cloud 執行實例的反向 DNS (PTR) 記錄？",
        "tags"     : "horizon,horizon,反向 dns",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/set-reverse-dns/"
+       "url"      : "/help-documentation/horizon/set-reverse-dns/"
      
    } ,
   
@@ -896,7 +872,7 @@
      
        "title"    : "使用 Horizon",
        "tags"     : "horizon,horizon,使用 horizon",
-       "url"      : "/tyying/help-documentation-staging-area/horizon/using-horizon/"
+       "url"      : "/help-documentation/horizon/using-horizon/"
      
    } 
   
@@ -906,7 +882,7 @@
      
        "title"    : "如何使用指令行建立執行實例並使它可公開使用",
        "tags"     : "nova,nova,指令行,執行實例",
-       "url"      : "/tyying/help-documentation-staging-area/nova/CLI-create-public-instance/"
+       "url"      : "/help-documentation/nova/CLI-create-public-instance/"
      
    } ,
   
@@ -914,7 +890,7 @@
      
        "title"    : "OpenStack Neutron 和 Nova 中的 Meta 資料服務",
        "tags"     : "metadata,meta 資料,服務,逾時,配置磁碟機",
-       "url"      : "/tyying/help-documentation-staging-area/nova/Metadata_service_FAQ/"
+       "url"      : "/help-documentation/nova/Metadata_service_FAQ/"
      
    } ,
   
@@ -922,7 +898,7 @@
      
        "title"    : "當我啟動虛擬機器時幕後發生什麼情況，以及如何使它啟動更快速？",
        "tags"     : "nova,nova,執行實例,VM,虛擬,啟動,時間,速度,慢速,快速,glance,映像檔,大小",
-       "url"      : "/tyying/help-documentation-staging-area/nova/Nova_boot_speed/"
+       "url"      : "/help-documentation/nova/Nova_boot_speed/"
      
    } ,
   
@@ -930,7 +906,7 @@
      
        "title"    : "如何限制浮動 IP？",
        "tags"     : "nova,nova,horizon,配置,使用者,浮動 ip",
-       "url"      : "/tyying/help-documentation-staging-area/nova/Restrict_Floating_IP/"
+       "url"      : "/help-documentation/nova/Restrict_Floating_IP/"
      
    } ,
   
@@ -938,7 +914,7 @@
      
        "title"    : "如何建立執行實例，並使用配置磁碟機為它新增檔案？",
        "tags"     : "nova,nova,注入檔案,配置磁碟機",
-       "url"      : "/tyying/help-documentation-staging-area/nova/config_drive_for_instances/"
+       "url"      : "/help-documentation/nova/config_drive_for_instances/"
      
    } ,
   
@@ -946,7 +922,7 @@
      
        "title"    : "如何使用 Nova 指令行用戶端建立執行實例？",
        "tags"     : "nova,nova,啟動,暫時",
-       "url"      : "/tyying/help-documentation-staging-area/nova/create-vm-with-volumes/"
+       "url"      : "/help-documentation/nova/create-vm-with-volumes/"
      
    } ,
   
@@ -954,7 +930,7 @@
      
        "title"    : "如何定義虛擬硬體範本 vCPU 拓蹼？",
        "tags"     : "nova,nova,計算,vCPU",
-       "url"      : "/tyying/help-documentation-staging-area/nova/define-flavor-vcpu/"
+       "url"      : "/help-documentation/nova/define-flavor-vcpu/"
      
    } ,
   
@@ -962,7 +938,7 @@
      
        "title"    : "How to deploy an instance to a specific hypervisor node",
        "tags"     : "nova,deploy,hypervisor,affinity,affinity groups,anti-affinity,antiaffinity",
-       "url"      : "/tyying/help-documentation-staging-area/nova/deploy-to-specific-hypervisor/"
+       "url"      : "/help-documentation/nova/deploy-to-specific-hypervisor/"
      
    } ,
   
@@ -970,7 +946,7 @@
      
        "title"    : "如何取得 Hypervisor 統計資料？",
        "tags"     : "nova,nova,hypervisor,統計資料",
-       "url"      : "/tyying/help-documentation-staging-area/nova/hypervisor-statistics/"
+       "url"      : "/help-documentation/nova/hypervisor-statistics/"
      
    } ,
   
@@ -978,7 +954,7 @@
      
        "title"    : "我可以為虛擬硬體範本設定的最大規格為何？",
        "tags"     : "nova,nova,虛擬硬體範本",
-       "url"      : "/tyying/help-documentation-staging-area/nova/maximum-flavor-spec/"
+       "url"      : "/help-documentation/nova/maximum-flavor-spec/"
      
    } ,
   
@@ -986,7 +962,7 @@
      
        "title"    : "將執行實例移轉至新的雲端",
        "tags"     : "nova,nova,移轉,移轉至新的雲端",
-       "url"      : "/tyying/help-documentation-staging-area/nova/migrate-instance/"
+       "url"      : "/help-documentation/nova/migrate-instance/"
      
    } ,
   
@@ -994,7 +970,7 @@
      
        "title"    : "Instance Live Migration",
        "tags"     : "nova,live migration",
-       "url"      : "/tyying/help-documentation-staging-area/nova/nova_live_migration/"
+       "url"      : "/help-documentation/nova/nova_live_migration/"
      
    } ,
   
@@ -1002,7 +978,7 @@
      
        "title"    : "如何在 Windows 執行實例中以 OpenStack 設定起始使用者名稱和密碼？",
        "tags"     : "nova,nova,windows,起始設定",
-       "url"      : "/tyying/help-documentation-staging-area/nova/windows-user-and-password/"
+       "url"      : "/help-documentation/nova/windows-user-and-password/"
      
    } 
   
@@ -1012,7 +988,7 @@
      
        "title"    : "在 IBM Bluemix Private Cloud 與客戶網站之間使用 BYOFIP 連線功能",
        "tags"     : "neutron,neutron,byofip",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/BYOFIP_support/"
+       "url"      : "/help-documentation/neutron/BYOFIP_support/"
      
    } ,
   
@@ -1020,7 +996,7 @@
      
        "title"    : "如何查看我的 IP？",
        "tags"     : "neutron,neutron,外部 ip,內部 ip,可用 ip",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/How_Can_I_See_My_IPs/"
+       "url"      : "/help-documentation/neutron/How_Can_I_See_My_IPs/"
      
    } ,
   
@@ -1028,7 +1004,7 @@
      
        "title"    : "如何更新 DNS？",
        "tags"     : "neutron,neutron,DNS 設定,子網路",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/How_to_update_DNS/"
+       "url"      : "/help-documentation/neutron/How_to_update_DNS/"
      
    } ,
   
@@ -1036,7 +1012,7 @@
      
        "title"    : "負載平衡器即服務 (LBaaS) 的簡介",
        "tags"     : "neutron,neutron,lbaas,刪除,性能監視器",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/Intro_to_LBaaS/"
+       "url"      : "/help-documentation/neutron/Intro_to_LBaaS/"
      
    } ,
   
@@ -1044,7 +1020,7 @@
      
        "title"    : "Neutron LBaaS 第 2 版的限制",
        "tags"     : "neutron,neutron,lbaas,限制,haproxy,maxconn,安全群組",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/Limitations_of_LBaaSv2/"
+       "url"      : "/help-documentation/neutron/Limitations_of_LBaaSv2/"
      
    } ,
   
@@ -1052,7 +1028,7 @@
      
        "title"    : "負載平衡方法",
        "tags"     : "neutron,neutron,source_ip,階段作業持續性,http_cookie,app_cookie",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/Load_Balancing_Methods/"
+       "url"      : "/help-documentation/neutron/Load_Balancing_Methods/"
      
    } ,
   
@@ -1060,7 +1036,7 @@
      
        "title"    : "IBM Bluemix Private Cloud 內的多層路由器配置",
        "tags"     : "neutron,neutron,網路,路由器,配置,多層,add_interface",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/Multi-tier_Router_Configuration/"
+       "url"      : "/help-documentation/neutron/Multi-tier_Router_Configuration/"
      
    } ,
   
@@ -1068,7 +1044,7 @@
      
        "title"    : "IBM Blue Box 網路使用案例",
        "tags"     : "neutron,neutron,使用案例,網路,白皮書",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/Network_Use_Cases_White_Paper/"
+       "url"      : "/help-documentation/neutron/Network_Use_Cases_White_Paper/"
      
    } ,
   
@@ -1076,7 +1052,7 @@
      
        "title"    : "使用 CLI 來設定安全群組",
        "tags"     : "neutron,neutron,安全群組,埠,旗標",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/Security_groups_CLI/"
+       "url"      : "/help-documentation/neutron/Security_groups_CLI/"
      
    } ,
   
@@ -1084,7 +1060,7 @@
      
        "title"    : "前兩個 IP 在何處？",
        "tags"     : "",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/Where_Are_These_IPs/"
+       "url"      : "/help-documentation/neutron/Where_Are_These_IPs/"
      
    } ,
   
@@ -1092,7 +1068,7 @@
      
        "title"    : "新增特定的固定專用 IP 至執行實例",
        "tags"     : "neutron,neutron,固定專用 IP 位址",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/add-ip-to-instance/"
+       "url"      : "/help-documentation/neutron/add-ip-to-instance/"
      
    } ,
   
@@ -1100,7 +1076,7 @@
      
        "title"    : "為執行實例配置 DNS",
        "tags"     : "neutron,neutron,配置 dns,執行實例",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/configure-dns.for-instances/"
+       "url"      : "/help-documentation/neutron/configure-dns.for-instances/"
      
    } ,
   
@@ -1108,7 +1084,7 @@
      
        "title"    : "如何配置高可用性 IP",
        "tags"     : "neutron,neutron,配置 ip,ha,高可用性,容許的位址對組,l2 pop",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/configure-ha-ip/"
+       "url"      : "/help-documentation/neutron/configure-ha-ip/"
      
    } ,
   
@@ -1116,7 +1092,7 @@
      
        "title"    : "為您自己的雲端映像檔配置多個網路介面",
        "tags"     : "neutron,neutron,多個 NIC",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/configure-multi-nics/"
+       "url"      : "/help-documentation/neutron/configure-multi-nics/"
      
    } ,
   
@@ -1124,7 +1100,7 @@
      
        "title"    : "在 IBM Bluemix Private Cloud 上建立虛擬網路",
        "tags"     : "neutron,neutron,建立虛擬網路",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/creating-virtual-networks/"
+       "url"      : "/help-documentation/neutron/creating-virtual-networks/"
      
    } ,
   
@@ -1132,7 +1108,7 @@
      
        "title"    : "如何隔離已連接到共用路由器的專案網路？",
        "tags"     : "neutron,neutron,專案,共用路由器,隔離,隔離",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/isolatetwoprojectnetworksconnectedtoonesharedrouter/"
+       "url"      : "/help-documentation/neutron/isolatetwoprojectnetworksconnectedtoonesharedrouter/"
      
    } ,
   
@@ -1140,7 +1116,7 @@
      
        "title"    : "如何檢查我的網路 IP 可用性？",
        "tags"     : "neutron,neutron,IP,可用性",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/network_ip_availability/"
+       "url"      : "/help-documentation/neutron/network_ip_availability/"
      
    } ,
   
@@ -1148,7 +1124,7 @@
      
        "title"    : "在專案之間遞送內部資料流量",
        "tags"     : "neutron,neutron,遞送,專案,租戶",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/routing_internal_traffic_between_projects/"
+       "url"      : "/help-documentation/neutron/routing_internal_traffic_between_projects/"
      
    } ,
   
@@ -1156,7 +1132,7 @@
      
        "title"    : "如何設定指向 OpenStack 執行實例的 DNS 記錄？",
        "tags"     : "neutron,neutron,配置 dns,執行實例",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/set-up-dns-records/"
+       "url"      : "/help-documentation/neutron/set-up-dns-records/"
      
    } ,
   
@@ -1164,7 +1140,7 @@
      
        "title"    : "如何得知浮動 IP 與執行實例產生關聯或取消關聯的時間？",
        "tags"     : "neutron,neutron,配置 ip,高可用性",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/time-ip-associated-with-instance/"
+       "url"      : "/help-documentation/neutron/time-ip-associated-with-instance/"
      
    } ,
   
@@ -1172,7 +1148,7 @@
      
        "title"    : "VPN、VLAN 和直接鏈結",
        "tags"     : "neutron,neutron,VLAN,直接鏈結",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/vpn-vlan-directlink/"
+       "url"      : "/help-documentation/neutron/vpn-vlan-directlink/"
      
    } ,
   
@@ -1180,7 +1156,7 @@
      
        "title"    : "When creating port failed, how could I do ?",
        "tags"     : "neutron",
-       "url"      : "/tyying/help-documentation-staging-area/neutron/when_create_port_fails/"
+       "url"      : "/help-documentation/neutron/when_create_port_fails/"
      
    } 
   
@@ -1190,7 +1166,7 @@
      
        "title"    : "使用 Windows 映像檔的常見問題",
        "tags"     : "troubleshooting,疑難排解,時區,windows,映像檔",
-       "url"      : "/tyying/help-documentation-staging-area/glance/FAQ_Working_with_Windows_Images/"
+       "url"      : "/help-documentation/glance/FAQ_Working_with_Windows_Images/"
      
    } ,
   
@@ -1198,7 +1174,7 @@
      
        "title"    : "Power 計算節點上的 Glance 映像檔的最佳設定",
        "tags"     : "glance,glance,ppc64el,映像檔,power",
-       "url"      : "/tyying/help-documentation-staging-area/glance/Image_Properties_on_Power/"
+       "url"      : "/help-documentation/glance/Image_Properties_on_Power/"
      
    } ,
   
@@ -1206,7 +1182,7 @@
      
        "title"    : "RHOSP 的映像檔配置參數",
        "tags"     : "glance,glance,使用手冊,映像檔,glance,distro,libvirt,內容索引鍵",
-       "url"      : "/tyying/help-documentation-staging-area/glance/RHOSP_Image_Configuration_Parameters/"
+       "url"      : "/help-documentation/glance/RHOSP_Image_Configuration_Parameters/"
      
    } ,
   
@@ -1214,7 +1190,7 @@
      
        "title"    : "是否有官方的 OpenStack 相容映像檔清單可供我下載用於 Glance？（CentOS、Ubuntu 等等）",
        "tags"     : "glance,glance,映像檔,vmdk,qcow2,轉換,vmware",
-       "url"      : "/tyying/help-documentation-staging-area/glance/compatible-glance-images/"
+       "url"      : "/help-documentation/glance/compatible-glance-images/"
      
    } ,
   
@@ -1222,7 +1198,7 @@
      
        "title"    : "磁碟容量限制",
        "tags"     : "glance,glance,磁碟容量",
-       "url"      : "/tyying/help-documentation-staging-area/glance/disk-capacity-constraints/"
+       "url"      : "/help-documentation/glance/disk-capacity-constraints/"
      
    } ,
   
@@ -1230,7 +1206,7 @@
      
        "title"    : "映像檔與 Snapshot 之間的差異",
        "tags"     : "glance,glance,映像檔,snapshot,相對,基本映像檔,映像檔,snapshots",
-       "url"      : "/tyying/help-documentation-staging-area/glance/imagesnapshot/"
+       "url"      : "/help-documentation/glance/imagesnapshot/"
      
    } 
   
@@ -1240,7 +1216,7 @@
      
        "title"    : "不支援使用 Cinder 建立加密磁區",
        "tags"     : "cinder,cinder,加密,磁區",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/Bug_Creating_Encrypted_Volumes/"
+       "url"      : "/help-documentation/cinder/Bug_Creating_Encrypted_Volumes/"
      
    } ,
   
@@ -1248,7 +1224,7 @@
      
        "title"    : "如何從暫時磁碟移至 Cinder 儲存空間",
        "tags"     : "cinder,cinder,暫時",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/Ephemeral_to_Cinder/"
+       "url"      : "/help-documentation/cinder/Ephemeral_to_Cinder/"
      
    } ,
   
@@ -1256,7 +1232,7 @@
      
        "title"    : "如何對連接的磁區強制執行 Snapshot",
        "tags"     : "cinder,cinder,snapshot,強制執行",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/Force_snapshot_on_attached_volume/"
+       "url"      : "/help-documentation/cinder/Force_snapshot_on_attached_volume/"
      
    } ,
   
@@ -1264,7 +1240,7 @@
      
        "title"    : "管理區塊儲存空間",
        "tags"     : "cinder,cinder,區塊儲存空間,publicURL,端點,找不到,使用量",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/Managing_block_storage/"
+       "url"      : "/help-documentation/cinder/Managing_block_storage/"
      
    } ,
   
@@ -1272,7 +1248,7 @@
      
        "title"    : "區塊儲存空間磁區加密的替代方法（使用 Ubuntu 訪客 VM）",
        "tags"     : "cinder,cinder,區塊儲存空間,加密,ubuntu",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/alternative_method_for_volume_encryption/"
+       "url"      : "/help-documentation/cinder/alternative_method_for_volume_encryption/"
      
    } ,
   
@@ -1280,7 +1256,7 @@
      
        "title"    : "如果 Cinder 用戶端傳回「錯誤：無法建立連線」訊息且無法連接，我該怎麼做？",
        "tags"     : "troubleshooting,疑難排解,cinder,錯誤",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/cinder-failed-connection-error/"
+       "url"      : "/help-documentation/cinder/cinder-failed-connection-error/"
      
    } ,
   
@@ -1288,7 +1264,7 @@
      
        "title"    : "Cinder 磁區停滯",
        "tags"     : "troubleshooting,疑難排解,cinder 磁區停滯,snapshot,刪除",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/cinder-volume-stuck/"
+       "url"      : "/help-documentation/cinder/cinder-volume-stuck/"
      
    } ,
   
@@ -1296,7 +1272,7 @@
      
        "title"    : "使用指令行建立磁區",
        "tags"     : "cinder,cinder,ceph,磁區",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/cli-create-volume/"
+       "url"      : "/help-documentation/cinder/cli-create-volume/"
      
    } ,
   
@@ -1304,7 +1280,7 @@
      
        "title"    : "是否支援透過執行實例 Snapshot 建立磁區？",
        "tags"     : "cinder,cinder,snapshot",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/create-volume-from-snapshot/"
+       "url"      : "/help-documentation/cinder/create-volume-from-snapshot/"
      
    } ,
   
@@ -1312,7 +1288,7 @@
      
        "title"    : "是什麼造成唯讀 Cinder 磁區，我要如何修正它們？",
        "tags"     : "troubleshooting,疑難排解,唯讀,cinder",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/read-only-cinder-error/"
+       "url"      : "/help-documentation/cinder/read-only-cinder-error/"
      
    } ,
   
@@ -1320,7 +1296,7 @@
      
        "title"    : "我要如何調整 Cinder 磁區的大小？",
        "tags"     : "cinder,cinder,調整大小",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/resize_cinder_volume/"
+       "url"      : "/help-documentation/cinder/resize_cinder_volume/"
      
    } ,
   
@@ -1328,7 +1304,7 @@
      
        "title"    : "在雲端執行實例中支援哪些 Cinder 磁區類型？",
        "tags"     : "cinder,cinder,磁區類型,多後端,多層",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/supported_volume_types/"
+       "url"      : "/help-documentation/cinder/supported_volume_types/"
      
    } ,
   
@@ -1336,7 +1312,7 @@
      
        "title"    : "Can I enable volume full clone more than copy-on-write clone?",
        "tags"     : "cinder,clone",
-       "url"      : "/tyying/help-documentation-staging-area/cinder/volume_clone/"
+       "url"      : "/help-documentation/cinder/volume_clone/"
      
    } 
   
@@ -1346,7 +1322,7 @@
      
        "title"    : "開始使用 Keystone 聯合識別",
        "tags"     : "keystone,keystone,聯合,k2k,群組",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/Getting_Started_with_K2K_Identity/"
+       "url"      : "/help-documentation/keystone/Getting_Started_with_K2K_Identity/"
      
    } ,
   
@@ -1354,7 +1330,7 @@
      
        "title"    : "管理使用者和專案",
        "tags"     : "users,使用者,角色,Keystone",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/Managing_Users_and_Projects/"
+       "url"      : "/help-documentation/keystone/Managing_Users_and_Projects/"
      
    } ,
   
@@ -1362,7 +1338,7 @@
      
        "title"    : "角色型存取控制",
        "tags"     : "keystone,keystone,使用者,角色,失效接手,RBAC,cloud_admin,移轉,即時移轉,冷移轉,親緣性",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/RBAC_Definitions/"
+       "url"      : "/help-documentation/keystone/RBAC_Definitions/"
      
    } ,
   
@@ -1370,7 +1346,7 @@
      
        "title"    : "Keystone 第 3 版內的自訂網域",
        "tags"     : "keystone,keystone,snapshot",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/custom-domains-keystone/"
+       "url"      : "/help-documentation/keystone/custom-domains-keystone/"
      
    } ,
   
@@ -1378,7 +1354,7 @@
      
        "title"    : "IBM Bluemix Private Cloud 上的 Keystone 對 Keystone (K2K) 聯合",
        "tags"     : "federation,聯合,keystone,k2k",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/k2k-federation/"
+       "url"      : "/help-documentation/keystone/k2k-federation/"
      
    } ,
   
@@ -1386,7 +1362,7 @@
      
        "title"    : "IBM Bluemix Private Cloud 上的 OpenID Connect 聯合",
        "tags"     : "federation,聯合,keystone,oidc",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/oidc-federation/"
+       "url"      : "/help-documentation/keystone/oidc-federation/"
      
    } ,
   
@@ -1394,7 +1370,7 @@
      
        "title"    : "IBM Bluemix Private Cloud 上的 Keystone SAML 聯合",
        "tags"     : "federation,聯合,keystone,saml",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/saml-federation/"
+       "url"      : "/help-documentation/keystone/saml-federation/"
      
    } ,
   
@@ -1402,7 +1378,7 @@
      
        "title"    : "專案與安全群組",
        "tags"     : "keystone,keystone,專案,租戶,安全群組",
-       "url"      : "/tyying/help-documentation-staging-area/keystone/tenants-security-groups-keystone/"
+       "url"      : "/help-documentation/keystone/tenants-security-groups-keystone/"
      
    } 
   
@@ -1412,7 +1388,7 @@
      
        "title"    : "使用 IBM UrbanCode Deploy 和 IBM Bluemix Private Cloud 來部署應用程式",
        "tags"     : "UCD,UCD,Heat,OpenStack",
-       "url"      : "/tyying/help-documentation-staging-area/heat/Deploying_apps_with_UCD/"
+       "url"      : "/help-documentation/heat/Deploying_apps_with_UCD/"
      
    } ,
   
@@ -1420,7 +1396,7 @@
      
        "title"    : "開始使用 Heat 範本",
        "tags"     : "heat,heat,編配,範本,最佳作法,多雲端,安全群組,擁有者,使用者",
-       "url"      : "/tyying/help-documentation-staging-area/heat/Getting_Started_With_Heat/"
+       "url"      : "/help-documentation/heat/Getting_Started_With_Heat/"
      
    } ,
   
@@ -1428,7 +1404,7 @@
      
        "title"    : "路由器與 Heat",
        "tags"     : "heat,heat,子網路儲存區,路由器,配置,python",
-       "url"      : "/tyying/help-documentation-staging-area/heat/Routers_and_Heat/"
+       "url"      : "/help-documentation/heat/Routers_and_Heat/"
      
    } ,
   
@@ -1436,7 +1412,7 @@
      
        "title"    : "使用 Heat 進行自動調整",
        "tags"     : "heat,heat,自動調整,部署",
-       "url"      : "/tyying/help-documentation-staging-area/heat/autoscaling-with-heat/"
+       "url"      : "/help-documentation/heat/autoscaling-with-heat/"
      
    } ,
   
@@ -1444,7 +1420,7 @@
      
        "title"    : "搭配使用 IBM Urban Code Deploy 與 IBM Bluemix Private Cloud",
        "tags"     : "heat,heat,部署,UCD,UCDP",
-       "url"      : "/tyying/help-documentation-staging-area/heat/using-ucd-ucdp/"
+       "url"      : "/help-documentation/heat/using-ucd-ucdp/"
      
    } ,
   
@@ -1452,7 +1428,7 @@
      
        "title"    : "使用 Heat 與自簽憑證",
        "tags"     : "heat,heat,部署,自簽",
-       "url"      : "/tyying/help-documentation-staging-area/heat/using_heat_for_deployment/"
+       "url"      : "/help-documentation/heat/using_heat_for_deployment/"
      
    } ,
   
@@ -1460,7 +1436,7 @@
      
        "title"    : "使用 Heat 以佈建具有負載平衡器的伺服器",
        "tags"     : "heat,heat,負載平衡器,堆疊",
-       "url"      : "/tyying/help-documentation-staging-area/heat/using_heat_for_load_balancer/"
+       "url"      : "/help-documentation/heat/using_heat_for_load_balancer/"
      
    } 
   
@@ -1470,7 +1446,7 @@
      
        "title"    : "是否支援透過執行實例 Snapshot 建立磁區？",
        "tags"     : "cinder,cinder,snapshot",
-       "url"      : "/tyying/help-documentation-staging-area/ceilometer/compatible-glance-images/"
+       "url"      : "/help-documentation/ceilometer/compatible-glance-images/"
      
    } 
   
